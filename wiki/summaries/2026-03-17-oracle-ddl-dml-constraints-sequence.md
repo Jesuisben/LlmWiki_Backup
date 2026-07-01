@@ -1,7 +1,7 @@
 ---
 title: 2026-03-17 Oracle DDL/DML, 제약조건, 시퀀스
 created: 2026-06-30
-updated: 2026-06-30
+updated: 2026-07-01
 type: summary
 tags: [oracle, sql]
 sources: ["raw/Study/2. Oracle/2026.03.17(화)/2026.03.17(화).md"]
@@ -40,6 +40,17 @@ confidence: medium
 
 - [[concepts/oracle-sql-basics|Oracle SQL 기본]]
 - [[concepts/oracle-constraints-sequence|Oracle 제약조건과 시퀀스]]
+
+
+## 원본 수정 반영 (2026-07-01)
+
+- `raw/Study/2. Oracle/2026.03.17(화)/2026.03.17(화).md`에서 확인한 추가/정리 주제: (Dbeaver 교안 P.72, 73)
+- `raw/Study/2. Oracle/2026.03.17(화)/2026.03.17(화).md`에서 확인한 추가/정리 주제: 시퀀스 생성
+- `raw/Study/2. Oracle/2026.03.17(화)/2026.03.17(화).md`에서 확인한 추가/정리 주제: (Dbeaver 교안 P.88)
+- `raw/Study/2. Oracle/2026.03.17(화)/2026.03.17(화).md`에서 확인한 추가/정리 주제: *의 의미
+- `raw/Study/2. Oracle/2026.03.17(화)/2026.03.17(화).md`에서 확인한 추가/정리 주제: (Dbeaver 교안 P.88 - 나머지도 실행하기)
+
+> 이 항목은 기존에 한 번 ingest된 원본이 이후 수정된 상태였음을 반영하기 위한 보강 메모다. 세부 개념은 관련 개념 페이지에서 계속 보강한다.
 
 ## 출처
 

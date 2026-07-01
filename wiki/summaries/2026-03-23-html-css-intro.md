@@ -1,7 +1,7 @@
 ---
 title: 2026-03-23 HTML/CSS와 웹 UI 입문
 created: 2026-06-30
-updated: 2026-06-30
+updated: 2026-07-01
 type: summary
 tags: [html, css, frontend]
 sources: ["raw/Study/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md"]
@@ -42,6 +42,17 @@ confidence: medium
 - [[concepts/html-css-basics|HTML/CSS 기본]]
 - [[entities/html|HTML]]
 - [[entities/css|CSS]]
+
+
+## 원본 수정 반영 (2026-07-01)
+
+- `raw/Study/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md`에서 확인한 추가/정리 주제: 개괄적 흐름 - 데이터 흐름
+- `raw/Study/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md`에서 확인한 추가/정리 주제: 웹 서비스 Ui&UX 교안 설명
+- `raw/Study/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md`에서 확인한 추가/정리 주제: HTML&JS&CSS 이론(new) 교안 설명
+- `raw/Study/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md`에서 확인한 추가/정리 주제: IT 관련 용어 교안 설명
+- `raw/Study/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md`에서 확인한 추가/정리 주제: 웹 서비스 Ui&UX 교안 (P.2)
+
+> 이 항목은 기존에 한 번 ingest된 원본이 이후 수정된 상태였음을 반영하기 위한 보강 메모다. 세부 개념은 관련 개념 페이지에서 계속 보강한다.
 
 ## 출처
 

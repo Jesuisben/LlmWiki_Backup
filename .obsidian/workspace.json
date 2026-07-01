@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e1cf989479358cf6",
+        "id": "fd456d5a10883251",
         "type": "tabs",
         "children": [
           {
-            "id": "ff061e3a7af74eaf",
+            "id": "aea092d5e76e97bb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "raw/ai-instructions/llm-wiki-command-cheatsheet.md",
+                "file": "wiki/summaries/2026-04-22-product-repository-pageable-search.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "llm-wiki-command-cheatsheet"
+              "title": "2026-04-22-product-repository-pageable-search"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:study-log",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -198,34 +198,37 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "ff061e3a7af74eaf",
+  "active": "aea092d5e76e97bb",
   "lastOpenFiles": [
-    "wiki/entities/jquery.md",
-    "wiki/entities/bootstrap.md",
-    "wiki/entities/javascript.md",
-    "wiki/entities/css.md",
-    "wiki/entities/html.md",
+    "wiki/summaries/2026-07-01-python-pandas-dataframe.md",
+    "wiki/summaries/2026-04-22-product-repository-pageable-search.md",
+    "wiki/summaries/2026-02-27-java-basic-types-operators.md",
+    "wiki/index.md",
+    "wiki/summaries/2026-04-17-cart-total-array-some.md",
+    "wiki/_meta/hermes-default-profile-mode-system.md",
+    "wiki/_meta/agent-coding-guidelines.md",
+    "wiki/_meta/hermes-home-laptop-setup.md",
+    "entities/pandas.md",
+    "entities",
+    "concepts/pandas-dataframe-basics.md",
+    "concepts",
+    "wiki/entities/git.md",
+    "wiki/summaries/2026-02-27-github-initial-setup.md",
+    "wiki/summaries/2026-02-26-orientation.md",
     "wiki/entities/dbeaver.md",
-    "wiki/entities/oracle-database.md",
-    "wiki/concepts/jquery-basics.md",
-    "wiki/concepts/bootstrap-basics.md",
-    "wiki/concepts/javascript-dom.md",
+    "wiki/concepts/java-basic-types.md",
     "wiki/concepts/html-css-basics.md",
+    "wiki/concepts/fullstack-project-flow.md",
+    "wiki/concepts/dto-entity-service-controller.md",
     "wiki/concepts/database-modeling-normalization.md",
-    "wiki/concepts/oracle-functions-join-subquery.md",
-    "wiki/concepts/oracle-constraints-sequence.md",
-    "wiki/concepts/oracle-sql-basics.md",
-    "wiki/concepts/java-abstract-interface.md",
-    "wiki/concepts/java-inheritance.md",
-    "wiki/concepts/java-class-object.md",
-    "wiki/concepts/java-array.md",
-    "wiki/concepts/java-loop.md",
-    "wiki/concepts/java-conditional-logic.md",
-    "wiki/summaries/2026-03-27-jquery-ui-interaction.md",
-    "wiki/summaries/2026-03-26-javascript-dom-product-pages.md",
-    "wiki/summaries/2026-03-25-bootstrap-form.md",
-    "wiki/summaries/2026-03-24-css-layout-javascript-intro.md",
-    "wiki/summaries/2026-03-23-html-css-intro.md",
+    "wiki/concepts/bootstrap-basics.md",
+    "raw/Study/5. Linux/2026.05.01(금)/2026.05.01(금).md",
+    "raw/ai-instructions/hermes-default-profile-instructions.md",
+    "wiki/concepts/spring-data-jpa-repository.md",
+    "wiki/concepts/jwt-session-cookie-auth.md",
+    "wiki/concepts/react-typescript-basics.md",
+    "wiki/concepts/spring-boot-rest-api.md",
+    "raw/Study/10. Python/2026.07.01(수)",
     "raw/Study/1. Java/2026.03.03(화)/연산자 마무리 문제.png",
     "raw/Study/1. Java/2026.03.03(화)/3번 문제.png",
     "raw/Study/1. Java/2026.03.03(화)/3번 문제 답.png",
@@ -242,9 +245,6 @@
     "raw/Study/3. UI&UX/교육 자료/jQueryImageTest/jQueryImageTest.html",
     "raw/Study/3. UI&UX/교육 자료/IT 관련 용어2.pdf",
     "raw/Study/2. Oracle/교육 자료/디비버(Dbeaver) 사용법(version 2.0).pdf",
-    "raw/Study/3. UI&UX/교육 자료/웹 서비스 Ui&UX.pdf",
-    "raw/Study/3. UI&UX/교육 자료/IT 관련 용어.pdf",
-    "raw/Study/3. UI&UX/교육 자료/HTML&JS&CSS 이론(new).pdf",
-    "raw/Study/3. UI&UX/교육 자료/FrontEnd&BackEnd.pdf"
+    "raw/Study/3. UI&UX/교육 자료/웹 서비스 Ui&UX.pdf"
   ]
 }

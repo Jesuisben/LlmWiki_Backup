@@ -2,7 +2,7 @@
 
 > 이 파일은 `wiki/` 전체의 목차이자 길잡이다.  
 > 질문에 답하거나 새 자료를 ingest할 때 이 파일을 먼저 읽는다.  
-> Last updated: 2026-06-30 | Total pages: 54
+> Last updated: 2026-07-01 | Total pages: 93
 
 ## 사용 방법
 
@@ -36,6 +36,25 @@
 - [[summaries/2026-03-25-bootstrap-form|2026-03-25 Bootstrap과 HTML Form]] — Bootstrap 5, CDN, 그리드 시스템, Form 요소를 학습한 날이다.
 - [[summaries/2026-03-26-javascript-dom-product-pages|2026-03-26 JavaScript DOM과 상품 목록/상세 페이지]] — JavaScript 배열, DOM 조작, 이벤트를 이용해 상품 목록/상세 페이지를 만든 날이다.
 - [[summaries/2026-03-27-jquery-ui-interaction|2026-03-27 jQuery와 UI 상호작용]] — jQuery, CSS transition, pseudo-class를 이용해 이미지/토글 UI 상호작용을 구현한 날이다.
+- [[summaries/2026-03-30-fullstack-environment-setup|2026-03-30 FrontEnd/BackEnd 개발 환경과 커리큘럼 전환]] — FrontEnd_BackEnd 과정 첫날로, Spring Boot·React·TypeScript·MySQL·Node.js·VS Code 등 풀스택 개발 환경을 준비했다.
+- [[summaries/2026-03-31-spring-boot-controller-html|2026-03-31 Spring Boot Controller와 HTML 응답]] — Spring Boot에서 Entity와 Controller를 만들고, 브라우저 요청에 HTML 문자열 또는 데이터를 응답하는 기본 흐름을 배웠다.
+- [[summaries/2026-04-01-react-router-spring-boot|2026-04-01 React 라우팅과 Spring Boot 연동 흐름]] — React의 페이지 구성과 라우팅을 App/MenuItems 구조로 정리하고 Spring Boot Controller 학습을 이어갔다.
+- [[summaries/2026-04-02-react-bootstrap-homepage|2026-04-02 React Bootstrap과 HomePage 구성]] — React Bootstrap의 Carousel·Card 등 UI 컴포넌트를 이용해 홈 화면을 구성하고 Spring/React 프로젝트 구조를 보강했다.
+- [[summaries/2026-04-03-spring-member-seed-react-comments|2026-04-03 Member 데이터 준비와 React JSX 기초]] — Spring Boot 쪽 Member 데이터를 준비하고 React/JSX에서 주석, 단축키, 기본 편집 흐름을 익혔다.
+- [[summaries/2026-04-06-login-jwt-session-cookie|2026-04-06 로그인, JWT, 세션과 쿠키]] — 로그인 구현을 시작하며 JWT 토큰, 세션, 쿠키, DTO, React 로그인 흐름의 차이를 학습했다.
+- [[summaries/2026-04-07-member-api-string-token|2026-04-07 회원 API와 문자열/토큰 처리]] — 회원 기능 구현 과정에서 Java String 메서드, Bearer 토큰 처리, Spring Controller/DTO 흐름을 다뤘다.
+- [[summaries/2026-04-08-product-domain-oci|2026-04-08 상품 도메인과 OCI 소개]] — 상품 기능 구현을 시작하며 Category, Product 도메인과 Spring/React 상품 구조, OCI 개념을 배웠다.
+- [[summaries/2026-04-09-product-delete-routing-jsx-table|2026-04-09 상품 삭제, 라우팅, JSX와 표]] — 상품 삭제 기능과 React 라우팅, JSX 내부 JavaScript 표현, HTML 표 병합 속성을 함께 다뤘다.
+- [[summaries/2026-04-10-react-event-spread-product-form|2026-04-10 React 이벤트 객체와 전개 연산자]] — React에서 이벤트 객체와 전개 연산자를 사용해 상품 입력 폼 상태를 관리하는 방법을 학습했다.
+- [[summaries/2026-04-13-product-detail-useeffect-service|2026-04-13 상품 상세와 useEffect, 서비스 계층]] — 상품 상세 조회를 위해 Spring ProductService와 React useEffect Hook을 연결하는 흐름을 학습했다.
+- [[summaries/2026-04-14-cart-service|2026-04-14 장바구니 Service와 DTO]] — 장바구니 기능 구현을 시작하며 CartProductService, CartService, CartProductDto 등 백엔드 계층을 작성했다.
+- [[summaries/2026-04-15-cart-list-selection-typescript|2026-04-15 장바구니 목록과 TypeScript props]] — React 장바구니 목록에서 전체 선택, props 구조 분해, 타입 지정, 로그인 사용자 조건 처리를 학습했다.
+- [[summaries/2026-04-16-cart-quantity-stock|2026-04-16 장바구니 수량 변경과 재고 검증]] — CartProductService와 CartController를 수정해 장바구니 품목 찾기, 수량 변경, 재고 부족 처리를 다뤘다.
+- [[summaries/2026-04-17-cart-total-array-some|2026-04-17 장바구니 합계와 Array some]] — 장바구니 화면에서 재고/합계 계산을 보강하고 JavaScript Array some 메서드를 학습했다.
+- [[summaries/2026-04-20-order-list-scenario|2026-04-20 주문 목록과 테스트 시나리오]] — 주문 기능으로 넘어가 OrderList 화면을 만들고 관리자/일반 사용자 기준 테스트 시나리오를 정리했다.
+- [[summaries/2026-04-21-product-pagination-search-react|2026-04-21 상품 목록 페이징과 필드 검색]] — React 상품 목록에서 pageNumber 등 페이징 파라미터를 추가하고 Paging 컴포넌트와 검색 상태를 다뤘다.
+- [[summaries/2026-04-22-product-repository-pageable-search|2026-04-22 ProductRepository와 Pageable 검색]] — Spring Data Repository에서 Pageable 정렬/검색 조건을 받아 상품 목록을 조회하는 백엔드 흐름을 학습했다.
+- [[summaries/2026-07-01-python-pandas-dataframe|2026-07-01 Python Pandas DataFrame 조회]] — Python 과정에서 Pandas DataFrame의 행/열 구조, 조회 문제, 그래프 함수 기초를 학습했다.
 
 ## Concepts
 
@@ -57,6 +76,16 @@
 - [[concepts/javascript-dom|JavaScript와 DOM]] — JavaScript로 HTML 문서 객체를 읽고 바꾸며 사용자 상호작용을 구현하는 방식이다.
 - [[concepts/bootstrap-basics|Bootstrap 기본]] — 반응형 웹 UI를 빠르게 만들 수 있도록 미리 준비된 CSS/JS 기반 프론트엔드 프레임워크다.
 - [[concepts/jquery-basics|jQuery 기본]] — JavaScript DOM 선택과 이벤트 처리를 짧고 편하게 작성하도록 돕는 라이브러리다.
+- [[concepts/fullstack-project-flow|풀스택 프로젝트 흐름]] — 풀스택 프로젝트 흐름
+- [[concepts/spring-boot-rest-api|Spring Boot REST API]] — Spring Boot REST API
+- [[concepts/react-typescript-basics|React와 TypeScript 기본]] — React와 TypeScript 기본
+- [[concepts/jwt-session-cookie-auth|JWT, 세션, 쿠키 인증]] — JWT, 세션, 쿠키 인증
+- [[concepts/dto-entity-service-controller|DTO, Entity, Service, Controller]] — DTO, Entity, Service, Controller
+- [[concepts/spring-data-jpa-repository|Spring Data JPA Repository]] — Spring Data JPA Repository
+- [[concepts/shopping-cart-flow|장바구니 기능 흐름]] — 장바구니 기능 흐름
+- [[concepts/order-flow|주문 기능 흐름]] — 주문 기능 흐름
+- [[concepts/pagination-search|페이징과 검색]] — 페이징과 검색
+- [[concepts/pandas-dataframe-basics|Pandas DataFrame 기본]] — Pandas DataFrame 기본
 
 ## Entities
 
@@ -71,6 +100,16 @@
 - [[entities/javascript|JavaScript]] — 브라우저에서 웹 페이지의 동작과 상호작용을 구현하는 프로그래밍 언어다.
 - [[entities/bootstrap|Bootstrap]] — 반응형 UI를 빠르게 만들기 위한 프론트엔드 프레임워크/라이브러리다.
 - [[entities/jquery|jQuery]] — JavaScript DOM 선택과 이벤트 처리를 간결하게 도와주는 라이브러리다.
+- [[entities/spring-boot|Spring Boot]] — Spring 기반 웹 애플리케이션을 빠르게 만들기 위한 프레임워크다다.
+- [[entities/react|React]] — 컴포넌트 기반 프론트엔드 라이브러리다다.
+- [[entities/typescript|TypeScript]] — JavaScript에 타입을 더한 언어다다.
+- [[entities/jwt|JWT]] — 서명된 토큰 형식으로 인증 정보를 전달하는 방식이다다.
+- [[entities/mysql|MySQL]] — 관계형 데이터베이스 관리 시스템이다다.
+- [[entities/node-js|Node.js]] — 브라우저 밖에서 JavaScript를 실행하는 런타임이다다.
+- [[entities/visual-studio-code|Visual Studio Code]] — 프론트엔드/풀스택 실습에서 사용하는 코드 편집기다다.
+- [[entities/python|Python]] — 읽기 쉬운 문법을 가진 범용 프로그래밍 언어다다.
+- [[entities/pandas|Pandas]] — Python에서 표 형태 데이터를 다루는 라이브러리다다.
+- [[entities/jupyter-notebook|Jupyter Notebook]] — 코드와 실행 결과, 설명을 함께 다룰 수 있는 대화형 Python 학습 환경이다다.
 
 ## Comparisons
 

@@ -1,7 +1,7 @@
 ---
 title: 2026-03-16 Oracle DBMS, SQL, DBeaver 입문
 created: 2026-06-30
-updated: 2026-06-30
+updated: 2026-07-01
 type: summary
 tags: [oracle, sql]
 sources: ["raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md"]
@@ -40,6 +40,17 @@ DBMS와 SQL의 기본 의미를 배우고 DBeaver로 Oracle 학습을 시작한 
 
 - [[entities/oracle-database|Oracle Database]]
 - [[concepts/oracle-sql-basics|Oracle SQL 기본]]
+
+
+## 원본 수정 반영 (2026-07-01)
+
+- `raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md`에서 확인한 추가/정리 주제: DBMS (DataBase Management System) : 데이터베이스 관리 시스템
+- `raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md`에서 확인한 추가/정리 주제: SQL구문 (P.34)
+- `raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md`에서 확인한 추가/정리 주제: DBeaver
+- `raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md`에서 확인한 추가/정리 주제: 행 번호 표시 켜기
+- `raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md`에서 확인한 추가/정리 주제: 수업내용
+
+> 이 항목은 기존에 한 번 ingest된 원본이 이후 수정된 상태였음을 반영하기 위한 보강 메모다. 세부 개념은 관련 개념 페이지에서 계속 보강한다.
 
 ## 출처
 

@@ -1,7 +1,7 @@
 ---
 title: Hermes default 프로필 모드 시스템
 created: 2026-06-30
-updated: 2026-06-30
+updated: 2026-07-01
 type: meta
 tags: [study-log]
 sources:
@@ -58,3 +58,10 @@ default 프로필 하나
 ## 출처
 
 - `raw/ai-instructions/hermes-default-profile-instructions.md`
+
+
+## 원본 수정 반영 (2026-07-01)
+
+- `raw/ai-instructions/hermes-default-profile-instructions.md`가 수정된 상태임을 확인했다.
+- 현재 운영 원칙은 safe/smart/danger 모드 전환과 승인 기준을 중심으로 유지한다.
+- 이 페이지는 실제 Hermes 시스템 지시문이 아니라, 위키에 보존된 운영 참고 문서다.

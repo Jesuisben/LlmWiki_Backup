@@ -1,7 +1,7 @@
 ---
 title: 2026-03-19 Oracle 함수, GROUP BY, JOIN, 서브쿼리
 created: 2026-06-30
-updated: 2026-06-30
+updated: 2026-07-01
 type: summary
 tags: [oracle, sql]
 sources: ["raw/Study/2. Oracle/2026.03.19(목)/2026.03.19(목).md"]
@@ -40,6 +40,17 @@ Oracle의 단일행 함수, 그룹 함수, 조인, 서브쿼리를 폭넓게 다
 
 - [[concepts/oracle-functions-join-subquery|Oracle 함수·조인·서브쿼리]]
 - [[concepts/oracle-sql-basics|Oracle SQL 기본]]
+
+
+## 원본 수정 반영 (2026-07-01)
+
+- `raw/Study/2. Oracle/2026.03.19(목)/2026.03.19(목).md`에서 확인한 추가/정리 주제: 함수 (Java에서의 메소드)
+- `raw/Study/2. Oracle/2026.03.19(목)/2026.03.19(목).md`에서 확인한 추가/정리 주제: dual 테이블 (Oracle 교안 P.217) (A06스크립트)
+- `raw/Study/2. Oracle/2026.03.19(목)/2026.03.19(목).md`에서 확인한 추가/정리 주제: 자바의 String 클래스가 갖고 있는 메소드 공부하기!!
+- `raw/Study/2. Oracle/2026.03.19(목)/2026.03.19(목).md`에서 확인한 추가/정리 주제: length() 함수
+- `raw/Study/2. Oracle/2026.03.19(목)/2026.03.19(목).md`에서 확인한 추가/정리 주제: substr() 함수 (Oracle 교안 P.225)
+
+> 이 항목은 기존에 한 번 ingest된 원본이 이후 수정된 상태였음을 반영하기 위한 보강 메모다. 세부 개념은 관련 개념 페이지에서 계속 보강한다.
 
 ## 출처
 

@@ -1,7 +1,7 @@
 ---
 title: 2026-03-06 Java 무한 while과 배열
 created: 2026-06-30
-updated: 2026-06-30
+updated: 2026-07-01
 type: summary
 tags: [java]
 sources: ["raw/Study/1. Java/2026.03.06(금)/2026.03.06(금).md"]
@@ -40,6 +40,13 @@ confidence: medium
 
 - [[concepts/java-loop|Java 반복문]]
 - [[concepts/java-array|Java 배열]]
+
+
+## 원본 수정 반영 (2026-07-01)
+
+- `raw/Study/1. Java/2026.03.06(금)/2026.03.06(금).md`의 최신 내용을 기준으로 기존 요약의 출처를 재확인했다.
+
+> 이 항목은 기존에 한 번 ingest된 원본이 이후 수정된 상태였음을 반영하기 위한 보강 메모다. 세부 개념은 관련 개념 페이지에서 계속 보강한다.
 
 ## 출처
 

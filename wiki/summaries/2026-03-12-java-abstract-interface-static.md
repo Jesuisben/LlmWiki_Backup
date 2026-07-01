@@ -1,7 +1,7 @@
 ---
 title: 2026-03-12 Java 추상 클래스, 인터페이스, static/final
 created: 2026-06-30
-updated: 2026-06-30
+updated: 2026-07-01
 type: summary
 tags: [java]
 sources: ["raw/Study/1. Java/2026.03.12(목)/2026.03.12(목).md"]
@@ -40,6 +40,17 @@ confidence: medium
 
 - [[concepts/java-abstract-interface|Java 추상 클래스와 인터페이스]]
 - [[concepts/java-loop|Java 반복문]]
+
+
+## 원본 수정 반영 (2026-07-01)
+
+- `raw/Study/1. Java/2026.03.12(목)/2026.03.12(목).md`에서 확인한 추가/정리 주제: 향상된 for / 확장 for 구문
+- `raw/Study/1. Java/2026.03.12(목)/2026.03.12(목).md`에서 확인한 추가/정리 주제: 선입선출 / 후입선출
+- `raw/Study/1. Java/2026.03.12(목)/2026.03.12(목).md`에서 확인한 추가/정리 주제: 다른 패키지에 접근
+- `raw/Study/1. Java/2026.03.12(목)/2026.03.12(목).md`에서 확인한 추가/정리 주제: 배열 이용해서 객체 생성
+- `raw/Study/1. Java/2026.03.12(목)/2026.03.12(목).md`에서 확인한 추가/정리 주제: 추상 메소드
+
+> 이 항목은 기존에 한 번 ingest된 원본이 이후 수정된 상태였음을 반영하기 위한 보강 메모다. 세부 개념은 관련 개념 페이지에서 계속 보강한다.
 
 ## 출처
 

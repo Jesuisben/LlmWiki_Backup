@@ -1,7 +1,7 @@
 ---
 title: 2026-03-24 CSS 레이아웃과 JavaScript 입문
 created: 2026-06-30
-updated: 2026-06-30
+updated: 2026-07-01
 type: summary
 tags: [html, css, javascript, frontend]
 sources: ["raw/Study/3. UI&UX/2026.03.24(화)/2026.03.24(화).md"]
@@ -40,6 +40,17 @@ CSS 박스 모델·position·글꼴 스타일과 JavaScript 기초를 배운 날
 
 - [[concepts/html-css-basics|HTML/CSS 기본]]
 - [[concepts/javascript-dom|JavaScript와 DOM]]
+
+
+## 원본 수정 반영 (2026-07-01)
+
+- `raw/Study/3. UI&UX/2026.03.24(화)/2026.03.24(화).md`에서 확인한 추가/정리 주제: Element (태그 열고 닫고의 합)
+- `raw/Study/3. UI&UX/2026.03.24(화)/2026.03.24(화).md`에서 확인한 추가/정리 주제: 자동 들여쓰기 단축키
+- `raw/Study/3. UI&UX/2026.03.24(화)/2026.03.24(화).md`에서 확인한 추가/정리 주제: boxModelTest파일 생성 (웹 서비스 Ui&UX 교안(P.8))
+- `raw/Study/3. UI&UX/2026.03.24(화)/2026.03.24(화).md`에서 확인한 추가/정리 주제: boxModelTest파일 생성 이어서 하기
+- `raw/Study/3. UI&UX/2026.03.24(화)/2026.03.24(화).md`에서 확인한 추가/정리 주제: 나머지 알아서 해서 완성해보기
+
+> 이 항목은 기존에 한 번 ingest된 원본이 이후 수정된 상태였음을 반영하기 위한 보강 메모다. 세부 개념은 관련 개념 페이지에서 계속 보강한다.
 
 ## 출처
 
