@@ -11,14 +11,10 @@
             "id": "8bfc571eae3d6ab2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "raw/Study/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "중간 프로젝트 cicd 및 배포 가이드"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "그래프 뷰"
             }
           },
           {
@@ -210,8 +206,8 @@
   },
   "active": "8bfc571eae3d6ab2",
   "lastOpenFiles": [
-    "wiki/concepts/spring-boot-rest-api.md",
     "raw/Study/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md",
+    "wiki/concepts/spring-boot-rest-api.md",
     "wiki/comparisons/get-vs-post.md",
     "wiki/comparisons/inline-style-vs-internal-css-vs-external-css.md",
     "wiki/comparisons/library-vs-framework.md",
