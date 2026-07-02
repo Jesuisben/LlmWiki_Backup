@@ -162,6 +162,14 @@ li { color: purple; }
 - [[summaries/2026-03-23-html-css-intro|2026-03-23 HTML/CSS와 웹 UI 입문]]
 - [[summaries/2026-03-24-css-layout-javascript-intro|2026-03-24 CSS 레이아웃과 JavaScript 입문]]
 
+## 교육자료·소스코드 대조 보강 (2026-07-02)
+
+이번 백필에서는 사용자 MD뿐 아니라 `웹 서비스 Ui&UX.pdf`, `HTML&JS&CSS 이론(new).pdf`, `tableExam.html`, `boxModelTest.html`도 확인했다. 교안의 HTML 파트는 태그·요소·속성·값을 먼저 잡고, 실습은 `firstExam.html`에서 시작해 `listExam.html`, `tableExam.html`, `styleExam.html`, `boxModelTest.html`로 확장된다.
+
+특히 `tableExam.html`은 표 구조, 이미지 `alt`, 링크, 배경 이미지, `border-collapse`, `padding`을 함께 보여 주는 대표 예제이고, `boxModelTest.html`은 `position: relative` 부모와 `position: absolute` 자식 배치를 확인하는 예제다. 이 흐름은 [[summaries/2026-03-23-html-css-intro|2026-03-23]]과 [[summaries/2026-03-24-css-layout-javascript-intro|2026-03-24]] summary에 반영했다.
+
+함께 보면 좋은 비교 페이지는 [[comparisons/inline-style-vs-internal-css-vs-external-css|inline style vs internal CSS vs external CSS]]다.
+
 ## 출처
 
 - `raw/Study/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md`

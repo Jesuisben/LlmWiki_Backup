@@ -2,7 +2,7 @@
 
 > 이 파일은 `wiki/` 전체의 목차이자 길잡이다.  
 > 질문에 답하거나 새 자료를 ingest할 때 이 파일을 먼저 읽는다.  
-> Last updated: 2026-07-02 | Total pages: 169
+> Last updated: 2026-07-02 | Total pages: 172
 
 ## 사용 방법
 
@@ -178,6 +178,9 @@
 - [[comparisons/git-fetch-vs-pull-vs-clone|git fetch vs pull vs clone]] — 원격 저장소 정보를 가져오는 세 명령의 시점과 결과 차이
 - [[comparisons/mpa-vs-spa|MPA vs SPA]] — 서버 렌더링 중심 다중 페이지 구조와 React 기반 단일 페이지 앱 구조의 차이
 - [[comparisons/props-vs-state|props vs state]] — React에서 부모가 내려주는 값과 컴포넌트 내부 변경 상태의 차이
+- [[comparisons/library-vs-framework|Library vs Framework]] — 필요할 때 호출하는 도구와 정해진 틀 안에서 개발하는 구조의 차이
+- [[comparisons/inline-style-vs-internal-css-vs-external-css|inline style vs internal CSS vs external CSS]] — 태그 안 style, 문서 내부 style, 외부 CSS 파일 연결 방식 비교
+- [[comparisons/get-vs-post|GET vs POST]] — URL query string으로 보내는 요청과 HTTP body로 보내는 요청의 차이
 
 ## Queries
 

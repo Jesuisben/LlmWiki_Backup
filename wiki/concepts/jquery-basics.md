@@ -169,6 +169,12 @@ jQuery는 JavaScript 위에서 동작하는 라이브러리다. 따라서 변수
 - [[concepts/bootstrap-basics|Bootstrap 기본]]
 - [[summaries/2026-03-27-jquery-ui-interaction|2026-03-27 jQuery와 UI 상호작용]]
 
+## 교육자료·소스코드 대조 보강 (2026-07-02)
+
+이번 백필에서는 `jQueryImageTest.html`을 실제 확인했다. 이 파일은 hover 확대, 흑백 토글, 선택 이미지 강조, 카테고리 필터, 썸네일 → 큰 이미지 변경, 이미지 회전, radio 기반 이미지 스타일 변경을 한 파일에 모은 실습이다.
+
+핵심 패턴은 “상태를 CSS class나 HTML attribute로 표현하고, jQuery 이벤트에서 그 class/attribute를 바꾼다”는 것이다. 예를 들어 카테고리 필터는 `data-category` 속성 선택자와 `show()/hide()`를 결합하고, 썸네일 변경은 `attr("src")`를 읽어 `#mainImage`의 `src`를 바꾼다. Library/Framework 구분은 [[comparisons/library-vs-framework|Library vs Framework]]에 연결했다.
+
 ## 출처
 
 - `raw/Study/3. UI&UX/2026.03.27(금)/2026.03.27(금).md`

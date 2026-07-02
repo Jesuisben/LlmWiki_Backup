@@ -113,6 +113,12 @@ Bootstrap의 `btn btn-primary`는 모양이고, `<button type="submit">`의 `typ
 - [[summaries/2026-03-25-bootstrap-form|2026-03-25 Bootstrap과 HTML Form]]
 - [[summaries/2026-03-26-javascript-dom-product-pages|2026-03-26 JavaScript DOM과 상품 목록/상세 페이지]]
 
+## 교육자료·소스코드 대조 보강 (2026-07-02)
+
+이번 백필에서는 `B.nobootstrap`와 `C.yesbootstrap` 소스코드를 비교했다. `B.nobootstrap/CartList.html`은 `.container`, `.row`, `.btn`, `input[type="number"]` 등을 직접 CSS로 작성하는 반면, `C.yesbootstrap/CartList.html`은 `table table-striped table-bordered`, `img-thumbnail`, `form-control`, `btn btn-danger btn-sm` 같은 Bootstrap class로 같은 목적을 표현한다.
+
+상품 등록 폼도 직접 CSS 버전과 Bootstrap 버전이 함께 있어, Bootstrap이 HTML/CSS를 없애는 도구가 아니라 반복 UI 규칙을 class로 표준화하는 도구임을 보여 준다. Library/Framework 관점은 [[comparisons/library-vs-framework|Library vs Framework]]에 따로 보존했다.
+
 ## 출처
 
 - `raw/Study/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md`

@@ -144,3 +144,10 @@ confidence: high
 
 - `wiki/_meta/llm-wiki-operating-model.md`의 관련 페이지에 `wiki/_meta/agent-coding-guidelines.md`와 이 감사 리포트를 연결했다.
 - 그 결과 고립 페이지 후보는 2개에서 0개로 줄었다.
+
+## 추가 정리: UI&UX course-material-aware 백필
+
+- `raw/Study/3. UI&UX`의 2026-03-23~2026-03-27 사용자 정리 MD 5개를 `웹 서비스 Ui&UX.pdf`, `HTML&JS&CSS 이론(new).pdf`, `IT 관련 용어.pdf`, `library&framework.png`, 대표 HTML 소스코드와 대조해 summary 5개를 재작성했다.
+- 기존 `html-css-basics`, `javascript-dom`, `bootstrap-basics`, `jquery-basics` concept에 교육자료·소스코드 대조 메모를 추가했다.
+- `html`, `css`, `javascript`, `bootstrap`, `jquery` entity의 학습 이력과 출처를 UI&UX 교육자료 기준으로 보강했다.
+- 반복 혼동으로 남을 가능성이 높은 `Library vs Framework`, `inline style vs internal CSS vs external CSS`, `GET vs POST` 비교 페이지를 추가했다.

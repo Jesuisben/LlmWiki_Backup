@@ -126,3 +126,39 @@
   - `wiki/comparisons/mpa-vs-spa.md`
   - `wiki/comparisons/props-vs-state.md`
 - `wiki/index.md`에 신규 페이지 8개를 등록하고 Total pages를 169로 갱신함.
+
+## [2026-07-02] update | UI&UX course-material-aware wiki backfill
+
+- 목적: `raw/Study/3. UI&UX` 사용자 정리 MD 5개를 주 자료로 삼고, MD에서 언급된 UI&UX/HTML/CSS/JS/jQuery 교육자료 PDF·PNG·소스코드를 실제 확인해 기존 UI&UX 1차 wiki 정리본을 재검증·보강함.
+- 원칙: `raw/`는 수정하지 않고 `wiki/`만 수정함. `sources`에는 사용자 정리 MD와 실제 참고한 교육자료/소스코드 경로를 함께 남김.
+- 참고한 대표 교육자료:
+  - `raw/Study/3. UI&UX/교육 자료/웹 서비스 Ui&UX.pdf`
+  - `raw/Study/3. UI&UX/교육 자료/HTML&JS&CSS 이론(new).pdf`
+  - `raw/Study/3. UI&UX/교육 자료/IT 관련 용어.pdf`
+  - `raw/Study/3. UI&UX/교육 자료/library&framework.png`
+  - `raw/Study/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/A.html&js&css/tableExam.html`
+  - `raw/Study/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/A.html&js&css/boxModelTest.html`
+  - `raw/Study/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/B.nobootstrap/CartList.html`
+  - `raw/Study/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/C.yesbootstrap/CartList.html`
+  - `raw/Study/3. UI&UX/교육 자료/jQueryImageTest/jQueryImageTest.html`
+- 보강한 summary:
+  - `wiki/summaries/2026-03-23-html-css-intro.md`
+  - `wiki/summaries/2026-03-24-css-layout-javascript-intro.md`
+  - `wiki/summaries/2026-03-25-bootstrap-form.md`
+  - `wiki/summaries/2026-03-26-javascript-dom-product-pages.md`
+  - `wiki/summaries/2026-03-27-jquery-ui-interaction.md`
+- 보강한 concept/entity:
+  - `wiki/concepts/html-css-basics.md`
+  - `wiki/concepts/javascript-dom.md`
+  - `wiki/concepts/bootstrap-basics.md`
+  - `wiki/concepts/jquery-basics.md`
+  - `wiki/entities/html.md`
+  - `wiki/entities/css.md`
+  - `wiki/entities/javascript.md`
+  - `wiki/entities/bootstrap.md`
+  - `wiki/entities/jquery.md`
+- 새로 추가한 comparison:
+  - `wiki/comparisons/library-vs-framework.md`
+  - `wiki/comparisons/inline-style-vs-internal-css-vs-external-css.md`
+  - `wiki/comparisons/get-vs-post.md`
+- `wiki/index.md`에 신규 페이지 3개를 등록하고 Total pages를 172로 갱신함.
