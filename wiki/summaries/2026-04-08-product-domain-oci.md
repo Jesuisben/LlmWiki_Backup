@@ -1,57 +1,55 @@
 ---
 title: 2026-04-08 상품 도메인과 OCI 소개
-created: 2026-07-01
-updated: 2026-07-01
+created: 2026-07-02
+updated: 2026-07-02
 type: summary
-tags: [spring-boot, react, backend, frontend, aws]
+tags: [spring-boot, react, typescript, frontend, backend, curriculum, study-log]
 sources:
   - raw/Study/4. FrontEnd_BackEnd/2026.04.08(수)/2026.04.08(수).md
+  - raw/Study/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf
 status: growing
-confidence: medium
+confidence: high
 ---
-
 # 2026-04-08 상품 도메인과 OCI 소개
 
 ## 한 줄 요약
 
-상품 기능 구현을 시작하며 Category, Product 도메인과 Spring/React 상품 구조, OCI 개념을 배웠다.
+회원 기능 이후 상품 도메인으로 넘어가 Category/Product Entity와 상품 기능의 기본 구조를 만들기 시작했다.
+
+## 커리큘럼 위치와 흐름
+
+로그인/회원 기반을 만든 뒤 쇼핑몰의 핵심 도메인인 상품으로 전환했다. Category와 Product는 이후 목록, 상세, 등록, 삭제, 검색, 장바구니와 모두 연결되는 중심 데이터다.
 
 ## 배운 내용
 
-- OCI 개념
-- 상품 공통 사항
-- Category 열거형
-- Product 엔티티
-- Spring/React 상품 기능 분리
+- `Category.java`, `Product.java`를 작성하고 Spring 애플리케이션 실행과 DB 테이블 확인 흐름을 다뤘다.
+- OCI 가입 자료가 언급되지만 현재 교육자료 폴더에는 별도 OCI PDF가 없어, 이번 백필에서는 raw MD의 언급만 출처로 남긴다.
+- Spring Boot 프로젝트 구성 관점에서 Entity는 JPA와 DB 테이블 연결의 중심이다.
 
-## 원본에서 확인한 세부 주제
+## 핵심 실습 / 예제
 
-- 오픈 채팅에 파일 2개 다운
-- OCI
-- 제05장-01. 상품 공통 사항 (스프링) (05.상품.txt)
-- Category.java (05.상품.txt)
-- Product 작성 (스프링) (05.상품.txt)
-- 애플리케이션 실행 (스프링) (05.상품.txt)
-- 데이터 베이스 확인 (MySQL) (05.상품.txt)
-- 제05장-02. 상품 등록(단위 테스트)
+- 상품 Entity에는 이름, 설명, 가격, 재고, 이미지 같은 화면/DB 양쪽에서 필요한 정보가 들어간다.
+- Category는 상품 분류를 담당하며, 이후 검색/필터링과 연결된다.
 
-## 핵심 개념
+## 교육자료 대조 메모
 
-- 백엔드의 Controller/Service/Repository/DTO/Entity 역할을 나누어 생각한다.
-- 프론트엔드는 React 컴포넌트, props, state, Hook, 라우팅으로 화면과 상태를 관리한다.
-- 실습 기능은 단독 문법보다 로그인, 상품, 장바구니, 주문처럼 이어지는 업무 흐름 안에서 이해해야 한다.
+- 사용자 정리 MD를 주 자료로 삼고, MD에서 언급한 교육자료를 실제 확인해 출처에 추가했다.
+- 이번 과목의 큰 흐름은 [[concepts/frontend-backend-architecture|Frontend/Backend 구조]] → [[concepts/spring-boot-rest-api|Spring Boot REST API]] → [[concepts/react-typescript-basics|React와 TypeScript 기본]] → 인증·상품·장바구니·주문·검색 기능 구현으로 이어진다.
 
 ## 헷갈린 점 / 질문
 
-- 같은 데이터가 백엔드 Entity, DTO, 프론트 TypeScript 타입에서 각각 어떻게 표현되는지 구분할 필요가 있다.
-- React 라우팅 주소와 Spring Boot API 주소는 역할이 다르므로 혼동하지 않아야 한다.
+- Entity는 React 화면용 타입과 비슷해 보이지만 DB/JPA와 더 가까운 객체다.
+- 상품 도메인은 단순 목록 표시가 아니라 장바구니·주문·재고 검증의 출발점이다.
+- 클라우드 OCI 언급은 이후 AWS/Linux/배포 흐름과 연결될 수 있지만, 이 날짜의 핵심은 상품 도메인 시작이다.
 
 ## 관련 페이지
 
-- [[concepts/fullstack-project-flow|풀스택 프로젝트 흐름]]
-- [[concepts/spring-boot-rest-api|Spring Boot REST API]]
-- [[concepts/react-typescript-basics|React와 TypeScript 기본]]
+- [[concepts/product-domain-flow]]
+- [[comparisons/entity-vs-dto]]
+- [[concepts/dto-entity-service-controller]]
+- [[entities/spring-boot]]
 
 ## 출처
 
 - `raw/Study/4. FrontEnd_BackEnd/2026.04.08(수)/2026.04.08(수).md`
+- `raw/Study/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf`

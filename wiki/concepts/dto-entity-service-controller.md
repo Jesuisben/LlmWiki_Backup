@@ -8,6 +8,8 @@ sources:
   - raw/Study/4. FrontEnd_BackEnd/2026.03.31(화)/2026.03.31(화).md
   - raw/Study/4. FrontEnd_BackEnd/2026.04.14(화)/2026.04.14(화).md
   - raw/Study/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md
+  - raw/Study/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf
+  - raw/Study/4. FrontEnd_BackEnd/교육 자료/쇼핑 카트 데이터 구조 다이어그램.png
 status: growing
 confidence: high
 ---
@@ -45,6 +47,11 @@ FrontEnd_BackEnd 단계에서는 문법 하나보다 화면, API, 업무 규칙,
 - [[comparisons/entity-vs-dto|Entity vs DTO]]
 - [[comparisons/controller-service-repository|Controller vs Service vs Repository]]
 - [[concepts/spring-data-jpa-repository|Spring Data JPA Repository]]
+
+
+## 교육자료 대조 보강
+
+SpringBoot 교안의 프로젝트 구성도는 Controller/Service/Repository/Entity의 위치를, 장바구니 다이어그램은 Cart/CartProduct/Product 관계를 보여준다. 이를 바탕으로 DTO는 API 입출력 모양, Entity는 JPA/DB 관계, Service는 업무 규칙, Controller는 HTTP 요청 입구라는 구분을 보강했다.
 
 ## 출처
 

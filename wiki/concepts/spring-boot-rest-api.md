@@ -8,6 +8,8 @@ sources:
   - raw/Study/4. FrontEnd_BackEnd/2026.03.31(화)/2026.03.31(화).md
   - raw/Study/4. FrontEnd_BackEnd/2026.04.07(화)/2026.04.07(화).md
   - raw/Study/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md
+  - raw/Study/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf
+  - raw/Study/4. FrontEnd_BackEnd/교육 자료/IT 관련 용어.pdf
 status: growing
 confidence: high
 ---
@@ -48,6 +50,11 @@ FrontEnd_BackEnd 단계에서는 문법 하나보다 화면, API, 업무 규칙,
 - [[concepts/dto-entity-service-controller|DTO, Entity, Service, Controller]]
 - [[comparisons/controller-service-repository|Controller vs Service vs Repository]]
 - [[concepts/spring-data-jpa-repository|Spring Data JPA Repository]]
+
+
+## 교육자료 대조 보강
+
+IT 관련 용어 교안 p.35~36은 REST를 URL(Resource)과 HTTP Method(GET/POST/PUT/DELETE) 중심으로 설명한다. SpringBoot 교안 p.57~60은 `@Controller`, `@RestController`, `@GetMapping`, `@PathVariable`의 차이를 보여준다. 따라서 이 페이지의 REST API 설명은 단순 “JSON 응답”이 아니라 HTTP Method와 Resource URL, Controller 매핑의 조합으로 읽어야 한다.
 
 ## 출처
 

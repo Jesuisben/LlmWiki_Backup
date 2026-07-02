@@ -7,6 +7,8 @@ tags: [linux]
 sources:
   - raw/Study/5. Linux/2026.04.22(수) - 시작/2026.04.22(수) - 시작.md
   - raw/Study/5. Linux/2026.04.23(목)/2026.04.23(목).md
+  - raw/Study/5. Linux/교육 자료/Linux/Linux 이론.pdf
+  - raw/Study/5. Linux/교육 자료/Linux/Linux 실습(MobaXterm, VirtualBox, 실습).pdf
 status: growing
 confidence: high
 ---
@@ -15,48 +17,63 @@ confidence: high
 
 ## 정의
 
-Linux CLI(Command Line Interface)는 마우스 대신 명령어로 파일, 디렉터리, 프로세스, 네트워크, 패키지를 다루는 작업 방식이다. 파일 시스템은 `/` 루트에서 시작해 `/home`, `/etc`, 프로젝트 디렉터리처럼 계층적으로 구성된다.
+Linux CLI(Command Line Interface)는 명령어로 운영체제를 조작하는 방식이고, 파일 시스템은 `/` 루트에서 시작해 `/home`, `/etc`, `/var`, `/usr` 같은 디렉터리로 뻗어 나가는 계층 구조다.
 
 ## 왜 중요한가
 
-Spring Boot나 React를 서버에 배포하면 IDE 화면이 아니라 터미널에서 파일을 만들고, 로그를 보고, 설정 파일을 수정해야 한다. 이 위키에서 Linux는 “서버 배포를 위한 운영체제 감각”을 익히는 단계다.
+Spring Boot나 Docker를 서버에서 실행할 때는 IDE나 Windows 탐색기보다 터미널에서 파일을 만들고, 권한을 보고, 설정을 수정하고, 로그를 확인하는 일이 많다. CLI와 파일 시스템은 Linux 배포 작업의 기본 언어다.
 
-## 수업에서 배운 순서
+## 수업에서 등장한 흐름
 
-1. VirtualBox에 Ubuntu를 설치했다.
-2. SSH 서버를 켜고 MobaXterm으로 접속했다.
-3. `pwd`, `cd`, `ls`로 현재 위치와 목록을 확인했다.
-4. `mkdir`, `touch`, `cat`으로 디렉터리와 파일을 만들고 확인했다.
-5. `cp`, `mv`, `find`로 복사·이동·검색을 실습했다.
-6. `vi`로 서버 안에서 파일을 직접 편집했다.
+1. VirtualBox Ubuntu VM에 SSH로 접속했다.
+2. `사용자@호스트:현재경로$` prompt를 읽었다.
+3. `/home/broadcast` 아래 방송사/프로그램 이름의 디렉터리 트리를 만들었다.
+4. `echo`, `touch`, `cat`으로 파일을 만들고 확인했다.
+5. `cp`, `mv`, `find`로 파일을 복사·이동·검색했다.
+6. `vi`, `grep`, `more`, `diff`로 서버 안의 텍스트를 편집·검색·비교했다.
 
 ## 핵심 명령어
 
 ```bash
 pwd
 cd /home/broadcast
+cd ..
 ls -al
+tree / -L 1
 mkdir -p sbs/morning_wide
+echo "This is a test" > kbs/1night_2days/hello.txt
+echo "append" >> total.txt
 touch mbc/infinite_challenge/everyone.txt
-cat kbs/1night_2days/hello.txt
+cat total.txt
 cp source.txt target.txt
 mv old.txt new.txt
-find . -name "*.txt"
-vi myfile.txt
+find /home/broadcast -iname "WORLD.TXT"
+grep -iwn "break" total.txt
+more -n 10 total.txt
+diff java.txt java.doc
+vi total.txt
 ```
+
+## 경로 감각
+
+- 절대 경로: `/home/broadcast/kbs/1night_2days/hello.txt`처럼 `/`에서 시작한다.
+- 상대 경로: `kbs/1night_2days/hello.txt`, `./kbs/...`, `../broadcast/...`처럼 현재 위치를 기준으로 해석한다.
+- `~`는 현재 사용자의 home directory다.
+- `.`은 현재 디렉터리, `..`은 상위 디렉터리다.
 
 ## 자주 헷갈리는 점
 
-- 절대 경로는 `/home/broadcast/...`처럼 `/`에서 시작한다. 상대 경로는 현재 위치를 기준으로 해석된다.
 - `mkdir a/b`는 `a`가 없으면 실패하지만 `mkdir -p a/b`는 중간 디렉터리까지 만든다.
+- `>`는 덮어쓰기, `>>`는 누적이다.
+- `find`는 파일 이름뿐 아니라 타입·크기·수정 시간·실행 가능 여부로도 찾을 수 있다.
 - `vi`는 입력 모드와 명령 모드가 나뉜다. 글 입력은 `i`, 저장 후 종료는 `Esc` → `:wq`다.
-- `ls -al`에서 숨김 파일은 `.`으로 시작하는 파일이다. Git의 `.git`도 이 규칙을 따른다.
+- `diff`의 `<`는 왼쪽 파일, `>`는 오른쪽 파일의 차이를 나타낸다.
 
 ## 이후 학습과 연결
 
 - [[concepts/linux-users-permissions|Linux 사용자·그룹·권한]]을 알아야 파일 수정/실행 오류를 해석할 수 있다.
-- [[concepts/linux-package-archive|Linux 패키지·다운로드·압축]]은 서버에 필요한 도구와 파일을 준비하는 단계다.
-- [[concepts/docker-image-container|Docker 이미지와 컨테이너]]도 결국 Linux 파일 시스템과 명령어 위에서 실행된다.
+- [[concepts/linux-web-server-apache-nginx|Linux Apache/Nginx 웹서버]]에서는 `/var/www/html/` 같은 서버 문서 경로를 다룬다.
+- [[concepts/docker-cp-exec-container-files|Docker exec/cp와 컨테이너 파일 다루기]]도 결국 컨테이너 내부 Linux 파일 시스템을 다루는 것이다.
 
 ## 관련 수업
 
@@ -67,3 +84,5 @@ vi myfile.txt
 
 - `raw/Study/5. Linux/2026.04.22(수) - 시작/2026.04.22(수) - 시작.md`
 - `raw/Study/5. Linux/2026.04.23(목)/2026.04.23(목).md`
+- `raw/Study/5. Linux/교육 자료/Linux/Linux 이론.pdf` — prompt, 절대/상대 경로, 파일 시스템
+- `raw/Study/5. Linux/교육 자료/Linux/Linux 실습(MobaXterm, VirtualBox, 실습).pdf` — p.92~127 파일/디렉터리/vi 실습

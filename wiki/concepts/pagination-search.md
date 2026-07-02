@@ -7,6 +7,8 @@ tags: [spring-boot, react, backend, frontend]
 sources:
   - raw/Study/4. FrontEnd_BackEnd/2026.04.21(화)/2026.04.21(화).md
   - raw/Study/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md
+  - raw/Study/4. FrontEnd_BackEnd/교육 자료/필드 검색 기능.pdf
+  - raw/Study/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf
 status: growing
 confidence: high
 ---
@@ -43,6 +45,11 @@ FrontEnd_BackEnd 단계에서는 문법 하나보다 화면, API, 업무 규칙,
 - [[concepts/spring-data-jpa-repository|Spring Data JPA Repository]]
 - [[concepts/react-typescript-basics|React와 TypeScript 기본]]
 - [[concepts/spring-boot-rest-api|Spring Boot REST API]]
+
+
+## 교육자료 대조 보강
+
+필드 검색 기능 PDF는 `totalElements`, `pageSize`, `totalPages`, `pageNumber`, `pageCount`, `beginPage`, `endPage`, `pagingStatus` 같은 페이징 지표를 제시한다. SpringBoot 교안 p.89~90의 `Pageable`, `Sort`, query method 설명과 함께 보면, React의 페이지 상태와 Spring Data JPA의 조회 범위 제한이 하나의 검색 흐름으로 이어진다.
 
 ## 출처
 

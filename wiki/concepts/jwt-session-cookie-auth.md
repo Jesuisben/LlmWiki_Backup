@@ -7,6 +7,9 @@ tags: [auth, backend, frontend]
 sources:
   - raw/Study/4. FrontEnd_BackEnd/2026.04.06(월)/2026.04.06(월).md
   - raw/Study/4. FrontEnd_BackEnd/2026.04.07(화)/2026.04.07(화).md
+  - raw/Study/4. FrontEnd_BackEnd/교육 자료/IT 관련 용어.pdf
+  - raw/Study/4. FrontEnd_BackEnd/교육 자료/JWT(이론).pdf
+  - raw/Study/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf
 status: growing
 confidence: high
 ---
@@ -42,6 +45,11 @@ FrontEnd_BackEnd 단계에서는 문법 하나보다 화면, API, 업무 규칙,
 - [[entities/jwt|JWT]]
 - [[comparisons/session-vs-cookie-vs-jwt|Session vs Cookie vs JWT]]
 - [[concepts/spring-boot-rest-api|Spring Boot REST API]]
+
+
+## 교육자료 대조 보강
+
+IT 관련 용어 교안 p.48~49는 Cookie와 Session을, JWT 이론 p.2~4는 React SPA 구조와 JWT 사용 맥락을 설명한다. SpringBoot 교안 p.164~165의 `Authentication`/`SecurityContextHolder` 설명은 토큰 검증 후 서버 내부에서 현재 사용자를 어떻게 보관하는지 이해하는 근거가 된다. 자세한 필터 흐름은 [[concepts/spring-security-jwt-filter]]에 분리했다.
 
 ## 출처
 

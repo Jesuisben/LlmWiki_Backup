@@ -9,6 +9,9 @@ sources:
   - raw/Study/4. FrontEnd_BackEnd/2026.04.15(수)/2026.04.15(수).md
   - raw/Study/4. FrontEnd_BackEnd/2026.04.16(목)/2026.04.16(목).md
   - raw/Study/4. FrontEnd_BackEnd/2026.04.17(금)/2026.04.17(금).md
+  - raw/Study/4. FrontEnd_BackEnd/교육 자료/쇼핑 카트 데이터 구조 다이어그램.png
+  - raw/Study/4. FrontEnd_BackEnd/교육 자료/다대일 단방향 매칭(Cart-CartProduct-Product) 01.png
+  - raw/Study/4. FrontEnd_BackEnd/교육 자료/다대일 단방향 매칭(Cart-CartProduct-Product) 02.png
 status: growing
 confidence: high
 ---
@@ -47,6 +50,11 @@ FrontEnd_BackEnd 단계에서는 문법 하나보다 화면, API, 업무 규칙,
 - [[concepts/fullstack-project-flow|풀스택 프로젝트 흐름]]
 - [[concepts/dto-entity-service-controller|DTO, Entity, Service, Controller]]
 - [[concepts/order-flow|주문 기능 흐름]]
+
+
+## 교육자료 대조 보강
+
+쇼핑 카트 데이터 구조 다이어그램은 `Customer(Member) 1 : 1 Cart`, `Cart 1 : N CartProduct`, `CartProduct N : 1 Product` 관계를 보여준다. CartProduct는 “사용자가 어떤 상품을 몇 개 담았는가”를 표현하는 중간 Entity이며, Product는 진열대의 원본 상품 정보처럼 여러 장바구니 항목에서 참조될 수 있다. 이 구분은 수량 변경과 재고 검증을 이해하는 핵심이다.
 
 ## 출처
 

@@ -9,6 +9,8 @@ sources:
   - raw/Study/4. FrontEnd_BackEnd/2026.04.10(금)/2026.04.10(금).md
   - raw/Study/4. FrontEnd_BackEnd/2026.04.15(수)/2026.04.15(수).md
   - raw/Study/4. FrontEnd_BackEnd/2026.04.21(화)/2026.04.21(화).md
+  - raw/Study/4. FrontEnd_BackEnd/교육 자료/React 교안.pdf
+  - raw/Study/4. FrontEnd_BackEnd/교육 자료/라우터 설명 그림.png
 status: growing
 confidence: high
 ---
@@ -50,6 +52,11 @@ FrontEnd_BackEnd 단계에서는 문법 하나보다 화면, API, 업무 규칙,
 - [[entities/react|React]]
 - [[entities/typescript|TypeScript]]
 - [[comparisons/react-router-vs-spring-api-url|React Router 주소 vs Spring API 주소]]
+
+
+## 교육자료 대조 보강
+
+React 교안 p.41, p.72~73, p.87을 대조해 전개 연산자, 이벤트 객체, `useEffect`를 각각 폼 상태 관리·이벤트 처리·API 데이터 요청의 핵심 도구로 연결했다. 라우터 설명 이미지는 React Router가 사용자를 알맞은 화면 컴포넌트로 안내하는 역할임을 보여주며, 이는 [[comparisons/react-router-vs-spring-api-url|React Router 주소 vs Spring API 주소]]와 직접 연결된다.
 
 ## 출처
 

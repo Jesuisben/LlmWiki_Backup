@@ -6,6 +6,8 @@ type: concept
 tags: [spring-boot, backend, java]
 sources:
   - raw/Study/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md
+  - raw/Study/4. FrontEnd_BackEnd/교육 자료/필드 검색 기능.pdf
+  - raw/Study/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf
 status: growing
 confidence: high
 ---
@@ -66,6 +68,11 @@ System.out.println("현재 페이지 번호 : " + productPage.getNumber());
 
 - [[concepts/spring-data-jpa-repository|Spring Data JPA Repository]]
 - [[concepts/pagination-search|페이징과 검색]]
+
+
+## 교육자료 대조 보강
+
+필드 검색 기능 PDF의 페이징 지표는 프론트가 보여줄 페이지 버튼 계산에 쓰이고, Spring Data JPA의 `Pageable`/`Sort`는 DB 조회 범위를 제한하는 백엔드 객체다. Specification은 검색 필드가 동적으로 바뀔 때 조건을 조립하는 도구로 이해하면 좋다.
 
 ## 출처
 

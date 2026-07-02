@@ -8,6 +8,9 @@ sources:
   - raw/Study/4. FrontEnd_BackEnd/2026.03.30(월) - 시작/2026.03.30(월) - 시작.md
   - raw/Study/4. FrontEnd_BackEnd/2026.04.14(화)/2026.04.14(화).md
   - raw/Study/4. FrontEnd_BackEnd/2026.04.20(월)/2026.04.20(월).md
+  - raw/Study/4. FrontEnd_BackEnd/교육 자료/FrontEnd&BackEnd.pdf
+  - raw/Study/4. FrontEnd_BackEnd/교육 자료/프로그램 흐름 그림.png
+  - raw/Study/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf
 status: growing
 confidence: high
 ---
@@ -49,6 +52,11 @@ FrontEnd_BackEnd 단계에서는 문법 하나보다 화면, API, 업무 규칙,
 - [[concepts/spring-boot-rest-api|Spring Boot REST API]]
 - [[concepts/react-typescript-basics|React와 TypeScript 기본]]
 - [[concepts/shopping-cart-flow|장바구니 기능 흐름]]
+
+
+## 교육자료 대조 보강
+
+SpringBoot 교안 p.55~60의 구성도는 `Controller → Service → Repository → Database` 흐름과 `Entity`, `application.properties`, `pom.xml`의 위치를 한 장으로 보여준다. 이번 백필에서는 이 그림을 [[concepts/frontend-backend-architecture|Frontend/Backend 구조]]와 연결해, React 화면이 View 역할의 상당 부분을 맡고 Spring Boot가 REST API와 업무 로직을 담당하는 흐름으로 정리했다.
 
 ## 출처
 

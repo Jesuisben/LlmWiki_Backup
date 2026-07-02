@@ -1,58 +1,57 @@
 ---
 title: 2026-04-07 회원 API와 문자열/토큰 처리
-created: 2026-07-01
-updated: 2026-07-01
+created: 2026-07-02
+updated: 2026-07-02
 type: summary
-tags: [java, spring-boot, auth, backend, react]
+tags: [spring-boot, react, typescript, frontend, backend, curriculum, study-log]
 sources:
   - raw/Study/4. FrontEnd_BackEnd/2026.04.07(화)/2026.04.07(화).md
+  - raw/Study/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf
+  - raw/Study/4. FrontEnd_BackEnd/교육 자료/JWT(이론).pdf
 status: growing
-confidence: medium
+confidence: high
 ---
-
 # 2026-04-07 회원 API와 문자열/토큰 처리
 
 ## 한 줄 요약
 
-회원 기능 구현 과정에서 Java String 메서드, Bearer 토큰 처리, Spring Controller/DTO 흐름을 다뤘다.
+회원 API 구현 중 Bearer 토큰 문자열 처리와 Spring Security 인증 컨텍스트 흐름을 배웠다.
+
+## 커리큘럼 위치와 흐름
+
+전날 JWT 개념을 배운 뒤, 실제 Spring Boot 코드에서 토큰을 꺼내 인증 객체로 연결하는 단계다. 문자열 메서드와 보안 필터가 함께 등장해 단순 문법 지식이 인증 구현으로 이어진다.
 
 ## 배운 내용
 
-- String 클래스 주요 메서드
-- Bearer 토큰 문자열 처리
-- 회원 DTO와 Controller
-- 쿠키/토큰 인증 흐름
-- React와 회원 API 연결
+- `JwtAuthenticationFilter`를 만들고 요청 헤더에서 `Bearer ` 접두사를 제거해 JWT 본문만 추출하는 흐름을 다뤘다.
+- SpringBoot 교안 p.164~165는 `Authentication`과 `SecurityContextHolder`가 인증 사용자, 권한, 인증 여부를 보관하는 구조임을 설명한다.
+- `SecurityContextHolder.getContext()` 안의 Authentication이 현재 요청의 로그인 사용자 정보를 담는 핵심 위치다.
 
-## 원본에서 확인한 세부 주제
+## 핵심 실습 / 예제
 
-- String 클래스 (04.회원.txt) (중요!!!!!!!!!!)
-- JWT 필터 클래스 신규 작성 : JwtAuthenticationFilter(config 패키지) (04.회원.txt)
-- 엔터티 공통 속성 공통화 - SecurityContextHolder (SpringBoot 교안 PDF (P.165))
-- 엔터티 공통 속성 공통화 - Authentication 인터페이스 (SpringBoot 교안 PDF (P.164))
-- WebConfig 클래스 (04.회원.txt)
-- config\CorsConfig 클래스 신규 작성 (04.회원.txt)
-- 로그인/로그 아웃 구현하기 (SpringBoot 교안 PDF (P.148~150))
-- 사용자 상세 정보 서비스 (04.회원.txt)
+- `OncePerRequestFilter` 기반 필터에서 토큰을 검사하고, 유효하면 Authentication을 만들어 SecurityContext에 넣는 흐름으로 이해할 수 있다.
+- Bearer 토큰 처리는 `String` 메서드 사용 예제이면서 동시에 API 인증의 첫 관문이다.
 
-## 핵심 개념
+## 교육자료 대조 메모
 
-- 백엔드의 Controller/Service/Repository/DTO/Entity 역할을 나누어 생각한다.
-- 프론트엔드는 React 컴포넌트, props, state, Hook, 라우팅으로 화면과 상태를 관리한다.
-- 실습 기능은 단독 문법보다 로그인, 상품, 장바구니, 주문처럼 이어지는 업무 흐름 안에서 이해해야 한다.
+- 사용자 정리 MD를 주 자료로 삼고, MD에서 언급한 교육자료를 실제 확인해 출처에 추가했다.
+- 이번 과목의 큰 흐름은 [[concepts/frontend-backend-architecture|Frontend/Backend 구조]] → [[concepts/spring-boot-rest-api|Spring Boot REST API]] → [[concepts/react-typescript-basics|React와 TypeScript 기본]] → 인증·상품·장바구니·주문·검색 기능 구현으로 이어진다.
 
 ## 헷갈린 점 / 질문
 
-- 같은 데이터가 백엔드 Entity, DTO, 프론트 TypeScript 타입에서 각각 어떻게 표현되는지 구분할 필요가 있다.
-- React 라우팅 주소와 Spring Boot API 주소는 역할이 다르므로 혼동하지 않아야 한다.
+- `Bearer `는 토큰 자체가 아니라 Authorization 헤더에서 인증 방식과 토큰을 구분하기 위한 접두사다.
+- JWT 검증과 SecurityContext 설정은 Controller에 도달하기 전 필터 단계에서 처리된다.
+- Authentication 객체는 “사용자 이름 문자열”만이 아니라 principal, credentials, authorities, authenticated 여부를 함께 가진다.
 
 ## 관련 페이지
 
-- [[concepts/fullstack-project-flow|풀스택 프로젝트 흐름]]
-- [[concepts/spring-boot-rest-api|Spring Boot REST API]]
-- [[concepts/react-typescript-basics|React와 TypeScript 기본]]
-- [[concepts/jwt-session-cookie-auth|JWT, 세션, 쿠키 인증]]
+- [[concepts/spring-security-jwt-filter]]
+- [[concepts/jwt-session-cookie-auth]]
+- [[entities/jwt]]
+- [[concepts/spring-boot-rest-api]]
 
 ## 출처
 
 - `raw/Study/4. FrontEnd_BackEnd/2026.04.07(화)/2026.04.07(화).md`
+- `raw/Study/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf`
+- `raw/Study/4. FrontEnd_BackEnd/교육 자료/JWT(이론).pdf`
