@@ -1,44 +1,56 @@
 ---
 title: Oracle 함수·조인·서브쿼리
-created: 2026-06-30
-updated: 2026-06-30
+created: 2026-07-02
+updated: 2026-07-02
 type: concept
 tags: [oracle, sql]
-sources: []
+sources:
+  - raw/Study/2. Oracle/2026.03.19(목)/2026.03.19(목).md
 status: growing
-confidence: medium
+confidence: high
 ---
-
 # Oracle 함수·조인·서브쿼리
 
 ## 정의
 
-SQL에서 값을 가공하고 여러 데이터 집합을 연결·중첩 조회하는 핵심 기능이다.
+Oracle SQL에서 **함수(function)**는 컬럼 값을 가공하거나 계산하는 도구이고, **JOIN**은 여러 테이블을 공통 컬럼으로 연결하는 방법이며, **서브쿼리(subquery)**는 한 SQL 문 안에 다른 SQL 문을 넣어 조건이나 값을 만들어내는 방식이다.
 
 ## 왜 중요한가
 
-초보 개발 단계에서는 문법을 외우는 것보다 이 개념이 어떤 문제를 해결하는지 이해하는 것이 중요하다. 이 개념은 이후 실습, 프로젝트, 프레임워크 학습에서 반복해서 등장한다.
+상품명 검색, 카테고리별 상품 수, 게시글 작성자 이름 연결, 평균보다 높은 값 조회처럼 실제 웹서비스 조회 기능은 함수, JOIN, 서브쿼리 사고방식을 필요로 한다.
 
-## 핵심 설명
+## 학습 흐름
 
-- 단일행 함수는 각 행마다 값을 변환하거나 계산한다.
-- 그룹 함수와 `GROUP BY`는 여러 행을 묶어 집계한다.
-- JOIN은 여러 테이블의 관련 행을 연결한다.
-- 서브쿼리는 쿼리 안에 들어가는 또 다른 쿼리다.
+2026-03-19 수업에서는 다음 순서로 SQL 조회 심화를 배웠다.
 
-## 예시
+1. `dual` 테이블로 함수 실습
+2. 문자열/숫자/날짜 함수
+3. 단일행 함수와 그룹 함수
+4. `GROUP BY`와 `HAVING`
+5. JOIN
+6. 서브쿼리
+7. 단일행/다중행/다중컬럼 서브쿼리 구분
 
-- 관련 수업 요약의 실습 코드와 설명을 함께 보면 좋다.
+## 분리된 하위 주제
+
+- [[concepts/oracle-sql-functions|Oracle SQL 함수]] — 문자열/숫자/날짜 함수, 단일행 함수와 그룹 함수, `GROUP BY`/`HAVING`
+- [[concepts/oracle-join|Oracle JOIN]] — 여러 테이블을 연결하는 조회
+- [[concepts/oracle-subquery|Oracle 서브쿼리]] — SQL 안의 SQL, 단일행/다중행/다중컬럼 서브쿼리
 
 ## 자주 헷갈리는 점
 
-- 원본 수업 노트에 표시된 `중요`, `추가 공부`, 질문 표시가 있는 부분은 추후 보강 대상이다.
+- `WHERE`는 그룹화 전 행 필터링, `HAVING`은 그룹화 후 집계 결과 필터링이다.
+- JOIN은 테이블을 옆으로 연결하고, 서브쿼리는 한 쿼리 결과를 다른 쿼리 조건/값으로 사용한다.
+- 서브쿼리 결과가 여러 행이면 `=` 대신 `IN`, `ANY`, `ALL` 같은 연산자를 고려해야 한다.
 
-## 관련 개념
+## 관련 페이지
 
 - [[concepts/oracle-sql-basics|Oracle SQL 기본]]
-- [[summaries/2026-03-19-oracle-functions-join-subquery|2026-03-19 Oracle 함수, GROUP BY, JOIN, 서브쿼리]]
+- [[concepts/oracle-sql-functions|Oracle SQL 함수]]
+- [[concepts/oracle-join|Oracle JOIN]]
+- [[concepts/oracle-subquery|Oracle 서브쿼리]]
+- [[comparisons/where-vs-having|WHERE vs HAVING]]
 
 ## 출처
 
-- 관련 수업 요약 페이지와 해당 raw 원본 참조
+- `raw/Study/2. Oracle/2026.03.19(목)/2026.03.19(목).md`

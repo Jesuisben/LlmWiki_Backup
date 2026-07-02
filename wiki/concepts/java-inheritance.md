@@ -1,44 +1,66 @@
 ---
 title: Java 상속
-created: 2026-06-30
-updated: 2026-06-30
+created: 2026-07-02
+updated: 2026-07-02
 type: concept
 tags: [java]
-sources: []
+sources:
+  - raw/Study/1. Java/2026.03.11(수)/2026.03.11(수).md
+  - raw/Study/1. Java/Java 총정리/Java 총정리.md
+  - raw/Study/1. Java/숙제/클래스 숙제 완료.md
 status: growing
-confidence: medium
+confidence: high
 ---
-
 # Java 상속
 
 ## 정의
 
-기존 클래스의 공통 속성과 동작을 하위 클래스가 물려받아 재사용하는 객체지향 문법이다.
+Java의 **상속(inheritance)**은 기존 클래스의 공통 속성과 동작을 부모 클래스에 두고, 자식 클래스가 그것을 물려받아 확장하는 객체지향 문법이다.
+
+수업에서는 `Beverage03`/`Beverage04`를 부모 클래스로 두고 `Americano03`, `Espresso03`, `Latte03`가 이를 `extends`하는 음료 예제로 배웠다.
 
 ## 왜 중요한가
 
-초보 개발 단계에서는 문법을 외우는 것보다 이 개념이 어떤 문제를 해결하는지 이해하는 것이 중요하다. 이 개념은 이후 실습, 프로젝트, 프레임워크 학습에서 반복해서 등장한다.
+상속은 중복 코드를 줄이고 공통 규칙을 한 곳에 모으기 위해 사용한다. 이후 [[concepts/java-abstract-interface|Java 추상 클래스와 인터페이스]], 다형성, Spring의 계층 구조 이해로 이어진다.
 
-## 핵심 설명
+## 핵심 흐름
 
-- `extends`로 수퍼클래스와 서브클래스 관계를 만든다.
-- 공통 속성은 부모 클래스에 두고, 차이는 자식 클래스에서 확장한다.
-- 오버라이딩은 부모 메서드를 자식 클래스 상황에 맞게 다시 구현하는 것이다.
-- 참조 형변환은 부모 타입 참조로 자식 객체를 다루는 다형성의 기반이다.
+- 공통 필드와 메서드는 부모 클래스에 둔다.
+- 자식 클래스는 자기에게만 필요한 필드와 동작을 추가한다.
+- 부모의 `private` 필드는 자식도 직접 접근할 수 없으므로 getter/setter, `protected`, 생성자 전달을 사용한다.
+- 자식 생성자에서는 `super(...)`로 부모 생성자를 먼저 호출한다.
 
-## 예시
+## 대표 예시
 
-- 관련 수업 요약의 실습 코드와 설명을 함께 보면 좋다.
+```java
+public class Americano03 extends Beverage03 {
+    private double waterAmount;
+
+    public Americano03(String name, double price, double waterAmount) {
+        super(name, price);
+        this.waterAmount = waterAmount;
+    }
+}
+```
+
+## 분리된 하위 주제
+
+- [[concepts/java-polymorphism-casting|Java 다형성과 참조 형변환]] — 업캐스팅, 다운캐스팅, `instanceof`, 오버라이딩
 
 ## 자주 헷갈리는 점
 
-- 원본 수업 노트에 표시된 `중요`, `추가 공부`, 질문 표시가 있는 부분은 추후 보강 대상이다.
+- 상속은 부모 코드가 자식 파일에 복사되는 것이 아니라 관계를 맺는 것이다.
+- `private`은 상속되어도 자식 코드에서 직접 접근할 수 없다.
+- 부모 생성자는 자식 객체의 부모 부분을 초기화하기 위해 먼저 호출된다.
 
-## 관련 개념
+## 관련 페이지
 
 - [[concepts/java-class-object|Java 클래스와 객체]]
-- [[summaries/2026-03-11-java-inheritance-polymorphism|2026-03-11 Java 상속과 참조 형변환]]
+- [[concepts/java-abstract-interface|Java 추상 클래스와 인터페이스]]
+- [[concepts/java-polymorphism-casting|Java 다형성과 참조 형변환]]
 
 ## 출처
 
-- 관련 수업 요약 페이지와 해당 raw 원본 참조
+- `raw/Study/1. Java/2026.03.11(수)/2026.03.11(수).md`
+- `raw/Study/1. Java/Java 총정리/Java 총정리.md`
+- `raw/Study/1. Java/숙제/클래스 숙제 완료.md`

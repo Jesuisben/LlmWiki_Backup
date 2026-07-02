@@ -1,78 +1,53 @@
 ---
 title: TypeScript
-created: 2026-07-01
-updated: 2026-07-01
+created: 2026-07-02
+updated: 2026-07-02
 type: entity
-tags: [typescript, frontend]
+tags: [typescript, react, frontend]
 sources:
-  - raw/Study/4. FrontEnd_BackEnd/2026.03.30(월) - 시작/2026.03.30(월) - 시작.md
-  - raw/Study/4. FrontEnd_BackEnd/2026.03.31(화)/2026.03.31(화).md
   - raw/Study/4. FrontEnd_BackEnd/2026.04.01(수)/2026.04.01(수).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.02(목)/2026.04.02(목).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.03(금)/2026.04.03(금).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.06(월)/2026.04.06(월).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.08(수)/2026.04.08(수).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.09(목)/2026.04.09(목).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.10(금)/2026.04.10(금).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.13(월)/2026.04.13(월).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.14(화)/2026.04.14(화).md
   - raw/Study/4. FrontEnd_BackEnd/2026.04.15(수)/2026.04.15(수).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.16(목)/2026.04.16(목).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.17(금)/2026.04.17(금).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.20(월)/2026.04.20(월).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.21(화)/2026.04.21(화).md
+  - raw/Study/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md
 status: growing
-confidence: medium
+confidence: high
 ---
 
 # TypeScript
 
 ## 무엇인가
 
-JavaScript에 타입을 더한 언어다. React 컴포넌트 props, state, API 응답 데이터의 모양을 명확히 하는 데 사용된다.
+JavaScript에 타입을 더해 변수, 객체, 함수 인자, 컴포넌트 props의 모양을 미리 적는 언어다.
 
 ## 이 위키에서의 맥락
 
-국비지원 풀스택 과정의 수업 노트에서 실제 실습 도구 또는 중심 기술로 등장했다. 관련 날짜별 요약과 연결해 보면 단순 용어가 아니라 프로젝트 기능 구현의 일부로 이해할 수 있다.
+- [[summaries/2026-04-01-react-router-spring-boot|2026-04-01 React 라우팅과 Spring Boot 연동 흐름]]에서 types 폴더와 Fruit.ts 인터페이스를 만들며 등장했다.
+- [[summaries/2026-04-15-cart-list-selection-typescript|2026-04-15 장바구니 목록과 TypeScript props]]에서는 CartProduct.ts, AppProps, props 구조 분해와 연결됐다.
+- 상품/장바구니/주문 화면의 API 데이터 구조를 표현하는 데 쓰였고, [[summaries/2026-04-21-product-pagination-search-react|2026-04-21 상품 목록 페이징과 필드 검색]]에서는 페이징 파라미터와 화면 상태 관리로 이어졌다.
 
 ## 핵심 기능 / 특징
 
-- 수업 실습에서 반복적으로 등장하는 기술/도구다.
-- 다른 개념 페이지와 연결해 학습 흐름을 복원하는 기준점 역할을 한다.
-- 설치·설정, 코드 작성, 기능 구현 중 어디에 쓰이는지 구분해 보는 것이 좋다.
+- interface/type으로 데이터 구조 정의
+- props 타입 지정으로 컴포넌트 사용 실수 감소
+- API 응답 필드 자동완성·검사
+- Java의 자료형 학습과 연결
+
+## 헷갈리기 쉬운 점
+
+TypeScript interface는 DB 테이블이 아니다. 프론트 코드에서 API 데이터 모양을 안전하게 쓰기 위한 약속이다.
 
 ## 관련 개념
 
-- [[concepts/fullstack-project-flow|풀스택 프로젝트 흐름]]
-- [[concepts/spring-boot-rest-api|Spring Boot REST API]]
 - [[concepts/react-typescript-basics|React와 TypeScript 기본]]
+- [[comparisons/entity-vs-dto|Entity vs DTO]]
+- [[concepts/dto-entity-service-controller|DTO, Entity, Service, Controller]]
+- [[entities/react|React]]
 
 ## 학습 이력
 
-- `raw/Study/4. FrontEnd_BackEnd/2026.03.30(월) - 시작/2026.03.30(월) - 시작.md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.03.31(화)/2026.03.31(화).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.01(수)/2026.04.01(수).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.02(목)/2026.04.02(목).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.03(금)/2026.04.03(금).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.06(월)/2026.04.06(월).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.08(수)/2026.04.08(수).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.09(목)/2026.04.09(목).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.10(금)/2026.04.10(금).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.13(월)/2026.04.13(월).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.14(화)/2026.04.14(화).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.15(수)/2026.04.15(수).md`
+이 페이지는 단순 정의가 아니라, 수업에서 이 기술이 처음 등장한 맥락과 이후 Java/Oracle/UI&UX/Spring/React 프로젝트 흐름으로 확장된 위치를 추적하기 위한 엔티티 페이지다.
 
 ## 출처
 
-- `raw/Study/4. FrontEnd_BackEnd/2026.03.30(월) - 시작/2026.03.30(월) - 시작.md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.03.31(화)/2026.03.31(화).md`
 - `raw/Study/4. FrontEnd_BackEnd/2026.04.01(수)/2026.04.01(수).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.02(목)/2026.04.02(목).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.03(금)/2026.04.03(금).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.06(월)/2026.04.06(월).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.08(수)/2026.04.08(수).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.09(목)/2026.04.09(목).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.10(금)/2026.04.10(금).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.13(월)/2026.04.13(월).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.14(화)/2026.04.14(화).md`
 - `raw/Study/4. FrontEnd_BackEnd/2026.04.15(수)/2026.04.15(수).md`
+- `raw/Study/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md`

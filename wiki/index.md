@@ -2,18 +2,18 @@
 
 > 이 파일은 `wiki/` 전체의 목차이자 길잡이다.  
 > 질문에 답하거나 새 자료를 ingest할 때 이 파일을 먼저 읽는다.  
-> Last updated: 2026-07-01 | Total pages: 93
+> Last updated: 2026-07-02 | Total pages: 153
 
 ## 사용 방법
 
 - 모든 위키 페이지는 아래 섹션 중 하나에 등록한다.
-- 각 항목은 `- [[경로/파일명|표시 제목]] — 한 줄 설명` 형식을 권장한다.
+- 각 항목은 `- 위키링크 — 한 줄 설명` 형식을 권장한다.
 - 새 페이지를 만들면 반드시 이 파일을 업데이트한다.
 - 페이지 수가 많아지면 커리큘럼 단계별 또는 알파벳/주제별 하위 섹션으로 나눈다.
 
 ## Summaries
 
-<!-- 수업/자료 단위 요약 페이지. 예: - [[summaries/2026-06-29-java-variables|Java 변수 수업 요약]] — 변수와 자료형을 처음 배운 날의 핵심 정리 -->
+<!-- 수업/자료 단위 요약 페이지. 예: `summaries/YYYY-MM-DD-topic` — 수업/자료 단위 핵심 정리 -->
 - [[summaries/2026-02-26-orientation|2026-02-26 오리엔테이션과 개발 환경 준비]] — 국비지원 과정 첫날 OT, 출결/휴가 규칙, 개발 도구 설치 준비 정리
 - [[summaries/2026-02-27-java-basic-types-operators|2026-02-27 Java 기본 자료형과 연산자]] — Java 자료형, 변수 선언, 산술/대입/복합 대입/증감 연산자 실습 정리
 - [[summaries/2026-02-27-github-initial-setup|2026-02-27 GitHub 초기 설정]] — Java 프로젝트를 Git으로 관리하고 GitHub/IntelliJ와 연결하는 초기 설정 흐름 정리
@@ -54,76 +54,136 @@
 - [[summaries/2026-04-20-order-list-scenario|2026-04-20 주문 목록과 테스트 시나리오]] — 주문 기능으로 넘어가 OrderList 화면을 만들고 관리자/일반 사용자 기준 테스트 시나리오를 정리했다.
 - [[summaries/2026-04-21-product-pagination-search-react|2026-04-21 상품 목록 페이징과 필드 검색]] — React 상품 목록에서 pageNumber 등 페이징 파라미터를 추가하고 Paging 컴포넌트와 검색 상태를 다뤘다.
 - [[summaries/2026-04-22-product-repository-pageable-search|2026-04-22 ProductRepository와 Pageable 검색]] — Spring Data Repository에서 Pageable 정렬/검색 조건을 받아 상품 목록을 조회하는 백엔드 흐름을 학습했다.
-- [[summaries/2026-07-01-python-pandas-dataframe|2026-07-01 Python Pandas DataFrame 조회]] — Python 과정에서 Pandas DataFrame의 행/열 구조, 조회 문제, 그래프 함수 기초를 학습했다.
+- [[summaries/2026-04-22-linux-install-ssh-cli|2026-04-22 Linux 설치, SSH 접속, 기본 CLI]] — VirtualBox Ubuntu 설치, SSH 서버, MobaXterm 접속, Linux 프롬프트와 경로 기본을 배운 날이다.
+- [[summaries/2026-04-23-linux-files-vi|2026-04-23 Linux 파일·디렉터리와 vi 편집기]] — `mkdir`, `touch`, `cat`, `cp`, `mv`, `find`, `vi`로 파일 시스템을 다룬 날이다.
+- [[summaries/2026-04-24-linux-users-permissions|2026-04-24 Linux 사용자, 그룹, 권한]] — `ls -l` 권한 문자열, 사용자/그룹 생성, `/etc/passwd`·`shadow`·`group`을 배운 날이다.
+- [[summaries/2026-04-27-linux-archive-java-alias|2026-04-27 Linux 압축, 다운로드, Java 실행 준비]] — `wget`, `curl`, `tar`, `zip`, `rm`, `alias`로 서버 파일 준비 흐름을 배운 날이다.
+- [[summaries/2026-04-28-maven-spring-boot-docker-intro|2026-04-28 Maven, Spring Boot 서버 실행, Docker 입문]] — Maven으로 Spring Boot를 패키징하고 Docker 이미지/컨테이너를 처음 배운 날이다.
+- [[summaries/2026-04-29-docker-network-volume-image|2026-04-29 Docker 네트워크, 볼륨, 사용자 정의 이미지]] — MariaDB/Redmine 컨테이너 연결, bind/volume mount, 사용자 정의 이미지 흐름을 배운 날이다.
+- [[summaries/2026-04-30-dockerfile-spring-load-balancing|2026-04-30 Dockerfile, Spring Boot 컨테이너, 로드 밸런싱]] — Dockerfile 빌드, Spring Boot 컨테이너, nginx upstream 로드 밸런싱을 배운 날이다.
+- [[summaries/2026-05-01-docker-compose|2026-05-01 Docker Compose와 다중 컨테이너 실행]] — Compose manifest로 MySQL+Spring Boot 같은 다중 컨테이너 구성을 실행한 날이다.
+- [[summaries/2026-05-04-git-github-sourcetree|2026-05-04 GitHub, Git Bash, SourceTree 협업 입문]] — Git Bash와 SourceTree로 init/add/commit/push/pull/clone 흐름을 복습한 날이다.
+- [[summaries/2026-05-06-github-branch-pr-conflict|2026-05-06 GitHub 브랜치, Pull Request, 충돌 해결]] — 팀원 브랜치, PR, merge, pull, 충돌 시나리오를 실습한 날이다.
+- [[summaries/2026-07-01-python-pandas-dataframe|2026-07-01 Python Pandas DataFrame 조회와 입출력]] — Pandas DataFrame/Series의 `loc`/`iloc` 조회, 조건 수정, CSV 입출력, 통계, 기초 그래프를 학습한 날이다.
+- [[summaries/2026-07-02-python-pandas-reshape-merge|2026-07-02 Python Pandas 데이터 결합과 재구조화]] — `concat`, `merge`, `pivot`으로 여러 DataFrame을 결합하고 SQL JOIN과 비슷한 데이터 연결 흐름을 학습한 날이다.
 
 ## Concepts
 
-<!-- 개념 페이지. 예: - [[concepts/java-variable|Java 변수]] — 값을 저장하기 위한 이름 붙은 공간 -->
+<!-- 개념 페이지. 예: `concepts/java-variable` — 값을 저장하기 위한 이름 붙은 공간 -->
 - [[concepts/markdown-basic-syntax|Markdown 기본 문법]] — 제목, 강조, 목록, 코드 블록, 표, 링크 등 Markdown 기본 문법 정리
 - [[concepts/java-basic-types|Java 기본 자료형]] — char, String, int, double, boolean 등 Java 입문 자료형 구분
 - [[concepts/java-operators|Java 연산자]] — 산술, 대입, 복합 대입, 증감, 비교, 논리 연산자의 의미와 실행 순서
-- [[concepts/java-conditional-logic|Java 조건 판단]] — 비교 연산자, 논리 연산자, if/else, 삼항 연산자를 이용해 프로그램의 실행 갈래를 나누는 방법이다.
-- [[concepts/java-loop|Java 반복문]] — 같은 작업을 여러 번 실행하기 위해 사용하는 제어문이다.
-- [[concepts/java-array|Java 배열]] — 같은 타입의 여러 값을 순서가 있는 하나의 묶음으로 관리하는 자료구조다.
+- [[concepts/java-conditional-logic|Java 조건 판단]] — 비교·논리 연산자, 삼항 연산자, `if/else`, `switch`로 실행 흐름을 나누는 방법과 수업 예제 정리
+- [[concepts/java-loop|Java 반복문]] — `for`, `while`, 무한 반복, `break`, 향상된 for를 합계·입력·배열 처리 예제로 정리
+- [[concepts/java-array|Java 배열]] — `new` 배열, 초기화 기법, `length`, 입력값 배열 처리, 객체 배열로 이어지는 흐름 정리
 - [[concepts/java-class-object|Java 클래스와 객체]] — 클래스는 객체를 만들기 위한 설계도이고, 객체는 그 설계도로 만들어진 구체적인 대상이다.
 - [[concepts/java-inheritance|Java 상속]] — 기존 클래스의 공통 속성과 동작을 하위 클래스가 물려받아 재사용하는 객체지향 문법이다.
 - [[concepts/java-abstract-interface|Java 추상 클래스와 인터페이스]] — 공통 규격을 강제하고 구체 구현은 하위 클래스에게 맡기는 객체지향 설계 도구다.
+- [[concepts/java-memory-static-final|Java 메모리, static, final]] — stack/heap/static 영역, 클래스 변수, 상수, final 메서드를 Java 객체지향 복습 흐름으로 정리
 - [[concepts/oracle-sql-basics|Oracle SQL 기본]] — Oracle Database에 데이터를 조회·정의·조작하도록 요청하는 SQL의 기본 구조다.
 - [[concepts/oracle-constraints-sequence|Oracle 제약조건과 시퀀스]] — 데이터 무결성을 지키는 규칙과 자동 번호 생성 도구다.
 - [[concepts/oracle-functions-join-subquery|Oracle 함수·조인·서브쿼리]] — SQL에서 값을 가공하고 여러 데이터 집합을 연결·중첩 조회하는 핵심 기능이다.
 - [[concepts/database-modeling-normalization|데이터 모델링과 정규화]] — 업무 데이터를 테이블 구조로 설계하고 이상 현상을 줄이도록 분해·정리하는 과정이다.
-- [[concepts/html-css-basics|HTML/CSS 기본]] — HTML은 웹 문서의 구조를, CSS는 그 구조의 표현과 배치를 담당한다.
-- [[concepts/javascript-dom|JavaScript와 DOM]] — JavaScript로 HTML 문서 객체를 읽고 바꾸며 사용자 상호작용을 구현하는 방식이다.
-- [[concepts/bootstrap-basics|Bootstrap 기본]] — 반응형 웹 UI를 빠르게 만들 수 있도록 미리 준비된 CSS/JS 기반 프론트엔드 프레임워크다.
-- [[concepts/jquery-basics|jQuery 기본]] — JavaScript DOM 선택과 이벤트 처리를 짧고 편하게 작성하도록 돕는 라이브러리다.
-- [[concepts/fullstack-project-flow|풀스택 프로젝트 흐름]] — 풀스택 프로젝트 흐름
-- [[concepts/spring-boot-rest-api|Spring Boot REST API]] — Spring Boot REST API
-- [[concepts/react-typescript-basics|React와 TypeScript 기본]] — React와 TypeScript 기본
-- [[concepts/jwt-session-cookie-auth|JWT, 세션, 쿠키 인증]] — JWT, 세션, 쿠키 인증
-- [[concepts/dto-entity-service-controller|DTO, Entity, Service, Controller]] — DTO, Entity, Service, Controller
+- [[concepts/html-css-basics|HTML/CSS 기본]] — HTML 태그·속성·표·이미지와 CSS 선택자·박스 모델·레이아웃을 UI&UX 수업 흐름으로 정리
+- [[concepts/javascript-dom|JavaScript와 DOM]] — `document`, `innerHTML`, 객체/배열, `forEach`, 동적 태그 생성, 이벤트, URL 파라미터를 상품 페이지 예제로 정리
+- [[concepts/bootstrap-basics|Bootstrap 기본]] — CDN, 반응형 grid, form, button, `container/row/col`을 장바구니·상품 등록 화면 예제로 정리
+- [[concepts/jquery-basics|jQuery 기본]] — `$()` 선택자, ready, 이벤트, class/속성 조작, show/hide 필터링을 이미지 UI 실습 중심으로 정리
+- [[concepts/fullstack-project-flow|풀스택 프로젝트 흐름]] — React 화면, Spring API, Service/Repository, DB가 기능 단위로 이어지는 전체 흐름
+- [[concepts/spring-boot-rest-api|Spring Boot REST API]] — React와 데이터를 주고받는 Controller/Service/Repository 기반 백엔드 API 흐름
+- [[concepts/react-typescript-basics|React와 TypeScript 기본]] — 컴포넌트, props/state, Hook, Router, 타입 정의를 프로젝트 화면 예제로 정리
+- [[concepts/jwt-session-cookie-auth|JWT, 세션, 쿠키 인증]] — 로그인 상태 유지를 위한 쿠키·세션·JWT·Bearer 토큰의 역할 정리
+- [[concepts/dto-entity-service-controller|DTO, Entity, Service, Controller]] — Spring Boot 백엔드 계층과 데이터 전달 객체/도메인 객체의 역할 구분
 - [[concepts/spring-data-jpa-repository|Spring Data JPA Repository]] — Spring Data JPA Repository
-- [[concepts/shopping-cart-flow|장바구니 기능 흐름]] — 장바구니 기능 흐름
-- [[concepts/order-flow|주문 기능 흐름]] — 주문 기능 흐름
-- [[concepts/pagination-search|페이징과 검색]] — 페이징과 검색
-- [[concepts/pandas-dataframe-basics|Pandas DataFrame 기본]] — Pandas DataFrame 기본
+- [[concepts/shopping-cart-flow|장바구니 기능 흐름]] — 장바구니 저장, 목록, 선택, 수량 변경, 재고 검증의 풀스택 흐름
+- [[concepts/order-flow|주문 기능 흐름]] — 장바구니 이후 주문 생성, 주문 상품, 상태 변경, 목록 조회 흐름
+- [[concepts/pagination-search|페이징과 검색]] — React 페이지 상태와 Spring Pageable/검색 조건이 연결되는 상품 목록 흐름
+- [[concepts/linux-cli-files|Linux CLI와 파일 시스템]] — 서버 터미널에서 파일·디렉터리·경로·vi를 다루는 기본 작업 흐름
+- [[concepts/linux-users-permissions|Linux 사용자·그룹·권한]] — `ls -l`, owner/group/others, root/sudo, 사용자 생성과 권한 오류 해석
+- [[concepts/linux-package-archive|Linux 패키지·다운로드·압축]] — `apt`, `wget`, `curl`, `tar`, `zip`으로 서버 도구와 파일을 준비하는 흐름
+- [[concepts/linux-spring-boot-server-deploy|Linux에서 Spring Boot 서버 실행]] — Maven 패키징, `.jar` 실행, 포트/방화벽 확인으로 IDE 밖에서 서버를 띄우는 과정
+- [[concepts/docker-image-container|Docker 이미지와 컨테이너]] — 실행 환경 템플릿인 이미지와 실제 실행 단위인 컨테이너의 차이
+- [[concepts/docker-network-volume|Docker 네트워크와 볼륨]] — 컨테이너 간 통신과 데이터/파일 보존을 위한 network, bind mount, volume
+- [[concepts/dockerfile-vs-compose|Dockerfile vs Docker Compose]] — 이미지 생성 레시피와 다중 컨테이너 실행 manifest의 역할 차이
+- [[concepts/git-github-collaboration|GitHub 협업 흐름]] — branch, push, Pull Request, merge, pull, conflict를 이용한 팀 협업 절차
+- [[concepts/pandas-dataframe-basics|Pandas DataFrame 기본]] — 행/열 조회, 조건 수정, CSV 입출력, Series 통계, `concat`/`merge`/`pivot`까지 이어지는 Pandas 표 데이터 처리 기본
 
+- [[concepts/java-method-constructor-overloading|Java 메서드, 생성자, this, 오버로딩]] — 메서드, 접근 지정자, 생성자, `this`, 오버로딩을 클래스/객체 학습 흐름에서 분리 정리
+- [[concepts/java-object-array-memory|Java 객체 배열과 메모리 관점]] — 객체 배열과 stack/heap 관점으로 객체 생성·참조 흐름을 정리
+- [[concepts/java-polymorphism-casting|Java 다형성과 참조 형변환]] — 업캐스팅, 다운캐스팅, `instanceof`, 오버라이딩의 연결 정리
+- [[concepts/java-interface-capability-design|Java 인터페이스 기능 설계]] — 기능별 인터페이스, `implements`, 다운캐스팅을 음료 예제로 정리
+- [[concepts/oracle-ddl-dml-transaction|Oracle DDL, DML, 트랜잭션]] — SQL 분류, 테이블 생성, INSERT, COMMIT/ROLLBACK 흐름 정리
+- [[concepts/oracle-sequence|Oracle 시퀀스]] — 게시물/상품/주문 번호를 자동 생성하는 Oracle sequence 정리
+- [[concepts/oracle-referential-integrity|Oracle 참조 무결성과 ON DELETE]] — 외래키, 참조 무결성, ON DELETE 옵션과 데이터 사전 확인 정리
+- [[concepts/oracle-sql-functions|Oracle SQL 함수]] — 문자열·숫자·날짜 함수, 그룹 함수, GROUP BY/HAVING 정리
+- [[concepts/oracle-join|Oracle JOIN]] — 여러 테이블을 공통 컬럼으로 연결해 조회하는 JOIN 정리
+- [[concepts/oracle-subquery|Oracle 서브쿼리]] — SQL 안의 SQL, 단일행/다중행/다중컬럼 서브쿼리 정리
+- [[concepts/database-normalization-functional-dependency|함수 종속성과 정규화]] — 이상 현상, 함수 종속성, 복합 기본키, 참조 무결성과 정규화 연결
+- [[concepts/database-view-index|Database View와 Index]] — View와 Index의 역할, 장단점, 사용 맥락 정리
+- [[concepts/spring-data-jpa-specification-pageable|Spring Data JPA Specification과 Pageable]] — 동적 검색 조건과 페이징 요청/결과 객체 정리
+- [[concepts/spring-product-search-flow|Spring 상품 검색 흐름]] — React 요청에서 Controller/Service/Repository 검색 조회까지의 흐름 정리
 ## Entities
 
 <!-- 기술/도구/프레임워크 페이지. 예: - [[entities/java|Java]] — 객체지향 프로그래밍 언어이자 백엔드 학습의 출발점 -->
 - [[entities/java|Java]] — 객체지향 프로그래밍 언어이자 Spring/Spring Boot 백엔드 학습의 기반
 - [[entities/git|Git]] — 소스 코드 변경 이력을 기록하는 분산 버전 관리 시스템
 - [[entities/github|GitHub]] — Git 저장소를 온라인에 보관하고 공유하는 개발 협업 서비스
-- [[entities/oracle-database|Oracle Database]] — 관계형 데이터베이스 관리 시스템으로, 이 과정에서는 SQL과 DB 모델링 학습의 중심 도구다.
-- [[entities/dbeaver|DBeaver]] — 여러 데이터베이스에 접속해 SQL을 실행하고 스키마를 관리할 수 있는 데이터베이스 IDE다.
-- [[entities/html|HTML]] — 웹 문서의 구조를 표현하는 마크업 언어다.
-- [[entities/css|CSS]] — HTML 요소의 색, 크기, 배치, 글꼴 등 표현을 담당하는 스타일 언어다.
-- [[entities/javascript|JavaScript]] — 브라우저에서 웹 페이지의 동작과 상호작용을 구현하는 프로그래밍 언어다.
-- [[entities/bootstrap|Bootstrap]] — 반응형 UI를 빠르게 만들기 위한 프론트엔드 프레임워크/라이브러리다.
-- [[entities/jquery|jQuery]] — JavaScript DOM 선택과 이벤트 처리를 간결하게 도와주는 라이브러리다.
-- [[entities/spring-boot|Spring Boot]] — Spring 기반 웹 애플리케이션을 빠르게 만들기 위한 프레임워크다다.
-- [[entities/react|React]] — 컴포넌트 기반 프론트엔드 라이브러리다다.
-- [[entities/typescript|TypeScript]] — JavaScript에 타입을 더한 언어다다.
-- [[entities/jwt|JWT]] — 서명된 토큰 형식으로 인증 정보를 전달하는 방식이다다.
-- [[entities/mysql|MySQL]] — 관계형 데이터베이스 관리 시스템이다다.
-- [[entities/node-js|Node.js]] — 브라우저 밖에서 JavaScript를 실행하는 런타임이다다.
-- [[entities/visual-studio-code|Visual Studio Code]] — 프론트엔드/풀스택 실습에서 사용하는 코드 편집기다다.
-- [[entities/python|Python]] — 읽기 쉬운 문법을 가진 범용 프로그래밍 언어다다.
-- [[entities/pandas|Pandas]] — Python에서 표 형태 데이터를 다루는 라이브러리다다.
-- [[entities/jupyter-notebook|Jupyter Notebook]] — 코드와 실행 결과, 설명을 함께 다룰 수 있는 대화형 Python 학습 환경이다다.
+- [[entities/oracle-database|Oracle Database]] — SQL, 제약조건, JOIN/서브쿼리, 정규화 학습을 관통하는 관계형 DB
+- [[entities/dbeaver|DBeaver]] — Oracle/MySQL 접속, SQL 실행, 테이블·ERD 확인에 사용한 데이터베이스 IDE
+- [[entities/html|HTML]] — 웹 문서 구조와 form/table/image 같은 UI 기본 요소를 표현하는 마크업 언어
+- [[entities/css|CSS]] — 선택자, 박스 모델, position, transition 등 화면 표현과 배치를 담당하는 스타일 언어
+- [[entities/javascript|JavaScript]] — DOM 조작, 이벤트, 배열 렌더링, URL 파라미터 처리로 웹 상호작용을 구현하는 언어
+- [[entities/bootstrap|Bootstrap]] — CDN, grid, card, form/button class로 반응형 UI를 빠르게 구성하는 도구
+- [[entities/jquery|jQuery]] — `$()` 선택자, 이벤트, class/속성 조작으로 DOM 상호작용을 간결하게 쓰는 라이브러리
+- [[entities/spring-boot|Spring Boot]] — Controller/Service/Repository 계층으로 API와 업무 로직을 구현한 백엔드 프레임워크
+- [[entities/react|React]] — 컴포넌트, state/props, Hook, Router로 상품·장바구니·주문 화면을 만든 프론트엔드 라이브러리
+- [[entities/typescript|TypeScript]] — React 컴포넌트 props와 API 데이터 구조를 interface/type으로 표현하는 JavaScript 확장 언어
+- [[entities/jwt|JWT]] — 로그인 후 Bearer 토큰으로 API 인증 정보를 전달하는 서명 토큰 형식
+- [[entities/mysql|MySQL]] — 관계형 데이터베이스 관리 시스템이다.
+- [[entities/node-js|Node.js]] — 브라우저 밖에서 JavaScript를 실행하는 런타임이다.
+- [[entities/visual-studio-code|Visual Studio Code]] — 프론트엔드/풀스택 실습에서 사용하는 코드 편집기다.
+- [[entities/linux|Linux]] — Spring/React 웹서비스를 서버에서 실행·배포하기 위해 배운 운영체제 환경
+- [[entities/docker|Docker]] — 이미지와 컨테이너로 실행 환경을 고정하고 Spring Boot+DB 구성을 재현하는 도구
+- [[entities/maven|Maven]] — `pom.xml` 기반 Java/Spring Boot 빌드와 `.jar` 패키징 도구
+- [[entities/source-tree|SourceTree]] — Git commit/push/pull/branch 작업을 GUI로 수행하는 Git 클라이언트
+- [[entities/python|Python]] — Pandas, CSV, 그래프를 통해 표 데이터를 처리·분석하는 과정 후반부 학습 언어
+- [[entities/pandas|Pandas]] — DataFrame/Series 조회·수정·통계·입출력·결합·재구조화를 담당하는 Python 데이터 처리 라이브러리
+- [[entities/jupyter-notebook|Jupyter Notebook]] — Pandas 코드를 셀 단위로 실행하며 표와 그래프 결과를 바로 확인한 Python 학습 환경
 
 ## Comparisons
 
-<!-- 비교 페이지. 예: - [[comparisons/interface-vs-abstract-class|인터페이스 vs 추상 클래스]] — Java에서 두 추상화 방식의 차이 -->
+<!-- 비교 페이지. 예: `comparisons/interface-vs-abstract-class` — Java에서 두 추상화 방식의 차이 -->
+- [[comparisons/controller-service-repository|Controller vs Service vs Repository]] — Spring Boot 백엔드에서 요청 처리, 업무 로직, DB 접근 계층의 역할 차이
+- [[comparisons/entity-vs-dto|Entity vs DTO]] — DB와 가까운 객체와 요청/응답 전달 객체의 차이
+- [[comparisons/interface-vs-abstract-class|인터페이스 vs 추상 클래스]] — Java에서 공통 부모 클래스와 기능 규격을 구분하는 기준
+- [[comparisons/single-row-vs-multi-row-subquery|단일행 서브쿼리 vs 다중행 서브쿼리]] — 서브쿼리 결과 개수에 따라 `=`, `IN` 등 연산자를 고르는 기준
+- [[comparisons/where-vs-having|WHERE vs HAVING]] — 그룹화 전 행 필터링과 그룹화 후 집계 결과 필터링의 차이
+- [[comparisons/session-vs-cookie-vs-jwt|Session vs Cookie vs JWT]] — 로그인 상태 유지에서 쿠키·세션·JWT의 층위와 사용 기준 비교
+- [[comparisons/react-router-vs-spring-api-url|React Router 주소 vs Spring API 주소]] — 프론트 화면 라우팅과 백엔드 데이터 요청 URL의 역할 차이
+- [[comparisons/primitive-vs-reference-types|기본 자료형 vs 참조 자료형]] — 값 자체를 담는 타입과 객체 참조를 담는 타입의 Java 입문 구분
+- [[comparisons/array-vs-collection|배열 vs 컬렉션]] — 고정 크기 배열과 List/Set/Map 컬렉션의 사용 기준 비교
+- [[comparisons/overloading-vs-overriding|오버로딩 vs 오버라이딩]] — 같은 이름의 다중 정의와 상속받은 메서드 재정의의 차이
 
 ## Queries
 
-<!-- 보존 가치 있는 질문/답변. 예: - [[queries/why-learn-oracle-before-spring|Spring 전에 Oracle을 배우는 이유]] — 커리큘럼 순서의 의미를 정리한 답변 -->
+<!-- 보존 가치 있는 질문/답변. 예: `queries/why-learn-oracle-before-spring` — 커리큘럼 순서의 의미를 정리한 답변 -->
 
 ## Meta
 
 <!-- 위키 운영 문서, lint 리포트, 토픽맵 등 -->
+- [[_meta/wiki-log-archive-2026-07-02-part-2|Wiki Log Archive 2026-07-02 Part 2]] — 2026년 7월 2일 작업 기록 후반부 아카이브
+- [[_meta/wiki-log-archive-2026-07-02-part-1|Wiki Log Archive 2026-07-02 Part 1]] — 2026년 7월 2일 작업 기록 전반부 아카이브
+- [[_meta/hermes-home-laptop-hermes-copy-verify|집 노트북 Hermes 설정 복사와 검증]] — Hermes AppData 복사, config 경로 수정, memory/skills 검증 절차
+- [[_meta/hermes-home-laptop-hermes-backup-security|집 노트북 Hermes 백업과 보안 원칙]] — Hermes 설정 백업 대상과 인증 파일 제외 원칙
+- [[_meta/wiki-log-archive-2026-07-02|Wiki Log Archive 2026-07-02]] — 2026년 7월 2일 `wiki/log.md` 작업 기록 아카이브
+- [[_meta/wiki-log-archive-2026-07-01|Wiki Log Archive 2026-07-01]] — 2026년 7월 1일 `wiki/log.md` 작업 기록 아카이브
+- [[_meta/hermes-home-laptop-troubleshooting|집 노트북 Hermes 이전 문제 해결]] — Hermes/Git/memory/theme 이전 문제 해결 체크리스트
+- [[_meta/hermes-home-laptop-hermes-config-migration|집 노트북 Hermes 설정 마이그레이션]] — 인증 파일을 제외한 Hermes 설정 복사와 경로 수정 절차
+- [[_meta/hermes-home-laptop-git-obsidian-setup|집 노트북 Git/Obsidian 설정]] — 집 노트북에서 GitHub clone과 Obsidian Vault 열기 절차
+- [[_meta/wiki-log-archive-2026-07|Wiki Log Archive 2026-07]] — 2026년 7월 `wiki/log.md` 작업 기록 아카이브
+- [[_meta/wiki-log-archive-2026-06|Wiki Log Archive 2026-06]] — 2026년 6월 `wiki/log.md` 작업 기록 아카이브
 - [[_meta/agent-coding-guidelines|AI Agent 코딩 작업 지침]] — AI Agent에게 코딩 작업을 맡길 때의 단순성, 외과적 수정, 검증 중심 원칙
 - [[_meta/hermes-home-laptop-setup|집 노트북에 LLM Wiki와 Hermes Agent 환경 복제하기]] — 집 노트북에서 현재 LLM Wiki와 Hermes Agent 설정/기억/스킬을 최대한 동일하게 복제하는 절차
 - [[_meta/hermes-default-profile-mode-system|Hermes default 프로필 모드 시스템]] — default 프로필 하나에서 safe/smart/danger 모드를 전환하는 운영 방식
 - [[_meta/llm-wiki-command-reference|LLM Wiki 명령어 참고]] — ingest, query, lint, update, compare 등 LLM Wiki 작업 요청 표현 모음
 - [[_meta/llm-wiki-operating-model|LLM Wiki 운영 모델]] — raw/wiki/schema 세 계층과 index/log 중심의 LLM Wiki 운영 방식
+- [[_meta/wiki-quality-audit-2026-07-02|2026-07-02 LLM Wiki 품질 감사 리포트]] — 기존 wiki 페이지의 내용 품질, 얕은 페이지, 출처 문제, 고도화 우선순위와 앞으로의 ingest 기준 점검

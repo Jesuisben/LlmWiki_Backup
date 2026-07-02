@@ -1,81 +1,56 @@
 ---
 title: Spring Boot REST API
-created: 2026-07-01
-updated: 2026-07-01
+created: 2026-07-02
+updated: 2026-07-02
 type: concept
-tags: [spring-boot, backend, java]
+tags: [spring-boot, backend]
 sources:
   - raw/Study/4. FrontEnd_BackEnd/2026.03.31(화)/2026.03.31(화).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.01(수)/2026.04.01(수).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.02(목)/2026.04.02(목).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.03(금)/2026.04.03(금).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.06(월)/2026.04.06(월).md
   - raw/Study/4. FrontEnd_BackEnd/2026.04.07(화)/2026.04.07(화).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.08(수)/2026.04.08(수).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.09(목)/2026.04.09(목).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.10(금)/2026.04.10(금).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.13(월)/2026.04.13(월).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.14(화)/2026.04.14(화).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.15(수)/2026.04.15(수).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.16(목)/2026.04.16(목).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.17(금)/2026.04.17(금).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.20(월)/2026.04.20(월).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.21(화)/2026.04.21(화).md
   - raw/Study/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md
 status: growing
-confidence: medium
+confidence: high
 ---
 
 # Spring Boot REST API
 
 ## 정의
 
-Spring Boot REST API는 브라우저나 React 앱의 요청을 받아 JSON 같은 데이터 응답을 제공하는 백엔드 인터페이스다.
+React 같은 클라이언트가 HTTP 요청으로 데이터를 주고받는 Spring Boot 백엔드 입구다.
 
 ## 왜 중요한가
 
-React와 Spring Boot를 분리해서 개발할 때 프론트엔드는 화면을 담당하고, 백엔드는 데이터와 업무 규칙을 API로 제공한다.
+FrontEnd_BackEnd 단계에서는 문법 하나보다 화면, API, 업무 규칙, DB가 어떻게 연결되는지가 중요하다. 이 개념은 사용자의 쇼핑몰형 실습에서 반복 등장하는 흐름을 복원하기 위한 기준점이다.
 
 ## 핵심 설명
 
-- Controller: 요청 주소와 HTTP 메서드를 받는다.
-- DTO: 요청/응답에 필요한 데이터 모양을 정한다.
-- Service: 실제 업무 규칙을 처리한다.
-- Repository: DB 접근을 담당한다.
-- Entity: DB 테이블과 가까운 객체 모델이다.
+- Controller는 URL/HTTP 메서드에 맞는 요청을 받는다.
+- DTO, path variable, query parameter로 요청 데이터를 해석한다.
+- Service는 업무 규칙을 처리한다.
+- Repository는 DB 접근을 담당한다.
+- 응답은 HTML 문자열에서 객체/목록/페이지 데이터로 확장된다.
 
-## 예시
+## 수업 예시
 
-상품 상세 조회에서는 React가 상품 id로 요청하고, Spring Boot는 Controller → ProductService → ProductRepository 순서로 데이터를 찾아 응답한다.
+- [[summaries/2026-03-31-spring-boot-controller-html|2026-03-31 Spring Boot Controller와 HTML 응답]] — FruitHtmlController의 HTML 응답
+- [[summaries/2026-04-07-member-api-string-token|2026-04-07 회원 API와 문자열/토큰 처리]] — 회원 API와 Bearer 토큰 처리
+- [[summaries/2026-04-08-product-domain-oci|2026-04-08 상품 도메인과 OCI 소개]] — Category, Product 도메인과 상품 API 흐름
+- [[summaries/2026-04-13-product-detail-useeffect-service|2026-04-13 상품 상세와 useEffect, 서비스 계층]] — ProductService와 상품 상세 조회
+- [[summaries/2026-04-14-cart-service|2026-04-14 장바구니 Service와 DTO]] ~ [[summaries/2026-04-16-cart-quantity-stock|2026-04-16 장바구니 수량 변경과 재고 검증]] — CartController의 저장/목록/수량 변경
+- [[summaries/2026-04-22-product-repository-pageable-search|2026-04-22 ProductRepository와 Pageable 검색]] — ProductController의 페이징·검색 조건 처리
 
 ## 자주 헷갈리는 점
 
-- Controller는 입구이지 모든 일을 하는 장소가 아니다.
-- Entity를 그대로 화면에 노출하기보다 DTO로 필요한 데이터만 전달하는 편이 안전하다.
-- GET/POST/PUT/DELETE는 기능 이름이 아니라 HTTP 요청 의도에 맞게 선택한다.
+비슷한 이름의 파일이나 URL이 여러 계층에 존재한다. React의 화면 상태, Spring의 요청 처리, DB 저장 상태를 같은 것으로 보지 말고 역할별로 나누어 추적해야 한다.
 
 ## 관련 개념
 
 - [[concepts/dto-entity-service-controller|DTO, Entity, Service, Controller]]
+- [[comparisons/controller-service-repository|Controller vs Service vs Repository]]
 - [[concepts/spring-data-jpa-repository|Spring Data JPA Repository]]
-- [[concepts/fullstack-project-flow|풀스택 프로젝트 흐름]]
 
 ## 출처
 
 - `raw/Study/4. FrontEnd_BackEnd/2026.03.31(화)/2026.03.31(화).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.01(수)/2026.04.01(수).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.02(목)/2026.04.02(목).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.03(금)/2026.04.03(금).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.06(월)/2026.04.06(월).md`
 - `raw/Study/4. FrontEnd_BackEnd/2026.04.07(화)/2026.04.07(화).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.08(수)/2026.04.08(수).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.09(목)/2026.04.09(목).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.10(금)/2026.04.10(금).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.13(월)/2026.04.13(월).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.14(화)/2026.04.14(화).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.15(수)/2026.04.15(수).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.16(목)/2026.04.16(목).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.17(금)/2026.04.17(금).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.20(월)/2026.04.20(월).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.21(화)/2026.04.21(화).md`
 - `raw/Study/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md`

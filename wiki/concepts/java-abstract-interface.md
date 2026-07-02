@@ -1,44 +1,81 @@
 ---
 title: Java 추상 클래스와 인터페이스
-created: 2026-06-30
-updated: 2026-06-30
+created: 2026-07-02
+updated: 2026-07-02
 type: concept
 tags: [java]
-sources: []
+sources:
+  - raw/Study/1. Java/2026.03.12(목)/2026.03.12(목).md
+  - raw/Study/1. Java/Java 총정리/Java 총정리.md
+  - raw/Study/1. Java/숙제/클래스 숙제 완료.md
 status: growing
-confidence: medium
+confidence: high
 ---
-
 # Java 추상 클래스와 인터페이스
 
 ## 정의
 
-공통 규격을 강제하고 구체 구현은 하위 클래스에게 맡기는 객체지향 설계 도구다.
+Java에서 **추상 클래스(abstract class)**와 **인터페이스(interface)**는 공통 규격을 만들고, 구체적인 구현은 하위 클래스에 맡기는 객체지향 설계 도구다.
+
+수업에서는 `Beverage05` 추상 클래스와 `WaterAdjustable`, `ShotAddable`, `MilkAddable`, `FoamAddable` 인터페이스를 음료 주문 예제로 배웠다.
 
 ## 왜 중요한가
 
-초보 개발 단계에서는 문법을 외우는 것보다 이 개념이 어떤 문제를 해결하는지 이해하는 것이 중요하다. 이 개념은 이후 실습, 프로젝트, 프레임워크 학습에서 반복해서 등장한다.
+추상 클래스와 인터페이스는 “공통 틀은 공유하고, 세부 구현은 각 클래스가 맡는” 구조를 만든다. 이후 Spring의 interface 기반 Service/Repository 설계와 다형성 이해에 계속 연결된다.
 
-## 핵심 설명
+## 추상 클래스 핵심
 
-- 추상 메서드는 선언만 있고 구현은 하위 클래스가 한다.
-- 추상 클래스는 공통 상태/동작과 추상 규격을 함께 가질 수 있다.
-- 인터페이스는 여러 클래스가 반드시 지켜야 할 표준 규범처럼 사용된다.
-- Java에서는 클래스 상속은 하나만 가능하지만 인터페이스는 여러 개 구현할 수 있다.
+추상 메서드는 선언만 있고 구현이 없는 메서드다.
 
-## 예시
+```java
+public abstract void drink();
+```
 
-- 관련 수업 요약의 실습 코드와 설명을 함께 보면 좋다.
+추상 클래스를 상속받은 일반 클래스는 이 추상 메서드를 반드시 구현해야 한다.
+
+```java
+public class Americano05 extends Beverage05 {
+    @Override
+    public void drink() {
+        System.out.println("아메리카노를 마십니다.");
+    }
+}
+```
+
+## 부모 타입 배열과 다형성
+
+부모 타입 배열에는 여러 자식 객체를 함께 담을 수 있다.
+
+```java
+Beverage05[] orderList = {
+    new Americano05("아메리카노", 4000.0, 200),
+    new Espresso05("에스프레소", 3000.0, 1)
+};
+```
+
+변수 타입은 `Beverage05`여도 실제 객체가 가진 `drink()` 구현이 실행된다.
+
+## 분리된 하위 주제
+
+- [[concepts/java-interface-capability-design|Java 인터페이스 기능 설계]] — 기능별 인터페이스, `implements`, `instanceof`, 다운캐스팅
+- [[comparisons/interface-vs-abstract-class|인터페이스 vs 추상 클래스]] — 둘 중 무엇을 쓸지 비교
+- [[concepts/java-memory-static-final|Java 메모리, static, final]] — `static`, `final`의 별도 정리
 
 ## 자주 헷갈리는 점
 
-- 원본 수업 노트에 표시된 `중요`, `추가 공부`, 질문 표시가 있는 부분은 추후 보강 대상이다.
+- 추상 클래스는 객체를 직접 만들 수 없다.
+- 추상 클래스와 인터페이스는 둘 다 구현 강제성을 줄 수 있지만, 쓰임새가 다르다.
+- 인터페이스는 “물 조절 가능”, “샷 추가 가능”처럼 기능 단위로 붙이기 좋다.
+- 부모 타입 변수에서는 자식 전용 메서드가 바로 보이지 않는다.
 
-## 관련 개념
+## 관련 페이지
 
 - [[concepts/java-inheritance|Java 상속]]
-- [[summaries/2026-03-12-java-abstract-interface-static|2026-03-12 Java 추상 클래스, 인터페이스, static/final]]
+- [[concepts/java-polymorphism-casting|Java 다형성과 참조 형변환]]
+- [[comparisons/interface-vs-abstract-class|인터페이스 vs 추상 클래스]]
 
 ## 출처
 
-- 관련 수업 요약 페이지와 해당 raw 원본 참조
+- `raw/Study/1. Java/2026.03.12(목)/2026.03.12(목).md`
+- `raw/Study/1. Java/Java 총정리/Java 총정리.md`
+- `raw/Study/1. Java/숙제/클래스 숙제 완료.md`

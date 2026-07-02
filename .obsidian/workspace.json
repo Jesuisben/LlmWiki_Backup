@@ -4,17 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "cb0aab50cd87c2e6",
+        "id": "ef61c320339d7bb4",
         "type": "tabs",
         "children": [
           {
-            "id": "27056e4881daa472",
+            "id": "dff20f6f465caf4e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "raw/Study/4. FrontEnd_BackEnd/2026.04.06(월)/2026.04.06(월).md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "2026.04.06(월)"
+            }
+          },
+          {
+            "id": "36c5ba33080afa04",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "raw/Study/1. Java/Java 총정리/Java 총정리.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Java 총정리"
             }
           }
         ]
@@ -74,7 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 269.5
+    "width": 323.5
   },
   "right": {
     "id": "dae217cf4dff2dfe",
@@ -194,53 +212,92 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "27056e4881daa472",
+  "floating": {
+    "id": "e69a70df2926334f",
+    "type": "floating",
+    "children": [
+      {
+        "id": "4fd51a2331cf0f95",
+        "type": "window",
+        "children": [
+          {
+            "id": "89ff1994a46b5378",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "27056e4881daa472",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "raw/Study/10. Python/2026.07.02(목)/2026.07.02(목).md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "2026.07.02(목)"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 1080,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "dff20f6f465caf4e",
   "lastOpenFiles": [
-    "raw/Study/7. Ci&CD/2026.05.12(화)/2026.05.12(화).md",
-    "raw/Study/6. AWS/2026.05.08(금)/2026.05.08(금).md",
-    "raw/Study/5. Linux/2026.04.23(목)/2026.04.23(목).md",
-    "raw/Study/10. Python/2026.07.01(수)/2026.07.01(수).md",
-    "wiki/summaries/2026-04-22-product-repository-pageable-search.md",
-    "wiki/summaries/2026-07-01-python-pandas-dataframe.md",
-    "wiki/summaries/2026-02-27-java-basic-types-operators.md",
-    "wiki/index.md",
-    "wiki/summaries/2026-04-17-cart-total-array-some.md",
-    "wiki/_meta/hermes-default-profile-mode-system.md",
-    "wiki/_meta/agent-coding-guidelines.md",
-    "wiki/_meta/hermes-home-laptop-setup.md",
-    "entities/pandas.md",
-    "entities",
-    "concepts/pandas-dataframe-basics.md",
-    "concepts",
-    "wiki/entities/git.md",
-    "wiki/summaries/2026-02-27-github-initial-setup.md",
-    "wiki/summaries/2026-02-26-orientation.md",
-    "wiki/entities/dbeaver.md",
-    "wiki/concepts/java-basic-types.md",
-    "wiki/concepts/html-css-basics.md",
-    "wiki/concepts/fullstack-project-flow.md",
-    "wiki/concepts/dto-entity-service-controller.md",
-    "wiki/concepts/database-modeling-normalization.md",
-    "wiki/concepts/bootstrap-basics.md",
-    "raw/Study/5. Linux/2026.05.01(금)/2026.05.01(금).md",
-    "raw/ai-instructions/hermes-default-profile-instructions.md",
-    "raw/Study/10. Python/2026.07.01(수)",
+    "raw/Study/10. Python/2026.07.02(목)/2026.07.02(목).md",
+    "raw/_meta_audit_raw_study_md_code_fences.py_last_output.txt",
+    "raw/_meta_verify_raw_study_md_spacing.py_last_output.txt",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/9. 중간 프로젝트 공부/CICD/JWT(RS256)생성 방법.md",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/9. 중간 프로젝트 공부/CICD",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/9. 중간 프로젝트 공부",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/8. Passwordless/2026.05.21(목)/2026.05.21(목).md",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/8. Passwordless/2026.05.20(수)/2026.05.20(수).md",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/8. Passwordless/2026.05.19(화)/2026.05.19(화).md",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/8. Passwordless/2026.05.18(월)/2026.05.18(월).md",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/8. Passwordless/2026.05.15(금)/2026.05.15(금).md",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/8. Passwordless/2026.05.14(목)/2026.05.14(목).md",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/8. Passwordless/2026.05.21(목)",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/8. Passwordless/2026.05.20(수)",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/8. Passwordless/2026.05.19(화)",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/8. Passwordless/2026.05.18(월)",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/8. Passwordless/2026.05.15(금)",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/8. Passwordless/2026.05.14(목)",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/7. Ci&CD/2026.05.13(수)/2026.05.13(수).md",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/7. Ci&CD/2026.05.12(화)/2026.05.12(화).md",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/7. Ci&CD/2026.05.11(월) - 시작/2026.05.11(월) - 시작.md",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/6. AWS/교육 자료/실습 관리 대장(텍스트).md",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/6. AWS/2026.05.08(금)/2026.05.08(금).md",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/6. AWS/2026.05.07(목)/2026.05.07(목).md",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/6. AWS/2026.05.06(수) - 시작/2026.05.06(수) - 시작.md",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/5. Linux/교육 자료/리눅스 실습하기.md",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/5. Linux/교육 자료/도커 컴포즈 종합 실습.md",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/5. Linux/교육 자료/docker image를 docker hub에 업로드 하기.md",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/5. Linux/2026.05.06(수)/2026.05.06(수).md",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/5. Linux/2026.05.04(월)/2026.05.04(월).md",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/5. Linux/2026.05.01(금)/2026.05.01(금).md",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/5. Linux/2026.04.30(목)/2026.04.30(목).md",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/5. Linux/2026.04.29(수)/2026.04.29(수).md",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/5. Linux/2026.04.28(화)/2026.04.28(화).md",
+    "raw/_hermes_fix_backup_20260702_txt_md_format/5. Linux/2026.04.27(월)/2026.04.27(월).md",
+    "raw/Study/5. Linux/교육 자료/로드 밸런싱.png",
+    "raw/Study/5. Linux/교육 자료/OwnerShip.png",
+    "raw/Study/5. Linux/교육 자료/AccessRights.png",
+    "raw/Study/4. FrontEnd_BackEnd/교육 자료/라우터 설명 그림.png",
+    "raw/Study/4. FrontEnd_BackEnd/교육 자료/다대일 단방향 매칭(Cart-CartProduct-Product) 02.png",
+    "raw/Study/4. FrontEnd_BackEnd/교육 자료/다대일 단방향 매칭(Cart-CartProduct-Product) 01.png",
+    "raw/Study/4. FrontEnd_BackEnd/교육 자료/프로그램 흐름 그림.png",
+    "raw/Study/4. FrontEnd_BackEnd/교육 자료/쇼핑 카트 데이터 구조 다이어그램.png",
     "raw/Study/1. Java/2026.03.03(화)/연산자 마무리 문제.png",
-    "raw/Study/1. Java/2026.03.03(화)/3번 문제.png",
-    "raw/Study/1. Java/2026.03.03(화)/3번 문제 답.png",
-    "raw/Study/1. Java/2026.03.03(화)/2번 문제.png",
-    "raw/Study/1. Java/2026.03.03(화)/2번 문제 답.png",
-    "raw/Study/1. Java/2026.03.03(화)/1번 문제.png",
-    "raw/Study/1. Java/2026.03.03(화)/1번 문제 답.png",
-    "raw/Study/1. Java/2026.02.27(금)/3번 문제.png",
-    "raw/Study/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/A.html&js&css/imageMap.html",
-    "raw/Study/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/A.html&js&css/fisrtExam.html",
-    "raw/Study/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/A.html&js&css/aaatemplate.html",
-    "raw/Study/3. UI&UX/교육 자료/images/herbtea2.gif",
-    "raw/Study/3. UI&UX/교육 자료/images/basil.jpg",
-    "raw/Study/3. UI&UX/교육 자료/jQueryImageTest/jQueryImageTest.html",
-    "raw/Study/3. UI&UX/교육 자료/IT 관련 용어2.pdf",
-    "raw/Study/2. Oracle/교육 자료/디비버(Dbeaver) 사용법(version 2.0).pdf",
-    "raw/Study/3. UI&UX/교육 자료/웹 서비스 Ui&UX.pdf"
+    "raw/Study/1. Java/2026.03.03(화)/3번 문제.png"
   ]
 }

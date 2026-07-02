@@ -57,6 +57,8 @@ LLM Wiki는 `raw/` 원본 자료를 직접 고치는 대신, AI Agent가 `wiki/`
 
 - [[_meta/llm-wiki-command-reference|LLM Wiki 명령어 참고]]
 - [[_meta/hermes-default-profile-mode-system|Hermes default 프로필 모드 시스템]]
+- [[_meta/agent-coding-guidelines|AI Agent 코딩 작업 지침]]
+- [[_meta/wiki-quality-audit-2026-07-02|2026-07-02 LLM Wiki 품질 감사 리포트]]
 - [[concepts/markdown-basic-syntax|Markdown 기본 문법]]
 - [[_meta/hermes-home-laptop-setup|집 노트북에 LLM Wiki와 Hermes Agent 환경 복제하기]]
 

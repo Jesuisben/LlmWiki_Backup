@@ -1,80 +1,49 @@
 ---
 title: JWT
-created: 2026-07-01
-updated: 2026-07-01
+created: 2026-07-02
+updated: 2026-07-02
 type: entity
-tags: [auth, backend, frontend]
+tags: [auth, backend]
 sources:
-  - raw/Study/4. FrontEnd_BackEnd/2026.03.30(월) - 시작/2026.03.30(월) - 시작.md
-  - raw/Study/4. FrontEnd_BackEnd/2026.03.31(화)/2026.03.31(화).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.01(수)/2026.04.01(수).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.02(목)/2026.04.02(목).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.03(금)/2026.04.03(금).md
   - raw/Study/4. FrontEnd_BackEnd/2026.04.06(월)/2026.04.06(월).md
   - raw/Study/4. FrontEnd_BackEnd/2026.04.07(화)/2026.04.07(화).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.08(수)/2026.04.08(수).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.09(목)/2026.04.09(목).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.10(금)/2026.04.10(금).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.13(월)/2026.04.13(월).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.14(화)/2026.04.14(화).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.15(수)/2026.04.15(수).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.16(목)/2026.04.16(목).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.17(금)/2026.04.17(금).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.20(월)/2026.04.20(월).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.21(화)/2026.04.21(화).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md
 status: growing
-confidence: medium
+confidence: high
 ---
 
 # JWT
 
 ## 무엇인가
 
-서명된 토큰 형식으로 인증 정보를 전달하는 방식이다. 로그인 후 React와 Spring Boot 사이에서 사용자 인증 상태를 주고받는 맥락에서 등장한다.
+로그인한 사용자의 인증 정보를 서명된 토큰 형태로 전달하는 방식이다.
 
 ## 이 위키에서의 맥락
 
-국비지원 풀스택 과정의 수업 노트에서 실제 실습 도구 또는 중심 기술로 등장했다. 관련 날짜별 요약과 연결해 보면 단순 용어가 아니라 프로젝트 기능 구현의 일부로 이해할 수 있다.
+- 2026-04-06 로그인 수업에서 쿠키, 세션, SPA/MPA 비교와 함께 등장했다.
+- 2026-04-07에는 문자열 처리와 Bearer 토큰 처리 흐름으로 이어졌다.
 
 ## 핵심 기능 / 특징
 
-- 수업 실습에서 반복적으로 등장하는 기술/도구다.
-- 다른 개념 페이지와 연결해 학습 흐름을 복원하는 기준점 역할을 한다.
-- 설치·설정, 코드 작성, 기능 구현 중 어디에 쓰이는지 구분해 보는 것이 좋다.
+- 로그인 성공 후 서버가 토큰 발급
+- 프론트가 토큰을 저장했다가 API 요청에 첨부
+- Authorization: Bearer ... 형태로 전달
+- 서버는 토큰을 검증해 사용자를 식별
+
+## 헷갈리기 쉬운 점
+
+JWT는 쿠키나 세션과 같은 저장소가 아니라 인증 정보를 담는 토큰 형식이다.
 
 ## 관련 개념
 
-- [[concepts/fullstack-project-flow|풀스택 프로젝트 흐름]]
+- [[concepts/jwt-session-cookie-auth|JWT, 세션, 쿠키 인증]]
+- [[comparisons/session-vs-cookie-vs-jwt|Session vs Cookie vs JWT]]
 - [[concepts/spring-boot-rest-api|Spring Boot REST API]]
-- [[concepts/react-typescript-basics|React와 TypeScript 기본]]
 
 ## 학습 이력
 
-- `raw/Study/4. FrontEnd_BackEnd/2026.03.30(월) - 시작/2026.03.30(월) - 시작.md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.03.31(화)/2026.03.31(화).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.01(수)/2026.04.01(수).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.02(목)/2026.04.02(목).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.03(금)/2026.04.03(금).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.06(월)/2026.04.06(월).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.07(화)/2026.04.07(화).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.08(수)/2026.04.08(수).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.09(목)/2026.04.09(목).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.10(금)/2026.04.10(금).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.13(월)/2026.04.13(월).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.14(화)/2026.04.14(화).md`
+이 페이지는 단순 정의가 아니라, 수업에서 이 기술이 처음 등장한 맥락과 이후 Java/Oracle/UI&UX/Spring/React 프로젝트 흐름으로 확장된 위치를 추적하기 위한 엔티티 페이지다.
 
 ## 출처
 
-- `raw/Study/4. FrontEnd_BackEnd/2026.03.30(월) - 시작/2026.03.30(월) - 시작.md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.03.31(화)/2026.03.31(화).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.01(수)/2026.04.01(수).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.02(목)/2026.04.02(목).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.03(금)/2026.04.03(금).md`
 - `raw/Study/4. FrontEnd_BackEnd/2026.04.06(월)/2026.04.06(월).md`
 - `raw/Study/4. FrontEnd_BackEnd/2026.04.07(화)/2026.04.07(화).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.08(수)/2026.04.08(수).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.09(목)/2026.04.09(목).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.10(금)/2026.04.10(금).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.13(월)/2026.04.13(월).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.14(화)/2026.04.14(화).md`

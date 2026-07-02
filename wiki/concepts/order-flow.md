@@ -1,46 +1,50 @@
 ---
 title: 주문 기능 흐름
-created: 2026-07-01
-updated: 2026-07-01
+created: 2026-07-02
+updated: 2026-07-02
 type: concept
-tags: [project, spring-boot, react, typescript]
+tags: [project, spring-boot, react]
 sources:
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.21(화)/2026.04.21(화).md
+  - raw/Study/4. FrontEnd_BackEnd/2026.04.16(목)/2026.04.16(목).md
+  - raw/Study/4. FrontEnd_BackEnd/2026.04.20(월)/2026.04.20(월).md
 status: growing
-confidence: medium
+confidence: high
 ---
 
 # 주문 기능 흐름
 
 ## 정의
 
-주문 기능은 장바구니나 상품 선택 결과를 실제 주문 데이터로 만들고, 사용자/관리자 기준으로 주문 목록을 조회하는 흐름이다.
+장바구니에 담긴 상품을 주문으로 확정하고 주문 목록과 상태를 관리하는 과정이다.
 
 ## 왜 중요한가
 
-주문은 상품·회원·장바구니 다음 단계로 이어지는 종합 기능이다. 권한에 따라 보이는 데이터가 달라지므로 테스트 시나리오가 중요하다.
+FrontEnd_BackEnd 단계에서는 문법 하나보다 화면, API, 업무 규칙, DB가 어떻게 연결되는지가 중요하다. 이 개념은 사용자의 쇼핑몰형 실습에서 반복 등장하는 흐름을 복원하기 위한 기준점이다.
 
 ## 핵심 설명
 
-- 일반 사용자는 자신의 주문을 확인한다.
-- 관리자는 여러 사용자의 주문 정보를 확인할 수 있다.
-- 최신 주문이 먼저 보이도록 정렬 기준을 잡는다.
-- 주문 상태를 화면에 명확히 보여준다.
+- 장바구니에서 주문할 상품을 선택한다.
+- Order와 OrderProduct 같은 주문 Entity를 만든다.
+- Service가 주문 생성, 상태 변경, 사용자 조건을 처리한다.
+- Repository가 최신 주문 우선 조회 같은 DB 조회를 담당한다.
+- React OrderList가 주문 상태와 관리자/일반 사용자 버튼을 보여준다.
 
-## 예시
+## 수업 예시
 
-`OrderList.tsx`에서 주문 상태를 표시하고, 관리자 로그인/일반 사용자 로그인 조건에 따라 조회 결과가 달라지는지 확인한다.
+- [[summaries/2026-04-16-cart-quantity-stock|2026-04-16 장바구니 수량 변경과 재고 검증]] — OrderStatus, 연관 관계 매핑, 영속성 전이, Order/OrderProduct
+- [[summaries/2026-04-20-order-list-scenario|2026-04-20 주문 목록과 테스트 시나리오]] — OrderList.tsx, 주문 상태 표시, 테스트 시나리오
 
 ## 자주 헷갈리는 점
 
-- 화면에 보이는 조건과 백엔드 권한 검증은 별도로 생각해야 한다.
-- 최신순 정렬은 프론트에서만 바꾸기보다 백엔드 조회 기준과 맞추는 편이 안정적이다.
+비슷한 이름의 파일이나 URL이 여러 계층에 존재한다. React의 화면 상태, Spring의 요청 처리, DB 저장 상태를 같은 것으로 보지 말고 역할별로 나누어 추적해야 한다.
 
 ## 관련 개념
 
 - [[concepts/shopping-cart-flow|장바구니 기능 흐름]]
+- [[concepts/dto-entity-service-controller|DTO, Entity, Service, Controller]]
 - [[concepts/fullstack-project-flow|풀스택 프로젝트 흐름]]
 
 ## 출처
 
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.21(화)/2026.04.21(화).md`
+- `raw/Study/4. FrontEnd_BackEnd/2026.04.16(목)/2026.04.16(목).md`
+- `raw/Study/4. FrontEnd_BackEnd/2026.04.20(월)/2026.04.20(월).md`

@@ -1,79 +1,55 @@
 ---
 title: Spring Boot
-created: 2026-07-01
-updated: 2026-07-01
+created: 2026-07-02
+updated: 2026-07-02
 type: entity
-tags: [spring-boot, backend, java]
+tags: [spring-boot, spring, backend]
 sources:
   - raw/Study/4. FrontEnd_BackEnd/2026.03.30(월) - 시작/2026.03.30(월) - 시작.md
   - raw/Study/4. FrontEnd_BackEnd/2026.03.31(화)/2026.03.31(화).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.01(수)/2026.04.01(수).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.02(목)/2026.04.02(목).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.03(금)/2026.04.03(금).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.06(월)/2026.04.06(월).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.07(화)/2026.04.07(화).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.08(수)/2026.04.08(수).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.09(목)/2026.04.09(목).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.10(금)/2026.04.10(금).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.13(월)/2026.04.13(월).md
   - raw/Study/4. FrontEnd_BackEnd/2026.04.14(화)/2026.04.14(화).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.15(수)/2026.04.15(수).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.16(목)/2026.04.16(목).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.20(월)/2026.04.20(월).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.21(화)/2026.04.21(화).md
   - raw/Study/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md
 status: growing
-confidence: medium
+confidence: high
 ---
 
 # Spring Boot
 
 ## 무엇인가
 
-Spring 기반 웹 애플리케이션을 빠르게 만들기 위한 프레임워크다. 이 위키에서는 React 프론트엔드와 연결되는 백엔드 API, Controller/Service/Repository 계층 학습의 중심이다.
+Spring 기반 백엔드 애플리케이션을 빠르게 구성하고 API, 업무 로직, DB 접근 계층을 만드는 프레임워크다.
 
 ## 이 위키에서의 맥락
 
-국비지원 풀스택 과정의 수업 노트에서 실제 실습 도구 또는 중심 기술로 등장했다. 관련 날짜별 요약과 연결해 보면 단순 용어가 아니라 프로젝트 기능 구현의 일부로 이해할 수 있다.
+- [[summaries/2026-03-30-fullstack-environment-setup|2026-03-30 FrontEnd/BackEnd 개발 환경과 커리큘럼 전환]]에서 초기 구성으로 등장했다.
+- [[summaries/2026-03-31-spring-boot-controller-html|2026-03-31 Spring Boot Controller와 HTML 응답]]에서는 FruitHtmlController와 HTML 응답으로 Controller의 역할을 배웠다.
+- 회원, 상품, 장바구니, 주문, 페이징 기능을 구현하며 백엔드 중심 기술이 됐다.
 
 ## 핵심 기능 / 특징
 
-- 수업 실습에서 반복적으로 등장하는 기술/도구다.
-- 다른 개념 페이지와 연결해 학습 흐름을 복원하는 기준점 역할을 한다.
-- 설치·설정, 코드 작성, 기능 구현 중 어디에 쓰이는지 구분해 보는 것이 좋다.
+- Controller로 HTTP 요청 처리
+- Service로 장바구니 저장·주문 처리·재고 검증 같은 업무 규칙 구현
+- Repository/JPA로 DB 접근
+- DTO/Entity 구분과 Pageable/Specification 검색 처리
+
+## 헷갈리기 쉬운 점
+
+Controller에 모든 코드를 넣으면 단기적으로는 편하지만 기능이 커질수록 유지보수가 어렵다.
 
 ## 관련 개념
 
-- [[concepts/fullstack-project-flow|풀스택 프로젝트 흐름]]
 - [[concepts/spring-boot-rest-api|Spring Boot REST API]]
-- [[concepts/react-typescript-basics|React와 TypeScript 기본]]
+- [[concepts/dto-entity-service-controller|DTO, Entity, Service, Controller]]
+- [[concepts/spring-data-jpa-repository|Spring Data JPA Repository]]
+- [[concepts/shopping-cart-flow|장바구니 기능 흐름]]
 
 ## 학습 이력
 
-- `raw/Study/4. FrontEnd_BackEnd/2026.03.30(월) - 시작/2026.03.30(월) - 시작.md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.03.31(화)/2026.03.31(화).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.01(수)/2026.04.01(수).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.02(목)/2026.04.02(목).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.03(금)/2026.04.03(금).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.06(월)/2026.04.06(월).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.07(화)/2026.04.07(화).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.08(수)/2026.04.08(수).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.09(목)/2026.04.09(목).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.10(금)/2026.04.10(금).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.13(월)/2026.04.13(월).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.14(화)/2026.04.14(화).md`
+이 페이지는 단순 정의가 아니라, 수업에서 이 기술이 처음 등장한 맥락과 이후 Java/Oracle/UI&UX/Spring/React 프로젝트 흐름으로 확장된 위치를 추적하기 위한 엔티티 페이지다.
 
 ## 출처
 
 - `raw/Study/4. FrontEnd_BackEnd/2026.03.30(월) - 시작/2026.03.30(월) - 시작.md`
 - `raw/Study/4. FrontEnd_BackEnd/2026.03.31(화)/2026.03.31(화).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.01(수)/2026.04.01(수).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.02(목)/2026.04.02(목).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.03(금)/2026.04.03(금).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.06(월)/2026.04.06(월).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.07(화)/2026.04.07(화).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.08(수)/2026.04.08(수).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.09(목)/2026.04.09(목).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.10(금)/2026.04.10(금).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.13(월)/2026.04.13(월).md`
 - `raw/Study/4. FrontEnd_BackEnd/2026.04.14(화)/2026.04.14(화).md`
+- `raw/Study/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md`
