@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "966f92905de2ec26",
+        "id": "b59e75bcf0ad68a8",
         "type": "tabs",
         "children": [
           {
-            "id": "dd4fe55ab88ec7f9",
+            "id": "46c016cd647e610a",
             "type": "leaf",
             "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {},
-              "icon": "lucide-git-fork",
-              "title": "그래프 뷰"
+              "icon": "lucide-file",
+              "title": "새 탭"
             }
           }
         ]
@@ -219,20 +219,6 @@
                   "icon": "lucide-file",
                   "title": "2026.07.03(금)"
                 }
-              },
-              {
-                "id": "5ec4e32ad30cd910",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "raw/Study/10. Python/2026.07.02(목)/2026.07.02(목).md",
-                    "mode": "source",
-                    "source": false
-                  },
-                  "icon": "lucide-file",
-                  "title": "2026.07.02(목)"
-                }
               }
             ]
           }
@@ -247,20 +233,34 @@
       }
     ]
   },
-  "active": "dd4fe55ab88ec7f9",
+  "active": "46c016cd647e610a",
   "lastOpenFiles": [
-    "raw/Study/10. Python/2026.07.03(금)/2026.07.03(금).md",
-    "raw/Study/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md",
-    "raw/Study/6. AWS/2026.05.06(수) - 시작/2026.05.06(수) - 시작.md",
-    "raw/Study/9. 중간 프로젝트 공부/패스워드리스 적용/중간 프로젝트 패스워드리스 적용 가이드.md",
     "raw/Study/4. FrontEnd_BackEnd/FrontEnd_BackEnd 총정리/FrontEnd_BackEnd 총정리.md",
+    "raw/Study/10. Python/2026.07.03(금)/2026.07.03(금).md",
     "raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md",
     "raw/Study/2. Oracle/Oracle 총정리/Oracle 총정리.md",
     "raw/Study/1. Java/Java 총정리/Java 총정리.md",
+    "raw/Study/0. 교육명/2026.00.00(00)/2026.00.00(00).md",
+    "raw/Study/10. Python/2026.00.00(00)/2026.00.00(00).md",
+    "raw/Study/0. 교육명/교육명 총정리/교육명 총정리.md",
+    "raw/Study/10. Python/교육 자료/라이브러리 설치 파일.md",
+    "raw/Study/10. Python/교육 자료/csv 파일들/학생정보08.csv",
+    "raw/Study/10. Python/교육 자료/csv 파일들/학생정보07.csv",
+    "raw/Study/10. Python/교육 자료/csv 파일들/학생정보02.csv",
+    "raw/Study/10. Python/교육 자료/csv 파일들/학생정보01.csv",
+    "raw/Study/10. Python/교육 자료/csv 파일들/시험점수08.csv",
+    "raw/Study/10. Python/교육 자료/csv 파일들/시험점수07.csv",
+    "raw/Study/10. Python/교육 자료/csv 파일들/시험점수06.csv",
+    "raw/Study/10. Python/교육 자료/csv 파일들/시험점수05.csv",
+    "raw/Study/10. Python/교육 자료/csv 파일들/시험점수04.csv",
+    "raw/Study/10. Python/교육 자료/csv 파일들/시험점수03.csv",
+    "raw/Study/10. Python/교육 자료/Pandas02.png",
+    "raw/Study/10. Python/교육 자료/Pandas01.png",
+    "raw/Study/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md",
+    "raw/Study/6. AWS/2026.05.06(수) - 시작/2026.05.06(수) - 시작.md",
+    "raw/Study/9. 중간 프로젝트 공부/패스워드리스 적용/중간 프로젝트 패스워드리스 적용 가이드.md",
     "raw/Study/6. AWS/2026.05.07(목)/2026.05.07(목).md",
     "wiki/_meta/wiki-quality-audit-2026-07-02.md",
-    "_tmp_final_verify_aws.py",
-    "_tmp_verify_aws_wiki.py",
     "wiki/comparisons/clb-vs-alb.md",
     "wiki/comparisons/ec2-vs-rds.md",
     "wiki/entities/amazon-route-53.md",
@@ -273,18 +273,6 @@
     "wiki/concepts/aws-cloud-vpc-networking.md",
     "wiki/summaries/2026-05-08-aws-route53-load-balancer-https.md",
     "wiki/summaries/2026-05-07-aws-ec2-nginx-rds.md",
-    "wiki/summaries/2026-05-06-aws-cloud-vpc-ec2.md",
-    "_tmp_extract_aws_pdf.py",
-    "raw/Study/10. Python/2026.07.02(목)/2026.07.02(목).md",
-    "wiki/comparisons/oracle-inner-vs-outer-join.md",
-    "wiki/comparisons/primary-key-vs-foreign-key.md",
-    "raw/Study/10. Python/2026.07.03(금)",
-    "raw/_meta_audit_raw_study_md_code_fences.py_last_output.txt",
-    "raw/_meta_verify_raw_study_md_spacing.py_last_output.txt",
-    "raw/_hermes_fix_backup_20260702_txt_md_format/9. 중간 프로젝트 공부/CICD",
-    "raw/_hermes_fix_backup_20260702_txt_md_format/9. 중간 프로젝트 공부",
-    "raw/_hermes_fix_backup_20260702_txt_md_format/8. Passwordless/2026.05.21(목)",
-    "raw/_hermes_fix_backup_20260702_txt_md_format/8. Passwordless/2026.05.20(수)",
     "raw/Study/5. Linux/교육 자료/로드 밸런싱.png",
     "raw/Study/5. Linux/교육 자료/OwnerShip.png",
     "raw/Study/5. Linux/교육 자료/AccessRights.png",
@@ -292,8 +280,6 @@
     "raw/Study/4. FrontEnd_BackEnd/교육 자료/다대일 단방향 매칭(Cart-CartProduct-Product) 02.png",
     "raw/Study/4. FrontEnd_BackEnd/교육 자료/다대일 단방향 매칭(Cart-CartProduct-Product) 01.png",
     "raw/Study/4. FrontEnd_BackEnd/교육 자료/프로그램 흐름 그림.png",
-    "raw/Study/4. FrontEnd_BackEnd/교육 자료/쇼핑 카트 데이터 구조 다이어그램.png",
-    "raw/Study/1. Java/2026.03.03(화)/연산자 마무리 문제.png",
-    "raw/Study/1. Java/2026.03.03(화)/3번 문제.png"
+    "raw/Study/4. FrontEnd_BackEnd/교육 자료/쇼핑 카트 데이터 구조 다이어그램.png"
   ]
 }
