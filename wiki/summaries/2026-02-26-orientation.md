@@ -1,12 +1,14 @@
 ---
 title: 2026-02-26 오리엔테이션과 개발 환경 준비
-created: 2026-06-30
-updated: 2026-06-30
+created: 2026-07-02
+updated: 2026-07-03
 type: summary
-tags: [curriculum, study-log]
+tags: [java, curriculum, study-log]
 sources:
   - raw/Study/1. Java/2026.02.26(목)/2026.02.26(목).md
-status: seed
+  - raw/Study/1. Java/교육 자료/IntelliJ 교안.pdf
+  - raw/Study/1. Java/교육 자료/Java 교안(이론_20260226).pdf
+status: stable
 confidence: high
 ---
 
@@ -14,68 +16,44 @@ confidence: high
 
 ## 한 줄 요약
 
-국비지원 과정 첫날 오리엔테이션으로 교육 과정 정보, 출결/외출/휴가 규칙, 자습 가능 시간, 개발 도구 설치 준비를 안내받았다.
+국비지원 과정 첫날에는 수업 운영 규칙을 확인한 뒤 IntelliJ IDEA에서 Java 프로젝트·패키지·클래스를 만들고 `System.out.println()`으로 첫 출력을 실행했다.
+
+## 커리큘럼 위치
+
+- Java 과정의 출발점이다.
+- 이후 [[summaries/2026-02-27-java-basic-types-operators|2026-02-27 변수·자료형·연산자]]로 이어지며, “프로젝트 → 패키지 → 클래스 → main 메서드” 구조가 모든 Java 실습의 기본 틀이 된다.
 
 ## 배운 내용
 
-### 교육 과정 기본 정보
+- 출결, 조퇴·외출·휴가 규칙, 시험/프로젝트 반영 방식 등 과정 운영 방식을 확인했다.
+- Chrome, IntelliJ IDEA, Git 관련 도구 등 개발 환경을 준비했다.
+- IntelliJ에서 `New Project`, `Package`, `Java Class`를 만들고 첫 Java 파일을 실행했다.
+- Java 프로그램은 최소한 클래스 안에 `main` 메서드가 있어야 실행 출발점을 가진다는 점을 확인했다.
+- 세미콜론은 문장의 끝에 붙지만 클래스/메서드 바디 `{}` 자체 뒤에는 붙이지 않는다는 규칙을 익혔다.
 
-- 교육 이름: 클라우드환경 패스워드리스 보안 AI 웹개발자 양성
-- 교육 기간: 2026.02.26 ~ 2026.09.04
-- 담당 선생님: 설진욱
-- 첫 시간은 과정 운영 방식과 출결 관련 규칙을 안내받는 오리엔테이션 성격이었다.
+## 핵심 실습 / 예제
 
-### 출결과 외출 규칙
+- 프로젝트: `MyJava`
+- 패키지: `ch01_variable_operator`
+- 클래스: `MyPrint`, `YourPrint`
+- 출력: `System.out.println("hello")`, `System.out.println("world")`
 
-아플 때는 행정실에 접수하고 외출대장을 작성한 뒤 외출/복귀 처리를 해야 한다. 출석 인정을 받으려면 질병코드가 나온 진료확인서를 당일에 제출해야 한다.
-
-흐름은 다음과 같이 정리할 수 있다.
-
-1. 행정실 접수
-2. 외출대장 작성
-3. 외출 버튼
-4. 복귀 접수
-5. 복귀 버튼
-
-### 휴가와 자습
-
-- 휴가는 월 1회 사용할 수 있다.
-- 원칙적으로 사용 전날 요청한다.
-- 병원, 집안 경조사, 면접 같은 사유가 해당된다.
-- 자습은 10시까지 가능하며 주말도 가능하다.
-
-## 실습 / 예제
-
-### 설치할 프로그램
-
-개발 환경 준비를 위해 다음 프로그램 설치가 안내되었다.
-
-- Notepad++: 메모장 대체 편집기
-- KakaoTalk: 오픈채팅창 이용
-- Chrome: 웹 브라우저
-- IntelliJ IDEA: Java 코딩용 IDE
-- Zoom: 온라인 소통 도구
-
-### IntelliJ IDEA 시작
-
-IntelliJ IDEA 설치 후 새 프로젝트를 만들어 보는 흐름이 언급되었다. 원본에는 “IntelliJ 교안 PDF 보기”가 함께 적혀 있다.
-
-## 핵심 개념
-
-- [[concepts/markdown-basic-syntax|Markdown 기본 문법]] — 수업 내용을 raw 노트로 정리할 때 쓰는 기본 문서 문법
-- 개발 환경 준비 — Java 학습을 시작하기 전 IDE와 필수 도구를 설치하는 단계
-- 오리엔테이션 — 본격적인 Java 수업 전 과정 운영 규칙과 준비물을 확인하는 단계
+이날 실습은 단순 출력이지만, 이후 모든 수업 코드가 “패키지 안의 클래스, 클래스 안의 `main`, `main` 안의 실행문” 구조로 작성된다는 점에서 중요하다.
 
 ## 헷갈린 점 / 질문
 
-- “다음주 상담?”이라는 메모가 있어, 이후 상담 일정이나 목적을 추가 확인할 필요가 있다.
-- IntelliJ 설치 과정에서 선택한 옵션이 이후 Java 프로젝트 설정과 어떻게 연결되는지는 추후 Java 수업 자료와 함께 보강할 수 있다.
+- 원본에는 `static void main()`처럼 `String[] args`가 빠진 예시도 등장한다. 실제 IntelliJ 자동 생성 기본형은 `public static void main(String[] args)`이며, 학습 초기에는 “실행 시작점”이라는 의미를 먼저 잡는 단계로 보면 된다.
+- `String`은 교안/노트에서 문자열형처럼 다루지만, Java 문법상 기본 자료형이 아니라 클래스 기반 참조 자료형이다. 이 차이는 [[comparisons/primitive-vs-reference-types|기본 자료형 vs 참조 자료형]]에서 다시 정리한다.
 
 ## 관련 페이지
 
-- [[concepts/markdown-basic-syntax|Markdown 기본 문법]]
-- [[_meta/llm-wiki-operating-model|LLM Wiki 운영 모델]]
+- [[entities/intellij-idea|IntelliJ IDEA]]
+- [[entities/java|Java]]
+- [[concepts/java-basic-types|Java 기본 자료형]]
+- [[concepts/java-class-object|Java 클래스와 객체]]
 
 ## 출처
 
 - `raw/Study/1. Java/2026.02.26(목)/2026.02.26(목).md`
+- `raw/Study/1. Java/교육 자료/IntelliJ 교안.pdf`
+- `raw/Study/1. Java/교육 자료/Java 교안(이론_20260226).pdf`

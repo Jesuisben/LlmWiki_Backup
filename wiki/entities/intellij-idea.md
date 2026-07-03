@@ -1,45 +1,56 @@
 ---
 title: IntelliJ IDEA
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-03
 type: entity
-tags: [spring-boot, backend]
+tags: [java, spring]
 sources:
-  - raw/Study/4. FrontEnd_BackEnd/2026.03.30(월) - 시작/2026.03.30(월) - 시작.md
-  - raw/Study/4. FrontEnd_BackEnd/교육 자료/IntelliJ 교안.pdf
+  - raw/Study/1. Java/2026.02.26(목)/2026.02.26(목).md
+  - raw/Study/1. Java/2026.02.27(금)/깃허브 초기 설정.md
+  - raw/Study/1. Java/교육 자료/IntelliJ 교안.pdf
+  - raw/Study/1. Java/교육 자료/Github 교안(실습).pdf
   - raw/Study/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf
-status: growing
+status: stable
 confidence: high
 ---
+
 # IntelliJ IDEA
 
 ## 무엇인가
 
-IntelliJ IDEA는 JetBrains가 제공하는 Java/Spring 개발 IDE다. 이 위키에서는 Spring Boot 백엔드 프로젝트를 생성하고 실행하는 도구로 등장한다.
+IntelliJ IDEA는 JetBrains가 만든 Java/Spring 개발용 IDE다. 이 위키에서는 Java 첫 실행과 Spring Boot 백엔드 프로젝트 작성에 사용한 핵심 개발 도구다.
 
 ## 이 위키에서의 맥락
 
-2026-03-30 FrontEnd_BackEnd 과정 첫날에 IntelliJ 실행 확인과 Spring Initializr 프로젝트 준비가 함께 진행되었다. React 코드는 주로 [[entities/visual-studio-code|Visual Studio Code]]에서 다루고, Spring Boot 백엔드는 IntelliJ에서 다루는 식으로 역할이 나뉘었다.
+2026-02-26 첫 Java 수업에서 IntelliJ를 설치·설정하고 `MyJava` 프로젝트를 만들었다. 이후 패키지, 클래스, `main` 메서드, 실행 버튼, 자동 import, Git/GitHub 연동까지 Java 학습의 작업 환경으로 계속 사용했다.
 
 ## 핵심 기능 / 특징
 
-- Java/Spring Boot 프로젝트 구조를 탐색하고 실행한다.
-- Maven `pom.xml`, `application.properties`, Controller/Service/Repository/Entity 패키지를 함께 다룬다.
-- Spring Initializr로 생성한 프로젝트를 열어 백엔드 API 개발을 시작한다.
-
-## 관련 개념
-
-- [[entities/spring-boot]]
-- [[concepts/spring-boot-rest-api]]
-- [[concepts/frontend-backend-architecture]]
-- [[entities/visual-studio-code]]
+- 새 프로젝트 생성
+- 패키지와 Java 클래스 생성
+- `main` 메서드 자동 생성/실행
+- 자동 import와 코드 보조
+- 설정 단축키 `Ctrl + Alt + S`
+- Git/GitHub 연동 및 repository clone
+- Maven/Gradle, Spring Boot 프로젝트 작업 지원
 
 ## 학습 이력
 
-- [[summaries/2026-03-30-fullstack-environment-setup|2026-03-30]] — IntelliJ 설치/실행 확인과 Spring Boot 프로젝트 초기 구성을 진행했다.
+- [[summaries/2026-02-26-orientation|2026-02-26]]: IntelliJ 설치, 테마/글꼴 설정, 첫 출력 실습
+- [[summaries/2026-02-27-github-initial-setup|2026-02-27]]: Git과 IntelliJ 연동
+- [[summaries/2026-03-30-fullstack-environment-setup|2026-03-30]] 이후: Spring Boot 백엔드 프로젝트 환경으로 재등장
+
+## 관련 개념
+
+- [[entities/java|Java]]
+- [[entities/git|Git]]
+- [[entities/github|GitHub]]
+- [[entities/spring-boot|Spring Boot]]
 
 ## 출처
 
-- `raw/Study/4. FrontEnd_BackEnd/2026.03.30(월) - 시작/2026.03.30(월) - 시작.md`
-- `raw/Study/4. FrontEnd_BackEnd/교육 자료/IntelliJ 교안.pdf`
+- `raw/Study/1. Java/2026.02.26(목)/2026.02.26(목).md`
+- `raw/Study/1. Java/2026.02.27(금)/깃허브 초기 설정.md`
+- `raw/Study/1. Java/교육 자료/IntelliJ 교안.pdf`
+- `raw/Study/1. Java/교육 자료/Github 교안(실습).pdf`
 - `raw/Study/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf`

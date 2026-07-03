@@ -5,8 +5,10 @@ updated: 2026-07-02
 type: entity
 tags: [oracle, sql, backend]
 sources:
+  - raw/Study/2. Oracle/2026.03.13(금) - 시작/2026.03.13(금) - 시작.md
   - raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md
   - raw/Study/2. Oracle/2026.03.17(화)/2026.03.17(화).md
+  - raw/Study/2. Oracle/2026.03.18(수)/2026.03.18(수).md
   - raw/Study/2. Oracle/2026.03.19(목)/2026.03.19(목).md
   - raw/Study/2. Oracle/2026.03.20(금)/2026.03.20(금).md
 status: growing
@@ -17,41 +19,34 @@ confidence: high
 
 ## 무엇인가
 
-데이터를 테이블 형태로 저장하고 SQL로 조회·정의·조작하는 관계형 데이터베이스 관리 시스템(RDBMS)이다.
+Oracle Database는 데이터를 테이블 형태로 저장하고 SQL로 조회·정의·조작하는 관계형 데이터베이스 관리 시스템(RDBMS)이다.
 
 ## 이 위키에서의 맥락
 
-- 2026-03-16에 DBMS, SQL, DBeaver 접속, 테이블·행·열·SELECT를 배우며 본격 등장했다.
-- 2026-03-17~18에는 DDL/DML, 제약조건, 시퀀스, PK/FK 테스트로 데이터 무결성을 다뤘다.
-- 2026-03-19에는 함수, GROUP BY/HAVING, JOIN, 서브쿼리로 조회 능력을 확장했다.
-- 2026-03-20에는 ERD, 정규화, View, Index로 DB 설계 관점까지 이어졌다.
+Oracle은 Java 객체지향 학습 다음에 등장했다. Java에서는 객체와 로직을 배웠고, Oracle에서는 그 객체들이 다룰 회원·게시물·상품·주문 데이터를 어떻게 영구 저장하고 관계로 연결하는지 배웠다.
 
-## 핵심 기능 / 특징
+## 날짜별 학습 이력
 
-- `SELECT`, `CREATE TABLE`, `INSERT`, `COMMIT`/`ROLLBACK` 같은 SQL 실행
-- PK/FK/CHECK와 시퀀스를 통한 무결성·자동 번호 관리
-- JOIN/서브쿼리로 여러 테이블과 쿼리 결과 연결
-- Spring Boot/JPA의 Entity·Repository를 이해하는 선행 지식
-
-## 헷갈리기 쉬운 점
-
-Oracle Database는 DBeaver와 다르다. Oracle은 데이터를 저장·관리하는 DBMS이고, DBeaver는 그 DB에 접속해 SQL을 실행하는 IDE다.
+- [[summaries/2026-03-13-java-project-oracle-start|2026-03-13]] — Oracle XE와 DBeaver 설치 시작
+- [[summaries/2026-03-16-oracle-dbms-sql-dbeaver|2026-03-16]] — DBMS/SQL/DBeaver 접속, `oraman` 사용자, `MEMBERS` 테이블
+- [[summaries/2026-03-17-oracle-ddl-dml-constraints-sequence|2026-03-17]] — 시퀀스, 주문/주문상세, PK/FK, 참조 무결성
+- [[summaries/2026-03-18-oracle-constraints-validation|2026-03-18]] — 오류 코드, validation, 트랜잭션, DQL 시작
+- [[summaries/2026-03-19-oracle-functions-join-subquery|2026-03-19]] — 함수, GROUP BY/HAVING, JOIN, 서브쿼리
+- [[summaries/2026-03-20-database-modeling-normalization-view-index|2026-03-20]] — ERD, 정규화, View, Index
 
 ## 관련 개념
 
 - [[concepts/oracle-sql-basics|Oracle SQL 기본]]
-- [[concepts/oracle-constraints-sequence|Oracle 제약조건과 시퀀스]]
-- [[concepts/oracle-functions-join-subquery|Oracle 함수·조인·서브쿼리]]
+- [[concepts/oracle-ddl-dml-transaction|Oracle DDL, DML, 트랜잭션]]
+- [[concepts/oracle-referential-integrity|Oracle 참조 무결성과 ON DELETE]]
 - [[concepts/database-modeling-normalization|데이터 모델링과 정규화]]
 - [[entities/dbeaver|DBeaver]]
 
-## 학습 이력
-
-이 페이지는 단순 정의가 아니라, 수업에서 이 기술이 처음 등장한 맥락과 이후 Java/Oracle/UI&UX/Spring/React 프로젝트 흐름으로 확장된 위치를 추적하기 위한 엔티티 페이지다.
-
 ## 출처
 
+- `raw/Study/2. Oracle/2026.03.13(금) - 시작/2026.03.13(금) - 시작.md`
 - `raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md`
 - `raw/Study/2. Oracle/2026.03.17(화)/2026.03.17(화).md`
+- `raw/Study/2. Oracle/2026.03.18(수)/2026.03.18(수).md`
 - `raw/Study/2. Oracle/2026.03.19(목)/2026.03.19(목).md`
 - `raw/Study/2. Oracle/2026.03.20(금)/2026.03.20(금).md`

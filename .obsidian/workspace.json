@@ -8,26 +8,49 @@
         "type": "tabs",
         "children": [
           {
-            "id": "8bfc571eae3d6ab2",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "그래프 뷰"
-            }
-          },
-          {
             "id": "bae7255b114e5b40",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "그래프 뷰"
+              "type": "markdown",
+              "state": {
+                "file": "raw/Study/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "중간 프로젝트 cicd 및 배포 가이드"
+            }
+          },
+          {
+            "id": "e56de2118f45ba3a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "raw/Study/9. 중간 프로젝트 공부/패스워드리스 적용/중간 프로젝트 패스워드리스 적용 가이드.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "중간 프로젝트 패스워드리스 적용 가이드"
+            }
+          },
+          {
+            "id": "e20aeec35a76a493",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "raw/Study/6. AWS/2026.05.06(수) - 시작/2026.05.06(수) - 시작.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026.05.06(수) - 시작"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -204,44 +227,97 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "8bfc571eae3d6ab2",
+  "floating": {
+    "id": "a04f40798b616175",
+    "type": "floating",
+    "children": [
+      {
+        "id": "39ad20b2e1234e44",
+        "type": "window",
+        "children": [
+          {
+            "id": "58ff9c4dd809a0e9",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "8bfc571eae3d6ab2",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "raw/Study/10. Python/2026.07.03(금)/2026.07.03(금).md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "2026.07.03(금)"
+                }
+              },
+              {
+                "id": "5ec4e32ad30cd910",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "raw/Study/10. Python/2026.07.02(목)/2026.07.02(목).md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "2026.07.02(목)"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 1080,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "e56de2118f45ba3a",
   "lastOpenFiles": [
     "raw/Study/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md",
-    "wiki/concepts/spring-boot-rest-api.md",
-    "wiki/comparisons/get-vs-post.md",
-    "wiki/comparisons/inline-style-vs-internal-css-vs-external-css.md",
-    "wiki/comparisons/library-vs-framework.md",
-    "wiki/concepts/product-domain-flow.md",
-    "wiki/concepts/spring-security-jwt-filter.md",
-    "wiki/concepts/react-useeffect-data-fetching.md",
-    "wiki/concepts/react-form-state-event.md",
-    "wiki/comparisons/props-vs-state.md",
-    "wiki/comparisons/mpa-vs-spa.md",
-    "wiki/concepts/frontend-backend-architecture.md",
-    "wiki/entities/intellij-idea.md",
-    "wiki/comparisons/git-fetch-vs-pull-vs-clone.md",
-    "wiki/comparisons/docker-cp-vs-bind-mount-vs-volume.md",
-    "wiki/comparisons/docker-commit-vs-dockerfile.md",
-    "wiki/concepts/docker-compose-manifest.md",
-    "wiki/concepts/docker-reverse-proxy-load-balancing.md",
-    "wiki/concepts/docker-cp-exec-container-files.md",
-    "wiki/concepts/docker-install-permission-setup.md",
-    "wiki/concepts/linux-web-server-apache-nginx.md",
+    "raw/Study/9. 중간 프로젝트 공부/패스워드리스 적용/중간 프로젝트 패스워드리스 적용 가이드.md",
     "raw/Study/1. Java/Java 총정리/Java 총정리.md",
-    "raw/Study/6. AWS/2026.05.08(금)/2026.05.08(금).md",
+    "raw/Study/6. AWS/2026.05.06(수) - 시작/2026.05.06(수) - 시작.md",
+    "raw/Study/6. AWS/2026.05.07(목)/2026.05.07(목).md",
+    "wiki/_meta/wiki-quality-audit-2026-07-02.md",
+    "_tmp_final_verify_aws.py",
+    "_tmp_verify_aws_wiki.py",
+    "wiki/comparisons/clb-vs-alb.md",
+    "wiki/comparisons/ec2-vs-rds.md",
+    "wiki/entities/amazon-route-53.md",
+    "wiki/entities/amazon-rds.md",
+    "wiki/entities/amazon-ec2.md",
+    "wiki/entities/aws.md",
+    "wiki/concepts/aws-route53-load-balancer-https.md",
+    "wiki/concepts/aws-rds-spring-boot.md",
+    "wiki/concepts/aws-ec2-nginx-spring-deploy.md",
+    "wiki/concepts/aws-cloud-vpc-networking.md",
+    "wiki/summaries/2026-05-08-aws-route53-load-balancer-https.md",
+    "wiki/summaries/2026-05-07-aws-ec2-nginx-rds.md",
+    "wiki/summaries/2026-05-06-aws-cloud-vpc-ec2.md",
+    "_tmp_extract_aws_pdf.py",
+    "raw/Study/10. Python/2026.07.03(금)/2026.07.03(금).md",
     "raw/Study/10. Python/2026.07.02(목)/2026.07.02(목).md",
-    "raw/Study/7. Ci&CD/2026.05.12(화)/2026.05.12(화).md",
-    "raw/Study/5. Linux/2026.05.01(금)/2026.05.01(금).md",
+    "wiki/comparisons/oracle-inner-vs-outer-join.md",
+    "wiki/comparisons/primary-key-vs-foreign-key.md",
+    "wiki/comparisons/ddl-vs-dml-vs-dql.md",
+    "wiki/comparisons/on-delete-set-null-vs-cascade.md",
+    "raw/Study/10. Python/2026.07.03(금)",
+    "wiki/concepts/spring-boot-rest-api.md",
     "raw/_meta_audit_raw_study_md_code_fences.py_last_output.txt",
     "raw/_meta_verify_raw_study_md_spacing.py_last_output.txt",
     "raw/_hermes_fix_backup_20260702_txt_md_format/9. 중간 프로젝트 공부/CICD",
     "raw/_hermes_fix_backup_20260702_txt_md_format/9. 중간 프로젝트 공부",
     "raw/_hermes_fix_backup_20260702_txt_md_format/8. Passwordless/2026.05.21(목)",
     "raw/_hermes_fix_backup_20260702_txt_md_format/8. Passwordless/2026.05.20(수)",
-    "raw/_hermes_fix_backup_20260702_txt_md_format/8. Passwordless/2026.05.19(화)",
-    "raw/_hermes_fix_backup_20260702_txt_md_format/8. Passwordless/2026.05.18(월)",
-    "raw/_hermes_fix_backup_20260702_txt_md_format/8. Passwordless/2026.05.15(금)",
-    "raw/_hermes_fix_backup_20260702_txt_md_format/8. Passwordless/2026.05.14(목)",
     "raw/Study/5. Linux/교육 자료/로드 밸런싱.png",
     "raw/Study/5. Linux/교육 자료/OwnerShip.png",
     "raw/Study/5. Linux/교육 자료/AccessRights.png",

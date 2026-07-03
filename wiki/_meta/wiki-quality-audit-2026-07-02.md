@@ -1,7 +1,7 @@
 ---
 title: 2026-07-02 LLM Wiki 품질 감사 리포트
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-03
 type: meta
 tags: [study-log]
 sources:
@@ -9,6 +9,8 @@ sources:
   - wiki/log.md
   - raw/Study/1. Java/Java 총정리/Java 총정리.md
   - raw/Study/1. Java/숙제/클래스 숙제 완료.md
+  - raw/Study/6. AWS/교육 자료/AWS 기초 용어.pdf
+  - raw/Study/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf
 status: growing
 confidence: high
 ---
@@ -28,14 +30,14 @@ confidence: high
 
 ## 현재 전체 수치
 
-- `wiki/` Markdown 파일 수: 130개
-- `wiki/index.md`의 `Total pages` 표기: 128개
+- `wiki/` Markdown 파일 수: 191개
+- `wiki/index.md`의 `Total pages` 표기: 189개
 - index 누락 페이지: 0개
-- frontmatter 누락 페이지: 0개
+- frontmatter 누락 페이지(`index.md`, `log.md` 제외): 0개
 - frontmatter `sources: []` 페이지: 0개
-- 대표 placeholder 문구 잔존 파일(감사 리포트/작업 로그의 기록성 언급 제외): 0개
-- 깨진 위키링크 후보(감사 리포트의 후보 목록 자기 인용 제외): 0개
-- 200줄 초과 긴 페이지: 10개
+- 대표 placeholder 문구 잔존 파일(아카이브/작업 로그의 기록성 언급 제외): 0개
+- 깨진 위키링크 후보: 0개
+- 200줄 초과 긴 페이지: 2개 (`wiki/index.md`, `wiki/log.md`)
 - `status: needs-review` 또는 `confidence: low` 페이지: 0개
 - 고립 페이지 후보(본문 링크 기준, index/log 제외): 0개
 
@@ -82,16 +84,10 @@ confidence: high
 
 ### 긴 페이지 후보
 
-- `wiki/_meta/hermes-home-laptop-setup.md`
-- `wiki/concepts/database-modeling-normalization.md`
-- `wiki/concepts/java-abstract-interface.md`
-- `wiki/concepts/java-class-object.md`
-- `wiki/concepts/java-inheritance.md`
-- `wiki/concepts/oracle-constraints-sequence.md`
-- `wiki/concepts/oracle-functions-join-subquery.md`
-- `wiki/concepts/oracle-sql-basics.md`
-- `wiki/concepts/spring-data-jpa-repository.md`
+- `wiki/index.md`
 - `wiki/log.md`
+
+> 2026-07-03 검증 기준으로 200줄 초과 지식 페이지는 없고, 운영 문서인 index/log만 길다.
 
 ### needs-review / low confidence 후보
 
@@ -107,8 +103,8 @@ confidence: high
 
 사용자가 ingest는 직접 진행하기로 했으므로, 여기서는 잔여 후보만 유지한다.
 
-- `raw/Study/6. AWS/2026.05.06(수) - 시작/` ~ `raw/Study/6. AWS/2026.05.08(금)/` — 사용자가 별도 ingest 예정.
-- `raw/Study/7. Ci&CD/2026.05.11(월) - 시작/` ~ `raw/Study/7. Ci&CD/2026.05.13(수)/` — 사용자가 별도 ingest 예정.
+- `raw/Study/6. AWS/2026.05.06(수) - 시작/` ~ `raw/Study/6. AWS/2026.05.08(금)/` — 2026-07-03 course-material-aware ingest 후, 같은 날 사용자가 지정한 날짜별 MD 3개가 실제 수업 메모를 포함함을 재확인해 기존 AWS wiki를 날짜 MD + 교육자료 PDF/실습 관리 대장 기준으로 보강·정정 완료. AWS 총정리류는 제외함.
+- `raw/Study/7. Ci&CD/2026.05.11(월) - 시작/` ~ `raw/Study/7. Ci&CD/2026.05.13(수)/` — 다음 잔여 후보. 사용자 날짜 MD가 템플릿인지 원본 재확인 필요.
 - `raw/Study/8. Passwordless/2026.05.14(목)/` ~ `raw/Study/8. Passwordless/2026.05.21(목)/` — 사용자가 별도 ingest 예정.
 - `raw/Study/10. Python/2026.06.19(금)/` ~ `raw/Study/10. Python/2026.06.30(화)/` — 사용자가 별도 ingest 예정. 일부는 시간표 템플릿 가능성이 있어 원본 재확인 필요.
 
@@ -151,3 +147,23 @@ confidence: high
 - 기존 `html-css-basics`, `javascript-dom`, `bootstrap-basics`, `jquery-basics` concept에 교육자료·소스코드 대조 메모를 추가했다.
 - `html`, `css`, `javascript`, `bootstrap`, `jquery` entity의 학습 이력과 출처를 UI&UX 교육자료 기준으로 보강했다.
 - 반복 혼동으로 남을 가능성이 높은 `Library vs Framework`, `inline style vs internal CSS vs external CSS`, `GET vs POST` 비교 페이지를 추가했다.
+
+## 추가 정리: Oracle course-material-aware 백필
+
+- `raw/Study/2. Oracle`의 2026-03-13~2026-03-20 사용자 정리 MD 6개를 `오라클 교안.pdf`, `디비버(Dbeaver) 사용법.pdf`, `디비버(Dbeaver) 사용법(version 2.0).pdf`, A01~A07 SQL 스크립트와 대조해 summary 6개를 재작성했다.
+- `oracle-database`, `dbeaver` entity의 날짜별 학습 이력과 실습 도구 맥락을 보강했다.
+- 반복 혼동으로 남을 가능성이 높은 `ON DELETE SET NULL vs CASCADE`, `DDL vs DML vs DQL`, `Primary Key vs Foreign Key`, `Oracle Inner Join vs Outer Join` 비교 페이지를 추가했다.
+
+## 추가 정리: Java course-material-aware 백필
+
+- `raw/Study/1. Java`의 2026-02-26~2026-03-13 사용자 정리 MD 12개, `Java 총정리.md`, `클래스 숙제 완료.md`를 주 자료로 삼고 `Java 교안(이론_20260226).pdf`, `IntelliJ 교안.pdf`, `Github 교안(실습).pdf`, 관련 문제 이미지를 대조해 기존 Java 1차 wiki 정리본을 보강했다.
+- 기존 Java summary 12개를 커리큘럼 위치, 이전/다음 흐름, 핵심 실습, 헷갈림 포인트, 구체 출처 중심으로 재작성했다.
+- 기존 Java concept 13개와 Java/Git/GitHub/IntelliJ entity 4개, Java comparison 4개를 수업 예제와 교안 출처 중심으로 보강했다.
+- 새 comparison은 만들지 않았다. 이미 있던 `기본 자료형 vs 참조 자료형`, `배열 vs 컬렉션`, `오버로딩 vs 오버라이딩`, `인터페이스 vs 추상 클래스`를 고도화하는 방식이 중복을 줄이는 데 적합했다.
+## 추가 정리: AWS course-material-aware ingest
+
+- `raw/Study/6. AWS`의 2026-05-06~2026-05-08 날짜 MD 3개와 `AWS 기초 용어.pdf`, `cloud.01.AWS 교안(이론_미니파일).pdf`, `cloud.02.AWS 교안(실습).pdf`, `cloud.03.AWS 교안(이론).pdf`, `실습 관리 대장(텍스트).md`를 주 출처로 삼아 AWS 과정을 정리했다. 이후 같은 날 날짜별 MD 3개가 실제 수업 메모를 포함함을 재확인해, 기존 AWS summary/concept/entity/comparison을 날짜별 MD 중심으로 보강·정정했다.
+- summary 3개는 Cloud/VPC/EC2, VPC·EC2·Nginx·Spring Boot·RDS, Route 53/Load Balancer/HTTPS 흐름을 날짜별 학습 맥락으로 복원했다.
+- concept 4개는 AWS 네트워킹, EC2 배포, RDS 연결, Route 53/ALB/HTTPS 배포 구조를 정리했다.
+- entity 4개(`AWS`, `Amazon EC2`, `Amazon RDS`, `Amazon Route 53`)와 comparison 2개(`EC2 vs RDS`, `CLB vs ALB`)는 이후 CI/CD·Passwordless 배포 학습과 연결할 기반으로 유지·보강했다.
+- 다음 잔여 후보는 `raw/Study/7. Ci&CD/2026.05.11(월) - 시작/` ~ `raw/Study/7. Ci&CD/2026.05.13(수)/`이다.

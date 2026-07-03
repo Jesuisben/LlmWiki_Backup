@@ -6,48 +6,44 @@ type: concept
 tags: [oracle, sql]
 sources:
   - raw/Study/2. Oracle/2026.03.20(금)/2026.03.20(금).md
+  - raw/Study/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf
 status: growing
 confidence: high
 ---
+
 # 데이터 모델링과 정규화
 
 ## 정의
 
-**데이터 모델링(data modeling)**은 사용자의 요구사항을 분석해 어떤 데이터가 필요하고 그 데이터들이 어떤 관계를 가지는지 문서화·설계하는 과정이다. **정규화(normalization)**는 입력, 수정, 삭제 이상 현상을 줄이기 위해 테이블을 적절한 단위로 나누는 과정이다.
+데이터 모델링은 사용자의 요구사항을 분석해 어떤 데이터가 필요하고 서로 어떤 관계를 가지는지 문서화·설계하는 과정이다. 정규화는 입력·수정·삭제 이상 현상을 줄이기 위해 테이블을 적절한 단위로 분해하는 과정이다.
 
-## 왜 중요한가
-
-DB 테이블을 잘못 설계하면 이후 Java/Spring 프로젝트 전체가 복잡해진다. 회원, 주문, 상품, 주문상세를 왜 나누는지 설명할 수 있어야 한다.
-
-## ERD와 모델링 흐름
-
-ERD(Entity-Relationship Diagram)는 개체-관계 모델을 시각적으로 표현한 도표다.
+## 흐름
 
 ```text
 현실세계 → 문서 → 설계 → 구현 → Database화
 ```
 
-현실의 업무를 바로 테이블로 만드는 것이 아니라, 요구사항을 분석하고 문서화한 뒤 ERD 같은 설계도를 거쳐 DB로 구현한다.
+ERD(Entity-Relationship Diagram)는 엔티티, 속성, 관계를 시각적으로 표현하는 설계도다. DBeaver의 엔티티 관계도는 실제 테이블 사이 FK 관계를 눈으로 확인하게 해준다.
 
-## 분리된 하위 주제
+## 왜 중요한가
 
-- [[concepts/database-normalization-functional-dependency|함수 종속성과 정규화]] — 이상 현상, 함수 종속성, 복합 기본키, 참조 무결성
-- [[concepts/database-view-index|Database View와 Index]] — 가상 테이블과 조회 성능 보조 구조
+Spring/React 프로젝트에서 회원, 상품, 주문, 주문상세를 한 테이블에 몰아넣으면 중복과 이상 현상이 커진다. Oracle 수업의 핵심은 왜 테이블을 쪼개고, 어떤 FK와 ON DELETE 옵션을 선택했는가를 설명할 수 있게 되는 것이다.
 
-## 자주 헷갈리는 점
+## 이상 현상
 
-- 정규화는 무조건 테이블을 많이 쪼개는 것이 아니라 중복과 이상 현상을 줄이기 위한 설계 과정이다.
-- PK와 FK는 정규화 이후 나뉜 테이블을 연결하는 고리다.
-- `ON DELETE` 옵션은 기술 문법이 아니라 업무 규칙 선택이다.
-- View는 실제 데이터를 저장한 테이블이 아니라 SELECT 결과를 이름 붙여 재사용하는 가상 테이블이다.
+- 삽입 이상: 신설 학과를 넣으려는데 학생 정보까지 필요함
+- 갱신 이상: 주민번호 같은 중복 정보 일부만 수정됨
+- 삭제 이상: 학생 삭제 시 학과 정보까지 사라짐
 
 ## 관련 페이지
 
-- [[concepts/oracle-sql-basics|Oracle SQL 기본]]
-- [[concepts/oracle-referential-integrity|Oracle 참조 무결성과 ON DELETE]]
 - [[concepts/database-normalization-functional-dependency|함수 종속성과 정규화]]
 - [[concepts/database-view-index|Database View와 Index]]
+- [[concepts/oracle-referential-integrity|Oracle 참조 무결성과 ON DELETE]]
+- [[comparisons/primary-key-vs-foreign-key|Primary Key vs Foreign Key]]
+- [[comparisons/on-delete-set-null-vs-cascade|ON DELETE SET NULL vs CASCADE]]
 
 ## 출처
 
 - `raw/Study/2. Oracle/2026.03.20(금)/2026.03.20(금).md`
+- `raw/Study/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf` — p.2~4, p.24~43

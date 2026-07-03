@@ -7,93 +7,71 @@ tags: [oracle, sql]
 sources:
   - raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md
   - raw/Study/2. Oracle/2026.03.17(화)/2026.03.17(화).md
+  - raw/Study/2. Oracle/2026.03.18(수)/2026.03.18(수).md
+  - raw/Study/2. Oracle/교육 자료/오라클 교안.pdf
+  - raw/Study/2. Oracle/교육 자료/디비버(Dbeaver) 사용법(version 2.0).pdf
+  - raw/Study/2. Oracle/교육 자료/스크립트들/A04.DDL 실습.sql
 status: growing
 confidence: high
 ---
+
 # Oracle DDL, DML, 트랜잭션
 
-## SQL의 종류
+## 정의
 
-수업에서는 SQL을 다음처럼 구분했다.
+DDL은 테이블·컬럼·제약조건 같은 구조를 바꾸는 SQL이고, DML은 테이블 안의 데이터를 바꾸는 SQL이다. 트랜잭션은 DML 작업을 하나의 논리적 업무 단위로 묶어 `COMMIT` 또는 `ROLLBACK`으로 끝내는 개념이다.
 
-| 분류 | 의미 | 예시 역할 |
+## DDL과 DML의 차이
+
+| 구분 | DDL | DML |
 |---|---|---|
-| DQL | 데이터 조회 | `SELECT` |
-| DML | 데이터 조작 | `INSERT`, `UPDATE`, `DELETE` |
-| DDL | 구조 정의 | `CREATE`, `ALTER`, `DROP` |
-| TCL | 트랜잭션 제어 | `COMMIT`, `ROLLBACK` |
-| DCL | 권한 제어 | `GRANT`, `REVOKE` |
+| 다루는 대상 | 구조/object | 데이터/row |
+| 대표 명령 | `CREATE`, `ALTER`, `DROP` | `INSERT`, `UPDATE`, `DELETE` |
+| commit 관계 | 자동 commit 성격 | 직접 `COMMIT`/`ROLLBACK` 필요 |
+| 수업 예시 | `ALTER TABLE MEMBERS ADD EMAIL` | `INSERT INTO MEMBERS ...` |
 
-수업 노트에서는 DCL을 제외한 나머지는 알아야 한다고 표시했다. 하지만 이후 View 권한 실습에서 `GRANT`, `REVOKE`도 등장한다.
+비교는 [[comparisons/ddl-vs-dml-vs-dql|DDL vs DML vs DQL]]도 참고한다.
 
-## 테이블 생성 예시
-
-DBeaver UI로 테이블을 만들면 SQL Preview에 실제 DDL이 보인다. 수업에서는 이 SQL을 이해해야 한다고 했다.
+## DDL 실습
 
 ```sql
-CREATE TABLE ORAMAN.MEMBERS (
-    ID VARCHAR2(30) NOT NULL,
-    NAME VARCHAR2(30) NULL,
-    PASSWORD VARCHAR2(30) NULL,
-    GENDER VARCHAR2(6) NULL,
-    BIRTH DATE DEFAULT sysdate NULL,
-    MARRIAGE VARCHAR2(30) DEFAULT '미혼' NOT NULL,
-    SALARY NUMBER(10,2) DEFAULT 0 NULL,
-    ADDRESS VARCHAR2(255) NULL,
-    MANAGER VARCHAR2(50) NULL,
-    CONSTRAINT "MEMBERS_id_pk" PRIMARY KEY (ID)
-)
-TABLESPACE USERS;
+ALTER TABLE ORAMAN.MEMBERS ADD EMAIL VARCHAR2(100);
+ALTER TABLE ORAMAN.MEMBERS MODIFY NAME VARCHAR2(50);
+ALTER TABLE ORAMAN.MEMBERS RENAME COLUMN ADDRESS TO ADDR;
+ALTER TABLE ORAMAN.MEMBERS DROP COLUMN MANAGER;
+ALTER TABLE ORAMAN.PRODUCTS DROP CONSTRAINT PRODUCTS_POINT_CK;
 ```
 
-여기서 중요한 요소는 다음이다.
-
-- `CREATE TABLE`: 테이블 생성
-- `VARCHAR2(30)`: 최대 길이 30의 문자열
-- `NOT NULL`: 반드시 값 필요
-- `DEFAULT`: 기본값
-- `PRIMARY KEY`: 행을 식별하는 기본키
-- `COMMENT`: 테이블/컬럼 설명
-
-## INSERT 기본
-
-데이터 추가는 `INSERT INTO ... VALUES ...`로 한다.
+## DML과 트랜잭션
 
 ```sql
-insert into members(id, name, password, gender, birth, marriage, salary, address, manager)
-values('yoon', '윤봉길', 'abc1234', '남자', '1990/12/25', '미혼', 230, '용산', 'yusin');
+INSERT INTO MEMBERS(ID, NAME, PASSWORD, GENDER, BIRTH, MARRIAGE, SALARY)
+VALUES('user01','홍길동','1234','남자',DATE '1990-01-01','미혼',300);
+
+UPDATE MEMBERS SET SALARY = 50 WHERE ID='user01';
+DELETE FROM BOARDS WHERE NO = 2;
+COMMIT;
+ROLLBACK;
 ```
 
-컬럼명을 명시하면 원하는 순서로 값을 넣을 수 있다. 일부 컬럼을 생략하면 테이블 생성 시 지정한 기본값이 들어갈 수 있다.
+수업에서 트랜잭션은 업무를 처리하는 논리적인 처리 단위이고, 핵심 특징은 ALL-OR-NOTHING이라고 정리했다.
 
-```sql
-insert into members(id, name, password, gender, birth, marriage, address, manager)
-values('nongae', '논개', 'abc1234', '여자', '1990/12/25', '미혼', '강남', 'soon');
-```
+## DBeaver Auto Commit 함정
 
-## COMMIT과 ROLLBACK
-
-DML로 데이터를 바꾼 뒤에는 `COMMIT`으로 영구 저장할 수 있다.
-
-```sql
-commit;
-```
-
-반대로 확정 전 변경을 되돌릴 때는 `ROLLBACK`을 사용한다.
-
-```sql
-rollback;
-```
-
-수업에서는 DBeaver의 Auto Commit 설정 때문에 `ROLLBACK`이 기대처럼 동작하지 않는 상황도 겪었다. Auto Commit이 켜져 있으면 실행 즉시 확정되어 되돌리기 어렵다.
+DBeaver는 기본적으로 Auto Commit이 켜져 있을 수 있다. 이 상태에서 `DELETE`를 실행하면 즉시 확정되어 `ROLLBACK`으로 되돌리지 못할 수 있다. 참조 무결성/삭제 실습을 할 때는 Manual Commit으로 바꾼 뒤 `COMMIT`과 `ROLLBACK`의 효과를 확인해야 한다.
 
 ## 관련 페이지
 
 - [[concepts/oracle-sql-basics|Oracle SQL 기본]]
-- [[concepts/oracle-constraints-sequence|Oracle 제약조건과 시퀀스]]
-- [[entities/oracle-database|Oracle Database]]
+- [[concepts/oracle-referential-integrity|Oracle 참조 무결성과 ON DELETE]]
+- [[comparisons/ddl-vs-dml-vs-dql|DDL vs DML vs DQL]]
+- [[entities/dbeaver|DBeaver]]
 
 ## 출처
 
 - `raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md`
 - `raw/Study/2. Oracle/2026.03.17(화)/2026.03.17(화).md`
+- `raw/Study/2. Oracle/2026.03.18(수)/2026.03.18(수).md`
+- `raw/Study/2. Oracle/교육 자료/오라클 교안.pdf` — p.120~124 트랜잭션
+- `raw/Study/2. Oracle/교육 자료/디비버(Dbeaver) 사용법(version 2.0).pdf` — p.119~127 DDL 실습
+- `raw/Study/2. Oracle/교육 자료/스크립트들/A04.DDL 실습.sql`

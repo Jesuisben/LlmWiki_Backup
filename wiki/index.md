@@ -2,7 +2,7 @@
 
 > 이 파일은 `wiki/` 전체의 목차이자 길잡이다.  
 > 질문에 답하거나 새 자료를 ingest할 때 이 파일을 먼저 읽는다.  
-> Last updated: 2026-07-02 | Total pages: 172
+> Last updated: 2026-07-03 | Total pages: 189
 
 ## 사용 방법
 
@@ -14,9 +14,9 @@
 ## Summaries
 
 <!-- 수업/자료 단위 요약 페이지. 예: `summaries/YYYY-MM-DD-topic` — 수업/자료 단위 핵심 정리 -->
-- [[summaries/2026-02-26-orientation|2026-02-26 오리엔테이션과 개발 환경 준비]] — 국비지원 과정 첫날 OT, 출결/휴가 규칙, 개발 도구 설치 준비 정리
-- [[summaries/2026-02-27-java-basic-types-operators|2026-02-27 Java 기본 자료형과 연산자]] — Java 자료형, 변수 선언, 산술/대입/복합 대입/증감 연산자 실습 정리
-- [[summaries/2026-02-27-github-initial-setup|2026-02-27 GitHub 초기 설정]] — Java 프로젝트를 Git으로 관리하고 GitHub/IntelliJ와 연결하는 초기 설정 흐름 정리
+- [[summaries/2026-02-26-orientation|2026-02-26 오리엔테이션과 개발 환경 준비]] — IntelliJ에서 Java 프로젝트·패키지·클래스와 첫 출력 흐름을 시작한 날
+- [[summaries/2026-02-27-java-basic-types-operators|2026-02-27 Java 기본 자료형과 연산자]] — 변수·자료형·산술/대입/증감 연산자를 문제 이미지와 함께 정리
+- [[summaries/2026-02-27-github-initial-setup|2026-02-27 GitHub 초기 설정]] — `MyJava` 프로젝트의 Git 초기화, GitHub 원격 저장소, IntelliJ 연동 준비 흐름
 - [[summaries/2026-03-03-java-logic-ternary|2026-03-03 Java 논리 연산자와 조건 연산자]] — Java 연산자 학습을 비교/논리/부정/조건 연산자로 확장한 날이다.
 - [[summaries/2026-03-04-java-control-flow|2026-03-04 Java 제어문과 조건문]] — 단순 if부터 양자택일 조건문까지 제어문의 기본 흐름을 배운 날이다.
 - [[summaries/2026-03-05-java-for-while|2026-03-05 Java for문과 while문]] — 반복문 `for`, `while`을 이용해 누적 합계와 홀짝 합계를 계산한 날이다.
@@ -64,6 +64,9 @@
 - [[summaries/2026-05-01-docker-compose|2026-05-01 Docker Compose와 다중 컨테이너 실행]] — Compose manifest로 MySQL+Spring Boot 같은 다중 컨테이너 구성을 실행한 날이다.
 - [[summaries/2026-05-04-git-github-sourcetree|2026-05-04 GitHub, Git Bash, SourceTree 협업 입문]] — Git Bash와 SourceTree로 init/add/commit/push/pull/clone 흐름을 복습한 날이다.
 - [[summaries/2026-05-06-github-branch-pr-conflict|2026-05-06 GitHub 브랜치, Pull Request, 충돌 해결]] — 팀원 브랜치, PR, merge, pull, 충돌 시나리오를 실습한 날이다.
+- [[summaries/2026-05-06-aws-cloud-vpc-ec2|2026-05-06 AWS Cloud, VPC, EC2 입문]] — AWS 메뉴, On-Demand, VPC/Subnet/CIDR, Security Group, EC2 개념을 잡기 시작한 날
+- [[summaries/2026-05-07-aws-ec2-nginx-rds|2026-05-07 AWS EC2, Nginx, Spring Boot, RDS 연결]] — VPC/EC2 2대 구성, ping/ICMP, Nginx, Spring Boot, RDS MySQL 연결을 실습한 날
+- [[summaries/2026-05-08-aws-route53-load-balancer-https|2026-05-08 AWS Route 53, Load Balancer, HTTPS]] — Route 53, ACM, CLB/ALB, Target Group으로 도메인·HTTPS·로드밸런싱 구조를 구성한 날
 - [[summaries/2026-07-01-python-pandas-dataframe|2026-07-01 Python Pandas DataFrame 조회와 입출력]] — Pandas DataFrame/Series의 `loc`/`iloc` 조회, 조건 수정, CSV 입출력, 통계, 기초 그래프를 학습한 날이다.
 - [[summaries/2026-07-02-python-pandas-reshape-merge|2026-07-02 Python Pandas 데이터 결합과 재구조화]] — `concat`, `merge`, `pivot`으로 여러 DataFrame을 결합하고 SQL JOIN과 비슷한 데이터 연결 흐름을 학습한 날이다.
 
@@ -71,14 +74,14 @@
 
 <!-- 개념 페이지. 예: `concepts/java-variable` — 값을 저장하기 위한 이름 붙은 공간 -->
 - [[concepts/markdown-basic-syntax|Markdown 기본 문법]] — 제목, 강조, 목록, 코드 블록, 표, 링크 등 Markdown 기본 문법 정리
-- [[concepts/java-basic-types|Java 기본 자료형]] — char, String, int, double, boolean 등 Java 입문 자료형 구분
-- [[concepts/java-operators|Java 연산자]] — 산술, 대입, 복합 대입, 증감, 비교, 논리 연산자의 의미와 실행 순서
+- [[concepts/java-basic-types|Java 기본 자료형]] — `char`, `int`, `double`, `boolean`과 수업상 `String`의 기본형/참조형 차이 정리
+- [[concepts/java-operators|Java 연산자]] — 산술·대입·복합 대입·증감·비교·논리·삼항 연산자를 문제 예제로 정리
 - [[concepts/java-conditional-logic|Java 조건 판단]] — 비교·논리 연산자, 삼항 연산자, `if/else`, `switch`로 실행 흐름을 나누는 방법과 수업 예제 정리
 - [[concepts/java-loop|Java 반복문]] — `for`, `while`, 무한 반복, `break`, 향상된 for를 합계·입력·배열 처리 예제로 정리
 - [[concepts/java-array|Java 배열]] — `new` 배열, 초기화 기법, `length`, 입력값 배열 처리, 객체 배열로 이어지는 흐름 정리
-- [[concepts/java-class-object|Java 클래스와 객체]] — 클래스는 객체를 만들기 위한 설계도이고, 객체는 그 설계도로 만들어진 구체적인 대상이다.
-- [[concepts/java-inheritance|Java 상속]] — 기존 클래스의 공통 속성과 동작을 하위 클래스가 물려받아 재사용하는 객체지향 문법이다.
-- [[concepts/java-abstract-interface|Java 추상 클래스와 인터페이스]] — 공통 규격을 강제하고 구체 구현은 하위 클래스에게 맡기는 객체지향 설계 도구다.
+- [[concepts/java-class-object|Java 클래스와 객체]] — `Product` 예제로 클래스, 객체, 필드, 메서드, getter/setter를 정리
+- [[concepts/java-inheritance|Java 상속]] — 음료 예제로 일반화, `extends`, `super`, 접근 지정자 흐름을 정리
+- [[concepts/java-abstract-interface|Java 추상 클래스와 인터페이스]] — 공통 부모 설계도와 기능 규격의 차이를 Java 음료 예제로 정리
 - [[concepts/java-memory-static-final|Java 메모리, static, final]] — stack/heap/static 영역, 클래스 변수, 상수, final 메서드를 Java 객체지향 복습 흐름으로 정리
 - [[concepts/oracle-sql-basics|Oracle SQL 기본]] — Oracle Database에 데이터를 조회·정의·조작하도록 요청하는 SQL의 기본 구조다.
 - [[concepts/oracle-constraints-sequence|Oracle 제약조건과 시퀀스]] — 데이터 무결성을 지키는 규칙과 자동 번호 생성 도구다.
@@ -110,6 +113,10 @@
 - [[concepts/docker-compose-manifest|Docker Compose manifest]] — `services`, `networks`, `volumes`, `environment`, `depends_on`으로 다중 컨테이너를 선언하는 YAML 구성
 - [[concepts/dockerfile-vs-compose|Dockerfile vs Docker Compose]] — 이미지 생성 레시피와 다중 컨테이너 실행 manifest의 역할 차이
 - [[concepts/git-github-collaboration|GitHub 협업 흐름]] — branch, push, Pull Request, merge, pull, conflict를 이용한 팀 협업 절차
+- [[concepts/aws-cloud-vpc-networking|AWS Cloud와 VPC 네트워킹]] — Region/AZ/VPC/Subnet/CIDR, IGW, Route Table, Security Group으로 EC2 네트워크를 구성하는 흐름
+- [[concepts/aws-ec2-nginx-spring-deploy|AWS EC2에서 Nginx와 Spring Boot 배포]] — EC2 SSH, Nginx, JDK/Maven, Spring Boot jar 실행, 80→9000 포트 연결 흐름
+- [[concepts/aws-rds-spring-boot|AWS RDS와 Spring Boot 연결]] — RDS MySQL을 만들고 EC2/Spring Boot에서 JDBC로 연결하되 비밀값은 분리해야 하는 흐름
+- [[concepts/aws-route53-load-balancer-https|AWS Route 53, Load Balancer, HTTPS 흐름]] — 도메인, DNS, ACM 인증서, CLB/ALB, Target Group, Listener를 연결하는 배포 구조
 - [[concepts/pandas-dataframe-basics|Pandas DataFrame 기본]] — 행/열 조회, 조건 수정, CSV 입출력, Series 통계, `concat`/`merge`/`pivot`까지 이어지는 Pandas 표 데이터 처리 기본
 
 - [[concepts/java-method-constructor-overloading|Java 메서드, 생성자, this, 오버로딩]] — 메서드, 접근 지정자, 생성자, `this`, 오버로딩을 클래스/객체 학습 흐름에서 분리 정리
@@ -134,9 +141,9 @@
 ## Entities
 
 <!-- 기술/도구/프레임워크 페이지. 예: - [[entities/java|Java]] — 객체지향 프로그래밍 언어이자 백엔드 학습의 출발점 -->
-- [[entities/java|Java]] — 객체지향 프로그래밍 언어이자 Spring/Spring Boot 백엔드 학습의 기반
-- [[entities/git|Git]] — 소스 코드 변경 이력을 기록하는 분산 버전 관리 시스템
-- [[entities/github|GitHub]] — Git 저장소를 온라인에 보관하고 공유하는 개발 협업 서비스
+- [[entities/java|Java]] — 2026-02-26~03-13 변수·제어문·배열·객체지향 학습을 관통하는 백엔드 기반 언어
+- [[entities/git|Git]] — Java `MyJava` 프로젝트 초기화에서 GitHub 협업 흐름까지 이어지는 버전 관리 도구
+- [[entities/github|GitHub]] — Java 실습 저장소 백업에서 branch/PR 협업까지 이어지는 원격 Git 서비스
 - [[entities/oracle-database|Oracle Database]] — SQL, 제약조건, JOIN/서브쿼리, 정규화 학습을 관통하는 관계형 DB
 - [[entities/dbeaver|DBeaver]] — Oracle/MySQL 접속, SQL 실행, 테이블·ERD 확인에 사용한 데이터베이스 IDE
 - [[entities/html|HTML]] — 웹 문서 구조와 form/table/image 같은 UI 기본 요소를 표현하는 마크업 언어
@@ -155,10 +162,14 @@
 - [[entities/docker|Docker]] — 이미지와 컨테이너로 실행 환경을 고정하고 Spring Boot+DB 구성을 재현하는 도구
 - [[entities/maven|Maven]] — `pom.xml` 기반 Java/Spring Boot 빌드와 `.jar` 패키징 도구
 - [[entities/source-tree|SourceTree]] — Git commit/push/pull/branch 작업을 GUI로 수행하는 Git 클라이언트
+- [[entities/aws|AWS]] — VPC, EC2, RDS, Route 53, Load Balancer, ACM으로 웹서비스를 클라우드에 배포하는 플랫폼
+- [[entities/amazon-ec2|Amazon EC2]] — Nginx와 Spring Boot를 실행하고 Load Balancer 대상이 된 AWS 가상 서버 서비스
+- [[entities/amazon-rds|Amazon RDS]] — Spring Boot가 JDBC로 연결한 AWS 관리형 MySQL 데이터베이스 서비스
+- [[entities/amazon-route-53|Amazon Route 53]] — 도메인을 Load Balancer와 연결하고 ACM DNS 검증 CNAME을 관리한 AWS DNS 서비스
 - [[entities/python|Python]] — Pandas, CSV, 그래프를 통해 표 데이터를 처리·분석하는 과정 후반부 학습 언어
 - [[entities/pandas|Pandas]] — DataFrame/Series 조회·수정·통계·입출력·결합·재구조화를 담당하는 Python 데이터 처리 라이브러리
 - [[entities/jupyter-notebook|Jupyter Notebook]] — Pandas 코드를 셀 단위로 실행하며 표와 그래프 결과를 바로 확인한 Python 학습 환경
-- [[entities/intellij-idea|IntelliJ IDEA]] — Spring Boot 백엔드 프로젝트 생성·실행에 사용한 Java/Spring IDE
+- [[entities/intellij-idea|IntelliJ IDEA]] — Java 첫 프로젝트·패키지·클래스 생성부터 Spring Boot까지 사용한 Java/Spring IDE
 
 ## Comparisons
 
@@ -176,11 +187,17 @@
 - [[comparisons/docker-commit-vs-dockerfile|docker commit vs Dockerfile]] — 컨테이너 상태 스냅샷과 재현 가능한 이미지 빌드 파일의 차이
 - [[comparisons/docker-cp-vs-bind-mount-vs-volume|docker cp vs bind mount vs volume]] — 컨테이너 파일 복사, 호스트 경로 연결, Docker 관리 볼륨의 차이
 - [[comparisons/git-fetch-vs-pull-vs-clone|git fetch vs pull vs clone]] — 원격 저장소 정보를 가져오는 세 명령의 시점과 결과 차이
+- [[comparisons/ec2-vs-rds|EC2 vs RDS]] — AWS에서 애플리케이션 서버와 관리형 데이터베이스의 역할·관리 범위·보안 경계 차이
+- [[comparisons/clb-vs-alb|CLB vs ALB]] — AWS 로드밸런서의 기초형과 Target Group/Listener 중심 HTTP/HTTPS 애플리케이션형 구조 차이
 - [[comparisons/mpa-vs-spa|MPA vs SPA]] — 서버 렌더링 중심 다중 페이지 구조와 React 기반 단일 페이지 앱 구조의 차이
 - [[comparisons/props-vs-state|props vs state]] — React에서 부모가 내려주는 값과 컴포넌트 내부 변경 상태의 차이
 - [[comparisons/library-vs-framework|Library vs Framework]] — 필요할 때 호출하는 도구와 정해진 틀 안에서 개발하는 구조의 차이
 - [[comparisons/inline-style-vs-internal-css-vs-external-css|inline style vs internal CSS vs external CSS]] — 태그 안 style, 문서 내부 style, 외부 CSS 파일 연결 방식 비교
 - [[comparisons/get-vs-post|GET vs POST]] — URL query string으로 보내는 요청과 HTTP body로 보내는 요청의 차이
+- [[comparisons/on-delete-set-null-vs-cascade|ON DELETE SET NULL vs CASCADE]] — 부모 데이터 삭제 시 자식 FK를 NULL로 남길지 자식 행도 함께 삭제할지의 업무 규칙 차이
+- [[comparisons/ddl-vs-dml-vs-dql|DDL vs DML vs DQL]] — 구조 정의, 데이터 조작, 데이터 조회 SQL의 역할과 commit 관계 차이
+- [[comparisons/primary-key-vs-foreign-key|Primary Key vs Foreign Key]] — 행을 식별하는 기본키와 다른 테이블을 참조하는 외래키의 차이
+- [[comparisons/oracle-inner-vs-outer-join|Oracle Inner Join vs Outer Join]] — 매칭 행만 조회하는 조인과 기준 테이블의 미매칭 행까지 보존하는 조인의 차이
 
 ## Queries
 

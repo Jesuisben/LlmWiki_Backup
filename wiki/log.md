@@ -13,6 +13,90 @@
 
 ## 현재 로그
 
+## [2026-07-03] update | AWS course-material-aware wiki ingest
+
+- 목적: 감사 리포트의 잔여 후보 중 `raw/Study/6. AWS/2026.05.06(수) - 시작/` ~ `raw/Study/6. AWS/2026.05.08(금)/` 범위를 다음 과목으로 선정하고, 사용자 날짜 MD가 시간표 템플릿뿐인 점을 확인한 뒤 AWS 교육자료 PDF와 실습 관리 대장을 주 provenance로 삼아 고품질 ingest를 수행함.
+- 원칙: `raw/`는 수정하지 않고 `wiki/`만 수정함. 날짜 MD는 비어 있는 시간표 템플릿으로 표시하고, 실제 내용 출처는 확인한 AWS 교육자료에 명시함.
+- 참고한 대표 교육자료:
+  - `raw/Study/6. AWS/교육 자료/AWS 기초 용어.pdf`
+  - `raw/Study/6. AWS/교육 자료/cloud.01.AWS 교안(이론_미니파일).pdf`
+  - `raw/Study/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf`
+  - `raw/Study/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf`
+  - `raw/Study/6. AWS/교육 자료/실습 관리 대장(텍스트).md`
+- 새로 추가한 summary:
+  - `wiki/summaries/2026-05-06-aws-cloud-vpc-ec2.md`
+  - `wiki/summaries/2026-05-07-aws-ec2-nginx-rds.md`
+  - `wiki/summaries/2026-05-08-aws-route53-load-balancer-https.md`
+- 새로 추가한 concept/entity/comparison:
+  - `wiki/concepts/aws-cloud-vpc-networking.md`
+  - `wiki/concepts/aws-ec2-nginx-spring-deploy.md`
+  - `wiki/concepts/aws-rds-spring-boot.md`
+  - `wiki/concepts/aws-route53-load-balancer-https.md`
+  - `wiki/entities/aws.md`, `wiki/entities/amazon-ec2.md`, `wiki/entities/amazon-rds.md`, `wiki/entities/amazon-route-53.md`
+  - `wiki/comparisons/ec2-vs-rds.md`, `wiki/comparisons/clb-vs-alb.md`
+- `wiki/index.md`에 신규 페이지 12개를 등록하고 Total pages를 189로 갱신함.
+
+## [2026-07-03] update | Java course-material-aware wiki backfill
+
+- 목적: `raw/Study/1. Java` 사용자 정리 MD 14개를 주 자료로 삼고, Java/IntelliJ/GitHub 교안 PDF와 2026-02-27·2026-03-03 문제 이미지를 실제 확인해 기존 Java wiki 1차 정리본을 교안-aware 방식으로 고도화함.
+- 원칙: `raw/`는 수정하지 않고 `wiki/`만 수정함. `sources`에는 사용자 정리 MD와 실제 참고한 교안 PDF/문제 이미지 경로를 함께 남김.
+- 참고한 대표 교육자료:
+  - `raw/Study/1. Java/교육 자료/Java 교안(이론_20260226).pdf`
+  - `raw/Study/1. Java/교육 자료/IntelliJ 교안.pdf`
+  - `raw/Study/1. Java/교육 자료/Github 교안(실습).pdf`
+  - `raw/Study/1. Java/2026.02.27(금)/1번 문제.png` ~ `3번 문제.png`
+  - `raw/Study/1. Java/2026.03.03(화)/연산자 마무리 문제.png` 및 관련 문제 이미지
+- 보강한 summary: `wiki/summaries/2026-02-26-orientation.md` ~ `wiki/summaries/2026-03-13-java-project-oracle-start.md` 총 12개
+- 보강한 concept:
+  - `wiki/concepts/java-basic-types.md`
+  - `wiki/concepts/java-operators.md`
+  - `wiki/concepts/java-conditional-logic.md`
+  - `wiki/concepts/java-loop.md`
+  - `wiki/concepts/java-array.md`
+  - `wiki/concepts/java-class-object.md`
+  - `wiki/concepts/java-method-constructor-overloading.md`
+  - `wiki/concepts/java-object-array-memory.md`
+  - `wiki/concepts/java-inheritance.md`
+  - `wiki/concepts/java-polymorphism-casting.md`
+  - `wiki/concepts/java-abstract-interface.md`
+  - `wiki/concepts/java-interface-capability-design.md`
+  - `wiki/concepts/java-memory-static-final.md`
+- 보강한 entity/comparison:
+  - `wiki/entities/java.md`, `wiki/entities/git.md`, `wiki/entities/github.md`, `wiki/entities/intellij-idea.md`
+  - `wiki/comparisons/primitive-vs-reference-types.md`, `wiki/comparisons/array-vs-collection.md`, `wiki/comparisons/overloading-vs-overriding.md`, `wiki/comparisons/interface-vs-abstract-class.md`
+- 새 페이지는 만들지 않았고, `wiki/index.md`는 설명과 Last updated만 갱신해 Total pages 176을 유지함.
+
+## [2026-07-02] update | Oracle course-material-aware wiki backfill
+
+- 목적: `raw/Study/2. Oracle` 사용자 정리 MD 6개를 주 자료로 삼고, Oracle/DBeaver 교안 PDF와 SQL 스크립트를 실제 확인해 기존 Oracle/DB 1차 wiki 정리본을 재검증·보강함.
+- 원칙: `raw/`는 수정하지 않고 `wiki/`만 수정함. `sources`에는 사용자 정리 MD와 실제 참고한 교육자료/SQL 스크립트 경로를 함께 남김.
+- 참고한 대표 교육자료:
+  - `raw/Study/2. Oracle/교육 자료/오라클 교안.pdf`
+  - `raw/Study/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf`
+  - `raw/Study/2. Oracle/교육 자료/디비버(Dbeaver) 사용법(version 2.0).pdf`
+  - `raw/Study/2. Oracle/교육 자료/스크립트들/A01.관리자 사용자 생성하기.sql` ~ `A07 조인 실습.sql`
+- 보강한 summary: `wiki/summaries/2026-03-13-java-project-oracle-start.md` ~ `wiki/summaries/2026-03-20-database-modeling-normalization-view-index.md` 총 6개
+- 보강한 entity:
+  - `wiki/entities/oracle-database.md`
+  - `wiki/entities/dbeaver.md`
+- 보강한 concept:
+  - `wiki/concepts/oracle-sql-basics.md`
+  - `wiki/concepts/oracle-ddl-dml-transaction.md`
+  - `wiki/concepts/oracle-constraints-sequence.md`
+  - `wiki/concepts/oracle-referential-integrity.md`
+  - `wiki/concepts/oracle-sql-functions.md`
+  - `wiki/concepts/oracle-join.md`
+  - `wiki/concepts/oracle-subquery.md`
+  - `wiki/concepts/database-modeling-normalization.md`
+  - `wiki/concepts/database-normalization-functional-dependency.md`
+  - `wiki/concepts/database-view-index.md`
+- 새로 추가한 comparison:
+  - `wiki/comparisons/on-delete-set-null-vs-cascade.md`
+  - `wiki/comparisons/ddl-vs-dml-vs-dql.md`
+  - `wiki/comparisons/primary-key-vs-foreign-key.md`
+  - `wiki/comparisons/oracle-inner-vs-outer-join.md`
+- `wiki/index.md`에 신규 페이지 4개를 등록하고 Total pages를 176으로 갱신함.
+
 ## [2026-07-02] update | Linux course-material-aware wiki backfill
 
 - 목적: `raw/Study/5. Linux` 사용자 정리 MD를 주 자료로 삼고, MD에서 언급된 Linux/Docker/GitHub 교육자료 PDF·PNG·보조 MD를 실제 확인해 기존 Linux 관련 wiki 1차 정리본을 재검증·보강함.
@@ -162,3 +246,20 @@
   - `wiki/comparisons/inline-style-vs-internal-css-vs-external-css.md`
   - `wiki/comparisons/get-vs-post.md`
 - `wiki/index.md`에 신규 페이지 3개를 등록하고 Total pages를 172로 갱신함.
+
+## [2026-07-03] update | AWS date-note-aware wiki correction
+
+- 목적: 사용자가 지정한 AWS 날짜별 MD 3개가 더 이상 시간표 템플릿이 아니라 실제 수업 메모를 포함하고 있음을 확인하고, 기존 AWS wiki summary/concept/entity/comparison을 날짜별 MD와 교육자료 PDF/실습 관리 대장 기준으로 재검토·보강함.
+- 원칙: `raw/Study/6. AWS`는 읽기 전용으로 유지했고, 사용자가 제외 지시한 AWS 총정리류는 건드리지 않음. 원본에 있는 실습용 공개 IP, RDS endpoint, DB 비밀번호 예시는 wiki에 그대로 재노출하지 않고 placeholder/보안 메모로 일반화함.
+- 보강한 summary:
+  - `wiki/summaries/2026-05-06-aws-cloud-vpc-ec2.md`
+  - `wiki/summaries/2026-05-07-aws-ec2-nginx-rds.md`
+  - `wiki/summaries/2026-05-08-aws-route53-load-balancer-https.md`
+- 보강한 concept/entity/comparison:
+  - `wiki/concepts/aws-cloud-vpc-networking.md`
+  - `wiki/concepts/aws-ec2-nginx-spring-deploy.md`
+  - `wiki/concepts/aws-rds-spring-boot.md`
+  - `wiki/concepts/aws-route53-load-balancer-https.md`
+  - `wiki/entities/aws.md`, `wiki/entities/amazon-ec2.md`, `wiki/entities/amazon-rds.md`, `wiki/entities/amazon-route-53.md`
+  - `wiki/comparisons/ec2-vs-rds.md`, `wiki/comparisons/clb-vs-alb.md`
+- `wiki/index.md`의 AWS 항목 설명을 최신화했고, 신규 페이지는 만들지 않아 Total pages는 189를 유지함.

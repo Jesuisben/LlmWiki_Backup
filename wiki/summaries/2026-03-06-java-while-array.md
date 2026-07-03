@@ -1,53 +1,57 @@
 ---
 title: 2026-03-06 Java 무한 while과 배열
-created: 2026-06-30
-updated: 2026-07-01
+created: 2026-07-02
+updated: 2026-07-03
 type: summary
-tags: [java]
-sources: ["raw/Study/1. Java/2026.03.06(금)/2026.03.06(금).md"]
-status: growing
-confidence: medium
+tags: [java, curriculum, study-log]
+sources:
+  - raw/Study/1. Java/2026.03.06(금)/2026.03.06(금).md
+  - raw/Study/1. Java/교육 자료/Java 교안(이론_20260226).pdf
+status: stable
+confidence: high
 ---
 
 # 2026-03-06 Java 무한 while과 배열
 
 ## 한 줄 요약
 
-입력 기반 반복과 배열의 생성·초기화 방식을 배운 날이다.
+`Scanner` 입력, `while(true)`와 `break`, 배열 생성·초기화·`length`를 배우며 여러 값을 한 번에 다루기 시작했다.
+
+## 커리큘럼 위치
+
+- 반복문을 단순 카운트에서 사용자 입력 기반 반복으로 확장했다.
+- 이후 [[summaries/2026-03-09-java-class-object|클래스와 객체]]에서 배열 요소가 기본값뿐 아니라 객체 참조가 될 수 있다는 흐름으로 이어진다.
 
 ## 배운 내용
 
-- 무한 `while`과 입력 함수를 이용해 사용자가 종료 값을 입력할 때까지 반복하는 구조를 연습했다.
-- 입력값의 총합과 평균을 계산하면서 카운터와 형변환을 함께 사용했다.
-- 배열은 같은 타입의 여러 값을 하나의 이름으로 관리하는 자료구조다.
-- `new` 연산자 방식과 초기화 기법을 구분해 배열을 생성했다.
+- `Scanner scan = new Scanner(System.in);`
+- `scan.nextInt()`로 정수 입력 받기
+- `while(true)` 무한 반복과 `break` 종료
+- 배열의 3요소: 이름, 타입, 요소 개수
+- `new` 연산자 기법: `int[] arr = new int[3];`
+- 초기화 기법: 값이 명확할 때 한 번에 배열 구성
+- `배열이름.length`로 요소 개수 확인
 
-## 핵심 개념
+## 핵심 실습 / 예제
 
-- [[concepts/java-loop|Java 반복문]]
-- [[concepts/java-array|Java 배열]]
-
-## 실습 / 예제
-
-- 원본 수업 노트의 시간대별 실습 흐름을 기준으로 정리했다.
-- 자세한 코드와 실행 결과는 원본 `raw` 파일을 출처로 다시 확인한다.
+- 1~100 사이 정답 맞히기 입력 반복
+- 음수 입력 시 종료하고 총점/평균 계산
+- `int[]`, `String[]` 배열 만들기
+- 배열 인덱스는 0부터 시작한다는 점 확인
 
 ## 헷갈린 점 / 질문
 
-- 원본에 `추가 공부`, `중요`, `????????`로 표시된 부분은 추후 개념 페이지에서 더 보강할 후보로 남긴다.
+- `while(true)` 자체는 끝나지 않으므로 종료 조건에서 반드시 `break` 또는 조건 변경이 필요하다.
+- 배열의 “방 번호”는 1번이 아니라 0번부터 시작한다.
+- `new int[3]`은 방을 3개 만드는 것이고, 실제 값 대입은 별도로 할 수 있다.
 
 ## 관련 페이지
 
 - [[concepts/java-loop|Java 반복문]]
 - [[concepts/java-array|Java 배열]]
-
-
-## 원본 수정 반영 (2026-07-01)
-
-- `raw/Study/1. Java/2026.03.06(금)/2026.03.06(금).md`의 최신 내용을 기준으로 기존 요약의 출처를 재확인했다.
-
-> 이 항목은 기존에 한 번 ingest된 원본이 이후 수정된 상태였음을 반영하기 위한 보강 메모다. 세부 개념은 관련 개념 페이지에서 계속 보강한다.
+- [[comparisons/array-vs-collection|배열 vs 컬렉션]]
 
 ## 출처
 
 - `raw/Study/1. Java/2026.03.06(금)/2026.03.06(금).md`
+- `raw/Study/1. Java/교육 자료/Java 교안(이론_20260226).pdf`

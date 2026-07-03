@@ -1,57 +1,90 @@
 ---
 title: 2026-03-16 Oracle DBMS, SQL, DBeaver 입문
 created: 2026-06-30
-updated: 2026-07-01
+updated: 2026-07-02
 type: summary
 tags: [oracle, sql]
-sources: ["raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md"]
+sources:
+  - raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md
+  - raw/Study/2. Oracle/교육 자료/오라클 교안.pdf
+  - raw/Study/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf
+  - raw/Study/2. Oracle/교육 자료/스크립트들/A01.관리자 사용자 생성하기.sql
+  - raw/Study/2. Oracle/교육 자료/스크립트들/A02.오라맨 스크립트.sql
 status: growing
-confidence: medium
+confidence: high
 ---
 
 # 2026-03-16 Oracle DBMS, SQL, DBeaver 입문
 
 ## 한 줄 요약
 
-DBMS와 SQL의 기본 의미를 배우고 DBeaver로 Oracle 학습을 시작한 날이다.
+Oracle DBMS와 SQL의 기본 분류를 배우고, DBeaver에서 관리자 계정과 실습 계정 `oraman`을 연결해 쇼핑몰 예제 테이블을 만들기 시작한 날이다.
 
 ## 배운 내용
 
-- DBMS는 데이터를 저장·관리·조회할 수 있게 해주는 데이터베이스 관리 시스템이다.
-- SQL은 데이터베이스에 요청을 전달하기 위한 질의 언어다.
-- DBeaver를 Oracle 실습 도구로 사용하기 시작했다.
-- `SELECT`, 테이블, 컬럼, 행 같은 관계형 데이터베이스 기본 단위를 학습했다.
+- DBMS는 Database Management System, 즉 데이터베이스 관리 시스템이다.
+- SQL은 데이터를 정의·조작·제어·조회하기 위한 표준 언어다.
+- Oracle 교안 p.34~36에서는 SQL을 DQL, DML, DDL, DCL, TCL로 나눈다.
+- DBeaver에서 `sys`/`SYSDBA`로 관리자 접속을 만들고, A01 스크립트로 `oraman` 일반 사용자를 생성했다.
+- DBeaver 교안 p.55~57의 쇼핑몰 예제를 따라 `MEMBERS` 테이블과 컬럼, PK를 만들었다.
 
 ## 핵심 개념
 
-- [[entities/oracle-database|Oracle Database]]
-- [[concepts/oracle-sql-basics|Oracle SQL 기본]]
+| 개념 | 수업에서의 의미 |
+|---|---|
+| DBMS | 데이터를 저장·관리·조회하게 해주는 시스템 |
+| SQL | DBMS에 요청을 보내는 언어 |
+| DQL | `SELECT`로 데이터를 조회 |
+| DML | `INSERT`, `UPDATE`, `DELETE`로 데이터를 조작 |
+| DDL | `CREATE`, `ALTER`, `DROP`으로 구조를 정의/변경 |
+| TCL | `COMMIT`, `ROLLBACK`으로 트랜잭션 제어 |
+| 스키마 | 한 사용자가 가진 DB 객체 묶음 |
 
 ## 실습 / 예제
 
-- 원본 수업 노트의 시간대별 실습 흐름을 기준으로 정리했다.
-- 자세한 코드와 실행 결과는 원본 `raw` 파일을 출처로 다시 확인한다.
+관리자가 실습용 DB 계정을 만들어 주는 흐름을 다음 SQL로 실습했다.
+
+```sql
+create user oraman identified by oracle account unlock;
+alter user oraman default tablespace users quota unlimited on users;
+grant connect, resource to oraman;
+```
+
+DBeaver UI로 `MEMBERS` 테이블을 만들더라도 SQL Preview의 DDL을 이해해야 한다고 강조했다.
+
+```sql
+CREATE TABLE ORAMAN.MEMBERS (
+    ID VARCHAR2(30) NOT NULL,
+    NAME VARCHAR2(30) NULL,
+    PASSWORD VARCHAR2(30) NULL,
+    GENDER VARCHAR2(6) NULL,
+    BIRTH DATE DEFAULT sysdate NULL,
+    MARRIAGE VARCHAR2(30) DEFAULT '미혼' NOT NULL,
+    SALARY NUMBER(10,2) DEFAULT 0 NULL,
+    ADDRESS VARCHAR2(255) NULL,
+    MANAGER VARCHAR2(50) NULL,
+    CONSTRAINT "MEMBERS_id_pk" PRIMARY KEY (ID)
+)
+TABLESPACE USERS;
+```
 
 ## 헷갈린 점 / 질문
 
-- 원본에 `추가 공부`, `중요`, `????????`로 표시된 부분은 추후 개념 페이지에서 더 보강할 후보로 남긴다.
+- `localhost`는 내 컴퓨터이고, `xe`는 설치한 Oracle XE 데이터베이스 이름이다.
+- `VARCHAR2`는 Oracle에서 쓰는 가변 길이 문자열 타입이다.
+- 데이터베이스 문자열과 날짜는 작은따옴표를 쓰고, 숫자는 따옴표 없이 입력한다.
 
 ## 관련 페이지
 
 - [[entities/oracle-database|Oracle Database]]
+- [[entities/dbeaver|DBeaver]]
 - [[concepts/oracle-sql-basics|Oracle SQL 기본]]
-
-
-## 원본 수정 반영 (2026-07-01)
-
-- `raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md`에서 확인한 추가/정리 주제: DBMS (DataBase Management System) : 데이터베이스 관리 시스템
-- `raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md`에서 확인한 추가/정리 주제: SQL구문 (P.34)
-- `raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md`에서 확인한 추가/정리 주제: DBeaver
-- `raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md`에서 확인한 추가/정리 주제: 행 번호 표시 켜기
-- `raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md`에서 확인한 추가/정리 주제: 수업내용
-
-> 이 항목은 기존에 한 번 ingest된 원본이 이후 수정된 상태였음을 반영하기 위한 보강 메모다. 세부 개념은 관련 개념 페이지에서 계속 보강한다.
+- [[comparisons/ddl-vs-dml-vs-dql|DDL vs DML vs DQL]]
 
 ## 출처
 
 - `raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md`
+- `raw/Study/2. Oracle/교육 자료/오라클 교안.pdf` — p.34~36 SQL 분류
+- `raw/Study/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf` — p.47 단축키, p.55~57 쇼핑몰 테이블 구성
+- `raw/Study/2. Oracle/교육 자료/스크립트들/A01.관리자 사용자 생성하기.sql`
+- `raw/Study/2. Oracle/교육 자료/스크립트들/A02.오라맨 스크립트.sql`
