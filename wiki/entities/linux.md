@@ -1,7 +1,7 @@
 ---
 title: Linux
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-03
 type: entity
 tags: [linux]
 sources:
@@ -15,6 +15,7 @@ sources:
   - raw/Study/5. Linux/2026.05.01(금)/2026.05.01(금).md
   - raw/Study/5. Linux/교육 자료/Linux/Linux 이론.pdf
   - raw/Study/5. Linux/교육 자료/Linux/Linux 실습(MobaXterm, VirtualBox, 실습).pdf
+  - raw/Study/5. Linux/Linux 총정리/Linux 총정리.md
 status: growing
 confidence: high
 ---
@@ -39,6 +40,7 @@ Java와 Spring Boot에서는 코드를 작성하고 실행하는 개발자 관�
 - [[summaries/2026-04-29-docker-network-volume-image|2026-04-29]]: Docker 네트워크, mount, 사용자 정의 이미지, Docker Hub.
 - [[summaries/2026-04-30-dockerfile-spring-load-balancing|2026-04-30]]: Dockerfile, Spring Boot 컨테이너, reverse proxy/load balancing.
 - [[summaries/2026-05-01-docker-compose|2026-05-01]]: Docker Compose, Docker Desktop/WSL2, 다중 컨테이너 구성.
+- [[summaries/2026-05-06-linux-subject-review|Linux 총정리]]: CLI·권한·Spring Boot 서버 실행·Docker·Compose·GitHub 협업을 한 번에 되짚는 복습 허브.
 
 ## 핵심 기능 / 특징
 
@@ -73,3 +75,4 @@ Linux를 “명령어 몇 개”로만 외우기보다, 웹 서비스를 서버�
 - `raw/Study/5. Linux/2026.05.01(금)/2026.05.01(금).md`
 - `raw/Study/5. Linux/교육 자료/Linux/Linux 이론.pdf`
 - `raw/Study/5. Linux/교육 자료/Linux/Linux 실습(MobaXterm, VirtualBox, 실습).pdf`
+- `raw/Study/5. Linux/Linux 총정리/Linux 총정리.md`

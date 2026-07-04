@@ -1,12 +1,14 @@
 ---
 title: Pandas DataFrame 기본
 created: 2026-07-01
-updated: 2026-07-02
+updated: 2026-07-03
 type: concept
 tags: [python]
 sources:
+  - raw/Study/10. Python/2026.06.30(화)/2026.06.30(화).md
   - raw/Study/10. Python/2026.07.01(수)/2026.07.01(수).md
   - raw/Study/10. Python/2026.07.02(목)/2026.07.02(목).md
+  - raw/Study/10. Python/2026.07.03(금)/2026.07.03(금).md
 status: growing
 confidence: high
 ---
@@ -27,6 +29,7 @@ Pandas `DataFrame`은 행(row)과 열(column)을 가진 2차원 표 데이터를
 - 여러 표를 이어 붙이거나 JOIN처럼 병합하기
 - 결측값(`NaN`)과 데이터 타입 확인하기
 - 그래프를 그리기 좋은 형태로 데이터 바꾸기
+- `groupby`, `agg`, `transform`, `pd.cut`으로 범주별 집계와 파생 컬럼 만들기
 
 Oracle에서 배운 테이블·행·열 감각과 연결하면 이해가 쉽다. 다만 SQL은 DB 서버에 질의하는 언어이고, Pandas DataFrame은 Python 메모리 안에서 표 데이터를 직접 조작하는 객체라는 차이가 있다.
 
@@ -106,6 +109,20 @@ DataFrame끼리 연산할 때는 행/열 이름이 맞는 위치끼리 계산된
 
 `merge`는 Oracle에서 배운 JOIN과 연결해서 이해하면 좋다. `on`, `left_on`, `right_on`은 열 기준이고, `left_index`, `right_index`는 행 색인 기준이다.
 
+### groupby, agg, transform, cut
+
+2026-07-03 수업에서는 DataFrame을 단순히 조회·결합하는 데서 더 나아가 범주별로 요약하고 그래프로 확인하는 흐름을 다뤘다. ^[raw/Study/10. Python/2026.07.03(금)/2026.07.03(금).md]
+
+| 기능 | 목적 | 수업 예시 |
+|---|---|---|
+| `groupby()` | 기준 컬럼별로 그룹을 나눔 | 성별별 교통비, 출장지역/성별별 출장기간 |
+| `agg()` | 그룹별 집계 함수 적용 | `sum`, `mean`, `max`, 사용자 정의 함수 |
+| `transform()` | 원본 행 수를 유지한 그룹별 계산 | 이름·월별 첫 주 대비 시험 점수 향상 비율 |
+| `pd.cut()` | 연속형 숫자를 구간 라벨로 범주화 | 소득을 저소득~고소득 구간으로 나누기 |
+| `plot()` | 집계 결과를 그래프로 확인 | pie, scatter, box, hist, barh |
+
+`agg()`는 그룹별 요약표를 만들기 때문에 행 수가 줄어들 수 있고, `transform()`은 원본과 같은 길이의 결과를 돌려주므로 새 파생 컬럼을 붙일 때 유용하다.
+
 ## 예시 흐름
 
 ### 단일 DataFrame 조회·수정
@@ -124,9 +141,11 @@ myframe02.loc[myframe02["용산구"] <= 50, ["노원구", "은평구"]] = 0
 pd.concat([homeware01, homeware02], axis=0)
 pd.merge(student, jumsu, on="id", how="outer")
 data.pivot(index="name", columns="item", values="value")
+cols = ["교통비", "출장기간"]
+payment.groupby(["출장지역", "성별"])[cols].agg(["sum", "mean"])
 ```
 
-이 흐름은 “표를 이어 붙이고, 기준 열로 병합하고, 보고서 형태로 재구조화하는” Pandas 데이터 전처리의 기본 패턴이다.
+이 흐름은 “표를 이어 붙이고, 기준 열로 병합하고, 보고서 형태로 재구조화한 뒤, 범주별로 집계하는” Pandas 데이터 전처리의 기본 패턴이다.
 
 ## 자주 헷갈리는 점
 
@@ -152,16 +171,26 @@ data.pivot(index="name", columns="item", values="value")
 
 `NaN`은 “값이 없음”을 뜻한다. 새 행/열을 만들거나 서로 맞지 않는 DataFrame을 결합하면 생기기 쉽다. `fill_value`, `fillna()`, `isnull()`, `notnull()` 같은 함수로 확인·처리한다.
 
+### `agg()` vs `transform()`
+
+`agg()`는 그룹별 요약표를 만들고, `transform()`은 원본 행 수를 유지한다. 그래서 평균표·합계표처럼 보고용 결과가 필요하면 `agg()`, 원본 데이터에 “향상_비율” 같은 새 컬럼을 붙이고 싶으면 `transform()`을 먼저 떠올리면 좋다.
+
 ## 관련 개념
 
+- [[summaries/2026-06-30-python-pandas-series-dataframe-intro|2026-06-30 Python Pandas Series와 DataFrame 입문]]
 - [[summaries/2026-07-01-python-pandas-dataframe|2026-07-01 Python Pandas DataFrame 조회와 입출력]]
 - [[summaries/2026-07-02-python-pandas-reshape-merge|2026-07-02 Python Pandas 데이터 결합과 재구조화]]
+- [[summaries/2026-07-03-python-pandas-groupby-visualization|2026-07-03 Python Pandas groupby와 시각화]]
+- [[concepts/pandas-groupby-aggregation|Pandas groupby와 집계]]
 - [[entities/python|Python]]
 - [[entities/pandas|Pandas]]
 - [[entities/jupyter-notebook|Jupyter Notebook]]
+- [[entities/matplotlib|matplotlib]]
 - [[concepts/oracle-functions-join-subquery|Oracle 함수·조인·서브쿼리]]
 
 ## 출처
 
+- `raw/Study/10. Python/2026.06.30(화)/2026.06.30(화).md`
 - `raw/Study/10. Python/2026.07.01(수)/2026.07.01(수).md`
 - `raw/Study/10. Python/2026.07.02(목)/2026.07.02(목).md`
+- `raw/Study/10. Python/2026.07.03(금)/2026.07.03(금).md`

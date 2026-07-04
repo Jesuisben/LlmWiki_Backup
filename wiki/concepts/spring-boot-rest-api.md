@@ -1,7 +1,7 @@
 ---
 title: Spring Boot REST API
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-03
 type: concept
 tags: [spring-boot, backend]
 sources:
@@ -48,6 +48,7 @@ FrontEnd_BackEnd 단계에서는 문법 하나보다 화면, API, 업무 규칙,
 ## 관련 개념
 
 - [[concepts/dto-entity-service-controller|DTO, Entity, Service, Controller]]
+- [[concepts/spring-boot-passwordless-integration|Spring Boot Passwordless 인증 연동]]
 - [[comparisons/controller-service-repository|Controller vs Service vs Repository]]
 - [[concepts/spring-data-jpa-repository|Spring Data JPA Repository]]
 
@@ -55,6 +56,10 @@ FrontEnd_BackEnd 단계에서는 문법 하나보다 화면, API, 업무 규칙,
 ## 교육자료 대조 보강
 
 IT 관련 용어 교안 p.35~36은 REST를 URL(Resource)과 HTTP Method(GET/POST/PUT/DELETE) 중심으로 설명한다. SpringBoot 교안 p.57~60은 `@Controller`, `@RestController`, `@GetMapping`, `@PathVariable`의 차이를 보여준다. 따라서 이 페이지의 REST API 설명은 단순 “JSON 응답”이 아니라 HTTP Method와 Resource URL, Controller 매핑의 조합으로 읽어야 한다.
+
+## Passwordless 연동으로 확장
+
+2026-05-18~05-21 Passwordless 수업에서는 Spring Boot가 단순 CRUD API를 넘어 외부 인증 서버 REST API를 호출하는 client 역할도 맡았다. 이때 Controller는 React의 등록/로그인/해제 요청을 받고, Service는 X1280 API 호출과 응답 해석을 조립하며, DTO는 인증 서버 응답과 프론트 응답을 분리한다.
 
 ## 출처
 

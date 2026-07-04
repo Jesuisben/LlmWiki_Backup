@@ -1,7 +1,7 @@
 ---
 title: Docker
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-03
 type: entity
 tags: [linux, backend]
 sources:
@@ -13,6 +13,7 @@ sources:
   - raw/Study/5. Linux/교육 자료/Docker/Docker 교안(실습).pdf
   - raw/Study/5. Linux/교육 자료/docker image를 docker hub에 업로드 하기.md
   - raw/Study/5. Linux/교육 자료/도커 컴포즈 종합 실습.md
+  - raw/Study/5. Linux/Linux 총정리/Linux 총정리.md
 status: growing
 confidence: high
 ---
@@ -33,6 +34,7 @@ Linux에서 Spring Boot를 빌드·실행한 뒤, 같은 실행 환경을 더 �
 - [[summaries/2026-04-29-docker-network-volume-image|2026-04-29]]: WordPress+MySQL, Redmine+MariaDB, host↔container 파일 복사, bind/volume mount, Docker Hub push/pull.
 - [[summaries/2026-04-30-dockerfile-spring-load-balancing|2026-04-30]]: Dockerfile, Spring Boot + MySQL 컨테이너, nginx reverse proxy/load balancing.
 - [[summaries/2026-05-01-docker-compose|2026-05-01]]: Docker Compose, Docker Desktop/WSL2, MySQL+Spring Boot/WordPress manifest.
+- [[summaries/2026-05-06-linux-subject-review|Linux 총정리]]: Docker를 Linux 배포 학습의 후반 핵심 축으로 묶어 image/container, network, volume, Dockerfile, Compose를 복습.
 
 ## 핵심 기능 / 특징
 
@@ -69,3 +71,4 @@ Docker는 “배포 환경을 코드처럼 고정하는 도구”라고 설명�
 - `raw/Study/5. Linux/교육 자료/Docker/Docker 교안(실습).pdf`
 - `raw/Study/5. Linux/교육 자료/docker image를 docker hub에 업로드 하기.md`
 - `raw/Study/5. Linux/교육 자료/도커 컴포즈 종합 실습.md`
+- `raw/Study/5. Linux/Linux 총정리/Linux 총정리.md`

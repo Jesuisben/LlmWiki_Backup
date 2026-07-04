@@ -1,12 +1,21 @@
 ---
 title: Python
 created: 2026-07-01
-updated: 2026-07-02
+updated: 2026-07-03
 type: entity
 tags: [python]
 sources:
+  - raw/Study/10. Python/2026.06.19(금)/2026.06.19(금).md
+  - raw/Study/10. Python/2026.06.22(월)/2026.06.22(월).md
+  - raw/Study/10. Python/2026.06.23(화)/2026.06.23(화).md
+  - raw/Study/10. Python/2026.06.24(수)/2026.06.24(수).md
+  - raw/Study/10. Python/2026.06.25(목)/2026.06.25(목).md
+  - raw/Study/10. Python/2026.06.26(금)/2026.06.26(금).md
+  - raw/Study/10. Python/2026.06.29(월)/2026.06.29(월).md
+  - raw/Study/10. Python/2026.06.30(화)/2026.06.30(화).md
   - raw/Study/10. Python/2026.07.01(수)/2026.07.01(수).md
   - raw/Study/10. Python/2026.07.02(목)/2026.07.02(목).md
+  - raw/Study/10. Python/2026.07.03(금)/2026.07.03(금).md
 status: growing
 confidence: high
 ---
@@ -15,63 +24,62 @@ confidence: high
 
 ## 무엇인가
 
-Python은 읽기 쉬운 문법과 풍부한 라이브러리를 가진 범용 프로그래밍 언어다. 이 위키에서는 과정 후반부의 데이터 처리·분석 실습 언어로 등장하며, 특히 [[entities/pandas|Pandas]], [[entities/jupyter-notebook|Jupyter Notebook]], CSV 파일 처리, 그래프 시각화와 함께 사용된다.
+Python은 읽기 쉬운 문법과 풍부한 표준·외부 라이브러리를 가진 범용 프로그래밍 언어다. 이 위키에서는 과정 후반부에 데이터 처리·파일 입출력·정규표현식·JSON/XML·Pandas 분석 실습을 수행하는 언어로 등장한다.
 
 ## 이 위키에서의 맥락
 
-사용자의 커리큘럼은 Java와 Spring/React 풀스택 프로젝트를 먼저 다룬 뒤 Python으로 넘어간다. 따라서 이 위키에서 Python은 “웹 백엔드 주력 언어”라기보다, 표 데이터와 파일을 다루고 분석하는 학습 단계로 기록된다.
-
-2026-07-01 수업에서는 Pandas DataFrame을 만들고 조회·수정·계산·CSV 입출력·시각화하는 데 Python을 사용했다. 2026-07-02 수업에서는 여러 DataFrame을 `concat`, `merge`, `pivot`으로 결합·재구조화하는 데 Python을 사용했다.
+2026-06-19~06-29에는 Pandas 이전 기초를 다졌다. 설치와 PyCharm, 기본 문법, 조건문·반복문, 컬렉션, 함수·모듈·패키지, 표준 라이브러리, 객체지향, 예외 처리, 파일 입출력, 정규표현식, XML/JSON을 순서대로 배웠다. 2026-06-30부터 Jupyter Notebook과 Pandas `Series`/`DataFrame`으로 전환되며, 2026-07-01~07-02에는 DataFrame 조회·CSV 입출력·결합·재구조화로 확장되었다. 2026-07-03에는 `groupby`, `agg`, `transform`, `pd.cut`, matplotlib 그래프로 범주별 집계와 시각화 흐름을 다뤘다.
 
 ## 핵심 기능 / 특징
 
-- `import pandas as pd`, `import numpy as np`처럼 라이브러리를 불러와 데이터 처리를 확장한다.
-- 리스트, 문자열, 조건식, 반복문 같은 기본 문법이 Pandas 실습 코드 안에서도 계속 사용된다.
-- CSV 파일을 읽고 쓰는 자동화 작업에 적합하다.
-- `matplotlib`과 함께 그래프를 그려 데이터를 시각적으로 확인할 수 있다.
-- Jupyter Notebook에서 셀 단위로 실행 결과를 보며 학습하기 좋다.
+- `print`, `input`, 문자열 함수, 형변환으로 기본 입출력과 데이터 변환을 수행한다.
+- `if`, `for`, `while`, `range`로 실행 흐름을 제어한다.
+- `list`, `tuple`, `dict`, `set`, comprehension으로 여러 데이터를 묶고 필터링한다.
+- `def`, `lambda`, `map`, `filter`, 모듈·패키지로 코드를 재사용한다.
+- `os`, `random`, `datetime`, `re`, `json`, `xml.etree.ElementTree`로 파일·날짜·패턴·구조화 데이터를 다룬다.
+- `pip`로 Pandas, matplotlib 같은 Third Party 라이브러리를 설치해 데이터 분석 기능을 확장한다.
+- Pandas의 `groupby`/`transform`과 matplotlib 그래프로 표 데이터를 요약·시각화한다.
 
 ## 학습 이력
 
-### 2026-07-01: Pandas DataFrame 조회와 입출력
-
-- `pd.DataFrame()`으로 표 데이터 생성
-- `loc`/`iloc`로 행과 열 조회
-- 조건에 맞는 데이터 수정
-- `Series` 속성, 통계, 결측값 확인
-- `Faker('ko_KR')`로 더미 데이터 생성
-- `to_csv()`/`read_csv()`로 CSV 저장·불러오기
-- `matplotlib`으로 선 그래프, 막대 그래프, pie 차트 작성
-
-관련 요약: [[summaries/2026-07-01-python-pandas-dataframe|2026-07-01 Python Pandas DataFrame 조회와 입출력]]
-
-### 2026-07-02: DataFrame 결합과 재구조화
-
-- `pd.concat()`으로 DataFrame 이어 붙이기
-- `pd.merge()`로 공통 열/색인 기준 병합
-- `how='outer'`, `left`, `right` 옵션 실습
-- `left_on`/`right_on`, `left_index`/`right_index` 구분
-- `indicator=True`와 `query()`로 매칭되지 않은 데이터 찾기
-- `pivot()`으로 긴 형식 데이터를 넓은 형식으로 변환
-
-관련 요약: [[summaries/2026-07-02-python-pandas-reshape-merge|2026-07-02 Python Pandas 데이터 결합과 재구조화]]
+- [[summaries/2026-06-19-python-setup-basic-syntax|2026-06-19 Python 설치와 기본 문법 입문]]
+- [[summaries/2026-06-22-python-control-flow-collections|2026-06-22 Python 제어문과 컬렉션]]
+- [[summaries/2026-06-23-python-dict-comprehension-builtins|2026-06-23 Python dict, comprehension, 내장 함수]]
+- [[summaries/2026-06-24-python-functions-modules|2026-06-24 Python 함수, 람다, 모듈·패키지]]
+- [[summaries/2026-06-25-python-standard-library-oop|2026-06-25 Python 표준 라이브러리와 객체지향]]
+- [[summaries/2026-06-26-python-exception-file-regex|2026-06-26 Python 예외 처리, 파일 입출력, 정규표현식]]
+- [[summaries/2026-06-29-python-regex-xml-json-jupyter|2026-06-29 Python 정규표현식, XML/JSON, 라이브러리 설치]]
+- [[summaries/2026-06-30-python-pandas-series-dataframe-intro|2026-06-30 Python Pandas Series와 DataFrame 입문]]
+- [[summaries/2026-07-01-python-pandas-dataframe|2026-07-01 Python Pandas DataFrame 조회와 입출력]]
+- [[summaries/2026-07-02-python-pandas-reshape-merge|2026-07-02 Python Pandas 데이터 결합과 재구조화]]
+- [[summaries/2026-07-03-python-pandas-groupby-visualization|2026-07-03 Python Pandas groupby와 시각화]]
 
 ## 관련 개념
 
-- [[concepts/pandas-dataframe-basics|Pandas DataFrame 기본]]
+- [[concepts/python-basic-syntax|Python 기본 문법]]
+- [[concepts/python-collections-comprehension|Python 컬렉션과 컴프리헨션]]
+- [[concepts/python-functions-modules-packages|Python 함수, 모듈, 패키지]]
+- [[concepts/python-file-regex-data-processing|Python 파일·정규표현식 데이터 처리]]
+- [[concepts/python-oop-basics|Python 객체지향 기본]]
 - [[entities/pandas|Pandas]]
 - [[entities/jupyter-notebook|Jupyter Notebook]]
-- [[concepts/oracle-functions-join-subquery|Oracle 함수·조인·서브쿼리]]
+- [[concepts/pandas-groupby-aggregation|Pandas groupby와 집계]]
+- [[entities/matplotlib|matplotlib]]
 
 ## 프로젝트/면접에서 설명할 관점
 
-이 과정의 Python은 “웹 페이지를 만드는 언어”보다 “데이터를 읽고, 정리하고, 분석하기 위한 언어”로 설명하는 편이 정확하다. 특히 Pandas를 이용하면 CSV나 표 데이터를 SQL 테이블처럼 생각하면서도 Python 코드 안에서 직접 조작할 수 있다.
-
-면접식으로 말하면 다음처럼 정리할 수 있다.
-
-> Java/Spring 과정에서는 웹서비스의 백엔드 구조를 배웠고, Python 과정에서는 Pandas를 통해 CSV 기반 표 데이터를 조회·가공·결합·시각화하는 흐름을 학습했습니다.
+이 과정의 Python은 “순수 Python으로 텍스트·XML·JSON 데이터를 다루는 기본기를 만든 뒤, Pandas로 표 데이터를 더 효율적으로 조회·가공·결합·그룹화·시각화하는 데이터 처리 언어”로 설명할 수 있다.
 
 ## 출처
 
+- `raw/Study/10. Python/2026.06.19(금)/2026.06.19(금).md`
+- `raw/Study/10. Python/2026.06.22(월)/2026.06.22(월).md`
+- `raw/Study/10. Python/2026.06.23(화)/2026.06.23(화).md`
+- `raw/Study/10. Python/2026.06.24(수)/2026.06.24(수).md`
+- `raw/Study/10. Python/2026.06.25(목)/2026.06.25(목).md`
+- `raw/Study/10. Python/2026.06.26(금)/2026.06.26(금).md`
+- `raw/Study/10. Python/2026.06.29(월)/2026.06.29(월).md`
+- `raw/Study/10. Python/2026.06.30(화)/2026.06.30(화).md`
 - `raw/Study/10. Python/2026.07.01(수)/2026.07.01(수).md`
 - `raw/Study/10. Python/2026.07.02(목)/2026.07.02(목).md`
+- `raw/Study/10. Python/2026.07.03(금)/2026.07.03(금).md`

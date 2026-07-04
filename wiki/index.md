@@ -2,7 +2,7 @@
 
 > 이 파일은 `wiki/` 전체의 목차이자 길잡이다.  
 > 질문에 답하거나 새 자료를 ingest할 때 이 파일을 먼저 읽는다.  
-> Last updated: 2026-07-03 | Total pages: 189
+> Last updated: 2026-07-03 | Total pages: 235
 
 ## 사용 방법
 
@@ -26,21 +26,25 @@
 - [[summaries/2026-03-11-java-inheritance-polymorphism|2026-03-11 Java 상속과 참조 형변환]] — 상속 구조에서 `private`, 생성자, 참조 형변환, 오버라이딩을 다룬 날이다.
 - [[summaries/2026-03-12-java-abstract-interface-static|2026-03-12 Java 추상 클래스, 인터페이스, static/final]] — 확장 for, 추상 메서드, 인터페이스, static/final을 통해 객체지향 설계를 확장한 날이다.
 - [[summaries/2026-03-13-java-project-oracle-start|2026-03-13 Java 팀 프로젝트와 Oracle 시작]] — Java 팀 프로젝트를 진행하고 Oracle/DBeaver 학습으로 넘어가기 시작한 날이다.
+- [[summaries/2026-03-13-java-subject-review|Java 총정리]] — Java 문법·제어문·배열·객체지향·상속/추상화 흐름을 총정리 원본 기준으로 묶은 복습 허브
 - [[summaries/2026-03-16-oracle-dbms-sql-dbeaver|2026-03-16 Oracle DBMS, SQL, DBeaver 입문]] — DBMS와 SQL의 기본 의미를 배우고 DBeaver로 Oracle 학습을 시작한 날이다.
 - [[summaries/2026-03-17-oracle-ddl-dml-constraints-sequence|2026-03-17 Oracle DDL/DML, 제약조건, 시퀀스]] — 테이블 조작과 데이터 조작, 제약조건, 시퀀스를 실습한 날이다.
 - [[summaries/2026-03-18-oracle-constraints-validation|2026-03-18 Oracle 제약조건 테스트와 유효성 검사]] — Oracle 사용자 재설정, 제약조건 테스트, 폼 유효성 검사 개념을 연결한 날이다.
 - [[summaries/2026-03-19-oracle-functions-join-subquery|2026-03-19 Oracle 함수, GROUP BY, JOIN, 서브쿼리]] — Oracle의 단일행 함수, 그룹 함수, 조인, 서브쿼리를 폭넓게 다룬 날이다.
 - [[summaries/2026-03-20-database-modeling-normalization-view-index|2026-03-20 데이터 모델링, 정규화, View, Index]] — ERD, 데이터 모델링, 정규화, View, Index를 통해 DB 설계 관점을 배운 날이다.
+- [[summaries/2026-03-20-oracle-subject-review|Oracle 총정리]] — SQL 분류·테이블/제약조건·트랜잭션·JOIN/서브쿼리·ERD/정규화를 총정리 원본 기준으로 묶은 복습 허브
 - [[summaries/2026-03-23-html-css-intro|2026-03-23 HTML/CSS와 웹 UI 입문]] — 웹 서비스의 데이터 흐름과 HTML/CSS 기본 문법을 배우기 시작한 날이다.
 - [[summaries/2026-03-24-css-layout-javascript-intro|2026-03-24 CSS 레이아웃과 JavaScript 입문]] — CSS 박스 모델·position·글꼴 스타일과 JavaScript 기초를 배운 날이다.
 - [[summaries/2026-03-25-bootstrap-form|2026-03-25 Bootstrap과 HTML Form]] — Bootstrap 5, CDN, 그리드 시스템, Form 요소를 학습한 날이다.
 - [[summaries/2026-03-26-javascript-dom-product-pages|2026-03-26 JavaScript DOM과 상품 목록/상세 페이지]] — JavaScript 배열, DOM 조작, 이벤트를 이용해 상품 목록/상세 페이지를 만든 날이다.
 - [[summaries/2026-03-27-jquery-ui-interaction|2026-03-27 jQuery와 UI 상호작용]] — jQuery, CSS transition, pseudo-class를 이용해 이미지/토글 UI 상호작용을 구현한 날이다.
+- [[summaries/2026-03-27-uiux-subject-review|UI&UX 총정리]] — HTML/CSS/JavaScript/Bootstrap/jQuery 입문 흐름을 총정리 원본 기준으로 묶은 복습 허브
 - [[summaries/2026-03-30-fullstack-environment-setup|2026-03-30 FrontEnd/BackEnd 개발 환경과 커리큘럼 전환]] — FrontEnd_BackEnd 과정 첫날로, Spring Boot·React·TypeScript·MySQL·Node.js·VS Code 등 풀스택 개발 환경을 준비했다.
 - [[summaries/2026-03-31-spring-boot-controller-html|2026-03-31 Spring Boot Controller와 HTML 응답]] — Spring Boot에서 Entity와 Controller를 만들고, 브라우저 요청에 HTML 문자열 또는 데이터를 응답하는 기본 흐름을 배웠다.
 - [[summaries/2026-04-01-react-router-spring-boot|2026-04-01 React 라우팅과 Spring Boot 연동 흐름]] — React의 페이지 구성과 라우팅을 App/MenuItems 구조로 정리하고 Spring Boot Controller 학습을 이어갔다.
 - [[summaries/2026-04-02-react-bootstrap-homepage|2026-04-02 React Bootstrap과 HomePage 구성]] — React Bootstrap의 Carousel·Card 등 UI 컴포넌트를 이용해 홈 화면을 구성하고 Spring/React 프로젝트 구조를 보강했다.
 - [[summaries/2026-04-03-spring-member-seed-react-comments|2026-04-03 Member 데이터 준비와 React JSX 기초]] — Spring Boot 쪽 Member 데이터를 준비하고 React/JSX에서 주석, 단축키, 기본 편집 흐름을 익혔다.
+- [[summaries/2026-04-03-frontend-backend-subject-review|FrontEnd_BackEnd 총정리]] — 초기 풀스택 세팅과 Spring Boot ↔ React 연결 흐름을 총정리 원본 기준으로 묶은 복습 허브
 - [[summaries/2026-04-06-login-jwt-session-cookie|2026-04-06 로그인, JWT, 세션과 쿠키]] — 로그인 구현을 시작하며 JWT 토큰, 세션, 쿠키, DTO, React 로그인 흐름의 차이를 학습했다.
 - [[summaries/2026-04-07-member-api-string-token|2026-04-07 회원 API와 문자열/토큰 처리]] — 회원 기능 구현 과정에서 Java String 메서드, Bearer 토큰 처리, Spring Controller/DTO 흐름을 다뤘다.
 - [[summaries/2026-04-08-product-domain-oci|2026-04-08 상품 도메인과 OCI 소개]] — 상품 기능 구현을 시작하며 Category, Product 도메인과 Spring/React 상품 구조, OCI 개념을 배웠다.
@@ -64,11 +68,33 @@
 - [[summaries/2026-05-01-docker-compose|2026-05-01 Docker Compose와 다중 컨테이너 실행]] — Compose manifest로 MySQL+Spring Boot 같은 다중 컨테이너 구성을 실행한 날이다.
 - [[summaries/2026-05-04-git-github-sourcetree|2026-05-04 GitHub, Git Bash, SourceTree 협업 입문]] — Git Bash와 SourceTree로 init/add/commit/push/pull/clone 흐름을 복습한 날이다.
 - [[summaries/2026-05-06-github-branch-pr-conflict|2026-05-06 GitHub 브랜치, Pull Request, 충돌 해결]] — 팀원 브랜치, PR, merge, pull, 충돌 시나리오를 실습한 날이다.
+- [[summaries/2026-05-06-linux-subject-review|Linux 총정리]] — Linux CLI·권한·Spring Boot 서버 실행·Docker·Compose·GitHub 협업을 묶은 복습 허브
 - [[summaries/2026-05-06-aws-cloud-vpc-ec2|2026-05-06 AWS Cloud, VPC, EC2 입문]] — AWS 메뉴, On-Demand, VPC/Subnet/CIDR, Security Group, EC2 개념을 잡기 시작한 날
 - [[summaries/2026-05-07-aws-ec2-nginx-rds|2026-05-07 AWS EC2, Nginx, Spring Boot, RDS 연결]] — VPC/EC2 2대 구성, ping/ICMP, Nginx, Spring Boot, RDS MySQL 연결을 실습한 날
 - [[summaries/2026-05-08-aws-route53-load-balancer-https|2026-05-08 AWS Route 53, Load Balancer, HTTPS]] — Route 53, ACM, CLB/ALB, Target Group으로 도메인·HTTPS·로드밸런싱 구조를 구성한 날
+- [[summaries/2026-05-08-aws-subject-review|AWS 총정리]] — VPC/EC2/RDS/Route 53/ACM/Load Balancer/HTTPS를 묶은 클라우드 배포 복습 허브
+- [[summaries/2026-05-11-cicd-github-actions-spring-boot|2026-05-11 CI/CD, GitHub Actions, Spring Boot 자동 배포]] — GitHub push를 트리거로 Maven build, Docker Hub, EC2 컨테이너 배포를 자동화한 날
+- [[summaries/2026-05-12-route53-alb-https-review|2026-05-12 Route 53, ALB, HTTPS 복습과 도메인 배포]] — 도메인, Route 53 hosted zone, ACM 인증서, ALB/Target Group, HTTPS 접속 흐름을 복습한 날
+- [[summaries/2026-05-13-terraform-s3-file-upload|2026-05-13 Terraform과 S3 파일 업로드]] — Terraform IaC 기초와 Spring Boot에서 Amazon S3 bucket으로 이미지 업로드하는 흐름을 다룬 날
+- [[summaries/2026-05-14-passwordless-x1280-intro|2026-05-14 Passwordless X1280 소개와 보안 배경]] — 피싱·랜섬웨어·RCE 배경에서 비밀번호 입력을 줄이는 X1280 인증 개념을 배운 날
+- [[summaries/2026-05-15-passwordless-x1280-docker-service|2026-05-15 Passwordless X1280 Docker 통합 서버와 서비스 등록]] — Members 서비스 등록, setting.ap, Docker 통합 서버, Auth 관리자 페이지 설정 흐름
+- [[summaries/2026-05-18-passwordless-x1280-server-spring-sample|2026-05-18 Passwordless 서버 설치와 Spring 샘플 연동]] — X1280 서버와 MariaDB/Spring 샘플 앱에서 등록·로그인·해제를 확인한 날
+- [[summaries/2026-05-19-aam-ape-authentication-filingbox|2026-05-19 인증 기본과 AAM/APE 통합 설치]] — 인증/인가/SSO/상호인증과 AAM/APE 서버·앱 계정 관리 흐름
+- [[summaries/2026-05-20-filingbox-giga-mega|2026-05-20 FilingBox GIGA/MEGA와 WORM 스토리지]] — 랜섬웨어 대응 관점의 NAS/WORM/FilingBox 저장소 보호 실습
+- [[summaries/2026-05-21-passwordless-x1280-rest-api|2026-05-21 Passwordless X1280 REST API와 Postman]] — X1280 REST API를 Postman으로 호출해 사용자 등록 여부 응답 구조를 확인한 날
+- [[summaries/2026-06-19-python-setup-basic-syntax|2026-06-19 Python 설치와 기본 문법 입문]] — Python/PyCharm 설치, 기본 출력·문자열·형변환·입력·연산자 학습
+- [[summaries/2026-06-22-python-control-flow-collections|2026-06-22 Python 제어문과 컬렉션]] — 조건문·반복문·range·list·tuple 학습
+- [[summaries/2026-06-23-python-dict-comprehension-builtins|2026-06-23 Python dict, comprehension, 내장 함수]] — dict·중첩 리스트·comprehension·zip/sorted 학습
+- [[summaries/2026-06-24-python-functions-modules|2026-06-24 Python 함수, 람다, 모듈·패키지]] — 함수·가변 인수·lambda·map/filter·import 학습
+- [[summaries/2026-06-25-python-standard-library-oop|2026-06-25 Python 표준 라이브러리와 객체지향]] — os·random·datetime·class·상속·Has-A 학습
+- [[summaries/2026-06-26-python-exception-file-regex|2026-06-26 Python 예외 처리, 파일 입출력, 정규표현식]] — try/except·open/with·텍스트 처리·re 입문
+- [[summaries/2026-06-29-python-regex-xml-json-jupyter|2026-06-29 Python 정규표현식, XML/JSON, 라이브러리 설치]] — regex 심화·XML/JSON·pip·Jupyter 준비
+- [[summaries/2026-06-30-python-pandas-series-dataframe-intro|2026-06-30 Python Pandas Series와 DataFrame 입문]] — Jupyter에서 Series·DataFrame·matplotlib 시작
 - [[summaries/2026-07-01-python-pandas-dataframe|2026-07-01 Python Pandas DataFrame 조회와 입출력]] — Pandas DataFrame/Series의 `loc`/`iloc` 조회, 조건 수정, CSV 입출력, 통계, 기초 그래프를 학습한 날이다.
 - [[summaries/2026-07-02-python-pandas-reshape-merge|2026-07-02 Python Pandas 데이터 결합과 재구조화]] — `concat`, `merge`, `pivot`으로 여러 DataFrame을 결합하고 SQL JOIN과 비슷한 데이터 연결 흐름을 학습한 날이다.
+- [[summaries/2026-07-03-python-pandas-groupby-visualization|2026-07-03 Python Pandas groupby와 시각화]] — `groupby`, `agg`, `transform`, `pd.cut`, matplotlib 그래프로 범주별 집계와 분포 확인을 학습한 날이다.
+
+- [[summaries/2026-05-middle-project-cicd-passwordless-guide|중간 프로젝트 CI/CD·배포·Passwordless 가이드]] — 중간 프로젝트 배포 자동화와 Passwordless 인증 적용 흐름을 묶은 프로젝트 가이드 요약
 
 ## Concepts
 
@@ -117,7 +143,18 @@
 - [[concepts/aws-ec2-nginx-spring-deploy|AWS EC2에서 Nginx와 Spring Boot 배포]] — EC2 SSH, Nginx, JDK/Maven, Spring Boot jar 실행, 80→9000 포트 연결 흐름
 - [[concepts/aws-rds-spring-boot|AWS RDS와 Spring Boot 연결]] — RDS MySQL을 만들고 EC2/Spring Boot에서 JDBC로 연결하되 비밀값은 분리해야 하는 흐름
 - [[concepts/aws-route53-load-balancer-https|AWS Route 53, Load Balancer, HTTPS 흐름]] — 도메인, DNS, ACM 인증서, CLB/ALB, Target Group, Listener를 연결하는 배포 구조
-- [[concepts/pandas-dataframe-basics|Pandas DataFrame 기본]] — 행/열 조회, 조건 수정, CSV 입출력, Series 통계, `concat`/`merge`/`pivot`까지 이어지는 Pandas 표 데이터 처리 기본
+- [[concepts/ci-cd-automation|CI/CD 자동화]] — GitHub push를 트리거로 빌드·이미지 생성·배포를 반복 가능하게 만드는 흐름
+- [[concepts/github-actions-workflow|GitHub Actions workflow]] — `.github/workflows/*.yml`로 checkout, JDK 설정, Maven build, Docker push 같은 자동화 단계를 정의하는 방식
+- [[concepts/spring-boot-cicd-docker-ec2-flow|Spring Boot CI/CD Docker-EC2 배포 흐름]] — Spring Boot jar를 Docker image로 만들고 Docker Hub를 거쳐 EC2 컨테이너로 배포하는 구조
+- [[concepts/terraform-infrastructure-as-code|Terraform과 Infrastructure as Code]] — VPC/Subnet/EC2 같은 AWS 인프라를 `.tf` 코드와 `init/plan/apply/destroy` 명령으로 관리하는 방식
+- [[concepts/aws-s3-file-upload|AWS S3 파일 업로드 흐름]] — Spring Boot 업로드 파일을 서버 로컬 폴더 대신 S3 bucket에 저장하고 DB에는 URL/key를 남기는 구조
+- [[concepts/python-basic-syntax|Python 기본 문법]] — 출력·입력·문자열·형변환·조건문·반복문 기초
+- [[concepts/python-collections-comprehension|Python 컬렉션과 컴프리헨션]] — list/tuple/dict/set과 comprehension 기반 데이터 처리
+- [[concepts/python-functions-modules-packages|Python 함수, 모듈, 패키지]] — def·lambda·가변 인수·import·패키지 구조
+- [[concepts/python-file-regex-data-processing|Python 파일·정규표현식 데이터 처리]] — open/with·텍스트 파일·re·XML/JSON 처리
+- [[concepts/python-oop-basics|Python 객체지향 기본]] — class·__init__·self·상속·Has-A 관계
+- [[concepts/pandas-dataframe-basics|Pandas DataFrame 기본]] — 행/열 조회, 조건 수정, CSV 입출력, Series 통계, `concat`/`merge`/`pivot`, `groupby`까지 이어지는 Pandas 표 데이터 처리 기본
+- [[concepts/pandas-groupby-aggregation|Pandas groupby와 집계]] — 범주별 그룹화, `agg`, 다중 색인 정리, `transform`, `pd.cut` 기반 범주화와 그래프용 요약표 생성
 
 - [[concepts/java-method-constructor-overloading|Java 메서드, 생성자, this, 오버로딩]] — 메서드, 접근 지정자, 생성자, `this`, 오버로딩을 클래스/객체 학습 흐름에서 분리 정리
 - [[concepts/java-object-array-memory|Java 객체 배열과 메모리 관점]] — 객체 배열과 stack/heap 관점으로 객체 생성·참조 흐름을 정리
@@ -138,6 +175,16 @@
 - [[concepts/react-useeffect-data-fetching|React useEffect와 데이터 요청]] — 상품 상세 조회처럼 컴포넌트 생명주기와 API 호출을 연결하는 Hook 흐름
 - [[concepts/spring-security-jwt-filter|Spring Security JWT Filter]] — Bearer 토큰 추출, JWT 검증, SecurityContext 설정 흐름
 - [[concepts/product-domain-flow|상품 도메인 기능 흐름]] — Category/Product 기반 상품 등록·상세·삭제·검색·페이징의 풀스택 흐름
+- [[concepts/middle-project-cicd-deploy-flow|중간 프로젝트 CI/CD 배포 흐름]] — GitHub Actions와 AWS 서버를 이용해 중간 프로젝트를 반복 가능하게 배포하는 흐름
+
+- [[concepts/github-actions-secrets-deploy|GitHub Actions Secrets 기반 배포]] — 배포에 필요한 민감값을 GitHub Secrets로 분리해 사용하는 방식
+
+- [[concepts/jwt-rs256-key-flow|JWT RS256 키 흐름]] — 개인키 서명과 공개키 검증으로 JWT 신뢰를 구성하는 방식
+
+- [[concepts/passwordless-x1280-auth-flow|Passwordless X1280 인증 흐름]] — QR·앱 승인·외부 인증 서버를 연결하는 Passwordless 로그인 흐름
+- [[concepts/passwordless-qr-app-approval|Passwordless QR/앱 승인 흐름]] — QR 등록과 모바일 앱 승인 상태를 프론트·백엔드가 처리하는 구조
+- [[concepts/spring-boot-passwordless-integration|Spring Boot Passwordless 인증 연동]] — X1280 REST API를 Spring Boot Controller/Service/DTO/SecurityConfig와 연결하는 방식
+
 ## Entities
 
 <!-- 기술/도구/프레임워크 페이지. 예: - [[entities/java|Java]] — 객체지향 프로그래밍 언어이자 백엔드 학습의 출발점 -->
@@ -166,10 +213,13 @@
 - [[entities/amazon-ec2|Amazon EC2]] — Nginx와 Spring Boot를 실행하고 Load Balancer 대상이 된 AWS 가상 서버 서비스
 - [[entities/amazon-rds|Amazon RDS]] — Spring Boot가 JDBC로 연결한 AWS 관리형 MySQL 데이터베이스 서비스
 - [[entities/amazon-route-53|Amazon Route 53]] — 도메인을 Load Balancer와 연결하고 ACM DNS 검증 CNAME을 관리한 AWS DNS 서비스
-- [[entities/python|Python]] — Pandas, CSV, 그래프를 통해 표 데이터를 처리·분석하는 과정 후반부 학습 언어
-- [[entities/pandas|Pandas]] — DataFrame/Series 조회·수정·통계·입출력·결합·재구조화를 담당하는 Python 데이터 처리 라이브러리
-- [[entities/jupyter-notebook|Jupyter Notebook]] — Pandas 코드를 셀 단위로 실행하며 표와 그래프 결과를 바로 확인한 Python 학습 환경
+- [[entities/amazon-s3|Amazon S3]] — Spring Boot 상품 이미지 같은 업로드 파일을 저장하는 AWS 객체 스토리지 서비스
+- [[entities/python|Python]] — 기본 문법·컬렉션·함수·파일/정규표현식·XML/JSON을 거쳐 Pandas 표 데이터 처리로 이어지는 과정 후반부 학습 언어
+- [[entities/pandas|Pandas]] — Series/DataFrame, CSV, 통계, 그래프, 결합·재구조화를 담당하는 Python 표 데이터 처리 라이브러리
+- [[entities/jupyter-notebook|Jupyter Notebook]] — Pandas와 matplotlib 코드를 셀 단위로 실행하며 표·그래프·설명을 함께 남긴 Python 학습 환경
+- [[entities/matplotlib|matplotlib]] — Pandas 집계 결과를 파이·산점도·박스플롯·히스토그램·막대 그래프로 확인하는 Python 시각화 라이브러리
 - [[entities/intellij-idea|IntelliJ IDEA]] — Java 첫 프로젝트·패키지·클래스 생성부터 Spring Boot까지 사용한 Java/Spring IDE
+- [[entities/passwordless-x1280|Passwordless X1280]] — QR 등록·앱 승인·REST API로 비밀번호 없는 인증을 구현하는 X1280 인증 기술
 
 ## Comparisons
 
@@ -198,6 +248,8 @@
 - [[comparisons/ddl-vs-dml-vs-dql|DDL vs DML vs DQL]] — 구조 정의, 데이터 조작, 데이터 조회 SQL의 역할과 commit 관계 차이
 - [[comparisons/primary-key-vs-foreign-key|Primary Key vs Foreign Key]] — 행을 식별하는 기본키와 다른 테이블을 참조하는 외래키의 차이
 - [[comparisons/oracle-inner-vs-outer-join|Oracle Inner Join vs Outer Join]] — 매칭 행만 조회하는 조인과 기준 테이블의 미매칭 행까지 보존하는 조인의 차이
+
+- [[comparisons/passwordless-vs-password-login|Passwordless 로그인 vs 비밀번호 로그인]] — 비밀번호 입력형 로그인과 앱 승인 기반 Passwordless 로그인의 책임 차이
 
 ## Queries
 

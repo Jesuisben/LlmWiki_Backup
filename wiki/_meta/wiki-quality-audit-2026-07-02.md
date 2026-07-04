@@ -9,8 +9,12 @@ sources:
   - wiki/log.md
   - raw/Study/1. Java/Java 총정리/Java 총정리.md
   - raw/Study/1. Java/숙제/클래스 숙제 완료.md
+  - raw/Study/2. Oracle/Oracle 총정리/Oracle 총정리.md
+  - raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md
+  - raw/Study/4. FrontEnd_BackEnd/FrontEnd_BackEnd 총정리/FrontEnd_BackEnd 총정리.md
   - raw/Study/6. AWS/교육 자료/AWS 기초 용어.pdf
   - raw/Study/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf
+  - raw/Study/10. Python/2026.07.03(금)/2026.07.03(금).md
 status: growing
 confidence: high
 ---
@@ -30,8 +34,8 @@ confidence: high
 
 ## 현재 전체 수치
 
-- `wiki/` Markdown 파일 수: 191개
-- `wiki/index.md`의 `Total pages` 표기: 189개
+- `wiki/` Markdown 파일 수: 237개
+- `wiki/index.md`의 `Total pages` 표기: 235개
 - index 누락 페이지: 0개
 - frontmatter 누락 페이지(`index.md`, `log.md` 제외): 0개
 - frontmatter `sources: []` 페이지: 0개
@@ -104,9 +108,10 @@ confidence: high
 사용자가 ingest는 직접 진행하기로 했으므로, 여기서는 잔여 후보만 유지한다.
 
 - `raw/Study/6. AWS/2026.05.06(수) - 시작/` ~ `raw/Study/6. AWS/2026.05.08(금)/` — 2026-07-03 course-material-aware ingest 후, 같은 날 사용자가 지정한 날짜별 MD 3개가 실제 수업 메모를 포함함을 재확인해 기존 AWS wiki를 날짜 MD + 교육자료 PDF/실습 관리 대장 기준으로 보강·정정 완료. AWS 총정리류는 제외함.
-- `raw/Study/7. Ci&CD/2026.05.11(월) - 시작/` ~ `raw/Study/7. Ci&CD/2026.05.13(수)/` — 다음 잔여 후보. 사용자 날짜 MD가 템플릿인지 원본 재확인 필요.
-- `raw/Study/8. Passwordless/2026.05.14(목)/` ~ `raw/Study/8. Passwordless/2026.05.21(목)/` — 사용자가 별도 ingest 예정.
-- `raw/Study/10. Python/2026.06.19(금)/` ~ `raw/Study/10. Python/2026.06.30(화)/` — 사용자가 별도 ingest 예정. 일부는 시간표 템플릿 가능성이 있어 원본 재확인 필요.
+- `raw/Study/7. Ci&CD/2026.05.11(월) - 시작/` ~ `raw/Study/7. Ci&CD/2026.05.13(수)/` — 2026-07-03 날짜별 MD 3개가 실제 수업 메모를 포함함을 확인하고, CI/CD 자동화·GitHub Actions·Spring Boot Docker/EC2 배포·Route 53/ALB/HTTPS 복습·Terraform·S3 파일 업로드를 wiki에 반영 완료.
+- `raw/Study/8. Passwordless/2026.05.14(목)/` ~ `raw/Study/8. Passwordless/2026.05.21(목)/` — 2026-07-03 날짜별 ingest 완료. X1280 인증 흐름, QR/앱 승인, Spring Boot 연동, REST API/Postman, AAM/APE·FilingBox 보안 제품군 흐름을 wiki에 반영함.
+- `raw/Study/10. Python/2026.06.19(금)/` ~ `raw/Study/10. Python/2026.06.30(화)/` — 2026-07-03 날짜별 ingest 완료. Python 설치·기초 문법·컬렉션·함수·모듈·표준 라이브러리·객체지향·예외 처리·파일/정규표현식·XML/JSON·Jupyter/Pandas 입문 흐름을 wiki에 반영함.
+- `raw/Study/10. Python/2026.07.01(수)/` ~ `raw/Study/10. Python/2026.07.03(금)/` — Pandas DataFrame 조회·입출력, 결합·재구조화, `groupby` 집계·시각화 흐름을 기존 Python/Pandas/Jupyter 페이지에 반영 완료.
 
 ## 앞으로의 고품질 ingest 기준
 
@@ -119,6 +124,16 @@ confidence: high
 
 - `raw/Study/1. Java/Java 총정리/Java 총정리.md` — 기존 Java concept/entity/comparison 보강에 반영 완료
 - `raw/Study/1. Java/숙제/클래스 숙제 완료.md` — static/메모리/컬렉션/상속/추상화 관점으로 반영 완료
+
+## 추가 정리: 1~4 과목 총정리 MD 복습 허브 생성
+
+- `raw/Study/1. Java/Java 총정리/Java 총정리.md`, `raw/Study/2. Oracle/Oracle 총정리/Oracle 총정리.md`, `raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md`, `raw/Study/4. FrontEnd_BackEnd/FrontEnd_BackEnd 총정리/FrontEnd_BackEnd 총정리.md`를 균등 재점검했다.
+- 날짜별 summary를 대체하지 않고 과목 단위 복습 허브로 쓰기 위해 다음 summary 4개를 추가했다.
+  - [[summaries/2026-03-13-java-subject-review|Java 총정리]]
+  - [[summaries/2026-03-20-oracle-subject-review|Oracle 총정리]]
+  - [[summaries/2026-03-27-uiux-subject-review|UI&UX 총정리]]
+  - [[summaries/2026-04-03-frontend-backend-subject-review|FrontEnd_BackEnd 총정리]]
+- `Java`, `Oracle Database`, `HTML`, `Spring Boot` entity에서 각 총정리 summary로 연결해 과목별 진입점을 보강했다.
 
 ## 추가 정리: 깨진 위키링크 후보 제거
 
@@ -166,4 +181,25 @@ confidence: high
 - summary 3개는 Cloud/VPC/EC2, VPC·EC2·Nginx·Spring Boot·RDS, Route 53/Load Balancer/HTTPS 흐름을 날짜별 학습 맥락으로 복원했다.
 - concept 4개는 AWS 네트워킹, EC2 배포, RDS 연결, Route 53/ALB/HTTPS 배포 구조를 정리했다.
 - entity 4개(`AWS`, `Amazon EC2`, `Amazon RDS`, `Amazon Route 53`)와 comparison 2개(`EC2 vs RDS`, `CLB vs ALB`)는 이후 CI/CD·Passwordless 배포 학습과 연결할 기반으로 유지·보강했다.
-- 다음 잔여 후보는 `raw/Study/7. Ci&CD/2026.05.11(월) - 시작/` ~ `raw/Study/7. Ci&CD/2026.05.13(수)/`이다.
+- 다음 잔여 후보는 `raw/Study/10. Python/2026.06.19(금)/` ~ `raw/Study/10. Python/2026.06.30(화)/`이다.
+
+## 추가 정리: Ci&CD 날짜별 ingest
+
+- `raw/Study/7. Ci&CD`의 2026-05-11~2026-05-13 날짜별 MD 3개와 CI&CD/AWS 교안을 확인해, GitHub Actions 기반 Spring Boot CI/CD, Route 53/ALB/HTTPS 앞단 복습, Terraform, S3 파일 업로드를 정리했다.
+- 새 summary 3개는 날짜별 학습 맥락을 보존하고, 새 concept/entity 6개는 [[concepts/middle-project-cicd-deploy-flow|중간 프로젝트 CI/CD 배포 흐름]]과 AWS/Spring Boot 기존 페이지에 연결했다.
+- 원본에 포함된 Docker token, AWS access key, RDS password, IP/endpoint 예시는 wiki에 재노출하지 않고 placeholder와 역할 설명으로 일반화했다.
+
+
+## 추가 정리: Python 2026-06-19~2026-06-30 날짜별 ingest
+
+- `raw/Study/10. Python`의 2026-06-19~2026-06-30 날짜별 MD 8개를 읽어 Pandas 이전 Python 기초/라이브러리/데이터 처리 흐름을 정리했다.
+- 새 summary 8개는 Python 설치·기초 문법, 제어문/컬렉션, dict/comprehension/내장 함수, 함수/모듈/패키지, 표준 라이브러리/OOP, 예외/파일/정규표현식, XML/JSON/Jupyter, Pandas Series/DataFrame 입문 순서를 보존한다.
+- 새 concept 5개를 생성해 기존 [[entities/python|Python]], [[entities/pandas|Pandas]], [[entities/jupyter-notebook|Jupyter Notebook]], [[concepts/pandas-dataframe-basics|Pandas DataFrame 기본]]과 연결했다.
+- 이로써 감사 리포트의 Python 2026-06-19~06-30 잔여 후보는 처리 완료 상태다.
+
+## 추가 정리: Python 2026-07-03 Pandas groupby와 시각화
+
+- `raw/Study/10. Python/2026.07.03(금)/2026.07.03(금).md`를 읽어 `groupby`, `agg`, 다중 색인 정리, 사용자 정의 집계 함수, `DataFrameGroupBy`, `transform`, `pd.cut`, matplotlib 그래프 흐름을 정리했다.
+- 새 summary 1개는 2026-07-02의 `concat`/`merge`/`pivot` 다음 단계로 “범주별 요약과 시각화”를 연결한다.
+- 새 concept `[[concepts/pandas-groupby-aggregation|Pandas groupby와 집계]]`는 `agg()`와 `transform()`의 차이, 다중 색인 정리, 연속형 변수 범주화를 초보자 관점에서 보존한다.
+- 새 entity `[[entities/matplotlib|matplotlib]]`는 Pandas 분석 결과를 그래프로 확인하는 도구로 등록했다.

@@ -1,7 +1,7 @@
 ---
 title: Frontend/Backend 구조
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-03
 type: concept
 tags: [frontend, backend, spring-boot, react]
 sources:
@@ -59,6 +59,12 @@ SpringBoot 교안의 프로젝트 구성 그림은 요청/응답이 View 또는 
 - [[comparisons/controller-service-repository]]
 - [[concepts/spring-boot-rest-api]]
 - [[concepts/react-typescript-basics]]
+- [[concepts/passwordless-qr-app-approval]]
+- [[concepts/spring-boot-passwordless-integration]]
+
+## Passwordless 흐름으로 본 확장 예시
+
+Passwordless를 붙이면 React는 QR 표시·승인 대기·결과 polling 같은 상태를 맡고, Spring Boot는 X1280 인증 서버 REST API 호출과 결과 해석을 맡는다. 즉 기존 Frontend/Backend 왕복 흐름에 외부 인증 서버와 모바일 앱 승인 단계가 추가된다.
 
 ## 출처
 

@@ -1,5 +1,6 @@
 {
   "showUnsupportedFiles": true,
   "spellcheck": false,
-  "tabSize": 4
+  "tabSize": 4,
+  "showLineNumber": true
 }

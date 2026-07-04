@@ -1,7 +1,7 @@
 ---
 title: JWT, 세션, 쿠키 인증
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-03
 type: concept
 tags: [auth, backend, frontend]
 sources:
@@ -45,11 +45,17 @@ FrontEnd_BackEnd 단계에서는 문법 하나보다 화면, API, 업무 규칙,
 - [[entities/jwt|JWT]]
 - [[comparisons/session-vs-cookie-vs-jwt|Session vs Cookie vs JWT]]
 - [[concepts/spring-boot-rest-api|Spring Boot REST API]]
+- [[concepts/passwordless-x1280-auth-flow|Passwordless X1280 인증 흐름]]
+- [[concepts/spring-boot-passwordless-integration|Spring Boot Passwordless 인증 연동]]
 
 
 ## 교육자료 대조 보강
 
 IT 관련 용어 교안 p.48~49는 Cookie와 Session을, JWT 이론 p.2~4는 React SPA 구조와 JWT 사용 맥락을 설명한다. SpringBoot 교안 p.164~165의 `Authentication`/`SecurityContextHolder` 설명은 토큰 검증 후 서버 내부에서 현재 사용자를 어떻게 보관하는지 이해하는 근거가 된다. 자세한 필터 흐름은 [[concepts/spring-security-jwt-filter]]에 분리했다.
+
+## Passwordless와의 연결
+
+Passwordless X1280은 사용자를 확인하는 앞단 인증 방식이고, JWT/세션/쿠키는 로그인 이후 요청 사이에서 상태를 유지하는 방식이다. 따라서 앱 승인에 성공한 뒤에도 프로젝트 서버는 기존 방식처럼 JWT를 발급하거나 세션을 만들 수 있다.
 
 ## 출처
 

@@ -45,6 +45,7 @@ Java는 객체지향 프로그래밍 언어이며, 이 위키에서는 백엔드
 - [[summaries/2026-03-11-java-inheritance-polymorphism|2026-03-11]]: 상속, `super`, 참조 형변환, 오버라이딩
 - [[summaries/2026-03-12-java-abstract-interface-static|2026-03-12]]: 추상 클래스, 인터페이스, `static`, `final`
 - [[summaries/2026-03-13-java-project-oracle-start|2026-03-13]]: Java 팀 프로젝트 후 Oracle로 전환
+- [[summaries/2026-03-13-java-subject-review|Java 총정리]]: 문법·제어문·배열·객체지향 흐름을 한 번에 되짚는 복습 허브
 
 ## 핵심 기능 / 특징
 

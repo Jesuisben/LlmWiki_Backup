@@ -1,7 +1,7 @@
 ---
 title: Spring Security JWT Filter
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-03
 type: concept
 tags: [spring-boot, auth, backend]
 sources:
@@ -51,6 +51,11 @@ HTTP 요청 Authorization: Bearer <token>
 - [[comparisons/session-vs-cookie-vs-jwt]]
 - [[entities/jwt]]
 - [[concepts/spring-boot-rest-api]]
+- [[concepts/spring-boot-passwordless-integration]]
+
+## Passwordless와의 연결
+
+Passwordless 로그인은 앱 승인 결과를 확인한 뒤 기존 JWT 발급/검증 흐름과 만날 수 있다. 등록/로그인 시작 endpoint는 공개되어야 하지만, 승인 결과로 실제 사용자 인증이 구성된 뒤에는 JWT Filter와 SecurityContext 흐름을 통해 기존 보호 API에 접근하게 된다.
 
 ## 출처
 
