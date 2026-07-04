@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "b59e75bcf0ad68a8",
+        "id": "5ce1a3d7af97a3b1",
         "type": "tabs",
         "children": [
           {
-            "id": "9d0f7d530f78ffde",
+            "id": "4c145b4fefeb808d",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -16,23 +16,8 @@
               "icon": "lucide-git-fork",
               "title": "그래프 뷰"
             }
-          },
-          {
-            "id": "6bdb72f660e82161",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "raw/Study/7. Ci&CD/2026.05.11(월) - 시작/2026.05.11(월) - 시작.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2026.05.11(월) - 시작"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -209,73 +194,34 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "floating": {
-    "id": "a04f40798b616175",
-    "type": "floating",
-    "children": [
-      {
-        "id": "39ad20b2e1234e44",
-        "type": "window",
-        "children": [
-          {
-            "id": "58ff9c4dd809a0e9",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "8bfc571eae3d6ab2",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "raw/Study/10. Python/2026.07.03(금)/2026.07.03(금).md",
-                    "mode": "source",
-                    "source": false
-                  },
-                  "icon": "lucide-file",
-                  "title": "2026.07.03(금)"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 0,
-        "y": 0,
-        "width": 1280,
-        "height": 1080,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "6bdb72f660e82161",
+  "active": "4c145b4fefeb808d",
   "lastOpenFiles": [
-    "raw/Study/7. Ci&CD/2026.05.13(수)/2026.05.13(수).md",
-    "raw/Study/7. Ci&CD/2026.05.12(화)/2026.05.12(화).md",
-    "raw/Study/7. Ci&CD/2026.05.11(월) - 시작/2026.05.11(월) - 시작.md",
-    "raw/Study/6. AWS/2026.05.08(금)/2026.05.08(금).md",
+    "raw/Study/1. Java/Java 총정리/Java 총정리.md",
+    "raw/Study/1. Java/숙제/클래스 숙제 완료.md",
+    "raw/Study/1. Java/2026.03.13(금)/2026.03.13(금).md",
+    "raw/Study/1. Java/2026.03.12(목)/2026.03.12(목).md",
+    "raw/Study/1. Java/2026.03.11(수)/2026.03.11(수).md",
+    "raw/Study/1. Java/2026.03.10(화)/2026.03.10(화).md",
+    "raw/Study/1. Java/2026.03.09(월)/2026.03.09(월).md",
+    "raw/Study/1. Java/2026.03.06(금)/2026.03.06(금).md",
+    "raw/Study/1. Java/2026.03.05(목)/2026.03.05(목).md",
+    "raw/Study/1. Java/2026.03.04(수)/2026.03.04(수).md",
+    "raw/Study/1. Java/2026.03.03(화)/2026.03.03(화).md",
+    "raw/Study/1. Java/2026.02.27(금)/2026.02.27(금).md",
+    "raw/Study/1. Java/2026.02.26(목)/2026.02.26(목).md",
+    "raw/Study/2. Oracle/Oracle 총정리/Oracle 총정리.md",
+    "raw/Study/2. Oracle/2026.03.20(금)/2026.03.20(금).md",
+    "raw/Study/2. Oracle/2026.03.19(목)/2026.03.19(목).md",
+    "raw/Study/2. Oracle/2026.03.18(수)/2026.03.18(수).md",
+    "raw/Study/2. Oracle/2026.03.17(화)/2026.03.17(화).md",
+    "raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md",
+    "raw/Study/2. Oracle/2026.03.13(금) - 시작/2026.03.13(금) - 시작.md",
     "raw/Study/6. AWS/2026.05.07(목)/2026.05.07(목).md",
-    "raw/Study/6. AWS/2026.05.06(수) - 시작/2026.05.06(수) - 시작.md",
-    "raw/Study/5. Linux/2026.04.30(목)/2026.04.30(목).md",
-    "wiki/summaries/2026-06-29-python-regex-xml-json-jupyter.md",
-    "wiki/summaries/2026-06-26-python-exception-file-regex.md",
-    "wiki/summaries/2026-06-25-python-standard-library-oop.md",
-    "wiki/summaries/2026-06-24-python-functions-modules.md",
-    "wiki/summaries/2026-06-23-python-dict-comprehension-builtins.md",
-    "wiki/summaries/2026-06-22-python-control-flow-collections.md",
-    "wiki/concepts/python-oop-basics.md",
-    "wiki/concepts/python-functions-modules-packages.md",
-    "wiki/concepts/python-file-regex-data-processing.md",
-    "wiki/concepts/python-collections-comprehension.md",
-    "wiki/concepts/python-basic-syntax.md",
-    "raw/Study/5. Linux/2026.04.29(수)/2026.04.29(수).md",
-    "raw/Study/5. Linux/2026.04.28(화)/2026.04.28(화).md",
+    "raw/Study/4. FrontEnd_BackEnd/2026.04.20(월)/2026.04.20(월).md",
     "raw/Study/10. Python/2026.07.03(금)/2026.07.03(금).md",
-    "raw/Study/5. Linux/2026.04.27(월)/2026.04.27(월).md",
-    "raw/Study/5. Linux/2026.04.24(금)/2026.04.24(금).md",
-    "raw/Study/5. Linux/2026.04.23(목)/2026.04.23(목).md",
-    "raw/Study/5. Linux/2026.04.22(수) - 시작/2026.04.22(수) - 시작.md",
-    "raw/Study/4. FrontEnd_BackEnd/FrontEnd_BackEnd 총정리/FrontEnd_BackEnd 총정리.md",
+    "raw/Study/5. Linux/2026.04.29(수)/2026.04.29(수).md",
+    "raw/Study/4. FrontEnd_BackEnd/2026.04.06(월)/2026.04.06(월).md",
+    "raw/Study/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md",
     "raw/Study/10. Python/교육 자료/csv 파일들/학생정보08.csv",
     "raw/Study/10. Python/교육 자료/csv 파일들/학생정보07.csv",
     "raw/Study/10. Python/교육 자료/csv 파일들/학생정보02.csv",

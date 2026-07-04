@@ -2,7 +2,7 @@
 
 > 이 파일은 `wiki/` 전체의 목차이자 길잡이다.  
 > 질문에 답하거나 새 자료를 ingest할 때 이 파일을 먼저 읽는다.  
-> Last updated: 2026-07-03 | Total pages: 235
+> Last updated: 2026-07-04 | Total pages: 235
 
 ## 사용 방법
 
@@ -26,13 +26,13 @@
 - [[summaries/2026-03-11-java-inheritance-polymorphism|2026-03-11 Java 상속과 참조 형변환]] — 상속 구조에서 `private`, 생성자, 참조 형변환, 오버라이딩을 다룬 날이다.
 - [[summaries/2026-03-12-java-abstract-interface-static|2026-03-12 Java 추상 클래스, 인터페이스, static/final]] — 확장 for, 추상 메서드, 인터페이스, static/final을 통해 객체지향 설계를 확장한 날이다.
 - [[summaries/2026-03-13-java-project-oracle-start|2026-03-13 Java 팀 프로젝트와 Oracle 시작]] — Java 팀 프로젝트를 진행하고 Oracle/DBeaver 학습으로 넘어가기 시작한 날이다.
-- [[summaries/2026-03-13-java-subject-review|Java 총정리]] — Java 문법·제어문·배열·객체지향·상속/추상화 흐름을 총정리 원본 기준으로 묶은 복습 허브
+- [[summaries/2026-03-13-java-subject-review|Java 총정리]] — Java 문법에서 객체지향·상속·추상화·static/final까지 전체 흐름을 총정리 원본과 날짜별 노트 기준으로 재구성한 복습 허브
 - [[summaries/2026-03-16-oracle-dbms-sql-dbeaver|2026-03-16 Oracle DBMS, SQL, DBeaver 입문]] — DBMS와 SQL의 기본 의미를 배우고 DBeaver로 Oracle 학습을 시작한 날이다.
 - [[summaries/2026-03-17-oracle-ddl-dml-constraints-sequence|2026-03-17 Oracle DDL/DML, 제약조건, 시퀀스]] — 테이블 조작과 데이터 조작, 제약조건, 시퀀스를 실습한 날이다.
 - [[summaries/2026-03-18-oracle-constraints-validation|2026-03-18 Oracle 제약조건 테스트와 유효성 검사]] — Oracle 사용자 재설정, 제약조건 테스트, 폼 유효성 검사 개념을 연결한 날이다.
 - [[summaries/2026-03-19-oracle-functions-join-subquery|2026-03-19 Oracle 함수, GROUP BY, JOIN, 서브쿼리]] — Oracle의 단일행 함수, 그룹 함수, 조인, 서브쿼리를 폭넓게 다룬 날이다.
 - [[summaries/2026-03-20-database-modeling-normalization-view-index|2026-03-20 데이터 모델링, 정규화, View, Index]] — ERD, 데이터 모델링, 정규화, View, Index를 통해 DB 설계 관점을 배운 날이다.
-- [[summaries/2026-03-20-oracle-subject-review|Oracle 총정리]] — SQL 분류·테이블/제약조건·트랜잭션·JOIN/서브쿼리·ERD/정규화를 총정리 원본 기준으로 묶은 복습 허브
+- [[summaries/2026-03-20-oracle-subject-review|Oracle 총정리]] — DBMS/SQL, DDL/DML, 제약조건, JOIN/서브쿼리, ERD/정규화를 총정리 원본과 날짜별 노트 기준으로 재구성한 복습 허브
 - [[summaries/2026-03-23-html-css-intro|2026-03-23 HTML/CSS와 웹 UI 입문]] — 웹 서비스의 데이터 흐름과 HTML/CSS 기본 문법을 배우기 시작한 날이다.
 - [[summaries/2026-03-24-css-layout-javascript-intro|2026-03-24 CSS 레이아웃과 JavaScript 입문]] — CSS 박스 모델·position·글꼴 스타일과 JavaScript 기초를 배운 날이다.
 - [[summaries/2026-03-25-bootstrap-form|2026-03-25 Bootstrap과 HTML Form]] — Bootstrap 5, CDN, 그리드 시스템, Form 요소를 학습한 날이다.
@@ -188,10 +188,10 @@
 ## Entities
 
 <!-- 기술/도구/프레임워크 페이지. 예: - [[entities/java|Java]] — 객체지향 프로그래밍 언어이자 백엔드 학습의 출발점 -->
-- [[entities/java|Java]] — 2026-02-26~03-13 변수·제어문·배열·객체지향 학습을 관통하는 백엔드 기반 언어
+- [[entities/java|Java]] — 2026-02-26~03-13 문법·제어문·배열·객체지향·상속/추상화를 관통하는 백엔드 기반 언어 허브
 - [[entities/git|Git]] — Java `MyJava` 프로젝트 초기화에서 GitHub 협업 흐름까지 이어지는 버전 관리 도구
 - [[entities/github|GitHub]] — Java 실습 저장소 백업에서 branch/PR 협업까지 이어지는 원격 Git 서비스
-- [[entities/oracle-database|Oracle Database]] — SQL, 제약조건, JOIN/서브쿼리, 정규화 학습을 관통하는 관계형 DB
+- [[entities/oracle-database|Oracle Database]] — SQL, 제약조건, 트랜잭션, JOIN/서브쿼리, ERD/정규화 학습을 관통하는 관계형 DB 허브
 - [[entities/dbeaver|DBeaver]] — Oracle/MySQL 접속, SQL 실행, 테이블·ERD 확인에 사용한 데이터베이스 IDE
 - [[entities/html|HTML]] — 웹 문서 구조와 form/table/image 같은 UI 기본 요소를 표현하는 마크업 언어
 - [[entities/css|CSS]] — 선택자, 박스 모델, position, transition 등 화면 표현과 배치를 담당하는 스타일 언어

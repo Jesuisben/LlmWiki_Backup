@@ -1,7 +1,7 @@
 ---
 title: 2026-07-02 LLM Wiki 품질 감사 리포트
 created: 2026-07-02
-updated: 2026-07-03
+updated: 2026-07-04
 type: meta
 tags: [study-log]
 sources:
@@ -41,7 +41,7 @@ confidence: high
 - frontmatter `sources: []` 페이지: 0개
 - 대표 placeholder 문구 잔존 파일(아카이브/작업 로그의 기록성 언급 제외): 0개
 - 깨진 위키링크 후보: 0개
-- 200줄 초과 긴 페이지: 2개 (`wiki/index.md`, `wiki/log.md`)
+- 200줄 초과 긴 페이지: 3개 (`wiki/index.md`, `wiki/log.md`, `wiki/_meta/wiki-quality-audit-2026-07-02.md`)
 - `status: needs-review` 또는 `confidence: low` 페이지: 0개
 - 고립 페이지 후보(본문 링크 기준, index/log 제외): 0개
 
@@ -90,8 +90,9 @@ confidence: high
 
 - `wiki/index.md`
 - `wiki/log.md`
+- `wiki/_meta/wiki-quality-audit-2026-07-02.md`
 
-> 2026-07-03 검증 기준으로 200줄 초과 지식 페이지는 없고, 운영 문서인 index/log만 길다.
+> 2026-07-04 검증 기준으로 200줄 초과 지식 페이지는 없고, 운영 문서인 index/log와 누적 감사 리포트만 길다.
 
 ### needs-review / low confidence 후보
 
@@ -203,3 +204,11 @@ confidence: high
 - 새 summary 1개는 2026-07-02의 `concat`/`merge`/`pivot` 다음 단계로 “범주별 요약과 시각화”를 연결한다.
 - 새 concept `[[concepts/pandas-groupby-aggregation|Pandas groupby와 집계]]`는 `agg()`와 `transform()`의 차이, 다중 색인 정리, 연속형 변수 범주화를 초보자 관점에서 보존한다.
 - 새 entity `[[entities/matplotlib|matplotlib]]`는 Pandas 분석 결과를 그래프로 확인하는 도구로 등록했다.
+
+## 추가 정리: Java/Oracle subject-review hub 고도화
+
+- `raw/Study/1. Java/Java 총정리/Java 총정리.md`와 날짜별 Java MD를 기준으로 `[[summaries/2026-03-13-java-subject-review|Java 총정리]]`를 단순 목차형 복습 허브에서 커리큘럼 흐름형 허브로 보강했다.
+- Java 허브는 문법/변수/형변환/제어문/배열/클래스/생성자/상속/다형성/추상화/static-final을 하나의 학습 경로로 연결하고, `[[entities/java|Java]]` entity에 날짜별 학습 이력과 복습 경로를 보강했다.
+- `raw/Study/2. Oracle/Oracle 총정리/Oracle 총정리.md`와 날짜별 Oracle MD를 기준으로 `[[summaries/2026-03-20-oracle-subject-review|Oracle 총정리]]`를 DBMS/SQL, DBeaver 접속, 트랜잭션, 제약조건, JOIN/서브쿼리, ERD/정규화 흐름으로 보강했다.
+- Oracle 허브와 `[[entities/oracle-database|Oracle Database]]` entity에는 원본의 로컬 실습용 접속값을 재노출하지 않는 보안 메모를 남기고, 역할·절차 중심으로 설명을 일반화했다.
+- 신규 페이지는 만들지 않았으므로 index `Total pages`는 235를 유지했다.
