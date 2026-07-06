@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "raw/Study/10. Python/2026.06.29(월)/2026.06.29(월).md",
+                "file": "raw/Study/10. Python/2026.06.30(화)/2026.06.30(화).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026.06.29(월)"
+              "title": "2026.06.30(화)"
             }
           },
           {
@@ -208,13 +208,13 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "26ea1fd6799a6e07",
+  "active": "0ee06a63beca927a",
   "lastOpenFiles": [
+    "raw/Study/10. Python/2026.06.29(월)/2026.06.29(월).md",
     "raw/ai-instructions/llm-wiki-command-cheatsheet.md",
     "raw/ai-instructions/karpathy-agent-guidelines.md",
     "raw/ai-instructions/hermes-default-profile-instructions.md",
     "raw/ai-instructions/hermes-agent-llm-wiki-initial-setup.md",
-    "raw/Study/10. Python/2026.06.29(월)/2026.06.29(월).md",
     "raw/Study/10. Python/2026.06.26(금)/2026.06.26(금).md",
     "wiki/concepts/jpa-relationship-mapping.md",
     "wiki/concepts/axios-interceptor-error-handling.md",
