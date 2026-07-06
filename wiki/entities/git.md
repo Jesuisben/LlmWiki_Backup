@@ -1,13 +1,15 @@
 ---
 title: Git
 created: 2026-07-02
-updated: 2026-07-03
+updated: 2026-07-06
 type: entity
-tags: [java, ci-cd]
+tags: [github, ci-cd]
 sources:
+  - raw/Study/5. Linux/2026.05.04(월)/2026.05.04(월).md
+  - raw/Study/5. Linux/2026.05.06(수)/2026.05.06(수).md
+  - raw/Study/5. Linux/교육 자료/Github 교안(실습).pdf
   - raw/Study/1. Java/2026.02.27(금)/깃허브 초기 설정.md
   - raw/Study/1. Java/교육 자료/Github 교안(실습).pdf
-  - raw/Study/5. Linux/교육 자료/Github 교안(실습).pdf
 status: stable
 confidence: high
 ---
@@ -20,21 +22,24 @@ Git은 소스 코드 변경 이력을 기록하고 되돌리거나 공유할 수
 
 ## 이 위키에서의 맥락
 
-Java 첫 주부터 `MyJava` 프로젝트를 Git 저장소로 만들며 사용했다. 이때는 개인 프로젝트 이력 관리가 중심이었고, 이후 Linux/GitHub 수업에서는 branch, pull, push, PR, conflict 같은 협업 흐름으로 확장된다.
+Java 첫 주에는 개인 실습 프로젝트를 Git 저장소로 만들며 등장했다. Linux 과목 후반부에는 Git Bash, SourceTree, GitHub branch/PR/conflict를 통해 팀 협업 흐름으로 확장됐다.
 
 ## 핵심 기능 / 특징
 
-- `git init`: 현재 폴더를 Git 저장소로 초기화
-- `git config --global user.name/user.email`: 커밋 작성자 정보 설정
-- `safe.directory`: 신뢰할 수 있는 작업 폴더 등록
-- `.git` 폴더: Git 이력 데이터가 저장되는 내부 폴더
-- `status`, `add`, `commit`, `push`, `pull`: 이후 협업 흐름의 기본 명령
+- `git init`: 현재 폴더를 저장소로 초기화.
+- `git status`: 변경 상태 확인.
+- `git add`: commit 대상 stage.
+- `git commit`: 변경 이력 저장.
+- `git remote`: 원격 저장소 연결.
+- `git push`: 로컬 commit을 원격으로 업로드.
+- `git pull`: 원격 변경을 로컬 branch에 반영.
+- branch/merge/conflict: 협업의 핵심 흐름.
 
 ## 학습 이력
 
-- [[summaries/2026-02-27-github-initial-setup|2026-02-27 GitHub 초기 설정]]: Git 설치, 사용자 정보 설정, `git init`
-- [[summaries/2026-05-04-git-github-sourcetree|2026-05-04 GitHub, Git Bash, SourceTree 협업 입문]]: Git 명령과 GUI 협업 도구 복습
-- [[summaries/2026-05-06-github-branch-pr-conflict|2026-05-06 GitHub 브랜치, Pull Request, 충돌 해결]]: branch/PR/conflict 흐름
+- [[summaries/2026-02-27-github-initial-setup|2026-02-27 GitHub 초기 설정]]: Java 프로젝트 Git 초기화.
+- [[summaries/2026-05-04-git-github-sourcetree|2026-05-04]]: Git Bash와 SourceTree로 기본 흐름 복습.
+- [[summaries/2026-05-06-github-branch-pr-conflict|2026-05-06]]: branch, PR, conflict 해결.
 
 ## 관련 개념
 
@@ -45,6 +50,5 @@ Java 첫 주부터 `MyJava` 프로젝트를 Git 저장소로 만들며 사용했
 
 ## 출처
 
-- `raw/Study/1. Java/2026.02.27(금)/깃허브 초기 설정.md`
-- `raw/Study/1. Java/교육 자료/Github 교안(실습).pdf`
-- `raw/Study/5. Linux/교육 자료/Github 교안(실습).pdf`
+- `raw/Study/5. Linux/2026.05.04(월)/2026.05.04(월).md`
+- `raw/Study/5. Linux/2026.05.06(수)/2026.05.06(수).md`

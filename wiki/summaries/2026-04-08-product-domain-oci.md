@@ -1,55 +1,52 @@
 ---
 title: 2026-04-08 상품 도메인과 OCI 소개
-created: 2026-07-02
-updated: 2026-07-02
+created: 2026-07-06
+updated: 2026-07-06
 type: summary
-tags: [spring-boot, react, typescript, frontend, backend, curriculum, study-log]
+tags: [spring-boot, react, frontend, backend, curriculum, study-log]
 sources:
   - raw/Study/4. FrontEnd_BackEnd/2026.04.08(수)/2026.04.08(수).md
-  - raw/Study/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf
 status: growing
 confidence: high
 ---
+
 # 2026-04-08 상품 도메인과 OCI 소개
 
 ## 한 줄 요약
 
-회원 기능 이후 상품 도메인으로 넘어가 Category/Product Entity와 상품 기능의 기본 구조를 만들기 시작했다.
-
-## 커리큘럼 위치와 흐름
-
-로그인/회원 기반을 만든 뒤 쇼핑몰의 핵심 도메인인 상품으로 전환했다. Category와 Product는 이후 목록, 상세, 등록, 삭제, 검색, 장바구니와 모두 연결되는 중심 데이터다.
+상품 기능 구현을 시작하며 Category enum, Product Entity, 상품 이미지/설명/재고 구조를 만들고 OCI를 클라우드 후보로 소개받았다.
 
 ## 배운 내용
 
-- `Category.java`, `Product.java`를 작성하고 Spring 애플리케이션 실행과 DB 테이블 확인 흐름을 다뤘다.
-- OCI 가입 자료가 언급되지만 현재 교육자료 폴더에는 별도 OCI PDF가 없어, 이번 백필에서는 raw MD의 언급만 출처로 남긴다.
-- Spring Boot 프로젝트 구성 관점에서 Entity는 JPA와 DB 테이블 연결의 중심이다.
+- 주제: 상품 도메인 시작
+- 커리큘럼 위치: Java/Oracle/UI&UX 다음 단계에서 React 화면과 Spring Boot API를 실제 기능 단위로 연결하는 FrontEnd_BackEnd 과정이다.
+- 이전 흐름: [[summaries/2026-03-27-uiux-subject-review|UI&UX 총정리]]에서 HTML/CSS/JavaScript/Bootstrap/jQuery로 브라우저 화면을 만들었다.
+- 다음 흐름: 이 날짜의 내용은 이후 Linux/AWS/CI/CD에서 Spring Boot 애플리케이션을 서버에 올리고 배포하는 흐름으로 이어진다.
 
-## 핵심 실습 / 예제
+## 왜 이 흐름으로 배웠는가
 
-- 상품 Entity에는 이름, 설명, 가격, 재고, 이미지 같은 화면/DB 양쪽에서 필요한 정보가 들어간다.
-- Category는 상품 분류를 담당하며, 이후 검색/필터링과 연결된다.
+회원 인증 다음 단계는 실제 쇼핑몰 기능의 중심인 상품이다. Category와 Product를 만들면서 Java enum, Entity 필드, DB 저장 구조가 화면 기능과 연결됐다.
 
-## 교육자료 대조 메모
+## 핵심 개념
 
-- 사용자 정리 MD를 주 자료로 삼고, MD에서 언급한 교육자료를 실제 확인해 출처에 추가했다.
-- 이번 과목의 큰 흐름은 [[concepts/frontend-backend-architecture|Frontend/Backend 구조]] → [[concepts/spring-boot-rest-api|Spring Boot REST API]] → [[concepts/react-typescript-basics|React와 TypeScript 기본]] → 인증·상품·장바구니·주문·검색 기능 구현으로 이어진다.
+Category enum에는 ALL/BREAD/BEVERAGE/CAKE/MACARON 같은 상수와 한글 설명을 둔다. Product는 상품명, 가격, 카테고리, 재고, 이미지, 설명 등 화면과 DB가 공유해야 할 데이터를 담는다.
+
+## 실습 / 예제
+
+- 원본 노트의 코드는 대부분 Spring Boot `controller/service/repository/entity/dto/config`와 React `pages/types/api/routes` 파일을 실제로 수정하는 형태다.
+- 실습을 복습할 때는 파일명 전체를 외우기보다 “요청 URL → Controller → Service → Repository/DB → DTO/응답 → React state/render” 순서로 따라가면 된다.
+- 실습 데이터나 비밀번호 형태의 예시는 위키에 그대로 재노출하지 않고 역할 중심으로만 정리했다.
 
 ## 헷갈린 점 / 질문
 
-- Entity는 React 화면용 타입과 비슷해 보이지만 DB/JPA와 더 가까운 객체다.
-- 상품 도메인은 단순 목록 표시가 아니라 장바구니·주문·재고 검증의 출발점이다.
-- 클라우드 OCI 언급은 이후 AWS/Linux/배포 흐름과 연결될 수 있지만, 이 날짜의 핵심은 상품 도메인 시작이다.
+enum은 단순 문자열보다 허용 가능한 값을 제한해 오타와 잘못된 카테고리를 줄인다. OCI는 Oracle Cloud Infrastructure로 AWS와 비슷한 클라우드 서비스라는 정도로 먼저 등장했다.
 
 ## 관련 페이지
 
-- [[concepts/product-domain-flow]]
-- [[comparisons/entity-vs-dto]]
-- [[concepts/dto-entity-service-controller]]
-- [[entities/spring-boot]]
+- [[concepts/product-domain-flow|상품 도메인 기능 흐름]], [[comparisons/entity-vs-dto|Entity vs DTO]], [[entities/mysql|MySQL]]
+- [[concepts/fullstack-project-flow|풀스택 프로젝트 흐름]]
+- [[concepts/frontend-backend-architecture|Frontend/Backend 구조]]
 
 ## 출처
 
 - `raw/Study/4. FrontEnd_BackEnd/2026.04.08(수)/2026.04.08(수).md`
-- `raw/Study/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf`

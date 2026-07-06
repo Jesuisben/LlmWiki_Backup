@@ -1,17 +1,14 @@
 ---
 title: 2026-03-25 Bootstrap과 HTML Form
-created: 2026-06-30
-updated: 2026-07-02
+created: 2026-07-02
+updated: 2026-07-06
 type: summary
-tags: [bootstrap, html, frontend]
+tags: [html, css, bootstrap, frontend, curriculum]
 sources:
-  - raw/Study/3. UI&UX/2026.03.25(수)/2026.03.25(수).md
-  - raw/Study/3. UI&UX/교육 자료/웹 서비스 Ui&UX.pdf
-  - raw/Study/3. UI&UX/교육 자료/HTML&JS&CSS 이론(new).pdf
-  - raw/Study/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/B.nobootstrap/CartList.html
-  - raw/Study/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/C.yesbootstrap/CartList.html
-  - raw/Study/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/B.nobootstrap/ProductInsertForm.html
-  - raw/Study/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/C.yesbootstrap/ProductInsertForm.html
+  - "raw/Study/3. UI&UX/2026.03.25(수)/2026.03.25(수).md"
+  - "raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md"
+  - "raw/Study/3. UI&UX/교육 자료/웹 서비스 Ui&UX.pdf"
+  - "raw/Study/3. UI&UX/교육 자료/HTML&JS&CSS 이론(new).pdf"
 status: growing
 confidence: high
 ---
@@ -20,48 +17,69 @@ confidence: high
 
 ## 한 줄 요약
 
-직접 CSS를 작성하던 `B.nobootstrap` 방식과 Bootstrap class를 붙이는 `C.yesbootstrap` 방식을 비교하며, CDN·grid·form·button·select를 배운 날이다.
+[[entities/bootstrap|Bootstrap]]을 CDN으로 연결해 표·버튼·그리드·Form을 빠르게 꾸미고, 상품 등록 화면의 입력 양식을 만들며 이후 상품 목록/상세 페이지 실습의 화면 기반을 준비한 날이다.
 
 ## 배운 내용
 
-- Bootstrap은 HTML/CSS/JS 기반 프론트엔드 프레임워크이며, 반응형·모바일 우선 UI 구성을 돕는다.
-- CDN은 가까운 서버에서 CSS/JS 파일을 가져오게 하는 연결 방식이다. 설치가 아니라 외부 파일 참조다.
-- Bootstrap은 `container`, `row`, `col`, `table`, `btn`, `form-control`, `form-select`, `card` 같은 class를 사용한다.
-- Form은 사용자가 입력한 데이터를 모으는 양식이며, `input`, `select`, `button`, `placeholder`, `label`과 함께 쓴다. ^[raw/Study/3. UI&UX/교육 자료/HTML&JS&CSS 이론(new).pdf]
+### 1. Bootstrap을 왜 쓰는가
+
+원본은 W3Schools Bootstrap 5 문서를 참고해 `CartList.html`을 Bootstrap 방식으로 다시 구성한다. 전날까지는 직접 CSS를 작성했지만, Bootstrap은 이미 만들어진 CSS class를 가져다 쓰는 방식이다.^[raw/Study/3. UI&UX/2026.03.25(수)/2026.03.25(수).md]
+
+예를 들어 `btn`, `btn-primary`, `table`, `container`, `row`, `col-sm-*`, `form-control` 같은 class는 직접 정의하지 않아도 Bootstrap CSS가 의미를 알고 있다.
+
+### 2. CDN 연결
+
+Bootstrap 실습은 CDN 링크를 HTML에 넣는 방식으로 진행한다. CDN은 라이브러리 파일을 내 프로젝트에 복사하지 않고 외부 주소에서 불러오는 방식이다. 이 방식은 빠르게 시작하기 좋지만, 실제 서비스에서는 버전 고정과 네트워크 의존성을 신경 써야 한다.
+
+### 3. Grid system
+
+`container → row → col` 흐름은 Bootstrap 레이아웃의 기본이다.
+
+- `container`: 화면 가운데 정렬과 기본 여백을 잡는 큰 틀
+- `row`: 가로 한 줄
+- `col-sm-1`, `col-sm-9`: 12칸 기준으로 차지할 폭을 나누는 열
+
+이날 `ProductInsertForm`에서 label과 input의 공간 분리를 하며 grid를 사용했다.
+
+### 4. Form과 버튼
+
+`form`은 입력 양식이다. 원본은 `<form id="productform">`, `<input>`, `<select>`, `<button>`을 이용해 상품 등록 폼을 만든다.
+
+버튼은 `type`에 따라 의미가 달라진다.
+
+| 버튼 | 의미 |
+|---|---|
+| `type="submit"` | form 데이터를 제출 |
+| `type="button"` | 아무 기본 동작이 없는 일반 버튼 |
+| `type="reset"` | form 입력값 초기화 |
+
+원본은 “버튼은 양식(form) 안에 있어야 양식 안 데이터들을 이용해 정상 작동한다”는 점을 강조한다.
 
 ## 핵심 실습
 
-### 장바구니 화면: 직접 CSS vs Bootstrap
+### Bootstrap CartList
 
-`B.nobootstrap/CartList.html`은 `.container`, `.row`, `.btn`, `.text-end`, `input[type="number"]` 등을 직접 작성해 장바구니 테이블을 만든다. 반면 `C.yesbootstrap/CartList.html`은 `table table-striped table-bordered`, `text-center`, `align-middle`, `img-thumbnail`, `form-control`, `btn btn-danger btn-sm` 같은 Bootstrap class로 같은 목적을 더 짧게 표현한다. ^[raw/Study/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/B.nobootstrap/CartList.html] ^[raw/Study/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/C.yesbootstrap/CartList.html]
+`B_nobootstrap/CartList.html`과 `C_yesbootstrap/CartList.html`을 비교하며 직접 CSS와 Bootstrap class의 차이를 경험했다. 이 실습은 [[comparisons/library-vs-framework|Library vs Framework]] 감각과도 연결된다.
 
-### 상품 등록 Form
+### ProductInsertForm
 
-`ProductInsertForm.html`도 직접 CSS 버전과 Bootstrap 버전이 나뉜다.
-
-- 직접 CSS 버전: `.row`, `.label`, `.input-area`, `.error`, `.btn`을 작성한다.
-- Bootstrap 버전: `row mb-3`, `col-sm-2`, `col-sm-10`, `form-control`, `form-select`, `invalid-feedback`, `btn btn-primary btn-lg`를 사용한다.
-- 두 버전 모두 `FormData`, `submit` 이벤트, `preventDefault()`, `FileReader`로 이미지 미리보기를 다룬다. ^[raw/Study/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/B.nobootstrap/ProductInsertForm.html] ^[raw/Study/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/C.yesbootstrap/ProductInsertForm.html]
+상품명, 카테고리, 가격 같은 입력을 받을 form을 만들고 `form-control`, `btn`, `row`, `col-*` class를 붙였다. 이후 Spring/React의 상품 등록 폼을 이해할 때 이 HTML form 경험이 배경이 된다.
 
 ## 헷갈린 점 / 질문
 
-- `button type="submit"`은 form 제출 동작이고, `class="btn btn-primary"`는 모양이다. 동작 속성과 Bootstrap 스타일 class를 구분해야 한다.
-- Bootstrap을 쓰면 CSS를 안 배워도 되는 것이 아니다. Bootstrap class는 미리 작성된 CSS 규칙을 호출하는 방식이다.
-- `col-sm-2`와 `col-sm-10`처럼 12칸 grid를 기준으로 공간을 배분한다.
+- Bootstrap class는 “HTML class 속성”을 쓰지만, 실제 의미는 Bootstrap CSS 파일 안에 정의되어 있다.
+- `form`은 입력 양식이고, 단순 목록/표를 보여줄 때는 `table`이나 `div/card` 구조가 더 적절하다.
+- `submit` 버튼은 나중에 `action`, JavaScript 이벤트, Spring Controller/API와 연결될 때 실제 전송 흐름을 갖는다.
 
 ## 관련 페이지
 
-- [[concepts/bootstrap-basics|Bootstrap 기본]]
-- [[concepts/html-css-basics|HTML/CSS 기본]]
-- [[comparisons/library-vs-framework|Library vs Framework]]
-- [[entities/bootstrap|Bootstrap]]
+- [[concepts/bootstrap-basics]]
+- [[concepts/html-css-basics]]
+- [[entities/bootstrap]]
+- [[comparisons/library-vs-framework]]
+- [[comparisons/get-vs-post]]
 
 ## 출처
 
 - `raw/Study/3. UI&UX/2026.03.25(수)/2026.03.25(수).md`
-- `raw/Study/3. UI&UX/교육 자료/웹 서비스 Ui&UX.pdf` p.13~23, p.25~34
-- `raw/Study/3. UI&UX/교육 자료/HTML&JS&CSS 이론(new).pdf` p.40
-- `raw/Study/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/B.nobootstrap/CartList.html`
-- `raw/Study/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/C.yesbootstrap/CartList.html`
-- `raw/Study/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/B.nobootstrap/ProductInsertForm.html`
-- `raw/Study/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/C.yesbootstrap/ProductInsertForm.html`
+- `raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md`

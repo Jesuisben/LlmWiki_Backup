@@ -1,70 +1,124 @@
 ---
 title: UI&UX 총정리
+created: 2026-07-02
+updated: 2026-07-06
 type: summary
-created: 2026-07-03
-updated: 2026-07-03
-tags: [html, css, javascript, bootstrap, frontend, curriculum, study-log]
+tags: [html, css, javascript, bootstrap, jquery, frontend, curriculum, study-log]
 sources:
-  - raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md
+  - "raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md"
+  - "raw/Study/3. UI&UX/UI&UX 총정리/속성들.md"
+  - "raw/Study/3. UI&UX/UI&UX 총정리/태그들.md"
+  - "raw/Study/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md"
+  - "raw/Study/3. UI&UX/2026.03.24(화)/2026.03.24(화).md"
+  - "raw/Study/3. UI&UX/2026.03.25(수)/2026.03.25(수).md"
+  - "raw/Study/3. UI&UX/2026.03.26(목)/2026.03.26(목).md"
+  - "raw/Study/3. UI&UX/2026.03.27(금)/2026.03.27(금).md"
 status: growing
-confidence: medium
+confidence: high
 ---
 
 # UI&UX 총정리
 
 ## 한 줄 요약
 
-`UI&UX 총정리`는 HTML로 구조를 만들고, CSS/Bootstrap으로 화면을 꾸미며, JavaScript/jQuery로 동작을 붙이는 프론트엔드 입문 흐름을 한 문서에 모은 복습 노트다.
+UI&UX 과목은 HTML 문서 구조 → CSS 선택자/박스 모델/레이아웃 → Bootstrap form/grid → JavaScript DOM 상품 페이지 → jQuery 상호작용으로 이어지는, 이후 [[entities/react|React]]와 [[entities/spring-boot|Spring Boot]] 웹서비스 구현의 화면 기초 과정이다.
 
 ## 이 자료의 위치
 
-- 앞 자료: [[summaries/2026-03-20-database-modeling-normalization-view-index|Oracle/DB 설계]]까지는 데이터를 저장하고 조회하는 쪽을 배웠다.
-- 중심 기간: [[summaries/2026-03-23-html-css-intro|2026-03-23]] ~ [[summaries/2026-03-27-jquery-ui-interaction|2026-03-27]] UI&UX 수업 흐름
-- 다음 흐름: React와 Spring Boot가 분리되는 [[summaries/2026-03-30-fullstack-environment-setup|FrontEnd/BackEnd 개발 환경과 커리큘럼 전환]]으로 연결
-- 주의: 원본 첫 줄의 종료일이 `2026.00.00(00)`으로 되어 있어 날짜 범위는 실제 UI&UX 수업 요약 흐름에 맞춰 2026-03-23~2026-03-27로 해석했다.
+`UI&UX 총정리.md`, `속성들.md`, `태그들.md`는 날짜별 수업을 대체하는 파일이 아니라, 2026-03-23~03-27에 흩어진 HTML/CSS/JavaScript/Bootstrap/jQuery 문법을 다시 찾기 쉽게 묶은 복습 허브다. 이번 재ingest에서는 사용자가 다시 변환한 현재 MD들을 기준으로 기존 wiki를 전면 재작성했다.
 
-## 배운 내용
+## 큰 흐름
 
-### 1. HTML: 문서 구조와 태그
+### 1. HTML: 문서의 뼈대
 
-총정리는 HTML을 하이퍼텍스트와 마크업 개념으로 설명하고, tag/element/attribute/value 같은 기본 용어를 정리한다. 표(`table`), 이미지, 링크, 제목, `alt`, form 입력 요소는 이후 상품 목록/상세/장바구니 화면을 만드는 기본 재료가 된다.
+HTML은 브라우저가 읽는 문서 구조다. 총정리 원본은 `html`, `head`, `body`, `title`, `h1~h6`, `p`, `span`, `div`, `ol`, `ul`, `li`, `table`, `thead`, `tbody`, `tr`, `th`, `td`, `img`, `a`, `form`, `input`, `select`, `button` 등을 묶어 정리한다.
 
-### 2. CSS: 선택자, 색상, 박스 모델, 배치
+핵심은 태그를 외우는 것보다 “이 태그가 문서에서 어떤 역할을 하는가”다. 예를 들어 `table`은 행/열 데이터, `form`은 입력 양식, `div`는 영역 분할, `span`은 짧은 인라인 범위다.
 
-CSS는 HTML 대상을 선택자(selector)로 지목하고 스타일을 적용하는 언어로 정리되어 있다. 태그 선택자, class 선택자, id 선택자, inline/internal/external style, 색상 코드, 박스 모델, margin/padding, `display`, `overflow`, `z-index`, FlexBox, pseudo-class가 핵심 복습 범위다.
+### 2. CSS: 선택하고 꾸민다
 
-### 3. JavaScript: 값, 객체, 배열, DOM 조작
+CSS는 선택자로 대상을 고른 뒤 속성과 값을 준다.
 
-JavaScript는 HTML 안의 `<script>`에서 시작해 객체, 배열, 함수, template string, arrow function, `forEach`, console, DOM 조작으로 확장된다. 총정리의 상품 배열 반복 예시는 이후 React에서 배열을 화면 컴포넌트로 렌더링하는 흐름의 전 단계다.
+```css
+.myyellow {
+  color: yellow;
+  background-color: black;
+}
+```
 
-### 4. Bootstrap과 form UI
+총정리 원본은 태그 선택자, class 선택자, id 선택자, 그룹 선택자, 속성 선택자, pseudo-class, inline/internal/external CSS, Box Model, `position`, `overflow`, `display`, `z-index`, `font-family`, `line-height`, `text-decoration`, 단위(px, %)를 다룬다.
 
-Bootstrap은 HTML/CSS/JS 기반 프레임워크로, 반응형(responsive), mobile-first, grid, form, button, card 같은 UI 구성을 빠르게 만든다. 총정리에서는 `form`, `select`, button, label/input-area 조합이 입력 양식의 중심으로 정리되어 있다.
+### 3. Bootstrap: class로 빠르게 화면 구성
 
-### 5. jQuery와 상호작용
+Bootstrap은 미리 정의된 class를 사용해 table, button, form, grid, card를 빠르게 만든다. `container`, `row`, `col-*`, `btn`, `btn-primary`, `form-control`, `table` 같은 class가 반복된다.
 
-날짜별 UI&UX 학습에서는 jQuery로 선택자, 이벤트, class/속성 조작, show/hide 같은 상호작용을 다뤘다. 총정리에는 JavaScript 중심 내용이 더 많이 남아 있으므로, jQuery는 [[concepts/jquery-basics|jQuery 기본]]과 날짜별 요약을 함께 보는 것이 좋다.
+이 수업에서는 직접 CSS로 만든 화면과 Bootstrap으로 만든 화면을 나란히 경험하면서 “내가 CSS를 직접 작성하는 경우”와 “프레임워크 class를 조합하는 경우”를 비교했다.
 
-## 헷갈린 점 / 질문
+### 4. JavaScript: HTML을 동적으로 바꾼다
 
-- HTML은 구조, CSS는 표현, JavaScript는 동작을 담당한다. Bootstrap은 이 중 특히 화면 구성과 반응형 UI를 빠르게 만드는 도구다.
-- `<table>`은 표 데이터 구조에 적합하지만, 전체 화면 레이아웃 용도로 남용하면 유지보수가 어렵다.
-- `class` 선택자는 여러 요소에 재사용할 수 있고, `id` 선택자는 한 문서에서 특정 요소를 가리키는 데 쓴다.
-- JavaScript의 template string과 arrow function은 문법이 낯설지만, React/TypeScript 코드에서 계속 등장하므로 초반에 익숙해질 필요가 있다.
+JavaScript는 `document` 객체를 통해 HTML 문서를 조작한다. 총정리 원본은 `getElementById`, `innerHTML`, 객체/배열, `forEach`, template string, arrow function, `createElement`, `appendChild`, 이벤트, `URLSearchParams`를 상품 목록/상세 페이지 예제로 묶는다.
+
+이 단계에서 HTML은 고정 문서가 아니라 데이터에 따라 바뀌는 화면이 된다.
+
+### 5. jQuery: 선택자+이벤트를 짧게 쓴다
+
+jQuery는 JavaScript 라이브러리다. `$()`로 요소를 선택하고, `click`, `change`, `toggleClass`, `addClass`, `removeClass`, `show`, `hide`, `attr` 등을 사용해 이미지 UI를 조작한다.
+
+## 태그/속성 복습 포인트
+
+### 태그
+
+`태그들.md`는 자주 쓰는 HTML 태그를 짧게 모은다. 복습할 때는 다음처럼 기능별로 묶는 것이 좋다.
+
+| 범주 | 대표 태그 | 수업상 쓰임 |
+|---|---|---|
+| 문서 구조 | `html`, `head`, `body`, `title` | 문서 전체 틀 |
+| 텍스트 | `h1~h6`, `p`, `span` | 제목·문단·짧은 범위 |
+| 목록 | `ol`, `ul`, `li` | 순서/비순서 목록 |
+| 표 | `table`, `thead`, `tbody`, `tr`, `th`, `td` | 장바구니/상품 목록 표 |
+| 이미지/링크 | `img`, `a` | 이미지 표시, 이동 |
+| 입력 | `form`, `input`, `select`, `button` | 상품 등록 양식 |
+
+### 속성
+
+`속성들.md`는 CSS 속성을 중심으로 정리한다. `width`, `border`, `position`, `overflow`, `display`, `list-style-position`, `vertical-align`, `font-family`, `font-style`, `line-height`가 날짜별 실습과 연결된다.
+
+복습할 때는 속성을 단독 암기하지 말고 다음 질문으로 묶어 보는 것이 좋다.
+
+- 크기: `width`, `height`
+- 테두리: `border`, `border-top`, `border-left`
+- 배치: `position`, `top`, `left`, `z-index`
+- 넘침/표시: `overflow`, `display`
+- 목록: `list-style-type`, `list-style-position`
+- 텍스트: `font-family`, `font-style`, `line-height`, `text-decoration`
+
+## 날짜별 복습 경로
+
+1. [[summaries/2026-03-23-html-css-intro|2026-03-23]] — 웹 흐름, HTML 태그/속성, CSS 선택자, table, Box Model 기초
+2. [[summaries/2026-03-24-css-layout-javascript-intro|2026-03-24]] — div 레이아웃, position/display, JavaScript `document`와 `innerHTML`
+3. [[summaries/2026-03-25-bootstrap-form|2026-03-25]] — Bootstrap CDN/grid/form/button, 상품 등록 폼
+4. [[summaries/2026-03-26-javascript-dom-product-pages|2026-03-26]] — 상품 배열, DOM 생성, 이벤트, 상세 페이지, GET/POST
+5. [[summaries/2026-03-27-jquery-ui-interaction|2026-03-27]] — jQuery 선택자, class/속성 조작, show/hide, 이미지 UI
+
+## 이후 과정과의 연결
+
+- [[entities/react|React]]에서는 JavaScript로 DOM을 직접 만지기보다 state/props로 화면을 선언적으로 바꾼다. 그러나 DOM, 이벤트, 배열 렌더링 감각은 그대로 이어진다.
+- [[entities/spring-boot|Spring Boot]]와 연결될 때 form, GET/POST, URL parameter 개념이 Controller/API 요청 이해의 기반이 된다.
+- [[concepts/frontend-backend-architecture|Frontend/Backend 구조]]에서 UI&UX 과목은 프론트엔드 화면 층의 가장 낮은 기초다.
 
 ## 관련 페이지
 
-- [[entities/html|HTML]]
-- [[entities/css|CSS]]
-- [[entities/javascript|JavaScript]]
-- [[entities/bootstrap|Bootstrap]]
-- [[entities/jquery|jQuery]]
-- [[concepts/html-css-basics|HTML/CSS 기본]]
-- [[concepts/javascript-dom|JavaScript와 DOM]]
-- [[concepts/bootstrap-basics|Bootstrap 기본]]
-- [[comparisons/inline-style-vs-internal-css-vs-external-css|inline style vs internal CSS vs external CSS]]
-- [[comparisons/library-vs-framework|Library vs Framework]]
+- [[concepts/html-css-basics]]
+- [[concepts/javascript-dom]]
+- [[concepts/bootstrap-basics]]
+- [[concepts/jquery-basics]]
+- [[comparisons/html-tag-vs-attribute]]
+- [[comparisons/id-vs-class]]
+- [[comparisons/javascript-dom-vs-jquery]]
 
 ## 출처
 
 - `raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md`
+- `raw/Study/3. UI&UX/UI&UX 총정리/속성들.md`
+- `raw/Study/3. UI&UX/UI&UX 총정리/태그들.md`
+- `raw/Study/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md` ~ `raw/Study/3. UI&UX/2026.03.27(금)/2026.03.27(금).md`

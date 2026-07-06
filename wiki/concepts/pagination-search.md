@@ -1,14 +1,12 @@
 ---
 title: 페이징과 검색
-created: 2026-07-02
-updated: 2026-07-02
+created: 2026-07-06
+updated: 2026-07-06
 type: concept
-tags: [spring-boot, react, backend, frontend]
+tags: [spring-boot, react, frontend, backend]
 sources:
   - raw/Study/4. FrontEnd_BackEnd/2026.04.21(화)/2026.04.21(화).md
   - raw/Study/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md
-  - raw/Study/4. FrontEnd_BackEnd/교육 자료/필드 검색 기능.pdf
-  - raw/Study/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf
 status: growing
 confidence: high
 ---
@@ -17,39 +15,33 @@ confidence: high
 
 ## 정의
 
-많은 데이터를 여러 페이지로 나누고, 사용자가 입력한 조건에 맞는 데이터만 조회하는 방식이다.
+페이징과 검색은 상품 목록을 한 번에 모두 가져오지 않고 page/size/searchMode/searchKeyword 같은 조건으로 나누어 조회하는 방식이다.
 
 ## 왜 중요한가
 
-FrontEnd_BackEnd 단계에서는 문법 하나보다 화면, API, 업무 규칙, DB가 어떻게 연결되는지가 중요하다. 이 개념은 사용자의 쇼핑몰형 실습에서 반복 등장하는 흐름을 복원하기 위한 기준점이다.
+데이터가 많아질수록 전체 목록을 매번 가져오는 방식은 느리고 비효율적이다. React 화면은 현재 페이지와 검색어를 state로 가지고, Spring Boot는 Pageable과 Specification으로 DB 조회를 제한한다.
 
 ## 핵심 설명
 
-- React ProductList는 pageNumber와 검색 상태를 관리한다.
-- useEffect는 페이지 번호나 검색 조건이 바뀔 때 다시 목록을 가져온다.
-- ProductController는 query parameter를 받아 Service로 넘긴다.
-- Service/Repository는 Pageable, searchDateType, searchMode로 DB 조회를 수행한다.
-- 응답에는 현재 페이지 데이터와 전체 페이지 수 같은 UI 정보가 필요하다.
+- React: pageNumber, pageSize, 검색 mode/keyword를 state로 관리한다.
+- API 요청: query parameter로 page, size, search 조건을 보낸다.
+- Spring Controller: 요청 parameter를 받아 Service에 전달한다.
+- Service/Repository: Specification으로 검색 조건을 만들고 Pageable로 정렬·페이지 크기를 적용한다.
+- 응답: Page 객체의 `content`, `number`, `size`, `totalPages` 등을 React가 화면에 반영한다.
 
 ## 수업 예시
 
-- [[summaries/2026-04-21-product-pagination-search-react|2026-04-21 상품 목록 페이징과 필드 검색]] — ProductList.tsx, useEffect, Paging 컴포넌트
-- [[summaries/2026-04-22-product-repository-pageable-search|2026-04-22 ProductRepository와 Pageable 검색]] — ProductRepository, Pageable, searchDateType, searchMode, MySQL 테스트
+2026-04-21에는 ProductList에서 `response.data.content`, `pageable?.pageNumber ?? 0` 같은 프론트 처리와 Paging 컴포넌트를 다뤘다. 2026-04-22에는 ProductRepository의 `findAll(Specification<Product> spec, Pageable pageable)`와 Service 검색 조건 생성을 배웠다.
 
 ## 자주 헷갈리는 점
 
-비슷한 이름의 파일이나 URL이 여러 계층에 존재한다. React의 화면 상태, Spring의 요청 처리, DB 저장 상태를 같은 것으로 보지 말고 역할별로 나누어 추적해야 한다.
+`pageable?.pageNumber ?? 0`에서 `?.`는 값이 없을 때 안전하게 접근하는 문법이고, `??`는 null/undefined일 때 기본값을 쓰는 문법이다. 검색 조건 비교에서는 `"name".equals(searchMode)`처럼 쓰면 null에 더 안전하다.
 
 ## 관련 개념
 
-- [[concepts/spring-data-jpa-repository|Spring Data JPA Repository]]
-- [[concepts/react-typescript-basics|React와 TypeScript 기본]]
-- [[concepts/spring-boot-rest-api|Spring Boot REST API]]
-
-
-## 교육자료 대조 보강
-
-필드 검색 기능 PDF는 `totalElements`, `pageSize`, `totalPages`, `pageNumber`, `pageCount`, `beginPage`, `endPage`, `pagingStatus` 같은 페이징 지표를 제시한다. SpringBoot 교안 p.89~90의 `Pageable`, `Sort`, query method 설명과 함께 보면, React의 페이지 상태와 Spring Data JPA의 조회 범위 제한이 하나의 검색 흐름으로 이어진다.
+- [[concepts/spring-data-jpa-specification-pageable|Spring Data JPA Specification과 Pageable]]
+- [[concepts/spring-product-search-flow|Spring 상품 검색 흐름]]
+- [[concepts/product-domain-flow|상품 도메인 기능 흐름]]
 
 ## 출처
 

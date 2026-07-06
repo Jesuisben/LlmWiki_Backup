@@ -128,12 +128,15 @@ confidence: high | medium | low
 - `javascript`
 - `typescript`
 - `bootstrap`
+- `jquery`
 - `spring`
 - `spring-boot`
 - `react`
 - `frontend`
 - `backend`
 - `linux`
+- `docker`
+- `github`
 - `aws`
 - `ci-cd`
 - `auth`

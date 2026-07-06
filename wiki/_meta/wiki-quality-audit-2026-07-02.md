@@ -1,7 +1,7 @@
 ---
 title: 2026-07-02 LLM Wiki 품질 감사 리포트
 created: 2026-07-02
-updated: 2026-07-04
+updated: 2026-07-06
 type: meta
 tags: [study-log]
 sources:
@@ -23,19 +23,14 @@ confidence: high
 
 ## 결론
 
-이 리포트는 2026-07-02 기준으로 최신화되었다. 초기 감사에서 지적했던 “대량 ingest로 만든 얕은 초안” 문제는 핵심 페이지 고도화와 비교 페이지 추가를 거치며 줄어들었다.
+이 리포트는 2026-07-06 기준으로 최신화되었다. 초기 감사에서 지적했던 “대량 ingest로 만든 얕은 초안” 문제는 핵심 페이지 고도화와 비교 페이지 추가를 거치며 줄어들었다.
 
-이번 마감 작업에서는 감사 리포트에 남아 있던 Java 잔여 후보 2개를 처리했다.
-
-- `raw/Study/1. Java/Java 총정리/Java 총정리.md`
-- `raw/Study/1. Java/숙제/클래스 숙제 완료.md`
-
-처리 방식은 새 요약 페이지를 추가하는 대신, 기존 Java 핵심 concept/entity 페이지를 보강하고 비교/개념 페이지를 추가하는 방향으로 잡았다.
+이번 후속 점검에서는 방금 재ingest한 `raw/Study/4. FrontEnd_BackEnd` 기반 wiki 27개를 감사 리포트 기준으로 다시 확인했다. FrontEnd_BackEnd 대상 파일은 frontmatter, 출처, index 등록, placeholder, 깨진 링크, 저신뢰 표시가 모두 통과했고, 감사 리포트의 낡은 수치와 일부 index 설명·본문 링크를 최신 상태로 정리했다.
 
 ## 현재 전체 수치
 
-- `wiki/` Markdown 파일 수: 237개
-- `wiki/index.md`의 `Total pages` 표기: 235개
+- `wiki/` Markdown 파일 수: 243개
+- `wiki/index.md`의 `Total pages` 표기: 241개
 - index 누락 페이지: 0개
 - frontmatter 누락 페이지(`index.md`, `log.md` 제외): 0개
 - frontmatter `sources: []` 페이지: 0개
@@ -212,3 +207,15 @@ confidence: high
 - `raw/Study/2. Oracle/Oracle 총정리/Oracle 총정리.md`와 날짜별 Oracle MD를 기준으로 `[[summaries/2026-03-20-oracle-subject-review|Oracle 총정리]]`를 DBMS/SQL, DBeaver 접속, 트랜잭션, 제약조건, JOIN/서브쿼리, ERD/정규화 흐름으로 보강했다.
 - Oracle 허브와 `[[entities/oracle-database|Oracle Database]]` entity에는 원본의 로컬 실습용 접속값을 재노출하지 않는 보안 메모를 남기고, 역할·절차 중심으로 설명을 일반화했다.
 - 신규 페이지는 만들지 않았으므로 index `Total pages`는 235를 유지했다.
+
+## 추가 정리: FrontEnd_BackEnd 변경 MD 기준 전면 재ingest 후속 점검
+
+- `raw/Study/4. FrontEnd_BackEnd`의 변경 MD 19개를 기준으로 재작성/재검증된 FrontEnd_BackEnd wiki 27개를 감사 기준으로 점검했다.
+- 점검 범위:
+  - 날짜별 summary 18개와 `[[summaries/2026-04-03-frontend-backend-subject-review|FrontEnd_BackEnd 총정리]]`
+  - `[[concepts/fullstack-project-flow|풀스택 프로젝트 흐름]]`, `[[concepts/product-domain-flow|상품 도메인 기능 흐름]]`, `[[concepts/shopping-cart-flow|장바구니 기능 흐름]]`, `[[concepts/order-flow|주문 기능 흐름]]`, `[[concepts/pagination-search|페이징과 검색]]`
+  - 신규 durable page `[[concepts/jpa-relationship-mapping|JPA 연관관계 매핑]]`, `[[concepts/axios-interceptor-error-handling|Axios interceptor와 API 오류 처리]]`, `[[comparisons/jpql-vs-sql|JPQL vs SQL]]`
+- 결과: scoped frontmatter 누락 0개, `sources: []` 0개, `raw/Study/4. FrontEnd_BackEnd` 출처 누락 0개, placeholder/TODO 0개, index 미등록 0개, scoped 깨진 위키링크 0개, `needs-review`/`confidence: low` 0개였다.
+- `wiki/index.md`에서 일부 설명이 다음 항목에 붙어 보이던 줄을 분리했다. 특히 `JWT, 세션, 쿠키 인증`, `Axios interceptor와 API 오류 처리`, `상품 도메인 기능 흐름`, `JPA 연관관계 매핑`, `Entity vs DTO`, `JPQL vs SQL` 항목의 한 줄 설명을 정리했다.
+- 본문 링크 기준 고립 후보였던 `[[summaries/2026-04-17-cart-total-array-some|2026-04-17 장바구니 합계와 Array some]]`, `[[summaries/2026-04-20-order-list-scenario|2026-04-20 주문 목록과 테스트 시나리오]]`, `[[summaries/2026-05-20-filingbox-giga-mega|2026-05-20 FilingBox GIGA/MEGA와 WORM 스토리지]]`를 관련 concept 본문에서 자연스럽게 연결했다.
+- 현재 전체 수치는 `wiki/` Markdown 243개, `index.md` Total pages 241개로 일치한다. 전역 frontmatter 누락, 빈 sources, 대표 placeholder, 깨진 위키링크, 저신뢰 후보도 0개다.

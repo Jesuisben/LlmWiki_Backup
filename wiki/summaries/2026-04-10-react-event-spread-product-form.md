@@ -1,55 +1,52 @@
 ---
 title: 2026-04-10 React 이벤트 객체와 전개 연산자
-created: 2026-07-02
-updated: 2026-07-02
+created: 2026-07-06
+updated: 2026-07-06
 type: summary
-tags: [spring-boot, react, typescript, frontend, backend, curriculum, study-log]
+tags: [spring-boot, react, frontend, backend, curriculum, study-log, typescript]
 sources:
   - raw/Study/4. FrontEnd_BackEnd/2026.04.10(금)/2026.04.10(금).md
-  - raw/Study/4. FrontEnd_BackEnd/교육 자료/React 교안.pdf
 status: growing
 confidence: high
 ---
+
 # 2026-04-10 React 이벤트 객체와 전개 연산자
 
 ## 한 줄 요약
 
-React 이벤트 객체와 전개 연산자를 이용해 상품 등록 폼의 상태를 안전하게 갱신하는 방법을 배웠다.
-
-## 커리큘럼 위치와 흐름
-
-상품 삭제 다음으로 상품 등록 화면을 만들며, 사용자가 입력한 값을 React state에 누적하는 패턴을 익혔다. 이는 이후 회원가입, 장바구니 선택, 검색 조건 관리에도 반복된다.
+React의 event object와 전개 연산자를 이용해 상품 등록/수정 Form state를 갱신하고 Spring Controller의 검증 오류 응답을 화면에 연결했다.
 
 ## 배운 내용
 
-- React 교안 p.72~73은 `onClick`, `onChange` 같은 이벤트 이름과 event object의 주요 속성/메서드를 설명한다.
-- React 교안 p.41은 전개 연산자 `...`가 배열/객체의 나머지 값 또는 기존 값을 펼쳐 새 객체를 만들 때 쓰임을 보여준다.
-- 상품 등록 폼에서 입력값 변경 시 기존 state를 보존하고 특정 필드만 갱신하는 방식으로 연결된다.
+- 주제: 폼 상태 관리
+- 커리큘럼 위치: Java/Oracle/UI&UX 다음 단계에서 React 화면과 Spring Boot API를 실제 기능 단위로 연결하는 FrontEnd_BackEnd 과정이다.
+- 이전 흐름: [[summaries/2026-03-27-uiux-subject-review|UI&UX 총정리]]에서 HTML/CSS/JavaScript/Bootstrap/jQuery로 브라우저 화면을 만들었다.
+- 다음 흐름: 이 날짜의 내용은 이후 Linux/AWS/CI/CD에서 Spring Boot 애플리케이션을 서버에 올리고 배포하는 흐름으로 이어진다.
 
-## 핵심 실습 / 예제
+## 왜 이 흐름으로 배웠는가
 
-- `setProduct({...product, [name]: value})` 같은 패턴은 기존 상품 입력값을 유지하면서 변경된 input만 반영하는 핵심 예제다.
-- 이미지 업로드/미리보기에서는 `data:image/png;base64,...` 형태의 데이터 URL도 등장했다.
+상품 등록 화면은 여러 input 값을 하나의 객체 state로 모아야 하므로 이벤트와 전개 연산자가 실제 프로젝트 패턴으로 등장했다.
 
-## 교육자료 대조 메모
+## 핵심 개념
 
-- 사용자 정리 MD를 주 자료로 삼고, MD에서 언급한 교육자료를 실제 확인해 출처에 추가했다.
-- 이번 과목의 큰 흐름은 [[concepts/frontend-backend-architecture|Frontend/Backend 구조]] → [[concepts/spring-boot-rest-api|Spring Boot REST API]] → [[concepts/react-typescript-basics|React와 TypeScript 기본]] → 인증·상품·장바구니·주문·검색 기능 구현으로 이어진다.
+`event.target`에서 name과 value를 꺼내 `setProduct({ ...product, [name]: value })` 형태로 해당 필드만 갱신했다. Spring Controller는 `@Valid`, `@RequestBody`, `BindingResult`로 오류를 모으고 React는 errors와 general message를 화면 오류 state에 반영했다.
+
+## 실습 / 예제
+
+- 원본 노트의 코드는 대부분 Spring Boot `controller/service/repository/entity/dto/config`와 React `pages/types/api/routes` 파일을 실제로 수정하는 형태다.
+- 실습을 복습할 때는 파일명 전체를 외우기보다 “요청 URL → Controller → Service → Repository/DB → DTO/응답 → React state/render” 순서로 따라가면 된다.
+- 실습 데이터나 비밀번호 형태의 예시는 위키에 그대로 재노출하지 않고 역할 중심으로만 정리했다.
 
 ## 헷갈린 점 / 질문
 
-- state 객체를 직접 수정하면 React가 변경을 감지하지 못할 수 있다.
-- `event.target`과 `event.currentTarget`은 같은 경우도 있지만 이벤트 위임/버블링에서는 다를 수 있다.
-- 전개 연산자는 깊은 복사를 자동으로 보장하는 만능 도구가 아니라, 주로 얕은 복사에 쓰인다.
+전개 연산자는 기존 객체를 복사한 뒤 바뀐 속성만 덮어쓰는 패턴이다. 직접 state 객체를 수정하면 React가 변경을 감지하지 못할 수 있다.
 
 ## 관련 페이지
 
-- [[concepts/react-form-state-event]]
-- [[comparisons/props-vs-state]]
-- [[concepts/product-domain-flow]]
-- [[entities/react]]
+- [[concepts/react-form-state-event|React 폼 상태와 이벤트]], [[concepts/product-domain-flow|상품 도메인 기능 흐름]], [[concepts/axios-interceptor-error-handling|Axios interceptor와 API 오류 처리]]
+- [[concepts/fullstack-project-flow|풀스택 프로젝트 흐름]]
+- [[concepts/frontend-backend-architecture|Frontend/Backend 구조]]
 
 ## 출처
 
 - `raw/Study/4. FrontEnd_BackEnd/2026.04.10(금)/2026.04.10(금).md`
-- `raw/Study/4. FrontEnd_BackEnd/교육 자료/React 교안.pdf`

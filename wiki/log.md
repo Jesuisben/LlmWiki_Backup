@@ -13,6 +13,90 @@
 
 ## 현재 로그
 
+## [2026-07-06] ingest | Linux 변경 MD 기준 전면 재ingest
+
+- 목적: 정밀 검증이 끝난 `raw/Study/5. Linux` 현재 MD를 기준으로 기존 Linux/Docker/GitHub wiki를 증분 보강이 아니라 재작성/재검증함.
+- 원칙: `raw/`는 수정하지 않고 `wiki/`만 수정함. 날짜별 MD와 `Linux 총정리`를 주 provenance로 삼고, 교육자료 MD/PDF/이미지는 기존 보강 출처로 유지함.
+- 재작성한 summary:
+  - `wiki/summaries/2026-04-22-linux-install-ssh-cli.md` ~ `wiki/summaries/2026-05-06-github-branch-pr-conflict.md` 날짜별 10개
+  - `wiki/summaries/2026-05-06-linux-subject-review.md`
+- 재작성한 concept/entity/comparison:
+  - Linux: `linux-cli-files`, `linux-users-permissions`, `linux-package-archive`, `linux-web-server-apache-nginx`, `linux-spring-boot-server-deploy`
+  - Docker: `docker-install-permission-setup`, `docker-image-container`, `docker-cp-exec-container-files`, `docker-network-volume`, `docker-reverse-proxy-load-balancing`, `docker-compose-manifest`, `dockerfile-vs-compose`
+  - Git/GitHub: `git-github-collaboration`, `git-fetch-vs-pull-vs-clone`, `git`, `github`, `source-tree`
+  - entities/comparisons: `linux`, `docker`, `maven`, `docker-commit-vs-dockerfile`, `docker-cp-vs-bind-mount-vs-volume`
+- 신규 페이지는 만들지 않아 `wiki/index.md` Total pages는 241을 유지하고, Linux 관련 설명 줄만 현재 원본 기준으로 보정함.
+
+
+## [2026-07-06] update | FrontEnd_BackEnd 재ingest 후속 품질 점검
+
+- 목적: 방금 재ingest한 FrontEnd_BackEnd wiki를 `AGENTS.md`와 `llm-wiki-vault` 품질 기준에 맞춰 감사 리포트와 연결해 후속 점검함.
+- 점검 결과: FrontEnd_BackEnd 대상 27개 파일에서 frontmatter 누락, 빈 sources, `raw/Study/4. FrontEnd_BackEnd` 출처 누락, placeholder/TODO, index 미등록, scoped 깨진 wikilink, `needs-review`/`confidence: low`가 모두 0개임을 확인함.
+- 수정한 파일:
+  - `wiki/_meta/wiki-quality-audit-2026-07-02.md` — `updated: 2026-07-06`, 현재 전체 수치 243/241, FrontEnd_BackEnd 후속 점검 섹션 추가.
+  - `wiki/index.md` — `jwt-session-cookie-auth`, `axios-interceptor-error-handling`, `product-domain-flow`, `jpa-relationship-mapping`, `entity-vs-dto`, `jpql-vs-sql` 항목 설명 줄 정리.
+  - `wiki/concepts/shopping-cart-flow.md`, `wiki/concepts/order-flow.md`, `wiki/concepts/passwordless-x1280-auth-flow.md` — 본문 링크 기준 고립 후보 summary 3개를 자연스럽게 연결.
+- 원칙: `raw/`는 수정하지 않고 `wiki/`만 수정함.
+
+## [2026-07-06] ingest | FrontEnd_BackEnd 변경 MD 19개 기준 전면 재ingest
+
+- 목적: 방금 변환된 `raw/Study/4. FrontEnd_BackEnd` MD 19개를 기준으로 기존 FrontEnd_BackEnd wiki를 증분 보강이 아니라 현재 원본 기준으로 재작성/재검증함.
+- 원칙: `raw/`는 수정하지 않고 `wiki/`만 수정함. 교육 자료는 이번 패스에서 필요할 때의 보강 출처로만 두고, 기본 provenance는 현재 MD 19개로 삼음.
+- 재작성한 summary:
+  - `wiki/summaries/2026-03-30-fullstack-environment-setup.md` ~ `wiki/summaries/2026-04-22-product-repository-pageable-search.md` 날짜별 18개
+  - `wiki/summaries/2026-04-03-frontend-backend-subject-review.md`
+- 보강한 기존 concept:
+  - `wiki/concepts/fullstack-project-flow.md`
+  - `wiki/concepts/product-domain-flow.md`
+  - `wiki/concepts/shopping-cart-flow.md`
+  - `wiki/concepts/order-flow.md`
+  - `wiki/concepts/pagination-search.md`
+- 새로 추가한 durable page:
+  - `wiki/concepts/jpa-relationship-mapping.md`
+  - `wiki/concepts/axios-interceptor-error-handling.md`
+  - `wiki/comparisons/jpql-vs-sql.md`
+- `wiki/index.md`에 신규 페이지 3개를 등록하고 Total pages를 241로 갱신함.
+
+
+## [2026-07-06] lint | UI&UX 태그 허용 목록 후속 정리
+
+- 목적: UI&UX 재ingest 후속 lint에서 `jquery` 태그가 실제 UI&UX 학습 페이지에 사용되었으나 `AGENTS.md` 허용 태그 목록에는 없던 상태를 정리함.
+- 결정: jQuery는 2026-03-27 수업과 UI&UX 총정리에서 중심적으로 다룬 프론트엔드 라이브러리이므로 `AGENTS.md` 태그 규칙의 허용 태그에 `jquery`를 추가함. 이어서 전체 태그 lint에 남아 있던 `docker`, `github`도 각각 Linux/Docker·CI/CD/GitHub Actions 학습에서 반복되는 핵심 주제라 허용 태그로 함께 반영함.
+- 확인한 `jquery` 태그 사용 페이지:
+  - `wiki/summaries/2026-03-27-jquery-ui-interaction.md`
+  - `wiki/summaries/2026-03-27-uiux-subject-review.md`
+  - `wiki/concepts/jquery-basics.md`
+  - `wiki/entities/jquery.md`
+  - `wiki/comparisons/javascript-dom-vs-jquery.md`
+  - `wiki/comparisons/library-vs-framework.md`
+- 추가 반영한 비-UI&UX 태그 사용 페이지:
+  - `wiki/concepts/github-actions-secrets-deploy.md` — `github`
+  - `wiki/summaries/2026-05-06-linux-subject-review.md` — `docker`
+  - `wiki/summaries/2026-05-15-passwordless-x1280-docker-service.md` — `docker`
+  - `wiki/summaries/2026-05-18-passwordless-x1280-server-spring-sample.md` — `docker`
+- 범위: 이번 정리는 태그 허용 목록 후속 정리이므로 `raw/`는 수정하지 않았고, 새 페이지 생성 없이 `AGENTS.md`와 `wiki/log.md`만 갱신함.
+
+## [2026-07-06] ingest | UI&UX 변경 MD 기준 전면 재ingest
+
+- 목적: `raw/Study/3. UI&UX`의 날짜별 MD와 `UI&UX 총정리`, `속성들`, `태그들` MD가 갱신된 상태를 기준으로 기존 UI&UX wiki를 증분 보강이 아니라 전면 재작성/재검증함.
+- 원칙: `raw/`는 수정하지 않고 `wiki/`만 수정함. 기존 Obsidian 링크 안정성을 위해 파일 삭제 후 재생성이 아니라 기존 UI&UX wiki 파일을 현재 원본 기준으로 갈아엎는 방식으로 수행함.
+- 재작성한 summary:
+  - `wiki/summaries/2026-03-23-html-css-intro.md`
+  - `wiki/summaries/2026-03-24-css-layout-javascript-intro.md`
+  - `wiki/summaries/2026-03-25-bootstrap-form.md`
+  - `wiki/summaries/2026-03-26-javascript-dom-product-pages.md`
+  - `wiki/summaries/2026-03-27-jquery-ui-interaction.md`
+  - `wiki/summaries/2026-03-27-uiux-subject-review.md`
+- 재작성한 concept/entity/comparison:
+  - `wiki/concepts/html-css-basics.md`, `wiki/concepts/javascript-dom.md`, `wiki/concepts/bootstrap-basics.md`, `wiki/concepts/jquery-basics.md`
+  - `wiki/entities/html.md`, `wiki/entities/css.md`, `wiki/entities/javascript.md`, `wiki/entities/bootstrap.md`, `wiki/entities/jquery.md`
+  - `wiki/comparisons/library-vs-framework.md`, `wiki/comparisons/inline-style-vs-internal-css-vs-external-css.md`, `wiki/comparisons/get-vs-post.md`
+- 새로 추가한 comparison:
+  - `wiki/comparisons/html-tag-vs-attribute.md`
+  - `wiki/comparisons/id-vs-class.md`
+  - `wiki/comparisons/javascript-dom-vs-jquery.md`
+- `wiki/index.md`에 신규 비교 페이지 3개를 등록하고 Total pages를 238로 갱신함.
+
 ## [2026-07-04] update | Java/Oracle subject-review hub 고도화
 
 - 목적: 사용자가 요청한 1과목 Java와 2과목 Oracle wiki 업데이트를 기존 course-material-aware backfill의 연장선으로 수행하되, 신규 얕은 페이지를 만들지 않고 이미 존재하는 과목 복습 허브와 entity를 깊게 보강함.

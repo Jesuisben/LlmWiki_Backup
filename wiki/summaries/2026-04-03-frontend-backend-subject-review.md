@@ -1,9 +1,9 @@
 ---
 title: FrontEnd_BackEnd 총정리
+created: 2026-07-06
+updated: 2026-07-06
 type: summary
-created: 2026-07-03
-updated: 2026-07-03
-tags: [spring-boot, react, typescript, frontend, backend, curriculum, study-log]
+tags: [spring-boot, react, frontend, backend, curriculum, study-log]
 sources:
   - raw/Study/4. FrontEnd_BackEnd/FrontEnd_BackEnd 총정리/FrontEnd_BackEnd 총정리.md
 status: growing
@@ -14,56 +14,38 @@ confidence: high
 
 ## 한 줄 요약
 
-`FrontEnd_BackEnd 총정리`는 2026-03-30부터 2026-04-03까지의 초기 풀스택 세팅과 Spring Boot ↔ React 연결 흐름을 “환경 준비 → 백엔드 API → 프론트엔드 프로젝트 → axios/useEffect/CORS 연결” 순서로 복습하는 문서다.
-
-## 이 자료의 위치
-
-- 앞 자료: [[summaries/2026-03-27-jquery-ui-interaction|UI&UX/jQuery 상호작용]]까지는 정적 HTML/CSS/JS 중심이었다.
-- 중심 기간: [[summaries/2026-03-30-fullstack-environment-setup|2026-03-30]] ~ [[summaries/2026-04-03-spring-member-seed-react-comments|2026-04-03]] 초기 풀스택 전환 구간
-- 다음 흐름: [[summaries/2026-04-06-login-jwt-session-cookie|로그인/JWT]], 상품·장바구니·주문 기능 구현으로 확장
-- 주의: 파일명은 과목 총정리지만 첫 줄 기준 기간은 2026-03-30~2026-04-03이며, 이후 장바구니/주문/페이징 전체를 모두 덮는 문서는 아니다.
+2026-03-30~2026-04-22 풀스택 과정 전체를 환경 세팅, Spring/React 연결, 회원/JWT, 상품, 장바구니, 주문, 페이징/검색 흐름으로 묶은 복습 허브다.
 
 ## 배운 내용
 
-### 1. 웹페이지를 만들기 위한 전체 절차
+- 주제: 과목 복습 허브
+- 커리큘럼 위치: Java/Oracle/UI&UX 다음 단계에서 React 화면과 Spring Boot API를 실제 기능 단위로 연결하는 FrontEnd_BackEnd 과정이다.
+- 이전 흐름: [[summaries/2026-03-27-uiux-subject-review|UI&UX 총정리]]에서 HTML/CSS/JavaScript/Bootstrap/jQuery로 브라우저 화면을 만들었다.
+- 다음 흐름: 이 날짜의 내용은 이후 Linux/AWS/CI/CD에서 Spring Boot 애플리케이션을 서버에 올리고 배포하는 흐름으로 이어진다.
 
-총정리는 풀스택 웹페이지 제작을 프로그램 설치, Spring `application.properties` 설정, Entity 생성, Repository/Controller/Service 구성, React 페이지와 라우터 구성, `useState`/`useEffect`, axios, CORS 설정, 연결 성공의 순서로 정리한다. 이 목록은 [[concepts/fullstack-project-flow|풀스택 프로젝트 흐름]]의 초기 버전이다.
+## 왜 이 흐름으로 배웠는가
 
-### 2. 개발 환경과 도구
+이 파일은 날짜별 노트를 다시 이어 붙이는 역할을 한다. 단순 문법 복습이 아니라 React 화면 → Spring API → Service/Repository → DB가 기능 단위로 반복되는 구조를 보는 것이 핵심이다.
 
-MySQL, Node.js, Visual Studio Code, Spring Boot, Vite 기반 React 프로젝트, IntelliJ 설정이 한꺼번에 등장한다. 이 시기에는 “하나의 언어만 쓰는 단계”에서 벗어나 백엔드 서버, 프론트엔드 개발 서버, DB, 이미지 경로, API 주소가 동시에 움직이기 시작한다.
+## 핵심 개념
 
-### 3. Spring Boot 초기 백엔드
+초반에는 MySQL/Node/VS Code/Spring Boot 환경과 Fruit 예제를 다뤘다. 중반에는 회원가입·로그인·JWT·Bearer 토큰·SecurityContext를 다뤘다. 후반에는 Product/Cart/Order 도메인, DTO, Service, Controller, React state, useEffect, axios 요청, 페이징/검색까지 이어졌다.
 
-Spring 쪽에서는 `application.properties`, Lombok, Entity, Controller, HTML 응답, JSON 응답, REST API 개념이 정리된다. `@Controller + Model`로 HTML에 데이터를 넘기는 방식과 JSON API로 React에 데이터를 넘기는 방식의 차이가 초기 혼동 포인트다.
+## 실습 / 예제
 
-### 4. React 초기 프론트엔드
-
-React 쪽에서는 Vite 프로젝트 생성, `App.tsx`, `MenuItems.tsx`, 페이지 구성, Router, `useState`, `useEffect`, axios 응답 스키마가 등장한다. UI&UX에서 배운 HTML/CSS/JS 지식을 컴포넌트와 상태(state) 중심으로 재구성하는 단계다.
-
-### 5. Spring ↔ React 연결: axios와 CORS
-
-React가 Spring API를 호출하려면 axios로 요청을 보내고, Spring은 JSON을 응답하며, 서로 다른 포트의 개발 서버를 허용하기 위해 CORS 설정이 필요하다. 총정리의 `WebConfig`, `allowedOrigins`, resource handler, 이미지 경로 설명은 이후 상품 이미지/파일 업로드 흐름의 바탕이다.
+- 원본 노트의 코드는 대부분 Spring Boot `controller/service/repository/entity/dto/config`와 React `pages/types/api/routes` 파일을 실제로 수정하는 형태다.
+- 실습을 복습할 때는 파일명 전체를 외우기보다 “요청 URL → Controller → Service → Repository/DB → DTO/응답 → React state/render” 순서로 따라가면 된다.
+- 실습 데이터나 비밀번호 형태의 예시는 위키에 그대로 재노출하지 않고 역할 중심으로만 정리했다.
 
 ## 헷갈린 점 / 질문
 
-- React Router 주소는 “프론트 화면 이동 주소”이고, Spring API 주소는 “데이터 요청 주소”다. 차이는 [[comparisons/react-router-vs-spring-api-url|React Router 주소 vs Spring API 주소]] 참고.
-- `@Controller + Model + HTML`은 서버가 화면을 만들어주는 방식에 가깝고, `@RestController + JSON + React`는 프론트가 데이터를 받아 화면을 구성하는 방식에 가깝다.
-- `useEffect`는 화면이 렌더링되는 시점과 API 호출 시점을 연결하는 Hook이므로, 단순 함수 호출처럼 아무 곳에서나 반복 호출하면 안 된다.
-- CORS 오류는 “코드가 완전히 틀렸다”기보다 브라우저 보안 정책상 서로 다른 출처의 요청을 서버가 허용하지 않았다는 신호일 수 있다.
+파일명보다 책임을 먼저 잡는 것이 좋다. Controller는 요청 입구, Service는 업무 규칙, Repository는 DB 접근, React component는 화면 상태와 이벤트를 담당한다.
 
 ## 관련 페이지
 
+- [[concepts/fullstack-project-flow|풀스택 프로젝트 흐름]], [[concepts/product-domain-flow|상품 도메인 기능 흐름]], [[concepts/shopping-cart-flow|장바구니 기능 흐름]], [[concepts/order-flow|주문 기능 흐름]]
 - [[concepts/fullstack-project-flow|풀스택 프로젝트 흐름]]
 - [[concepts/frontend-backend-architecture|Frontend/Backend 구조]]
-- [[concepts/spring-boot-rest-api|Spring Boot REST API]]
-- [[concepts/react-typescript-basics|React와 TypeScript 기본]]
-- [[concepts/react-useeffect-data-fetching|React useEffect와 데이터 요청]]
-- [[entities/spring-boot|Spring Boot]]
-- [[entities/react|React]]
-- [[entities/typescript|TypeScript]]
-- [[entities/node-js|Node.js]]
-- [[entities/mysql|MySQL]]
 
 ## 출처
 

@@ -2,7 +2,7 @@
 
 > 이 파일은 `wiki/` 전체의 목차이자 길잡이다.  
 > 질문에 답하거나 새 자료를 ingest할 때 이 파일을 먼저 읽는다.  
-> Last updated: 2026-07-04 | Total pages: 235
+> Last updated: 2026-07-06 | Total pages: 241
 
 ## 사용 방법
 
@@ -58,17 +58,17 @@
 - [[summaries/2026-04-20-order-list-scenario|2026-04-20 주문 목록과 테스트 시나리오]] — 주문 기능으로 넘어가 OrderList 화면을 만들고 관리자/일반 사용자 기준 테스트 시나리오를 정리했다.
 - [[summaries/2026-04-21-product-pagination-search-react|2026-04-21 상품 목록 페이징과 필드 검색]] — React 상품 목록에서 pageNumber 등 페이징 파라미터를 추가하고 Paging 컴포넌트와 검색 상태를 다뤘다.
 - [[summaries/2026-04-22-product-repository-pageable-search|2026-04-22 ProductRepository와 Pageable 검색]] — Spring Data Repository에서 Pageable 정렬/검색 조건을 받아 상품 목록을 조회하는 백엔드 흐름을 학습했다.
-- [[summaries/2026-04-22-linux-install-ssh-cli|2026-04-22 Linux 설치, SSH 접속, 기본 CLI]] — VirtualBox Ubuntu 설치, SSH 서버, MobaXterm 접속, Linux 프롬프트와 경로 기본을 배운 날이다.
-- [[summaries/2026-04-23-linux-files-vi|2026-04-23 Linux 파일·디렉터리와 vi 편집기]] — `mkdir`, `touch`, `cat`, `cp`, `mv`, `find`, `vi`로 파일 시스템을 다룬 날이다.
-- [[summaries/2026-04-24-linux-users-permissions|2026-04-24 Linux 사용자, 그룹, 권한]] — `ls -l` 권한 문자열, 사용자/그룹 생성, `/etc/passwd`·`shadow`·`group`을 배운 날이다.
-- [[summaries/2026-04-27-linux-archive-java-alias|2026-04-27 Linux 압축, 다운로드, Java 실행 준비]] — `wget`, `curl`, `tar`, `zip`, `rm`, `alias`로 서버 파일 준비 흐름을 배운 날이다.
-- [[summaries/2026-04-28-maven-spring-boot-docker-intro|2026-04-28 Maven, Spring Boot 서버 실행, Docker 입문]] — Maven으로 Spring Boot를 패키징하고 Docker 이미지/컨테이너를 처음 배운 날이다.
+- [[summaries/2026-04-22-linux-install-ssh-cli|2026-04-22 Linux 설치, SSH 접속, 기본 CLI]] — VirtualBox Ubuntu VM, SSH 서버, MobaXterm 접속, 브리지 네트워크와 기본 CLI 출발점
+- [[summaries/2026-04-23-linux-files-vi|2026-04-23 Linux 파일·디렉터리와 vi 편집기]] — 경로, 파일 생성/복사/이동/검색/삭제, redirection, `vi` 편집 흐름
+- [[summaries/2026-04-24-linux-users-permissions|2026-04-24 Linux 사용자, 그룹, 권한]] — `ls -l` 권한 문자열, owner/group/others, 사용자·그룹·시스템 계정 파일 정리
+- [[summaries/2026-04-27-linux-archive-java-alias|2026-04-27 Linux 압축, 다운로드, Java 실행 준비]] — `wget`, `curl`, `tar`, `zip`, `chown`, `alias`로 서버 파일 준비와 권한 문제를 연결
+- [[summaries/2026-04-28-maven-spring-boot-docker-intro|2026-04-28 Maven, Spring Boot 서버 실행, Docker 입문]] — Linux에서 Spring Boot jar를 빌드·실행하고 Docker image/container로 확장한 날
 - [[summaries/2026-04-29-docker-network-volume-image|2026-04-29 Docker 네트워크, 볼륨, 사용자 정의 이미지]] — MariaDB/Redmine 컨테이너 연결, bind/volume mount, 사용자 정의 이미지 흐름을 배운 날이다.
 - [[summaries/2026-04-30-dockerfile-spring-load-balancing|2026-04-30 Dockerfile, Spring Boot 컨테이너, 로드 밸런싱]] — Dockerfile 빌드, Spring Boot 컨테이너, nginx upstream 로드 밸런싱을 배운 날이다.
 - [[summaries/2026-05-01-docker-compose|2026-05-01 Docker Compose와 다중 컨테이너 실행]] — Compose manifest로 MySQL+Spring Boot 같은 다중 컨테이너 구성을 실행한 날이다.
 - [[summaries/2026-05-04-git-github-sourcetree|2026-05-04 GitHub, Git Bash, SourceTree 협업 입문]] — Git Bash와 SourceTree로 init/add/commit/push/pull/clone 흐름을 복습한 날이다.
 - [[summaries/2026-05-06-github-branch-pr-conflict|2026-05-06 GitHub 브랜치, Pull Request, 충돌 해결]] — 팀원 브랜치, PR, merge, pull, 충돌 시나리오를 실습한 날이다.
-- [[summaries/2026-05-06-linux-subject-review|Linux 총정리]] — Linux CLI·권한·Spring Boot 서버 실행·Docker·Compose·GitHub 협업을 묶은 복습 허브
+- [[summaries/2026-05-06-linux-subject-review|Linux 총정리]] — SSH/CLI/권한에서 Spring Boot 서버 실행, Docker/Compose, GitHub 협업까지 묶은 5과목 복습 허브
 - [[summaries/2026-05-06-aws-cloud-vpc-ec2|2026-05-06 AWS Cloud, VPC, EC2 입문]] — AWS 메뉴, On-Demand, VPC/Subnet/CIDR, Security Group, EC2 개념을 잡기 시작한 날
 - [[summaries/2026-05-07-aws-ec2-nginx-rds|2026-05-07 AWS EC2, Nginx, Spring Boot, RDS 연결]] — VPC/EC2 2대 구성, ping/ICMP, Nginx, Spring Boot, RDS MySQL 연결을 실습한 날
 - [[summaries/2026-05-08-aws-route53-load-balancer-https|2026-05-08 AWS Route 53, Load Balancer, HTTPS]] — Route 53, ACM, CLB/ALB, Target Group으로 도메인·HTTPS·로드밸런싱 구조를 구성한 날
@@ -121,18 +121,19 @@
 - [[concepts/spring-boot-rest-api|Spring Boot REST API]] — React와 데이터를 주고받는 Controller/Service/Repository 기반 백엔드 API 흐름
 - [[concepts/react-typescript-basics|React와 TypeScript 기본]] — 컴포넌트, props/state, Hook, Router, 타입 정의를 프로젝트 화면 예제로 정리
 - [[concepts/jwt-session-cookie-auth|JWT, 세션, 쿠키 인증]] — 로그인 상태 유지를 위한 쿠키·세션·JWT·Bearer 토큰의 역할 정리
+- [[concepts/axios-interceptor-error-handling|Axios interceptor와 API 오류 처리]] — JWT 401 처리와 화면별 검증 오류 표시를 나누는 React API 오류 처리 흐름
 - [[concepts/dto-entity-service-controller|DTO, Entity, Service, Controller]] — Spring Boot 백엔드 계층과 데이터 전달 객체/도메인 객체의 역할 구분
 - [[concepts/spring-data-jpa-repository|Spring Data JPA Repository]] — Spring Data JPA Repository
 - [[concepts/shopping-cart-flow|장바구니 기능 흐름]] — 장바구니 저장, 목록, 선택, 수량 변경, 재고 검증의 풀스택 흐름
 - [[concepts/order-flow|주문 기능 흐름]] — 장바구니 이후 주문 생성, 주문 상품, 상태 변경, 목록 조회 흐름
 - [[concepts/pagination-search|페이징과 검색]] — React 페이지 상태와 Spring Pageable/검색 조건이 연결되는 상품 목록 흐름
-- [[concepts/linux-cli-files|Linux CLI와 파일 시스템]] — 서버 터미널에서 파일·디렉터리·경로·vi를 다루는 기본 작업 흐름
-- [[concepts/linux-users-permissions|Linux 사용자·그룹·권한]] — `ls -l`, owner/group/others, root/sudo, 사용자 생성과 권한 오류 해석
+- [[concepts/linux-cli-files|Linux CLI와 파일 시스템]] — `/` 기반 경로, 파일/디렉터리 조작, redirection, 검색, `vi` 편집의 서버 기본기
+- [[concepts/linux-users-permissions|Linux 사용자·그룹·권한]] — `ls -l`, owner/group/others, root/sudo, 계정 파일과 권한 오류 해석
 - [[concepts/linux-package-archive|Linux 패키지·다운로드·압축]] — `apt`, `wget`, `curl`, `tar`, `zip`으로 서버 도구와 파일을 준비하는 흐름
 - [[concepts/linux-web-server-apache-nginx|Linux Apache/Nginx 웹서버]] — Apache/Nginx 설치, UFW, `/var/www/html/` 문서 교체, 포트 확인 흐름
 - [[concepts/linux-spring-boot-server-deploy|Linux에서 Spring Boot 서버 실행]] — Maven 패키징, `.jar` 실행, 포트/방화벽 확인으로 IDE 밖에서 서버를 띄우는 과정
 - [[concepts/docker-install-permission-setup|Docker 설치와 권한 설정]] — `docker_setup.sh`, `dos2unix`, `docker` 그룹 권한, 재로그인 문제 정리
-- [[concepts/docker-image-container|Docker 이미지와 컨테이너]] — 실행 환경 템플릿인 이미지와 실제 실행 단위인 컨테이너의 차이
+- [[concepts/docker-image-container|Docker 이미지와 컨테이너]] — image/container 생명주기, port mapping, 서버 실행 환경 재현의 기본 단위
 - [[concepts/docker-cp-exec-container-files|Docker exec/cp와 컨테이너 파일 다루기]] — 컨테이너 내부 명령 실행과 host↔container 파일 복사 흐름
 - [[concepts/docker-network-volume|Docker 네트워크와 볼륨]] — 컨테이너 간 통신과 데이터/파일 보존을 위한 network, bind mount, volume
 - [[concepts/docker-reverse-proxy-load-balancing|Docker reverse proxy와 로드 밸런싱]] — nginx upstream/proxy_pass로 여러 컨테이너에 요청을 분산하는 구조
@@ -175,6 +176,7 @@
 - [[concepts/react-useeffect-data-fetching|React useEffect와 데이터 요청]] — 상품 상세 조회처럼 컴포넌트 생명주기와 API 호출을 연결하는 Hook 흐름
 - [[concepts/spring-security-jwt-filter|Spring Security JWT Filter]] — Bearer 토큰 추출, JWT 검증, SecurityContext 설정 흐름
 - [[concepts/product-domain-flow|상품 도메인 기능 흐름]] — Category/Product 기반 상품 등록·상세·삭제·검색·페이징의 풀스택 흐름
+- [[concepts/jpa-relationship-mapping|JPA 연관관계 매핑]] — Cart/Product/Order 도메인에서 Entity 관계와 외래키 주인을 이해하는 JPA 매핑 정리
 - [[concepts/middle-project-cicd-deploy-flow|중간 프로젝트 CI/CD 배포 흐름]] — GitHub Actions와 AWS 서버를 이용해 중간 프로젝트를 반복 가능하게 배포하는 흐름
 
 - [[concepts/github-actions-secrets-deploy|GitHub Actions Secrets 기반 배포]] — 배포에 필요한 민감값을 GitHub Secrets로 분리해 사용하는 방식
@@ -205,8 +207,8 @@
 - [[entities/mysql|MySQL]] — 관계형 데이터베이스 관리 시스템이다.
 - [[entities/node-js|Node.js]] — 브라우저 밖에서 JavaScript를 실행하는 런타임이다.
 - [[entities/visual-studio-code|Visual Studio Code]] — 프론트엔드/풀스택 실습에서 사용하는 코드 편집기다.
-- [[entities/linux|Linux]] — Spring/React 웹서비스를 서버에서 실행·배포하기 위해 배운 운영체제 환경
-- [[entities/docker|Docker]] — 이미지와 컨테이너로 실행 환경을 고정하고 Spring Boot+DB 구성을 재현하는 도구
+- [[entities/linux|Linux]] — SSH·CLI·권한·빌드·Docker 배포를 통해 웹서비스 운영 환경으로 배운 서버 OS
+- [[entities/docker|Docker]] — image/container, network, mount, Dockerfile, Compose로 Spring Boot+DB 실행 환경을 재현하는 도구
 - [[entities/maven|Maven]] — `pom.xml` 기반 Java/Spring Boot 빌드와 `.jar` 패키징 도구
 - [[entities/source-tree|SourceTree]] — Git commit/push/pull/branch 작업을 GUI로 수행하는 Git 클라이언트
 - [[entities/aws|AWS]] — VPC, EC2, RDS, Route 53, Load Balancer, ACM으로 웹서비스를 클라우드에 배포하는 플랫폼
@@ -226,6 +228,7 @@
 <!-- 비교 페이지. 예: `comparisons/interface-vs-abstract-class` — Java에서 두 추상화 방식의 차이 -->
 - [[comparisons/controller-service-repository|Controller vs Service vs Repository]] — Spring Boot 백엔드에서 요청 처리, 업무 로직, DB 접근 계층의 역할 차이
 - [[comparisons/entity-vs-dto|Entity vs DTO]] — DB와 가까운 객체와 요청/응답 전달 객체의 차이
+- [[comparisons/jpql-vs-sql|JPQL vs SQL]] — Entity/필드 기준 쿼리와 테이블/컬럼 기준 쿼리의 차이
 - [[comparisons/interface-vs-abstract-class|인터페이스 vs 추상 클래스]] — Java에서 공통 부모 클래스와 기능 규격을 구분하는 기준
 - [[comparisons/single-row-vs-multi-row-subquery|단일행 서브쿼리 vs 다중행 서브쿼리]] — 서브쿼리 결과 개수에 따라 `=`, `IN` 등 연산자를 고르는 기준
 - [[comparisons/where-vs-having|WHERE vs HAVING]] — 그룹화 전 행 필터링과 그룹화 후 집계 결과 필터링의 차이
@@ -244,6 +247,9 @@
 - [[comparisons/library-vs-framework|Library vs Framework]] — 필요할 때 호출하는 도구와 정해진 틀 안에서 개발하는 구조의 차이
 - [[comparisons/inline-style-vs-internal-css-vs-external-css|inline style vs internal CSS vs external CSS]] — 태그 안 style, 문서 내부 style, 외부 CSS 파일 연결 방식 비교
 - [[comparisons/get-vs-post|GET vs POST]] — URL query string으로 보내는 요청과 HTTP body로 보내는 요청의 차이
+- [[comparisons/javascript-dom-vs-jquery|JavaScript DOM vs jQuery]] — 브라우저 기본 DOM API와 이를 짧게 감싼 jQuery 라이브러리의 관계
+- [[comparisons/id-vs-class|id vs class]] — CSS/JavaScript/jQuery에서 단일 식별자와 반복 그룹 선택자를 구분하는 기준
+- [[comparisons/html-tag-vs-attribute|HTML 태그 vs 속성]] — 문서 구조를 만드는 태그와 태그에 추가 정보를 붙이는 속성의 차이
 - [[comparisons/on-delete-set-null-vs-cascade|ON DELETE SET NULL vs CASCADE]] — 부모 데이터 삭제 시 자식 FK를 NULL로 남길지 자식 행도 함께 삭제할지의 업무 규칙 차이
 - [[comparisons/ddl-vs-dml-vs-dql|DDL vs DML vs DQL]] — 구조 정의, 데이터 조작, 데이터 조회 SQL의 역할과 commit 관계 차이
 - [[comparisons/primary-key-vs-foreign-key|Primary Key vs Foreign Key]] — 행을 식별하는 기본키와 다른 테이블을 참조하는 외래키의 차이

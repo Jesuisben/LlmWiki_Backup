@@ -1,15 +1,15 @@
 ---
 title: Docker 이미지와 컨테이너
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-06
 type: concept
-tags: [linux, backend]
+tags: [linux, docker, backend]
 sources:
   - raw/Study/5. Linux/2026.04.28(화)/2026.04.28(화).md
   - raw/Study/5. Linux/2026.04.29(수)/2026.04.29(수).md
   - raw/Study/5. Linux/2026.04.30(목)/2026.04.30(목).md
+  - raw/Study/5. Linux/Linux 총정리/Linux 총정리.md
   - raw/Study/5. Linux/교육 자료/Docker/Docker 교안(이론).pdf
-  - raw/Study/5. Linux/교육 자료/Docker/Docker 교안(실습).pdf
 status: growing
 confidence: high
 ---
@@ -18,62 +18,46 @@ confidence: high
 
 ## 정의
 
-Docker 이미지는 애플리케이션 실행 환경을 담은 템플릿이고, 컨테이너는 그 이미지로 만든 실제 실행 단위다. 수업에서는 이미지를 “밀키트/설계도”, 컨테이너를 “실제로 돌아가는 인스턴스”로 이해했다.
+Docker 이미지는 애플리케이션 실행 환경을 담은 읽기 전용 템플릿이고, 컨테이너는 그 이미지로 실제 실행한 격리된 프로세스 단위다.
 
 ## 왜 중요한가
 
-개발 PC와 서버의 Java 버전, DB 설치 상태, 파일 위치가 다르면 “내 컴퓨터에서는 되는데 서버에서는 안 됨” 문제가 생긴다. Docker는 실행 환경을 이미지로 고정해 어느 서버에서도 비슷한 방식으로 실행하게 한다.
+서버마다 Java, DB, 웹서버 설치 상태가 다르면 배포가 흔들린다. Docker는 “실행 환경을 이미지로 고정하고 컨테이너로 실행”하게 해 개발 PC와 서버의 차이를 줄인다.
 
-## 수업에서 이어진 흐름
+## 핵심 설명
 
-- 2026-04-28: Docker 개요, 설치, Apache/nginx/MySQL 컨테이너 실행·중지·삭제.
-- 2026-04-29: WordPress+MySQL, Redmine+MariaDB, `docker exec`, `docker cp`, network, mount.
-- 2026-04-30: `docker commit`, Dockerfile, Spring Boot 컨테이너, reverse proxy.
-- 2026-05-01: Docker Compose로 다중 컨테이너 실행.
+- image: `httpd`, `nginx`, `mysql`, `wordpress`, `redmine`, 직접 만든 `myspring-img` 같은 실행 템플릿.
+- container: image에서 생성되어 실행·중지·삭제되는 실제 단위.
+- `docker run`: 이미지가 없으면 pull하고 컨테이너를 생성/실행한다.
+- `-p 호스트포트:컨테이너포트`: 외부 접속 포트 연결.
+- `-d`: 백그라운드 실행.
+- `--name`: 컨테이너 이름 지정.
 
-## 핵심 명령어
+## 예시
 
 ```bash
-docker image ls
+docker run --name apache01 -d -p 8080:80 httpd
+docker ps
+docker ps -a
+docker stop apache01
+docker start apache01
+docker rm apache01
 docker images
-docker container ls
-docker container ps -a
-docker container run --name apache01 -d -p 8888:80 httpd
-docker container run --name nginx85 -d -p 8885:80 nginx
-docker container run --name=mysql85 -dit -e MYSQL_ROOT_PASSWORD=root mysql
-docker logs mysql85 | grep ready
-docker exec -it apache81 /bin/bash
-docker cp index.html apache82:/usr/local/apache2/htdocs/index.html
-docker container stop apache01
-docker container rm apache01
-docker image rm httpd
+docker rmi httpd
 ```
-
-## 이미지 이름과 태그
-
-Docker 교안은 `nginx`, `mysql`, `python`, `openjdk`, `httpd` 같은 대표 이미지를 소개한다. `mysql:8.0`처럼 `:` 뒤의 값은 tag이며, 특정 버전 또는 `latest`를 가리킨다.
 
 ## 자주 헷갈리는 점
 
-- 이미지는 실행 전 템플릿이고, 컨테이너는 생성/실행된 결과다.
-- `docker run`은 로컬에 이미지가 없으면 Docker Hub에서 pull한 뒤 컨테이너를 만든다.
-- 컨테이너를 삭제해도 이미지가 바로 삭제되는 것은 아니다.
-- 컨테이너 내부 파일 수정은 컨테이너 삭제와 함께 사라질 수 있다. 유지하려면 bind mount, volume, commit, Dockerfile이 필요하다.
-- `-d`는 detached/background, `-i`는 표준 입력 유지, `-t`는 가상 터미널 할당이다.
+- 이미지는 삭제해도 실행 중인 컨테이너가 있으면 막힐 수 있다. 컨테이너와 이미지는 생명주기가 다르다.
+- 컨테이너 내부에서 수정한 파일은 컨테이너 삭제 시 사라질 수 있다. 필요한 데이터는 volume/mount를 써야 한다.
+- `docker run`은 “항상 새 컨테이너 생성”에 가깝고, 기존 컨테이너는 `start`/`stop`으로 다룬다.
 
-## 관련 페이지
+## 관련 개념
 
-- [[entities/docker|Docker]]
-- [[concepts/docker-install-permission-setup|Docker 설치와 권한 설정]]
 - [[concepts/docker-network-volume|Docker 네트워크와 볼륨]]
-- [[concepts/docker-cp-exec-container-files|Docker exec/cp와 컨테이너 파일 다루기]]
+- [[concepts/docker-compose-manifest|Docker Compose manifest]]
 - [[comparisons/docker-commit-vs-dockerfile|docker commit vs Dockerfile]]
-- [[concepts/dockerfile-vs-compose|Dockerfile vs Docker Compose]]
 
 ## 출처
 
 - `raw/Study/5. Linux/2026.04.28(화)/2026.04.28(화).md`
-- `raw/Study/5. Linux/2026.04.29(수)/2026.04.29(수).md`
-- `raw/Study/5. Linux/2026.04.30(목)/2026.04.30(목).md`
-- `raw/Study/5. Linux/교육 자료/Docker/Docker 교안(이론).pdf` — 이미지/컨테이너, 대표 이미지
-- `raw/Study/5. Linux/교육 자료/Docker/Docker 교안(실습).pdf` — 컨테이너 실행/상태/삭제, docker cp/exec

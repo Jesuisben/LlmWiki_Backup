@@ -1,57 +1,52 @@
 ---
 title: 2026-04-06 로그인, JWT, 세션과 쿠키
-created: 2026-07-02
-updated: 2026-07-02
+created: 2026-07-06
+updated: 2026-07-06
 type: summary
-tags: [spring-boot, react, typescript, frontend, backend, curriculum, study-log]
+tags: [spring-boot, react, frontend, backend, curriculum, study-log, auth]
 sources:
   - raw/Study/4. FrontEnd_BackEnd/2026.04.06(월)/2026.04.06(월).md
-  - raw/Study/4. FrontEnd_BackEnd/교육 자료/IT 관련 용어.pdf
-  - raw/Study/4. FrontEnd_BackEnd/교육 자료/JWT(이론).pdf
 status: growing
 confidence: high
 ---
+
 # 2026-04-06 로그인, JWT, 세션과 쿠키
 
 ## 한 줄 요약
 
-로그인 상태 유지 방식을 쿠키·세션·JWT 관점에서 비교하고, React SPA에서 JWT를 쓰는 이유를 배웠다.
-
-## 커리큘럼 위치와 흐름
-
-회원 기능에서 인증으로 넘어간 날이다. 이전까지는 API를 호출해 데이터를 보여주는 구조였다면, 이제는 “누가 요청했는가”를 서버가 판단해야 하므로 인증 상태 전달 방식이 핵심이 된다.
+로그인 구현을 시작하며 쿠키·세션·JWT의 역할 차이를 배우고 React axios 401 처리와 사용자 role 기반 화면 분기를 다뤘다.
 
 ## 배운 내용
 
-- IT 관련 용어 p.48~49에서 쿠키는 브라우저/PC에 저장되는 값, 세션은 서버 쪽 상태와 `JSESSIONID` 같은 식별자로 연결되는 구조로 설명된다.
-- JWT 이론 p.2~4는 React 같은 SPA 구조에서 HTML은 프론트가 담당하고 API 서버는 JSON 데이터를 주며, 인증 정보 전달에 JWT를 많이 쓰는 흐름을 보여준다.
-- MPA와 SPA의 차이가 로그인 구조 선택에 영향을 준다.
+- 주제: 인증 방식 전환
+- 커리큘럼 위치: Java/Oracle/UI&UX 다음 단계에서 React 화면과 Spring Boot API를 실제 기능 단위로 연결하는 FrontEnd_BackEnd 과정이다.
+- 이전 흐름: [[summaries/2026-03-27-uiux-subject-review|UI&UX 총정리]]에서 HTML/CSS/JavaScript/Bootstrap/jQuery로 브라우저 화면을 만들었다.
+- 다음 흐름: 이 날짜의 내용은 이후 Linux/AWS/CI/CD에서 Spring Boot 애플리케이션을 서버에 올리고 배포하는 흐름으로 이어진다.
 
-## 핵심 실습 / 예제
+## 왜 이 흐름으로 배웠는가
 
-- 로그인 후 발급받은 토큰을 프론트에서 보관하고, 이후 API 요청에 Bearer 토큰으로 붙이는 흐름을 준비했다.
-- 쿠키/세션/JWT는 서로 대체어가 아니라 저장 위치와 책임이 다른 인증 구성 요소다.
+서버 렌더링 중심에서는 세션을 많이 쓰지만 React SPA와 API 서버 구조에서는 JWT Bearer 토큰을 요청마다 보내는 방식이 중요해졌다.
 
-## 교육자료 대조 메모
+## 핵심 개념
 
-- 사용자 정리 MD를 주 자료로 삼고, MD에서 언급한 교육자료를 실제 확인해 출처에 추가했다.
-- 이번 과목의 큰 흐름은 [[concepts/frontend-backend-architecture|Frontend/Backend 구조]] → [[concepts/spring-boot-rest-api|Spring Boot REST API]] → [[concepts/react-typescript-basics|React와 TypeScript 기본]] → 인증·상품·장바구니·주문·검색 기능 구현으로 이어진다.
+쿠키는 브라우저가 보관하는 작은 데이터, 세션은 서버가 로그인 상태를 기억하는 구조, JWT는 서명된 토큰을 클라이언트가 보관하고 API 요청 Header에 담아 보내는 구조로 정리했다. React에서는 401 응답 시 토큰을 삭제하고 로그인 화면으로 보내는 axios interceptor 흐름을 확인했다.
+
+## 실습 / 예제
+
+- 원본 노트의 코드는 대부분 Spring Boot `controller/service/repository/entity/dto/config`와 React `pages/types/api/routes` 파일을 실제로 수정하는 형태다.
+- 실습을 복습할 때는 파일명 전체를 외우기보다 “요청 URL → Controller → Service → Repository/DB → DTO/응답 → React state/render” 순서로 따라가면 된다.
+- 실습 데이터나 비밀번호 형태의 예시는 위키에 그대로 재노출하지 않고 역할 중심으로만 정리했다.
 
 ## 헷갈린 점 / 질문
 
-- 쿠키는 저장 수단, 세션은 서버 상태 관리 방식, JWT는 서명된 토큰 형식이다.
-- SPA에서는 화면 전환을 React가 담당하므로 서버가 HTML 페이지를 계속 내려주는 MPA와 인증 흐름이 다르다.
-- JWT를 쓰더라도 보안상 저장 위치와 만료 시간, 탈취 위험을 함께 생각해야 한다.
+JWT는 암호화 자체가 아니라 서명으로 위변조를 검증하는 토큰이다. 쿠키/세션/JWT는 저장 위치와 상태 유지 방식이 다른 층위다.
 
 ## 관련 페이지
 
-- [[concepts/jwt-session-cookie-auth]]
-- [[comparisons/session-vs-cookie-vs-jwt]]
-- [[comparisons/mpa-vs-spa]]
-- [[entities/jwt]]
+- [[concepts/jwt-session-cookie-auth|JWT, 세션, 쿠키 인증]], [[comparisons/session-vs-cookie-vs-jwt|Session vs Cookie vs JWT]], [[concepts/axios-interceptor-error-handling|Axios interceptor와 API 오류 처리]]
+- [[concepts/fullstack-project-flow|풀스택 프로젝트 흐름]]
+- [[concepts/frontend-backend-architecture|Frontend/Backend 구조]]
 
 ## 출처
 
 - `raw/Study/4. FrontEnd_BackEnd/2026.04.06(월)/2026.04.06(월).md`
-- `raw/Study/4. FrontEnd_BackEnd/교육 자료/IT 관련 용어.pdf`
-- `raw/Study/4. FrontEnd_BackEnd/교육 자료/JWT(이론).pdf`

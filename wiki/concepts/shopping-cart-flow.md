@@ -1,17 +1,14 @@
 ---
 title: 장바구니 기능 흐름
-created: 2026-07-02
-updated: 2026-07-02
+created: 2026-07-06
+updated: 2026-07-06
 type: concept
-tags: [project, spring-boot, react]
+tags: [spring-boot, react, backend, frontend]
 sources:
   - raw/Study/4. FrontEnd_BackEnd/2026.04.14(화)/2026.04.14(화).md
   - raw/Study/4. FrontEnd_BackEnd/2026.04.15(수)/2026.04.15(수).md
   - raw/Study/4. FrontEnd_BackEnd/2026.04.16(목)/2026.04.16(목).md
   - raw/Study/4. FrontEnd_BackEnd/2026.04.17(금)/2026.04.17(금).md
-  - raw/Study/4. FrontEnd_BackEnd/교육 자료/쇼핑 카트 데이터 구조 다이어그램.png
-  - raw/Study/4. FrontEnd_BackEnd/교육 자료/다대일 단방향 매칭(Cart-CartProduct-Product) 01.png
-  - raw/Study/4. FrontEnd_BackEnd/교육 자료/다대일 단방향 매칭(Cart-CartProduct-Product) 02.png
 status: growing
 confidence: high
 ---
@@ -20,41 +17,33 @@ confidence: high
 
 ## 정의
 
-사용자가 상품을 담고, 목록에서 선택·수량 변경·합계 계산을 하며 주문 전 상태를 관리하는 쇼핑몰 핵심 기능이다.
+장바구니 기능 흐름은 로그인한 회원이 상품을 장바구니에 담고, 목록에서 선택·수량 변경·삭제·총액 계산·재고 검증을 거쳐 주문으로 넘어가는 과정이다.
 
 ## 왜 중요한가
 
-FrontEnd_BackEnd 단계에서는 문법 하나보다 화면, API, 업무 규칙, DB가 어떻게 연결되는지가 중요하다. 이 개념은 사용자의 쇼핑몰형 실습에서 반복 등장하는 흐름을 복원하기 위한 기준점이다.
+장바구니는 Product, Member, Cart, CartProduct, Order가 연결되는 첫 복합 도메인이다. 단순 CRUD보다 Entity 관계, DTO, 화면 state, Service 검증이 함께 필요하다.
 
 ## 핵심 설명
 
-- 로그인 사용자가 상품을 장바구니에 담는다.
-- CartProductService/CartService가 저장 규칙과 중복 여부를 처리한다.
-- CartController가 저장·목록·수량 변경 요청을 받는다.
-- React CartList가 전체 선택/개별 선택/수량/합계를 반영한다.
-- 재고 부족이나 잘못된 수량은 검증과 메시지로 처리한다.
+- `CartService`: 회원의 장바구니를 찾거나 없으면 생성한다.
+- `CartProductService`: 장바구니 품목 저장, 수량 변경, 삭제, stock 검증을 처리한다.
+- `CartProductDto`: 화면에 필요한 상품명, 가격, 이미지, 수량, stock 등을 전달한다.
+- React `CartList`: 전체 선택/개별 선택, 총 주문 금액, 수량 input, 삭제 confirm, 주문 버튼을 관리한다.
 
 ## 수업 예시
 
-- [[summaries/2026-04-14-cart-service|2026-04-14 장바구니 Service와 DTO]] — CartProductService, CartService, CartProductDto, CartController
-- [[summaries/2026-04-15-cart-list-selection-typescript|2026-04-15 장바구니 목록과 TypeScript props]] — 전체 선택/개별 선택과 props 타입
-- [[summaries/2026-04-16-cart-quantity-stock|2026-04-16 장바구니 수량 변경과 재고 검증]] — 수량 변경과 재고 검증
-- [[summaries/2026-04-17-cart-total-array-some|2026-04-17 장바구니 합계와 Array some]] — 합계와 Array some
+2026-04-14에는 장바구니 Service/Controller/DTO, 04-15에는 전체 선택과 개별 선택, 04-16에는 수량 변경과 재고 검증, [[summaries/2026-04-17-cart-total-array-some|2026-04-17]]에는 `Array.some()`을 이용한 재고 부족 여부 판단과 주문 생성 흐름을 다뤘다.
 
 ## 자주 헷갈리는 점
 
-비슷한 이름의 파일이나 URL이 여러 계층에 존재한다. React의 화면 상태, Spring의 요청 처리, DB 저장 상태를 같은 것으로 보지 말고 역할별로 나누어 추적해야 한다.
+CartProduct는 Cart와 Product를 단순히 연결만 하는 것이 아니라 quantity 같은 업무 데이터를 가진다. 그래서 다대다를 그대로 쓰기보다 중간 Entity로 풀어내는 사고가 중요하다.
 
 ## 관련 개념
 
-- [[concepts/fullstack-project-flow|풀스택 프로젝트 흐름]]
-- [[concepts/dto-entity-service-controller|DTO, Entity, Service, Controller]]
+- [[concepts/jpa-relationship-mapping|JPA 연관관계 매핑]]
 - [[concepts/order-flow|주문 기능 흐름]]
-
-
-## 교육자료 대조 보강
-
-쇼핑 카트 데이터 구조 다이어그램은 `Customer(Member) 1 : 1 Cart`, `Cart 1 : N CartProduct`, `CartProduct N : 1 Product` 관계를 보여준다. CartProduct는 “사용자가 어떤 상품을 몇 개 담았는가”를 표현하는 중간 Entity이며, Product는 진열대의 원본 상품 정보처럼 여러 장바구니 항목에서 참조될 수 있다. 이 구분은 수량 변경과 재고 검증을 이해하는 핵심이다.
+- [[comparisons/entity-vs-dto|Entity vs DTO]]
+- [[comparisons/props-vs-state|props vs state]]
 
 ## 출처
 

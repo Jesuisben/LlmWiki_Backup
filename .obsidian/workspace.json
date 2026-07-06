@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "6b352e1fb9f3e84d",
+        "id": "8fed6aa972dee26e",
         "type": "tabs",
         "children": [
           {
-            "id": "22f327dfb5469294",
+            "id": "0ee06a63beca927a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "raw/Study/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md",
+                "file": "raw/Study/10. Python/2026.06.26(금)/2026.06.26(금).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026.03.23(월) - 시작"
+              "title": "2026.06.26(금)"
             }
           }
         ]
@@ -198,70 +198,37 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "floating": {
-    "id": "036ecd8489daecf7",
-    "type": "floating",
-    "children": [
-      {
-        "id": "c3c2986af56d9342",
-        "type": "window",
-        "children": [
-          {
-            "id": "087c40df940a9ee6",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "d188b214ac58e347",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "raw/Study/10. Python/2026.07.06(월)/2026.07.06(월).md",
-                    "mode": "source",
-                    "source": false
-                  },
-                  "icon": "lucide-file",
-                  "title": "2026.07.06(월)"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 0,
-        "y": 0,
-        "width": 1280,
-        "height": 1080,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "7c29ee296c96d9f0",
+  "active": "0ee06a63beca927a",
   "lastOpenFiles": [
     "raw/Study/10. Python/2026.07.06(월)/2026.07.06(월).md",
-    "raw/Study/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md",
-    "raw/Study/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md",
-    "raw/Study/3. UI&UX/2026.03.24(화)/2026.03.24(화).md",
-    "raw/Study/3. UI&UX/2026.03.25(수)/2026.03.25(수).md",
-    "raw/Study/3. UI&UX/2026.03.26(목)/2026.03.26(목).md",
-    "raw/Study/3. UI&UX/2026.03.27(금)/2026.03.27(금).md",
-    "raw/Study/3. UI&UX/UI&UX 총정리/속성들.md",
-    "raw/Study/3. UI&UX/UI&UX 총정리/속성들.md",
-    "raw/Study/3. UI&UX/UI&UX 총정리/태그들.md",
-    "raw/Study/3. UI&UX/UI&UX 총정리/태그들.md",
-    "raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md",
-    "raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md",
-    "raw/Study/10. Python/2026.07.06(월)",
     "raw/Study/10. Python/2026.06.26(금)/2026.06.26(금).md",
     "raw/Study/10. Python/2026.06.29(월)/2026.06.29(월).md",
     "raw/Study/10. Python/2026.06.30(화)/2026.06.30(화).md",
     "raw/Study/10. Python/2026.07.01(수)/2026.07.01(수).md",
-    "raw/Study/1. Java/Java 총정리/Java 총정리.md",
-    "raw/Study/1. Java/숙제/클래스 숙제 완료.md",
-    "raw/Study/1. Java/2026.03.13(금)/2026.03.13(금).md",
-    "raw/Study/1. Java/2026.03.12(목)/2026.03.12(목).md",
-    "raw/Study/1. Java/2026.03.11(수)/2026.03.11(수).md",
+    "raw/Study/10. Python/2026.06.19(금)/2026.06.19(금).md",
+    "concepts/pandas-dataframe-basics.md",
+    "entities/pandas.md",
+    "raw/ai-instructions/hermes-agent-llm-wiki-initial-setup.md",
+    "AGENTS.md",
+    "raw/Study/4. FrontEnd_BackEnd/FrontEnd_BackEnd 총정리/FrontEnd_BackEnd 총정리.md",
+    "wiki/concepts/docker-cp-exec-container-files.md",
+    "wiki/entities/java.md",
+    "wiki/entities/jupyter-notebook.md",
+    "raw/Study/4. FrontEnd_BackEnd/2026.03.30(월) - 시작/2026.03.30(월) - 시작.md",
+    "raw/Study/4. FrontEnd_BackEnd/2026.04.17(금)/2026.04.17(금).md",
+    "wiki/summaries/2026-02-26-orientation.md",
+    "wiki/index.md",
+    "wiki/concepts/jwt-session-cookie-auth.md",
+    "wiki/_meta/wiki-quality-audit-2026-07-02.md",
+    "raw/Study/10. Python/교육 자료/공공 데이터 이용/공공자전거 대여소 정보(25.12월 기준).csv",
+    "raw/Study/10. Python/교육 자료/공공 데이터 이용",
+    "raw/Study/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md",
+    "wiki/_meta/hermes-home-laptop-hermes-config-migration.md",
+    "wiki/_meta/hermes-home-laptop-hermes-backup-security.md",
+    "wiki/_meta/hermes-home-laptop-git-obsidian-setup.md",
+    "wiki/_meta/hermes-default-profile-mode-system.md",
+    "wiki/_meta/agent-coding-guidelines.md",
+    "raw/Study/10. Python/2026.07.06(월)",
     "raw/Study/10. Python/교육 자료/csv 파일들/학생정보08.csv",
     "raw/Study/10. Python/교육 자료/csv 파일들/학생정보07.csv",
     "raw/Study/10. Python/교육 자료/csv 파일들/학생정보02.csv",
@@ -269,8 +236,6 @@
     "raw/Study/10. Python/교육 자료/csv 파일들/시험점수08.csv",
     "raw/Study/10. Python/교육 자료/csv 파일들/시험점수07.csv",
     "raw/Study/10. Python/교육 자료/csv 파일들/시험점수06.csv",
-    "raw/Study/10. Python/교육 자료/csv 파일들/시험점수05.csv",
-    "raw/Study/10. Python/교육 자료/csv 파일들/시험점수04.csv",
     "raw/Study/10. Python/교육 자료/Pandas02.png",
     "raw/Study/10. Python/교육 자료/Pandas01.png",
     "raw/Study/5. Linux/교육 자료/로드 밸런싱.png",

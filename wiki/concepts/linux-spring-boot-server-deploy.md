@@ -1,13 +1,13 @@
 ---
 title: Linux에서 Spring Boot 서버 실행
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-06
 type: concept
 tags: [linux, spring-boot, backend]
 sources:
-  - raw/Study/5. Linux/2026.04.27(월)/2026.04.27(월).md
   - raw/Study/5. Linux/2026.04.28(화)/2026.04.28(화).md
-  - raw/Study/5. Linux/교육 자료/Linux/Linux 실습(MobaXterm, VirtualBox, 실습).pdf
+  - raw/Study/5. Linux/2026.04.30(목)/2026.04.30(목).md
+  - raw/Study/5. Linux/Linux 총정리/Linux 총정리.md
 status: growing
 confidence: high
 ---
@@ -16,67 +16,57 @@ confidence: high
 
 ## 정의
 
-Linux에서 Spring Boot 서버를 실행한다는 것은 IDE 실행 버튼이 아니라 서버 터미널에서 프로젝트를 clone하고, Maven으로 `.jar`를 만들고, `java -jar`로 실행하며, 포트·방화벽·웹서버 충돌을 확인하는 과정이다.
-
-## 수업에서 배운 흐름
-
-1. Apache/Nginx 같은 기존 웹 서버가 포트를 점유하지 않도록 중지했다.
-2. GitHub에서 Spring Boot 프로젝트를 clone했다.
-3. `application.properties`에서 `server.port=9000`을 확인했다.
-4. 필요하면 80번 포트를 9000번으로 redirect했다.
-5. UFW에서 Spring Boot 포트를 허용했다.
-6. Maven을 설치하고 `pom.xml`이 있는 위치에서 package를 수행했다.
-7. `target/` 아래 `.jar`를 확인하고 `java -jar`로 실행했다.
-8. 브라우저에서 VM IP 또는 포트 매핑 주소로 접속했다.
-
-## 핵심 명령어
-
-```bash
-sudo systemctl stop nginx
-sudo systemctl disable nginx
-sudo systemctl stop apache2
-sudo systemctl disable apache2
-git clone https://github.com/Jesuisben/git_sample_02.git
-cd git_sample_02
-grep port src/main/resources/application.properties
-sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 9000
-sudo iptables -t nat -L -n | grep 9000
-sudo ufw allow 9000/tcp
-sudo apt install -y maven
-mvn -v
-mvn clean package -DskipTests
-cd target
-ls *.jar
-java -jar shopping-0.0.1-SNAPSHOT.jar
-```
-
-## Apache/Nginx와의 관계
-
-04/27에는 Apache/Nginx를 직접 설치하고 `/var/www/html/`에 정적 파일을 배치했다. 04/28에는 Spring Boot 자체가 9000번 포트에서 웹 서버처럼 응답하는 구조를 다뤘다. 따라서 포트 충돌과 방화벽 설정을 같이 봐야 한다.
+Linux에서 Spring Boot 서버 실행은 IDE가 아니라 서버 터미널에서 프로젝트를 가져오고, Maven으로 jar를 만든 뒤, Java 명령으로 애플리케이션을 띄우는 과정이다.
 
 ## 왜 중요한가
 
-Spring Boot를 개발 PC에서 실행하는 것과 서버에서 운영하는 것은 다르다. 서버에서는 빌드 산출물, 포트, 방화벽, 프로세스, 로그, 기존 서비스 충돌을 직접 확인해야 한다. 이 과정이 Dockerfile과 CI/CD의 출발점이다.
+개발 PC에서 실행되는 애플리케이션은 실제 서비스가 아니다. Linux 서버에서 jar 또는 Docker container로 실행할 수 있어야 AWS EC2, CI/CD, 운영 배포로 넘어갈 수 있다.
+
+## 핵심 설명
+
+수업 흐름은 다음 순서였다.
+
+1. GitHub에서 Spring Boot 프로젝트를 Linux 서버로 clone.
+2. Spring Boot 포트 번호 확인.
+3. 서버 방화벽/포트 허용.
+4. Maven 설치.
+5. `mvn clean package -DskipTests`로 jar 생성.
+6. `java -jar`로 서버 실행.
+7. 브라우저에서 VM IP와 포트로 확인.
+8. 같은 jar를 Dockerfile에 넣어 컨테이너 실행으로 확장.
+
+## 예시
+
+```bash
+git clone https://github.com/계정/프로젝트.git
+cd 프로젝트
+sudo apt install -y maven
+mvn -v
+mvn clean package -DskipTests
+java -jar target/*.jar
+sudo ufw allow 9000
+```
+
+Dockerfile로 이어질 때는 jar가 이미지의 실행 대상이 된다.
+
+```dockerfile
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} app.jar
+ENTRYPOINT ["java", "-jar", "/app.jar"]
+```
 
 ## 자주 헷갈리는 점
 
-- Maven 명령은 `pom.xml`이 있는 위치에서 실행해야 한다.
 - `mvn clean package`는 빌드이고, `java -jar`는 실행이다.
-- 포트가 열려 있어도 UFW, VirtualBox NAT/Bridge, iptables 설정이 맞지 않으면 브라우저 접근이 안 될 수 있다.
-- nginx/apache2가 같은 포트를 쓰고 있으면 Spring Boot 확인이 꼬일 수 있다.
-- `-DskipTests`는 테스트 생략이므로 실무에서는 의미를 알고 써야 한다.
+- 포트가 안 열리면 Spring 코드, VM IP, 방화벽, 포트 점유, Docker port mapping을 함께 확인해야 한다.
+- 서버에 소스 코드를 clone하는 방식은 학습용으로 직관적이지만, 이후 CI/CD에서는 빌드 산출물이나 Docker image를 배포하는 흐름으로 발전한다.
 
-## 관련 페이지
+## 관련 개념
 
-- [[summaries/2026-04-27-linux-archive-java-alias|2026-04-27 Linux 압축, 다운로드, Java 실행 준비]]
-- [[summaries/2026-04-28-maven-spring-boot-docker-intro|2026-04-28 Maven, Spring Boot 서버 실행, Docker 입문]]
-- [[concepts/linux-web-server-apache-nginx|Linux Apache/Nginx 웹서버]]
-- [[concepts/docker-image-container|Docker 이미지와 컨테이너]]
 - [[entities/maven|Maven]]
-- [[entities/spring-boot|Spring Boot]]
+- [[concepts/docker-image-container|Docker 이미지와 컨테이너]]
+- [[concepts/spring-boot-cicd-docker-ec2-flow|Spring Boot CI/CD Docker-EC2 배포 흐름]]
 
 ## 출처
 
-- `raw/Study/5. Linux/2026.04.27(월)/2026.04.27(월).md`
 - `raw/Study/5. Linux/2026.04.28(화)/2026.04.28(화).md`
-- `raw/Study/5. Linux/교육 자료/Linux/Linux 실습(MobaXterm, VirtualBox, 실습).pdf` — Apache/Nginx, Maven, Spring Boot 서버 실행 실습

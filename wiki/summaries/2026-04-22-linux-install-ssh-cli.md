@@ -1,14 +1,13 @@
 ---
 title: 2026-04-22 Linux 설치, SSH 접속, 기본 CLI
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-06
 type: summary
-tags: [linux, curriculum, study-log]
+tags: [linux, backend, curriculum]
 sources:
   - raw/Study/5. Linux/2026.04.22(수) - 시작/2026.04.22(수) - 시작.md
   - raw/Study/5. Linux/교육 자료/Linux/Linux 실습(MobaXterm, VirtualBox, 실습).pdf
   - raw/Study/5. Linux/교육 자료/Linux/Linux 이론.pdf
-  - raw/Study/5. Linux/교육 자료/리눅스 실습하기.md
 status: growing
 confidence: high
 ---
@@ -17,51 +16,51 @@ confidence: high
 
 ## 한 줄 요약
 
-VirtualBox에 Ubuntu Server VM을 만들고 SSH/MobaXterm으로 접속한 뒤, Linux 프롬프트·경로·파일 시스템의 기본 감각을 배운 Linux 과정 첫날이다.
+Windows 개발 환경에서 벗어나 VirtualBox Ubuntu VM을 만들고, `openssh-server`와 MobaXterm으로 원격 접속하는 서버 학습의 출발점이다.
 
 ## 배운 내용
 
-- `Linux 실습(MobaXterm, VirtualBox, 실습).pdf` 기준으로 Ubuntu Server ISO, VirtualBox, MobaXterm을 준비했다.
-- `Broadcast`, `Librarian` 같은 VM을 만들고 사용자 계정과 암호를 설정했다.
-- `openssh-server`를 설치하고 `systemctl start/status ssh`로 SSH 서비스를 켰다.
-- VirtualBox 네트워크를 NAT/브리지/포트 포워딩 관점에서 확인했다. 수업 메모에서는 브리지 모드로 바꾼 뒤 `ip addr`의 `enp0s3` 항목에서 IPv4 주소를 확인했다.
-- MobaXterm에서 SSH Session을 만들 때 `Remote host`, `Username`, `Port 22`를 입력했다.
-- Linux 이론 교안의 Prompt 설명을 바탕으로 `사용자@호스트:현재경로$` 구조와 `$`/`#`의 차이를 봤다.
-- 절대 경로(`/home/broadcast/...`)와 상대 경로(`./`, `../`, `~/`)를 문제풀이로 익혔다.
+- Ubuntu ISO, VirtualBox, MobaXterm을 설치하고 `Broadcast`, `Librarian` 같은 가상 머신을 만들었다.
+- VM 계정을 만들고 메모리/CPU/디스크를 지정한 뒤 Ubuntu Server를 설치했다.
+- `sudo apt install openssh-server`, `systemctl start/status ssh`로 SSH 서버를 준비했다.
+- VirtualBox 네트워크를 NAT에서 브리지 어댑터로 바꾸고 `ip addr`로 접속 IP를 확인했다.
+- MobaXterm에서 SSH session을 만들 때 remote host, username, port 22를 지정했다.
+- 프롬프트의 `$`는 일반 사용자, `#`는 root/관리자 상태라는 점을 구분했다.
+- `apt`를 Ubuntu의 패키지 설치 도구로 이해하고, npm처럼 필요한 도구를 설치하는 역할로 연결했다.
 
-## 핵심 실습 / 예제
+## 핵심 개념
+
+- [[entities/linux|Linux]]: 서버 운영체제 학습의 기반.
+- [[concepts/linux-cli-files|Linux CLI와 파일 시스템]]: 이후 명령어·경로·파일 조작으로 이어지는 출발점.
+- SSH: 원격 서버에 안전하게 접속하는 프로토콜.
+- `sudo`: 일반 사용자가 관리자 권한으로 명령을 실행하는 방식.
+
+## 실습 / 예제
 
 ```bash
-sudo apt install -y openssh-server
+sudo apt install openssh-server
 sudo systemctl start ssh
 sudo systemctl status ssh
 sudo poweroff
 ip addr
-pwd
 ```
 
-`sudo`는 “관리자 권한으로 이번 명령을 실행한다”는 의미로 처음 등장했다. `systemctl`은 SSH 같은 백그라운드 서비스의 시작/중지/상태 확인에 쓰였다.
-
-## 왜 이 흐름으로 배웠는가
-
-Linux는 이후 Spring Boot `.jar` 실행, Apache/Nginx 웹서버, Docker, GitHub 협업 실습의 실행 환경이다. 그래서 첫날에는 먼저 “리눅스 서버에 접속할 수 있는 상태”를 만드는 것이 목표였다.
+수업에서는 `active (running)` 상태를 확인한 뒤 VM을 끄고 브리지 모드로 바꾸었다. 이 흐름은 이후 EC2 SSH 접속, Linux 서버 배포, Docker 서버 운영으로 그대로 이어진다.
 
 ## 헷갈린 점 / 질문
 
-- `localhost`는 내 컴퓨터 자신을 가리키고, VM의 브리지 IP는 같은 네트워크에서 접근 가능한 VM 주소다.
-- NAT 포트 포워딩은 호스트 포트를 게스트 포트로 넘기는 방식이고, 브리지 모드는 VM이 네트워크에 별도 PC처럼 붙는 방식이다.
-- `$`는 일반 사용자, `#`는 root/관리자 prompt로 이해하면 된다.
-- 절대 경로는 `/`에서 시작하고, 상대 경로는 현재 위치를 기준으로 해석된다.
+- `sudo`로 시작하는 명령은 “명령어 이름”이 아니라 관리자 권한으로 뒤 명령을 실행하겠다는 의미다.
+- `apt install`은 프로그램을 “다운로드만” 하는 것이 아니라 Ubuntu 패키지 저장소에서 설치까지 수행한다.
+- 브리지 모드는 VM이 같은 네트워크의 별도 컴퓨터처럼 IP를 받게 하므로 MobaXterm 접속 실습에 필요했다.
+- `ip addr` 출력에서 `lo`는 localhost이고, 실제 접속 대상 IP는 보통 `enp0s3` 같은 네트워크 인터페이스의 `inet` 값이다.
 
 ## 관련 페이지
 
-- [[concepts/linux-cli-files|Linux CLI와 파일 시스템]]
-- [[concepts/linux-users-permissions|Linux 사용자·그룹·권한]]
+- [[summaries/2026-04-23-linux-files-vi|2026-04-23 Linux 파일·디렉터리와 vi 편집기]]
+- [[concepts/linux-package-archive|Linux 패키지·다운로드·압축]]
 - [[entities/linux|Linux]]
 
 ## 출처
 
 - `raw/Study/5. Linux/2026.04.22(수) - 시작/2026.04.22(수) - 시작.md`
-- `raw/Study/5. Linux/교육 자료/Linux/Linux 실습(MobaXterm, VirtualBox, 실습).pdf` — Ubuntu/VirtualBox/MobaXterm, NAT/bridge/port forwarding, 디렉터리 구조 실습
-- `raw/Study/5. Linux/교육 자료/Linux/Linux 이론.pdf` — prompt, 절대/상대 경로, apt/systemctl 개념
-- `raw/Study/5. Linux/교육 자료/리눅스 실습하기.md`
+- `raw/Study/5. Linux/교육 자료/Linux/Linux 실습(MobaXterm, VirtualBox, 실습).pdf`

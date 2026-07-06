@@ -1,15 +1,14 @@
 ---
 title: Linux 사용자·그룹·권한
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-06
 type: concept
-tags: [linux]
+tags: [linux, backend]
 sources:
   - raw/Study/5. Linux/2026.04.24(금)/2026.04.24(금).md
-  - raw/Study/5. Linux/교육 자료/Linux/Linux 이론.pdf
-  - raw/Study/5. Linux/교육 자료/Linux/Linux 실습(MobaXterm, VirtualBox, 실습).pdf
   - raw/Study/5. Linux/교육 자료/AccessRights.png
   - raw/Study/5. Linux/교육 자료/OwnerShip.png
+  - raw/Study/5. Linux/Linux 총정리/Linux 총정리.md
 status: growing
 confidence: high
 ---
@@ -18,89 +17,54 @@ confidence: high
 
 ## 정의
 
-Linux는 여러 사용자가 함께 쓰는 운영체제이므로 파일마다 소유자(owner), 그룹(group), 그 외 사용자(others)를 구분하고, 각 범주에 읽기(`r`), 쓰기(`w`), 실행(`x`) 권한을 따로 부여한다.
+Linux 권한은 파일과 디렉터리에 대해 owner, group, others가 각각 read/write/execute를 할 수 있는지를 나타내는 규칙이다.
 
 ## 왜 중요한가
 
-서버에서 “파일은 있는데 실행이 안 됨”, “설정 파일 저장이 안 됨”, “Docker mount 경로에 파일을 못 씀” 같은 문제는 권한과 소유권 때문에 자주 발생한다.
+서버 배포에서 “파일이 있는데 읽을 수 없음”, “드래그 앤 드롭이 안 됨”, “스크립트 실행이 안 됨”, “Docker 명령 permission denied” 같은 문제는 대부분 권한·소유권·그룹 문제로 이어진다.
 
-## `ls -l` 읽는 법
+## 핵심 설명
 
-```bash
--rw-r--r-- 1 broadcast broadcast 80 Apr 23 03:53 java.txt
-```
+`ls -l` 예시의 `-rw-rw-r--`는 다음처럼 읽는다.
 
-- 첫 글자 `-`: 일반 파일이다. 디렉터리는 `d`로 시작한다.
-- `rw-`: owner 권한이다. 읽기/쓰기 가능, 실행 불가.
-- `r--`: group 권한이다. 읽기만 가능.
-- `r--`: others 권한이다. 읽기만 가능.
-- 첫 번째 `broadcast`: 파일 owner.
-- 두 번째 `broadcast`: 파일 group.
-- `80`: 파일 크기(bytes).
-
-`AccessRights.png`는 read/write/execute를 각각 `cat file.txt`, `echo "hello" > file.txt`, `./script.sh` 예시로 설명한다. `OwnerShip.png`는 owner를 집 주인, group을 가족/팀, others를 외부인으로 비유한다.
-
-## 사용자와 그룹 파일
-
-| 파일 | 역할 |
+| 부분 | 의미 |
 |---|---|
-| `/etc/passwd` | 계정명, UID, GID, 홈 디렉터리, shell 정보 |
-| `/etc/shadow` | 암호 해시와 password aging 정보 |
-| `/etc/group` | 그룹명, GID, 그룹 구성원 |
-| `/etc/skel` | 새 사용자 홈 디렉터리에 복사될 템플릿 파일 |
-| `/etc/default/useradd` | `useradd` 기본값 |
+| `-` | 일반 파일. 디렉터리는 `d` |
+| `rw-` | owner 권한 |
+| `rw-` | group 권한 |
+| `r--` | others 권한 |
 
-## 핵심 명령어
+- `r`: 읽기. 파일은 `cat`, 디렉터리는 목록 조회와 관련된다.
+- `w`: 쓰기. 파일 내용 수정 또는 디렉터리 안 항목 생성/삭제와 관련된다.
+- `x`: 실행. 파일은 실행, 디렉터리는 진입 권한과 관련된다.
+
+## 예시
 
 ```bash
+ls -l
 sudo su -
 useradd -m skywalker
 passwd skywalker
-tail /etc/passwd | grep skyw
-useradd -m -d /home/sunnyday -u 7000 -s /bin/bash sunnyday
-useradd -D
-groupadd -g 7777 journalist
-usermod -G journalist sunnyday
-groups sunnyday
-chmod 644 hello.txt
-chmod u+x script.sh
-chmod -R a-w /home/broadcast/kbs
-sudo chown -R broadcast:broadcast ytn
-sudo chgrp -R journalist kbs
+groupadd jedi
+usermod -aG jedi skywalker
+cat /etc/passwd
+cat /etc/group
+sudo chown -R broadcast:broadcast /home/broadcast/downloads/fromwindows/
 ```
-
-## 숫자 권한
-
-| 숫자 | 의미 |
-|---|---|
-| 4 | read |
-| 2 | write |
-| 1 | execute |
-| 7 | read + write + execute |
-| 6 | read + write |
-| 5 | read + execute |
-| 0 | 권한 없음 |
-
-예를 들어 `chmod 644 file.txt`는 owner에게 `rw-`, group과 others에게 `r--`를 준다.
 
 ## 자주 헷갈리는 점
 
-- `sudo`로 만든 파일/디렉터리는 owner가 root가 될 수 있다.
-- `chown user:group path`는 owner와 group을 함께 바꾼다.
-- `chgrp group path`는 group만 바꾼다.
-- `.sh` 파일은 내용이 맞아도 실행 권한이 없으면 `Permission denied`가 난다.
-- `chmod 777`은 편하지만 모든 사용자에게 쓰기 권한까지 주므로 실무에서는 신중해야 한다.
+- owner와 group 이름이 같아도 둘은 다른 칸이다.
+- `/etc/shadow`에는 비밀번호 해시가 있으므로 학습할 때도 실제 값을 외부 문서에 옮기지 않는다.
+- `sudo`는 “root로 로그인”과 비슷한 효과를 순간적으로 주지만, 현재 사용자가 누구인지와 파일 소유권은 별개다.
+- Docker 그룹에 사용자를 추가한 뒤에는 재로그인해야 권한이 반영될 수 있다.
 
-## 관련 수업
+## 관련 개념
 
-- [[summaries/2026-04-24-linux-users-permissions|2026-04-24 Linux 사용자, 그룹, 권한]]
 - [[concepts/linux-cli-files|Linux CLI와 파일 시스템]]
 - [[concepts/docker-install-permission-setup|Docker 설치와 권한 설정]]
+- [[entities/linux|Linux]]
 
 ## 출처
 
 - `raw/Study/5. Linux/2026.04.24(금)/2026.04.24(금).md`
-- `raw/Study/5. Linux/교육 자료/Linux/Linux 이론.pdf` — 사용자 계정 파일, 권한/chmod/chown/chgrp
-- `raw/Study/5. Linux/교육 자료/Linux/Linux 실습(MobaXterm, VirtualBox, 실습).pdf` — 사용자·그룹·권한 실습
-- `raw/Study/5. Linux/교육 자료/AccessRights.png`
-- `raw/Study/5. Linux/교육 자료/OwnerShip.png`

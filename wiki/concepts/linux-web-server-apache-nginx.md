@@ -1,13 +1,13 @@
 ---
 title: Linux Apache/Nginx 웹서버
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-06
 type: concept
 tags: [linux, backend]
 sources:
-  - raw/Study/5. Linux/2026.04.27(월)/2026.04.27(월).md
-  - raw/Study/5. Linux/교육 자료/Linux/Linux 실습(MobaXterm, VirtualBox, 실습).pdf
-  - raw/Study/5. Linux/교육 자료/Linux/Linux 이론.pdf
+  - raw/Study/5. Linux/2026.04.28(화)/2026.04.28(화).md
+  - raw/Study/5. Linux/2026.04.30(목)/2026.04.30(목).md
+  - raw/Study/5. Linux/Linux 총정리/Linux 총정리.md
 status: growing
 confidence: high
 ---
@@ -16,60 +16,47 @@ confidence: high
 
 ## 정의
 
-Apache와 Nginx는 HTTP 요청을 받아 HTML, 이미지, CSS 같은 웹 문서를 응답하는 웹 서버다. Linux 수업에서는 정적 홈페이지 파일을 `/var/www/html/`에 배치해 VM IP로 접속하는 실습을 했다.
-
-## 수업 흐름
-
-1. `apt update` 후 Apache 또는 Nginx를 설치했다.
-2. `systemctl enable/start/status`로 서비스를 자동 시작 설정·실행·상태 확인했다.
-3. UFW에서 80/443/22 포트를 허용했다.
-4. MobaXterm으로 `my_homepage.zip`을 옮기고 압축을 풀었다.
-5. Apache 기본 `index.html`을 백업한 뒤 내 홈페이지 파일로 교체했다.
-6. Nginx도 GitHub에서 받은 정적 파일을 `/var/www/html/`에 복사해 확인했다.
-
-## 핵심 명령어
-
-```bash
-sudo apt update
-sudo apt install -y apache2
-sudo systemctl enable apache2
-sudo systemctl start apache2
-sudo systemctl status apache2
-sudo ufw enable
-sudo ufw allow 80/tcp
-sudo ufw allow 443/tcp
-sudo ufw allow ssh
-mkdir myhomepage
-unzip my_homepage.zip
-sudo cp /var/www/html/index.html /var/www/html/index.bak
-sudo cp -r ./* /var/www/html/
-sudo systemctl stop apache2
-sudo apt install -y nginx
-sudo systemctl start nginx
-sudo cp -r ./* /var/www/html/
-```
+Apache와 Nginx는 HTTP 요청을 받아 정적 파일을 응답하거나, 뒤쪽 애플리케이션 서버로 요청을 전달하는 웹 서버다.
 
 ## 왜 중요한가
 
-Spring Boot 이전의 기본 웹 서버 구조를 이해하면, 이후 reverse proxy, load balancing, Docker의 Apache/nginx 컨테이너, Spring Boot 포트 충돌을 더 쉽게 이해할 수 있다.
+Spring Boot 서버를 직접 9000번 포트로 노출할 수도 있지만, 실제 배포에서는 Nginx가 80/443번 포트에서 요청을 받고 Spring Boot나 여러 컨테이너로 전달하는 구조가 자주 쓰인다.
+
+## 핵심 설명
+
+- Apache/httpd와 Nginx는 정적 HTML을 제공하는 웹서버로 실습했다.
+- `/var/www/html/` 또는 컨테이너 내부 htdocs 경로에 `index.html`을 두고 브라우저로 확인했다.
+- `systemctl stop nginx/apache2`로 기존 웹서버가 포트를 점유하지 않게 했다.
+- Docker 실습에서는 Nginx를 reverse proxy와 load balancer로 사용했다.
+
+## 예시
+
+```bash
+sudo systemctl stop nginx
+sudo systemctl disable nginx
+sudo systemctl stop apache2
+sudo ufw allow 80
+```
+
+Docker 컨테이너 예시는 다음 흐름으로 이어진다.
+
+```bash
+docker run --name nginx01 -d -p 8080:80 nginx
+docker exec -it nginx01 /bin/bash
+```
 
 ## 자주 헷갈리는 점
 
-- Apache 패키지 이름은 Ubuntu에서 `apache2`다.
-- `/var/www/html/`은 웹 서버가 기본으로 보여주는 문서 디렉터리다.
-- 80은 HTTP, 443은 HTTPS, 22는 SSH 포트다.
-- UFW를 켠 뒤 SSH를 허용하지 않으면 MobaXterm 접속이 끊길 수 있다.
-- VirtualBox NAT를 쓰면 포트 포워딩, Bridge를 쓰면 VM IP 접근을 구분해야 한다.
+- Apache/Nginx는 Spring Boot 자체가 아니다. 앞단에서 정적 파일을 주거나 reverse proxy 역할을 맡을 수 있다.
+- 같은 포트를 두 프로세스가 동시에 사용할 수 없으므로 포트 충돌을 먼저 확인해야 한다.
+- Docker 안의 Nginx와 Linux host에 설치한 Nginx는 서로 다른 실행 단위다.
 
-## 관련 페이지
+## 관련 개념
 
-- [[summaries/2026-04-27-linux-archive-java-alias|2026-04-27 Linux 압축, 다운로드, Java 실행 준비]]
-- [[concepts/linux-spring-boot-server-deploy|Linux에서 Spring Boot 서버 실행]]
 - [[concepts/docker-reverse-proxy-load-balancing|Docker reverse proxy와 로드 밸런싱]]
-- [[entities/linux|Linux]]
+- [[concepts/linux-spring-boot-server-deploy|Linux에서 Spring Boot 서버 실행]]
+- [[concepts/aws-ec2-nginx-spring-deploy|AWS EC2에서 Nginx와 Spring Boot 배포]]
 
 ## 출처
 
-- `raw/Study/5. Linux/2026.04.27(월)/2026.04.27(월).md`
-- `raw/Study/5. Linux/교육 자료/Linux/Linux 실습(MobaXterm, VirtualBox, 실습).pdf` — p.177~194 Apache/Nginx 실습
-- `raw/Study/5. Linux/교육 자료/Linux/Linux 이론.pdf` — systemctl, httpd, ufw 개념
+- `raw/Study/5. Linux/2026.04.28(화)/2026.04.28(화).md`
