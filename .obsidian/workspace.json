@@ -13,12 +13,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "raw/Study/10. Python/2026.06.26(금)/2026.06.26(금).md",
+                "file": "raw/Study/10. Python/2026.06.29(월)/2026.06.29(월).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026.06.26(금)"
+              "title": "2026.06.29(월)"
+            }
+          },
+          {
+            "id": "417d1ef887537f5a",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "그래프 뷰"
             }
           }
         ]
@@ -198,17 +208,23 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "0ee06a63beca927a",
+  "active": "26ea1fd6799a6e07",
   "lastOpenFiles": [
-    "raw/Study/10. Python/2026.07.06(월)/2026.07.06(월).md",
-    "raw/Study/10. Python/2026.06.26(금)/2026.06.26(금).md",
+    "raw/ai-instructions/llm-wiki-command-cheatsheet.md",
+    "raw/ai-instructions/karpathy-agent-guidelines.md",
+    "raw/ai-instructions/hermes-default-profile-instructions.md",
+    "raw/ai-instructions/hermes-agent-llm-wiki-initial-setup.md",
     "raw/Study/10. Python/2026.06.29(월)/2026.06.29(월).md",
+    "raw/Study/10. Python/2026.06.26(금)/2026.06.26(금).md",
+    "wiki/concepts/jpa-relationship-mapping.md",
+    "wiki/concepts/axios-interceptor-error-handling.md",
+    "wiki/comparisons/jpql-vs-sql.md",
+    "raw/Study/10. Python/2026.07.06(월)/2026.07.06(월).md",
     "raw/Study/10. Python/2026.06.30(화)/2026.06.30(화).md",
     "raw/Study/10. Python/2026.07.01(수)/2026.07.01(수).md",
     "raw/Study/10. Python/2026.06.19(금)/2026.06.19(금).md",
     "concepts/pandas-dataframe-basics.md",
     "entities/pandas.md",
-    "raw/ai-instructions/hermes-agent-llm-wiki-initial-setup.md",
     "AGENTS.md",
     "raw/Study/4. FrontEnd_BackEnd/FrontEnd_BackEnd 총정리/FrontEnd_BackEnd 총정리.md",
     "wiki/concepts/docker-cp-exec-container-files.md",
@@ -222,12 +238,6 @@
     "wiki/_meta/wiki-quality-audit-2026-07-02.md",
     "raw/Study/10. Python/교육 자료/공공 데이터 이용/공공자전거 대여소 정보(25.12월 기준).csv",
     "raw/Study/10. Python/교육 자료/공공 데이터 이용",
-    "raw/Study/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md",
-    "wiki/_meta/hermes-home-laptop-hermes-config-migration.md",
-    "wiki/_meta/hermes-home-laptop-hermes-backup-security.md",
-    "wiki/_meta/hermes-home-laptop-git-obsidian-setup.md",
-    "wiki/_meta/hermes-default-profile-mode-system.md",
-    "wiki/_meta/agent-coding-guidelines.md",
     "raw/Study/10. Python/2026.07.06(월)",
     "raw/Study/10. Python/교육 자료/csv 파일들/학생정보08.csv",
     "raw/Study/10. Python/교육 자료/csv 파일들/학생정보07.csv",
