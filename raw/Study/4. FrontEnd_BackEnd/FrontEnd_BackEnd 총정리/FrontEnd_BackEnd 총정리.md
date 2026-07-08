@@ -48,7 +48,8 @@ React의 IDE
 
 - NodeJs
 1) build해주는 프로그램
-build한다 : React로 나온 파일인 vite 파일들을 묶음으로 만들기? 실행하기? (마치 패키지 형태로)
+build한다 : React로 나온 파일인 vite 파일들을 묶음으로 만들기?
+실행하기? (마치 패키지 형태로)
 
 2) 리액트를 사용하려면 npm(Node Packaged Manager)이라는 프로그램을 사용하면 좋습니다.
 npm은 node.js에 내장(built in)되어 있으므로, node.js을 설치하기만 하면 됩니다.

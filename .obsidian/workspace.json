@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7ff5bb0e2cde05fb",
+            "id": "cf9ccc696a24b097",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -22,20 +22,17 @@
             }
           },
           {
-            "id": "d2654c396b814a25",
+            "id": "09749bcc2fc037a8",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "raw/Study/10. Python/2026.06.23(화)/2026.06.23(화).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2026.06.23(화)"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "그래프 뷰"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -92,7 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 323.5
+    "width": 200
   },
   "right": {
     "id": "dae217cf4dff2dfe",
@@ -170,13 +167,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AGENTS.md",
-                "followCursor": false,
+                "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "AGENTS 의 개요"
+              "title": "개요"
             }
           },
           {
@@ -210,18 +206,29 @@
       "pdf-plus:PDF++: Toggle auto-copy": false,
       "pdf-plus:PDF++: Toggle auto-focus": false,
       "pdf-plus:PDF++: Toggle auto-paste": false,
-      "omnisearch:Omnisearch": false
+      "omnisearch:Omnisearch": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "7ff5bb0e2cde05fb",
+  "active": "09749bcc2fc037a8",
   "lastOpenFiles": [
-    "raw/Study/10. Python/2026.06.29(월)/2026.06.29(월).md",
+    "raw/Study/10. Python/2026.07.08(수)/2026.07.08(수).md",
     "raw/Study/10. Python/2026.06.30(화)/2026.06.30(화).md",
+    "Pasted image 20260708204448.png",
+    "raw/Study/1. Java/2026.02.26(목)/2026.02.26(목).md",
+    "raw/Study/10. Python/2026.07.03(금)/2026.07.03(금).md",
+    "raw/Study/4. FrontEnd_BackEnd/FrontEnd_BackEnd 총정리/FrontEnd_BackEnd 총정리.md",
+    "raw/Study/4. FrontEnd_BackEnd/2026.04.07(화)/2026.04.07(화).md",
+    "raw/Study/1. Java/Java 총정리/Java 총정리.md",
+    "raw/Study/1. Java/2026.03.12(목)/2026.03.12(목).md",
+    "raw/Study/10. Python/2026.07.06(월)/2026.07.06(월).md",
+    "raw/ai-instructions/karpathy-agent-guidelines.md",
     "raw/Study/10. Python/2026.06.23(화)/2026.06.23(화).md",
+    "raw/Study/10. Python/2026.07.08(수)",
+    "raw/Study/10. Python/2026.06.29(월)/2026.06.29(월).md",
     "raw/Study/10. Python/2026.06.26(금)/2026.06.26(금).md",
     "raw/Study/10. Python/2026.06.19(금)/2026.06.19(금).md",
     "raw/Study/10. Python/2026.07.07(화)/2026.07.07(화).md",
-    "raw/Study/10. Python/2026.07.06(월)/2026.07.06(월).md",
     "wiki/summaries/2026-03-09-java-class-object.md",
     "Pasted image 20260707094312.png",
     "wiki/concepts/terraform-infrastructure-as-code.md",
@@ -238,21 +245,11 @@
     "raw/Study/10. Python/2026.07.07(화)",
     "raw/Study/10. Python/교육 자료/Python(실습).pdf",
     "raw/ai-instructions/llm-wiki-command-cheatsheet.md",
-    "raw/ai-instructions/karpathy-agent-guidelines.md",
-    "raw/ai-instructions/hermes-default-profile-instructions.md",
-    "raw/ai-instructions/hermes-agent-llm-wiki-initial-setup.md",
-    "wiki/concepts/jpa-relationship-mapping.md",
-    "wiki/concepts/axios-interceptor-error-handling.md",
-    "wiki/comparisons/jpql-vs-sql.md",
-    "raw/Study/10. Python/2026.07.01(수)/2026.07.01(수).md",
-    "concepts/pandas-dataframe-basics.md",
-    "entities/pandas.md",
     "raw/Study/10. Python/교육 자료/공공 데이터 이용/공공자전거 대여소 정보(25.12월 기준).csv",
     "raw/Study/10. Python/교육 자료/공공 데이터 이용",
     "raw/Study/10. Python/2026.07.06(월)",
     "raw/Study/10. Python/교육 자료/csv 파일들/학생정보08.csv",
     "raw/Study/10. Python/교육 자료/csv 파일들/학생정보07.csv",
-    "raw/Study/10. Python/교육 자료/csv 파일들/학생정보02.csv",
     "raw/Study/10. Python/교육 자료/Pandas02.png",
     "raw/Study/10. Python/교육 자료/Pandas01.png",
     "raw/Study/5. Linux/교육 자료/로드 밸런싱.png",
@@ -260,7 +257,6 @@
     "raw/Study/5. Linux/교육 자료/AccessRights.png",
     "raw/Study/4. FrontEnd_BackEnd/교육 자료/라우터 설명 그림.png",
     "raw/Study/4. FrontEnd_BackEnd/교육 자료/다대일 단방향 매칭(Cart-CartProduct-Product) 02.png",
-    "raw/Study/4. FrontEnd_BackEnd/교육 자료/다대일 단방향 매칭(Cart-CartProduct-Product) 01.png",
-    "raw/Study/4. FrontEnd_BackEnd/교육 자료/프로그램 흐름 그림.png"
+    "raw/Study/4. FrontEnd_BackEnd/교육 자료/다대일 단방향 매칭(Cart-CartProduct-Product) 01.png"
   ]
 }
