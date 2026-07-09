@@ -5,9 +5,9 @@ updated: 2026-07-03
 type: concept
 tags: [java]
 sources:
-  - raw/Study/1. Java/2026.03.10(화)/2026.03.10(화).md
-  - raw/Study/1. Java/숙제/클래스 숙제 완료.md
-  - raw/Study/1. Java/Java 총정리/Java 총정리.md
+  - raw/KoreaICT/1. Java/2026.03.10(화)/2026.03.10(화).md
+  - raw/KoreaICT/1. Java/숙제/클래스 숙제 완료.md
+  - raw/KoreaICT/1. Java/Java 총정리/Java 총정리.md
 status: stable
 confidence: high
 ---
@@ -52,6 +52,6 @@ products[1] = new Product03("새우깡", 1500);
 
 ## 출처
 
-- `raw/Study/1. Java/2026.03.10(화)/2026.03.10(화).md`
-- `raw/Study/1. Java/숙제/클래스 숙제 완료.md`
-- `raw/Study/1. Java/Java 총정리/Java 총정리.md`
+- `raw/KoreaICT/1. Java/2026.03.10(화)/2026.03.10(화).md`
+- `raw/KoreaICT/1. Java/숙제/클래스 숙제 완료.md`
+- `raw/KoreaICT/1. Java/Java 총정리/Java 총정리.md`

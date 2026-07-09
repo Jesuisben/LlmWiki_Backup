@@ -5,8 +5,8 @@ updated: 2026-07-03
 type: concept
 tags: [python]
 sources:
-  - raw/Study/10. Python/2026.06.24(수)/2026.06.24(수).md
-  - raw/Study/10. Python/2026.06.29(월)/2026.06.29(월).md
+  - raw/KoreaICT/10. Python/2026.06.24(수)/2026.06.24(수).md
+  - raw/KoreaICT/10. Python/2026.06.29(월)/2026.06.29(월).md
 status: growing
 confidence: high
 ---
@@ -44,5 +44,5 @@ Pandas와 데이터 분석 실습은 이 기초 위에서 진행된다. 사용�
 
 ## 출처
 
-- `raw/Study/10. Python/2026.06.24(수)/2026.06.24(수).md`
-- `raw/Study/10. Python/2026.06.29(월)/2026.06.29(월).md`
+- `raw/KoreaICT/10. Python/2026.06.24(수)/2026.06.24(수).md`
+- `raw/KoreaICT/10. Python/2026.06.29(월)/2026.06.29(월).md`

@@ -1,15 +1,15 @@
 ---
 title: IntelliJ IDEA
 created: 2026-07-02
-updated: 2026-07-03
+updated: 2026-07-09
 type: entity
 tags: [java, spring]
 sources:
-  - raw/Study/1. Java/2026.02.26(목)/2026.02.26(목).md
-  - raw/Study/1. Java/2026.02.27(금)/깃허브 초기 설정.md
-  - raw/Study/1. Java/교육 자료/IntelliJ 교안.pdf
-  - raw/Study/1. Java/교육 자료/Github 교안(실습).pdf
-  - raw/Study/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf
+  - raw/KoreaICT/1. Java/2026.02.26(목)/2026.02.26(목).md
+  - raw/KoreaICT/1. Java/2026.02.27(금)/깃허브 초기 설정.md
+  - raw/KoreaICT/1. Java/교육 자료/IntelliJ 교안.pdf
+  - raw/KoreaICT/1. Java/교육 자료/Github 교안(실습).pdf
+  - raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf
 status: stable
 confidence: high
 ---
@@ -49,8 +49,8 @@ IntelliJ IDEA는 JetBrains가 만든 Java/Spring 개발용 IDE다. 이 위키에
 
 ## 출처
 
-- `raw/Study/1. Java/2026.02.26(목)/2026.02.26(목).md`
-- `raw/Study/1. Java/2026.02.27(금)/깃허브 초기 설정.md`
-- `raw/Study/1. Java/교육 자료/IntelliJ 교안.pdf`
-- `raw/Study/1. Java/교육 자료/Github 교안(실습).pdf`
-- `raw/Study/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf`
+- `raw/KoreaICT/1. Java/2026.02.26(목)/2026.02.26(목).md`
+- `raw/KoreaICT/1. Java/2026.02.27(금)/깃허브 초기 설정.md`
+- `raw/KoreaICT/1. Java/교육 자료/IntelliJ 교안.pdf`
+- `raw/KoreaICT/1. Java/교육 자료/Github 교안(실습).pdf`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf`

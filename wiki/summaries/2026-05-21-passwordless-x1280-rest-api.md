@@ -5,9 +5,9 @@ updated: 2026-07-03
 type: summary
 tags: [auth, backend, spring-boot, project, curriculum]
 sources:
-  - raw/Study/8. Passwordless/2026.05.21(목)/2026.05.21(목).md
-  - raw/Study/8. Passwordless/교육 자료/4. PX1280 Extra/0.Passwordless_X1280_인증서버_REST_API_20260511.pdf
-  - raw/Study/8. Passwordless/교육 자료/4. PX1280 Extra/[KR][교육용 빈칸] Passwordless X1280 API v1.postman_collection.json
+  - raw/KoreaICT/8. Passwordless/2026.05.21(목)/2026.05.21(목).md
+  - raw/KoreaICT/8. Passwordless/교육 자료/4. PX1280 Extra/0.Passwordless_X1280_인증서버_REST_API_20260511.pdf
+  - raw/KoreaICT/8. Passwordless/교육 자료/4. PX1280 Extra/[KR][교육용 빈칸] Passwordless X1280 API v1.postman_collection.json
 status: growing
 confidence: high
 ---
@@ -74,6 +74,6 @@ X1280 Docker 서버 실행
 
 ## 출처
 
-- `raw/Study/8. Passwordless/2026.05.21(목)/2026.05.21(목).md`
-- `raw/Study/8. Passwordless/교육 자료/4. PX1280 Extra/0.Passwordless_X1280_인증서버_REST_API_20260511.pdf`
-- `raw/Study/8. Passwordless/교육 자료/4. PX1280 Extra/[KR][교육용 빈칸] Passwordless X1280 API v1.postman_collection.json`
+- `raw/KoreaICT/8. Passwordless/2026.05.21(목)/2026.05.21(목).md`
+- `raw/KoreaICT/8. Passwordless/교육 자료/4. PX1280 Extra/0.Passwordless_X1280_인증서버_REST_API_20260511.pdf`
+- `raw/KoreaICT/8. Passwordless/교육 자료/4. PX1280 Extra/[KR][교육용 빈칸] Passwordless X1280 API v1.postman_collection.json`

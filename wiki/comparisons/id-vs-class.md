@@ -5,9 +5,9 @@ updated: 2026-07-06
 type: comparison
 tags: [html, css, frontend]
 sources:
-  - "raw/Study/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md"
-  - "raw/Study/3. UI&UX/2026.03.24(화)/2026.03.24(화).md"
-  - "raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md"
+  - "raw/KoreaICT/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md"
+  - "raw/KoreaICT/3. UI&UX/2026.03.24(화)/2026.03.24(화).md"
+  - "raw/KoreaICT/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md"
 status: growing
 confidence: high
 ---
@@ -62,6 +62,6 @@ id는 “한 요소를 식별하는 이름”이고, class는 “공통 스타�
 
 ## 출처
 
-- `raw/Study/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md`
-- `raw/Study/3. UI&UX/2026.03.24(화)/2026.03.24(화).md`
-- `raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md`
+- `raw/KoreaICT/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md`
+- `raw/KoreaICT/3. UI&UX/2026.03.24(화)/2026.03.24(화).md`
+- `raw/KoreaICT/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md`

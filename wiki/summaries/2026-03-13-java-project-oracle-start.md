@@ -5,8 +5,8 @@ updated: 2026-07-03
 type: summary
 tags: [java, oracle, curriculum, study-log]
 sources:
-  - raw/Study/1. Java/2026.03.13(금)/2026.03.13(금).md
-  - raw/Study/2. Oracle/2026.03.13(금)/2026.03.13(금).md
+  - raw/KoreaICT/1. Java/2026.03.13(금)/2026.03.13(금).md
+  - raw/KoreaICT/2. Oracle/2026.03.13(금) - 시작/2026.03.13(금) - 시작.md
 status: stable
 confidence: high
 ---
@@ -48,5 +48,5 @@ Java 1~5교시 팀 프로젝트로 객체지향 문법을 복습하고, 마지�
 
 ## 출처
 
-- `raw/Study/1. Java/2026.03.13(금)/2026.03.13(금).md`
-- `raw/Study/2. Oracle/2026.03.13(금)/2026.03.13(금).md`
+- `raw/KoreaICT/1. Java/2026.03.13(금)/2026.03.13(금).md`
+- `raw/KoreaICT/2. Oracle/2026.03.13(금) - 시작/2026.03.13(금) - 시작.md`

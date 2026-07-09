@@ -5,10 +5,10 @@ updated: 2026-07-03
 type: concept
 tags: [java]
 sources:
-  - raw/Study/1. Java/2026.02.26(목)/2026.02.26(목).md
-  - raw/Study/1. Java/2026.02.27(금)/2026.02.27(금).md
-  - raw/Study/1. Java/Java 총정리/Java 총정리.md
-  - raw/Study/1. Java/교육 자료/Java 교안(이론_20260226).pdf
+  - raw/KoreaICT/1. Java/2026.02.26(목)/2026.02.26(목).md
+  - raw/KoreaICT/1. Java/2026.02.27(금)/2026.02.27(금).md
+  - raw/KoreaICT/1. Java/Java 총정리/Java 총정리.md
+  - raw/KoreaICT/1. Java/교육 자료/Java 교안(이론_20260226).pdf
 status: stable
 confidence: high
 ---
@@ -52,7 +52,7 @@ Java 기본 자료형(primitive type)은 값 자체를 변수 공간에 저장�
 
 ## 출처
 
-- `raw/Study/1. Java/2026.02.26(목)/2026.02.26(목).md`
-- `raw/Study/1. Java/2026.02.27(금)/2026.02.27(금).md`
-- `raw/Study/1. Java/Java 총정리/Java 총정리.md`
-- `raw/Study/1. Java/교육 자료/Java 교안(이론_20260226).pdf`
+- `raw/KoreaICT/1. Java/2026.02.26(목)/2026.02.26(목).md`
+- `raw/KoreaICT/1. Java/2026.02.27(금)/2026.02.27(금).md`
+- `raw/KoreaICT/1. Java/Java 총정리/Java 총정리.md`
+- `raw/KoreaICT/1. Java/교육 자료/Java 교안(이론_20260226).pdf`

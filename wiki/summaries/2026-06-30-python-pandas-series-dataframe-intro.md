@@ -5,7 +5,7 @@ updated: 2026-07-03
 type: summary
 tags: [python, curriculum]
 sources:
-  - raw/Study/10. Python/2026.06.30(화)/2026.06.30(화).md
+  - raw/KoreaICT/10. Python/2026.06.30(화)/2026.06.30(화).md
 status: growing
 confidence: high
 ---
@@ -44,4 +44,4 @@ Pandas 공식 문서, `Series` 생성자, `index`, `name`, `values`, `to_frame`,
 
 ## 출처
 
-- `raw/Study/10. Python/2026.06.30(화)/2026.06.30(화).md`
+- `raw/KoreaICT/10. Python/2026.06.30(화)/2026.06.30(화).md`

@@ -5,9 +5,9 @@ updated: 2026-07-03
 type: summary
 tags: [aws, ci-cd, spring-boot, backend, curriculum]
 sources:
-  - raw/Study/7. Ci&CD/2026.05.13(수)/2026.05.13(수).md
-  - raw/Study/7. Ci&CD/교육 자료/cloud.02.AWS 교안(실습).pdf
-  - raw/Study/7. Ci&CD/교육 자료/cloud.03.AWS 교안(이론).pdf
+  - raw/KoreaICT/7. Ci&CD/2026.05.13(수)/2026.05.13(수).md
+  - raw/KoreaICT/7. Ci&CD/교육 자료/cloud.02.AWS 교안(실습).pdf
+  - raw/KoreaICT/7. Ci&CD/교육 자료/cloud.03.AWS 교안(이론).pdf
 status: growing
 confidence: high
 ---
@@ -118,6 +118,6 @@ RDS MySQL product table
 
 ## 출처
 
-- `raw/Study/7. Ci&CD/2026.05.13(수)/2026.05.13(수).md`
-- `raw/Study/7. Ci&CD/교육 자료/cloud.02.AWS 교안(실습).pdf`
-- `raw/Study/7. Ci&CD/교육 자료/cloud.03.AWS 교안(이론).pdf`
+- `raw/KoreaICT/7. Ci&CD/2026.05.13(수)/2026.05.13(수).md`
+- `raw/KoreaICT/7. Ci&CD/교육 자료/cloud.02.AWS 교안(실습).pdf`
+- `raw/KoreaICT/7. Ci&CD/교육 자료/cloud.03.AWS 교안(이론).pdf`

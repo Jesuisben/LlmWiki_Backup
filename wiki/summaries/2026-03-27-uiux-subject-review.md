@@ -5,14 +5,14 @@ updated: 2026-07-06
 type: summary
 tags: [html, css, javascript, bootstrap, jquery, frontend, curriculum, study-log]
 sources:
-  - "raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md"
-  - "raw/Study/3. UI&UX/UI&UX 총정리/속성들.md"
-  - "raw/Study/3. UI&UX/UI&UX 총정리/태그들.md"
-  - "raw/Study/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md"
-  - "raw/Study/3. UI&UX/2026.03.24(화)/2026.03.24(화).md"
-  - "raw/Study/3. UI&UX/2026.03.25(수)/2026.03.25(수).md"
-  - "raw/Study/3. UI&UX/2026.03.26(목)/2026.03.26(목).md"
-  - "raw/Study/3. UI&UX/2026.03.27(금)/2026.03.27(금).md"
+  - "raw/KoreaICT/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md"
+  - "raw/KoreaICT/3. UI&UX/UI&UX 총정리/속성들.md"
+  - "raw/KoreaICT/3. UI&UX/UI&UX 총정리/태그들.md"
+  - "raw/KoreaICT/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md"
+  - "raw/KoreaICT/3. UI&UX/2026.03.24(화)/2026.03.24(화).md"
+  - "raw/KoreaICT/3. UI&UX/2026.03.25(수)/2026.03.25(수).md"
+  - "raw/KoreaICT/3. UI&UX/2026.03.26(목)/2026.03.26(목).md"
+  - "raw/KoreaICT/3. UI&UX/2026.03.27(금)/2026.03.27(금).md"
 status: growing
 confidence: high
 ---
@@ -118,7 +118,7 @@ jQuery는 JavaScript 라이브러리다. `$()`로 요소를 선택하고, `click
 
 ## 출처
 
-- `raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md`
-- `raw/Study/3. UI&UX/UI&UX 총정리/속성들.md`
-- `raw/Study/3. UI&UX/UI&UX 총정리/태그들.md`
-- `raw/Study/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md` ~ `raw/Study/3. UI&UX/2026.03.27(금)/2026.03.27(금).md`
+- `raw/KoreaICT/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md`
+- `raw/KoreaICT/3. UI&UX/UI&UX 총정리/속성들.md`
+- `raw/KoreaICT/3. UI&UX/UI&UX 총정리/태그들.md`
+- `raw/KoreaICT/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md` ~ `raw/KoreaICT/3. UI&UX/2026.03.27(금)/2026.03.27(금).md`

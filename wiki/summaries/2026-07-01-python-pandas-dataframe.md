@@ -5,7 +5,7 @@ updated: 2026-07-02
 type: summary
 tags: [python, study-log]
 sources:
-  - raw/Study/10. Python/2026.07.01(수)/2026.07.01(수).md
+  - raw/KoreaICT/10. Python/2026.07.01(수)/2026.07.01(수).md
 status: growing
 confidence: high
 ---
@@ -26,7 +26,7 @@ Python 과정에서 [[entities/pandas|Pandas]]의 `DataFrame`/`Series`를 만들
 
 ### 1. DataFrame 생성과 행/열 조회
 
-수업은 `myindex02`, `mycolumns02`, `mylist02`를 준비한 뒤 `np.reshape`로 5×5 형태를 만들고 `pd.DataFrame(...)`으로 표를 구성하는 방식에서 출발했다. 행 이름은 사람 이름, 열 이름은 지역명으로 두어 “영업 사원별 구별 실적”처럼 읽을 수 있는 표를 만들었다. ^[raw/Study/10. Python/2026.07.01(수)/2026.07.01(수).md]
+수업은 `myindex02`, `mycolumns02`, `mylist02`를 준비한 뒤 `np.reshape`로 5×5 형태를 만들고 `pd.DataFrame(...)`으로 표를 구성하는 방식에서 출발했다. 행 이름은 사람 이름, 열 이름은 지역명으로 두어 “영업 사원별 구별 실적”처럼 읽을 수 있는 표를 만들었다. ^[raw/KoreaICT/10. Python/2026.07.01(수)/2026.07.01(수).md]
 
 핵심 조회 방식은 두 갈래다.
 
@@ -126,4 +126,4 @@ DataFrame끼리 더할 때는 `myframe31.add(myframe32, fill_value=0)`를 사용
 
 ## 출처
 
-- `raw/Study/10. Python/2026.07.01(수)/2026.07.01(수).md`
+- `raw/KoreaICT/10. Python/2026.07.01(수)/2026.07.01(수).md`

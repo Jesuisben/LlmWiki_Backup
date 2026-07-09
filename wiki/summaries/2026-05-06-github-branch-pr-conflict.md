@@ -1,12 +1,11 @@
 ---
 title: 2026-05-06 GitHub 브랜치, Pull Request, 충돌 해결
-created: 2026-07-02
-updated: 2026-07-06
+created: 2026-07-06
+updated: 2026-07-09
 type: summary
-tags: [github, ci-cd, project, curriculum]
+tags: [github, backend, curriculum, study-log]
 sources:
-  - raw/Study/5. Linux/2026.05.06(수)/2026.05.06(수).md
-  - raw/Study/5. Linux/교육 자료/Github 교안(실습).pdf
+  - raw/KoreaICT/5. Linux/2026.05.06(수)/2026.05.06(수).md
 status: growing
 confidence: high
 ---
@@ -15,50 +14,37 @@ confidence: high
 
 ## 한 줄 요약
 
-개인 Git 사용에서 팀 협업으로 확장해 branch, push, Pull Request, merge, pull, conflict 해결 흐름을 실습한 날이다.
+팀원 브랜치 생성, commit/push, Pull Request, master 병합 후 pull, 충돌 시나리오를 실습하며 GitHub 협업 흐름을 마무리했다.
 
 ## 배운 내용
 
-- 각자 branch를 만들고 작업한 뒤 원격 저장소에 push했다.
-- GitHub에서 Pull Request를 만들어 변경 내용을 기준 branch에 합치는 흐름을 익혔다.
-- 다른 사람이 먼저 merge한 변경을 로컬에 `pull`해 최신 상태를 맞췄다.
-- 같은 파일/같은 위치를 수정하면 conflict가 발생할 수 있음을 확인했다.
-- conflict marker를 보고 남길 내용과 버릴 내용을 선택한 뒤 다시 add/commit/push하는 흐름을 배웠다.
+- 커리큘럼 위치: 4과목은 Spring Boot와 React를 연결해 실제 쇼핑몰 기능을 만드는 단계이고, 5과목은 그 결과물을 Linux/Docker/GitHub 운영·협업 환경으로 옮기는 단계다.
+- 이전 흐름: 4과목은 [[summaries/2026-03-27-uiux-subject-review|UI&UX 총정리]] 이후, 5과목은 [[summaries/2026-04-03-frontend-backend-subject-review|FrontEnd_BackEnd 총정리]] 이후의 운영 단계다.
+- 다음 흐름: 이 내용은 이후 [[entities/aws|AWS]], [[concepts/ci-cd-automation|CI/CD 자동화]], 중간 프로젝트 배포·인증 흐름으로 이어진다.
+
+## 왜 이 흐름으로 배웠는가
+
+팀 프로젝트에서는 모두가 master/main에 직접 push하지 않고 브랜치와 PR로 변경을 검토·병합한다. 충돌 해결은 협업에서 반드시 겪는 문제다.
 
 ## 핵심 개념
 
-- [[concepts/git-github-collaboration|GitHub 협업 흐름]]
-- [[comparisons/git-fetch-vs-pull-vs-clone|git fetch vs pull vs clone]]
-- branch: 독립 작업 흐름.
-- Pull Request: 변경 제안과 리뷰/병합 단위.
-- conflict: Git이 자동으로 합칠 수 없는 변경 충돌.
+- 팀원 역할로 새 브랜치를 만들고 IntelliJ 설정과 함께 변경을 commit/push했다.
+- GitHub Pull Request 생성, 검토, merge 흐름을 실습했다.
+- PR로 병합된 master 브랜치를 로컬에 pull해 최신화했다.
+- 같은 파일을 서로 다르게 수정해 충돌을 만들고 해결하는 시나리오를 다뤘다.
 
 ## 실습 / 예제
 
-```bash
-git branch feature/member
-git checkout feature/member
-git add .
-git commit -m "회원 기능 수정"
-git push origin feature/member
-git checkout master
-git pull origin master
-```
-
-충돌이 나면 파일 안의 `<<<<<<<`, `=======`, `>>>>>>>` 표시를 보고 최종 내용을 정리한 뒤 다시 commit한다.
+branch 생성 → 작업 commit → push → PR → merge → master pull → conflict 해결 순서로 팀 협업 기본 루프를 익혔다.
 
 ## 헷갈린 점 / 질문
 
-- PR은 commit 자체가 아니라 branch의 변경을 기준 branch에 합치자고 제안하는 GitHub 기능이다.
-- merge 후 내 로컬 master/main이 자동으로 최신화되는 것은 아니므로 pull이 필요하다.
-- conflict 해결은 “오류 제거”가 아니라 두 변경 중 최종 업무 규칙에 맞는 내용을 결정하는 과정이다.
+clone은 새 복사본을 만드는 것이고, pull은 이미 있는 로컬 저장소에 원격 변경을 반영하는 것이다. PR merge 후에는 로컬 master도 pull해야 최신 상태가 된다.
 
 ## 관련 페이지
 
-- [[entities/github|GitHub]]
-- [[entities/source-tree|SourceTree]]
-- [[concepts/ci-cd-automation|CI/CD 자동화]]
+- [[concepts/git-github-collaboration|GitHub 협업 흐름]], [[comparisons/git-fetch-vs-pull-vs-clone|git fetch vs pull vs clone]], [[entities/github|GitHub]]
 
 ## 출처
 
-- `raw/Study/5. Linux/2026.05.06(수)/2026.05.06(수).md`
+- `raw/KoreaICT/5. Linux/2026.05.06(수)/2026.05.06(수).md`

@@ -1,14 +1,11 @@
 ---
 title: 2026-05-01 Docker Compose와 다중 컨테이너 실행
-created: 2026-07-02
-updated: 2026-07-06
+created: 2026-07-06
+updated: 2026-07-09
 type: summary
-tags: [linux, docker, backend, curriculum]
+tags: [linux, docker, backend, curriculum, study-log]
 sources:
-  - raw/Study/5. Linux/2026.05.01(금)/2026.05.01(금).md
-  - raw/Study/5. Linux/교육 자료/도커 컴포즈 종합 실습.md
-  - raw/Study/5. Linux/교육 자료/Docker/Docker 교안(이론).pdf
-  - raw/Study/5. Linux/교육 자료/Docker/Docker 교안(실습).pdf
+  - raw/KoreaICT/5. Linux/2026.05.01(금)/2026.05.01(금).md
 status: growing
 confidence: high
 ---
@@ -17,64 +14,37 @@ confidence: high
 
 ## 한 줄 요약
 
-여러 `docker run` 명령을 하나의 `docker-compose.yml` manifest로 정리해 MySQL+Spring Boot 같은 다중 컨테이너 구성을 실행한 날이다.
+Docker Compose manifest로 MySQL/WordPress 같은 다중 컨테이너 구성을 선언하고, Docker Desktop과 Compose 실습으로 컨테이너 묶음 실행을 익혔다.
 
 ## 배운 내용
 
-- Docker Compose가 여러 service, network, volume, environment, port mapping을 한 파일에 선언하는 도구임을 배웠다.
-- `docker compose up -d`, `docker compose down`, `docker compose logs`로 실행·중지·로그 확인을 했다.
-- YAML 들여쓰기와 `services`, `networks`, `volumes`, `environment`, `depends_on`의 역할을 구분했다.
-- MySQL과 Spring Boot 컨테이너를 같은 네트워크에 두고 DB host를 service 이름으로 지정하는 흐름을 익혔다.
-- Compose 파일은 운영 절차를 문서화하므로 팀원이나 서버가 바뀌어도 같은 구성을 재현하기 쉽다는 점을 배웠다.
+- 커리큘럼 위치: 4과목은 Spring Boot와 React를 연결해 실제 쇼핑몰 기능을 만드는 단계이고, 5과목은 그 결과물을 Linux/Docker/GitHub 운영·협업 환경으로 옮기는 단계다.
+- 이전 흐름: 4과목은 [[summaries/2026-03-27-uiux-subject-review|UI&UX 총정리]] 이후, 5과목은 [[summaries/2026-04-03-frontend-backend-subject-review|FrontEnd_BackEnd 총정리]] 이후의 운영 단계다.
+- 다음 흐름: 이 내용은 이후 [[entities/aws|AWS]], [[concepts/ci-cd-automation|CI/CD 자동화]], 중간 프로젝트 배포·인증 흐름으로 이어진다.
+
+## 왜 이 흐름으로 배웠는가
+
+여러 `docker run` 명령을 매번 직접 입력하면 네트워크, 볼륨, 환경 변수, 포트 설정이 누락되기 쉽다. Compose는 실행 구성을 파일로 남기는 방식이다.
 
 ## 핵심 개념
 
-- [[concepts/docker-compose-manifest|Docker Compose manifest]]
-- [[concepts/dockerfile-vs-compose|Dockerfile vs Docker Compose]]
-- [[concepts/docker-network-volume|Docker 네트워크와 볼륨]]
-- [[entities/docker|Docker]]
+- Compose manifest가 컨테이너, 이미지, 포트, 볼륨, 네트워크, 환경 변수를 선언하는 문서임을 배웠다.
+- `services`, `networks`, `volumes`, `environment`, `depends_on` 같은 YAML 항목을 확인했다.
+- Docker Desktop 설치와 GUI 확인 흐름을 다뤘다.
+- Permission denied가 보이면 docker 그룹 권한 반영을 위해 로그아웃/재접속이 필요하다는 점을 확인했다.
 
 ## 실습 / 예제
 
-```yaml
-services:
-  db:
-    image: mysql:8
-    environment:
-      MYSQL_ROOT_PASSWORD: {PASSWORD}
-      MYSQL_DATABASE: appdb
-    volumes:
-      - db-data:/var/lib/mysql
-  app:
-    image: myspring-img
-    ports:
-      - "9000:9000"
-    depends_on:
-      - db
-
-volumes:
-  db-data:
-```
-
-```bash
-docker compose up -d
-docker compose ps
-docker compose logs
-docker compose down
-```
+Compose 파일을 작성해 DB와 앱 컨테이너를 한 번에 올리고, `docker compose up/down/ps/logs` 흐름으로 상태를 확인했다.
 
 ## 헷갈린 점 / 질문
 
-- Compose는 이미지를 만드는 Dockerfile과 다르다. Compose는 이미 있는 이미지 또는 Dockerfile 빌드 결과를 “어떻게 함께 실행할지” 적는다.
-- YAML은 들여쓰기가 문법이므로 탭/스페이스와 계층을 조심해야 한다.
-- `depends_on`은 시작 순서를 돕지만 DB가 완전히 준비될 때까지 애플리케이션 재시도 로직을 대신해 주지는 않는다.
+Compose는 이미지를 만드는 도구라기보다 여러 컨테이너 실행 구성을 묶어 실행하는 도구다. 이미지 생성은 Dockerfile/build 단계와 연결된다.
 
 ## 관련 페이지
 
-- [[summaries/2026-05-04-git-github-sourcetree|2026-05-04 GitHub, Git Bash, SourceTree 협업 입문]]
-- [[concepts/spring-boot-cicd-docker-ec2-flow|Spring Boot CI/CD Docker-EC2 배포 흐름]]
+- [[concepts/docker-compose-manifest|Docker Compose manifest]], [[concepts/dockerfile-vs-compose|Dockerfile vs Docker Compose]], [[concepts/docker-network-volume|Docker 네트워크와 볼륨]]
 
 ## 출처
 
-- `raw/Study/5. Linux/2026.05.01(금)/2026.05.01(금).md`
-- `raw/Study/5. Linux/교육 자료/도커 컴포즈 종합 실습.md`
+- `raw/KoreaICT/5. Linux/2026.05.01(금)/2026.05.01(금).md`

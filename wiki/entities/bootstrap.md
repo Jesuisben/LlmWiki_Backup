@@ -5,9 +5,9 @@ updated: 2026-07-06
 type: entity
 tags: [bootstrap, frontend, css]
 sources:
-  - "raw/Study/3. UI&UX/2026.03.25(수)/2026.03.25(수).md"
-  - "raw/Study/3. UI&UX/2026.03.26(목)/2026.03.26(목).md"
-  - "raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md"
+  - "raw/KoreaICT/3. UI&UX/2026.03.25(수)/2026.03.25(수).md"
+  - "raw/KoreaICT/3. UI&UX/2026.03.26(목)/2026.03.26(목).md"
+  - "raw/KoreaICT/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md"
 status: growing
 confidence: high
 ---
@@ -46,6 +46,6 @@ UI&UX 수업에서는 직접 CSS로 만든 장바구니/상품 화면을 Bootstr
 
 ## 출처
 
-- `raw/Study/3. UI&UX/2026.03.25(수)/2026.03.25(수).md`
-- `raw/Study/3. UI&UX/2026.03.26(목)/2026.03.26(목).md`
-- `raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md`
+- `raw/KoreaICT/3. UI&UX/2026.03.25(수)/2026.03.25(수).md`
+- `raw/KoreaICT/3. UI&UX/2026.03.26(목)/2026.03.26(목).md`
+- `raw/KoreaICT/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md`

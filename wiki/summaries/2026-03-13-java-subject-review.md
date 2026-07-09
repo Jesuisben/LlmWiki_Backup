@@ -5,18 +5,18 @@ created: 2026-07-03
 updated: 2026-07-04
 tags: [java, curriculum, study-log]
 sources:
-  - raw/Study/1. Java/Java 총정리/Java 총정리.md
-  - raw/Study/1. Java/2026.02.26(목)/2026.02.26(목).md
-  - raw/Study/1. Java/2026.02.27(금)/2026.02.27(금).md
-  - raw/Study/1. Java/2026.03.03(화)/2026.03.03(화).md
-  - raw/Study/1. Java/2026.03.04(수)/2026.03.04(수).md
-  - raw/Study/1. Java/2026.03.05(목)/2026.03.05(목).md
-  - raw/Study/1. Java/2026.03.06(금)/2026.03.06(금).md
-  - raw/Study/1. Java/2026.03.09(월)/2026.03.09(월).md
-  - raw/Study/1. Java/2026.03.10(화)/2026.03.10(화).md
-  - raw/Study/1. Java/2026.03.11(수)/2026.03.11(수).md
-  - raw/Study/1. Java/2026.03.12(목)/2026.03.12(목).md
-  - raw/Study/1. Java/2026.03.13(금)/2026.03.13(금).md
+  - raw/KoreaICT/1. Java/Java 총정리/Java 총정리.md
+  - raw/KoreaICT/1. Java/2026.02.26(목)/2026.02.26(목).md
+  - raw/KoreaICT/1. Java/2026.02.27(금)/2026.02.27(금).md
+  - raw/KoreaICT/1. Java/2026.03.03(화)/2026.03.03(화).md
+  - raw/KoreaICT/1. Java/2026.03.04(수)/2026.03.04(수).md
+  - raw/KoreaICT/1. Java/2026.03.05(목)/2026.03.05(목).md
+  - raw/KoreaICT/1. Java/2026.03.06(금)/2026.03.06(금).md
+  - raw/KoreaICT/1. Java/2026.03.09(월)/2026.03.09(월).md
+  - raw/KoreaICT/1. Java/2026.03.10(화)/2026.03.10(화).md
+  - raw/KoreaICT/1. Java/2026.03.11(수)/2026.03.11(수).md
+  - raw/KoreaICT/1. Java/2026.03.12(목)/2026.03.12(목).md
+  - raw/KoreaICT/1. Java/2026.03.13(금)/2026.03.13(금).md
 status: stable
 confidence: high
 ---
@@ -142,15 +142,15 @@ Java에서 배운 “객체와 로직”은 Oracle에서 배울 “데이터 저
 
 ## 출처
 
-- `raw/Study/1. Java/Java 총정리/Java 총정리.md`
-- `raw/Study/1. Java/2026.02.26(목)/2026.02.26(목).md`
-- `raw/Study/1. Java/2026.02.27(금)/2026.02.27(금).md`
-- `raw/Study/1. Java/2026.03.03(화)/2026.03.03(화).md`
-- `raw/Study/1. Java/2026.03.04(수)/2026.03.04(수).md`
-- `raw/Study/1. Java/2026.03.05(목)/2026.03.05(목).md`
-- `raw/Study/1. Java/2026.03.06(금)/2026.03.06(금).md`
-- `raw/Study/1. Java/2026.03.09(월)/2026.03.09(월).md`
-- `raw/Study/1. Java/2026.03.10(화)/2026.03.10(화).md`
-- `raw/Study/1. Java/2026.03.11(수)/2026.03.11(수).md`
-- `raw/Study/1. Java/2026.03.12(목)/2026.03.12(목).md`
-- `raw/Study/1. Java/2026.03.13(금)/2026.03.13(금).md`
+- `raw/KoreaICT/1. Java/Java 총정리/Java 총정리.md`
+- `raw/KoreaICT/1. Java/2026.02.26(목)/2026.02.26(목).md`
+- `raw/KoreaICT/1. Java/2026.02.27(금)/2026.02.27(금).md`
+- `raw/KoreaICT/1. Java/2026.03.03(화)/2026.03.03(화).md`
+- `raw/KoreaICT/1. Java/2026.03.04(수)/2026.03.04(수).md`
+- `raw/KoreaICT/1. Java/2026.03.05(목)/2026.03.05(목).md`
+- `raw/KoreaICT/1. Java/2026.03.06(금)/2026.03.06(금).md`
+- `raw/KoreaICT/1. Java/2026.03.09(월)/2026.03.09(월).md`
+- `raw/KoreaICT/1. Java/2026.03.10(화)/2026.03.10(화).md`
+- `raw/KoreaICT/1. Java/2026.03.11(수)/2026.03.11(수).md`
+- `raw/KoreaICT/1. Java/2026.03.12(목)/2026.03.12(목).md`
+- `raw/KoreaICT/1. Java/2026.03.13(금)/2026.03.13(금).md`

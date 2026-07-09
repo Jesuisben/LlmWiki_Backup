@@ -5,8 +5,8 @@ updated: 2026-07-06
 type: comparison
 tags: [frontend, backend, javascript]
 sources:
-  - "raw/Study/3. UI&UX/2026.03.26(목)/2026.03.26(목).md"
-  - "raw/Study/3. UI&UX/교육 자료/IT 관련 용어.pdf"
+  - "raw/KoreaICT/3. UI&UX/2026.03.26(목)/2026.03.26(목).md"
+  - "raw/KoreaICT/3. UI&UX/교육 자료/IT 관련 용어.pdf"
 status: growing
 confidence: high
 ---
@@ -47,5 +47,5 @@ POST는 HTTP body에 데이터를 담아 보낸다. 원본은 POST 방식은 par
 
 ## 출처
 
-- `raw/Study/3. UI&UX/2026.03.26(목)/2026.03.26(목).md`
-- `raw/Study/3. UI&UX/교육 자료/IT 관련 용어.pdf`
+- `raw/KoreaICT/3. UI&UX/2026.03.26(목)/2026.03.26(목).md`
+- `raw/KoreaICT/3. UI&UX/교육 자료/IT 관련 용어.pdf`

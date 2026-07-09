@@ -1,15 +1,15 @@
 ---
 title: Docker 설치와 권한 설정
 created: 2026-07-02
-updated: 2026-07-06
+updated: 2026-07-09
 type: concept
 tags: [linux, docker, backend]
 sources:
-  - raw/Study/5. Linux/2026.04.28(화)/2026.04.28(화).md
-  - raw/Study/5. Linux/2026.04.30(목)/2026.04.30(목).md
-  - raw/Study/5. Linux/2026.05.01(금)/2026.05.01(금).md
-  - raw/Study/5. Linux/교육 자료/Docker/Docker 교안(실습).pdf
-  - raw/Study/5. Linux/교육 자료/도커 컴포즈 종합 실습.md
+  - raw/KoreaICT/5. Linux/2026.04.28(화)/2026.04.28(화).md
+  - raw/KoreaICT/5. Linux/2026.04.30(목)/2026.04.30(목).md
+  - raw/KoreaICT/5. Linux/2026.05.01(금)/2026.05.01(금).md
+  - raw/KoreaICT/5. Linux/교육 자료/Docker/Docker 교안(실습).pdf
+  - raw/KoreaICT/5. Linux/교육 자료/도커 컴포즈 종합 실습.md
 status: growing
 confidence: high
 ---
@@ -60,4 +60,4 @@ usermod -aG docker broadcast
 
 ## 출처
 
-- `raw/Study/5. Linux/2026.04.28(화)/2026.04.28(화).md`
+- `raw/KoreaICT/5. Linux/2026.04.28(화)/2026.04.28(화).md`

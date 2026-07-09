@@ -5,10 +5,10 @@ updated: 2026-07-03
 type: comparison
 tags: [aws, backend]
 sources:
-  - raw/Study/6. AWS/2026.05.07(목)/2026.05.07(목).md
-  - raw/Study/6. AWS/2026.05.08(금)/2026.05.08(금).md
-  - raw/Study/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf
-  - raw/Study/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf
+  - raw/KoreaICT/6. AWS/2026.05.07(목)/2026.05.07(목).md
+  - raw/KoreaICT/6. AWS/2026.05.08(금)/2026.05.08(금).md
+  - raw/KoreaICT/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf
+  - raw/KoreaICT/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf
 status: growing
 confidence: high
 ---
@@ -57,7 +57,7 @@ AWS 수업에서 EC2와 RDS는 모두 “클라우드에 있는 서버처럼 보
 
 ## 출처
 
-- `raw/Study/6. AWS/2026.05.07(목)/2026.05.07(목).md`
-- `raw/Study/6. AWS/2026.05.08(금)/2026.05.08(금).md`
-- `raw/Study/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf`
-- `raw/Study/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf`
+- `raw/KoreaICT/6. AWS/2026.05.07(목)/2026.05.07(목).md`
+- `raw/KoreaICT/6. AWS/2026.05.08(금)/2026.05.08(금).md`
+- `raw/KoreaICT/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf`
+- `raw/KoreaICT/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf`

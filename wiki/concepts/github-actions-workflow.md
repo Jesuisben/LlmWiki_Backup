@@ -5,8 +5,8 @@ updated: 2026-07-03
 type: concept
 tags: [ci-cd, backend]
 sources:
-  - raw/Study/7. Ci&CD/2026.05.11(월) - 시작/2026.05.11(월) - 시작.md
-  - raw/Study/7. Ci&CD/교육 자료/CI&CD(SpringBoot_실습).pdf
+  - raw/KoreaICT/7. Ci&CD/2026.05.11(월) - 시작/2026.05.11(월) - 시작.md
+  - raw/KoreaICT/7. Ci&CD/교육 자료/CI&CD(SpringBoot_실습).pdf
 status: growing
 confidence: high
 ---
@@ -91,5 +91,5 @@ Docker Hub나 EC2 배포 단계에서는 민감값이 필요하다. 이때 workf
 
 ## 출처
 
-- `raw/Study/7. Ci&CD/2026.05.11(월) - 시작/2026.05.11(월) - 시작.md`
-- `raw/Study/7. Ci&CD/교육 자료/CI&CD(SpringBoot_실습).pdf`
+- `raw/KoreaICT/7. Ci&CD/2026.05.11(월) - 시작/2026.05.11(월) - 시작.md`
+- `raw/KoreaICT/7. Ci&CD/교육 자료/CI&CD(SpringBoot_실습).pdf`

@@ -5,11 +5,11 @@ updated: 2026-07-03
 type: summary
 tags: [auth, linux, project, curriculum]
 sources:
-  - raw/Study/8. Passwordless/2026.05.20(수)/2026.05.20(수).md
-  - raw/Study/8. Passwordless/교육 자료/3. Filingbox MEGA & GIGA/NAS_WORM_교육.pdf
-  - raw/Study/8. Passwordless/교육 자료/3. Filingbox MEGA & GIGA/랜섬웨어_교육_박규휘_202605.pdf
-  - raw/Study/8. Passwordless/교육 자료/3. Filingbox MEGA & GIGA/FBG/ITUD_FilingBox GIGA_Hans_On_EN.pdf
-  - raw/Study/8. Passwordless/교육 자료/3. Filingbox MEGA & GIGA/FBM/ITUD_FilingBox MEGA_Hands_On_EN.pdf
+  - raw/KoreaICT/8. Passwordless/2026.05.20(수)/2026.05.20(수).md
+  - raw/KoreaICT/8. Passwordless/교육 자료/3. Filingbox MEGA & GIGA/NAS_WORM_교육.pdf
+  - raw/KoreaICT/8. Passwordless/교육 자료/3. Filingbox MEGA & GIGA/랜섬웨어_교육_박규휘_202605.pdf
+  - raw/KoreaICT/8. Passwordless/교육 자료/3. Filingbox MEGA & GIGA/FBG/ITUD_FilingBox GIGA_Hans_On_EN.pdf
+  - raw/KoreaICT/8. Passwordless/교육 자료/3. Filingbox MEGA & GIGA/FBM/ITUD_FilingBox MEGA_Hands_On_EN.pdf
 status: growing
 confidence: high
 ---
@@ -60,8 +60,8 @@ FilingBox GIGA OVA import
 
 ## 출처
 
-- `raw/Study/8. Passwordless/2026.05.20(수)/2026.05.20(수).md`
-- `raw/Study/8. Passwordless/교육 자료/3. Filingbox MEGA & GIGA/NAS_WORM_교육.pdf`
-- `raw/Study/8. Passwordless/교육 자료/3. Filingbox MEGA & GIGA/랜섬웨어_교육_박규휘_202605.pdf`
-- `raw/Study/8. Passwordless/교육 자료/3. Filingbox MEGA & GIGA/FBG/ITUD_FilingBox GIGA_Hans_On_EN.pdf`
-- `raw/Study/8. Passwordless/교육 자료/3. Filingbox MEGA & GIGA/FBM/ITUD_FilingBox MEGA_Hands_On_EN.pdf`
+- `raw/KoreaICT/8. Passwordless/2026.05.20(수)/2026.05.20(수).md`
+- `raw/KoreaICT/8. Passwordless/교육 자료/3. Filingbox MEGA & GIGA/NAS_WORM_교육.pdf`
+- `raw/KoreaICT/8. Passwordless/교육 자료/3. Filingbox MEGA & GIGA/랜섬웨어_교육_박규휘_202605.pdf`
+- `raw/KoreaICT/8. Passwordless/교육 자료/3. Filingbox MEGA & GIGA/FBG/ITUD_FilingBox GIGA_Hans_On_EN.pdf`
+- `raw/KoreaICT/8. Passwordless/교육 자료/3. Filingbox MEGA & GIGA/FBM/ITUD_FilingBox MEGA_Hands_On_EN.pdf`

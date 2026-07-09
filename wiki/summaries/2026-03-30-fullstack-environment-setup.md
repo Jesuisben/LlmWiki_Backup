@@ -1,11 +1,11 @@
 ---
 title: 2026-03-30 FrontEnd/BackEnd 개발 환경과 커리큘럼 전환
 created: 2026-07-06
-updated: 2026-07-06
+updated: 2026-07-09
 type: summary
 tags: [spring-boot, react, frontend, backend, curriculum, study-log]
 sources:
-  - raw/Study/4. FrontEnd_BackEnd/2026.03.30(월) - 시작/2026.03.30(월) - 시작.md
+  - raw/KoreaICT/4. FrontEnd_BackEnd/2026.03.30(월) - 시작/2026.03.30(월) - 시작.md
 status: growing
 confidence: high
 ---
@@ -14,39 +14,37 @@ confidence: high
 
 ## 한 줄 요약
 
-Spring Boot·React·TypeScript·MySQL·Node.js·VS Code를 설치하고 Java/Oracle/UI&UX 이후 풀스택 프로젝트 과정으로 넘어갈 실행 환경을 만든 날이다.
+Spring Boot·React·TypeScript·MySQL·Node.js·VS Code를 준비하고, “React 화면 → Spring API → DB”로 이어지는 풀스택 개발 흐름을 잡기 시작했다.
 
 ## 배운 내용
 
-- 주제: 환경 준비
-- 커리큘럼 위치: Java/Oracle/UI&UX 다음 단계에서 React 화면과 Spring Boot API를 실제 기능 단위로 연결하는 FrontEnd_BackEnd 과정이다.
-- 이전 흐름: [[summaries/2026-03-27-uiux-subject-review|UI&UX 총정리]]에서 HTML/CSS/JavaScript/Bootstrap/jQuery로 브라우저 화면을 만들었다.
-- 다음 흐름: 이 날짜의 내용은 이후 Linux/AWS/CI/CD에서 Spring Boot 애플리케이션을 서버에 올리고 배포하는 흐름으로 이어진다.
+- 커리큘럼 위치: 4과목은 Spring Boot와 React를 연결해 실제 쇼핑몰 기능을 만드는 단계이고, 5과목은 그 결과물을 Linux/Docker/GitHub 운영·협업 환경으로 옮기는 단계다.
+- 이전 흐름: 4과목은 [[summaries/2026-03-27-uiux-subject-review|UI&UX 총정리]] 이후, 5과목은 [[summaries/2026-04-03-frontend-backend-subject-review|FrontEnd_BackEnd 총정리]] 이후의 운영 단계다.
+- 다음 흐름: 이 내용은 이후 [[entities/aws|AWS]], [[concepts/ci-cd-automation|CI/CD 자동화]], 중간 프로젝트 배포·인증 흐름으로 이어진다.
 
 ## 왜 이 흐름으로 배웠는가
 
-백엔드 IDE, DB, 프론트 런타임, 편집기를 모두 맞춰야 같은 예제 코드를 실행할 수 있었다.
+이전 UI&UX 수업은 브라우저 화면 자체를 만드는 단계였다. 이 날부터는 화면이 백엔드 API와 DB를 만나야 실제 웹서비스가 된다는 흐름으로 넘어갔다.
 
 ## 핵심 개념
 
-MySQL Installer, Node.js, VS Code, IntelliJ/Spring Initializr 설정을 확인했다. React 쪽에서는 Vite build, `npm install`, `npm run dev`가 앞으로 화면 개발의 반복 루프가 된다는 점을 잡았다.
+- Spring Boot, React IDE, Node.js, Visual Studio Code, MySQL, IntelliJ 등 사용 프로그램의 역할을 구분했다.
+- MySQL 설치·설정과 Spring Boot 초기 구성을 통해 DB와 백엔드 연결 준비를 했다.
+- Vite 기반 React 프로젝트 생성, `localhost` 접속, Spring 포트·파일 경로·URL 설정처럼 이후 매일 반복될 개발 루틴을 세웠다.
+- 홈페이지 구성 절차를 “환경 준비 → 백엔드 설정 → 프론트 프로젝트 생성 → 실행 확인” 순서로 이해했다.
 
 ## 실습 / 예제
 
-- 원본 노트의 코드는 대부분 Spring Boot `controller/service/repository/entity/dto/config`와 React `pages/types/api/routes` 파일을 실제로 수정하는 형태다.
-- 실습을 복습할 때는 파일명 전체를 외우기보다 “요청 URL → Controller → Service → Repository/DB → DTO/응답 → React state/render” 순서로 따라가면 된다.
-- 실습 데이터나 비밀번호 형태의 예시는 위키에 그대로 재노출하지 않고 역할 중심으로만 정리했다.
+Spring Initializr/IntelliJ로 Spring Boot 프로젝트를 만들고, Node/Vite/VS Code로 React 프로젝트를 준비한 뒤 MySQL Workbench에서 샘플 DB를 확인하는 식의 초기 세팅 실습이 중심이었다.
 
 ## 헷갈린 점 / 질문
 
-`build`는 React/Vite 파일을 배포 가능한 묶음으로 만드는 과정이고, `npm`은 Node 생태계의 패키지 설치·실행 도구다. 설치 도구가 많아 보여도 역할은 DB, 백엔드 실행, 프론트 실행, 코드 편집으로 나뉜다.
+Node.js는 React 자체가 아니라 React 개발 도구와 빌드 도구가 돌아가는 실행 환경이다. Spring Boot는 API 서버, React는 브라우저 화면, MySQL은 데이터 저장소라는 역할 분리가 중요하다.
 
 ## 관련 페이지
 
-- [[entities/mysql|MySQL]], [[entities/node-js|Node.js]], [[entities/visual-studio-code|Visual Studio Code]], [[entities/spring-boot|Spring Boot]], [[entities/react|React]]
-- [[concepts/fullstack-project-flow|풀스택 프로젝트 흐름]]
-- [[concepts/frontend-backend-architecture|Frontend/Backend 구조]]
+- [[concepts/fullstack-project-flow|풀스택 프로젝트 흐름]], [[concepts/frontend-backend-architecture|Frontend/Backend 구조]], [[entities/spring-boot|Spring Boot]], [[entities/react|React]], [[entities/mysql|MySQL]], [[entities/node-js|Node.js]], [[entities/visual-studio-code|Visual Studio Code]]
 
 ## 출처
 
-- `raw/Study/4. FrontEnd_BackEnd/2026.03.30(월) - 시작/2026.03.30(월) - 시작.md`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/2026.03.30(월) - 시작/2026.03.30(월) - 시작.md`

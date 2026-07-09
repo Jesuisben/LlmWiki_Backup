@@ -5,9 +5,9 @@ updated: 2026-07-06
 type: entity
 tags: [jquery, javascript, frontend]
 sources:
-  - "raw/Study/3. UI&UX/2026.03.27(금)/2026.03.27(금).md"
-  - "raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md"
-  - "raw/Study/3. UI&UX/교육 자료/jQueryImageTest/jQueryImageTest.html"
+  - "raw/KoreaICT/3. UI&UX/2026.03.27(금)/2026.03.27(금).md"
+  - "raw/KoreaICT/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md"
+  - "raw/KoreaICT/3. UI&UX/교육 자료/jQueryImageTest/jQueryImageTest.html"
 status: growing
 confidence: high
 ---
@@ -45,6 +45,6 @@ UI&UX 마지막 날에 이미지 확대, 흑백 토글, 선택 표시, 카테고
 
 ## 출처
 
-- `raw/Study/3. UI&UX/2026.03.27(금)/2026.03.27(금).md`
-- `raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md`
-- `raw/Study/3. UI&UX/교육 자료/jQueryImageTest/jQueryImageTest.html`
+- `raw/KoreaICT/3. UI&UX/2026.03.27(금)/2026.03.27(금).md`
+- `raw/KoreaICT/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md`
+- `raw/KoreaICT/3. UI&UX/교육 자료/jQueryImageTest/jQueryImageTest.html`

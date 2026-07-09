@@ -1,16 +1,16 @@
 ---
 title: React와 TypeScript 기본
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-09
 type: concept
 tags: [react, typescript, frontend]
 sources:
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.01(수)/2026.04.01(수).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.10(금)/2026.04.10(금).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.15(수)/2026.04.15(수).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.21(화)/2026.04.21(화).md
-  - raw/Study/4. FrontEnd_BackEnd/교육 자료/React 교안.pdf
-  - raw/Study/4. FrontEnd_BackEnd/교육 자료/라우터 설명 그림.png
+  - raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.01(수)/2026.04.01(수).md
+  - raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.10(금)/2026.04.10(금).md
+  - raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.15(수)/2026.04.15(수).md
+  - raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.21(화)/2026.04.21(화).md
+  - raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/React 교안.pdf
+  - raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/라우터 설명 그림.png
 status: growing
 confidence: high
 ---
@@ -60,7 +60,7 @@ React 교안 p.41, p.72~73, p.87을 대조해 전개 연산자, 이벤트 객체
 
 ## 출처
 
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.01(수)/2026.04.01(수).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.10(금)/2026.04.10(금).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.15(수)/2026.04.15(수).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.21(화)/2026.04.21(화).md`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.01(수)/2026.04.01(수).md`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.10(금)/2026.04.10(금).md`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.15(수)/2026.04.15(수).md`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.21(화)/2026.04.21(화).md`

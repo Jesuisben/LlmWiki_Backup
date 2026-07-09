@@ -5,11 +5,11 @@ updated: 2026-07-06
 type: concept
 tags: [html, css, frontend]
 sources:
-  - "raw/Study/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md"
-  - "raw/Study/3. UI&UX/2026.03.24(화)/2026.03.24(화).md"
-  - "raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md"
-  - "raw/Study/3. UI&UX/UI&UX 총정리/태그들.md"
-  - "raw/Study/3. UI&UX/UI&UX 총정리/속성들.md"
+  - "raw/KoreaICT/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md"
+  - "raw/KoreaICT/3. UI&UX/2026.03.24(화)/2026.03.24(화).md"
+  - "raw/KoreaICT/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md"
+  - "raw/KoreaICT/3. UI&UX/UI&UX 총정리/태그들.md"
+  - "raw/KoreaICT/3. UI&UX/UI&UX 총정리/속성들.md"
 status: growing
 confidence: high
 ---
@@ -95,8 +95,8 @@ HTML은 웹 문서의 구조를 만드는 markup language이고, CSS는 그 구�
 
 ## 출처
 
-- `raw/Study/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md`
-- `raw/Study/3. UI&UX/2026.03.24(화)/2026.03.24(화).md`
-- `raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md`
-- `raw/Study/3. UI&UX/UI&UX 총정리/태그들.md`
-- `raw/Study/3. UI&UX/UI&UX 총정리/속성들.md`
+- `raw/KoreaICT/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md`
+- `raw/KoreaICT/3. UI&UX/2026.03.24(화)/2026.03.24(화).md`
+- `raw/KoreaICT/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md`
+- `raw/KoreaICT/3. UI&UX/UI&UX 총정리/태그들.md`
+- `raw/KoreaICT/3. UI&UX/UI&UX 총정리/속성들.md`

@@ -1,15 +1,15 @@
 ---
 title: JWT, 세션, 쿠키 인증
 created: 2026-07-02
-updated: 2026-07-03
+updated: 2026-07-09
 type: concept
 tags: [auth, backend, frontend]
 sources:
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.06(월)/2026.04.06(월).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.07(화)/2026.04.07(화).md
-  - raw/Study/4. FrontEnd_BackEnd/교육 자료/IT 관련 용어.pdf
-  - raw/Study/4. FrontEnd_BackEnd/교육 자료/JWT(이론).pdf
-  - raw/Study/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf
+  - raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.06(월)/2026.04.06(월).md
+  - raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.07(화)/2026.04.07(화).md
+  - raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/IT 관련 용어.pdf
+  - raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/JWT(이론).pdf
+  - raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf
 status: growing
 confidence: high
 ---
@@ -59,5 +59,5 @@ Passwordless X1280은 사용자를 확인하는 앞단 인증 방식이고, JWT/
 
 ## 출처
 
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.06(월)/2026.04.06(월).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.07(화)/2026.04.07(화).md`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.06(월)/2026.04.06(월).md`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.07(화)/2026.04.07(화).md`

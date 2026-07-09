@@ -6,7 +6,7 @@ updated: 2026-07-02
 type: comparison
 tags: [oracle, sql]
 sources:
-  - raw/Study/2. Oracle/2026.03.19(목)/2026.03.19(목).md
+  - raw/KoreaICT/2. Oracle/2026.03.19(목)/2026.03.19(목).md
 status: growing
 confidence: high
 ---
@@ -91,4 +91,4 @@ WHERE (gender, salary) IN (
 
 ## 출처
 
-- `raw/Study/2. Oracle/2026.03.19(목)/2026.03.19(목).md`
+- `raw/KoreaICT/2. Oracle/2026.03.19(목)/2026.03.19(목).md`

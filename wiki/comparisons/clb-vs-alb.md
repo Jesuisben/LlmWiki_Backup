@@ -5,10 +5,10 @@ updated: 2026-07-03
 type: comparison
 tags: [aws, backend]
 sources:
-  - raw/Study/6. AWS/2026.05.08(금)/2026.05.08(금).md
-  - raw/Study/6. AWS/교육 자료/cloud.01.AWS 교안(이론_미니파일).pdf
-  - raw/Study/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf
-  - raw/Study/6. AWS/교육 자료/실습 관리 대장(텍스트).md
+  - raw/KoreaICT/6. AWS/2026.05.08(금)/2026.05.08(금).md
+  - raw/KoreaICT/6. AWS/교육 자료/cloud.01.AWS 교안(이론_미니파일).pdf
+  - raw/KoreaICT/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf
+  - raw/KoreaICT/6. AWS/교육 자료/실습 관리 대장(텍스트).md
 status: growing
 confidence: high
 ---
@@ -55,7 +55,7 @@ AWS 수업에서는 Classic Load Balancer(CLB)와 Application Load Balancer(ALB)
 
 ## 출처
 
-- `raw/Study/6. AWS/2026.05.08(금)/2026.05.08(금).md`
-- `raw/Study/6. AWS/교육 자료/cloud.01.AWS 교안(이론_미니파일).pdf`
-- `raw/Study/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf`
-- `raw/Study/6. AWS/교육 자료/실습 관리 대장(텍스트).md`
+- `raw/KoreaICT/6. AWS/2026.05.08(금)/2026.05.08(금).md`
+- `raw/KoreaICT/6. AWS/교육 자료/cloud.01.AWS 교안(이론_미니파일).pdf`
+- `raw/KoreaICT/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf`
+- `raw/KoreaICT/6. AWS/교육 자료/실습 관리 대장(텍스트).md`

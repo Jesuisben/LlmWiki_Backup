@@ -1,11 +1,11 @@
 ---
 title: Spring 상품 검색 흐름
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-09
 type: concept
 tags: [spring-boot, backend, frontend]
 sources:
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md
+  - raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md
 status: growing
 confidence: high
 ---
@@ -150,4 +150,4 @@ ORDER BY product_id DESC;
 
 ## 출처
 
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md`

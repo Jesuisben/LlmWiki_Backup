@@ -1,15 +1,15 @@
 ---
 title: Spring Boot REST API
 created: 2026-07-02
-updated: 2026-07-03
+updated: 2026-07-09
 type: concept
 tags: [spring-boot, backend]
 sources:
-  - raw/Study/4. FrontEnd_BackEnd/2026.03.31(화)/2026.03.31(화).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.07(화)/2026.04.07(화).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md
-  - raw/Study/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf
-  - raw/Study/4. FrontEnd_BackEnd/교육 자료/IT 관련 용어.pdf
+  - raw/KoreaICT/4. FrontEnd_BackEnd/2026.03.31(화)/2026.03.31(화).md
+  - raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.07(화)/2026.04.07(화).md
+  - raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md
+  - raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf
+  - raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/IT 관련 용어.pdf
 status: growing
 confidence: high
 ---
@@ -63,6 +63,6 @@ IT 관련 용어 교안 p.35~36은 REST를 URL(Resource)과 HTTP Method(GET/POST
 
 ## 출처
 
-- `raw/Study/4. FrontEnd_BackEnd/2026.03.31(화)/2026.03.31(화).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.07(화)/2026.04.07(화).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/2026.03.31(화)/2026.03.31(화).md`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.07(화)/2026.04.07(화).md`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md`

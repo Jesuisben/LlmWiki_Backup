@@ -1,13 +1,13 @@
 ---
 title: props vs state
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-09
 type: comparison
 tags: [react, typescript, frontend]
 sources:
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.10(금)/2026.04.10(금).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.15(수)/2026.04.15(수).md
-  - raw/Study/4. FrontEnd_BackEnd/교육 자료/React 교안.pdf
+  - raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.10(금)/2026.04.10(금).md
+  - raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.15(수)/2026.04.15(수).md
+  - raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/React 교안.pdf
 status: growing
 confidence: high
 ---
@@ -47,6 +47,6 @@ React 장바구니 목록, 상품 등록 폼, 검색 조건 관리에서 props�
 
 ## 출처
 
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.10(금)/2026.04.10(금).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.15(수)/2026.04.15(수).md`
-- `raw/Study/4. FrontEnd_BackEnd/교육 자료/React 교안.pdf`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.10(금)/2026.04.10(금).md`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.15(수)/2026.04.15(수).md`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/React 교안.pdf`

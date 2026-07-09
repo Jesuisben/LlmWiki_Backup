@@ -5,12 +5,12 @@ updated: 2026-07-02
 type: entity
 tags: [oracle, sql]
 sources:
-  - raw/Study/2. Oracle/2026.03.13(금) - 시작/2026.03.13(금) - 시작.md
-  - raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md
-  - raw/Study/2. Oracle/2026.03.17(화)/2026.03.17(화).md
-  - raw/Study/2. Oracle/2026.03.20(금)/2026.03.20(금).md
-  - raw/Study/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf
-  - raw/Study/2. Oracle/교육 자료/디비버(Dbeaver) 사용법(version 2.0).pdf
+  - raw/KoreaICT/2. Oracle/2026.03.13(금) - 시작/2026.03.13(금) - 시작.md
+  - raw/KoreaICT/2. Oracle/2026.03.16(월)/2026.03.16(월).md
+  - raw/KoreaICT/2. Oracle/2026.03.17(화)/2026.03.17(화).md
+  - raw/KoreaICT/2. Oracle/2026.03.20(금)/2026.03.20(금).md
+  - raw/KoreaICT/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf
+  - raw/KoreaICT/2. Oracle/교육 자료/디비버(Dbeaver) 사용법(version 2.0).pdf
 status: growing
 confidence: high
 ---
@@ -46,9 +46,9 @@ DBeaver는 Oracle/MySQL 같은 DBMS에 접속해 SQL을 실행하고, 테이블�
 
 ## 출처
 
-- `raw/Study/2. Oracle/2026.03.13(금) - 시작/2026.03.13(금) - 시작.md`
-- `raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md`
-- `raw/Study/2. Oracle/2026.03.17(화)/2026.03.17(화).md`
-- `raw/Study/2. Oracle/2026.03.20(금)/2026.03.20(금).md`
-- `raw/Study/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf`
-- `raw/Study/2. Oracle/교육 자료/디비버(Dbeaver) 사용법(version 2.0).pdf`
+- `raw/KoreaICT/2. Oracle/2026.03.13(금) - 시작/2026.03.13(금) - 시작.md`
+- `raw/KoreaICT/2. Oracle/2026.03.16(월)/2026.03.16(월).md`
+- `raw/KoreaICT/2. Oracle/2026.03.17(화)/2026.03.17(화).md`
+- `raw/KoreaICT/2. Oracle/2026.03.20(금)/2026.03.20(금).md`
+- `raw/KoreaICT/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf`
+- `raw/KoreaICT/2. Oracle/교육 자료/디비버(Dbeaver) 사용법(version 2.0).pdf`

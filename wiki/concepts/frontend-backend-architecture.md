@@ -1,15 +1,15 @@
 ---
 title: Frontend/Backend 구조
 created: 2026-07-02
-updated: 2026-07-03
+updated: 2026-07-09
 type: concept
 tags: [frontend, backend, spring-boot, react]
 sources:
-  - raw/Study/4. FrontEnd_BackEnd/2026.03.30(월) - 시작/2026.03.30(월) - 시작.md
-  - raw/Study/4. FrontEnd_BackEnd/2026.03.31(화)/2026.03.31(화).md
-  - raw/Study/4. FrontEnd_BackEnd/교육 자료/FrontEnd&BackEnd.pdf
-  - raw/Study/4. FrontEnd_BackEnd/교육 자료/프로그램 흐름 그림.png
-  - raw/Study/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf
+  - raw/KoreaICT/4. FrontEnd_BackEnd/2026.03.30(월) - 시작/2026.03.30(월) - 시작.md
+  - raw/KoreaICT/4. FrontEnd_BackEnd/2026.03.31(화)/2026.03.31(화).md
+  - raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/FrontEnd&BackEnd.pdf
+  - raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/프로그램 흐름 그림.png
+  - raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf
 status: growing
 confidence: high
 ---
@@ -66,10 +66,16 @@ SpringBoot 교안의 프로젝트 구성 그림은 요청/응답이 View 또는 
 
 Passwordless를 붙이면 React는 QR 표시·승인 대기·결과 polling 같은 상태를 맡고, Spring Boot는 X1280 인증 서버 REST API 호출과 결과 해석을 맡는다. 즉 기존 Frontend/Backend 왕복 흐름에 외부 인증 서버와 모바일 앱 승인 단계가 추가된다.
 
+## 4과목 현재 raw MD 기준 재검증 메모
+
+- 2026-07-09에 `raw/KoreaICT/4. FrontEnd_BackEnd` 날짜별 MD 18개와 `FrontEnd_BackEnd 총정리.md`를 기준으로 다시 대조했다.
+- 이 페이지는 단순 일반론이 아니라 Spring Boot Controller/Service/Repository, React Router/page/state, JWT 인증, Product/Cart/Order/Pageable 기능 흐름과 연결해 읽어야 한다.
+- 핵심 복습 순서는 환경 세팅 → REST API/JSON/CORS → Member/JWT → Product → Cart → Order → Pageable/검색이다.
+
 ## 출처
 
-- `raw/Study/4. FrontEnd_BackEnd/2026.03.30(월) - 시작/2026.03.30(월) - 시작.md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.03.31(화)/2026.03.31(화).md`
-- `raw/Study/4. FrontEnd_BackEnd/교육 자료/FrontEnd&BackEnd.pdf`
-- `raw/Study/4. FrontEnd_BackEnd/교육 자료/프로그램 흐름 그림.png`
-- `raw/Study/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/2026.03.30(월) - 시작/2026.03.30(월) - 시작.md`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/2026.03.31(화)/2026.03.31(화).md`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/FrontEnd&BackEnd.pdf`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/프로그램 흐름 그림.png`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf`

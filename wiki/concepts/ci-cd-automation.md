@@ -5,8 +5,8 @@ updated: 2026-07-03
 type: concept
 tags: [ci-cd, backend, curriculum]
 sources:
-  - raw/Study/7. Ci&CD/2026.05.11(월) - 시작/2026.05.11(월) - 시작.md
-  - raw/Study/7. Ci&CD/교육 자료/CI&CD(SpringBoot_이론).pdf
+  - raw/KoreaICT/7. Ci&CD/2026.05.11(월) - 시작/2026.05.11(월) - 시작.md
+  - raw/KoreaICT/7. Ci&CD/교육 자료/CI&CD(SpringBoot_이론).pdf
 status: growing
 confidence: high
 ---
@@ -60,5 +60,5 @@ Spring Boot 실습에서는 `push`가 발생하면 GitHub Actions가 JDK 21을 �
 
 ## 출처
 
-- `raw/Study/7. Ci&CD/2026.05.11(월) - 시작/2026.05.11(월) - 시작.md`
-- `raw/Study/7. Ci&CD/교육 자료/CI&CD(SpringBoot_이론).pdf`
+- `raw/KoreaICT/7. Ci&CD/2026.05.11(월) - 시작/2026.05.11(월) - 시작.md`
+- `raw/KoreaICT/7. Ci&CD/교육 자료/CI&CD(SpringBoot_이론).pdf`

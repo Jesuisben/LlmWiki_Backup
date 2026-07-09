@@ -5,9 +5,9 @@ updated: 2026-07-03
 type: summary
 tags: [java, curriculum, study-log]
 sources:
-  - raw/Study/1. Java/2026.03.09(월)/2026.03.09(월).md
-  - raw/Study/1. Java/숙제/클래스 숙제 완료.md
-  - raw/Study/1. Java/교육 자료/Java 교안(이론_20260226).pdf
+  - raw/KoreaICT/1. Java/2026.03.09(월)/2026.03.09(월).md
+  - raw/KoreaICT/1. Java/숙제/클래스 숙제 완료.md
+  - raw/KoreaICT/1. Java/교육 자료/Java 교안(이론_20260226).pdf
 status: stable
 confidence: high
 ---
@@ -54,6 +54,6 @@ confidence: high
 
 ## 출처
 
-- `raw/Study/1. Java/2026.03.09(월)/2026.03.09(월).md`
-- `raw/Study/1. Java/숙제/클래스 숙제 완료.md`
-- `raw/Study/1. Java/교육 자료/Java 교안(이론_20260226).pdf`
+- `raw/KoreaICT/1. Java/2026.03.09(월)/2026.03.09(월).md`
+- `raw/KoreaICT/1. Java/숙제/클래스 숙제 완료.md`
+- `raw/KoreaICT/1. Java/교육 자료/Java 교안(이론_20260226).pdf`

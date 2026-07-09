@@ -5,7 +5,7 @@ updated: 2026-07-02
 type: summary
 tags: [python, study-log]
 sources:
-  - raw/Study/10. Python/2026.07.02(목)/2026.07.02(목).md
+  - raw/KoreaICT/10. Python/2026.07.02(목)/2026.07.02(목).md
 status: seed
 confidence: high
 ---
@@ -26,7 +26,7 @@ confidence: high
 
 ### 1. Chap07.Data Reshape 실습 방식
 
-수업은 `Chap07.Data Reshape.ipynb` 완성 템플릿을 직접 수정하는 방식이 아니라, `ch13_pandas` 폴더에 새 Jupyter Notebook 파일을 만들어 직접 타이핑해 보는 방식으로 진행했다. 즉, 단순 복사보다 “코드를 따라 치면서 DataFrame 변형 흐름을 익히는 것”이 목적이었다. ^[raw/Study/10. Python/2026.07.02(목)/2026.07.02(목).md]
+수업은 `Chap07.Data Reshape.ipynb` 완성 템플릿을 직접 수정하는 방식이 아니라, `ch13_pandas` 폴더에 새 Jupyter Notebook 파일을 만들어 직접 타이핑해 보는 방식으로 진행했다. 즉, 단순 복사보다 “코드를 따라 치면서 DataFrame 변형 흐름을 익히는 것”이 목적이었다. ^[raw/KoreaICT/10. Python/2026.07.02(목)/2026.07.02(목).md]
 
 ### 2. concat: DataFrame 이어 붙이기
 
@@ -126,4 +126,4 @@ pivotData = data.pivot(index='name', columns='item', values=['value', 'qty'])
 
 ## 출처
 
-- `raw/Study/10. Python/2026.07.02(목)/2026.07.02(목).md`
+- `raw/KoreaICT/10. Python/2026.07.02(목)/2026.07.02(목).md`

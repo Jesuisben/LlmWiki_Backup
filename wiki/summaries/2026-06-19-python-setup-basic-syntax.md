@@ -5,7 +5,7 @@ updated: 2026-07-03
 type: summary
 tags: [python, curriculum]
 sources:
-  - raw/Study/10. Python/2026.06.19(금)/2026.06.19(금).md
+  - raw/KoreaICT/10. Python/2026.06.19(금) - 시작/2026.06.19(금) - 시작.md
 status: growing
 confidence: high
 ---
@@ -44,4 +44,4 @@ Python/PyCharm 설치와 인터프리터 연결, `pip` 경로, `print()`의 `sep
 
 ## 출처
 
-- `raw/Study/10. Python/2026.06.19(금)/2026.06.19(금).md`
+- `raw/KoreaICT/10. Python/2026.06.19(금) - 시작/2026.06.19(금) - 시작.md`

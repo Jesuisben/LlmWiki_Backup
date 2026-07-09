@@ -5,9 +5,9 @@ updated: 2026-07-03
 type: summary
 tags: [java, curriculum, study-log]
 sources:
-  - raw/Study/1. Java/2026.02.27(금)/깃허브 초기 설정.md
-  - raw/Study/1. Java/교육 자료/Github 교안(실습).pdf
-  - raw/Study/1. Java/교육 자료/IntelliJ 교안.pdf
+  - raw/KoreaICT/1. Java/2026.02.27(금)/깃허브 초기 설정.md
+  - raw/KoreaICT/1. Java/교육 자료/Github 교안(실습).pdf
+  - raw/KoreaICT/1. Java/교육 자료/IntelliJ 교안.pdf
 status: stable
 confidence: high
 ---
@@ -54,6 +54,6 @@ Java 프로젝트 `MyJava`를 Git 저장소로 만들고 GitHub 원격 저장소
 
 ## 출처
 
-- `raw/Study/1. Java/2026.02.27(금)/깃허브 초기 설정.md`
-- `raw/Study/1. Java/교육 자료/Github 교안(실습).pdf`
-- `raw/Study/1. Java/교육 자료/IntelliJ 교안.pdf`
+- `raw/KoreaICT/1. Java/2026.02.27(금)/깃허브 초기 설정.md`
+- `raw/KoreaICT/1. Java/교육 자료/Github 교안(실습).pdf`
+- `raw/KoreaICT/1. Java/교육 자료/IntelliJ 교안.pdf`

@@ -17,8 +17,8 @@ confidence: high
 
 - 목적: 감사 리포트에 남아 있던 Java 잔여 후보 2개를 새 요약이 아니라 기존 핵심 Java concept/entity/comparison 보강 방식으로 반영하고, 전체 위키 lint/감사 리포트 수치를 최신화함.
 - 읽은 원본:
-  - `raw/Study/1. Java/Java 총정리/Java 총정리.md`
-  - `raw/Study/1. Java/숙제/클래스 숙제 완료.md`
+  - `raw/KoreaICT/1. Java/Java 총정리/Java 총정리.md`
+  - `raw/KoreaICT/1. Java/숙제/클래스 숙제 완료.md`
 - 생성한 파일:
   - `wiki/concepts/java-memory-static-final.md`
   - `wiki/comparisons/array-vs-collection.md`

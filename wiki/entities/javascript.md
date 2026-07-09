@@ -5,9 +5,9 @@ updated: 2026-07-06
 type: entity
 tags: [javascript, frontend]
 sources:
-  - "raw/Study/3. UI&UX/2026.03.24(화)/2026.03.24(화).md"
-  - "raw/Study/3. UI&UX/2026.03.26(목)/2026.03.26(목).md"
-  - "raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md"
+  - "raw/KoreaICT/3. UI&UX/2026.03.24(화)/2026.03.24(화).md"
+  - "raw/KoreaICT/3. UI&UX/2026.03.26(목)/2026.03.26(목).md"
+  - "raw/KoreaICT/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md"
 status: growing
 confidence: high
 ---
@@ -46,6 +46,6 @@ UI&UX 과정에서는 `<script>` 태그, `document`, `getElementById`, `innerHTM
 
 ## 출처
 
-- `raw/Study/3. UI&UX/2026.03.24(화)/2026.03.24(화).md`
-- `raw/Study/3. UI&UX/2026.03.26(목)/2026.03.26(목).md`
-- `raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md`
+- `raw/KoreaICT/3. UI&UX/2026.03.24(화)/2026.03.24(화).md`
+- `raw/KoreaICT/3. UI&UX/2026.03.26(목)/2026.03.26(목).md`
+- `raw/KoreaICT/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md`

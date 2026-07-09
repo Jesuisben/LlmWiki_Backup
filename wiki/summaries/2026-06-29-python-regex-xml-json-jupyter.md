@@ -5,7 +5,7 @@ updated: 2026-07-03
 type: summary
 tags: [python, curriculum]
 sources:
-  - raw/Study/10. Python/2026.06.29(월)/2026.06.29(월).md
+  - raw/KoreaICT/10. Python/2026.06.29(월)/2026.06.29(월).md
 status: growing
 confidence: high
 ---
@@ -44,4 +44,4 @@ confidence: high
 
 ## 출처
 
-- `raw/Study/10. Python/2026.06.29(월)/2026.06.29(월).md`
+- `raw/KoreaICT/10. Python/2026.06.29(월)/2026.06.29(월).md`

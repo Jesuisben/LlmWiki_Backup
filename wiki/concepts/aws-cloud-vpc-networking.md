@@ -5,13 +5,13 @@ updated: 2026-07-03
 type: concept
 tags: [aws, backend]
 sources:
-  - raw/Study/6. AWS/2026.05.06(수) - 시작/2026.05.06(수) - 시작.md
-  - raw/Study/6. AWS/2026.05.07(목)/2026.05.07(목).md
-  - raw/Study/6. AWS/교육 자료/AWS 기초 용어.pdf
-  - raw/Study/6. AWS/교육 자료/cloud.01.AWS 교안(이론_미니파일).pdf
-  - raw/Study/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf
-  - raw/Study/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf
-  - raw/Study/6. AWS/교육 자료/실습 관리 대장(텍스트).md
+  - raw/KoreaICT/6. AWS/2026.05.06(수) - 시작/2026.05.06(수) - 시작.md
+  - raw/KoreaICT/6. AWS/2026.05.07(목)/2026.05.07(목).md
+  - raw/KoreaICT/6. AWS/교육 자료/AWS 기초 용어.pdf
+  - raw/KoreaICT/6. AWS/교육 자료/cloud.01.AWS 교안(이론_미니파일).pdf
+  - raw/KoreaICT/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf
+  - raw/KoreaICT/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf
+  - raw/KoreaICT/6. AWS/교육 자료/실습 관리 대장(텍스트).md
 status: growing
 confidence: high
 ---
@@ -79,10 +79,10 @@ EDU-VPC 10.250.0.0/16
 
 ## 출처
 
-- `raw/Study/6. AWS/2026.05.06(수) - 시작/2026.05.06(수) - 시작.md`
-- `raw/Study/6. AWS/2026.05.07(목)/2026.05.07(목).md`
-- `raw/Study/6. AWS/교육 자료/AWS 기초 용어.pdf`
-- `raw/Study/6. AWS/교육 자료/cloud.01.AWS 교안(이론_미니파일).pdf`
-- `raw/Study/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf`
-- `raw/Study/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf`
-- `raw/Study/6. AWS/교육 자료/실습 관리 대장(텍스트).md`
+- `raw/KoreaICT/6. AWS/2026.05.06(수) - 시작/2026.05.06(수) - 시작.md`
+- `raw/KoreaICT/6. AWS/2026.05.07(목)/2026.05.07(목).md`
+- `raw/KoreaICT/6. AWS/교육 자료/AWS 기초 용어.pdf`
+- `raw/KoreaICT/6. AWS/교육 자료/cloud.01.AWS 교안(이론_미니파일).pdf`
+- `raw/KoreaICT/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf`
+- `raw/KoreaICT/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf`
+- `raw/KoreaICT/6. AWS/교육 자료/실습 관리 대장(텍스트).md`

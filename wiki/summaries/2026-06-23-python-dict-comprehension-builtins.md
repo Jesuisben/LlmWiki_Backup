@@ -5,7 +5,7 @@ updated: 2026-07-03
 type: summary
 tags: [python, curriculum]
 sources:
-  - raw/Study/10. Python/2026.06.23(화)/2026.06.23(화).md
+  - raw/KoreaICT/10. Python/2026.06.23(화)/2026.06.23(화).md
 status: growing
 confidence: high
 ---
@@ -44,4 +44,4 @@ dict의 key 중복 불가/value 중복 가능, `in`, `keys()`, `values()`, `item
 
 ## 출처
 
-- `raw/Study/10. Python/2026.06.23(화)/2026.06.23(화).md`
+- `raw/KoreaICT/10. Python/2026.06.23(화)/2026.06.23(화).md`

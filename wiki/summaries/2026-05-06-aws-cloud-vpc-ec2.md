@@ -5,12 +5,12 @@ updated: 2026-07-03
 type: summary
 tags: [aws, linux, backend, curriculum, study-log]
 sources:
-  - raw/Study/6. AWS/2026.05.06(수) - 시작/2026.05.06(수) - 시작.md
-  - raw/Study/6. AWS/교육 자료/AWS 기초 용어.pdf
-  - raw/Study/6. AWS/교육 자료/cloud.01.AWS 교안(이론_미니파일).pdf
-  - raw/Study/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf
-  - raw/Study/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf
-  - raw/Study/6. AWS/교육 자료/실습 관리 대장(텍스트).md
+  - raw/KoreaICT/6. AWS/2026.05.06(수) - 시작/2026.05.06(수) - 시작.md
+  - raw/KoreaICT/6. AWS/교육 자료/AWS 기초 용어.pdf
+  - raw/KoreaICT/6. AWS/교육 자료/cloud.01.AWS 교안(이론_미니파일).pdf
+  - raw/KoreaICT/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf
+  - raw/KoreaICT/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf
+  - raw/KoreaICT/6. AWS/교육 자료/실습 관리 대장(텍스트).md
 status: growing
 confidence: high
 ---
@@ -89,9 +89,9 @@ EDU-VPC 10.250.0.0/16
 
 ## 출처
 
-- `raw/Study/6. AWS/2026.05.06(수) - 시작/2026.05.06(수) - 시작.md` — AWS 메뉴, Security Group, Subnet, IP/CIDR 메모
-- `raw/Study/6. AWS/교육 자료/AWS 기초 용어.pdf` — On-Demand, On-Premise, AWS 기초 용어
-- `raw/Study/6. AWS/교육 자료/cloud.01.AWS 교안(이론_미니파일).pdf` — VPC/EC2/Route 53/RDS/ACM 메뉴와 기본 구조
-- `raw/Study/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf` — VPC, IGW, Route Table, Security Group, EC2 생성 흐름
-- `raw/Study/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf` — IP, CIDR, Subnet, Security Group 이론
-- `raw/Study/6. AWS/교육 자료/실습 관리 대장(텍스트).md` — 실습 리소스 이름과 CIDR/IP/포트 표
+- `raw/KoreaICT/6. AWS/2026.05.06(수) - 시작/2026.05.06(수) - 시작.md` — AWS 메뉴, Security Group, Subnet, IP/CIDR 메모
+- `raw/KoreaICT/6. AWS/교육 자료/AWS 기초 용어.pdf` — On-Demand, On-Premise, AWS 기초 용어
+- `raw/KoreaICT/6. AWS/교육 자료/cloud.01.AWS 교안(이론_미니파일).pdf` — VPC/EC2/Route 53/RDS/ACM 메뉴와 기본 구조
+- `raw/KoreaICT/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf` — VPC, IGW, Route Table, Security Group, EC2 생성 흐름
+- `raw/KoreaICT/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf` — IP, CIDR, Subnet, Security Group 이론
+- `raw/KoreaICT/6. AWS/교육 자료/실습 관리 대장(텍스트).md` — 실습 리소스 이름과 CIDR/IP/포트 표

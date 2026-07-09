@@ -5,10 +5,10 @@ updated: 2026-07-06
 type: entity
 tags: [css, frontend]
 sources:
-  - "raw/Study/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md"
-  - "raw/Study/3. UI&UX/2026.03.24(화)/2026.03.24(화).md"
-  - "raw/Study/3. UI&UX/UI&UX 총정리/속성들.md"
-  - "raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md"
+  - "raw/KoreaICT/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md"
+  - "raw/KoreaICT/3. UI&UX/2026.03.24(화)/2026.03.24(화).md"
+  - "raw/KoreaICT/3. UI&UX/UI&UX 총정리/속성들.md"
+  - "raw/KoreaICT/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md"
 status: growing
 confidence: high
 ---
@@ -48,7 +48,7 @@ UI&UX 수업에서는 CSS를 선택자와 속성 중심으로 배웠다. `style`
 
 ## 출처
 
-- `raw/Study/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md`
-- `raw/Study/3. UI&UX/2026.03.24(화)/2026.03.24(화).md`
-- `raw/Study/3. UI&UX/UI&UX 총정리/속성들.md`
-- `raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md`
+- `raw/KoreaICT/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md`
+- `raw/KoreaICT/3. UI&UX/2026.03.24(화)/2026.03.24(화).md`
+- `raw/KoreaICT/3. UI&UX/UI&UX 총정리/속성들.md`
+- `raw/KoreaICT/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md`

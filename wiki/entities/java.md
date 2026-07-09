@@ -5,20 +5,20 @@ updated: 2026-07-04
 type: entity
 tags: [java, backend, curriculum]
 sources:
-  - raw/Study/1. Java/2026.02.26(목)/2026.02.26(목).md
-  - raw/Study/1. Java/2026.02.27(금)/2026.02.27(금).md
-  - raw/Study/1. Java/2026.03.03(화)/2026.03.03(화).md
-  - raw/Study/1. Java/2026.03.04(수)/2026.03.04(수).md
-  - raw/Study/1. Java/2026.03.05(목)/2026.03.05(목).md
-  - raw/Study/1. Java/2026.03.06(금)/2026.03.06(금).md
-  - raw/Study/1. Java/2026.03.09(월)/2026.03.09(월).md
-  - raw/Study/1. Java/2026.03.10(화)/2026.03.10(화).md
-  - raw/Study/1. Java/2026.03.11(수)/2026.03.11(수).md
-  - raw/Study/1. Java/2026.03.12(목)/2026.03.12(목).md
-  - raw/Study/1. Java/2026.03.13(금)/2026.03.13(금).md
-  - raw/Study/1. Java/Java 총정리/Java 총정리.md
-  - raw/Study/1. Java/숙제/클래스 숙제 완료.md
-  - raw/Study/1. Java/교육 자료/Java 교안(이론_20260226).pdf
+  - raw/KoreaICT/1. Java/2026.02.26(목)/2026.02.26(목).md
+  - raw/KoreaICT/1. Java/2026.02.27(금)/2026.02.27(금).md
+  - raw/KoreaICT/1. Java/2026.03.03(화)/2026.03.03(화).md
+  - raw/KoreaICT/1. Java/2026.03.04(수)/2026.03.04(수).md
+  - raw/KoreaICT/1. Java/2026.03.05(목)/2026.03.05(목).md
+  - raw/KoreaICT/1. Java/2026.03.06(금)/2026.03.06(금).md
+  - raw/KoreaICT/1. Java/2026.03.09(월)/2026.03.09(월).md
+  - raw/KoreaICT/1. Java/2026.03.10(화)/2026.03.10(화).md
+  - raw/KoreaICT/1. Java/2026.03.11(수)/2026.03.11(수).md
+  - raw/KoreaICT/1. Java/2026.03.12(목)/2026.03.12(목).md
+  - raw/KoreaICT/1. Java/2026.03.13(금)/2026.03.13(금).md
+  - raw/KoreaICT/1. Java/Java 총정리/Java 총정리.md
+  - raw/KoreaICT/1. Java/숙제/클래스 숙제 완료.md
+  - raw/KoreaICT/1. Java/교육 자료/Java 교안(이론_20260226).pdf
 status: stable
 confidence: high
 ---
@@ -86,7 +86,7 @@ Java에서 객체를 설계하고 로직을 작성하는 법을 배운 뒤, [[en
 
 ## 출처
 
-- `raw/Study/1. Java` 사용자 정리 MD 전체
-- `raw/Study/1. Java/Java 총정리/Java 총정리.md`
-- `raw/Study/1. Java/숙제/클래스 숙제 완료.md`
-- `raw/Study/1. Java/교육 자료/Java 교안(이론_20260226).pdf`
+- `raw/KoreaICT/1. Java` 사용자 정리 MD 전체
+- `raw/KoreaICT/1. Java/Java 총정리/Java 총정리.md`
+- `raw/KoreaICT/1. Java/숙제/클래스 숙제 완료.md`
+- `raw/KoreaICT/1. Java/교육 자료/Java 교안(이론_20260226).pdf`

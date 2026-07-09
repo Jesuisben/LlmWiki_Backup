@@ -5,10 +5,10 @@ updated: 2026-07-02
 type: concept
 tags: [oracle, sql]
 sources:
-  - raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md
-  - raw/Study/2. Oracle/2026.03.18(수)/2026.03.18(수).md
-  - raw/Study/2. Oracle/교육 자료/오라클 교안.pdf
-  - raw/Study/2. Oracle/교육 자료/스크립트들/A05.DQL 실습.sql
+  - raw/KoreaICT/2. Oracle/2026.03.16(월)/2026.03.16(월).md
+  - raw/KoreaICT/2. Oracle/2026.03.18(수)/2026.03.18(수).md
+  - raw/KoreaICT/2. Oracle/교육 자료/오라클 교안.pdf
+  - raw/KoreaICT/2. Oracle/교육 자료/스크립트들/A05.DQL 실습.sql
 status: growing
 confidence: high
 ---
@@ -81,7 +81,7 @@ SELECT * FROM products ORDER BY category ASC, price DESC;
 
 ## 출처
 
-- `raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md`
-- `raw/Study/2. Oracle/2026.03.18(수)/2026.03.18(수).md`
-- `raw/Study/2. Oracle/교육 자료/오라클 교안.pdf` — p.34~36 SQL 분류, p.134~195 DQL
-- `raw/Study/2. Oracle/교육 자료/스크립트들/A05.DQL 실습.sql`
+- `raw/KoreaICT/2. Oracle/2026.03.16(월)/2026.03.16(월).md`
+- `raw/KoreaICT/2. Oracle/2026.03.18(수)/2026.03.18(수).md`
+- `raw/KoreaICT/2. Oracle/교육 자료/오라클 교안.pdf` — p.34~36 SQL 분류, p.134~195 DQL
+- `raw/KoreaICT/2. Oracle/교육 자료/스크립트들/A05.DQL 실습.sql`

@@ -5,10 +5,10 @@ updated: 2026-07-03
 type: concept
 tags: [project, ci-cd, aws, spring-boot, react]
 sources:
-  - raw/Study/7. Ci&CD/2026.05.11(월) - 시작/2026.05.11(월) - 시작.md
-  - raw/Study/7. Ci&CD/교육 자료/CI&CD(SpringBoot_실습).pdf
-  - D:/Study_LLM_Wiki/raw/Study/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md
-  - D:/Study_LLM_Wiki/raw/Study/9. 중간 프로젝트 공부/CICD/Github_Secrets 예시.md
+  - raw/KoreaICT/7. Ci&CD/2026.05.11(월) - 시작/2026.05.11(월) - 시작.md
+  - raw/KoreaICT/7. Ci&CD/교육 자료/CI&CD(SpringBoot_실습).pdf
+  - D:/Study_LLM_Wiki/raw/KoreaICT/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md
+  - D:/Study_LLM_Wiki/raw/KoreaICT/9. 중간 프로젝트 공부/CICD/Github_Secrets 예시.md
 status: growing
 confidence: medium
 ---
@@ -68,7 +68,7 @@ jobs:
 
 ## 출처
 
-- `raw/Study/7. Ci&CD/2026.05.11(월) - 시작/2026.05.11(월) - 시작.md`
-- `raw/Study/7. Ci&CD/교육 자료/CI&CD(SpringBoot_실습).pdf`
-- `raw/Study/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md`
-- `raw/Study/9. 중간 프로젝트 공부/CICD/Github_Secrets 예시.md`
+- `raw/KoreaICT/7. Ci&CD/2026.05.11(월) - 시작/2026.05.11(월) - 시작.md`
+- `raw/KoreaICT/7. Ci&CD/교육 자료/CI&CD(SpringBoot_실습).pdf`
+- `raw/KoreaICT/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md`
+- `raw/KoreaICT/9. 중간 프로젝트 공부/CICD/Github_Secrets 예시.md`

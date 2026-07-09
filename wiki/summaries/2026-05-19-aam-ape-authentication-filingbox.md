@@ -5,9 +5,9 @@ updated: 2026-07-03
 type: summary
 tags: [auth, linux, project, curriculum]
 sources:
-  - raw/Study/8. Passwordless/2026.05.19(화)/2026.05.19(화).md
-  - raw/Study/8. Passwordless/교육 자료/2. AAM&APE/1. 인증 기본 교육_20260512.pptx.pdf
-  - raw/Study/8. Passwordless/교육 자료/2. AAM&APE/2. AAM_APE_설치 (서버 및 클라이언트).pptx.pdf
+  - raw/KoreaICT/8. Passwordless/2026.05.19(화)/2026.05.19(화).md
+  - raw/KoreaICT/8. Passwordless/교육 자료/2. AAM&APE/1. 인증 기본 교육_20260512.pptx.pdf
+  - raw/KoreaICT/8. Passwordless/교육 자료/2. AAM&APE/2. AAM_APE_설치 (서버 및 클라이언트).pptx.pdf
 status: growing
 confidence: high
 ---
@@ -58,6 +58,6 @@ Rocky Linux VM 준비
 
 ## 출처
 
-- `raw/Study/8. Passwordless/2026.05.19(화)/2026.05.19(화).md`
-- `raw/Study/8. Passwordless/교육 자료/2. AAM&APE/1. 인증 기본 교육_20260512.pptx.pdf`
-- `raw/Study/8. Passwordless/교육 자료/2. AAM&APE/2. AAM_APE_설치 (서버 및 클라이언트).pptx.pdf`
+- `raw/KoreaICT/8. Passwordless/2026.05.19(화)/2026.05.19(화).md`
+- `raw/KoreaICT/8. Passwordless/교육 자료/2. AAM&APE/1. 인증 기본 교육_20260512.pptx.pdf`
+- `raw/KoreaICT/8. Passwordless/교육 자료/2. AAM&APE/2. AAM_APE_설치 (서버 및 클라이언트).pptx.pdf`

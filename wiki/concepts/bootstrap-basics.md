@@ -5,9 +5,9 @@ updated: 2026-07-06
 type: concept
 tags: [bootstrap, css, frontend]
 sources:
-  - "raw/Study/3. UI&UX/2026.03.25(수)/2026.03.25(수).md"
-  - "raw/Study/3. UI&UX/2026.03.26(목)/2026.03.26(목).md"
-  - "raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md"
+  - "raw/KoreaICT/3. UI&UX/2026.03.25(수)/2026.03.25(수).md"
+  - "raw/KoreaICT/3. UI&UX/2026.03.26(목)/2026.03.26(목).md"
+  - "raw/KoreaICT/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md"
 status: growing
 confidence: high
 ---
@@ -78,6 +78,6 @@ HTML 문서의 `head` 등에 Bootstrap CSS CDN을 연결하면, `btn`, `containe
 
 ## 출처
 
-- `raw/Study/3. UI&UX/2026.03.25(수)/2026.03.25(수).md`
-- `raw/Study/3. UI&UX/2026.03.26(목)/2026.03.26(목).md`
-- `raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md`
+- `raw/KoreaICT/3. UI&UX/2026.03.25(수)/2026.03.25(수).md`
+- `raw/KoreaICT/3. UI&UX/2026.03.26(목)/2026.03.26(목).md`
+- `raw/KoreaICT/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md`

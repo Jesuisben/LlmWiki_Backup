@@ -5,7 +5,7 @@ updated: 2026-06-30
 type: concept
 tags: [study-log]
 sources:
-  - raw/markdown-grammar/markdown-grammar.md
+  - raw/References/markdown-grammar/markdown-grammar.md
 status: seed
 confidence: high
 ---
@@ -76,4 +76,4 @@ public class Hello {
 
 ## 출처
 
-- `raw/markdown-grammar/markdown-grammar.md`
+- `raw/References/markdown-grammar/markdown-grammar.md`

@@ -5,10 +5,10 @@ updated: 2026-07-03
 type: concept
 tags: [python]
 sources:
-  - raw/Study/10. Python/2026.06.30(화)/2026.06.30(화).md
-  - raw/Study/10. Python/2026.07.01(수)/2026.07.01(수).md
-  - raw/Study/10. Python/2026.07.02(목)/2026.07.02(목).md
-  - raw/Study/10. Python/2026.07.03(금)/2026.07.03(금).md
+  - raw/KoreaICT/10. Python/2026.06.30(화)/2026.06.30(화).md
+  - raw/KoreaICT/10. Python/2026.07.01(수)/2026.07.01(수).md
+  - raw/KoreaICT/10. Python/2026.07.02(목)/2026.07.02(목).md
+  - raw/KoreaICT/10. Python/2026.07.03(금)/2026.07.03(금).md
 status: growing
 confidence: high
 ---
@@ -42,7 +42,7 @@ Oracle에서 배운 테이블·행·열 감각과 연결하면 이해가 쉽다.
 - `index`: 행 이름 또는 행 위치 정보
 - `columns`: 열 이름 정보
 
-2026-07-01 수업에서는 사람 이름을 `index`, 지역명을 `columns`로 두고 영업 실적 표를 만들었다. `np.reshape`로 리스트를 5×5 배열 형태로 바꾼 뒤 `pd.DataFrame(..., index=..., columns=...)`로 DataFrame을 구성했다. ^[raw/Study/10. Python/2026.07.01(수)/2026.07.01(수).md]
+2026-07-01 수업에서는 사람 이름을 `index`, 지역명을 `columns`로 두고 영업 실적 표를 만들었다. `np.reshape`로 리스트를 5×5 배열 형태로 바꾼 뒤 `pd.DataFrame(..., index=..., columns=...)`로 DataFrame을 구성했다. ^[raw/KoreaICT/10. Python/2026.07.01(수)/2026.07.01(수).md]
 
 ### loc와 iloc
 
@@ -99,7 +99,7 @@ DataFrame끼리 연산할 때는 행/열 이름이 맞는 위치끼리 계산된
 
 ### concat, merge, pivot
 
-2026-07-02 수업에서는 단일 DataFrame 조작을 넘어 여러 DataFrame을 결합하고 모양을 바꾸는 작업을 했다. ^[raw/Study/10. Python/2026.07.02(목)/2026.07.02(목).md]
+2026-07-02 수업에서는 단일 DataFrame 조작을 넘어 여러 DataFrame을 결합하고 모양을 바꾸는 작업을 했다. ^[raw/KoreaICT/10. Python/2026.07.02(목)/2026.07.02(목).md]
 
 | 함수 | 목적 | 수업 예시 |
 |---|---|---|
@@ -111,7 +111,7 @@ DataFrame끼리 연산할 때는 행/열 이름이 맞는 위치끼리 계산된
 
 ### groupby, agg, transform, cut
 
-2026-07-03 수업에서는 DataFrame을 단순히 조회·결합하는 데서 더 나아가 범주별로 요약하고 그래프로 확인하는 흐름을 다뤘다. ^[raw/Study/10. Python/2026.07.03(금)/2026.07.03(금).md]
+2026-07-03 수업에서는 DataFrame을 단순히 조회·결합하는 데서 더 나아가 범주별로 요약하고 그래프로 확인하는 흐름을 다뤘다. ^[raw/KoreaICT/10. Python/2026.07.03(금)/2026.07.03(금).md]
 
 | 기능 | 목적 | 수업 예시 |
 |---|---|---|
@@ -190,7 +190,7 @@ payment.groupby(["출장지역", "성별"])[cols].agg(["sum", "mean"])
 
 ## 출처
 
-- `raw/Study/10. Python/2026.06.30(화)/2026.06.30(화).md`
-- `raw/Study/10. Python/2026.07.01(수)/2026.07.01(수).md`
-- `raw/Study/10. Python/2026.07.02(목)/2026.07.02(목).md`
-- `raw/Study/10. Python/2026.07.03(금)/2026.07.03(금).md`
+- `raw/KoreaICT/10. Python/2026.06.30(화)/2026.06.30(화).md`
+- `raw/KoreaICT/10. Python/2026.07.01(수)/2026.07.01(수).md`
+- `raw/KoreaICT/10. Python/2026.07.02(목)/2026.07.02(목).md`
+- `raw/KoreaICT/10. Python/2026.07.03(금)/2026.07.03(금).md`

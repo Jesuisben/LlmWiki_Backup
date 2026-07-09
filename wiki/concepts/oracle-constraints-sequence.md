@@ -5,11 +5,11 @@ updated: 2026-07-02
 type: concept
 tags: [oracle, sql]
 sources:
-  - raw/Study/2. Oracle/2026.03.17(화)/2026.03.17(화).md
-  - raw/Study/2. Oracle/2026.03.18(수)/2026.03.18(수).md
-  - raw/Study/2. Oracle/교육 자료/오라클 교안.pdf
-  - raw/Study/2. Oracle/교육 자료/스크립트들/A02.오라맨 스크립트.sql
-  - raw/Study/2. Oracle/교육 자료/스크립트들/A03.Oraman ddl(선생님이 만든 버젼).sql
+  - raw/KoreaICT/2. Oracle/2026.03.17(화)/2026.03.17(화).md
+  - raw/KoreaICT/2. Oracle/2026.03.18(수)/2026.03.18(수).md
+  - raw/KoreaICT/2. Oracle/교육 자료/오라클 교안.pdf
+  - raw/KoreaICT/2. Oracle/교육 자료/스크립트들/A02.오라맨 스크립트.sql
+  - raw/KoreaICT/2. Oracle/교육 자료/스크립트들/A03.Oraman ddl(선생님이 만든 버젼).sql
 status: growing
 confidence: high
 ---
@@ -67,8 +67,8 @@ SELECT * FROM user_sequences;
 
 ## 출처
 
-- `raw/Study/2. Oracle/2026.03.17(화)/2026.03.17(화).md`
-- `raw/Study/2. Oracle/2026.03.18(수)/2026.03.18(수).md`
-- `raw/Study/2. Oracle/교육 자료/오라클 교안.pdf` — p.389~391 제약조건 개요
-- `raw/Study/2. Oracle/교육 자료/스크립트들/A02.오라맨 스크립트.sql`
-- `raw/Study/2. Oracle/교육 자료/스크립트들/A03.Oraman ddl(선생님이 만든 버젼).sql`
+- `raw/KoreaICT/2. Oracle/2026.03.17(화)/2026.03.17(화).md`
+- `raw/KoreaICT/2. Oracle/2026.03.18(수)/2026.03.18(수).md`
+- `raw/KoreaICT/2. Oracle/교육 자료/오라클 교안.pdf` — p.389~391 제약조건 개요
+- `raw/KoreaICT/2. Oracle/교육 자료/스크립트들/A02.오라맨 스크립트.sql`
+- `raw/KoreaICT/2. Oracle/교육 자료/스크립트들/A03.Oraman ddl(선생님이 만든 버젼).sql`

@@ -5,9 +5,9 @@ updated: 2026-07-02
 type: comparison
 tags: [oracle, sql]
 sources:
-  - raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md
-  - raw/Study/2. Oracle/2026.03.18(수)/2026.03.18(수).md
-  - raw/Study/2. Oracle/교육 자료/오라클 교안.pdf
+  - raw/KoreaICT/2. Oracle/2026.03.16(월)/2026.03.16(월).md
+  - raw/KoreaICT/2. Oracle/2026.03.18(수)/2026.03.18(수).md
+  - raw/KoreaICT/2. Oracle/교육 자료/오라클 교안.pdf
 status: growing
 confidence: high
 ---
@@ -41,6 +41,6 @@ SQL을 처음 배울 때 구조를 바꾸는 것, 데이터를 바꾸는 것, �
 
 ## 출처
 
-- `raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md`
-- `raw/Study/2. Oracle/2026.03.18(수)/2026.03.18(수).md`
-- `raw/Study/2. Oracle/교육 자료/오라클 교안.pdf` — p.34~36, p.120~124, p.134~195
+- `raw/KoreaICT/2. Oracle/2026.03.16(월)/2026.03.16(월).md`
+- `raw/KoreaICT/2. Oracle/2026.03.18(수)/2026.03.18(수).md`
+- `raw/KoreaICT/2. Oracle/교육 자료/오라클 교안.pdf` — p.34~36, p.120~124, p.134~195

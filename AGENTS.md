@@ -36,7 +36,11 @@
 ./
 ├── AGENTS.md                 # 이 파일: LLM 위키 운영 규칙
 ├── raw/                      # 사용자가 넣는 원본 자료. LLM은 절대 수정하지 않는다.
-│   └── assets/               # 원본 자료에 딸린 이미지/첨부파일
+│   ├── KoreaICT/             # 한국ICT인재개발원 국비지원 풀스택 과정 수업 원본
+│   ├── PersonalStudy/        # 학원 수업과 별개로 사용자가 개인적으로 공부한 자료
+│   ├── PersonalProjects/     # 개인 프로젝트 설계, 오류 기록, 회고, 실습 자료
+│   ├── References/           # AI instructions, Markdown 문법, 프롬프트 등 참고자료
+│   └── assets/               # 원본 자료에 딸린 공통 이미지/첨부파일
 └── wiki/                     # LLM이 생성·수정하는 지식 베이스
     ├── index.md              # 전체 위키 목차: 모든 위키 페이지의 카탈로그
     ├── log.md                # 작업 일지: ingest/query/lint/update 기록
@@ -53,7 +57,12 @@
 - 원본 자료의 오탈자나 잘못된 설명을 발견해도 `raw/`를 고치지 않는다. 대신 `wiki/` 페이지에서 “원본에는 X라고 되어 있으나, 현재 정리는 Y”처럼 기록한다.
 - 사용자가 수업 노트, 실습 기록, 캡처, 참고 링크를 `raw/`에 추가하면 LLM은 읽어서 `wiki/`에 통합한다.
 - 이미지가 있으면 `raw/assets/`에 두고, 필요할 때 별도로 확인한 뒤 위키 페이지에서 `![[...]]` 또는 파일 경로로 참조한다.
-- 예외: 사용자가 원본 TXT → Markdown 변환을 명시적으로 요청한 경우, 외부 학원 원본 TXT를 소스로 삼아 `raw/Study/<과목>/...`의 대응 `.md` 파일을 생성하거나 덮어쓸 수 있다. 이때 외부 원본 TXT와 `교육 자료/`는 수정하지 않고, 사용자가 손수 변환한 Java/Oracle MD에서 추출한 canonical TXT→MD 규칙을 적용한다. 다시 갈아엎는 대상 과목의 기존 MD는 스타일 기준이 아니라 덮어쓰기 대상이다.
+- `raw/KoreaICT/`는 한국ICT인재개발원 국비지원 풀스택 개발자 과정 수업 자료 전용이다. 과거 `raw/Study/`라고 부르던 범위는 앞으로 `raw/KoreaICT/`로 본다.
+- `raw/PersonalStudy/`는 학원 수업과 별개로 사용자가 개인적으로 공부한 자료를 넣는다.
+- `raw/PersonalProjects/`는 개인 프로젝트 설계, 오류 기록, 회고, 실습 자료를 넣는다.
+- `raw/References/`는 AI instructions, Markdown 문법, 프롬프트, 참고문서처럼 특정 과목이나 프로젝트에 직접 속하지 않는 자료를 넣는다.
+- `wiki/`는 출처별로 쪼개지 않고 기존처럼 `summaries/`, `concepts/`, `entities/`, `comparisons/`, `queries/` 구조를 유지한다. 단, 개인 공부나 프로젝트 자료를 ingest할 때는 summary 제목·frontmatter·본문에서 `KoreaICT 수업`, `PersonalStudy`, `PersonalProjects` 맥락을 명확히 구분한다.
+- 예외: 사용자가 원본 TXT → Markdown 변환을 명시적으로 요청한 경우, 외부 학원 원본 TXT를 소스로 삼아 `raw/KoreaICT/<과목>/...`의 대응 `.md` 파일을 생성하거나 덮어쓸 수 있다. 이때 외부 원본 TXT와 `교육 자료/`는 수정하지 않고, 사용자가 손수 변환한 Java/Oracle MD에서 추출한 canonical TXT→MD 규칙을 적용한다. 다시 갈아엎는 대상 과목의 기존 MD는 스타일 기준이 아니라 덮어쓰기 대상이다.
 
 ### `wiki/` 규칙
 - `wiki/`는 LLM이 유지보수하는 컴파일된 지식 레이어다.

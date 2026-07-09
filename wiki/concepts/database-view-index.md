@@ -5,8 +5,8 @@ updated: 2026-07-02
 type: concept
 tags: [oracle, sql]
 sources:
-  - raw/Study/2. Oracle/2026.03.20(금)/2026.03.20(금).md
-  - raw/Study/2. Oracle/교육 자료/오라클 교안.pdf
+  - raw/KoreaICT/2. Oracle/2026.03.20(금)/2026.03.20(금).md
+  - raw/KoreaICT/2. Oracle/교육 자료/오라클 교안.pdf
 status: growing
 confidence: high
 ---
@@ -56,5 +56,5 @@ Index는 책의 목차처럼 데이터를 빠르게 찾기 위한 구조다. 수
 
 ## 출처
 
-- `raw/Study/2. Oracle/2026.03.20(금)/2026.03.20(금).md`
-- `raw/Study/2. Oracle/교육 자료/오라클 교안.pdf` — p.446~448 View
+- `raw/KoreaICT/2. Oracle/2026.03.20(금)/2026.03.20(금).md`
+- `raw/KoreaICT/2. Oracle/교육 자료/오라클 교안.pdf` — p.446~448 View

@@ -1,15 +1,15 @@
 ---
 title: DTO, Entity, Service, Controller
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-09
 type: concept
 tags: [spring-boot, backend]
 sources:
-  - raw/Study/4. FrontEnd_BackEnd/2026.03.31(화)/2026.03.31(화).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.14(화)/2026.04.14(화).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md
-  - raw/Study/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf
-  - raw/Study/4. FrontEnd_BackEnd/교육 자료/쇼핑 카트 데이터 구조 다이어그램.png
+  - raw/KoreaICT/4. FrontEnd_BackEnd/2026.03.31(화)/2026.03.31(화).md
+  - raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.14(화)/2026.04.14(화).md
+  - raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md
+  - raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf
+  - raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/쇼핑 카트 데이터 구조 다이어그램.png
 status: growing
 confidence: high
 ---
@@ -55,6 +55,6 @@ SpringBoot 교안의 프로젝트 구성도는 Controller/Service/Repository/Ent
 
 ## 출처
 
-- `raw/Study/4. FrontEnd_BackEnd/2026.03.31(화)/2026.03.31(화).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.14(화)/2026.04.14(화).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/2026.03.31(화)/2026.03.31(화).md`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.14(화)/2026.04.14(화).md`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md`

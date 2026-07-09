@@ -5,8 +5,8 @@ updated: 2026-07-03
 type: entity
 tags: [aws]
 sources:
-  - raw/Study/7. Ci&CD/2026.05.13(수)/2026.05.13(수).md
-  - raw/Study/7. Ci&CD/교육 자료/cloud.02.AWS 교안(실습).pdf
+  - raw/KoreaICT/7. Ci&CD/2026.05.13(수)/2026.05.13(수).md
+  - raw/KoreaICT/7. Ci&CD/교육 자료/cloud.02.AWS 교안(실습).pdf
 status: growing
 confidence: high
 ---
@@ -52,5 +52,5 @@ S3는 “파일 저장을 애플리케이션 서버에서 분리하는 스토리
 
 ## 출처
 
-- `raw/Study/7. Ci&CD/2026.05.13(수)/2026.05.13(수).md`
-- `raw/Study/7. Ci&CD/교육 자료/cloud.02.AWS 교안(실습).pdf`
+- `raw/KoreaICT/7. Ci&CD/2026.05.13(수)/2026.05.13(수).md`
+- `raw/KoreaICT/7. Ci&CD/교육 자료/cloud.02.AWS 교안(실습).pdf`

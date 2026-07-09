@@ -5,10 +5,10 @@ updated: 2026-07-03
 type: entity
 tags: [aws, backend]
 sources:
-  - raw/Study/6. AWS/2026.05.08(금)/2026.05.08(금).md
-  - raw/Study/6. AWS/교육 자료/AWS 기초 용어.pdf
-  - raw/Study/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf
-  - raw/Study/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf
+  - raw/KoreaICT/6. AWS/2026.05.08(금)/2026.05.08(금).md
+  - raw/KoreaICT/6. AWS/교육 자료/AWS 기초 용어.pdf
+  - raw/KoreaICT/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf
+  - raw/KoreaICT/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf
 status: growing
 confidence: high
 ---
@@ -45,7 +45,7 @@ EC2 Public IP로 직접 접속하던 실습을 실제 서비스 주소 형태로
 
 ## 출처
 
-- `raw/Study/6. AWS/2026.05.08(금)/2026.05.08(금).md`
-- `raw/Study/6. AWS/교육 자료/AWS 기초 용어.pdf`
-- `raw/Study/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf`
-- `raw/Study/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf`
+- `raw/KoreaICT/6. AWS/2026.05.08(금)/2026.05.08(금).md`
+- `raw/KoreaICT/6. AWS/교육 자료/AWS 기초 용어.pdf`
+- `raw/KoreaICT/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf`
+- `raw/KoreaICT/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf`

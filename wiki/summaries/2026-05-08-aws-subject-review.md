@@ -5,7 +5,7 @@ created: 2026-07-03
 updated: 2026-07-03
 tags: [aws, backend, ci-cd, curriculum, study-log]
 sources:
-  - raw/Study/6. AWS/AWS 총정리/AWS 총정리.md
+  - raw/KoreaICT/6. AWS/AWS 총정리/AWS 총정리.md
 status: growing
 confidence: high
 ---
@@ -66,4 +66,4 @@ AWS 수업 단계에서는 EC2 접속, 빌드, 서버 실행, Nginx/Load Balance
 
 ## 출처
 
-- `raw/Study/6. AWS/AWS 총정리/AWS 총정리.md`
+- `raw/KoreaICT/6. AWS/AWS 총정리/AWS 총정리.md`

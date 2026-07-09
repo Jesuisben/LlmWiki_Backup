@@ -1,13 +1,11 @@
 ---
 title: 2026-04-29 Docker 네트워크, 볼륨, 사용자 정의 이미지
-created: 2026-07-02
-updated: 2026-07-06
+created: 2026-07-06
+updated: 2026-07-09
 type: summary
-tags: [linux, docker, backend, curriculum]
+tags: [linux, docker, backend, curriculum, study-log]
 sources:
-  - raw/Study/5. Linux/2026.04.29(수)/2026.04.29(수).md
-  - raw/Study/5. Linux/교육 자료/Docker/Docker 교안(이론).pdf
-  - raw/Study/5. Linux/교육 자료/Docker/Docker 교안(실습).pdf
+  - raw/KoreaICT/5. Linux/2026.04.29(수)/2026.04.29(수).md
 status: growing
 confidence: high
 ---
@@ -16,52 +14,37 @@ confidence: high
 
 ## 한 줄 요약
 
-Docker 컨테이너 내부 파일을 다루고, DB+웹 컨테이너를 같은 네트워크에 연결하며, bind mount/volume/commit으로 상태를 관리한 날이다.
+MariaDB와 Redmine 컨테이너를 Docker network로 연결하고, bind mount/volume mount, docker commit, 사용자 정의 이미지 흐름을 실습했다.
 
 ## 배운 내용
 
-- `docker exec`로 컨테이너 내부 명령을 실행하고 shell에 들어갔다.
-- `docker cp`로 host와 container 사이에서 HTML·이미지 파일을 복사했다.
-- MySQL, WordPress, MariaDB, Redmine 컨테이너를 실행하면서 환경 변수와 네트워크를 사용했다.
-- `docker network create`와 `--net`으로 컨테이너 이름 기반 통신을 구성했다.
-- bind mount와 Docker volume의 차이를 실습했다.
-- 수정된 컨테이너를 `docker commit`으로 새 이미지로 저장했다.
+- 커리큘럼 위치: 4과목은 Spring Boot와 React를 연결해 실제 쇼핑몰 기능을 만드는 단계이고, 5과목은 그 결과물을 Linux/Docker/GitHub 운영·협업 환경으로 옮기는 단계다.
+- 이전 흐름: 4과목은 [[summaries/2026-03-27-uiux-subject-review|UI&UX 총정리]] 이후, 5과목은 [[summaries/2026-04-03-frontend-backend-subject-review|FrontEnd_BackEnd 총정리]] 이후의 운영 단계다.
+- 다음 흐름: 이 내용은 이후 [[entities/aws|AWS]], [[concepts/ci-cd-automation|CI/CD 자동화]], 중간 프로젝트 배포·인증 흐름으로 이어진다.
+
+## 왜 이 흐름으로 배웠는가
+
+실제 서비스는 컨테이너 하나로 끝나지 않는다. DB와 앱 컨테이너가 통신해야 하고, 컨테이너가 삭제되어도 데이터나 파일은 보존되어야 한다.
 
 ## 핵심 개념
 
-- [[concepts/docker-cp-exec-container-files|Docker exec/cp와 컨테이너 파일 다루기]]
-- [[concepts/docker-network-volume|Docker 네트워크와 볼륨]]
-- [[concepts/docker-image-container|Docker 이미지와 컨테이너]]
-- [[comparisons/docker-cp-vs-bind-mount-vs-volume|docker cp vs bind mount vs volume]]
-- [[comparisons/docker-commit-vs-dockerfile|docker commit vs Dockerfile]]
+- 가상 네트워크 생성 후 MariaDB 컨테이너와 Redmine 컨테이너를 같은 네트워크에 연결했다.
+- 컨테이너 내부 파일 수정, `docker exec`, `docker cp` 흐름을 확인했다.
+- bind mount와 Docker volume mount의 차이를 배웠다.
+- 컨테이너 상태를 이미지로 만드는 `docker commit`과 사용자 정의 이미지 생성을 실습했다.
 
 ## 실습 / 예제
 
-```bash
-docker exec -it apache81 /bin/bash
-docker cp ./index.html apache81:/usr/local/apache2/htdocs/index.html
-
-docker network create network01
-docker run --name mysql01 --net=network01 -dit -e MYSQL_ROOT_PASSWORD={PASSWORD} -e MYSQL_DATABASE=coffee mysql
-docker run --name wordpress01 --net=network01 -dit -p 8882:80 -e WORDPRESS_DB_HOST=mysql01 wordpress
-
-docker run --name bind01 -d -p 8081:80 -v ~/bind_mount:/usr/local/apache2/htdocs httpd
-docker volume create mount-vol
-docker commit commit-ctr jeju-img
-```
+network 생성 → DB 컨테이너 실행 → 앱 컨테이너 실행 → network/volume 확인 → 컨테이너 정리 순서로 다중 컨테이너 운영 감각을 익혔다.
 
 ## 헷갈린 점 / 질문
 
-- `docker cp`는 파일을 한 번 복사할 뿐이고, 이후 host 파일을 수정해도 컨테이너에 자동 반영되지 않는다.
-- bind mount는 host 경로와 container 경로를 연결하므로 개발 중 파일 변경 반영에 유리하다.
-- volume은 Docker가 관리하는 저장 공간이어서 컨테이너 삭제와 데이터를 분리해 생각할 수 있다.
-- DB 비밀번호 같은 값은 수업 예제로 등장해도 wiki에는 실제 값 대신 `{PASSWORD}`로 일반화한다.
+컨테이너 내부 수정은 컨테이너 삭제 시 사라질 수 있다. 지속성이 필요하면 bind mount나 volume을 사용해야 한다.
 
 ## 관련 페이지
 
-- [[summaries/2026-04-30-dockerfile-spring-load-balancing|2026-04-30 Dockerfile, Spring Boot 컨테이너, 로드 밸런싱]]
-- [[entities/docker|Docker]]
+- [[concepts/docker-network-volume|Docker 네트워크와 볼륨]], [[concepts/docker-cp-exec-container-files|Docker exec/cp와 컨테이너 파일 다루기]], [[comparisons/docker-cp-vs-bind-mount-vs-volume|docker cp vs bind mount vs volume]]
 
 ## 출처
 
-- `raw/Study/5. Linux/2026.04.29(수)/2026.04.29(수).md`
+- `raw/KoreaICT/5. Linux/2026.04.29(수)/2026.04.29(수).md`

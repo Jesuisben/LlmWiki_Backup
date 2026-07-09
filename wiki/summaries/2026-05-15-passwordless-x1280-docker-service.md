@@ -5,9 +5,9 @@ updated: 2026-07-03
 type: summary
 tags: [auth, docker, backend, project, curriculum]
 sources:
-  - raw/Study/8. Passwordless/2026.05.15(금)/2026.05.15(금).md
-  - raw/Study/8. Passwordless/교육 자료/Passwordless 강의자료_Docker_ICT학원교육_20260514.pdf
-  - raw/Study/8. Passwordless/교육 자료/Wordpress-Passwordless X1280 Plugin/PasswordlessX1280 - Wordpress plugin OVA install Test Guide.pdf
+  - raw/KoreaICT/8. Passwordless/2026.05.15(금)/2026.05.15(금).md
+  - raw/KoreaICT/8. Passwordless/교육 자료/Passwordless 강의자료_Docker_ICT학원교육_20260514.pdf
+  - raw/KoreaICT/8. Passwordless/교육 자료/Wordpress-Passwordless X1280 Plugin/PasswordlessX1280 - Wordpress plugin OVA install Test Guide.pdf
 status: growing
 confidence: high
 ---
@@ -62,6 +62,6 @@ Passwordless Members
 
 ## 출처
 
-- `raw/Study/8. Passwordless/2026.05.15(금)/2026.05.15(금).md`
-- `raw/Study/8. Passwordless/교육 자료/Passwordless 강의자료_Docker_ICT학원교육_20260514.pdf`
-- `raw/Study/8. Passwordless/교육 자료/Wordpress-Passwordless X1280 Plugin/PasswordlessX1280 - Wordpress plugin OVA install Test Guide.pdf`
+- `raw/KoreaICT/8. Passwordless/2026.05.15(금)/2026.05.15(금).md`
+- `raw/KoreaICT/8. Passwordless/교육 자료/Passwordless 강의자료_Docker_ICT학원교육_20260514.pdf`
+- `raw/KoreaICT/8. Passwordless/교육 자료/Wordpress-Passwordless X1280 Plugin/PasswordlessX1280 - Wordpress plugin OVA install Test Guide.pdf`

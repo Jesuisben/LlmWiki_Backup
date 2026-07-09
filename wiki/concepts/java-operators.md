@@ -5,11 +5,11 @@ updated: 2026-07-03
 type: concept
 tags: [java]
 sources:
-  - raw/Study/1. Java/2026.02.27(금)/2026.02.27(금).md
-  - raw/Study/1. Java/2026.03.03(화)/2026.03.03(화).md
-  - raw/Study/1. Java/2026.03.03(화)/연산자 마무리 문제.png
-  - raw/Study/1. Java/Java 총정리/Java 총정리.md
-  - raw/Study/1. Java/교육 자료/Java 교안(이론_20260226).pdf
+  - raw/KoreaICT/1. Java/2026.02.27(금)/2026.02.27(금).md
+  - raw/KoreaICT/1. Java/2026.03.03(화)/2026.03.03(화).md
+  - raw/KoreaICT/1. Java/2026.03.03(화)/연산자 마무리 문제.png
+  - raw/KoreaICT/1. Java/Java 총정리/Java 총정리.md
+  - raw/KoreaICT/1. Java/교육 자료/Java 교안(이론_20260226).pdf
 status: stable
 confidence: high
 ---
@@ -60,8 +60,8 @@ int result = 2 * a + 3 * b - c; // 13
 
 ## 출처
 
-- `raw/Study/1. Java/2026.02.27(금)/2026.02.27(금).md`
-- `raw/Study/1. Java/2026.03.03(화)/2026.03.03(화).md`
-- `raw/Study/1. Java/2026.03.03(화)/연산자 마무리 문제.png`
-- `raw/Study/1. Java/Java 총정리/Java 총정리.md`
-- `raw/Study/1. Java/교육 자료/Java 교안(이론_20260226).pdf`
+- `raw/KoreaICT/1. Java/2026.02.27(금)/2026.02.27(금).md`
+- `raw/KoreaICT/1. Java/2026.03.03(화)/2026.03.03(화).md`
+- `raw/KoreaICT/1. Java/2026.03.03(화)/연산자 마무리 문제.png`
+- `raw/KoreaICT/1. Java/Java 총정리/Java 총정리.md`
+- `raw/KoreaICT/1. Java/교육 자료/Java 교안(이론_20260226).pdf`

@@ -5,8 +5,8 @@ updated: 2026-07-03
 type: summary
 tags: [auth, spring-boot, docker, backend, curriculum]
 sources:
-  - raw/Study/8. Passwordless/2026.05.18(월)/2026.05.18(월).md
-  - raw/Study/8. Passwordless/교육 자료/Passwordless 강의자료_Docker_ICT학원교육_20260514.pdf
+  - raw/KoreaICT/8. Passwordless/2026.05.18(월)/2026.05.18(월).md
+  - raw/KoreaICT/8. Passwordless/교육 자료/Passwordless 강의자료_Docker_ICT학원교육_20260514.pdf
 status: growing
 confidence: high
 ---
@@ -63,5 +63,5 @@ VM에 X1280 Docker 서버 실행
 
 ## 출처
 
-- `raw/Study/8. Passwordless/2026.05.18(월)/2026.05.18(월).md`
-- `raw/Study/8. Passwordless/교육 자료/Passwordless 강의자료_Docker_ICT학원교육_20260514.pdf`
+- `raw/KoreaICT/8. Passwordless/2026.05.18(월)/2026.05.18(월).md`
+- `raw/KoreaICT/8. Passwordless/교육 자료/Passwordless 강의자료_Docker_ICT학원교육_20260514.pdf`

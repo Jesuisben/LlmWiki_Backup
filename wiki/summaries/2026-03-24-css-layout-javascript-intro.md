@@ -5,11 +5,11 @@ updated: 2026-07-06
 type: summary
 tags: [html, css, javascript, frontend, curriculum]
 sources:
-  - "raw/Study/3. UI&UX/2026.03.24(화)/2026.03.24(화).md"
-  - "raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md"
-  - "raw/Study/3. UI&UX/UI&UX 총정리/속성들.md"
-  - "raw/Study/3. UI&UX/교육 자료/웹 서비스 Ui&UX.pdf"
-  - "raw/Study/3. UI&UX/교육 자료/HTML&JS&CSS 이론(new).pdf"
+  - "raw/KoreaICT/3. UI&UX/2026.03.24(화)/2026.03.24(화).md"
+  - "raw/KoreaICT/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md"
+  - "raw/KoreaICT/3. UI&UX/UI&UX 총정리/속성들.md"
+  - "raw/KoreaICT/3. UI&UX/교육 자료/웹 서비스 Ui&UX.pdf"
+  - "raw/KoreaICT/3. UI&UX/교육 자료/HTML&JS&CSS 이론(new).pdf"
 status: growing
 confidence: high
 ---
@@ -24,7 +24,7 @@ confidence: high
 
 ### 1. Element와 div 레이아웃
 
-원본은 Element를 “태그를 열고 닫고의 합”으로 설명하며, `boxModelTest`에서 부모 `div#mydiv`와 자식 `div.test1~test4`를 배치한다. 핵심은 부모 요소가 큰 기준 영역이 되고, 자식 요소들이 그 안에서 좌표와 크기를 갖는다는 점이다.^[raw/Study/3. UI&UX/2026.03.24(화)/2026.03.24(화).md]
+원본은 Element를 “태그를 열고 닫고의 합”으로 설명하며, `boxModelTest`에서 부모 `div#mydiv`와 자식 `div.test1~test4`를 배치한다. 핵심은 부모 요소가 큰 기준 영역이 되고, 자식 요소들이 그 안에서 좌표와 크기를 갖는다는 점이다.^[raw/KoreaICT/3. UI&UX/2026.03.24(화)/2026.03.24(화).md]
 
 ### 2. position과 overflow/display
 
@@ -88,6 +88,6 @@ const members = ['김철수', '이영희'];
 
 ## 출처
 
-- `raw/Study/3. UI&UX/2026.03.24(화)/2026.03.24(화).md`
-- `raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md`
-- `raw/Study/3. UI&UX/UI&UX 총정리/속성들.md`
+- `raw/KoreaICT/3. UI&UX/2026.03.24(화)/2026.03.24(화).md`
+- `raw/KoreaICT/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md`
+- `raw/KoreaICT/3. UI&UX/UI&UX 총정리/속성들.md`

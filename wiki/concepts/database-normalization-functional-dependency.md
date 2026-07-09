@@ -5,8 +5,8 @@ updated: 2026-07-02
 type: concept
 tags: [oracle, sql]
 sources:
-  - raw/Study/2. Oracle/2026.03.20(금)/2026.03.20(금).md
-  - raw/Study/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf
+  - raw/KoreaICT/2. Oracle/2026.03.20(금)/2026.03.20(금).md
+  - raw/KoreaICT/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf
 status: growing
 confidence: high
 ---
@@ -66,5 +66,5 @@ REFERENCES GOMDORI.STUDENTS(HAKBUN);
 
 ## 출처
 
-- `raw/Study/2. Oracle/2026.03.20(금)/2026.03.20(금).md`
-- `raw/Study/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf` — p.24~43 정규화 예제
+- `raw/KoreaICT/2. Oracle/2026.03.20(금)/2026.03.20(금).md`
+- `raw/KoreaICT/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf` — p.24~43 정규화 예제

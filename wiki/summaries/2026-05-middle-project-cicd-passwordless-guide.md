@@ -5,10 +5,10 @@ updated: 2026-07-03
 type: summary
 tags: [project, ci-cd, aws, auth, spring-boot, react]
 sources:
-  - D:/Study_LLM_Wiki/raw/Study/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md
-  - D:/Study_LLM_Wiki/raw/Study/9. 중간 프로젝트 공부/패스워드리스 적용/중간 프로젝트 패스워드리스 적용 가이드.md
-  - D:/Study_LLM_Wiki/raw/Study/9. 중간 프로젝트 공부/CICD/Github_Secrets 예시.md
-  - D:/Study_LLM_Wiki/raw/Study/9. 중간 프로젝트 공부/CICD/JWT(RS256)생성 방법.md
+  - D:/Study_LLM_Wiki/raw/KoreaICT/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md
+  - D:/Study_LLM_Wiki/raw/KoreaICT/9. 중간 프로젝트 공부/패스워드리스 적용/중간 프로젝트 패스워드리스 적용 가이드.md
+  - D:/Study_LLM_Wiki/raw/KoreaICT/9. 중간 프로젝트 공부/CICD/Github_Secrets 예시.md
+  - D:/Study_LLM_Wiki/raw/KoreaICT/9. 중간 프로젝트 공부/CICD/JWT(RS256)생성 방법.md
 status: growing
 confidence: medium
 ---
@@ -62,7 +62,7 @@ confidence: medium
 
 ## 출처
 
-- `raw/Study/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md`
-- `raw/Study/9. 중간 프로젝트 공부/패스워드리스 적용/중간 프로젝트 패스워드리스 적용 가이드.md`
-- `raw/Study/9. 중간 프로젝트 공부/CICD/Github_Secrets 예시.md`
-- `raw/Study/9. 중간 프로젝트 공부/CICD/JWT(RS256)생성 방법.md`
+- `raw/KoreaICT/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md`
+- `raw/KoreaICT/9. 중간 프로젝트 공부/패스워드리스 적용/중간 프로젝트 패스워드리스 적용 가이드.md`
+- `raw/KoreaICT/9. 중간 프로젝트 공부/CICD/Github_Secrets 예시.md`
+- `raw/KoreaICT/9. 중간 프로젝트 공부/CICD/JWT(RS256)생성 방법.md`

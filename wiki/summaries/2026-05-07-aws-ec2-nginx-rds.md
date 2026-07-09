@@ -5,11 +5,11 @@ updated: 2026-07-03
 type: summary
 tags: [aws, linux, spring-boot, backend, curriculum, study-log]
 sources:
-  - raw/Study/6. AWS/2026.05.07(목)/2026.05.07(목).md
-  - raw/Study/6. AWS/교육 자료/cloud.01.AWS 교안(이론_미니파일).pdf
-  - raw/Study/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf
-  - raw/Study/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf
-  - raw/Study/6. AWS/교육 자료/실습 관리 대장(텍스트).md
+  - raw/KoreaICT/6. AWS/2026.05.07(목)/2026.05.07(목).md
+  - raw/KoreaICT/6. AWS/교육 자료/cloud.01.AWS 교안(이론_미니파일).pdf
+  - raw/KoreaICT/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf
+  - raw/KoreaICT/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf
+  - raw/KoreaICT/6. AWS/교육 자료/실습 관리 대장(텍스트).md
 status: growing
 confidence: high
 ---
@@ -113,8 +113,8 @@ RDS MySQL / shopping DB / products table
 
 ## 출처
 
-- `raw/Study/6. AWS/2026.05.07(목)/2026.05.07(목).md` — VPC/EC2 생성, ping/ICMP, Nginx, Spring Boot, RDS 실습 메모
-- `raw/Study/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf` — EC2 SSH, Nginx, JDK/Maven, Spring Boot, RDS MySQL, JDBC URL 실습
-- `raw/Study/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf` — Security Group, RDS, Load Balancer 관련 이론
-- `raw/Study/6. AWS/교육 자료/cloud.01.AWS 교안(이론_미니파일).pdf` — VPC/RDS/EC2 구성 요약
-- `raw/Study/6. AWS/교육 자료/실습 관리 대장(텍스트).md` — EC2, RDS, Security Group, Load Balancer 리소스 이름
+- `raw/KoreaICT/6. AWS/2026.05.07(목)/2026.05.07(목).md` — VPC/EC2 생성, ping/ICMP, Nginx, Spring Boot, RDS 실습 메모
+- `raw/KoreaICT/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf` — EC2 SSH, Nginx, JDK/Maven, Spring Boot, RDS MySQL, JDBC URL 실습
+- `raw/KoreaICT/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf` — Security Group, RDS, Load Balancer 관련 이론
+- `raw/KoreaICT/6. AWS/교육 자료/cloud.01.AWS 교안(이론_미니파일).pdf` — VPC/RDS/EC2 구성 요약
+- `raw/KoreaICT/6. AWS/교육 자료/실습 관리 대장(텍스트).md` — EC2, RDS, Security Group, Load Balancer 리소스 이름

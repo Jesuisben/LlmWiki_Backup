@@ -5,8 +5,8 @@ updated: 2026-07-03
 type: concept
 tags: [spring-boot, ci-cd, aws, backend]
 sources:
-  - raw/Study/7. Ci&CD/2026.05.11(월) - 시작/2026.05.11(월) - 시작.md
-  - raw/Study/7. Ci&CD/교육 자료/CI&CD(SpringBoot_실습).pdf
+  - raw/KoreaICT/7. Ci&CD/2026.05.11(월) - 시작/2026.05.11(월) - 시작.md
+  - raw/KoreaICT/7. Ci&CD/교육 자료/CI&CD(SpringBoot_실습).pdf
 status: growing
 confidence: high
 ---
@@ -89,5 +89,5 @@ EC2에는 Docker가 설치되어 있어야 한다. workflow는 EC2에 SSH로 접
 
 ## 출처
 
-- `raw/Study/7. Ci&CD/2026.05.11(월) - 시작/2026.05.11(월) - 시작.md`
-- `raw/Study/7. Ci&CD/교육 자료/CI&CD(SpringBoot_실습).pdf`
+- `raw/KoreaICT/7. Ci&CD/2026.05.11(월) - 시작/2026.05.11(월) - 시작.md`
+- `raw/KoreaICT/7. Ci&CD/교육 자료/CI&CD(SpringBoot_실습).pdf`

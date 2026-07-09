@@ -5,9 +5,9 @@ updated: 2026-07-02
 type: concept
 tags: [oracle, sql]
 sources:
-  - raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md
-  - raw/Study/2. Oracle/2026.03.17(화)/2026.03.17(화).md
-  - raw/Study/2. Oracle/2026.03.18(수)/2026.03.18(수).md
+  - raw/KoreaICT/2. Oracle/2026.03.16(월)/2026.03.16(월).md
+  - raw/KoreaICT/2. Oracle/2026.03.17(화)/2026.03.17(화).md
+  - raw/KoreaICT/2. Oracle/2026.03.18(수)/2026.03.18(수).md
 status: growing
 confidence: high
 ---
@@ -52,6 +52,6 @@ VALUES(board_seq.nextval, 'an', 'abc123', '자바', '너무 어려워', default,
 
 ## 출처
 
-- `raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md`
-- `raw/Study/2. Oracle/2026.03.17(화)/2026.03.17(화).md`
-- `raw/Study/2. Oracle/2026.03.18(수)/2026.03.18(수).md`
+- `raw/KoreaICT/2. Oracle/2026.03.16(월)/2026.03.16(월).md`
+- `raw/KoreaICT/2. Oracle/2026.03.17(화)/2026.03.17(화).md`
+- `raw/KoreaICT/2. Oracle/2026.03.18(수)/2026.03.18(수).md`

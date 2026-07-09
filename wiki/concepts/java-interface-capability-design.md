@@ -5,8 +5,8 @@ updated: 2026-07-03
 type: concept
 tags: [java]
 sources:
-  - raw/Study/1. Java/2026.03.12(목)/2026.03.12(목).md
-  - raw/Study/1. Java/Java 총정리/Java 총정리.md
+  - raw/KoreaICT/1. Java/2026.03.12(목)/2026.03.12(목).md
+  - raw/KoreaICT/1. Java/Java 총정리/Java 총정리.md
 status: stable
 confidence: high
 ---
@@ -57,5 +57,5 @@ public class Americano extends Beverage implements Iceable {
 
 ## 출처
 
-- `raw/Study/1. Java/2026.03.12(목)/2026.03.12(목).md`
-- `raw/Study/1. Java/Java 총정리/Java 총정리.md`
+- `raw/KoreaICT/1. Java/2026.03.12(목)/2026.03.12(목).md`
+- `raw/KoreaICT/1. Java/Java 총정리/Java 총정리.md`

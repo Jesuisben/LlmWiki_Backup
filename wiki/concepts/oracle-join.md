@@ -5,9 +5,9 @@ updated: 2026-07-02
 type: concept
 tags: [oracle, sql]
 sources:
-  - raw/Study/2. Oracle/2026.03.19(목)/2026.03.19(목).md
-  - raw/Study/2. Oracle/교육 자료/오라클 교안.pdf
-  - raw/Study/2. Oracle/교육 자료/스크립트들/A07 조인 실습.sql
+  - raw/KoreaICT/2. Oracle/2026.03.19(목)/2026.03.19(목).md
+  - raw/KoreaICT/2. Oracle/교육 자료/오라클 교안.pdf
+  - raw/KoreaICT/2. Oracle/교육 자료/스크립트들/A07 조인 실습.sql
 status: growing
 confidence: high
 ---
@@ -64,6 +64,6 @@ ORDER BY cnt DESC, m.name ASC;
 
 ## 출처
 
-- `raw/Study/2. Oracle/2026.03.19(목)/2026.03.19(목).md`
-- `raw/Study/2. Oracle/교육 자료/오라클 교안.pdf` — p.347~365 JOIN
-- `raw/Study/2. Oracle/교육 자료/스크립트들/A07 조인 실습.sql`
+- `raw/KoreaICT/2. Oracle/2026.03.19(목)/2026.03.19(목).md`
+- `raw/KoreaICT/2. Oracle/교육 자료/오라클 교안.pdf` — p.347~365 JOIN
+- `raw/KoreaICT/2. Oracle/교육 자료/스크립트들/A07 조인 실습.sql`

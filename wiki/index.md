@@ -2,7 +2,7 @@
 
 > 이 파일은 `wiki/` 전체의 목차이자 길잡이다.  
 > 질문에 답하거나 새 자료를 ingest할 때 이 파일을 먼저 읽는다.  
-> Last updated: 2026-07-06 | Total pages: 241
+> Last updated: 2026-07-09 | Total pages: 241
 
 ## 사용 방법
 

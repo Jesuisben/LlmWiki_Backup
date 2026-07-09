@@ -5,13 +5,13 @@ created: 2026-07-03
 updated: 2026-07-04
 tags: [oracle, sql, curriculum, study-log]
 sources:
-  - raw/Study/2. Oracle/Oracle 총정리/Oracle 총정리.md
-  - raw/Study/2. Oracle/2026.03.13(금) - 시작/2026.03.13(금) - 시작.md
-  - raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md
-  - raw/Study/2. Oracle/2026.03.17(화)/2026.03.17(화).md
-  - raw/Study/2. Oracle/2026.03.18(수)/2026.03.18(수).md
-  - raw/Study/2. Oracle/2026.03.19(목)/2026.03.19(목).md
-  - raw/Study/2. Oracle/2026.03.20(금)/2026.03.20(금).md
+  - raw/KoreaICT/2. Oracle/Oracle 총정리/Oracle 총정리.md
+  - raw/KoreaICT/2. Oracle/2026.03.13(금) - 시작/2026.03.13(금) - 시작.md
+  - raw/KoreaICT/2. Oracle/2026.03.16(월)/2026.03.16(월).md
+  - raw/KoreaICT/2. Oracle/2026.03.17(화)/2026.03.17(화).md
+  - raw/KoreaICT/2. Oracle/2026.03.18(수)/2026.03.18(수).md
+  - raw/KoreaICT/2. Oracle/2026.03.19(목)/2026.03.19(목).md
+  - raw/KoreaICT/2. Oracle/2026.03.20(금)/2026.03.20(금).md
 status: stable
 confidence: high
 ---
@@ -166,10 +166,10 @@ Oracle에서 배운 테이블, PK/FK, JOIN, 정규화는 이후 Spring Boot와 R
 
 ## 출처
 
-- `raw/Study/2. Oracle/Oracle 총정리/Oracle 총정리.md`
-- `raw/Study/2. Oracle/2026.03.13(금) - 시작/2026.03.13(금) - 시작.md`
-- `raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md`
-- `raw/Study/2. Oracle/2026.03.17(화)/2026.03.17(화).md`
-- `raw/Study/2. Oracle/2026.03.18(수)/2026.03.18(수).md`
-- `raw/Study/2. Oracle/2026.03.19(목)/2026.03.19(목).md`
-- `raw/Study/2. Oracle/2026.03.20(금)/2026.03.20(금).md`
+- `raw/KoreaICT/2. Oracle/Oracle 총정리/Oracle 총정리.md`
+- `raw/KoreaICT/2. Oracle/2026.03.13(금) - 시작/2026.03.13(금) - 시작.md`
+- `raw/KoreaICT/2. Oracle/2026.03.16(월)/2026.03.16(월).md`
+- `raw/KoreaICT/2. Oracle/2026.03.17(화)/2026.03.17(화).md`
+- `raw/KoreaICT/2. Oracle/2026.03.18(수)/2026.03.18(수).md`
+- `raw/KoreaICT/2. Oracle/2026.03.19(목)/2026.03.19(목).md`
+- `raw/KoreaICT/2. Oracle/2026.03.20(금)/2026.03.20(금).md`

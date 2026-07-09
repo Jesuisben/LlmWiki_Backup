@@ -1,12 +1,12 @@
 ---
 title: JPQL vs SQL
 created: 2026-07-06
-updated: 2026-07-06
+updated: 2026-07-09
 type: comparison
 tags: [spring, spring-boot, backend, sql]
 sources:
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.20(월)/2026.04.20(월).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md
+  - raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.20(월)/2026.04.20(월).md
+  - raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md
 status: growing
 confidence: high
 ---
@@ -45,5 +45,5 @@ SQL에서 `orders` 테이블을 조회하던 감각으로 JPQL에 테이블명�
 
 ## 출처
 
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.20(월)/2026.04.20(월).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.20(월)/2026.04.20(월).md`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md`

@@ -5,11 +5,11 @@ updated: 2026-07-02
 type: summary
 tags: [oracle, sql]
 sources:
-  - raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md
-  - raw/Study/2. Oracle/교육 자료/오라클 교안.pdf
-  - raw/Study/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf
-  - raw/Study/2. Oracle/교육 자료/스크립트들/A01.관리자 사용자 생성하기.sql
-  - raw/Study/2. Oracle/교육 자료/스크립트들/A02.오라맨 스크립트.sql
+  - raw/KoreaICT/2. Oracle/2026.03.16(월)/2026.03.16(월).md
+  - raw/KoreaICT/2. Oracle/교육 자료/오라클 교안.pdf
+  - raw/KoreaICT/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf
+  - raw/KoreaICT/2. Oracle/교육 자료/스크립트들/A01.관리자 사용자 생성하기.sql
+  - raw/KoreaICT/2. Oracle/교육 자료/스크립트들/A02.오라맨 스크립트.sql
 status: growing
 confidence: high
 ---
@@ -83,8 +83,8 @@ TABLESPACE USERS;
 
 ## 출처
 
-- `raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md`
-- `raw/Study/2. Oracle/교육 자료/오라클 교안.pdf` — p.34~36 SQL 분류
-- `raw/Study/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf` — p.47 단축키, p.55~57 쇼핑몰 테이블 구성
-- `raw/Study/2. Oracle/교육 자료/스크립트들/A01.관리자 사용자 생성하기.sql`
-- `raw/Study/2. Oracle/교육 자료/스크립트들/A02.오라맨 스크립트.sql`
+- `raw/KoreaICT/2. Oracle/2026.03.16(월)/2026.03.16(월).md`
+- `raw/KoreaICT/2. Oracle/교육 자료/오라클 교안.pdf` — p.34~36 SQL 분류
+- `raw/KoreaICT/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf` — p.47 단축키, p.55~57 쇼핑몰 테이블 구성
+- `raw/KoreaICT/2. Oracle/교육 자료/스크립트들/A01.관리자 사용자 생성하기.sql`
+- `raw/KoreaICT/2. Oracle/교육 자료/스크립트들/A02.오라맨 스크립트.sql`

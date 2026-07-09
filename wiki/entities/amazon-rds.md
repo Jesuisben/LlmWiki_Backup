@@ -5,11 +5,11 @@ updated: 2026-07-03
 type: entity
 tags: [aws, backend]
 sources:
-  - raw/Study/6. AWS/2026.05.07(목)/2026.05.07(목).md
-  - raw/Study/6. AWS/2026.05.08(금)/2026.05.08(금).md
-  - raw/Study/6. AWS/교육 자료/cloud.01.AWS 교안(이론_미니파일).pdf
-  - raw/Study/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf
-  - raw/Study/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf
+  - raw/KoreaICT/6. AWS/2026.05.07(목)/2026.05.07(목).md
+  - raw/KoreaICT/6. AWS/2026.05.08(금)/2026.05.08(금).md
+  - raw/KoreaICT/6. AWS/교육 자료/cloud.01.AWS 교안(이론_미니파일).pdf
+  - raw/KoreaICT/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf
+  - raw/KoreaICT/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf
 status: growing
 confidence: high
 ---
@@ -52,8 +52,8 @@ Oracle/MySQL과 Spring Boot를 배운 뒤, AWS 수업에서는 DB 서버를 직�
 
 ## 출처
 
-- `raw/Study/6. AWS/2026.05.07(목)/2026.05.07(목).md`
-- `raw/Study/6. AWS/2026.05.08(금)/2026.05.08(금).md`
-- `raw/Study/6. AWS/교육 자료/cloud.01.AWS 교안(이론_미니파일).pdf`
-- `raw/Study/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf`
-- `raw/Study/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf`
+- `raw/KoreaICT/6. AWS/2026.05.07(목)/2026.05.07(목).md`
+- `raw/KoreaICT/6. AWS/2026.05.08(금)/2026.05.08(금).md`
+- `raw/KoreaICT/6. AWS/교육 자료/cloud.01.AWS 교안(이론_미니파일).pdf`
+- `raw/KoreaICT/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf`
+- `raw/KoreaICT/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf`

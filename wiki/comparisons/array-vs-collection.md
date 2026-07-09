@@ -5,9 +5,9 @@ updated: 2026-07-03
 type: comparison
 tags: [java]
 sources:
-  - raw/Study/1. Java/2026.03.06(금)/2026.03.06(금).md
-  - raw/Study/1. Java/2026.03.12(목)/2026.03.12(목).md
-  - raw/Study/1. Java/Java 총정리/Java 총정리.md
+  - raw/KoreaICT/1. Java/2026.03.06(금)/2026.03.06(금).md
+  - raw/KoreaICT/1. Java/2026.03.12(목)/2026.03.12(목).md
+  - raw/KoreaICT/1. Java/Java 총정리/Java 총정리.md
 status: stable
 confidence: high
 ---
@@ -47,6 +47,6 @@ Java 수업에서는 먼저 배열을 배우고, 총정리에서 컬렉션으로
 
 ## 출처
 
-- `raw/Study/1. Java/2026.03.06(금)/2026.03.06(금).md`
-- `raw/Study/1. Java/2026.03.12(목)/2026.03.12(목).md`
-- `raw/Study/1. Java/Java 총정리/Java 총정리.md`
+- `raw/KoreaICT/1. Java/2026.03.06(금)/2026.03.06(금).md`
+- `raw/KoreaICT/1. Java/2026.03.12(목)/2026.03.12(목).md`
+- `raw/KoreaICT/1. Java/Java 총정리/Java 총정리.md`

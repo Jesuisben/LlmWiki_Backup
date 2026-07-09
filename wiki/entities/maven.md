@@ -1,13 +1,13 @@
 ---
 title: Maven
 created: 2026-07-02
-updated: 2026-07-06
+updated: 2026-07-09
 type: entity
 tags: [spring-boot, backend, linux]
 sources:
-  - raw/Study/5. Linux/2026.04.28(화)/2026.04.28(화).md
-  - raw/Study/5. Linux/2026.04.30(목)/2026.04.30(목).md
-  - raw/Study/5. Linux/Linux 총정리/Linux 총정리.md
+  - raw/KoreaICT/5. Linux/2026.04.28(화)/2026.04.28(화).md
+  - raw/KoreaICT/5. Linux/2026.04.30(목)/2026.04.30(목).md
+  - raw/KoreaICT/5. Linux/Linux 총정리/Linux 총정리.md
 status: growing
 confidence: high
 ---
@@ -42,4 +42,4 @@ Spring Boot 수업에서는 IDE가 빌드 작업을 많이 대신해 주었지�
 
 ## 출처
 
-- `raw/Study/5. Linux/2026.04.28(화)/2026.04.28(화).md`
+- `raw/KoreaICT/5. Linux/2026.04.28(화)/2026.04.28(화).md`

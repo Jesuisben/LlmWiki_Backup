@@ -5,11 +5,11 @@ updated: 2026-07-02
 type: summary
 tags: [oracle, sql]
 sources:
-  - raw/Study/2. Oracle/2026.03.18(수)/2026.03.18(수).md
-  - raw/Study/2. Oracle/교육 자료/오라클 교안.pdf
-  - raw/Study/2. Oracle/교육 자료/디비버(Dbeaver) 사용법(version 2.0).pdf
-  - raw/Study/2. Oracle/교육 자료/스크립트들/A04.DDL 실습.sql
-  - raw/Study/2. Oracle/교육 자료/스크립트들/A05.DQL 실습.sql
+  - raw/KoreaICT/2. Oracle/2026.03.18(수)/2026.03.18(수).md
+  - raw/KoreaICT/2. Oracle/교육 자료/오라클 교안.pdf
+  - raw/KoreaICT/2. Oracle/교육 자료/디비버(Dbeaver) 사용법(version 2.0).pdf
+  - raw/KoreaICT/2. Oracle/교육 자료/스크립트들/A04.DDL 실습.sql
+  - raw/KoreaICT/2. Oracle/교육 자료/스크립트들/A05.DQL 실습.sql
 status: growing
 confidence: high
 ---
@@ -76,8 +76,8 @@ select * from products order by category asc, price desc;
 
 ## 출처
 
-- `raw/Study/2. Oracle/2026.03.18(수)/2026.03.18(수).md`
-- `raw/Study/2. Oracle/교육 자료/오라클 교안.pdf` — p.120~124 트랜잭션, p.134~195 DQL
-- `raw/Study/2. Oracle/교육 자료/디비버(Dbeaver) 사용법(version 2.0).pdf` — p.119~127 DDL 실습
-- `raw/Study/2. Oracle/교육 자료/스크립트들/A04.DDL 실습.sql`
-- `raw/Study/2. Oracle/교육 자료/스크립트들/A05.DQL 실습.sql`
+- `raw/KoreaICT/2. Oracle/2026.03.18(수)/2026.03.18(수).md`
+- `raw/KoreaICT/2. Oracle/교육 자료/오라클 교안.pdf` — p.120~124 트랜잭션, p.134~195 DQL
+- `raw/KoreaICT/2. Oracle/교육 자료/디비버(Dbeaver) 사용법(version 2.0).pdf` — p.119~127 DDL 실습
+- `raw/KoreaICT/2. Oracle/교육 자료/스크립트들/A04.DDL 실습.sql`
+- `raw/KoreaICT/2. Oracle/교육 자료/스크립트들/A05.DQL 실습.sql`

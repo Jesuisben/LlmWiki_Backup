@@ -1,12 +1,11 @@
 ---
 title: 2026-05-04 GitHub, Git Bash, SourceTree 협업 입문
-created: 2026-07-02
-updated: 2026-07-06
+created: 2026-07-06
+updated: 2026-07-09
 type: summary
-tags: [github, ci-cd, project, curriculum]
+tags: [github, backend, curriculum, study-log]
 sources:
-  - raw/Study/5. Linux/2026.05.04(월)/2026.05.04(월).md
-  - raw/Study/5. Linux/교육 자료/Github 교안(실습).pdf
+  - raw/KoreaICT/5. Linux/2026.05.04(월)/2026.05.04(월).md
 status: growing
 confidence: high
 ---
@@ -15,49 +14,37 @@ confidence: high
 
 ## 한 줄 요약
 
-Linux/Docker 배포 흐름 뒤에 GitHub 협업 흐름을 복습하며, Git Bash 명령과 SourceTree GUI로 init/add/commit/push/pull/clone을 실습한 날이다.
+Git Bash에서 init/add/commit/push/pull/clone을 실습하고 SourceTree로 같은 흐름을 GUI에서 확인하며 GitHub 협업의 기본기를 익혔다.
 
 ## 배운 내용
 
-- Git 저장소 초기화와 사용자 정보 설정을 복습했다.
-- `status → add → commit → remote → push` 흐름으로 로컬 변경을 GitHub에 올렸다.
-- `pull`과 `clone`의 사용 시점을 구분했다.
-- SourceTree에서 local repository를 추가하고 stage/commit/push/pull을 GUI로 수행했다.
-- CLI와 GUI가 다른 도구처럼 보이지만 내부적으로 같은 Git 동작을 실행한다는 점을 이해했다.
+- 커리큘럼 위치: 4과목은 Spring Boot와 React를 연결해 실제 쇼핑몰 기능을 만드는 단계이고, 5과목은 그 결과물을 Linux/Docker/GitHub 운영·협업 환경으로 옮기는 단계다.
+- 이전 흐름: 4과목은 [[summaries/2026-03-27-uiux-subject-review|UI&UX 총정리]] 이후, 5과목은 [[summaries/2026-04-03-frontend-backend-subject-review|FrontEnd_BackEnd 총정리]] 이후의 운영 단계다.
+- 다음 흐름: 이 내용은 이후 [[entities/aws|AWS]], [[concepts/ci-cd-automation|CI/CD 자동화]], 중간 프로젝트 배포·인증 흐름으로 이어진다.
+
+## 왜 이 흐름으로 배웠는가
+
+배포와 협업은 GitHub 원격 저장소를 중심으로 진행된다. 명령어와 GUI 흐름을 모두 알아야 팀 프로젝트에서 충돌과 동기화 문제를 해결할 수 있다.
 
 ## 핵심 개념
 
-- [[concepts/git-github-collaboration|GitHub 협업 흐름]]
-- [[comparisons/git-fetch-vs-pull-vs-clone|git fetch vs pull vs clone]]
-- [[entities/git|Git]], [[entities/github|GitHub]], [[entities/source-tree|SourceTree]]
+- Git Bash와 `git.exe`의 역할, Git 설치 경로를 확인했다.
+- 원격 저장소 생성, 파일 생성, 로컬 저장소 pull, commit 없는 push 실패를 경험했다.
+- clone으로 원격 저장소를 새 로컬 폴더에 내려받는 흐름을 배웠다.
+- SourceTree 설치 후 commit/push/pull을 GUI로 수행했다.
 
 ## 실습 / 예제
 
-```bash
-git init
-git status
-git config user.name "사용자명"
-git config user.email "이메일"
-git add myfile.txt
-git commit -m "first commit"
-git remote add origin https://github.com/계정/저장소.git
-git push -u origin master
-git pull
-git clone https://github.com/계정/저장소.git
-```
+한 파일을 GitHub에서 만들고 로컬로 pull한 뒤, 로컬 수정 → commit → push → 다른 폴더에서 pull하는 식으로 동기화 흐름을 실습했다.
 
 ## 헷갈린 점 / 질문
 
-- Git은 내 컴퓨터의 버전 관리 도구이고, GitHub는 원격 저장소/협업 서비스다.
-- SourceTree는 Git을 대체하는 것이 아니라 Git 명령을 GUI로 실행하게 해 주는 도구다.
-- `clone`은 처음 받을 때, `pull`은 이미 받은 저장소를 최신화할 때 사용한다.
-- push 전에는 반드시 어떤 파일이 stage/commit 되었는지 확인해야 한다.
+push는 commit된 변경을 원격에 올리는 동작이다. working tree에 수정만 있고 commit이 없으면 push할 내용이 없다.
 
 ## 관련 페이지
 
-- [[summaries/2026-05-06-github-branch-pr-conflict|2026-05-06 GitHub 브랜치, Pull Request, 충돌 해결]]
-- [[concepts/github-actions-workflow|GitHub Actions workflow]]
+- [[concepts/git-github-collaboration|GitHub 협업 흐름]], [[entities/git|Git]], [[entities/github|GitHub]], [[entities/source-tree|SourceTree]]
 
 ## 출처
 
-- `raw/Study/5. Linux/2026.05.04(월)/2026.05.04(월).md`
+- `raw/KoreaICT/5. Linux/2026.05.04(월)/2026.05.04(월).md`

@@ -5,8 +5,8 @@ updated: 2026-07-03
 type: concept
 tags: [aws, spring-boot, backend]
 sources:
-  - raw/Study/7. Ci&CD/2026.05.13(수)/2026.05.13(수).md
-  - raw/Study/7. Ci&CD/교육 자료/cloud.02.AWS 교안(실습).pdf
+  - raw/KoreaICT/7. Ci&CD/2026.05.13(수)/2026.05.13(수).md
+  - raw/KoreaICT/7. Ci&CD/교육 자료/cloud.02.AWS 교안(실습).pdf
 status: growing
 confidence: high
 ---
@@ -91,5 +91,5 @@ AWS SDK 의존성 예시는 다음과 같다.
 
 ## 출처
 
-- `raw/Study/7. Ci&CD/2026.05.13(수)/2026.05.13(수).md`
-- `raw/Study/7. Ci&CD/교육 자료/cloud.02.AWS 교안(실습).pdf`
+- `raw/KoreaICT/7. Ci&CD/2026.05.13(수)/2026.05.13(수).md`
+- `raw/KoreaICT/7. Ci&CD/교육 자료/cloud.02.AWS 교안(실습).pdf`

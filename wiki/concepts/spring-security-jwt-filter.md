@@ -1,13 +1,13 @@
 ---
 title: Spring Security JWT Filter
 created: 2026-07-02
-updated: 2026-07-03
+updated: 2026-07-09
 type: concept
 tags: [spring-boot, auth, backend]
 sources:
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.07(화)/2026.04.07(화).md
-  - raw/Study/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf
-  - raw/Study/4. FrontEnd_BackEnd/교육 자료/JWT(이론).pdf
+  - raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.07(화)/2026.04.07(화).md
+  - raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf
+  - raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/JWT(이론).pdf
 status: growing
 confidence: high
 ---
@@ -57,8 +57,14 @@ HTTP 요청 Authorization: Bearer <token>
 
 Passwordless 로그인은 앱 승인 결과를 확인한 뒤 기존 JWT 발급/검증 흐름과 만날 수 있다. 등록/로그인 시작 endpoint는 공개되어야 하지만, 승인 결과로 실제 사용자 인증이 구성된 뒤에는 JWT Filter와 SecurityContext 흐름을 통해 기존 보호 API에 접근하게 된다.
 
+## 4과목 현재 raw MD 기준 재검증 메모
+
+- 2026-07-09에 `raw/KoreaICT/4. FrontEnd_BackEnd` 날짜별 MD 18개와 `FrontEnd_BackEnd 총정리.md`를 기준으로 다시 대조했다.
+- 이 페이지는 단순 일반론이 아니라 Spring Boot Controller/Service/Repository, React Router/page/state, JWT 인증, Product/Cart/Order/Pageable 기능 흐름과 연결해 읽어야 한다.
+- 핵심 복습 순서는 환경 세팅 → REST API/JSON/CORS → Member/JWT → Product → Cart → Order → Pageable/검색이다.
+
 ## 출처
 
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.07(화)/2026.04.07(화).md`
-- `raw/Study/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf`
-- `raw/Study/4. FrontEnd_BackEnd/교육 자료/JWT(이론).pdf`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.07(화)/2026.04.07(화).md`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/JWT(이론).pdf`

@@ -5,7 +5,7 @@ updated: 2026-06-30
 type: meta
 tags: [study-log]
 sources:
-  - raw/ai-instructions/hermes-agent-llm-wiki-initial-setup.md
+  - raw/References/ai-instructions/hermes-agent-llm-wiki-initial-setup.md
 status: stable
 confidence: high
 ---
@@ -64,4 +64,4 @@ LLM Wiki는 `raw/` 원본 자료를 직접 고치는 대신, AI Agent가 `wiki/`
 
 ## 출처
 
-- `raw/ai-instructions/hermes-agent-llm-wiki-initial-setup.md`
+- `raw/References/ai-instructions/hermes-agent-llm-wiki-initial-setup.md`

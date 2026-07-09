@@ -5,10 +5,10 @@ updated: 2026-07-06
 type: summary
 tags: [javascript, jquery, bootstrap, frontend, curriculum]
 sources:
-  - "raw/Study/3. UI&UX/2026.03.27(금)/2026.03.27(금).md"
-  - "raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md"
-  - "raw/Study/3. UI&UX/교육 자료/library&framework.png"
-  - "raw/Study/3. UI&UX/교육 자료/jQueryImageTest/jQueryImageTest.html"
+  - "raw/KoreaICT/3. UI&UX/2026.03.27(금)/2026.03.27(금).md"
+  - "raw/KoreaICT/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md"
+  - "raw/KoreaICT/3. UI&UX/교육 자료/library&framework.png"
+  - "raw/KoreaICT/3. UI&UX/교육 자료/jQueryImageTest/jQueryImageTest.html"
 status: growing
 confidence: high
 ---
@@ -23,7 +23,7 @@ confidence: high
 
 ### 1. jQuery의 위치
 
-원본은 “jQuery의 상위 개념은 JavaScript”라고 설명한다. 정확히는 jQuery가 JavaScript로 만들어진 라이브러리다. 기존 CSS 선택자 감각과 JavaScript DOM 조작을 묶어, 더 짧은 문법으로 요소를 선택하고 이벤트를 붙이게 해준다.^[raw/Study/3. UI&UX/2026.03.27(금)/2026.03.27(금).md]
+원본은 “jQuery의 상위 개념은 JavaScript”라고 설명한다. 정확히는 jQuery가 JavaScript로 만들어진 라이브러리다. 기존 CSS 선택자 감각과 JavaScript DOM 조작을 묶어, 더 짧은 문법으로 요소를 선택하고 이벤트를 붙이게 해준다.^[raw/KoreaICT/3. UI&UX/2026.03.27(금)/2026.03.27(금).md]
 
 ```html
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -94,6 +94,6 @@ $("#grayImg").click(function() {
 
 ## 출처
 
-- `raw/Study/3. UI&UX/2026.03.27(금)/2026.03.27(금).md`
-- `raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md`
-- `raw/Study/3. UI&UX/교육 자료/jQueryImageTest/jQueryImageTest.html`
+- `raw/KoreaICT/3. UI&UX/2026.03.27(금)/2026.03.27(금).md`
+- `raw/KoreaICT/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md`
+- `raw/KoreaICT/3. UI&UX/교육 자료/jQueryImageTest/jQueryImageTest.html`

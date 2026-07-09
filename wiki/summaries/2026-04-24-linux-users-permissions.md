@@ -1,15 +1,11 @@
 ---
 title: 2026-04-24 Linux 사용자, 그룹, 권한
-created: 2026-07-02
-updated: 2026-07-06
+created: 2026-07-06
+updated: 2026-07-09
 type: summary
-tags: [linux, backend, curriculum]
+tags: [linux, backend, curriculum, study-log]
 sources:
-  - raw/Study/5. Linux/2026.04.24(금)/2026.04.24(금).md
-  - raw/Study/5. Linux/교육 자료/AccessRights.png
-  - raw/Study/5. Linux/교육 자료/OwnerShip.png
-  - raw/Study/5. Linux/교육 자료/Linux/Linux 이론.pdf
-  - raw/Study/5. Linux/교육 자료/Linux/Linux 실습(MobaXterm, VirtualBox, 실습).pdf
+  - raw/KoreaICT/5. Linux/2026.04.24(금)/2026.04.24(금).md
 status: growing
 confidence: high
 ---
@@ -18,55 +14,37 @@ confidence: high
 
 ## 한 줄 요약
 
-`ls -l` 출력의 owner/group/others 권한을 해석하고, 사용자·그룹 생성과 `/etc/passwd`, `/etc/shadow`, `/etc/group` 파일을 확인한 날이다.
+`ls -l` 권한 문자열, owner/group/others, `/etc/passwd`, `/etc/shadow`, `/etc/group`, user/group 생성과 권한 변경을 실습했다.
 
 ## 배운 내용
 
-- `ls -l`의 `-rw-rw-r--` 같은 권한 문자열을 파일 종류, owner/group/others 권한으로 나누어 읽었다.
-- `r`, `w`, `x`가 각각 read/write/execute를 의미하고, 파일과 디렉터리에서 체감 동작이 다르다는 점을 배웠다.
-- `sudo su -`로 root가 된 뒤 `/etc/skel` 템플릿과 신규 사용자 홈 디렉터리 생성 흐름을 확인했다.
-- `useradd -m`, `passwd`, `groupadd`, `usermod` 등 사용자·그룹 관리 명령을 실습했다.
-- `/etc/passwd`, `/etc/shadow`, `/etc/group`에서 계정 정보, 비밀번호 해시, 그룹 정보를 확인했다.
-- 권한 문제가 생기면 소유자/그룹/권한 중 무엇이 원인인지 먼저 읽어야 한다는 감각을 잡았다.
+- 커리큘럼 위치: 4과목은 Spring Boot와 React를 연결해 실제 쇼핑몰 기능을 만드는 단계이고, 5과목은 그 결과물을 Linux/Docker/GitHub 운영·협업 환경으로 옮기는 단계다.
+- 이전 흐름: 4과목은 [[summaries/2026-03-27-uiux-subject-review|UI&UX 총정리]] 이후, 5과목은 [[summaries/2026-04-03-frontend-backend-subject-review|FrontEnd_BackEnd 총정리]] 이후의 운영 단계다.
+- 다음 흐름: 이 내용은 이후 [[entities/aws|AWS]], [[concepts/ci-cd-automation|CI/CD 자동화]], 중간 프로젝트 배포·인증 흐름으로 이어진다.
+
+## 왜 이 흐름으로 배웠는가
+
+서버 오류 중 상당수는 코드 문제가 아니라 사용자·그룹·권한 문제다. 파일을 누가 읽고 실행할 수 있는지 해석해야 배포 문제를 해결할 수 있다.
 
 ## 핵심 개념
 
-- [[concepts/linux-users-permissions|Linux 사용자·그룹·권한]]
-- owner: 파일/디렉터리의 소유자.
-- group: 여러 사용자를 묶는 권한 단위.
-- others: 소유자와 그룹에 속하지 않는 나머지 사용자.
-- root: 시스템 전체를 관리할 수 있는 관리자 계정.
+- `-rw-rw-r--` 같은 권한 문자열을 파일 종류와 소유자/그룹/기타 권한으로 나누어 읽었다.
+- 사용자 생성 시 같은 이름의 그룹이 자동 생성되는 흐름을 확인했다.
+- `/etc/passwd`, `/etc/shadow`, `/etc/group`의 역할을 배웠다.
+- 요구사항에 맞는 사용자/그룹 생성, 홈 디렉터리, shell, 기본 환경 설정을 실습했다.
 
 ## 실습 / 예제
 
-```bash
-ls -l
-sudo su -
-cd /etc/skel
-useradd -m skywalker
-passwd skywalker
-cat /etc/passwd
-cat /etc/shadow
-cat /etc/group
-groupadd jedi
-usermod -aG jedi skywalker
-```
+skywalker 같은 계정을 만들고 관리자 계정에서 정보를 조회하며 사용자·그룹·권한이 실제 파일에 어떻게 표시되는지 확인했다.
 
 ## 헷갈린 점 / 질문
 
-- `broadcast broadcast`처럼 이름이 두 번 보이면 앞은 owner, 뒤는 group이다.
-- 신규 사용자 이름과 같은 그룹이 자동으로 만들어질 수 있어 “사용자 이름”과 “그룹 이름”이 같아 보인다.
-- `/etc/shadow`는 민감한 비밀번호 해시가 들어 있는 파일이므로 wiki에서는 실제 값이 아니라 역할만 설명한다.
-- 권한 문자열의 첫 글자 `-`는 일반 파일, `d`는 디렉터리를 뜻한다.
+소유자(owner)와 그룹(group)은 이름이 같을 수 있지만 같은 개념은 아니다. 권한 문자열도 user/group/others 세 묶음으로 읽어야 한다.
 
 ## 관련 페이지
 
-- [[concepts/linux-cli-files|Linux CLI와 파일 시스템]]
-- [[concepts/linux-spring-boot-server-deploy|Linux에서 Spring Boot 서버 실행]]
-- [[entities/linux|Linux]]
+- [[concepts/linux-users-permissions|Linux 사용자·그룹·권한]], [[entities/linux|Linux]], [[entities/docker|Docker]], [[concepts/linux-spring-boot-server-deploy|Linux에서 Spring Boot 서버 실행]]
 
 ## 출처
 
-- `raw/Study/5. Linux/2026.04.24(금)/2026.04.24(금).md`
-- `raw/Study/5. Linux/교육 자료/AccessRights.png`
-- `raw/Study/5. Linux/교육 자료/OwnerShip.png`
+- `raw/KoreaICT/5. Linux/2026.04.24(금)/2026.04.24(금).md`

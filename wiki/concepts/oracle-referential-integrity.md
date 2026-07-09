@@ -5,10 +5,10 @@ updated: 2026-07-02
 type: concept
 tags: [oracle, sql]
 sources:
-  - raw/Study/2. Oracle/2026.03.17(화)/2026.03.17(화).md
-  - raw/Study/2. Oracle/2026.03.18(수)/2026.03.18(수).md
-  - raw/Study/2. Oracle/2026.03.20(금)/2026.03.20(금).md
-  - raw/Study/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf
+  - raw/KoreaICT/2. Oracle/2026.03.17(화)/2026.03.17(화).md
+  - raw/KoreaICT/2. Oracle/2026.03.18(수)/2026.03.18(수).md
+  - raw/KoreaICT/2. Oracle/2026.03.20(금)/2026.03.20(금).md
+  - raw/KoreaICT/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf
 status: growing
 confidence: high
 ---
@@ -66,7 +66,7 @@ COMMIT;
 
 ## 출처
 
-- `raw/Study/2. Oracle/2026.03.17(화)/2026.03.17(화).md`
-- `raw/Study/2. Oracle/2026.03.18(수)/2026.03.18(수).md`
-- `raw/Study/2. Oracle/2026.03.20(금)/2026.03.20(금).md`
-- `raw/Study/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf` — p.94~108 참조 무결성/ON DELETE
+- `raw/KoreaICT/2. Oracle/2026.03.17(화)/2026.03.17(화).md`
+- `raw/KoreaICT/2. Oracle/2026.03.18(수)/2026.03.18(수).md`
+- `raw/KoreaICT/2. Oracle/2026.03.20(금)/2026.03.20(금).md`
+- `raw/KoreaICT/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf` — p.94~108 참조 무결성/ON DELETE

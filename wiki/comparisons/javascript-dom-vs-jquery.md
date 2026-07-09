@@ -5,9 +5,9 @@ updated: 2026-07-06
 type: comparison
 tags: [javascript, jquery, frontend]
 sources:
-  - "raw/Study/3. UI&UX/2026.03.26(목)/2026.03.26(목).md"
-  - "raw/Study/3. UI&UX/2026.03.27(금)/2026.03.27(금).md"
-  - "raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md"
+  - "raw/KoreaICT/3. UI&UX/2026.03.26(목)/2026.03.26(목).md"
+  - "raw/KoreaICT/3. UI&UX/2026.03.27(금)/2026.03.27(금).md"
+  - "raw/KoreaICT/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md"
 status: growing
 confidence: high
 ---
@@ -66,6 +66,6 @@ $("#grayImg").hide();
 
 ## 출처
 
-- `raw/Study/3. UI&UX/2026.03.26(목)/2026.03.26(목).md`
-- `raw/Study/3. UI&UX/2026.03.27(금)/2026.03.27(금).md`
-- `raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md`
+- `raw/KoreaICT/3. UI&UX/2026.03.26(목)/2026.03.26(목).md`
+- `raw/KoreaICT/3. UI&UX/2026.03.27(금)/2026.03.27(금).md`
+- `raw/KoreaICT/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md`

@@ -5,9 +5,9 @@ updated: 2026-07-03
 type: concept
 tags: [aws, ci-cd]
 sources:
-  - raw/Study/7. Ci&CD/2026.05.13(수)/2026.05.13(수).md
-  - raw/Study/7. Ci&CD/교육 자료/cloud.02.AWS 교안(실습).pdf
-  - raw/Study/7. Ci&CD/교육 자료/cloud.03.AWS 교안(이론).pdf
+  - raw/KoreaICT/7. Ci&CD/2026.05.13(수)/2026.05.13(수).md
+  - raw/KoreaICT/7. Ci&CD/교육 자료/cloud.02.AWS 교안(실습).pdf
+  - raw/KoreaICT/7. Ci&CD/교육 자료/cloud.03.AWS 교안(이론).pdf
 status: seed
 confidence: high
 ---
@@ -62,6 +62,6 @@ resource "aws_instance" "myserver" {
 
 ## 출처
 
-- `raw/Study/7. Ci&CD/2026.05.13(수)/2026.05.13(수).md`
-- `raw/Study/7. Ci&CD/교육 자료/cloud.02.AWS 교안(실습).pdf`
-- `raw/Study/7. Ci&CD/교육 자료/cloud.03.AWS 교안(이론).pdf`
+- `raw/KoreaICT/7. Ci&CD/2026.05.13(수)/2026.05.13(수).md`
+- `raw/KoreaICT/7. Ci&CD/교육 자료/cloud.02.AWS 교안(실습).pdf`
+- `raw/KoreaICT/7. Ci&CD/교육 자료/cloud.03.AWS 교안(이론).pdf`

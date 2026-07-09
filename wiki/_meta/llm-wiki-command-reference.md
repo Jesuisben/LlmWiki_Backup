@@ -5,8 +5,8 @@ updated: 2026-06-30
 type: meta
 tags: [study-log]
 sources:
-  - raw/ai-instructions/llm-wiki-command-cheatsheet.md
-  - raw/ai-instructions/hermes-agent-llm-wiki-initial-setup.md
+  - raw/References/ai-instructions/llm-wiki-command-cheatsheet.md
+  - raw/References/ai-instructions/hermes-agent-llm-wiki-initial-setup.md
 status: stable
 confidence: high
 ---
@@ -61,5 +61,5 @@ index/log 확인해줘
 
 ## 출처
 
-- `raw/ai-instructions/llm-wiki-command-cheatsheet.md`
-- `raw/ai-instructions/hermes-agent-llm-wiki-initial-setup.md`
+- `raw/References/ai-instructions/llm-wiki-command-cheatsheet.md`
+- `raw/References/ai-instructions/hermes-agent-llm-wiki-initial-setup.md`

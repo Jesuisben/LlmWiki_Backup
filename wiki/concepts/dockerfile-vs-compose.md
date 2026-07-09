@@ -1,14 +1,14 @@
 ---
 title: Dockerfile vs Docker Compose
 created: 2026-07-02
-updated: 2026-07-06
+updated: 2026-07-09
 type: comparison
 tags: [linux, docker, backend]
 sources:
-  - raw/Study/5. Linux/2026.04.30(목)/2026.04.30(목).md
-  - raw/Study/5. Linux/2026.05.01(금)/2026.05.01(금).md
-  - raw/Study/5. Linux/Linux 총정리/Linux 총정리.md
-  - raw/Study/5. Linux/교육 자료/Docker/Docker 교안(실습).pdf
+  - raw/KoreaICT/5. Linux/2026.04.30(목)/2026.04.30(목).md
+  - raw/KoreaICT/5. Linux/2026.05.01(금)/2026.05.01(금).md
+  - raw/KoreaICT/5. Linux/Linux 총정리/Linux 총정리.md
+  - raw/KoreaICT/5. Linux/교육 자료/Docker/Docker 교안(실습).pdf
 status: growing
 confidence: high
 ---
@@ -50,5 +50,5 @@ confidence: high
 
 ## 출처
 
-- `raw/Study/5. Linux/2026.04.30(목)/2026.04.30(목).md`
-- `raw/Study/5. Linux/2026.05.01(금)/2026.05.01(금).md`
+- `raw/KoreaICT/5. Linux/2026.04.30(목)/2026.04.30(목).md`
+- `raw/KoreaICT/5. Linux/2026.05.01(금)/2026.05.01(금).md`

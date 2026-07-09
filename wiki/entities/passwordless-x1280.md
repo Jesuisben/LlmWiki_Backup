@@ -5,12 +5,12 @@ updated: 2026-07-03
 type: entity
 tags: [auth, backend, project]
 sources:
-  - raw/Study/8. Passwordless/2026.05.14(목)/2026.05.14(목).md
-  - raw/Study/8. Passwordless/2026.05.15(금)/2026.05.15(금).md
-  - raw/Study/8. Passwordless/2026.05.18(월)/2026.05.18(월).md
-  - raw/Study/8. Passwordless/2026.05.19(화)/2026.05.19(화).md
-  - raw/Study/8. Passwordless/2026.05.21(목)/2026.05.21(목).md
-  - raw/Study/9. 중간 프로젝트 공부/패스워드리스 적용/중간 프로젝트 패스워드리스 적용 가이드.md
+  - raw/KoreaICT/8. Passwordless/2026.05.14(목) - 시작/2026.05.14(목) - 시작.md
+  - raw/KoreaICT/8. Passwordless/2026.05.15(금)/2026.05.15(금).md
+  - raw/KoreaICT/8. Passwordless/2026.05.18(월)/2026.05.18(월).md
+  - raw/KoreaICT/8. Passwordless/2026.05.19(화)/2026.05.19(화).md
+  - raw/KoreaICT/8. Passwordless/2026.05.21(목)/2026.05.21(목).md
+  - raw/KoreaICT/9. 중간 프로젝트 공부/패스워드리스 적용/중간 프로젝트 패스워드리스 적용 가이드.md
 status: growing
 confidence: high
 ---
@@ -51,9 +51,9 @@ Passwordless X1280은 비밀번호 입력 대신 인증 서버와 모바일 앱 
 
 ## 출처
 
-- `raw/Study/8. Passwordless/2026.05.14(목)/2026.05.14(목).md`
-- `raw/Study/8. Passwordless/2026.05.15(금)/2026.05.15(금).md`
-- `raw/Study/8. Passwordless/2026.05.18(월)/2026.05.18(월).md`
-- `raw/Study/8. Passwordless/2026.05.19(화)/2026.05.19(화).md`
-- `raw/Study/8. Passwordless/2026.05.21(목)/2026.05.21(목).md`
-- `raw/Study/9. 중간 프로젝트 공부/패스워드리스 적용/중간 프로젝트 패스워드리스 적용 가이드.md`
+- `raw/KoreaICT/8. Passwordless/2026.05.14(목) - 시작/2026.05.14(목) - 시작.md`
+- `raw/KoreaICT/8. Passwordless/2026.05.15(금)/2026.05.15(금).md`
+- `raw/KoreaICT/8. Passwordless/2026.05.18(월)/2026.05.18(월).md`
+- `raw/KoreaICT/8. Passwordless/2026.05.19(화)/2026.05.19(화).md`
+- `raw/KoreaICT/8. Passwordless/2026.05.21(목)/2026.05.21(목).md`
+- `raw/KoreaICT/9. 중간 프로젝트 공부/패스워드리스 적용/중간 프로젝트 패스워드리스 적용 가이드.md`

@@ -1,12 +1,12 @@
 ---
 title: JWT
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-09
 type: entity
 tags: [auth, backend]
 sources:
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.06(월)/2026.04.06(월).md
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.07(화)/2026.04.07(화).md
+  - raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.06(월)/2026.04.06(월).md
+  - raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.07(화)/2026.04.07(화).md
 status: growing
 confidence: high
 ---
@@ -45,5 +45,5 @@ JWT는 쿠키나 세션과 같은 저장소가 아니라 인증 정보를 담는
 
 ## 출처
 
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.06(월)/2026.04.06(월).md`
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.07(화)/2026.04.07(화).md`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.06(월)/2026.04.06(월).md`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.07(화)/2026.04.07(화).md`

@@ -49,12 +49,12 @@ confidence: high
 
 - 목적: `raw/`에 들어 있는 AI 지시문, LLM Wiki 운영 참고자료, Markdown 문법 자료를 `wiki/` 지식 레이어에 통합함.
 - 읽은 원본:
-  - `raw/ai-instructions/hermes-agent-llm-wiki-initial-setup.md`
-  - `raw/ai-instructions/hermes-default-profile-instructions.md`
-  - `raw/ai-instructions/karpathy-agent-guidelines.md`
-  - `raw/ai-instructions/llm-wiki-command-cheatsheet.md`
-  - `raw/markdown-grammar/markdown-grammar.md`
-  - `raw/Study/1. Java/2026.02.26(목)/2026.02.26(목).md` — 파일이 비어 있어 별도 요약 페이지는 만들지 않음.
+  - `raw/References/ai-instructions/hermes-agent-llm-wiki-initial-setup.md`
+  - `raw/References/ai-instructions/hermes-default-profile-instructions.md`
+  - `raw/References/ai-instructions/karpathy-agent-guidelines.md`
+  - `raw/References/ai-instructions/llm-wiki-command-cheatsheet.md`
+  - `raw/References/markdown-grammar/markdown-grammar.md`
+  - `raw/KoreaICT/1. Java/2026.02.26(목)/2026.02.26(목).md` — 파일이 비어 있어 별도 요약 페이지는 만들지 않음.
 - 생성한 파일:
   - `wiki/_meta/llm-wiki-operating-model.md` — LLM Wiki의 raw/wiki/schema 구조와 이 Vault에서의 적용 방식 정리.
   - `wiki/_meta/llm-wiki-command-reference.md` — ingest/query/lint/update/compare/roadmap 등 LLM Wiki 작업 명령어 정리.
@@ -66,7 +66,7 @@ confidence: high
 
 ## [2026-06-30] update | 2026-02-26 OT raw 변경분 반영
 
-- 목적: 이전 ingest 시 비어 있던 `raw/Study/1. Java/2026.02.26(목)/2026.02.26(목).md`에 내용이 추가되어, 교육 첫날 오리엔테이션 내용을 위키에 반영함.
+- 목적: 이전 ingest 시 비어 있던 `raw/KoreaICT/1. Java/2026.02.26(목)/2026.02.26(목).md`에 내용이 추가되어, 교육 첫날 오리엔테이션 내용을 위키에 반영함.
 - 생성한 파일:
   - `wiki/summaries/2026-02-26-orientation.md` — 교육 과정 정보, 출결/외출/휴가 규칙, 자습, Notepad++/Chrome/IntelliJ/Zoom 설치 준비 정리.
 - 수정한 파일:
@@ -76,8 +76,8 @@ confidence: high
 
 - 목적: Java 프로젝트를 Git으로 관리하고 GitHub 원격 저장소 및 IntelliJ IDEA와 연결하는 초기 설정 흐름을 위키에 반영함.
 - 읽은 원본:
-  - `raw/Study/1. Java/2026.02.27(금)/깃허브 초기 설정.md`
-  - `raw/Study/1. Java/2026.02.27(금)/2026.02.27(금).md` — 작업 중 Java 수업 본문이 추가되어, 아래 `2026-02-27 Java 기본 자료형과 연산자` 항목에서 별도 ingest함.
+  - `raw/KoreaICT/1. Java/2026.02.27(금)/깃허브 초기 설정.md`
+  - `raw/KoreaICT/1. Java/2026.02.27(금)/2026.02.27(금).md` — 작업 중 Java 수업 본문이 추가되어, 아래 `2026-02-27 Java 기본 자료형과 연산자` 항목에서 별도 ingest함.
 - 생성한 파일:
   - `wiki/summaries/2026-02-27-github-initial-setup.md` — Git 설치 경로, 프로젝트 폴더 이동, `git config`, GitHub 원격 저장소, IntelliJ 연동 흐름 정리.
   - `wiki/entities/git.md` — Git의 역할과 이 위키에서의 학습 맥락 정리.
@@ -89,8 +89,8 @@ confidence: high
 
 - 목적: 2026-02-27 Java 수업 본문에 추가된 기본 자료형, 변수 선언, 산술/대입/복합 대입/증감 연산자, GitHub 원격 저장소 이슈 내용을 위키에 반영함.
 - 읽은 원본:
-  - `raw/Study/1. Java/2026.02.27(금)/2026.02.27(금).md`
-  - `raw/Study/1. Java/2026.02.27(금)/깃허브 초기 설정.md`
+  - `raw/KoreaICT/1. Java/2026.02.27(금)/2026.02.27(금).md`
+  - `raw/KoreaICT/1. Java/2026.02.27(금)/깃허브 초기 설정.md`
 - 생성한 파일:
   - `wiki/summaries/2026-02-27-java-basic-types-operators.md` — Java 자료형, 변수, 연산자 실습과 GitHub 관련 이슈를 수업 흐름대로 정리.
   - `wiki/concepts/java-basic-types.md` — `char`, `String`, `int`, `double`, `boolean`의 의미와 헷갈리는 점 정리.
@@ -104,36 +104,36 @@ confidence: high
 
 - 목적: 다음 세션에서 사용자가 raw MD 변환 결과 검토를 이어갈 위치를 잊지 않도록 기록함.
 - 현재 사용자가 확인한 위치:
-  - `raw/Study/1. Java/2026.03.04(수)/2026.03.04(수).md` — 파일 중간 정도까지 검토함.
+  - `raw/KoreaICT/1. Java/2026.03.04(수)/2026.03.04(수).md` — 파일 중간 정도까지 검토함.
 - 다음에 이어볼 위치:
-  - `raw/Study/1. Java/2026.03.04(수)/2026.03.04(수).md`의 중간 이후부터 계속 검토.
+  - `raw/KoreaICT/1. Java/2026.03.04(수)/2026.03.04(수).md`의 중간 이후부터 계속 검토.
 
 ## [2026-06-30] ingest | raw Study 수업 자료 대량 정리
 
-- 목적: `raw/Study/`에 쌓여 있던 Java, Oracle, UI&UX 수업 자료 중 실내용이 있는 Markdown을 날짜순 위키 요약과 핵심 개념/엔티티 페이지로 통합함.
+- 목적: `raw/KoreaICT/`에 쌓여 있던 Java, Oracle, UI&UX 수업 자료 중 실내용이 있는 Markdown을 날짜순 위키 요약과 핵심 개념/엔티티 페이지로 통합함.
 - 처리한 원본:
-  - `raw/Study/1. Java/2026.03.03(화)/2026.03.03(화).md`
-  - `raw/Study/1. Java/2026.03.04(수)/2026.03.04(수).md`
-  - `raw/Study/1. Java/2026.03.05(목)/2026.03.05(목).md`
-  - `raw/Study/1. Java/2026.03.06(금)/2026.03.06(금).md`
-  - `raw/Study/1. Java/2026.03.09(월)/2026.03.09(월).md`
-  - `raw/Study/1. Java/2026.03.10(화)/2026.03.10(화).md`
-  - `raw/Study/1. Java/2026.03.11(수)/2026.03.11(수).md`
-  - `raw/Study/1. Java/2026.03.12(목)/2026.03.12(목).md`
-  - `raw/Study/1. Java/2026.03.13(금)/2026.03.13(금).md`
-  - `raw/Study/2. Oracle/2026.03.13(금) - 시작/2026.03.13(금) - 시작.md`
-  - `raw/Study/2. Oracle/2026.03.16(월)/2026.03.16(월).md`
-  - `raw/Study/2. Oracle/2026.03.17(화)/2026.03.17(화).md`
-  - `raw/Study/2. Oracle/2026.03.18(수)/2026.03.18(수).md`
-  - `raw/Study/2. Oracle/2026.03.19(목)/2026.03.19(목).md`
-  - `raw/Study/2. Oracle/2026.03.20(금)/2026.03.20(금).md`
-  - `raw/Study/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md`
-  - `raw/Study/3. UI&UX/2026.03.24(화)/2026.03.24(화).md`
-  - `raw/Study/3. UI&UX/2026.03.25(수)/2026.03.25(수).md`
-  - `raw/Study/3. UI&UX/2026.03.26(목)/2026.03.26(목).md`
-  - `raw/Study/3. UI&UX/2026.03.27(금)/2026.03.27(금).md`
+  - `raw/KoreaICT/1. Java/2026.03.03(화)/2026.03.03(화).md`
+  - `raw/KoreaICT/1. Java/2026.03.04(수)/2026.03.04(수).md`
+  - `raw/KoreaICT/1. Java/2026.03.05(목)/2026.03.05(목).md`
+  - `raw/KoreaICT/1. Java/2026.03.06(금)/2026.03.06(금).md`
+  - `raw/KoreaICT/1. Java/2026.03.09(월)/2026.03.09(월).md`
+  - `raw/KoreaICT/1. Java/2026.03.10(화)/2026.03.10(화).md`
+  - `raw/KoreaICT/1. Java/2026.03.11(수)/2026.03.11(수).md`
+  - `raw/KoreaICT/1. Java/2026.03.12(목)/2026.03.12(목).md`
+  - `raw/KoreaICT/1. Java/2026.03.13(금)/2026.03.13(금).md`
+  - `raw/KoreaICT/2. Oracle/2026.03.13(금) - 시작/2026.03.13(금) - 시작.md`
+  - `raw/KoreaICT/2. Oracle/2026.03.16(월)/2026.03.16(월).md`
+  - `raw/KoreaICT/2. Oracle/2026.03.17(화)/2026.03.17(화).md`
+  - `raw/KoreaICT/2. Oracle/2026.03.18(수)/2026.03.18(수).md`
+  - `raw/KoreaICT/2. Oracle/2026.03.19(목)/2026.03.19(목).md`
+  - `raw/KoreaICT/2. Oracle/2026.03.20(금)/2026.03.20(금).md`
+  - `raw/KoreaICT/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md`
+  - `raw/KoreaICT/3. UI&UX/2026.03.24(화)/2026.03.24(화).md`
+  - `raw/KoreaICT/3. UI&UX/2026.03.25(수)/2026.03.25(수).md`
+  - `raw/KoreaICT/3. UI&UX/2026.03.26(목)/2026.03.26(목).md`
+  - `raw/KoreaICT/3. UI&UX/2026.03.27(금)/2026.03.27(금).md`
 - 제외/보류한 원본:
-  - `raw/Study/0. 교육명/**`, `raw/Study/4. FrontEnd_BackEnd/**`, `raw/Study/5. Linux/**`, `raw/Study/6. AWS/**`, `raw/Study/7. Ci&CD/**`, `raw/Study/8. Passwordless/**`, `raw/Study/10. Python/**` 중 현재 30줄/174자 수준의 시간표 템플릿 파일은 실내용이 없어 요약 페이지를 만들지 않음.
+  - `raw/KoreaICT/0. 교육명/**`, `raw/KoreaICT/4. FrontEnd_BackEnd/**`, `raw/KoreaICT/5. Linux/**`, `raw/KoreaICT/6. AWS/**`, `raw/KoreaICT/7. Ci&CD/**`, `raw/KoreaICT/8. Passwordless/**`, `raw/KoreaICT/10. Python/**` 중 현재 30줄/174자 수준의 시간표 템플릿 파일은 실내용이 없어 요약 페이지를 만들지 않음.
 - 생성한 파일:
   - `wiki/summaries/2026-03-03-java-logic-ternary.md`
   - `wiki/summaries/2026-03-04-java-control-flow.md`

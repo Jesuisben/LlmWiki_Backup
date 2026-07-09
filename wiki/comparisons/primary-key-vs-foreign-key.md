@@ -5,9 +5,9 @@ updated: 2026-07-02
 type: comparison
 tags: [oracle, sql]
 sources:
-  - raw/Study/2. Oracle/2026.03.17(화)/2026.03.17(화).md
-  - raw/Study/2. Oracle/2026.03.20(금)/2026.03.20(금).md
-  - raw/Study/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf
+  - raw/KoreaICT/2. Oracle/2026.03.17(화)/2026.03.17(화).md
+  - raw/KoreaICT/2. Oracle/2026.03.20(금)/2026.03.20(금).md
+  - raw/KoreaICT/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf
 status: growing
 confidence: high
 ---
@@ -54,6 +54,6 @@ ON DELETE SET NULL;
 
 ## 출처
 
-- `raw/Study/2. Oracle/2026.03.17(화)/2026.03.17(화).md`
-- `raw/Study/2. Oracle/2026.03.20(금)/2026.03.20(금).md`
-- `raw/Study/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf`
+- `raw/KoreaICT/2. Oracle/2026.03.17(화)/2026.03.17(화).md`
+- `raw/KoreaICT/2. Oracle/2026.03.20(금)/2026.03.20(금).md`
+- `raw/KoreaICT/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf`

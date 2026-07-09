@@ -5,7 +5,7 @@ updated: 2026-07-03
 type: concept
 tags: [python]
 sources:
-  - raw/Study/10. Python/2026.06.25(목)/2026.06.25(목).md
+  - raw/KoreaICT/10. Python/2026.06.25(목)/2026.06.25(목).md
 status: growing
 confidence: high
 ---
@@ -43,4 +43,4 @@ Python 생성자는 `__init__`이고, `self`는 Java의 `this`와 비슷하다. 
 
 ## 출처
 
-- `raw/Study/10. Python/2026.06.25(목)/2026.06.25(목).md`
+- `raw/KoreaICT/10. Python/2026.06.25(목)/2026.06.25(목).md`

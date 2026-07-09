@@ -5,7 +5,7 @@ updated: 2026-06-30
 type: meta
 tags: [debugging, project]
 sources:
-  - raw/ai-instructions/karpathy-agent-guidelines.md
+  - raw/References/ai-instructions/karpathy-agent-guidelines.md
 status: seed
 confidence: medium
 ---
@@ -50,4 +50,4 @@ AI Agent에게 코딩 작업을 맡길 때는 추측하지 않고, 단순하게 
 
 ## 출처
 
-- `raw/ai-instructions/karpathy-agent-guidelines.md`
+- `raw/References/ai-instructions/karpathy-agent-guidelines.md`

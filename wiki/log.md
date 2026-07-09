@@ -13,9 +13,36 @@
 
 ## 현재 로그
 
+## [2026-07-09] update | raw 출처 구조 마이그레이션
+
+- 목적: `raw/Study/`가 개인 공부 전체처럼 보이는 문제를 줄이고, 출처별 raw 구조를 장기 운영에 맞게 정리함.
+- 변경: `raw/Study/`를 `raw/KoreaICT/`로 이름 변경하고, `raw/PersonalStudy/`, `raw/PersonalProjects/`, `raw/References/`를 새 출처 구획으로 추가함.
+- 이동: `raw/ai-instructions/`와 `raw/markdown-grammar/`는 `raw/References/` 아래로 옮김. `raw/assets/`는 공통 첨부 폴더로 유지함.
+- 참조 갱신: `AGENTS.md`, `wiki/`, 관련 raw 참고문서 안의 `raw/Study`, `raw/ai-instructions`, `raw/markdown-grammar` 경로 문자열을 새 경로로 갱신함.
+- 원칙: `wiki/`는 출처별로 분할하지 않고 기존 `summaries/concepts/entities/comparisons/queries` 구조를 유지하며, 출처 맥락은 각 페이지의 제목·frontmatter·본문·sources에서 구분한다.
+
+## [2026-07-09] update | 4·5과목 재ingest 표현 정정 및 raw 기준 보강
+
+- 목적: 직전 감사 리포트와 로그의 “전면 재ingest/모두 통과” 표현이 구조 검증 결과를 내용 품질 완료처럼 보이게 한 문제를 정정함.
+- 감사 리포트: `wiki/_meta/wiki-quality-audit-2026-07-02.md`의 결론과 4·5과목 섹션을 재검증 필요/정정 완료 기준으로 바꿈.
+- 4과목: `raw/KoreaICT/4. FrontEnd_BackEnd` 현재 MD 기준으로 날짜별 summary 18개와 `FrontEnd_BackEnd 총정리` 허브를 기능 흐름 중심으로 재작성/보강함.
+- 5과목: `raw/KoreaICT/5. Linux` 현재 MD 기준으로 날짜별 summary 10개와 `Linux 총정리` 허브를 운영·Docker·GitHub 흐름 중심으로 재작성/보강함.
+- 관련 concept/entity/comparison: 4과목 16개, 5과목 18개 페이지에 현재 raw MD 기준 재검증 메모를 추가해 단순 일반론이 아니라 수업 기능 흐름으로 읽히도록 보정함.
+- 원칙: `raw/`는 수정하지 않고 `wiki/`만 수정함. 후속 검증은 placeholder/source/link/index/log/audit 후보가 새로 나오지 않을 때까지 반복함.
+
+
+## [2026-07-09] ingest | 4·5과목 현재 MD 기준 전면 재ingest
+
+- 목적: 사용자의 요청에 따라 `raw/KoreaICT/4. FrontEnd_BackEnd` 19개 MD와 방금 재변환된 `raw/KoreaICT/5. Linux` 11개 MD를 기준으로 관련 wiki를 전면 재검증·보정함.
+- 원칙: `raw/`는 수정하지 않고 `wiki/`만 수정함. 이번 작업은 wiki ingest이며, 새 페이지를 만들지 않고 기존 4·5과목 summary/concept/entity/comparison의 current-source 기준성을 맞추는 방식으로 수행함.
+- 4과목 처리: 날짜별 summary 18개, `FrontEnd_BackEnd 총정리`, 풀스택/상품/장바구니/주문/페이징/JPA/axios/JPQL 관련 기존 페이지의 frontmatter 갱신과 subject-review 허브 재작성.
+- 5과목 처리: 날짜별 summary 10개, `Linux 총정리`, Linux/Docker/GitHub 관련 기존 페이지의 frontmatter 갱신과 subject-review 허브 재작성. `Linux 총정리`는 현재 `raw/KoreaICT/5. Linux/Linux 총정리/Linux 총정리.md`와 날짜별 MD 10개를 주 출처로 정리함.
+- 검증 예정/결과는 같은 날짜 감사 리포트 섹션에 기록함.
+
+
 ## [2026-07-06] ingest | Linux 변경 MD 기준 전면 재ingest
 
-- 목적: 정밀 검증이 끝난 `raw/Study/5. Linux` 현재 MD를 기준으로 기존 Linux/Docker/GitHub wiki를 증분 보강이 아니라 재작성/재검증함.
+- 목적: 정밀 검증이 끝난 `raw/KoreaICT/5. Linux` 현재 MD를 기준으로 기존 Linux/Docker/GitHub wiki를 증분 보강이 아니라 재작성/재검증함.
 - 원칙: `raw/`는 수정하지 않고 `wiki/`만 수정함. 날짜별 MD와 `Linux 총정리`를 주 provenance로 삼고, 교육자료 MD/PDF/이미지는 기존 보강 출처로 유지함.
 - 재작성한 summary:
   - `wiki/summaries/2026-04-22-linux-install-ssh-cli.md` ~ `wiki/summaries/2026-05-06-github-branch-pr-conflict.md` 날짜별 10개
@@ -31,7 +58,7 @@
 ## [2026-07-06] update | FrontEnd_BackEnd 재ingest 후속 품질 점검
 
 - 목적: 방금 재ingest한 FrontEnd_BackEnd wiki를 `AGENTS.md`와 `llm-wiki-vault` 품질 기준에 맞춰 감사 리포트와 연결해 후속 점검함.
-- 점검 결과: FrontEnd_BackEnd 대상 27개 파일에서 frontmatter 누락, 빈 sources, `raw/Study/4. FrontEnd_BackEnd` 출처 누락, placeholder/TODO, index 미등록, scoped 깨진 wikilink, `needs-review`/`confidence: low`가 모두 0개임을 확인함.
+- 점검 결과: FrontEnd_BackEnd 대상 27개 파일에서 frontmatter 누락, 빈 sources, `raw/KoreaICT/4. FrontEnd_BackEnd` 출처 누락, placeholder/TODO, index 미등록, scoped 깨진 wikilink, `needs-review`/`confidence: low`가 모두 0개임을 확인함.
 - 수정한 파일:
   - `wiki/_meta/wiki-quality-audit-2026-07-02.md` — `updated: 2026-07-06`, 현재 전체 수치 243/241, FrontEnd_BackEnd 후속 점검 섹션 추가.
   - `wiki/index.md` — `jwt-session-cookie-auth`, `axios-interceptor-error-handling`, `product-domain-flow`, `jpa-relationship-mapping`, `entity-vs-dto`, `jpql-vs-sql` 항목 설명 줄 정리.
@@ -40,7 +67,7 @@
 
 ## [2026-07-06] ingest | FrontEnd_BackEnd 변경 MD 19개 기준 전면 재ingest
 
-- 목적: 방금 변환된 `raw/Study/4. FrontEnd_BackEnd` MD 19개를 기준으로 기존 FrontEnd_BackEnd wiki를 증분 보강이 아니라 현재 원본 기준으로 재작성/재검증함.
+- 목적: 방금 변환된 `raw/KoreaICT/4. FrontEnd_BackEnd` MD 19개를 기준으로 기존 FrontEnd_BackEnd wiki를 증분 보강이 아니라 현재 원본 기준으로 재작성/재검증함.
 - 원칙: `raw/`는 수정하지 않고 `wiki/`만 수정함. 교육 자료는 이번 패스에서 필요할 때의 보강 출처로만 두고, 기본 provenance는 현재 MD 19개로 삼음.
 - 재작성한 summary:
   - `wiki/summaries/2026-03-30-fullstack-environment-setup.md` ~ `wiki/summaries/2026-04-22-product-repository-pageable-search.md` 날짜별 18개
@@ -78,7 +105,7 @@
 
 ## [2026-07-06] ingest | UI&UX 변경 MD 기준 전면 재ingest
 
-- 목적: `raw/Study/3. UI&UX`의 날짜별 MD와 `UI&UX 총정리`, `속성들`, `태그들` MD가 갱신된 상태를 기준으로 기존 UI&UX wiki를 증분 보강이 아니라 전면 재작성/재검증함.
+- 목적: `raw/KoreaICT/3. UI&UX`의 날짜별 MD와 `UI&UX 총정리`, `속성들`, `태그들` MD가 갱신된 상태를 기준으로 기존 UI&UX wiki를 증분 보강이 아니라 전면 재작성/재검증함.
 - 원칙: `raw/`는 수정하지 않고 `wiki/`만 수정함. 기존 Obsidian 링크 안정성을 위해 파일 삭제 후 재생성이 아니라 기존 UI&UX wiki 파일을 현재 원본 기준으로 갈아엎는 방식으로 수행함.
 - 재작성한 summary:
   - `wiki/summaries/2026-03-23-html-css-intro.md`
@@ -111,7 +138,7 @@
 
 ## [2026-07-03] ingest | Python 2026-07-03 Pandas groupby와 시각화
 
-- 목적: `raw/Study/10. Python/2026.07.03(금)/2026.07.03(금).md`를 읽고, Pandas `groupby` 집계, 다중 색인 정리, 사용자 정의 집계, `transform`, `pd.cut`, matplotlib 시각화 흐름을 기존 Python/Pandas/Jupyter 페이지와 연결함.
+- 목적: `raw/KoreaICT/10. Python/2026.07.03(금)/2026.07.03(금).md`를 읽고, Pandas `groupby` 집계, 다중 색인 정리, 사용자 정의 집계, `transform`, `pd.cut`, matplotlib 시각화 흐름을 기존 Python/Pandas/Jupyter 페이지와 연결함.
 - 원칙: `raw/`는 수정하지 않고 `wiki/`만 수정함.
 - 새로 추가한 summary: `wiki/summaries/2026-07-03-python-pandas-groupby-visualization.md`.
 - 새로 추가한 concept/entity: `wiki/concepts/pandas-groupby-aggregation.md`, `wiki/entities/matplotlib.md`.
@@ -120,7 +147,7 @@
 
 ## [2026-07-03] ingest | Python 날짜별 원본 2026-06-19~2026-06-30
 
-- 목적: `raw/Study/10. Python`의 2026-06-19~2026-06-30 날짜별 원본을 읽고, Pandas 이전 Python 기초 문법·컬렉션·함수·모듈·표준 라이브러리·객체지향·예외 처리·파일/정규표현식·XML/JSON·Jupyter/Pandas 입문 흐름을 기존 Python/Pandas 페이지와 연결함.
+- 목적: `raw/KoreaICT/10. Python`의 2026-06-19~2026-06-30 날짜별 원본을 읽고, Pandas 이전 Python 기초 문법·컬렉션·함수·모듈·표준 라이브러리·객체지향·예외 처리·파일/정규표현식·XML/JSON·Jupyter/Pandas 입문 흐름을 기존 Python/Pandas 페이지와 연결함.
 - 원칙: `raw/`는 수정하지 않고 `wiki/`만 수정함.
 - 새로 추가한 summary: 2026-06-19~2026-06-30 Python 날짜별 summary 8개.
 - 새로 추가한 concept: `python-basic-syntax`, `python-collections-comprehension`, `python-functions-modules-packages`, `python-file-regex-data-processing`, `python-oop-basics`.
@@ -130,16 +157,16 @@
 
 ## [2026-07-03] ingest | Passwordless 날짜별 원본 2026-05-14~2026-05-21
 
-- 목적: `raw/Study/8. Passwordless`의 2026-05-14~2026-05-21 날짜별 원본을 읽고, Passwordless/X1280 인증 흐름, QR/앱 승인, Spring Boot 인증 연동, REST API/Postman 실습을 기존 중간 프로젝트 Passwordless 페이지와 연결함.
+- 목적: `raw/KoreaICT/8. Passwordless`의 2026-05-14~2026-05-21 날짜별 원본을 읽고, Passwordless/X1280 인증 흐름, QR/앱 승인, Spring Boot 인증 연동, REST API/Postman 실습을 기존 중간 프로젝트 Passwordless 페이지와 연결함.
 - 원칙: `raw/`는 수정하지 않고 `wiki/`만 수정함. 원본에 포함된 실습용 IP, 서버키, 라이선스 키, 관리자 비밀번호, DB 비밀번호 같은 민감값은 wiki에 재노출하지 않고 역할/placeholder 설명으로 일반화함.
 - 참고한 대표 원본:
-  - `raw/Study/8. Passwordless/2026.05.14(목)/2026.05.14(목).md`
-  - `raw/Study/8. Passwordless/2026.05.15(금)/2026.05.15(금).md`
-  - `raw/Study/8. Passwordless/2026.05.18(월)/2026.05.18(월).md`
-  - `raw/Study/8. Passwordless/2026.05.19(화)/2026.05.19(화).md`
-  - `raw/Study/8. Passwordless/2026.05.20(수)/2026.05.20(수).md`
-  - `raw/Study/8. Passwordless/2026.05.21(목)/2026.05.21(목).md`
-  - `raw/Study/9. 중간 프로젝트 공부/패스워드리스 적용/중간 프로젝트 패스워드리스 적용 가이드.md`
+  - `raw/KoreaICT/8. Passwordless/2026.05.14(목) - 시작/2026.05.14(목) - 시작.md`
+  - `raw/KoreaICT/8. Passwordless/2026.05.15(금)/2026.05.15(금).md`
+  - `raw/KoreaICT/8. Passwordless/2026.05.18(월)/2026.05.18(월).md`
+  - `raw/KoreaICT/8. Passwordless/2026.05.19(화)/2026.05.19(화).md`
+  - `raw/KoreaICT/8. Passwordless/2026.05.20(수)/2026.05.20(수).md`
+  - `raw/KoreaICT/8. Passwordless/2026.05.21(목)/2026.05.21(목).md`
+  - `raw/KoreaICT/9. 중간 프로젝트 공부/패스워드리스 적용/중간 프로젝트 패스워드리스 적용 가이드.md`
 - 새로 추가한 summary:
   - `wiki/summaries/2026-05-14-passwordless-x1280-intro.md`
   - `wiki/summaries/2026-05-15-passwordless-x1280-docker-service.md`
@@ -162,16 +189,16 @@
 
 ## [2026-07-03] ingest | Ci&CD 날짜별 원본 2026-05-11~2026-05-13
 
-- 목적: `raw/Study/7. Ci&CD`의 2026-05-11~2026-05-13 날짜별 원본을 읽고, CI/CD 자동화, GitHub Actions, Docker Hub/EC2 배포, Route 53/ALB/HTTPS 복습, Terraform, S3 파일 업로드를 기존 AWS·중간 프로젝트 CI/CD 흐름과 연결함.
+- 목적: `raw/KoreaICT/7. Ci&CD`의 2026-05-11~2026-05-13 날짜별 원본을 읽고, CI/CD 자동화, GitHub Actions, Docker Hub/EC2 배포, Route 53/ALB/HTTPS 복습, Terraform, S3 파일 업로드를 기존 AWS·중간 프로젝트 CI/CD 흐름과 연결함.
 - 원칙: `raw/`는 수정하지 않고 `wiki/`만 수정함. 원본에 포함된 Docker token, AWS access key, RDS password, IP/endpoint 같은 실습용 민감값은 wiki에 재노출하지 않고 placeholder/역할 설명으로 일반화함.
 - 참고한 대표 원본:
-  - `raw/Study/7. Ci&CD/2026.05.11(월) - 시작/2026.05.11(월) - 시작.md`
-  - `raw/Study/7. Ci&CD/2026.05.12(화)/2026.05.12(화).md`
-  - `raw/Study/7. Ci&CD/2026.05.13(수)/2026.05.13(수).md`
-  - `raw/Study/7. Ci&CD/교육 자료/CI&CD(SpringBoot_이론).pdf`
-  - `raw/Study/7. Ci&CD/교육 자료/CI&CD(SpringBoot_실습).pdf`
-  - `raw/Study/7. Ci&CD/교육 자료/cloud.02.AWS 교안(실습).pdf`
-  - `raw/Study/7. Ci&CD/교육 자료/cloud.03.AWS 교안(이론).pdf`
+  - `raw/KoreaICT/7. Ci&CD/2026.05.11(월) - 시작/2026.05.11(월) - 시작.md`
+  - `raw/KoreaICT/7. Ci&CD/2026.05.12(화)/2026.05.12(화).md`
+  - `raw/KoreaICT/7. Ci&CD/2026.05.13(수)/2026.05.13(수).md`
+  - `raw/KoreaICT/7. Ci&CD/교육 자료/CI&CD(SpringBoot_이론).pdf`
+  - `raw/KoreaICT/7. Ci&CD/교육 자료/CI&CD(SpringBoot_실습).pdf`
+  - `raw/KoreaICT/7. Ci&CD/교육 자료/cloud.02.AWS 교안(실습).pdf`
+  - `raw/KoreaICT/7. Ci&CD/교육 자료/cloud.03.AWS 교안(이론).pdf`
 - 새로 추가한 summary:
   - `wiki/summaries/2026-05-11-cicd-github-actions-spring-boot.md`
   - `wiki/summaries/2026-05-12-route53-alb-https-review.md`
@@ -192,14 +219,14 @@
 
 ## [2026-07-03] update | AWS course-material-aware wiki ingest
 
-- 목적: 감사 리포트의 잔여 후보 중 `raw/Study/6. AWS/2026.05.06(수) - 시작/` ~ `raw/Study/6. AWS/2026.05.08(금)/` 범위를 다음 과목으로 선정하고, 사용자 날짜 MD가 시간표 템플릿뿐인 점을 확인한 뒤 AWS 교육자료 PDF와 실습 관리 대장을 주 provenance로 삼아 고품질 ingest를 수행함.
+- 목적: 감사 리포트의 잔여 후보 중 `raw/KoreaICT/6. AWS/2026.05.06(수) - 시작/` ~ `raw/KoreaICT/6. AWS/2026.05.08(금)/` 범위를 다음 과목으로 선정하고, 사용자 날짜 MD가 시간표 템플릿뿐인 점을 확인한 뒤 AWS 교육자료 PDF와 실습 관리 대장을 주 provenance로 삼아 고품질 ingest를 수행함.
 - 원칙: `raw/`는 수정하지 않고 `wiki/`만 수정함. 날짜 MD는 비어 있는 시간표 템플릿으로 표시하고, 실제 내용 출처는 확인한 AWS 교육자료에 명시함.
 - 참고한 대표 교육자료:
-  - `raw/Study/6. AWS/교육 자료/AWS 기초 용어.pdf`
-  - `raw/Study/6. AWS/교육 자료/cloud.01.AWS 교안(이론_미니파일).pdf`
-  - `raw/Study/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf`
-  - `raw/Study/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf`
-  - `raw/Study/6. AWS/교육 자료/실습 관리 대장(텍스트).md`
+  - `raw/KoreaICT/6. AWS/교육 자료/AWS 기초 용어.pdf`
+  - `raw/KoreaICT/6. AWS/교육 자료/cloud.01.AWS 교안(이론_미니파일).pdf`
+  - `raw/KoreaICT/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf`
+  - `raw/KoreaICT/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf`
+  - `raw/KoreaICT/6. AWS/교육 자료/실습 관리 대장(텍스트).md`
 - 새로 추가한 summary:
   - `wiki/summaries/2026-05-06-aws-cloud-vpc-ec2.md`
   - `wiki/summaries/2026-05-07-aws-ec2-nginx-rds.md`
@@ -215,14 +242,14 @@
 
 ## [2026-07-03] update | Java course-material-aware wiki backfill
 
-- 목적: `raw/Study/1. Java` 사용자 정리 MD 14개를 주 자료로 삼고, Java/IntelliJ/GitHub 교안 PDF와 2026-02-27·2026-03-03 문제 이미지를 실제 확인해 기존 Java wiki 1차 정리본을 교안-aware 방식으로 고도화함.
+- 목적: `raw/KoreaICT/1. Java` 사용자 정리 MD 14개를 주 자료로 삼고, Java/IntelliJ/GitHub 교안 PDF와 2026-02-27·2026-03-03 문제 이미지를 실제 확인해 기존 Java wiki 1차 정리본을 교안-aware 방식으로 고도화함.
 - 원칙: `raw/`는 수정하지 않고 `wiki/`만 수정함. `sources`에는 사용자 정리 MD와 실제 참고한 교안 PDF/문제 이미지 경로를 함께 남김.
 - 참고한 대표 교육자료:
-  - `raw/Study/1. Java/교육 자료/Java 교안(이론_20260226).pdf`
-  - `raw/Study/1. Java/교육 자료/IntelliJ 교안.pdf`
-  - `raw/Study/1. Java/교육 자료/Github 교안(실습).pdf`
-  - `raw/Study/1. Java/2026.02.27(금)/1번 문제.png` ~ `3번 문제.png`
-  - `raw/Study/1. Java/2026.03.03(화)/연산자 마무리 문제.png` 및 관련 문제 이미지
+  - `raw/KoreaICT/1. Java/교육 자료/Java 교안(이론_20260226).pdf`
+  - `raw/KoreaICT/1. Java/교육 자료/IntelliJ 교안.pdf`
+  - `raw/KoreaICT/1. Java/교육 자료/Github 교안(실습).pdf`
+  - `raw/KoreaICT/1. Java/2026.02.27(금)/1번 문제.png` ~ `3번 문제.png`
+  - `raw/KoreaICT/1. Java/2026.03.03(화)/연산자 마무리 문제.png` 및 관련 문제 이미지
 - 보강한 summary: `wiki/summaries/2026-02-26-orientation.md` ~ `wiki/summaries/2026-03-13-java-project-oracle-start.md` 총 12개
 - 보강한 concept:
   - `wiki/concepts/java-basic-types.md`
@@ -245,13 +272,13 @@
 
 ## [2026-07-02] update | Oracle course-material-aware wiki backfill
 
-- 목적: `raw/Study/2. Oracle` 사용자 정리 MD 6개를 주 자료로 삼고, Oracle/DBeaver 교안 PDF와 SQL 스크립트를 실제 확인해 기존 Oracle/DB 1차 wiki 정리본을 재검증·보강함.
+- 목적: `raw/KoreaICT/2. Oracle` 사용자 정리 MD 6개를 주 자료로 삼고, Oracle/DBeaver 교안 PDF와 SQL 스크립트를 실제 확인해 기존 Oracle/DB 1차 wiki 정리본을 재검증·보강함.
 - 원칙: `raw/`는 수정하지 않고 `wiki/`만 수정함. `sources`에는 사용자 정리 MD와 실제 참고한 교육자료/SQL 스크립트 경로를 함께 남김.
 - 참고한 대표 교육자료:
-  - `raw/Study/2. Oracle/교육 자료/오라클 교안.pdf`
-  - `raw/Study/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf`
-  - `raw/Study/2. Oracle/교육 자료/디비버(Dbeaver) 사용법(version 2.0).pdf`
-  - `raw/Study/2. Oracle/교육 자료/스크립트들/A01.관리자 사용자 생성하기.sql` ~ `A07 조인 실습.sql`
+  - `raw/KoreaICT/2. Oracle/교육 자료/오라클 교안.pdf`
+  - `raw/KoreaICT/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf`
+  - `raw/KoreaICT/2. Oracle/교육 자료/디비버(Dbeaver) 사용법(version 2.0).pdf`
+  - `raw/KoreaICT/2. Oracle/교육 자료/스크립트들/A01.관리자 사용자 생성하기.sql` ~ `A07 조인 실습.sql`
 - 보강한 summary: `wiki/summaries/2026-03-13-java-project-oracle-start.md` ~ `wiki/summaries/2026-03-20-database-modeling-normalization-view-index.md` 총 6개
 - 보강한 entity:
   - `wiki/entities/oracle-database.md`
@@ -276,19 +303,19 @@
 
 ## [2026-07-02] update | Linux course-material-aware wiki backfill
 
-- 목적: `raw/Study/5. Linux` 사용자 정리 MD를 주 자료로 삼고, MD에서 언급된 Linux/Docker/GitHub 교육자료 PDF·PNG·보조 MD를 실제 확인해 기존 Linux 관련 wiki 1차 정리본을 재검증·보강함.
+- 목적: `raw/KoreaICT/5. Linux` 사용자 정리 MD를 주 자료로 삼고, MD에서 언급된 Linux/Docker/GitHub 교육자료 PDF·PNG·보조 MD를 실제 확인해 기존 Linux 관련 wiki 1차 정리본을 재검증·보강함.
 - 원칙: `raw/`는 수정하지 않고 `wiki/`만 수정함. `sources`에는 사용자 정리 MD와 실제 참고한 교육자료 경로를 함께 남김.
 - 참고한 대표 교육자료:
-  - `raw/Study/5. Linux/교육 자료/Linux/Linux 이론.pdf`
-  - `raw/Study/5. Linux/교육 자료/Linux/Linux 실습(MobaXterm, VirtualBox, 실습).pdf`
-  - `raw/Study/5. Linux/교육 자료/Docker/Docker 교안(이론).pdf`
-  - `raw/Study/5. Linux/교육 자료/Docker/Docker 교안(실습).pdf`
-  - `raw/Study/5. Linux/교육 자료/Github 교안(실습).pdf`
-  - `raw/Study/5. Linux/교육 자료/AccessRights.png`
-  - `raw/Study/5. Linux/교육 자료/OwnerShip.png`
-  - `raw/Study/5. Linux/교육 자료/로드 밸런싱.png`
-  - `raw/Study/5. Linux/교육 자료/docker image를 docker hub에 업로드 하기.md`
-  - `raw/Study/5. Linux/교육 자료/도커 컴포즈 종합 실습.md`
+  - `raw/KoreaICT/5. Linux/교육 자료/Linux/Linux 이론.pdf`
+  - `raw/KoreaICT/5. Linux/교육 자료/Linux/Linux 실습(MobaXterm, VirtualBox, 실습).pdf`
+  - `raw/KoreaICT/5. Linux/교육 자료/Docker/Docker 교안(이론).pdf`
+  - `raw/KoreaICT/5. Linux/교육 자료/Docker/Docker 교안(실습).pdf`
+  - `raw/KoreaICT/5. Linux/교육 자료/Github 교안(실습).pdf`
+  - `raw/KoreaICT/5. Linux/교육 자료/AccessRights.png`
+  - `raw/KoreaICT/5. Linux/교육 자료/OwnerShip.png`
+  - `raw/KoreaICT/5. Linux/교육 자료/로드 밸런싱.png`
+  - `raw/KoreaICT/5. Linux/교육 자료/docker image를 docker hub에 업로드 하기.md`
+  - `raw/KoreaICT/5. Linux/교육 자료/도커 컴포즈 종합 실습.md`
 - 보강한 summary:
   - `wiki/summaries/2026-04-22-linux-install-ssh-cli.md`
   - `wiki/summaries/2026-04-23-linux-files-vi.md`
@@ -361,20 +388,20 @@
 
 ## [2026-07-02] update | FrontEnd_BackEnd course-material-aware wiki backfill
 
-- 목적: `raw/Study/4. FrontEnd_BackEnd` 사용자 정리 MD 18개를 주 자료로 삼고, MD에서 언급된 교육자료 PDF/PNG를 실제 확인해 기존 FrontEnd_BackEnd 1차 wiki 정리본을 재검증·보강함.
+- 목적: `raw/KoreaICT/4. FrontEnd_BackEnd` 사용자 정리 MD 18개를 주 자료로 삼고, MD에서 언급된 교육자료 PDF/PNG를 실제 확인해 기존 FrontEnd_BackEnd 1차 wiki 정리본을 재검증·보강함.
 - 원칙: `raw/`는 수정하지 않고 `wiki/`만 수정함. `sources`에는 사용자 정리 MD와 실제 참고한 교육자료 경로를 함께 남김.
 - 참고한 대표 교육자료:
-  - `raw/Study/4. FrontEnd_BackEnd/교육 자료/FrontEnd&BackEnd.pdf`
-  - `raw/Study/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf`
-  - `raw/Study/4. FrontEnd_BackEnd/교육 자료/React 교안.pdf`
-  - `raw/Study/4. FrontEnd_BackEnd/교육 자료/JWT(이론).pdf`
-  - `raw/Study/4. FrontEnd_BackEnd/교육 자료/IT 관련 용어.pdf`
-  - `raw/Study/4. FrontEnd_BackEnd/교육 자료/필드 검색 기능.pdf`
-  - `raw/Study/4. FrontEnd_BackEnd/교육 자료/프로그램 흐름 그림.png`
-  - `raw/Study/4. FrontEnd_BackEnd/교육 자료/라우터 설명 그림.png`
-  - `raw/Study/4. FrontEnd_BackEnd/교육 자료/쇼핑 카트 데이터 구조 다이어그램.png`
-  - `raw/Study/4. FrontEnd_BackEnd/교육 자료/다대일 단방향 매칭(Cart-CartProduct-Product) 01.png`
-  - `raw/Study/4. FrontEnd_BackEnd/교육 자료/다대일 단방향 매칭(Cart-CartProduct-Product) 02.png`
+  - `raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/FrontEnd&BackEnd.pdf`
+  - `raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf`
+  - `raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/React 교안.pdf`
+  - `raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/JWT(이론).pdf`
+  - `raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/IT 관련 용어.pdf`
+  - `raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/필드 검색 기능.pdf`
+  - `raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/프로그램 흐름 그림.png`
+  - `raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/라우터 설명 그림.png`
+  - `raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/쇼핑 카트 데이터 구조 다이어그램.png`
+  - `raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/다대일 단방향 매칭(Cart-CartProduct-Product) 01.png`
+  - `raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/다대일 단방향 매칭(Cart-CartProduct-Product) 02.png`
 - 보강한 summary: `wiki/summaries/2026-03-30-fullstack-environment-setup.md` ~ `wiki/summaries/2026-04-22-product-repository-pageable-search.md` 총 18개
 - 보강한 기존 concept/comparison: `fullstack-project-flow`, `spring-boot-rest-api`, `react-typescript-basics`, `jwt-session-cookie-auth`, `dto-entity-service-controller`, `shopping-cart-flow`, `pagination-search`, `spring-data-jpa-specification-pageable`, `session-vs-cookie-vs-jwt`, `react-router-vs-spring-api-url`
 - 새로 추가한 페이지:
@@ -390,18 +417,18 @@
 
 ## [2026-07-02] update | UI&UX course-material-aware wiki backfill
 
-- 목적: `raw/Study/3. UI&UX` 사용자 정리 MD 5개를 주 자료로 삼고, MD에서 언급된 UI&UX/HTML/CSS/JS/jQuery 교육자료 PDF·PNG·소스코드를 실제 확인해 기존 UI&UX 1차 wiki 정리본을 재검증·보강함.
+- 목적: `raw/KoreaICT/3. UI&UX` 사용자 정리 MD 5개를 주 자료로 삼고, MD에서 언급된 UI&UX/HTML/CSS/JS/jQuery 교육자료 PDF·PNG·소스코드를 실제 확인해 기존 UI&UX 1차 wiki 정리본을 재검증·보강함.
 - 원칙: `raw/`는 수정하지 않고 `wiki/`만 수정함. `sources`에는 사용자 정리 MD와 실제 참고한 교육자료/소스코드 경로를 함께 남김.
 - 참고한 대표 교육자료:
-  - `raw/Study/3. UI&UX/교육 자료/웹 서비스 Ui&UX.pdf`
-  - `raw/Study/3. UI&UX/교육 자료/HTML&JS&CSS 이론(new).pdf`
-  - `raw/Study/3. UI&UX/교육 자료/IT 관련 용어.pdf`
-  - `raw/Study/3. UI&UX/교육 자료/library&framework.png`
-  - `raw/Study/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/A.html&js&css/tableExam.html`
-  - `raw/Study/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/A.html&js&css/boxModelTest.html`
-  - `raw/Study/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/B.nobootstrap/CartList.html`
-  - `raw/Study/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/C.yesbootstrap/CartList.html`
-  - `raw/Study/3. UI&UX/교육 자료/jQueryImageTest/jQueryImageTest.html`
+  - `raw/KoreaICT/3. UI&UX/교육 자료/웹 서비스 Ui&UX.pdf`
+  - `raw/KoreaICT/3. UI&UX/교육 자료/HTML&JS&CSS 이론(new).pdf`
+  - `raw/KoreaICT/3. UI&UX/교육 자료/IT 관련 용어.pdf`
+  - `raw/KoreaICT/3. UI&UX/교육 자료/library&framework.png`
+  - `raw/KoreaICT/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/A.html&js&css/tableExam.html`
+  - `raw/KoreaICT/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/A.html&js&css/boxModelTest.html`
+  - `raw/KoreaICT/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/B.nobootstrap/CartList.html`
+  - `raw/KoreaICT/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/C.yesbootstrap/CartList.html`
+  - `raw/KoreaICT/3. UI&UX/교육 자료/jQueryImageTest/jQueryImageTest.html`
 - 보강한 summary:
   - `wiki/summaries/2026-03-23-html-css-intro.md`
   - `wiki/summaries/2026-03-24-css-layout-javascript-intro.md`
@@ -427,7 +454,7 @@
 ## [2026-07-03] update | AWS date-note-aware wiki correction
 
 - 목적: 사용자가 지정한 AWS 날짜별 MD 3개가 더 이상 시간표 템플릿이 아니라 실제 수업 메모를 포함하고 있음을 확인하고, 기존 AWS wiki summary/concept/entity/comparison을 날짜별 MD와 교육자료 PDF/실습 관리 대장 기준으로 재검토·보강함.
-- 원칙: `raw/Study/6. AWS`는 읽기 전용으로 유지했고, 사용자가 제외 지시한 AWS 총정리류는 건드리지 않음. 원본에 있는 실습용 공개 IP, RDS endpoint, DB 비밀번호 예시는 wiki에 그대로 재노출하지 않고 placeholder/보안 메모로 일반화함.
+- 원칙: `raw/KoreaICT/6. AWS`는 읽기 전용으로 유지했고, 사용자가 제외 지시한 AWS 총정리류는 건드리지 않음. 원본에 있는 실습용 공개 IP, RDS endpoint, DB 비밀번호 예시는 wiki에 그대로 재노출하지 않고 placeholder/보안 메모로 일반화함.
 - 보강한 summary:
   - `wiki/summaries/2026-05-06-aws-cloud-vpc-ec2.md`
   - `wiki/summaries/2026-05-07-aws-ec2-nginx-rds.md`
@@ -443,12 +470,12 @@
 
 ## [2026-07-03] ingest | 1~4 과목 총정리 MD 균등 재점검/보강
 
-- 목적: `raw/Study/1. Java` ~ `raw/Study/4. FrontEnd_BackEnd`의 과목별 총정리 MD 4개를 기준으로, 날짜별 summary를 대체하지 않는 복습 허브를 만들고 기존 과목 entity와 연결함.
+- 목적: `raw/KoreaICT/1. Java` ~ `raw/KoreaICT/4. FrontEnd_BackEnd`의 과목별 총정리 MD 4개를 기준으로, 날짜별 summary를 대체하지 않는 복습 허브를 만들고 기존 과목 entity와 연결함.
 - 참고한 원본:
-  - `raw/Study/1. Java/Java 총정리/Java 총정리.md`
-  - `raw/Study/2. Oracle/Oracle 총정리/Oracle 총정리.md`
-  - `raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md`
-  - `raw/Study/4. FrontEnd_BackEnd/FrontEnd_BackEnd 총정리/FrontEnd_BackEnd 총정리.md`
+  - `raw/KoreaICT/1. Java/Java 총정리/Java 총정리.md`
+  - `raw/KoreaICT/2. Oracle/Oracle 총정리/Oracle 총정리.md`
+  - `raw/KoreaICT/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md`
+  - `raw/KoreaICT/4. FrontEnd_BackEnd/FrontEnd_BackEnd 총정리/FrontEnd_BackEnd 총정리.md`
 - 새로 추가한 summary:
   - `wiki/summaries/2026-03-13-java-subject-review.md`
   - `wiki/summaries/2026-03-20-oracle-subject-review.md`
@@ -465,11 +492,11 @@
 
 - 목적: 사용자가 지정한 선행 순서에 따라 5~6 과목 총정리 생성, 7~8 날짜별 raw 변환, 9 중간 프로젝트 가이드 ingest, 10 Python 날짜별 raw 변환을 한 묶음으로 진행함.
 - raw 변환/생성:
-  - `raw/Study/5. Linux/Linux 총정리/Linux 총정리.md`
-  - `raw/Study/6. AWS/AWS 총정리/AWS 총정리.md`
-  - `raw/Study/7. Ci&CD/2026.05.11(월) - 시작/2026.05.11(월) - 시작.md` ~ `raw/Study/7. Ci&CD/2026.05.13(수)/2026.05.13(수).md`
-  - `raw/Study/8. Passwordless/2026.05.14(목)/2026.05.14(목).md` ~ `raw/Study/8. Passwordless/2026.05.21(목)/2026.05.21(목).md`
-  - `raw/Study/10. Python/2026.06.19(금)/2026.06.19(금).md` ~ `raw/Study/10. Python/2026.06.30(화)/2026.06.30(화).md`
+  - `raw/KoreaICT/5. Linux/Linux 총정리/Linux 총정리.md`
+  - `raw/KoreaICT/6. AWS/AWS 총정리/AWS 총정리.md`
+  - `raw/KoreaICT/7. Ci&CD/2026.05.11(월) - 시작/2026.05.11(월) - 시작.md` ~ `raw/KoreaICT/7. Ci&CD/2026.05.13(수)/2026.05.13(수).md`
+  - `raw/KoreaICT/8. Passwordless/2026.05.14(목) - 시작/2026.05.14(목) - 시작.md` ~ `raw/KoreaICT/8. Passwordless/2026.05.21(목)/2026.05.21(목).md`
+  - `raw/KoreaICT/10. Python/2026.06.19(금) - 시작/2026.06.19(금) - 시작.md` ~ `raw/KoreaICT/10. Python/2026.06.30(화)/2026.06.30(화).md`
 - 9번 프로젝트 가이드 신규 wiki 페이지:
   - `wiki/summaries/2026-05-middle-project-cicd-passwordless-guide.md`
   - `wiki/concepts/middle-project-cicd-deploy-flow.md`
@@ -481,7 +508,7 @@
 
 ## [2026-07-03] ingest | 5~6 과목 총정리
 
-- 목적: `raw/Study/5. Linux/Linux 총정리/Linux 총정리.md`와 `raw/Study/6. AWS/AWS 총정리/AWS 총정리.md`를 날짜별 summary를 대체하지 않는 복습 허브로 wiki에 반영함.
+- 목적: `raw/KoreaICT/5. Linux/Linux 총정리/Linux 총정리.md`와 `raw/KoreaICT/6. AWS/AWS 총정리/AWS 총정리.md`를 날짜별 summary를 대체하지 않는 복습 허브로 wiki에 반영함.
 - 원칙: `raw/`는 수정하지 않고 `wiki/`만 수정함. 기존 Linux/AWS 날짜별 wiki와 entity 페이지를 우선 보강하고, 총정리 원본은 subject-review summary로 연결함.
 - 새로 추가한 summary:
   - `wiki/summaries/2026-05-06-linux-subject-review.md`

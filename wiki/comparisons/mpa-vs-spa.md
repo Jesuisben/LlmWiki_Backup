@@ -1,12 +1,12 @@
 ---
 title: MPA vs SPA
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-09
 type: comparison
 tags: [frontend, react, auth]
 sources:
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.06(월)/2026.04.06(월).md
-  - raw/Study/4. FrontEnd_BackEnd/교육 자료/JWT(이론).pdf
+  - raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.06(월)/2026.04.06(월).md
+  - raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/JWT(이론).pdf
 status: growing
 confidence: high
 ---
@@ -46,5 +46,5 @@ JWT 이론 자료는 React 기반 SPA 구조를 설명하면서 MPA와 비교한
 
 ## 출처
 
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.06(월)/2026.04.06(월).md`
-- `raw/Study/4. FrontEnd_BackEnd/교육 자료/JWT(이론).pdf`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.06(월)/2026.04.06(월).md`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/JWT(이론).pdf`

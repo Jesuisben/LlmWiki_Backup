@@ -5,7 +5,7 @@ updated: 2026-07-03
 type: concept
 tags: [python]
 sources:
-  - raw/Study/10. Python/2026.07.03(금)/2026.07.03(금).md
+  - raw/KoreaICT/10. Python/2026.07.03(금)/2026.07.03(금).md
 status: growing
 confidence: high
 ---
@@ -113,4 +113,4 @@ chartdata.plot(kind='barh')
 
 ## 출처
 
-- `raw/Study/10. Python/2026.07.03(금)/2026.07.03(금).md`
+- `raw/KoreaICT/10. Python/2026.07.03(금)/2026.07.03(금).md`

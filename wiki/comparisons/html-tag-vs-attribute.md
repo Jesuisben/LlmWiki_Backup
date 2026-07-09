@@ -5,9 +5,9 @@ updated: 2026-07-06
 type: comparison
 tags: [html, frontend]
 sources:
-  - "raw/Study/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md"
-  - "raw/Study/3. UI&UX/UI&UX 총정리/태그들.md"
-  - "raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md"
+  - "raw/KoreaICT/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md"
+  - "raw/KoreaICT/3. UI&UX/UI&UX 총정리/태그들.md"
+  - "raw/KoreaICT/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md"
 status: growing
 confidence: high
 ---
@@ -57,6 +57,6 @@ UI&UX 원본은 초반에 태그와 속성을 함께 다룬다. 둘을 구분하
 
 ## 출처
 
-- `raw/Study/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md`
-- `raw/Study/3. UI&UX/UI&UX 총정리/태그들.md`
-- `raw/Study/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md`
+- `raw/KoreaICT/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md`
+- `raw/KoreaICT/3. UI&UX/UI&UX 총정리/태그들.md`
+- `raw/KoreaICT/3. UI&UX/UI&UX 총정리/UI&UX 총정리.md`

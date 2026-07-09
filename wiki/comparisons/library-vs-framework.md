@@ -5,8 +5,8 @@ updated: 2026-07-06
 type: comparison
 tags: [javascript, bootstrap, jquery, frontend]
 sources:
-  - "raw/Study/3. UI&UX/2026.03.27(금)/2026.03.27(금).md"
-  - "raw/Study/3. UI&UX/교육 자료/library&framework.png"
+  - "raw/KoreaICT/3. UI&UX/2026.03.27(금)/2026.03.27(금).md"
+  - "raw/KoreaICT/3. UI&UX/교육 자료/library&framework.png"
 status: growing
 confidence: high
 ---
@@ -46,5 +46,5 @@ UI&UX 수업에서 jQuery와 Bootstrap을 함께 쓰면서 “라이브러리와
 
 ## 출처
 
-- `raw/Study/3. UI&UX/2026.03.27(금)/2026.03.27(금).md`
-- `raw/Study/3. UI&UX/교육 자료/library&framework.png`
+- `raw/KoreaICT/3. UI&UX/2026.03.27(금)/2026.03.27(금).md`
+- `raw/KoreaICT/3. UI&UX/교육 자료/library&framework.png`

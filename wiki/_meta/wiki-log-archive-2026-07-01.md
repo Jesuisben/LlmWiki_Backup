@@ -20,7 +20,7 @@ confidence: high
   - Java 2026-03-04~2026-03-13 수업 MD 8개
   - Oracle 2026-03-13~2026-03-20 수업 MD 6개
   - UI&UX 2026-03-23~2026-03-27 수업 MD 5개
-  - `raw/ai-instructions/hermes-default-profile-instructions.md`
+  - `raw/References/ai-instructions/hermes-default-profile-instructions.md`
 - 신규 ingest raw 범위:
   - FrontEnd_BackEnd 2026-03-30~2026-04-22 수업 MD 18개
   - Python 2026-07-01 Pandas/DataFrame 수업 MD 1개

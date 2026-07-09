@@ -5,11 +5,11 @@ updated: 2026-07-02
 type: summary
 tags: [oracle, sql]
 sources:
-  - raw/Study/2. Oracle/2026.03.17(화)/2026.03.17(화).md
-  - raw/Study/2. Oracle/교육 자료/오라클 교안.pdf
-  - raw/Study/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf
-  - raw/Study/2. Oracle/교육 자료/스크립트들/A02.오라맨 스크립트.sql
-  - raw/Study/2. Oracle/교육 자료/스크립트들/A03 Oraman ddl.sql
+  - raw/KoreaICT/2. Oracle/2026.03.17(화)/2026.03.17(화).md
+  - raw/KoreaICT/2. Oracle/교육 자료/오라클 교안.pdf
+  - raw/KoreaICT/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf
+  - raw/KoreaICT/2. Oracle/교육 자료/스크립트들/A02.오라맨 스크립트.sql
+  - raw/KoreaICT/2. Oracle/교육 자료/스크립트들/A03 Oraman ddl.sql
 status: growing
 confidence: high
 ---
@@ -63,8 +63,8 @@ COMMIT;
 
 ## 출처
 
-- `raw/Study/2. Oracle/2026.03.17(화)/2026.03.17(화).md`
-- `raw/Study/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf` — p.69~73 테이블 정의, p.88~108 주문/참조 무결성 실습
-- `raw/Study/2. Oracle/교육 자료/오라클 교안.pdf` — p.389~391 제약조건 개요
-- `raw/Study/2. Oracle/교육 자료/스크립트들/A02.오라맨 스크립트.sql`
-- `raw/Study/2. Oracle/교육 자료/스크립트들/A03 Oraman ddl.sql`
+- `raw/KoreaICT/2. Oracle/2026.03.17(화)/2026.03.17(화).md`
+- `raw/KoreaICT/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf` — p.69~73 테이블 정의, p.88~108 주문/참조 무결성 실습
+- `raw/KoreaICT/2. Oracle/교육 자료/오라클 교안.pdf` — p.389~391 제약조건 개요
+- `raw/KoreaICT/2. Oracle/교육 자료/스크립트들/A02.오라맨 스크립트.sql`
+- `raw/KoreaICT/2. Oracle/교육 자료/스크립트들/A03 Oraman ddl.sql`

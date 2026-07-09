@@ -1,13 +1,13 @@
 ---
 title: Spring Data JPA Specification과 Pageable
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-09
 type: concept
 tags: [spring-boot, backend, java]
 sources:
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md
-  - raw/Study/4. FrontEnd_BackEnd/교육 자료/필드 검색 기능.pdf
-  - raw/Study/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf
+  - raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md
+  - raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/필드 검색 기능.pdf
+  - raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/SpringBoot 교안.pdf
 status: growing
 confidence: high
 ---
@@ -76,4 +76,4 @@ System.out.println("현재 페이지 번호 : " + productPage.getNumber());
 
 ## 출처
 
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md`

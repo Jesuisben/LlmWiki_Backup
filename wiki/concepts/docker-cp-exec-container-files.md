@@ -1,13 +1,13 @@
 ---
 title: Docker exec/cp와 컨테이너 파일 다루기
 created: 2026-07-02
-updated: 2026-07-06
+updated: 2026-07-09
 type: concept
 tags: [linux, docker, backend]
 sources:
-  - raw/Study/5. Linux/2026.04.28(화)/2026.04.28(화).md
-  - raw/Study/5. Linux/2026.04.29(수)/2026.04.29(수).md
-  - raw/Study/5. Linux/교육 자료/Docker/Docker 교안(실습).pdf
+  - raw/KoreaICT/5. Linux/2026.04.28(화)/2026.04.28(화).md
+  - raw/KoreaICT/5. Linux/2026.04.29(수)/2026.04.29(수).md
+  - raw/KoreaICT/5. Linux/교육 자료/Docker/Docker 교안(실습).pdf
 status: growing
 confidence: high
 ---
@@ -59,4 +59,4 @@ docker cp apache01:/usr/local/apache2/htdocs/index.html ./index-from-container.h
 
 ## 출처
 
-- `raw/Study/5. Linux/2026.04.29(수)/2026.04.29(수).md`
+- `raw/KoreaICT/5. Linux/2026.04.29(수)/2026.04.29(수).md`

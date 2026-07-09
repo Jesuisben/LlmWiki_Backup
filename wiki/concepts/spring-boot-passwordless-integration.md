@@ -5,9 +5,9 @@ updated: 2026-07-03
 type: concept
 tags: [spring-boot, auth, backend, project]
 sources:
-  - raw/Study/8. Passwordless/2026.05.18(월)/2026.05.18(월).md
-  - raw/Study/8. Passwordless/2026.05.21(목)/2026.05.21(목).md
-  - raw/Study/9. 중간 프로젝트 공부/패스워드리스 적용/중간 프로젝트 패스워드리스 적용 가이드.md
+  - raw/KoreaICT/8. Passwordless/2026.05.18(월)/2026.05.18(월).md
+  - raw/KoreaICT/8. Passwordless/2026.05.21(목)/2026.05.21(목).md
+  - raw/KoreaICT/9. 중간 프로젝트 공부/패스워드리스 적용/중간 프로젝트 패스워드리스 적용 가이드.md
 status: growing
 confidence: high
 ---
@@ -70,6 +70,6 @@ React LoginPage
 
 ## 출처
 
-- `raw/Study/8. Passwordless/2026.05.18(월)/2026.05.18(월).md`
-- `raw/Study/8. Passwordless/2026.05.21(목)/2026.05.21(목).md`
-- `raw/Study/9. 중간 프로젝트 공부/패스워드리스 적용/중간 프로젝트 패스워드리스 적용 가이드.md`
+- `raw/KoreaICT/8. Passwordless/2026.05.18(월)/2026.05.18(월).md`
+- `raw/KoreaICT/8. Passwordless/2026.05.21(목)/2026.05.21(목).md`
+- `raw/KoreaICT/9. 중간 프로젝트 공부/패스워드리스 적용/중간 프로젝트 패스워드리스 적용 가이드.md`

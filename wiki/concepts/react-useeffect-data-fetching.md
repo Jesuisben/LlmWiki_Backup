@@ -1,12 +1,12 @@
 ---
 title: React useEffect와 데이터 요청
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-09
 type: concept
 tags: [react, typescript, frontend]
 sources:
-  - raw/Study/4. FrontEnd_BackEnd/2026.04.13(월)/2026.04.13(월).md
-  - raw/Study/4. FrontEnd_BackEnd/교육 자료/React 교안.pdf
+  - raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.13(월)/2026.04.13(월).md
+  - raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/React 교안.pdf
 status: growing
 confidence: high
 ---
@@ -53,5 +53,5 @@ useEffect(() => {
 
 ## 출처
 
-- `raw/Study/4. FrontEnd_BackEnd/2026.04.13(월)/2026.04.13(월).md`
-- `raw/Study/4. FrontEnd_BackEnd/교육 자료/React 교안.pdf`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.13(월)/2026.04.13(월).md`
+- `raw/KoreaICT/4. FrontEnd_BackEnd/교육 자료/React 교안.pdf`

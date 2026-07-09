@@ -5,11 +5,11 @@ updated: 2026-07-03
 type: entity
 tags: [python]
 sources:
-  - raw/Study/10. Python/2026.06.29(월)/2026.06.29(월).md
-  - raw/Study/10. Python/2026.06.30(화)/2026.06.30(화).md
-  - raw/Study/10. Python/2026.07.01(수)/2026.07.01(수).md
-  - raw/Study/10. Python/2026.07.02(목)/2026.07.02(목).md
-  - raw/Study/10. Python/2026.07.03(금)/2026.07.03(금).md
+  - raw/KoreaICT/10. Python/2026.06.29(월)/2026.06.29(월).md
+  - raw/KoreaICT/10. Python/2026.06.30(화)/2026.06.30(화).md
+  - raw/KoreaICT/10. Python/2026.07.01(수)/2026.07.01(수).md
+  - raw/KoreaICT/10. Python/2026.07.02(목)/2026.07.02(목).md
+  - raw/KoreaICT/10. Python/2026.07.03(금)/2026.07.03(금).md
 status: growing
 confidence: high
 ---
@@ -61,8 +61,8 @@ Pandas는 Python에서 표 형태 데이터를 다루기 위한 대표 Third Par
 
 ## 출처
 
-- `raw/Study/10. Python/2026.06.29(월)/2026.06.29(월).md`
-- `raw/Study/10. Python/2026.06.30(화)/2026.06.30(화).md`
-- `raw/Study/10. Python/2026.07.01(수)/2026.07.01(수).md`
-- `raw/Study/10. Python/2026.07.02(목)/2026.07.02(목).md`
-- `raw/Study/10. Python/2026.07.03(금)/2026.07.03(금).md`
+- `raw/KoreaICT/10. Python/2026.06.29(월)/2026.06.29(월).md`
+- `raw/KoreaICT/10. Python/2026.06.30(화)/2026.06.30(화).md`
+- `raw/KoreaICT/10. Python/2026.07.01(수)/2026.07.01(수).md`
+- `raw/KoreaICT/10. Python/2026.07.02(목)/2026.07.02(목).md`
+- `raw/KoreaICT/10. Python/2026.07.03(금)/2026.07.03(금).md`

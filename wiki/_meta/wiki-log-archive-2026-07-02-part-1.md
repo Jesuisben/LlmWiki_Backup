@@ -55,16 +55,16 @@ confidence: high
 
 - 목적: 품질 감사의 다음 우선순위였던 Java 배열/반복문/조건 판단 및 HTML/CSS/JavaScript/Bootstrap/jQuery concept 페이지를 원본 수업 노트의 실제 예제와 헷갈림 중심으로 재작성함.
 - 다시 읽은 원본:
-  - `raw/Study/1. Java/2026.03.03(화)/2026.03.03(화).md`
-  - `raw/Study/1. Java/2026.03.04(수)/2026.03.04(수).md`
-  - `raw/Study/1. Java/2026.03.05(목)/2026.03.05(목).md`
-  - `raw/Study/1. Java/2026.03.06(금)/2026.03.06(금).md`
-  - `raw/Study/1. Java/2026.03.12(목)/2026.03.12(목).md`
-  - `raw/Study/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md`
-  - `raw/Study/3. UI&UX/2026.03.24(화)/2026.03.24(화).md`
-  - `raw/Study/3. UI&UX/2026.03.25(수)/2026.03.25(수).md`
-  - `raw/Study/3. UI&UX/2026.03.26(목)/2026.03.26(목).md`
-  - `raw/Study/3. UI&UX/2026.03.27(금)/2026.03.27(금).md`
+  - `raw/KoreaICT/1. Java/2026.03.03(화)/2026.03.03(화).md`
+  - `raw/KoreaICT/1. Java/2026.03.04(수)/2026.03.04(수).md`
+  - `raw/KoreaICT/1. Java/2026.03.05(목)/2026.03.05(목).md`
+  - `raw/KoreaICT/1. Java/2026.03.06(금)/2026.03.06(금).md`
+  - `raw/KoreaICT/1. Java/2026.03.12(목)/2026.03.12(목).md`
+  - `raw/KoreaICT/3. UI&UX/2026.03.23(월) - 시작/2026.03.23(월) - 시작.md`
+  - `raw/KoreaICT/3. UI&UX/2026.03.24(화)/2026.03.24(화).md`
+  - `raw/KoreaICT/3. UI&UX/2026.03.25(수)/2026.03.25(수).md`
+  - `raw/KoreaICT/3. UI&UX/2026.03.26(목)/2026.03.26(목).md`
+  - `raw/KoreaICT/3. UI&UX/2026.03.27(금)/2026.03.27(금).md`
 - 수정한 파일:
   - `wiki/concepts/java-conditional-logic.md` — 비교/논리 연산자, 삼항 연산자, `if/else`, `switch`, `break` 흐름을 계절·학점·홀짝 예제 중심으로 고도화함.
   - `wiki/concepts/java-loop.md` — `for`, `while`, 무한 반복, `break`, 배열 반복, 향상된 for를 합계·입력·객체 배열 예제 중심으로 고도화함.
@@ -88,8 +88,8 @@ confidence: high
 
 - 목적: Python/Pandas 쪽 잔여 얕은 페이지와 2026-07-02 신규 raw를 고품질 ingest 기준에 맞게 보강함.
 - 다시 읽은 원본:
-  - `raw/Study/10. Python/2026.07.01(수)/2026.07.01(수).md`
-  - `raw/Study/10. Python/2026.07.02(목)/2026.07.02(목).md`
+  - `raw/KoreaICT/10. Python/2026.07.01(수)/2026.07.01(수).md`
+  - `raw/KoreaICT/10. Python/2026.07.02(목)/2026.07.02(목).md`
 - 생성한 파일:
   - `wiki/summaries/2026-07-02-python-pandas-reshape-merge.md` — `concat`, `merge`, `pivot`, SQL JOIN과의 연결을 중심으로 2026-07-02 Pandas 수업을 요약함.
 - 수정한 파일:
@@ -104,16 +104,16 @@ confidence: high
 
 - 목적: 품질 감사에서 남은 재ingest 후보였던 Linux 과정 원본을 고품질 기준에 맞춰 날짜별 요약, 핵심 개념, 엔티티 페이지로 통합함.
 - 다시 읽은 원본:
-  - `raw/Study/5. Linux/2026.04.22(수) - 시작/2026.04.22(수) - 시작.md`
-  - `raw/Study/5. Linux/2026.04.23(목)/2026.04.23(목).md`
-  - `raw/Study/5. Linux/2026.04.24(금)/2026.04.24(금).md`
-  - `raw/Study/5. Linux/2026.04.27(월)/2026.04.27(월).md`
-  - `raw/Study/5. Linux/2026.04.28(화)/2026.04.28(화).md`
-  - `raw/Study/5. Linux/2026.04.29(수)/2026.04.29(수).md`
-  - `raw/Study/5. Linux/2026.04.30(목)/2026.04.30(목).md`
-  - `raw/Study/5. Linux/2026.05.01(금)/2026.05.01(금).md`
-  - `raw/Study/5. Linux/2026.05.04(월)/2026.05.04(월).md`
-  - `raw/Study/5. Linux/2026.05.06(수)/2026.05.06(수).md`
+  - `raw/KoreaICT/5. Linux/2026.04.22(수) - 시작/2026.04.22(수) - 시작.md`
+  - `raw/KoreaICT/5. Linux/2026.04.23(목)/2026.04.23(목).md`
+  - `raw/KoreaICT/5. Linux/2026.04.24(금)/2026.04.24(금).md`
+  - `raw/KoreaICT/5. Linux/2026.04.27(월)/2026.04.27(월).md`
+  - `raw/KoreaICT/5. Linux/2026.04.28(화)/2026.04.28(화).md`
+  - `raw/KoreaICT/5. Linux/2026.04.29(수)/2026.04.29(수).md`
+  - `raw/KoreaICT/5. Linux/2026.04.30(목)/2026.04.30(목).md`
+  - `raw/KoreaICT/5. Linux/2026.05.01(금)/2026.05.01(금).md`
+  - `raw/KoreaICT/5. Linux/2026.05.04(월)/2026.05.04(월).md`
+  - `raw/KoreaICT/5. Linux/2026.05.06(수)/2026.05.06(수).md`
 - 생성한 summary 페이지:
   - `wiki/summaries/2026-04-22-linux-install-ssh-cli.md`
   - `wiki/summaries/2026-04-23-linux-files-vi.md`
