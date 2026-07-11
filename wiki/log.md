@@ -13,6 +13,90 @@
 
 ## 현재 로그
 
+## [2026-07-11] update | FrontEnd_BackEnd 총정리 fence 언어 라벨 정정
+
+- 원인: FrontEnd_BackEnd 과목의 React/TypeScript 문맥을 fence별 실제 문법보다 우선해, Java/Spring·HTML 블록까지 `typescript`로 일반화했고 일부 React import 예제는 반대로 `java`로 라벨링함.
+- 수정: 원본 문맥과 주석을 제외한 실행 코드 문법으로 확정한 fence 라벨만 교정함. SQL 주석·SQL 문 묶음은 `sql`, Spring annotation/`package`/`public String`은 `java`, `<!DOCTYPE html>`은 `html`, React import/JSX는 `typescript`로 유지·정정함.
+- 재발 방지: 전역 `llm-wiki-vault` canonical 규칙에 과목 단위 기본값 금지, 실제 문법 우선, 주석 단서 제외, fence별 기대 언어·근거 inventory 및 언어 불일치 0건 검증을 추가함.
+
+## [2026-07-11] update | FrontEnd_BackEnd 총정리 fence 경계 빈줄 정정
+
+- 원인: 원본 TXT의 단계 구분용 빈줄을 보존하는 과정에서 closing fence를 빈줄 뒤에 두고, 일부는 opening fence를 빈줄 앞에 둬 빈줄이 코드블록의 첫/끝 본문이 됨.
+- 수정: `raw/KoreaICT/4. FrontEnd_BackEnd/FrontEnd_BackEnd 총정리/FrontEnd_BackEnd 총정리.md`의 선두·끝 빈줄이 있는 fence 163개에서 경계만 이동해, 빈줄은 fence 밖에 두고 실제 코드/명령/출력만 fence 본문으로 유지함.
+- 재발 방지: 전역 `llm-wiki-vault` 스킬에 fence 본문의 첫·끝 빈줄 금지, 원본 빈줄의 fence 외부 귀속, 별도 경계 검증 규칙을 추가함.
+
+## [2026-07-11] update | Linux 첫째·둘째 날짜 TXT→MD 재변환과 dotted-number literal 규칙 실험
+
+- 범위: 외부 `5. Linux/2026.04.22(수) - 시작/2026.04.22(수).txt`, `5. Linux/2026.04.23(목)/2026.04.23(목).txt`만 입력으로 사용해 대응 `raw/KoreaICT/` MD 2개를 재생성함. 기존 MD는 변환 입력·스타일 근거로 사용하지 않음.
+- 민감정보 게이트: 첫째 원본의 실제 값 후보 5건은 사용자 검토 후 `유지하고 이어서`를 받았고, 외부 TXT는 수정하지 않음. 둘째 원본은 후보 0건.
+- 신규 canonical: prose 줄 시작의 `숫자.`는 `숫자\.`로 escape해 자동 ordered list를 막고, `숫자)`는 그대로 유지함. 교시 heading과 code fence는 이 규칙의 예외임. 전역 `llm-wiki-vault` completion gate에 반영함.
+- 검증: 2026-04-22는 원본 비공백 토큰·빈 줄 배치 262줄, 3 bash fence, raw dotted number 0·escaped dotted number 17·`숫자)` 9, Markdown 기호 후보 0. 2026-04-23은 609줄, 44 bash + 1 text fence, raw dotted number 0·escaped dotted number 5·`숫자)` 17, Markdown 기호 후보 0. 두 파일 모두 fence 미분류/빈 fence 0, scoped `git diff --check` exit 0.
+
+## [2026-07-10] update | Linux 2026-04-23 TXT→MD fence 경계 재감사와 완료 판정 정정
+
+- 정정 사유: 앞선 대상 MD 검증은 fence 짝·빈 fence·기호 escape 중심의 구조 검사 결과를 code/prose 경계까지 검증한 것처럼 잘못 보고했음. `tree / -L 1 명령어 이용`, `tree 입력하면 … 보여줌`이라는 한국어 설명문 2개가 `bash` fence 안에 남아 있었음.
+- 수정: 대상 MD에서 위 설명문을 감싼 `bash` fence 2개를 제거하고 원본 흐름의 prose로 복원함. 외부 원본 TXT는 수정하지 않음.
+- 전역 재발 방지: Hermes 전역 `llm-wiki-vault` completion gate에 모든 fence의 시작/끝·언어·본문·원본 대응 줄·keep/unfence/needs-review 판정을 전수 목록화하고, fence 안 prose 또는 fence 밖 command-like 줄이 미분류면 실패 처리하도록 보강함. `ex)` 예시는 원본 문맥이 실행 블록임을 증명하지 않는 한 prose로 유지함.
+- 재검사: 원본 비공백 토큰·빈 줄 배치 609줄 대조, fence 49개(48 bash·1 text) 균형/빈 fence 0, fence decision needs-review 0, fence 밖 command-like 18개(설명 13·`ex)` 예시 5) 전수 분류, raw `>`·잘못된 `\->`·raw `*`·raw `[]`·standalone `---`·HTML tag·hash 후보 모두 0, scoped `git diff --check` exit 0을 확인함.
+
+## [2026-07-10] update | AGENTS 단일 구조 복구와 Vault 내부 분리 절차 비정본화 정정
+
+- 정정 대상: 아래의 `AGENTS 규칙 의미 보존 분리와 TXT→MD 보조 스킬` 기록은 당시의 분리 시도를 보존하는 과거 사실이며, 현재 정본 구조를 설명하지 않는다.
+- 현재 상태 확인: `AGENTS.md`는 페이지 작성·ingest·query·lint 규칙을 다시 포함한 단일 414줄 구조이고, Vault 내부 `agent-rules/`, `agent-skills/`는 존재하지 않는다.
+- 정본화 정정: TXT→MD 변환의 canonical 규칙·완료 게이트·재발 방지는 Vault 내부 절차 파일이 아니라 Hermes 전역 `llm-wiki-vault` 스킬이 담당한다. 이 정정으로 `AGENTS.md`를 다시 세분화하거나 Vault 내부 절차 폴더를 재생성하지 않는다.
+- 경계: 외부 원본 TXT와 `raw/`는 이 로그 정정에서 수정하지 않음.
+
+## [2026-07-10] update | TXT→MD 짧은 비밀번호 후보 검사 정정
+
+- 원인: 기존 검사 구현이 길이가 긴 credential 중심으로만 후보를 잡아, `암호 : ubuntu`처럼 짧은 수업용 기본 비밀번호를 누락했음.
+- 수정: `AGENTS.md`와 활성 `llm-wiki-vault` 스킬에 credential 문맥 뒤 실제 값은 길이와 무관하게 후보로 보고하고, 값 없는 절차 안내문은 후보에서 제외하는 2단계 판정 규칙을 추가함.
+- 회귀 검증: `5. Linux/2026.04.22(수) - 시작` 원본에서 실제 값 후보 37·50·55·143·165행 5건을 모두 탐지했고, 값 없는 79·106·114행은 오탐 없이 제외함. 후보가 있으므로 사용자 명시 재개 전 TXT→MD 변환은 시작하지 않음.
+- 원칙: 외부 원본 TXT와 `raw/` 결과 MD는 수정하지 않음.
+
+## [2026-07-10] update | TXT→MD 원본 공백 보존 기본값과 검증 정정
+
+- 정정: 특정 코드 fence 뒤 빈 줄만의 사례 규칙이 아니라, 원본 빈 줄의 개수·위치를 보존하는 것을 기본값으로 명시함. fence를 열고 닫아도 원본 공백을 삭제·병합·추가하지 않음.
+- 명시 예외: 단독 날짜 줄 제거 뒤 파일 시작 선행 공백 제거, 교시·형제 중분류의 확정된 3줄/0줄 공백 계약만 적용함.
+- 검증: 공백 패턴을 원본과 대조하고, 명시 예외 외 공백의 손실·추가·병합을 오류로 분류해 고정점 검증에서 반복 확인하도록 보강함.
+- 원칙: raw와 외부 원본 TXT는 수정하지 않음.
+
+## [2026-07-10] update | TXT→MD 민감정보 사용자 게이트와 고정점 검증 순서 명시
+
+- 보강: 민감정보 후보 보고에 원본 TXT 전체 경로, 실제 줄 번호, 감지 종류·근거·신뢰도, 비밀값 전체를 숨긴 마스킹 줄을 필수로 명시함.
+- 실행 순서: 실제 원본 TXT의 후보 탐지·보고 → 사용자 직접 판단·필요 시 수정 또는 유지 → `수정했어`/`이어서 해줘` 같은 명시 재개 → 원본 재독 → TXT→MD 변환 → 실제 오류·고위험 후보가 없어질 때까지 반복 검증으로 고정함.
+- 경계: 후보가 있으면 AI는 외부 원본 TXT를 자동 수정·마스킹·삭제하지 않고 변환도 시작하지 않음. raw와 외부 원본 TXT는 수정하지 않음.
+
+## [2026-07-10] update | TXT→MD 소스 매핑의 잘못된 일반화 정정
+
+- 정정 사유: 직전 보강이 날짜 MD 본문의 참고 TXT 파일명을 변환 원본 후보처럼 취급하고, 이미 확정된 동일 날짜명 TXT 매핑을 금지하는 잘못된 일반화를 포함했음.
+- 확정 기본 루트: 원본은 `C:\Users\ICT02-006\Desktop\한국ICT인재개발원\교육`, 결과는 `D:\Study_LLM_Wiki\raw\KoreaICT`임.
+- 정정 규칙: 원본의 과목 아래 상대경로를 결과에 그대로 미러링하고 `.txt`만 `.md`로 바꾼다. 날짜 노트는 동일 날짜 폴더·동일 날짜명 TXT, 과목 총정리는 동일 이름의 총정리 폴더·총정리 TXT를 사용한다. `- 시작` 접미사도 폴더·파일명에 그대로 보존한다.
+- 제외: MD 본문의 `(...txt)`, `파일 참조` 표기는 수업 중 참고 자료명일 수 있으므로 변환 원본 선정 근거로 사용하지 않는다. `교육 자료/`는 기본 변환 대상이 아니다.
+- 원칙: 외부 원본 TXT와 `raw/`는 수정하지 않음.
+
+## [2026-07-10] update | TXT→MD 외부 원본 소스 매핑 절차 보강
+
+- 문제: 보조 스킬이 외부 원본 TXT를 전제로 했지만, 대상 날짜 MD에서 외부 원본의 하위폴더·복수 TXT 구성을 복원하는 우선순위가 명시되지 않아 Vault 안에서 원본을 찾지 못한 에이전트가 작업을 중단할 수 있었음.
+- 근거: `raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.15(수)/2026.04.15(수).md`에 `06.장바구니.txt`, `CartList04.txt`처럼 한 날짜 MD가 복수 TXT를 참조하는 표기가 있음을 확인함.
+- 보강: `academy-txt-to-md-conversion/SKILL.md`에 사용자 제공 경로 → 과목별 소스 매핑 → MD 본문의 TXT 후보 표기 순서, 날짜명 TXT 단순 추정 금지, 미확정 시 무차별 검색·재변환 금지 규칙을 추가함.
+- 생성: `agent-skills/academy-txt-to-md-conversion/references/academy-source-map.template.md`에 `대상 MD → 외부 하위폴더 → 원본 TXT 목록`을 기록하는 과목별 매핑 템플릿을 추가함.
+- 원칙: 외부 원본 TXT와 `raw/`는 수정하지 않음.
+
+## [2026-07-10] update | TXT→MD 보조 스킬의 2026-04-14 재현 규칙 보강
+
+- 근거: `2026.04.14(화)` 외부 원본 TXT 기반 재변환 세션과 결과 MD, 사용자 확인 Java·Oracle·UI&UX canonical 샘플 규칙, FrontEnd_BackEnd 후속 검증 레퍼런스를 대조함.
+- 보강: 날짜 노트의 교시/형제 중분류 전 정확한 3줄 공백, 교시 직후 첫 중분류와 원본 연속 라벨의 무공백, 코드 밖 `<`/`>` 전부 escape, React/JSX의 `typescript` fence 고정, 원본 비공백 순서·연속 라벨·공백·fence·특수기호 검증을 명시함.
+- 정정: canonical 스타일 근거를 Java·Oracle만이 아니라 사용자 확인 Java·Oracle·UI&UX 수동 변환본 전체로 명시함.
+
+## [2026-07-10] update | AGENTS 규칙 의미 보존 분리와 TXT→MD 보조 스킬
+
+- 목적: 407줄 규모의 `AGENTS.md`가 매 세션에 전부 읽히는 비용을 줄이되, 기존 운영 규칙을 삭제하지 않고 작업별 상세 문서로 분리함.
+- 수정: `AGENTS.md`는 Vault 목적·폴더 경계·raw 읽기 전용·세션 시작 규칙·index/log 원칙·작업별 필수 문서 경로를 가진 짧은 진입점/라우터로 정리함.
+- 생성: `agent-rules/wiki-authoring.md`에 페이지 형식·링크·출처·태그·유형별 작성·품질·문체 규칙을, `agent-rules/wiki-workflows.md`에 ingest/query/lint·고정점 검증 절차를 이관함.
+- 생성: `agent-skills/academy-txt-to-md-conversion/SKILL.md`에 사용자 확인 수동 변환본 기준, 원본·교육 자료 보호, secret 사전 점검, 코드/설명 경계, 고정점 검증을 담은 이식 가능한 TXT→MD 보조 절차를 작성함.
+- 생성: `agent-rules/rule-mapping.md`에 기존 AGENTS 절과 새 정본 문서의 매핑을 기록해 규칙 누락을 점검할 수 있게 함.
+- 원칙: `wiki/index.md`는 학습 지식 카탈로그이므로 운영 문서를 등록하지 않았고, `raw/`는 수정하지 않음.
+
 ## [2026-07-09] update | raw 출처 구조 마이그레이션
 
 - 목적: `raw/Study/`가 개인 공부 전체처럼 보이는 문제를 줄이고, 출처별 raw 구조를 장기 운영에 맞게 정리함.

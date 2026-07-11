@@ -8,115 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "52fb2895e0ab80de",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.13(월)/2026.04.13(월).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2026.04.13(월)"
-            }
-          },
-          {
             "id": "959373330bfed076",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.14(화)/2026.04.14(화).md",
+                "file": "AGENTS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026.04.14(화)"
-            }
-          },
-          {
-            "id": "b4001176f5dd522f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.15(수)/2026.04.15(수).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2026.04.15(수)"
-            }
-          },
-          {
-            "id": "b4030b0b6b48f618",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.16(목)/2026.04.16(목).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2026.04.16(목)"
-            }
-          },
-          {
-            "id": "177f31ffa435c759",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.17(금)/2026.04.17(금).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2026.04.17(금)"
-            }
-          },
-          {
-            "id": "742350ea80953182",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.20(월)/2026.04.20(월).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2026.04.20(월)"
-            }
-          },
-          {
-            "id": "d04298583f885793",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.21(화)/2026.04.21(화).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2026.04.21(화)"
-            }
-          },
-          {
-            "id": "9fad9a2530d39015",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2026.04.22(수)"
+              "title": "AGENTS"
             }
           },
           {
@@ -132,8 +34,23 @@
               "icon": "lucide-file",
               "title": "FrontEnd_BackEnd 총정리"
             }
+          },
+          {
+            "id": "7aa9e681e288af41",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "raw/KoreaICT/10. Python/2026.06.30(화)/2026.06.30(화).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026.06.30(화)"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -310,58 +227,14 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "floating": {
-    "id": "d63c3068114e230f",
-    "type": "floating",
-    "children": [
-      {
-        "id": "a5765114b1217859",
-        "type": "window",
-        "children": [
-          {
-            "id": "12e1438769d17ced",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "1b6dfd4cfdfc5ede",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "raw/KoreaICT/11. Machine Learning/2026.07.10(금)/2026.07.10(금).md",
-                    "mode": "source",
-                    "source": false
-                  },
-                  "icon": "lucide-file",
-                  "title": "2026.07.10(금)"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 0,
-        "y": 0,
-        "width": 1280,
-        "height": 1080,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "52fb2895e0ab80de",
+  "active": "5785d3422477b644",
   "lastOpenFiles": [
-    "raw/KoreaICT/11. Machine Learning/2026.07.10(금)/2026.07.10(금).md",
-    "raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.13(월)/2026.04.13(월).md",
-    "raw/KoreaICT/11. Machine Learning/2026.07.10(금)",
-    "raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.10(금)/2026.04.10(금).md",
-    "raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.09(목)/2026.04.09(목).md",
-    "raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.08(수)/2026.04.08(수).md",
-    "raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.07(화)/2026.04.07(화).md",
-    "raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.06(월)/2026.04.06(월).md",
-    "raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.03(금)/2026.04.03(금).md",
-    "raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.02(목)/2026.04.02(목).md",
+    "raw/KoreaICT/10. Python/2026.06.30(화)/2026.06.30(화).md",
     "raw/KoreaICT/4. FrontEnd_BackEnd/FrontEnd_BackEnd 총정리/FrontEnd_BackEnd 총정리.md",
+    "raw/KoreaICT/9. 중간 프로젝트 공부/패스워드리스 적용/중간 프로젝트 패스워드리스 적용 가이드.md",
+    "AGENTS.md",
+    "raw/KoreaICT/5. Linux/2026.04.23(목)/2026.04.23(목).md",
+    "raw/KoreaICT/5. Linux/2026.04.22(수) - 시작/2026.04.22(수) - 시작.md",
     "raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md",
     "raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.21(화)/2026.04.21(화).md",
     "raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.20(월)/2026.04.20(월).md",
@@ -369,24 +242,29 @@
     "raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.16(목)/2026.04.16(목).md",
     "raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.15(수)/2026.04.15(수).md",
     "raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.14(화)/2026.04.14(화).md",
-    "raw/References/markdown-grammar/markdown-grammar.md",
-    "환영합니다!.md",
-    "wiki/_meta/wiki-log-archive-2026-06.md",
+    "wiki/_meta/hermes-default-profile-mode-system.md",
     "wiki/log.md",
     "wiki/index.md",
-    "AGENTS.md",
+    "raw/KoreaICT/11. Machine Learning/2026.07.10(금)/2026.07.10(금).md",
+    "agent-skills/academy-txt-to-md-conversion/SKILL.md",
+    "agent-skills/academy-txt-to-md-conversion/references/academy-source-map.template.md",
+    "agent-skills/academy-txt-to-md-conversion/references",
+    "agent-rules/rule-mapping.md",
+    "agent-rules/wiki-authoring.md",
+    "agent-rules/wiki-workflows.md",
+    "agent-skills/academy-txt-to-md-conversion",
+    "agent-skills",
+    "agent-rules",
+    "wiki/_meta/wiki-quality-audit-2026-07-02.md",
+    "wiki/_meta/wiki-log-archive-2026-07-01.md",
+    "wiki/_meta/wiki-log-archive-2026-07.md",
+    "wiki/_meta/wiki-log-archive-2026-06.md",
+    "raw/KoreaICT/11. Machine Learning/2026.07.10(금)",
     "wiki_status_tmp.txt",
-    "raw/Study/4. FrontEnd_BackEnd/2026.04.02(목)/2026.04.02(목).md",
-    "raw/References/ai-instructions/llm-wiki-command-cheatsheet.md",
-    "raw/References/ai-instructions/karpathy-agent-guidelines.md",
     "raw/References/markdown-grammar",
     "raw/References/ai-instructions",
     "raw/References",
     "raw/PersonalProjects",
-    "raw/PersonalStudy",
-    "raw/KoreaICT/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/C.yesbootstrap/SignupPage.html",
-    "raw/KoreaICT/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/C.yesbootstrap/ProductList.html",
-    "raw/KoreaICT/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/C.yesbootstrap/ProductInsertForm.html",
     "raw/KoreaICT/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/A.html&js&css/회원가입화면.png",
     "raw/KoreaICT/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/A.html&js&css/Koala.jpg",
     "raw/KoreaICT/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/A.html&js&css/fanta02.png",
