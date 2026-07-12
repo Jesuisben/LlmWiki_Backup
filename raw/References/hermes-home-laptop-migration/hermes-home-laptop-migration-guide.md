@@ -11,17 +11,17 @@
 
 Hermes는 설치 프로그램 자체만으로 성격·기억·기술이 복원되지 않는다. **설치된 Hermes 코드**와 별도로 Hermes Home(설정/상태 폴더)에 다음이 들어 있기 때문이다.
 
-| 복원 대상 | 핵심 파일/폴더 | 왜 필요한가 | 집 PC로 복사 권장 |
-|---|---|---|---|
-| 기본 모델·도구·승인·표시 설정 | `config.yaml` | 모델, 도구 활성화, safe/smart/danger 운영 방식과 관련된 설정 기반 | 예 |
-| 에이전트의 정체성/상시 규칙 | `SOUL.md` | 모든 작업에 적용되는 개인화된 정체성 규칙 | 예 |
-| 장기 메모리 | `memories/MEMORY.md`, `memories/USER.md` | 사용자의 선호, 환경, 작업에서 축적한 안정적인 기억 | **예 — 가장 중요** |
-| 스킬 | `skills/` | TXT→MD 변환, LLM Wiki, Hermes 설정, 개발 작업 등의 재사용 절차 | **예 — 가장 중요** |
-| API 키·환경 설정 | `.env` | provider API key, Windows Git Bash 경로 등 | 조건부 예: 비밀 파일로 별도 이관 |
-| OAuth 인증/credential pool | `auth.json` | OAuth 로그인 기반 provider 인증 | 조건부 예: 복사 후 재로그인 가능성 있음 |
-| 예약 작업 | `cron/` | 실제 생성된 cron job이 있을 때만 | 현재는 job 파일이 확인되지 않아 불필요 |
-| Desktop 프로젝트 목록 | `projects.db` | Hermes Desktop의 Project 이름/루트 경로 목록 | 조건부: 두 PC의 Vault 경로가 같을 때만 |
-| 대화 기록 전체 | `state.db` | 과거 세션, `session_search` 검색 대상 | 선택: 약 86 MB, 원하면 복사 |
+| 복원 대상                    | 핵심 파일/폴더                                 | 왜 필요한가                                          | 집 PC로 복사 권장                |
+| ------------------------ | ---------------------------------------- | ----------------------------------------------- | -------------------------- |
+| 기본 모델·도구·승인·표시 설정        | `config.yaml`                            | 모델, 도구 활성화, safe/smart/danger 운영 방식과 관련된 설정 기반  | 예                          |
+| 에이전트의 정체성/상시 규칙          | `SOUL.md`                                | 모든 작업에 적용되는 개인화된 정체성 규칙                         | 예                          |
+| 장기 메모리                   | `memories/MEMORY.md`, `memories/USER.md` | 사용자의 선호, 환경, 작업에서 축적한 안정적인 기억                   | **예 — 가장 중요**              |
+| 스킬                       | `skills/`                                | TXT→MD 변환, LLM Wiki, Hermes 설정, 개발 작업 등의 재사용 절차 | **예 — 가장 중요**              |
+| API 키·환경 설정              | `.env`                                   | provider API key, Windows Git Bash 경로 등         | 조건부 예: 비밀 파일로 별도 이관        |
+| OAuth 인증/credential pool | `auth.json`                              | OAuth 로그인 기반 provider 인증                        | 조건부 예: 복사 후 재로그인 가능성 있음    |
+| 예약 작업                    | `cron/`                                  | 실제 생성된 cron job이 있을 때만                          | 현재는 job 파일이 확인되지 않아 불필요    |
+| Desktop 프로젝트 목록          | `projects.db`                            | Hermes Desktop의 Project 이름/루트 경로 목록             | 조건부: 두 PC의 Vault 경로가 같을 때만 |
+| 대화 기록 전체                 | `state.db`                               | 과거 세션, `session_search` 검색 대상                   | 선택: 약 86 MB, 원하면 복사        |
 
 즉, **“집에서도 지금의 에이전트처럼 행동하게”** 만들려면 최소한 다음 5가지를 옮긴다.
 
