@@ -23,6 +23,21 @@ confidence: high
 4. 변환 후 원본 순서/공백, Markdown escape, fence 언어·경계, prose-in-fence, code-outside-fence를 포함한 semantic fence 전수 감사까지 고정점 검증한다.
 5. 모든 변환이 끝나기 전에는 wiki ingest를 시작하지 않는다.
 
+## 작업 단위 완료 기록 (append-only)
+
+각 날짜별 TXT→MD 또는 과목 총정리 MD를 완료할 때마다 이 문서에 즉시 한 항목을 추가한다. 완료 기록 없이 작업을 완료로 보고하지 않는다.
+
+| 완료일 | 작업 단위 | 외부 원본 TXT | 결과 MD | 새 생성·덮어쓰기 | 검증 결과 | 상태 / 다음 작업 |
+|---|---|---|---|---|---|---|
+| 기록 대기 | 변환을 실제로 마친 날짜별 파일 또는 총정리 1개 | 전체 경로 | 대응 `raw/KoreaICT/` 경로 | `완료` | 원본·공백·escape·semantic fence·scoped diff 결과 | `완료` 및 다음 미완료 단위 |
+
+### 기록 규칙
+
+1. 한 파일을 끝낼 때마다 같은 세션 안에서 이 표에 한 행을 추가한다. 여러 파일을 묶어 “완료”라고만 기록하지 않는다.
+2. `새 생성·덮어쓰기` 열에는 항상 `완료`를 적고, 기존 MD가 있었는지도 괄호로 남긴다. 예: `완료 (기존 MD 덮어씀)`.
+3. 검증 결과에는 최소한 원본 순서·공백, Markdown escape, semantic fence 전수 감사, scoped `git diff --check`의 실제 결과를 요약한다.
+4. 검증 실패·보류·민감정보 게이트 대기는 완료로 기록하지 않고, `상태 / 다음 작업`에 사유와 재개 조건을 적는다.
+
 ## 5~8과목
 
 ### 적용 범위
@@ -75,3 +90,15 @@ confidence: high
 - [[_meta/llm-wiki-operating-model|LLM Wiki 운영 모델]]
 - [[_meta/llm-wiki-command-reference|LLM Wiki 명령어 참고]]
 - [[_meta/wiki-quality-audit-2026-07-02|2026-07-02 LLM Wiki 품질 감사 리포트]]
+
+## [2026-07-12] 5. Linux 날짜별 TXT→MD 완료 기록
+
+| 2026-07-12 | 5. Linux 2026.04.24(금) | `C:/Users/rktng/Desktop/한국ICT인재개발원/교육/5. Linux/2026.04.24(금)/2026.04.24(금).txt` | `raw/KoreaICT/5. Linux/2026.04.24(금)/2026.04.24(금).md` | 완료 (기존 MD 덮어씀) | 원본 순서·공백 역대조 통과, Markdown escape·semantic fence·언어 교차 감사 0건, scoped `git diff --check` exit 0 | 완료 |
+| 2026-07-12 | 5. Linux 2026.04.27(월) | `C:/Users/rktng/Desktop/한국ICT인재개발원/교육/5. Linux/2026.04.27(월)/2026.04.27(월).txt` | `raw/KoreaICT/5. Linux/2026.04.27(월)/2026.04.27(월).md` | 완료 (기존 MD 덮어씀) | 원본 순서·공백 역대조 통과, Markdown escape·semantic fence·언어 교차 감사 0건, scoped `git diff --check` exit 0 | 완료 |
+| 2026-07-12 | 5. Linux 2026.04.28(화) | `C:/Users/rktng/Desktop/한국ICT인재개발원/교육/5. Linux/2026.04.28(화)/2026.04.28(화).txt` | `raw/KoreaICT/5. Linux/2026.04.28(화)/2026.04.28(화).md` | 완료 (기존 MD 덮어씀) | 원본 순서·공백 역대조 통과, Markdown escape·semantic fence·언어 교차 감사 0건, scoped `git diff --check` exit 0 | 완료 |
+| 2026-07-12 | 5. Linux 2026.04.29(수) | `C:/Users/rktng/Desktop/한국ICT인재개발원/교육/5. Linux/2026.04.29(수)/2026.04.29(수).txt` | `raw/KoreaICT/5. Linux/2026.04.29(수)/2026.04.29(수).md` | 완료 (기존 MD 덮어씀) | 원본 순서·공백 역대조 통과, Markdown escape·semantic fence·언어 교차 감사 0건, scoped `git diff --check` exit 0 | 완료 |
+| 2026-07-12 | 5. Linux 2026.04.30(목) | `C:/Users/rktng/Desktop/한국ICT인재개발원/교육/5. Linux/2026.04.30(목)/2026.04.30(목).txt` | `raw/KoreaICT/5. Linux/2026.04.30(목)/2026.04.30(목).md` | 완료 (기존 MD 덮어씀) | 원본 순서·공백 역대조 통과, Markdown escape·semantic fence·언어 교차 감사 0건, scoped `git diff --check` exit 0 | 완료 |
+| 2026-07-12 | 5. Linux 2026.05.01(금) | `C:/Users/rktng/Desktop/한국ICT인재개발원/교육/5. Linux/2026.05.01(금)/2026.05.01(금).txt` | `raw/KoreaICT/5. Linux/2026.05.01(금)/2026.05.01(금).md` | 완료 (기존 MD 덮어씀) | 원본 순서·공백 역대조 통과, Markdown escape·semantic fence·언어 교차 감사 0건, scoped `git diff --check` exit 0 | 완료 |
+| 2026-07-12 | 5. Linux 2026.05.04(월) | `C:/Users/rktng/Desktop/한국ICT인재개발원/교육/5. Linux/2026.05.04(월)/2026.05.04(월).txt` | `raw/KoreaICT/5. Linux/2026.05.04(월)/2026.05.04(월).md` | 완료 (기존 MD 덮어씀) | 원본 순서·공백 역대조 통과, Markdown escape·semantic fence·언어 교차 감사 0건, scoped `git diff --check` exit 0 | 완료 |
+| 2026-07-12 | 5. Linux 2026.05.06(수) | `C:/Users/rktng/Desktop/한국ICT인재개발원/교육/5. Linux/2026.05.06(수)/2026.05.06(수).txt` | `raw/KoreaICT/5. Linux/2026.05.06(수)/2026.05.06(수).md` | 완료 (기존 MD 덮어씀) | 원본 순서·공백 역대조 통과, Markdown escape·semantic fence·언어 교차 감사 0건, scoped `git diff --check` exit 0 | 완료 |
+| 2026-07-12 | 5. Linux Linux 총정리 | 날짜별 원본 기반 MD 10개: `raw/KoreaICT/5. Linux/2026.04.22(수) - 시작/2026.04.22(수) - 시작.md` ~ `raw/KoreaICT/5. Linux/2026.05.06(수)/2026.05.06(수).md` | `raw/KoreaICT/5. Linux/Linux 총정리/Linux 총정리.md` | 완료 (기존 MD 덮어씀) | 날짜별 MD 전체 흐름 대조, 시간대 heading 미삽입, Markdown escape, fence 균형·빈 본문·언어 semantic inventory 0건, scoped `git diff --check` exit 0 | 완료 |

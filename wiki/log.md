@@ -13,6 +13,21 @@
 
 ## 현재 로그
 
+## [2026-07-12] update | Linux 날짜별 MD 기반 총정리 재작성
+
+- 범위: `raw/KoreaICT/5. Linux`의 날짜별 MD 10개를 내용 근거로 삼아 `raw/KoreaICT/5. Linux/Linux 총정리/Linux 총정리.md`를 기존 간략 초안에서 전면 재작성함.
+- 형식: 사용자 작성 1~4과목 총정리의 일반 텍스트 제목, `#### \\#` 중분류, 원본 흐름·공백·Markdown escape·실제 코드/설정만 fence 처리 규칙을 적용함. 날짜별 노트의 시간대 대분류는 넣지 않음.
+- 내용: Ubuntu VM/SSH, 파일 시스템·vi, 사용자·그룹·권한, 다운로드·압축·JDK, Apache/Nginx·Maven·Spring Boot, Docker image/container/network/mount/Dockerfile/Compose, Git/GitHub branch·PR·conflict까지 학습 흐름으로 종합함.
+- 검증: 656줄, fence 46개(`bash`, `dockerfile`, `nginx`, `yaml`, `text`)의 균형·빈 본문·semantic inventory 오류 0건, 시간대 heading 0개, scoped `git diff --check` exit 0을 확인함.
+- 기록: `wiki/_meta/txt-to-md-conversion-work-plan.md`에 과목 총정리 완료 행을 추가함. 날짜별 Linux MD는 이번 작업에서 수정하지 않음.
+
+## [2026-07-12] update | Linux 날짜별 TXT→MD 재생성
+
+- 범위: 외부 `5. Linux` 원본의 `2026.04.24(금)`, `2026.04.27(월)`~`2026.05.01(금)`, `2026.05.04(월)`, `2026.05.06(수)` 날짜별 TXT 8개를 대응 `raw/KoreaICT/5. Linux/` MD로 재생성·덮어씀.
+- 제외: 같은 날짜의 6. AWS 시작 자료, `교육 자료/`, `wiki` ingest. 이전에 사용자 확인한 5과목 민감정보 검사는 재실행하지 않음.
+- 검증: 원본 순서·빈 줄 구조 역대조, Markdown escape, fence 균형/빈 본문/경계, prose-in-fence·code-outside-fence, 언어 교차, literal `*` 검사를 고정점으로 반복해 후보 0건을 확인함. 대상 MD는 최종 후보와 SHA-256 일치, scoped `git diff --check` exit 0.
+- 기록: 파일별 원본·결과 경로와 검증 결과는 `wiki/_meta/txt-to-md-conversion-work-plan.md`에 8행으로 남김.
+
 ## [2026-07-12] create | TXT→MD 남은 과목 변환 작업 인계
 
 - 생성: `wiki/_meta/txt-to-md-conversion-work-plan.md`에 5~8과목 날짜별 TXT→MD 변환과 날짜별 원본 기반 총정리 MD 작성, 9. 중간 프로젝트 공부의 민감정보 탐지 전용 범위, 10. Python의 2026.06.19~06.25 제한 범위를 기록함.
