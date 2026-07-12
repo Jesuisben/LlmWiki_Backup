@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "08c6bdc2c27ecb9f",
+        "id": "f765ccbc4fcac26b",
         "type": "tabs",
         "children": [
           {
-            "id": "da419b5086926e22",
+            "id": "c02f655a1138901b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "wiki/_meta/txt-to-md-conversion-work-plan.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "txt-to-md-conversion-work-plan"
+              "title": "새 탭"
             }
           }
         ]
@@ -198,11 +194,11 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "da419b5086926e22",
+  "active": "c02f655a1138901b",
   "lastOpenFiles": [
+    "wiki/_meta/txt-to-md-conversion-work-plan.md",
     "raw/KoreaICT/5. Linux/Linux 총정리/Linux 총정리.md",
     "raw/KoreaICT/5. Linux/2026.04.23(목)/2026.04.23(목).md",
-    "wiki/_meta/txt-to-md-conversion-work-plan.md",
     "raw/KoreaICT/5. Linux/2026.04.22(수) - 시작/2026.04.22(수) - 시작.md",
     "raw/References/hermes-home-laptop-migration/hermes-home-laptop-migration-guide.md",
     "wiki/_meta/hermes-home-laptop-hermes-config-migration.md",
