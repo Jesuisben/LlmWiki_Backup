@@ -239,17 +239,17 @@ E:\Hermes-Migration-2026-07-12\
 
 다음 표의 **현재 PC 원본**을 위 이관 폴더의 같은 상대 구조로 복사한다.
 
-| 우선순위 | 현재 PC 원본 | 이관 폴더 목적지 | 집 PC에서의 처리 |
-|---|---|---|---|
-| 필수 | `C:\Users\ICT02-006\AppData\Local\hermes\config.yaml` | `core\config.yaml` | `...\hermes\config.yaml`에 덮어쓰기 |
-| 필수 | `C:\Users\ICT02-006\AppData\Local\hermes\SOUL.md` | `core\SOUL.md` | `...\hermes\SOUL.md`에 덮어쓰기 |
-| 필수 | `...\hermes\memories\MEMORY.md` | `core\memories\MEMORY.md` | 덮어쓰기 |
-| 필수 | `...\hermes\memories\USER.md` | `core\memories\USER.md` | 덮어쓰기 |
-| 필수 | `...\hermes\skills\` 전체 | `core\skills\` 전체 | 병합/덮어쓰기 |
-| 조건부 | `...\hermes\.env` | `secrets\.env` | 별도 보안 이관 후 덮어쓰기 |
-| 조건부 | `...\hermes\auth.json` | `secrets\auth.json` | 별도 보안 이관 후 덮어쓰기 |
-| 선택 | `...\hermes\state.db` | `optional\state.db` | 과거 대화도 보존할 때 덮어쓰기 |
-| 선택 | `...\hermes\projects.db` | `optional\projects.db` | Vault 절대경로가 같을 때만 덮어쓰기 |
+| 우선순위 | 현재 PC 원본                                              | 이관 폴더 목적지                 | 집 PC에서의 처리                     |
+| ---- | ----------------------------------------------------- | ------------------------- | ------------------------------ |
+| 필수   | `C:\Users\ICT02-006\AppData\Local\hermes\config.yaml` | `core\config.yaml`        | `...\hermes\config.yaml`에 덮어쓰기 |
+| 필수   | `C:\Users\ICT02-006\AppData\Local\hermes\SOUL.md`     | `core\SOUL.md`            | `...\hermes\SOUL.md`에 덮어쓰기     |
+| 필수   | `...\hermes\memories\MEMORY.md`                       | `core\memories\MEMORY.md` | 덮어쓰기                           |
+| 필수   | `...\hermes\memories\USER.md`                         | `core\memories\USER.md`   | 덮어쓰기                           |
+| 필수   | `...\hermes\skills\` 전체                               | `core\skills\` 전체         | 병합/덮어쓰기                        |
+| 조건부  | `...\hermes\.env`                                     | `secrets\.env`            | 별도 보안 이관 후 덮어쓰기                |
+| 조건부  | `...\hermes\auth.json`                                | `secrets\auth.json`       | 별도 보안 이관 후 덮어쓰기                |
+| 선택   | `...\hermes\state.db`                                 | `optional\state.db`       | 과거 대화도 보존할 때 덮어쓰기              |
+| 선택   | `...\hermes\projects.db`                              | `optional\projects.db`    | Vault 절대경로가 같을 때만 덮어쓰기         |
 
 ### 5.4 `skills/`는 왜 전체를 복사하는가
 
