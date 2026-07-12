@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "adc7dd40472c8c48",
+        "id": "78aadf0be4cfe680",
         "type": "tabs",
         "children": [
           {
-            "id": "65e8da231ac90bd5",
+            "id": "b1397879442e114f",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -194,7 +194,7 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "65e8da231ac90bd5",
+  "active": "26ea1fd6799a6e07",
   "lastOpenFiles": [
     "raw/References/hermes-home-laptop-migration/hermes-home-laptop-migration-guide.md",
     "wiki/_meta/txt-to-md-conversion-work-plan.md",
