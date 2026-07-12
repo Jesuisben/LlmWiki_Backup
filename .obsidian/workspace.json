@@ -8,35 +8,16 @@
         "type": "tabs",
         "children": [
           {
-            "id": "959373330bfed076",
+            "id": "65e8da231ac90bd5",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "AGENTS.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "AGENTS"
-            }
-          },
-          {
-            "id": "5785d3422477b644",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "raw/References/hermes-home-laptop-migration/hermes-home-laptop-migration-guide.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "hermes-home-laptop-migration-guide"
+              "title": "새 탭"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -213,13 +194,16 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "5785d3422477b644",
+  "active": "65e8da231ac90bd5",
   "lastOpenFiles": [
-    "raw/KoreaICT/4. FrontEnd_BackEnd/FrontEnd_BackEnd 총정리/FrontEnd_BackEnd 총정리.md",
     "raw/References/hermes-home-laptop-migration/hermes-home-laptop-migration-guide.md",
+    "wiki/_meta/txt-to-md-conversion-work-plan.md",
+    "wiki/_meta/hermes-home-laptop-hermes-copy-verify.md",
+    "wiki/log.md",
+    "wiki/index.md",
+    "raw/KoreaICT/4. FrontEnd_BackEnd/FrontEnd_BackEnd 총정리/FrontEnd_BackEnd 총정리.md",
     "raw/References/hermes-home-laptop-migration",
     "raw/KoreaICT/10. Python/2026.06.30(화)/2026.06.30(화).md",
-    "wiki/_meta/txt-to-md-conversion-work-plan.md",
     "raw/KoreaICT/10. Python/2026.06.25(목)/2026.06.25(목).md",
     "raw/KoreaICT/10. Python/2026.06.26(금)/2026.06.26(금).md",
     "raw/KoreaICT/10. Python/2026.06.29(월)/2026.06.29(월).md",
@@ -235,14 +219,11 @@
     "raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.15(수)/2026.04.15(수).md",
     "raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.14(화)/2026.04.14(화).md",
     "wiki/_meta/hermes-default-profile-mode-system.md",
-    "wiki/log.md",
-    "wiki/index.md",
     "raw/KoreaICT/11. Machine Learning/2026.07.10(금)/2026.07.10(금).md",
     "agent-skills/academy-txt-to-md-conversion/SKILL.md",
     "agent-skills/academy-txt-to-md-conversion/references/academy-source-map.template.md",
     "agent-skills/academy-txt-to-md-conversion/references",
     "agent-rules/rule-mapping.md",
-    "agent-rules/wiki-authoring.md",
     "agent-skills/academy-txt-to-md-conversion",
     "agent-skills",
     "agent-rules",
