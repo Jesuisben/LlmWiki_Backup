@@ -13,6 +13,13 @@
 
 ## 현재 로그
 
+## [2026-07-12] create | TXT→MD 남은 과목 변환 작업 인계
+
+- 생성: `wiki/_meta/txt-to-md-conversion-work-plan.md`에 5~8과목 날짜별 TXT→MD 변환과 날짜별 원본 기반 총정리 MD 작성, 9. 중간 프로젝트 공부의 민감정보 탐지 전용 범위, 10. Python의 2026.06.19~06.25 제한 범위를 기록함.
+- 총정리 기준: 기존 사용자 작성 총정리 MD는 표현·형식의 기준으로만 사용하고, 새 총정리의 내용은 각 과목 날짜별 원본 TXT 전체에서 종합한다.
+- 제외: Python 2026.06.25 이후 파일과 10·11과목 총정리는 사용자 작성 범위로 명시함.
+- 원칙: 과목별 실제 외부 원본 TXT 민감정보 검사 → 후보 보고·사용자 명시 재개 → 변환 → semantic fence 포함 고정점 검증 순서를 유지하며, raw/와 외부 TXT는 수정하지 않음.
+
 ## [2026-07-11] update | FrontEnd_BackEnd 총정리 fence 언어 라벨 정정
 
 - 원인: FrontEnd_BackEnd 과목의 React/TypeScript 문맥을 fence별 실제 문법보다 우선해, Java/Spring·HTML 블록까지 `typescript`로 일반화했고 일부 React import 예제는 반대로 `java`로 라벨링함.

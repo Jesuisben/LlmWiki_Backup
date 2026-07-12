@@ -2,7 +2,7 @@
 
 > 이 파일은 `wiki/` 전체의 목차이자 길잡이다.  
 > 질문에 답하거나 새 자료를 ingest할 때 이 파일을 먼저 읽는다.  
-> Last updated: 2026-07-09 | Total pages: 241
+> Last updated: 2026-07-12 | Total pages: 242
 
 ## 사용 방법
 
@@ -264,6 +264,7 @@
 ## Meta
 
 <!-- 위키 운영 문서, lint 리포트, 토픽맵 등 -->
+- [[_meta/txt-to-md-conversion-work-plan|TXT→MD 남은 과목 변환 작업 인계]] — 5~8과목 날짜별 변환·총정리 작성, 9과목 민감정보 탐지, 10과목 Python 제한 범위를 새 세션에서도 이어가기 위한 작업 인계
 - [[_meta/wiki-log-archive-2026-07-02-part-2|Wiki Log Archive 2026-07-02 Part 2]] — 2026년 7월 2일 작업 기록 후반부 아카이브
 - [[_meta/wiki-log-archive-2026-07-02-part-1|Wiki Log Archive 2026-07-02 Part 1]] — 2026년 7월 2일 작업 기록 전반부 아카이브
 - [[_meta/hermes-home-laptop-hermes-copy-verify|집 노트북 Hermes 설정 복사와 검증]] — Hermes AppData 복사, config 경로 수정, memory/skills 검증 절차
