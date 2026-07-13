@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "f765ccbc4fcac26b",
+        "id": "78aadf0be4cfe680",
         "type": "tabs",
         "children": [
           {
-            "id": "c02f655a1138901b",
+            "id": "b1397879442e114f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "wiki/log.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "log"
             }
           }
         ]
@@ -74,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 306.5
   },
   "right": {
     "id": "dae217cf4dff2dfe",
@@ -179,6 +183,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "code-files:Create Code File": false,
       "switcher:빠른 전환기 열기": false,
       "graph:그래프 뷰 열기": false,
       "canvas:새 캔버스 만들기": false,
@@ -187,23 +192,18 @@
       "command-palette:명령어 팔레트 열기": false,
       "bases:새 베이스 생성하기": false,
       "obsidian-git:Open Git source control": false,
-      "code-files:Create Code File": false,
       "pdf-plus:PDF++: Toggle auto-copy": false,
       "pdf-plus:PDF++: Toggle auto-focus": false,
       "pdf-plus:PDF++: Toggle auto-paste": false,
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "c02f655a1138901b",
+  "active": "b1397879442e114f",
   "lastOpenFiles": [
     "wiki/_meta/txt-to-md-conversion-work-plan.md",
     "raw/KoreaICT/5. Linux/Linux 총정리/Linux 총정리.md",
-    "raw/KoreaICT/5. Linux/2026.04.23(목)/2026.04.23(목).md",
-    "raw/KoreaICT/5. Linux/2026.04.22(수) - 시작/2026.04.22(수) - 시작.md",
     "raw/References/hermes-home-laptop-migration/hermes-home-laptop-migration-guide.md",
-    "wiki/_meta/hermes-home-laptop-hermes-config-migration.md",
     "wiki/_meta/hermes-home-laptop-hermes-copy-verify.md",
-    "wiki/_meta/hermes-home-laptop-hermes-backup-security.md",
     "wiki/log.md",
     "wiki/index.md",
     "raw/KoreaICT/4. FrontEnd_BackEnd/FrontEnd_BackEnd 총정리/FrontEnd_BackEnd 총정리.md",
@@ -214,6 +214,8 @@
     "raw/KoreaICT/10. Python/2026.06.29(월)/2026.06.29(월).md",
     "raw/KoreaICT/9. 중간 프로젝트 공부/패스워드리스 적용/중간 프로젝트 패스워드리스 적용 가이드.md",
     "AGENTS.md",
+    "raw/KoreaICT/5. Linux/2026.04.23(목)/2026.04.23(목).md",
+    "raw/KoreaICT/5. Linux/2026.04.22(수) - 시작/2026.04.22(수) - 시작.md",
     "raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md",
     "raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.21(화)/2026.04.21(화).md",
     "raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.20(월)/2026.04.20(월).md",
@@ -223,6 +225,8 @@
     "raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.14(화)/2026.04.14(화).md",
     "wiki/_meta/hermes-default-profile-mode-system.md",
     "raw/KoreaICT/11. Machine Learning/2026.07.10(금)/2026.07.10(금).md",
+    "agent-skills/academy-txt-to-md-conversion/SKILL.md",
+    "agent-skills/academy-txt-to-md-conversion/references/academy-source-map.template.md",
     "agent-skills/academy-txt-to-md-conversion/references",
     "agent-skills/academy-txt-to-md-conversion",
     "agent-skills",
