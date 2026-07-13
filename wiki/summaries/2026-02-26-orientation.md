@@ -1,11 +1,11 @@
 ---
 title: 2026-02-26 오리엔테이션과 개발 환경 준비
 created: 2026-07-02
-updated: 2026-07-03
+updated: 2026-07-13
 type: summary
 tags: [java, curriculum, study-log]
 sources:
-  - raw/KoreaICT/1. Java/2026.02.26(목)/2026.02.26(목).md
+  - raw/KoreaICT/1. Java/2026.02.26(목) - 시작/2026.02.26(목) - 시작.md
   - raw/KoreaICT/1. Java/교육 자료/IntelliJ 교안.pdf
   - raw/KoreaICT/1. Java/교육 자료/Java 교안(이론_20260226).pdf
 status: stable
@@ -54,6 +54,6 @@ confidence: high
 
 ## 출처
 
-- `raw/KoreaICT/1. Java/2026.02.26(목)/2026.02.26(목).md`
+- `raw/KoreaICT/1. Java/2026.02.26(목) - 시작/2026.02.26(목) - 시작.md`
 - `raw/KoreaICT/1. Java/교육 자료/IntelliJ 교안.pdf`
 - `raw/KoreaICT/1. Java/교육 자료/Java 교안(이론_20260226).pdf`

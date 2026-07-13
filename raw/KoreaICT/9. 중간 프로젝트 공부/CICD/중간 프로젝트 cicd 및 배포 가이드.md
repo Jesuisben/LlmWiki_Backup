@@ -97,7 +97,7 @@ public class CorsConfig {
                 "http://localhost:5173",
                 "http://127.0.0.1:5173"
                 // 나중에 도메인 주소 추가해야함
-                // ex) "https://jesuisben.store" / "https://*.jesuisben.store"
+                // ex) "https://{MASKED}" / "https://*.{MASKED}"
         ));
 
         // 허용 HTTP 메소드
@@ -574,7 +574,7 @@ EC2 - 탄력적 IP
 프라이빗 IP: 자동으로 뜨는 거 선택
 -> 연결
 
-탄력적 IP 주소 : 54.116.102.181
+탄력적 IP 주소 : {MASKED}
 
 연결되면 이 고정 IP가 서버 주소가 됨
 나중에 5단계(GitHub Secrets의 EC2_HOST)랑 브라우저 접속에 사용하는 IP주소임
@@ -584,7 +584,7 @@ EC2 - 탄력적 IP
 #### \[4단계] EC2에 Docker 설치
 ##### 1. MobaXterm 실행 + EC2 접속
 1) Session - SSH
-Remote host : 54.116.102.181 (본인 탄력적 IP)
+Remote host : {MASKED} (본인 탄력적 IP)
 Specify username 체크 : ubuntu
 
 ###### - Advanced SSH settings 탭 클릭
@@ -1750,7 +1750,7 @@ S3 입력 -> S3 서비스 -> 버킷 만들기
 
 AWS 리전 (코드 및 GitHub Secrets에 사용됨) : 아시아 태평양(서울) ap-northeast-2 (EC2랑 맞춤)
 버킷 네임스페이스 : 글로벌 네임스페이스
-버킷 이름 (코드 및 GitHub Secrets에 사용됨) : project-study-images-hyeonmin
+버킷 이름 (코드 및 GitHub Secrets에 사용됨) : {MASKED}
 객체 소유권 : ACL 비활성화됨
 
 이 버킷의 퍼블릭 액세스 차단 설정 - 모든 퍼블릭 엑세스 차단 체크 해제 (나중에 읽기만 허가 해줄예정)
@@ -1775,7 +1775,7 @@ JSON 문 복붙하기 -> 변경 사항 저장
       "Effect": "Allow",
       "Principal": "*",
       "Action": "s3:GetObject",
-      "Resource": "arn:aws:s3:::project-study-images-hyeonmin/*"
+      "Resource": "arn:aws:s3:::{MASKED}/*"
     }
   ]
 }
@@ -1819,7 +1819,7 @@ IAM 입력 → IAM 서비스 이동
         "s3:DeleteObject",
         "s3:GetObject"
       ],
-      "Resource": "arn:aws:s3:::project-study-images-hyeonmin/*"
+      "Resource": "arn:aws:s3:::{MASKED}/*"
     }
   ]
 }
@@ -2008,7 +2008,7 @@ My가비아 - (구입한 도메인) 관리 - 네임서버에 설정으로 나중
 
 ##### 2. 호스팅 영역 생성
 AWS - Route 53 - Route 53 대시보드 (DNS 관리 - 호스팅 영역 생성)
-도메인 이름 : 내가 가비아에서 생성한 도메인의 이름 (jesuisben.store)
+도메인 이름 : 내가 가비아에서 생성한 도메인의 이름 ({MASKED})
 -> 호스팅 영역 생성
 
 
@@ -2029,8 +2029,8 @@ AWS - Route 53 - Route 53 대시보드 (DNS 관리 - 호스팅 영역 생성)
 ##### 5. 인증서 생성
 (AWS -  AWS Certificate Manager)
 1) 인증서 요청 (다음)
-2) 도메인 이름 : jesuisben.store
-3) 이 인증서에 다른 이름 추가 (도메인) : \*.jesuisben.store (www같은거 도메인 앞에 붙어도 인증서로 보호하겠다는 의미)
+2) 도메인 이름 : {MASKED}
+3) 이 인증서에 다른 이름 추가 (도메인) : \*.{MASKED} (www같은거 도메인 앞에 붙어도 인증서로 보호하겠다는 의미)
 -> 요청
 
 
@@ -2142,18 +2142,18 @@ ap-northeast-2c 체크 → 서브넷 TEST-PUBLIC-SBN-2C 선택
 
 보안 리스너 설정
 기본 SSL/TLS 서버 인증서 : 인증서 소스 : ACM에서
-인증서(ACM에서) : jesuisben.store
+인증서(ACM에서) : {MASKED}
 
 -> 로드 밸런서 생성
 로드 밸런서 상태가 "활성"이 될때까지 기다리기
 
 
 ##### 13. A 레코드 2개 연결
-AWS 콘솔 → Route 53 → 호스팅 영역 → jesuisben.store 클릭
+AWS 콘솔 → Route 53 → 호스팅 영역 → {MASKED} 클릭
 레코드 생성(Create record) 클릭
 
-1) 레코드 1 - 기본 (jesuisben.store)
-레코드 이름 : 비워두기(jesuisben.store 자체를 의미)
+1) 레코드 1 - 기본 ({MASKED})
+레코드 이름 : 비워두기({MASKED} 자체를 의미)
 레코드 유형 : A - IPv4 주소 및 일부 AWS 리소스로 트래픽 라우팅
 별칭 : 토글 체크해서 켜기
 트래픽 라우팅 대상 : Application/Classic Load Balancer에 대한 별칭
@@ -2161,8 +2161,8 @@ AWS 콘솔 → Route 53 → 호스팅 영역 → jesuisben.store 클릭
 dualstack.TEST-ALB-146923761.ap-northeast-2.elb.amazonaws.com
 
 -> 다른 레코드 추가 (레코드 2 생성)
-2) 레코드 2 - www (www.jesuisben.store)
-레코드 이름 : www 입력 (www.jesuisben.store가 됨)
+2) 레코드 2 - www (www.{MASKED})
+레코드 이름 : www 입력 (www.{MASKED}가 됨)
 레코드 유형 : A
 별칭 : 토클 체크해서 켜기
 트래픽 라우팅 대상 : Application/Classic Load Balancer에 대한 별칭
@@ -2187,8 +2187,8 @@ configuration.setAllowedOrigins(List.of(
 configuration.setAllowedOriginPatterns(List.of(
 		"http://localhost:5173",
 		"http://127.0.0.1:5173",
-		"https://jesuisben.store",
-		"https://*.jesuisben.store"
+		"https://{MASKED}",
+		"https://*.{MASKED}"
 ));
 ```
 
@@ -2198,9 +2198,9 @@ configuration.setAllowedOriginPatterns(List.of(
 
 #### \[15단계] 웹페이지 확인하기
 접속해보기
-https://jesuisben.store
-https://www.jesuisben.store
-http://jesuisben.store (https로 자동으로 넘어가는지)
+https://{MASKED}
+https://www.{MASKED}
+http://{MASKED} (https로 자동으로 넘어가는지)
 
 
 

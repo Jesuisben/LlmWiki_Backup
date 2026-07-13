@@ -105,8 +105,8 @@ confidence: high
 
 - `raw/KoreaICT/6. AWS/2026.05.06(수) - 시작/` ~ `raw/KoreaICT/6. AWS/2026.05.08(금)/` — 2026-07-03 course-material-aware ingest 후, 같은 날 사용자가 지정한 날짜별 MD 3개가 실제 수업 메모를 포함함을 재확인해 기존 AWS wiki를 날짜 MD + 교육자료 PDF/실습 관리 대장 기준으로 보강·정정 완료. AWS 총정리류는 제외함.
 - `raw/KoreaICT/7. Ci&CD/2026.05.11(월) - 시작/` ~ `raw/KoreaICT/7. Ci&CD/2026.05.13(수)/` — 2026-07-03 날짜별 MD 3개가 실제 수업 메모를 포함함을 확인하고, CI/CD 자동화·GitHub Actions·Spring Boot Docker/EC2 배포·Route 53/ALB/HTTPS 복습·Terraform·S3 파일 업로드를 wiki에 반영 완료.
-- `raw/KoreaICT/8. Passwordless/2026.05.14(목)/` ~ `raw/KoreaICT/8. Passwordless/2026.05.21(목)/` — 2026-07-03 날짜별 ingest 완료. X1280 인증 흐름, QR/앱 승인, Spring Boot 연동, REST API/Postman, AAM/APE·FilingBox 보안 제품군 흐름을 wiki에 반영함.
-- `raw/KoreaICT/10. Python/2026.06.19(금)/` ~ `raw/KoreaICT/10. Python/2026.06.30(화)/` — 2026-07-03 날짜별 ingest 완료. Python 설치·기초 문법·컬렉션·함수·모듈·표준 라이브러리·객체지향·예외 처리·파일/정규표현식·XML/JSON·Jupyter/Pandas 입문 흐름을 wiki에 반영함.
+- `raw/KoreaICT/8. Passwordless/2026.05.14(목) - 시작/` ~ `raw/KoreaICT/8. Passwordless/2026.05.21(목)/` — 2026-07-03 날짜별 ingest 완료. X1280 인증 흐름, QR/앱 승인, Spring Boot 연동, REST API/Postman, AAM/APE·FilingBox 보안 제품군 흐름을 wiki에 반영함.
+- `raw/KoreaICT/10. Python/2026.06.19(금) - 시작/` ~ `raw/KoreaICT/10. Python/2026.06.30(화)/` — 2026-07-03 날짜별 ingest 완료. Python 설치·기초 문법·컬렉션·함수·모듈·표준 라이브러리·객체지향·예외 처리·파일/정규표현식·XML/JSON·Jupyter/Pandas 입문 흐름을 wiki에 반영함.
 - `raw/KoreaICT/10. Python/2026.07.01(수)/` ~ `raw/KoreaICT/10. Python/2026.07.03(금)/` — Pandas DataFrame 조회·입출력, 결합·재구조화, `groupby` 집계·시각화 흐름을 기존 Python/Pandas/Jupyter 페이지에 반영 완료.
 
 ## 앞으로의 고품질 ingest 기준
@@ -177,7 +177,7 @@ confidence: high
 - summary 3개는 Cloud/VPC/EC2, VPC·EC2·Nginx·Spring Boot·RDS, Route 53/Load Balancer/HTTPS 흐름을 날짜별 학습 맥락으로 복원했다.
 - concept 4개는 AWS 네트워킹, EC2 배포, RDS 연결, Route 53/ALB/HTTPS 배포 구조를 정리했다.
 - entity 4개(`AWS`, `Amazon EC2`, `Amazon RDS`, `Amazon Route 53`)와 comparison 2개(`EC2 vs RDS`, `CLB vs ALB`)는 이후 CI/CD·Passwordless 배포 학습과 연결할 기반으로 유지·보강했다.
-- 다음 잔여 후보는 `raw/KoreaICT/10. Python/2026.06.19(금)/` ~ `raw/KoreaICT/10. Python/2026.06.30(화)/`이다.
+- 다음 잔여 후보는 `raw/KoreaICT/10. Python/2026.06.19(금) - 시작/` ~ `raw/KoreaICT/10. Python/2026.06.30(화)/`이다.
 
 ## 추가 정리: Ci&CD 날짜별 ingest
 

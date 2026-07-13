@@ -13,12 +13,175 @@
 
 ## 현재 로그
 
+## [2026-07-13] update | 10. Python Python 총정리 MD 작성
+
+- 범위: 사용자의 명시 지시에 따라 Python 날짜별 MD 14개(`2026.06.19(금) - 시작`~`2026.07.08(수)`)를 내용 근거로 사용해 `raw/KoreaICT/10. Python/Python 총정리/Python 총정리.md`를 새로 작성함. 기존 총정리의 표현·형식만 참고했으며, wiki ingest와 lint는 시작하지 않음.
+- 내용: 기본 문법·컬렉션·함수·객체지향에서 예외 처리·파일 입출력·정규 표현식·XML/JSON으로 이어지고, Pandas Series/DataFrame·CSV·시각화·결합·그룹화·범주화, 공공데이터 API·Selenium 크롤링·Folium 지도·한국어 텍스트 마이닝까지 날짜별 수업 흐름으로 재구성함.
+- 검증: 흐름 화살표 4개를 모두 prose `-\>`로 확인하고, fence 18개(`python` 18)의 균형·첫/끝 빈줄·언어·본문을 전수 감사함. prose-in-fence·code-outside-fence·분리 code unit 0건이며, scoped `git diff --check` exit 0과 새 untracked MD의 `git diff --no-index --check` 무출력을 기록 반영 전에 확인함.
+- 계획 정정: `wiki/_meta/txt-to-md-conversion-work-plan.md`의 기존 Python 총정리 사용자 작성 제외 규칙을 이번 사용자 명시 지시에 따른 완료 사실로 갱신함.
+
+## [2026-07-13] update | 8. Passwordless Passwordless 총정리 MD 작성
+
+- 범위: 완료된 Passwordless 날짜별 원본/결과 MD 6개(`2026.05.14(목) - 시작`~`2026.05.21(목)`)만 내용 근거로 사용해 `raw/KoreaICT/8. Passwordless/Passwordless 총정리/Passwordless 총정리.md`를 새로 작성함. 기존 Linux·AWS·Ci&CD·FrontEnd_BackEnd 총정리는 제목·`#### \#` 라벨·공백·fence 표현 형식만 참고했으며, wiki ingest와 lint는 시작하지 않음.
+- 내용: 위협 모델(피싱·랜섬웨어·RCE·DDoS)과 제로트러스트에서 출발해 X1280 Passwordless·인증/인가·IDP·SSO·상호인증, Members 서비스 등록, Docker 기반 Auth/User Connection/Push Request 서버, Spring·MariaDB·Tomcat 연동, AAM/APE, FilingBox WORM, Postman REST API까지 날짜별 수업 순서로 재구성함.
+- 검증: 흐름 화살표 5개를 모두 prose `-\>`로 확인하고, fence 8개(`shell` 5·`properties` 1·`sql` 1·`json` 1)의 균형·첫/끝 빈줄·언어·본문을 전수 감사함. prose-in-fence·code-outside-fence·분리 code unit 0건이며, scoped `git diff --check` exit 0과 새 untracked MD의 `git diff --no-index --check` 무출력을 기록 반영 전에 확인함.
+- 기록: `wiki/_meta/txt-to-md-conversion-work-plan.md` 완료 표에 같은 작업 단위 행을 추가함.
+
+## [2026-07-13] update | 7. Ci&CD Ci&CD 총정리 MD 작성
+
+- 범위: 완료된 Ci&CD 날짜별 MD 3개(`2026.05.11(월) - 시작`~`2026.05.13(수)`)만 내용 근거로 사용해 `raw/KoreaICT/7. Ci&CD/Ci&CD 총정리/Ci&CD 총정리.md`를 새로 작성함. 기존 Linux·AWS·FrontEnd_BackEnd 총정리는 제목·`#### \#` 라벨·공백·fence 표현 형식만 참고했으며, wiki ingest와 lint는 시작하지 않음.
+- 내용: GitHub Actions의 Maven CI, GitHub Secrets와 Docker Hub 인증, EC2 Docker Container 배포, Route 53·ACM·ALB HTTPS/분산 처리, Terraform IaC, S3 이미지 업로드와 RDS MySQL 연결을 날짜별 수업 순서로 재구성함.
+- 검증: Markdown escape, fence 20개(`java` 1·`properties` 2·`xml` 2·`yaml` 2·`shell` 7·`text` 3·`hcl` 1·`json` 1·`sql` 1) semantic inventory, prose-in-fence·code-outside-fence·분리 code unit 0건, scoped `git diff --check` exit 0을 기록 반영 전에 확인함.
+- 기록: `wiki/_meta/txt-to-md-conversion-work-plan.md`의 완료 표에 같은 작업 단위 행을 추가함.
+
+## [2026-07-13] update | 6. AWS AWS 총정리 MD 작성
+
+- 범위: 완료된 AWS 날짜별 원본/대응 MD 3개(`2026.05.06(수) - 시작`~`2026.05.08(금)`)만 내용 근거로 사용해 `raw/KoreaICT/6. AWS/AWS 총정리/AWS 총정리.md`를 재작성함. 기존 총정리는 제목·`#### \#` 라벨·공백·fence 표현 형식만 참고했으며, wiki ingest와 lint는 시작하지 않음.
+- 내용: AWS 서비스/용어, CIDR·VPC·Subnet·IGW·Route Table·Security Group, EC2 2대·탄력적 IP·SSH, ping·nginx·Spring Boot 배포, RDS MySQL·`application.properties`·SQL, 비용을 고려한 자원 정리 흐름을 날짜별 수업 순서로 재구성함.
+- source 흐름 정정: 날짜별 AWS 자료에서 근거를 확인하지 못한 Route 53·ACM·Load Balancer 구간은 기존 총정리에서 복사하지 않고 제거함.
+- 검증: Markdown escape, fence 14개(`shell` 10·`text` 2·`properties` 1·`sql` 1) semantic inventory, prose-in-fence·code-outside-fence·분리 code unit·실제 credential 값 0건, scoped `git diff --check` exit 0을 기록 파일 반영 전 확인함.
+- 기록: `wiki/_meta/txt-to-md-conversion-work-plan.md`의 완료 표에 같은 작업 단위 행을 추가함.
+
+## [2026-07-13] update | 10. Python 2026.06.25(목) TXT→MD 변환
+
+- 범위: 외부 `10. Python/2026.06.25(목)/2026.06.25(목).txt` 1개만 대응 `raw/KoreaICT/10. Python/2026.06.25(목)/2026.06.25(목).md`로 변환·덮어씀. 9. 중간 프로젝트 공부와 다음 Python 파일은 진행하지 않음.
+- 민감정보 게이트: 실제 외부 원본 TXT 837행을 credential 문맥·짧은 PW 값·로그인 역방향 표기·직접 secret 대입까지 검사해 실제 값 후보 0건을 확인한 뒤 변환함.
+- 검증: 원본 순서·공백 역대조 0건 불일치(날짜 줄·직후 선행 공백 제거와 줄끝 공백 11건 정규화 예외), Markdown escape, fence 24개(`python` 20·`text` 4) semantic inventory, prose-in-fence·code-outside-fence·분리 code unit 0건, scoped `git diff --check`은 기록 파일까지 포함해 최종 확인함.
+- 기록: `wiki/_meta/txt-to-md-conversion-work-plan.md`의 파일별 완료 표에 같은 완료 행을 추가함.
+
+## [2026-07-13] update | 10. Python 2026.06.24(수) TXT→MD 변환
+
+- 범위: 외부 `10. Python/2026.06.24(수)/2026.06.24(수).txt` 1개만 대응 `raw/KoreaICT/10. Python/2026.06.24(수)/2026.06.24(수).md`로 변환·덮어씀. 9. 중간 프로젝트 공부와 다음 Python 파일은 진행하지 않음.
+- 민감정보 게이트: 실제 외부 원본 TXT 663행을 credential 문맥·직접 secret/token 대입까지 검사해 실제 값 후보 0건을 확인한 뒤 변환함.
+- 검증: 원본 순서·공백 역대조 0건 불일치(날짜 줄·직후 선행 공백 제거와 빈 줄의 trailing whitespace 2건 정규화 예외), Markdown escape, fence 33개(`python` 26·`text` 7) semantic inventory, prose-in-fence·code-outside-fence·분리 code unit 0건, scoped `git diff --check` exit 0.
+- 기록: `wiki/_meta/txt-to-md-conversion-work-plan.md`의 파일별 완료 표에 같은 완료 행을 추가함.
+
+## [2026-07-13] update | 10. Python 2026.06.23(화) TXT→MD 변환
+
+- 범위: 외부 `10. Python/2026.06.23(화)/2026.06.23(화).txt` 1개만 대응 `raw/KoreaICT/10. Python/2026.06.23(화)/2026.06.23(화).md`로 변환·덮어씀. 9. 중간 프로젝트 공부와 다음 Python 파일은 진행하지 않음.
+- 민감정보 게이트: 실제 외부 원본 TXT 868행을 credential 문맥·로그인 역방향 표기까지 검사해 실제 값 후보 0건을 확인한 뒤 변환함.
+- 검증: 원본 순서·공백 역대조 0건 불일치(날짜 줄·직후 선행 공백 제거와 terminal EOF 빈 줄 정규화 예외), Markdown escape, fence 36개(`python` 27·`text` 9) semantic inventory, prose-in-fence·code-outside-fence·분리 code unit 0건, scoped `git diff --check` exit 0.
+- 기록: `wiki/_meta/txt-to-md-conversion-work-plan.md`의 파일별 완료 표에 같은 완료 행을 추가함.
+
+## [2026-07-13] update | 10. Python 2026.06.22(월) TXT→MD 변환
+
+- 범위: 외부 `10. Python/2026.06.22(월)/2026.06.22(월).txt` 1개만 대응 `raw/KoreaICT/10. Python/2026.06.22(월)/2026.06.22(월).md`로 변환·덮어씀. 9. 중간 프로젝트 공부와 다음 Python 파일은 진행하지 않음.
+- 민감정보 게이트: 실제 외부 원본 TXT 906행을 credential 문맥·로그인 역방향 표기까지 검사해 실제 값 후보 0건을 확인한 뒤 변환함.
+- 검증: 원본 순서·공백 역대조 0건 불일치(날짜 줄·직후 선행 공백 및 후행 공백 정규화 예외), Markdown escape, fence 30개(`python` 22·`text` 8) semantic inventory, prose-in-fence·code-outside-fence·분리 code unit 0건, scoped `git diff --check` exit 0.
+- 기록: `wiki/_meta/txt-to-md-conversion-work-plan.md`의 파일별 완료 표에 같은 완료 행을 추가함.
+
+## [2026-07-13] update | Python 빈 N) 단계 라벨 Markdown 렌더링 정정
+
+- 정정: `10. Python/2026.06.19(금) - 시작`의 빈 단계 라벨 `1)`, `2)` 끝에 ASCII 공백 1개를 추가함. Obsidian Markdown에서 ordered list로 렌더링하기 위한 의도적 공백임.
+- 검증: 대상 68·74행이 각각 정확히 `1) `·`2) `임을 확인함. scoped `git diff --check`의 trailing-whitespace 2건은 이 두 렌더링 예외와 정확히 일치하며, 다른 후보는 없음.
+- 재발 방지: 빈 `N)` 단계 라벨은 이후 TXT→MD 변환에서도 끝 공백 1개를 반드시 유지함.
+
+## [2026-07-13] update | Python 출력 화살표와 text fence 경계 정정
+
+- 정정: `10. Python/2026.06.19(금) - 시작` 결과 MD에서 코드 실행 뒤의 `->`는 출력 자체가 아니라 설명 연결 표기이므로 fence 밖 prose로 유지하도록 확인·보정함.
+- 적용: 오류 예제의 `->`는 기존에도 fence 밖에 있었음을 확인했고, 형변환 예제의 `-> 나이 : 30`을 `text` fence 밖 prose로 이동함. Traceback·실제 출력 묶음만 `text` fence에 남김.
+- 재발 방지: 이후 TXT→MD에서 코드/출력 관계 화살표 `->`는 fence 밖 prose로 두고, 실제 출력만 `text` fence로 분리함.
+
+## [2026-07-13] update | 10. Python 2026.06.19(금) - 시작 TXT→MD 변환
+
+- 범위: 외부 `10. Python/2026.06.19(금) - 시작/2026.06.19(금) - 시작.txt` 1개만 대응 `raw/KoreaICT/10. Python/2026.06.19(금) - 시작/2026.06.19(금) - 시작.md`로 변환·덮어씀. 다음 파일은 진행하지 않음.
+- 민감정보 게이트: 실제 외부 원본 TXT 806행을 검사해 credential 문맥 뒤 실제 값 후보 0건을 확인한 뒤 변환함.
+- 검증: 원본 순서·공백 역대조 0건 불일치(날짜 줄·직후 선행 공백 및 EOF 빈 줄 정규화 예외), Markdown escape, fence 29개(`python` 26·`text` 3) semantic inventory, prose-in-fence·code-outside-fence·분리 code unit 0건, scoped `git diff --check` exit 0.
+- 기록: `wiki/_meta/txt-to-md-conversion-work-plan.md`의 파일별 완료 표에 같은 완료 행을 추가함.
+
+## [2026-07-13] update | TXT→MD 다음 작업 단위 정정
+
+- 정정: Passwordless 2026.05.21(목) 변환 완료 뒤 다음 작업을 `8. Passwordless 총정리 작성`으로 잘못 안내한 것을 바로잡음.
+- 현재 순서: 9. 중간 프로젝트 공부는 변환 대상이 아니므로 건너뛰고, 10. Python의 제한 범위(`2026.06.19(금) - 시작`~`2026.06.25(목)`) 날짜별 TXT→MD 변환을 먼저 진행함.
+- 다음 단위: 외부 `10. Python/2026.06.19(금) - 시작/2026.06.19(금) - 시작.txt` 1개만 민감정보 검사 후 대응 `raw/KoreaICT/10. Python/2026.06.19(금) - 시작/2026.06.19(금) - 시작.md` 변환.
+
+## [2026-07-13] update | 8. Passwordless 2026.05.21(목) TXT→MD 변환
+
+- 범위: 외부 `8. Passwordless/2026.05.21(목)/2026.05.21(목).txt` 1개만 대응 `raw/KoreaICT/8. Passwordless/2026.05.21(목)/2026.05.21(목).md`로 변환·덮어씀. 다음 파일은 진행하지 않음.
+- 민감정보 게이트: 사용자가 `수정했어`로 명시 재개한 뒤 실제 원본 TXT를 재검사해 `{MASKED}` 외 credential·서버 인증값 후보 0건을 확인함. 외부 TXT는 수정하지 않음.
+- 검증: 원본 순서·공백 역대조 0건 불일치(날짜 줄·직후 선행 공백, EOF 빈 줄 및 후행 탭 정규화 예외), Markdown escape, fence 12개(`shell` 11·`json` 1) semantic inventory, prose-in-fence·code-outside-fence·분리 code unit 0건, scoped `git diff --check` exit 0.
+- 기록: `wiki/_meta/txt-to-md-conversion-work-plan.md`의 파일별 완료 표에 같은 완료 행을 추가함.
+
+## [2026-07-13] update | 8. Passwordless 2026.05.20(수) TXT→MD 변환
+
+- 범위: 외부 `8. Passwordless/2026.05.20(수)/2026.05.20(수).txt` 1개만 대응 `raw/KoreaICT/8. Passwordless/2026.05.20(수)/2026.05.20(수).md`로 변환·덮어씀. 다음 파일은 진행하지 않음.
+- 민감정보 게이트: 사용자가 `수정했어`로 명시 재개한 뒤 실제 원본 TXT를 재검사해 credential·키·토큰·라이선스 값 후보 0건을 확인함. 외부 TXT는 수정하지 않음.
+- 검증: 원본 순서·공백 역대조 0건 불일치(날짜 줄·직후 선행 공백 및 EOF 빈 줄 정규화 예외), Markdown escape, shell fence 1개 semantic inventory, prose-in-fence·code-outside-fence·분리 code unit 0건, scoped `git diff --check` exit 0.
+- 기록: `wiki/_meta/txt-to-md-conversion-work-plan.md`의 파일별 완료 표에 같은 완료 행을 추가함.
+
+## [2026-07-13] update | 8. Passwordless 2026.05.15(금) 정정 및 2026.05.18(월) 재검증
+
+- 정정: `raw/KoreaICT/8. Passwordless/2026.05.15(금)/2026.05.15(금).md`에서 fence 밖 설명용 leading `N.` 12개를 `N\.`로 escape하고, 원본 교시 heading의 누락된 `N.` 8개를 복원함.
+- 재검증: 5월 15일은 원본·결과 비공백 308행, leading `N.` 33개, 교시 heading 8개를 각각 전수 매핑해 0건 불일치를 확인함. 5월 18일은 비공백 311행, leading `N.` 40개, 교시 heading 8개 전수 매핑이 모두 일치했으며 본문 수정은 없음.
+- fence 감사: 5월 15일 16개, 5월 18일 39개 fence가 모두 균형·비어 있지 않음을 확인함. 감사기의 7개 후보는 원본 보존 빈줄 5개와 placeholder 설정값을 포함한 올바른 `properties` fence 2개로 원본 문맥에서 정상 예외로 종결함.
+- 검증: 두 파일의 Markdown escape·원본 비공백 순서 역대조 및 scoped `git diff --check` exit 0.
+
+## [2026-07-13] update | 최초 수업 자료 ` - 시작` 경로 동기화
+
+- 사용자가 원본 TXT·변환 MD의 본문은 변경하지 않고, 9. 중간 프로젝트 공부를 제외한 과목별 최초 자료 폴더·파일명에 ` - 시작`을 추가한 구조 변경을 반영함.
+- 갱신: Java 첫 수업을 참조하는 wiki 페이지 6개, Passwordless 변환 작업 계획 1개, Passwordless·Python 최초 수업 폴더를 적은 품질 감사 리포트 1개.
+- 제외: `raw/`는 수정하지 않았고, append-only 원칙에 따라 기존 `wiki/log.md` 및 로그 아카이브의 과거 경로는 변경하지 않음.
+- 검증: 현재 참조 대상의 이전 raw 경로를 전체 재검색하고, 갱신한 새 raw 경로의 실제 존재 여부를 확인함.
+
+## [2026-07-13] update | 8. Passwordless 2026.05.19(화) TXT→MD 변환
+
+- 범위: 외부 `8. Passwordless/2026.05.19(화)/2026.05.19(화).txt` 1개만 대응 `raw/KoreaICT/8. Passwordless/2026.05.19(화)/2026.05.19(화).md`로 변환·덮어씀. 다음 파일은 진행하지 않음.
+- 민감정보 게이트: 실제 원본 TXT의 credential·license 후보를 줄 번호 순으로 보고했고, 사용자가 수업용 예시값을 원문 그대로 두도록 `유지하고 이어서`를 명시함. 외부 TXT는 수정하지 않음.
+- 검증: 원본 순서·공백 역대조 0건 불일치(날짜 줄·직후 선행 공백 제거와 EOF 빈 줄 정규화 예외), Markdown escape, shell fence 14개 semantic inventory, prose-in-fence·code-outside-fence·분리 code unit 0건, scoped `git diff --check` exit 0.
+- 기록: `wiki/_meta/txt-to-md-conversion-work-plan.md`의 파일별 완료 표에 같은 완료 행을 추가함.
+
+## [2026-07-13] update | 8. Passwordless 2026.05.18(월) TXT→MD 변환
+
+- 범위: 외부 `8. Passwordless/2026.05.18(월)/2026.05.18(월).txt` 1개만 대응 `raw/KoreaICT/8. Passwordless/2026.05.18(월)/2026.05.18(월).md`로 변환·덮어씀. 다음 파일은 진행하지 않음.
+- 민감정보 게이트: 실제 원본 TXT의 후보를 줄 번호 순서대로 보고했고, 사용자가 `수정했어` 후에도 남은 수업용 credential 예시를 `유지하고 이어서`로 명시해 원본 값을 그대로 보존함.
+- 검증: 원본 순서·공백 역대조 0건 불일치(날짜 줄·직후 선행 공백 및 EOF 공백 정규화 예외), Markdown escape, fence 39개(`shell` 35·`sql` 2·`properties` 2) semantic inventory, prose-in-fence·code-outside-fence·분리 code unit 0건, scoped `git diff --check` exit 0.
+- 기록: `wiki/_meta/txt-to-md-conversion-work-plan.md`의 파일별 완료 표에 같은 완료 행을 추가함.
+
+## [2026-07-13] update | 8. Passwordless 2026.05.15(금) TXT→MD 변환
+
+- 범위: 외부 `8. Passwordless/2026.05.15(금)/2026.05.15(금).txt` 1개만 대응 `raw/KoreaICT/8. Passwordless/2026.05.15(금)/2026.05.15(금).md`로 변환·덮어씀. 다음 파일은 진행하지 않음.
+- 민감정보 게이트: 실제 외부 원본 TXT를 재검사해 후보를 줄 번호 순서대로 보고했고, 사용자가 `유지하고 이어서`를 명시해 실제 계정·비밀번호 값은 원본 그대로 보존함.
+- 검증: 원본 순서·공백 역대조 0건 불일치(날짜 줄·직후 선행 공백과 EOF 공백 정규화 예외), Markdown escape, shell fence 16개 semantic inventory, prose-in-fence·code-outside-fence·분리 code unit 0건, scoped `git diff --check` exit 0.
+- 기록: `wiki/_meta/txt-to-md-conversion-work-plan.md`의 파일별 완료 표에 같은 완료 행을 추가함.
+
+## [2026-07-13] update | 8. Passwordless 2026.05.14(목) TXT→MD 변환
+
+- 범위: 외부 `8. Passwordless/2026.05.14(목)/2026.05.14(목).txt` 1개만 대응 `raw/KoreaICT/8. Passwordless/2026.05.14(목)/2026.05.14(목).md`로 변환·덮어씀. 다음 파일은 진행하지 않음.
+- 민감정보 게이트: 실제 외부 원본 TXT만 검사했고 credential 문맥 뒤 실제 값 후보는 0건이어서 변환을 진행함.
+- 검증: 원본 순서·공백 역대조 0건 불일치(날짜 줄·직후 선행 공백과 EOF 공백 정규화 예외), Markdown escape, fence 0개 semantic inventory, prose-in-fence·code-outside-fence·분리 code unit 0건, scoped `git diff --check` exit 0.
+- 기록: `wiki/_meta/txt-to-md-conversion-work-plan.md`의 파일별 완료 표에 같은 완료 행을 추가함.
+
+## [2026-07-13] update | TXT→MD 다음 세션 인계에 smart 모드 명시
+
+- 사용자가 이후 날짜별 TXT→MD 작업을 smart 모드로 진행하겠다고 지정함.
+- 변경: 다음 세션 복붙 프롬프트의 첫 줄을 `smart 모드로 진행한다.`로 고정하고, 해당 모드 명시 누락도 완료 보고 게이트 미충족으로 처리함.
+
+## [2026-07-13] update | 날짜별 TXT→MD 완료 보고의 다음 세션 인계 게이트 강화
+
+- 원인 정정: `다음 파일 자동 실행 금지`를 다음 세션용 복붙 프롬프트 생략으로 잘못 처리한 사례를 재발 방지 대상으로 기록함.
+- 변경: `wiki/_meta/txt-to-md-conversion-work-plan.md`에 날짜별 파일 완료 보고의 필수 항목으로 다음 작업 단위 1개의 복붙 프롬프트를 추가함. 해당 프롬프트가 없으면 변환·검증이 통과해도 사용자 보고는 미완료로 본다.
+- 적용: 직전 7. Ci&CD 2026.05.13(수) 완료 뒤의 다음 실제 단위는 `8. Passwordless 2026.05.14(목)`으로 확인했으며, 이번 보고 마지막에 해당 프롬프트를 제공함.
+
+## [2026-07-13] update | 7. Ci&CD 2026.05.13(수) TXT→MD 변환
+
+- 범위: 외부 `7. Ci&CD/2026.05.13(수)/2026.05.13(수).txt` 1개를 대응 `raw/KoreaICT/7. Ci&CD/2026.05.13(수)/2026.05.13(수).md`로 변환·덮어씀. 다음 파일은 진행하지 않음.
+- 민감정보 게이트: AWS 액세스 키·비밀 키, RDS 비밀번호·endpoint 등 기존 후보가 사용자의 수정 후 모두 `{MASKED}`임을 같은 원본 TXT 재검사로 확인한 뒤 진행함.
+- 검증: 원본 순서·공백 역대조 0건 불일치(날짜 첫 줄 제거·끝 공백 정규화만 예외), Markdown escape, fence 12개(`text`, `hcl`, `shell`, `properties`, `xml`, `json`, `sql`) semantic inventory, prose-in-fence·code-outside-fence·분리 code unit 0건, scoped `git diff --check` exit 0.
+- 기록: `wiki/_meta/txt-to-md-conversion-work-plan.md`의 파일별 완료 표에 같은 완료 행을 추가함.
+
+## [2026-07-13] update | TXT→MD·고도화 ingest·lint 단계 계획 재정렬
+
+- 확정 순서: 남은 날짜별 MD를 세션당 파일 1개씩 변환·고정점 검증 → 모든 날짜별 MD 완료 후 과목별 총정리 MD 작성 → 모든 raw MD 완성 후 과목별 고도화 ingest → 과목별 lint → 전체 통합 lint.
+- 보류 규칙: 날짜별 변환 또는 총정리 작성이 남아 있는 동안 ingest/lint를 시작하지 않으며, 일부 과목만 선행 ingest하지 않음.
+- 세션 인계: 사용자가 `변환작업 시작`이라고 하면 현재 완료 기록 기준의 바로 다음 날짜별 파일만 안내·처리하고, 완료 뒤 다음 세션용 복붙 프롬프트를 제공함. 다음 파일로 자동 연속 진행하지 않음.
+- 반영 문서: `wiki/_meta/txt-to-md-conversion-work-plan.md`.
+
 ## [2026-07-12] update | Linux 날짜별 MD 기반 총정리 재작성
 
 - 범위: `raw/KoreaICT/5. Linux`의 날짜별 MD 10개를 내용 근거로 삼아 `raw/KoreaICT/5. Linux/Linux 총정리/Linux 총정리.md`를 기존 간략 초안에서 전면 재작성함.
 - 형식: 사용자 작성 1~4과목 총정리의 일반 텍스트 제목, `#### \\#` 중분류, 원본 흐름·공백·Markdown escape·실제 코드/설정만 fence 처리 규칙을 적용함. 날짜별 노트의 시간대 대분류는 넣지 않음.
 - 내용: Ubuntu VM/SSH, 파일 시스템·vi, 사용자·그룹·권한, 다운로드·압축·JDK, Apache/Nginx·Maven·Spring Boot, Docker image/container/network/mount/Dockerfile/Compose, Git/GitHub branch·PR·conflict까지 학습 흐름으로 종합함.
-- 검증: 656줄, fence 46개(`bash`, `dockerfile`, `nginx`, `yaml`, `text`)의 균형·빈 본문·semantic inventory 오류 0건, 시간대 heading 0개, scoped `git diff --check` exit 0을 확인함.
+- 검증: 656줄, fence 46개(`shell`, `dockerfile`, `nginx`, `yaml`, `text`)의 균형·빈 본문·semantic inventory 오류 0건, 시간대 heading 0개, scoped `git diff --check` exit 0을 확인함.
 - 기록: `wiki/_meta/txt-to-md-conversion-work-plan.md`에 과목 총정리 완료 행을 추가함. 날짜별 Linux MD는 이번 작업에서 수정하지 않음.
 
 ## [2026-07-12] update | Linux 날짜별 TXT→MD 재생성

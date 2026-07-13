@@ -1,11 +1,11 @@
 ---
 title: Java
 created: 2026-07-02
-updated: 2026-07-04
+updated: 2026-07-13
 type: entity
 tags: [java, backend, curriculum]
 sources:
-  - raw/KoreaICT/1. Java/2026.02.26(목)/2026.02.26(목).md
+  - raw/KoreaICT/1. Java/2026.02.26(목) - 시작/2026.02.26(목) - 시작.md
   - raw/KoreaICT/1. Java/2026.02.27(금)/2026.02.27(금).md
   - raw/KoreaICT/1. Java/2026.03.03(화)/2026.03.03(화).md
   - raw/KoreaICT/1. Java/2026.03.04(수)/2026.03.04(수).md

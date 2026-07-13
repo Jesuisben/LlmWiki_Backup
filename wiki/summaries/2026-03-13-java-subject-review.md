@@ -2,11 +2,11 @@
 title: Java 총정리
 type: summary
 created: 2026-07-03
-updated: 2026-07-04
+updated: 2026-07-13
 tags: [java, curriculum, study-log]
 sources:
   - raw/KoreaICT/1. Java/Java 총정리/Java 총정리.md
-  - raw/KoreaICT/1. Java/2026.02.26(목)/2026.02.26(목).md
+  - raw/KoreaICT/1. Java/2026.02.26(목) - 시작/2026.02.26(목) - 시작.md
   - raw/KoreaICT/1. Java/2026.02.27(금)/2026.02.27(금).md
   - raw/KoreaICT/1. Java/2026.03.03(화)/2026.03.03(화).md
   - raw/KoreaICT/1. Java/2026.03.04(수)/2026.03.04(수).md
@@ -143,7 +143,7 @@ Java에서 배운 “객체와 로직”은 Oracle에서 배울 “데이터 저
 ## 출처
 
 - `raw/KoreaICT/1. Java/Java 총정리/Java 총정리.md`
-- `raw/KoreaICT/1. Java/2026.02.26(목)/2026.02.26(목).md`
+- `raw/KoreaICT/1. Java/2026.02.26(목) - 시작/2026.02.26(목) - 시작.md`
 - `raw/KoreaICT/1. Java/2026.02.27(금)/2026.02.27(금).md`
 - `raw/KoreaICT/1. Java/2026.03.03(화)/2026.03.03(화).md`
 - `raw/KoreaICT/1. Java/2026.03.04(수)/2026.03.04(수).md`
