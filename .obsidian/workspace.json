@@ -236,7 +236,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 293.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -255,7 +255,7 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "c6ea5dc3c35ebf9d",
+  "active": "26ea1fd6799a6e07",
   "lastOpenFiles": [
     "raw/KoreaICT/10. Python/Python 총정리/Python 총정리.md",
     "raw/KoreaICT/8. Passwordless/Passwordless 총정리/Passwordless 총정리.md",
