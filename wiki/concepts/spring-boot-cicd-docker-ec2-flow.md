@@ -1,11 +1,12 @@
 ---
 title: Spring Boot CI/CD Docker-EC2 배포 흐름
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-13
 type: concept
 tags: [spring-boot, ci-cd, aws, backend]
 sources:
   - raw/KoreaICT/7. Ci&CD/2026.05.11(월) - 시작/2026.05.11(월) - 시작.md
+  - raw/KoreaICT/7. Ci&CD/Ci&CD 총정리/Ci&CD 총정리.md
   - raw/KoreaICT/7. Ci&CD/교육 자료/CI&CD(SpringBoot_실습).pdf
 status: growing
 confidence: high
@@ -51,15 +52,15 @@ AWS EC2 docker pull
 
 ### 2. CI: GitHub Actions에서 Maven build
 
-GitHub Actions runner가 JDK 21을 준비하고 `mvn clean package -DskipTests`를 실행한다. 여기서 실패하면 Docker image를 만들기 전에 문제를 발견할 수 있다.
+기본 `ci.yml`에서 GitHub Actions runner가 JDK 21을 준비하고 `mvn clean package -DskipTests`를 실행한다. 여기서 실패하면 Docker image를 만들기 전에 문제를 발견할 수 있다.
 
 ### 3. Docker image build/push
 
-workflow가 Docker Hub에 login한 뒤 `SpringDockerFile`을 사용해 image를 만들고 Docker Hub repository에 push한다. Docker Hub token은 [[concepts/github-actions-secrets-deploy|GitHub Secrets]]로 분리한다.
+수업에서는 `ci.yml`에 Docker Hub login, `SpringDockerFile` 기반 image build, Docker Hub push 단계를 추가했다. Docker Hub token은 [[concepts/github-actions-secrets-deploy|GitHub Secrets]]로 분리한다.
 
 ### 4. CD: EC2에서 컨테이너 실행
 
-EC2에는 Docker가 설치되어 있어야 한다. workflow는 EC2에 SSH로 접속해 새 image를 pull하고, 기존 container를 갱신한다. 실습에서는 `0.0.0.0:80->9000/tcp` 형태로 외부 80번 요청을 Spring Boot 9000번 컨테이너 포트로 연결했다.
+EC2에는 Docker가 설치되어 있어야 한다. 별도 `cd.yml`이 EC2 배포를 연결하며, 날짜 원본에 workflow 전문은 없으므로 위키에서는 새 image pull과 기존 container 갱신이라는 역할만 기록한다. 실습에서는 `0.0.0.0:80->9000/tcp` 형태로 외부 80번 요청을 Spring Boot 9000번 컨테이너 포트로 연결했다.
 
 ## 검증 포인트
 

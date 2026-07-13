@@ -1,14 +1,14 @@
 ---
 title: 중간 프로젝트 CI/CD·배포·Passwordless 가이드
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-14
 type: summary
 tags: [project, ci-cd, aws, auth, spring-boot, react]
 sources:
-  - D:/Study_LLM_Wiki/raw/KoreaICT/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md
-  - D:/Study_LLM_Wiki/raw/KoreaICT/9. 중간 프로젝트 공부/패스워드리스 적용/중간 프로젝트 패스워드리스 적용 가이드.md
-  - D:/Study_LLM_Wiki/raw/KoreaICT/9. 중간 프로젝트 공부/CICD/Github_Secrets 예시.md
-  - D:/Study_LLM_Wiki/raw/KoreaICT/9. 중간 프로젝트 공부/CICD/JWT(RS256)생성 방법.md
+  - raw/KoreaICT/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md
+  - raw/KoreaICT/9. 중간 프로젝트 공부/패스워드리스 적용/중간 프로젝트 패스워드리스 적용 가이드.md
+  - raw/KoreaICT/9. 중간 프로젝트 공부/CICD/Github_Secrets 예시.md
+  - raw/KoreaICT/9. 중간 프로젝트 공부/CICD/JWT(RS256)생성 방법.md
 status: growing
 confidence: medium
 ---
@@ -22,9 +22,9 @@ confidence: medium
 ## 배운 내용
 
 - Spring Boot 백엔드와 React 프론트엔드 프로젝트를 배포 가능한 산출물로 준비한다.
-- GitHub Secrets에 배포 서버 접속 정보, DB 접속 정보, JWT/RS256 관련 값을 넣고 워크플로에서 참조한다.
-- CI/CD 파이프라인은 코드 변경 → GitHub Actions 실행 → 서버 반영 → 서비스 확인의 흐름으로 이해한다.
-- Passwordless 적용 가이드는 기존 로그인 흐름에 외부 인증 서버/앱 승인/QR 등록 흐름을 연결하는 방식으로 읽는다. 2026-05-14~05-21 Passwordless 날짜별 수업은 이 가이드의 배경 지식과 실습 기반이다.
+- GitHub Secrets에는 Docker Hub 인증, 배포 대상 image, EC2 접속, DB 접속, JWT 공개/개인키, S3 접근 항목처럼 역할별 설정을 넣고 workflow에서 참조한다. ^[raw/KoreaICT/9. 중간 프로젝트 공부/CICD/Github_Secrets 예시.md]
+- CI/CD 파이프라인은 코드 변경 → GitHub Actions 실행 → CI의 Docker Hub image push → CD의 EC2 컨테이너 갱신 → 서비스 확인의 흐름으로 이해한다. ^[raw/KoreaICT/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md]
+- Passwordless 적용 가이드는 기존 로그인 흐름에 외부 인증 서버, QR 등록, 앱 승인 대기/결과 흐름을 연결하는 방식으로 읽는다. 2026-05-14~05-21 Passwordless 날짜별 수업은 이 가이드의 배경 지식과 실습 기반이다. ^[raw/KoreaICT/9. 중간 프로젝트 공부/패스워드리스 적용/중간 프로젝트 패스워드리스 적용 가이드.md]
 - 실습 원본에는 IP, endpoint, password, secret 예시가 섞일 수 있으므로 위키에서는 구조만 남기고 값은 일반화한다.
 
 ## 핵심 개념
@@ -47,7 +47,7 @@ confidence: medium
 ## 헷갈린 점 / 질문
 
 - Secret 이름과 실제 값은 다르다. 위키에는 이름과 역할만 남기고 실제 값은 남기지 않는다.
-- JWT `HS256`과 `RS256`은 키 구조가 다르다. RS256은 개인키로 서명하고 공개키로 검증하는 흐름이다.
+- JWT `HS256`과 `RS256`은 키 구조가 다르다. RS256은 개인키로 서명하고 공개키로 검증하는 흐름이다. ^[raw/KoreaICT/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md]
 - Passwordless는 “비밀번호가 없는 로그인 UI”만이 아니라 외부 인증 서버와 앱 승인 상태까지 포함하는 인증 흐름이다.
 
 ## 관련 페이지

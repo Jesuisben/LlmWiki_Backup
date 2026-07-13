@@ -1,7 +1,7 @@
 ---
 title: Linux 사용자·그룹·권한
 created: 2026-07-02
-updated: 2026-07-09
+updated: 2026-07-13
 type: concept
 tags: [linux, backend]
 sources:
@@ -65,11 +65,9 @@ sudo chown -R broadcast:broadcast /home/broadcast/downloads/fromwindows/
 - [[concepts/docker-install-permission-setup|Docker 설치와 권한 설정]]
 - [[entities/linux|Linux]]
 
-## 5과목 현재 raw MD 기준 재검증 메모
+## 최신 원본 대조
 
-- 2026-07-09에 `raw/KoreaICT/5. Linux` 날짜별 MD 10개와 `Linux 총정리.md`를 기준으로 다시 대조했다.
-- 이 페이지는 단순 명령어 사전이 아니라 VM/SSH/CLI → 파일·권한 → Spring Boot jar 실행 → Docker network/volume/Dockerfile/Compose → GitHub branch/PR/conflict 흐름 속에서 읽어야 한다.
-- 운영 관점에서는 코드보다 IP/포트/방화벽/권한/컨테이너 네트워크·볼륨이 문제 원인일 수 있음을 함께 기억한다.
+2026-04-24의 `chmod 644/600`, `chown`, `chgrp`과 `Permission denied` 실습을 기준으로 보강했다. 권한 문제는 코드보다 owner/group/others 또는 디렉터리 쓰기 권한이 원인일 수 있으며, `chmod`·`chown`·`chgrp`의 책임을 분리한다.
 
 ## 출처
 

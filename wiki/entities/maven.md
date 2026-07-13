@@ -1,7 +1,7 @@
 ---
 title: Maven
 created: 2026-07-02
-updated: 2026-07-09
+updated: 2026-07-13
 type: entity
 tags: [spring-boot, backend, linux]
 sources:

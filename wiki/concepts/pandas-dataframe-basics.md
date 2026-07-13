@@ -1,7 +1,7 @@
 ---
 title: Pandas DataFrame 기본
 created: 2026-07-01
-updated: 2026-07-03
+updated: 2026-07-13
 type: concept
 tags: [python]
 sources:
@@ -9,6 +9,8 @@ sources:
   - raw/KoreaICT/10. Python/2026.07.01(수)/2026.07.01(수).md
   - raw/KoreaICT/10. Python/2026.07.02(목)/2026.07.02(목).md
   - raw/KoreaICT/10. Python/2026.07.03(금)/2026.07.03(금).md
+  - raw/KoreaICT/10. Python/2026.07.06(월)/2026.07.06(월).md
+  - raw/KoreaICT/10. Python/2026.07.07(화)/2026.07.07(화).md
 status: growing
 confidence: high
 ---
@@ -32,6 +34,8 @@ Pandas `DataFrame`은 행(row)과 열(column)을 가진 2차원 표 데이터를
 - `groupby`, `agg`, `transform`, `pd.cut`으로 범주별 집계와 파생 컬럼 만들기
 
 Oracle에서 배운 테이블·행·열 감각과 연결하면 이해가 쉽다. 다만 SQL은 DB 서버에 질의하는 언어이고, Pandas DataFrame은 Python 메모리 안에서 표 데이터를 직접 조작하는 객체라는 차이가 있다.
+
+7월 6~7일에는 공공 자전거·커피 매장 데이터를 실제 DataFrame으로 만들었다. 이때 `rename`, 문자열 치환, `dropna`, `set_index`로 결합 기준을 정리한 뒤 `merge`·`concat`·`pivot_table`·`groupby`로 분석용 표를 만들었다.
 
 ## 핵심 설명
 

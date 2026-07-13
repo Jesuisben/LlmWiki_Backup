@@ -1,7 +1,7 @@
 ---
 title: 2026-04-28 Maven, Spring Boot 서버 실행, Docker 입문
 created: 2026-07-06
-updated: 2026-07-09
+updated: 2026-07-13
 type: summary
 tags: [linux, docker, spring-boot, backend, curriculum, study-log]
 sources:

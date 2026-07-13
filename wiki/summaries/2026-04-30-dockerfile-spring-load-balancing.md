@@ -1,7 +1,7 @@
 ---
 title: 2026-04-30 Dockerfile, Spring Boot 컨테이너, 로드 밸런싱
 created: 2026-07-06
-updated: 2026-07-09
+updated: 2026-07-13
 type: summary
 tags: [linux, docker, spring-boot, backend, curriculum, study-log]
 sources:

@@ -13,6 +13,61 @@
 
 ## 현재 로그
 
+## [2026-07-14] update | 9. 중간 프로젝트 공부 provenance 보강
+
+- 범위: 중간 프로젝트 CI/CD·Passwordless 관련 wiki 4개 페이지의 `sources`에서 절대 경로 10개를 현재 Vault 상대 경로 `raw/KoreaICT/9. 중간 프로젝트 공부/...`로 정정했다. 새 페이지를 만들지 않아 Total pages는 258로 유지했다.
+- P1 보강: CI/CD·Passwordless 가이드 summary에 GitHub Secrets 역할, CI Docker Hub push → CD EC2 container 갱신, 외부 인증 서버·QR·앱 승인, RS256 개인키 서명·공개키 검증 근거 marker 4개를 추가했다. CI/CD 배포 흐름 concept에는 백엔드 환경 변수·Dockerfile 준비, Secret 항목 역할, CI/CD 책임 분리, React `/api`·Nginx proxy·S3·도메인 확장 근거 marker 4개를 추가했다.
+- 안전 경계: 실제 IP, endpoint, password, token, private key, Secret 값은 추가하지 않았고 `raw/`는 수정하지 않았다.
+
+## [2026-07-14] lint | 전체 Vault 통합 정합성 점검
+
+- 범위: `wiki/` Markdown 전체를 재집계하고, 과거 감사 리포트의 전체 수치 표현, frontmatter·source 경로·태그·위키링크·index 등록·본문 링크 기준 고립 후보와 `raw/KoreaICT` 과목별 frontmatter 출처 누적을 함께 점검했다. `raw/`는 수정하지 않았다.
+- 현재 수치: Markdown 260개(`index.md`, `log.md` 포함), 지식 페이지 258개이며 `wiki/index.md`의 `Total pages: 258`과 일치한다. 감사 리포트의 현재값으로 남아 있던 247/245만 260/258로 갱신했고, 235·243/241 등 과거 작업 기록 수치는 역사 문맥으로 보존했다.
+- 결과: frontmatter 누락·빈 `sources`·존재하지 않는 source 경로·허용 밖 태그·깨진/모호 링크·index 누락은 모두 0개다. 과목별 frontmatter 출처는 Java·Oracle·UI&UX·FrontEnd_BackEnd·Linux·AWS·Ci&CD·Passwordless·중간 프로젝트·Python 10개 범위에서 실제 경로로 확인했다.
+- 보정: `txt-to-md-conversion-work-plan`의 운영 source를 명시하고, Linux Apache/Nginx concept·Linux 총정리·변환 작업 인계의 본문 링크를 보강해 고립 후보 3개를 해소했다.
+
+## [2026-07-13] ingest | 10. Python 최신 MD 기준 고도화
+
+- 범위: `raw/KoreaICT/10. Python` 날짜별 MD 14개와 `Python 총정리.md`를 실제 내용으로 대조해 Python/Pandas/Jupyter 관련 wiki를 고도화했다. `raw/`는 수정하지 않았다.
+- 정정: 기존 wiki의 학습 경계가 2026-07-03 Pandas 집계·시각화에 멈춰 있던 상태를 07-06 공공데이터 API·자전거 분석, 07-07 Selenium/지오코딩/지도, 07-08 한국어 텍스트 마이닝까지 확장했다.
+- 신규: 날짜별 summary 3개와 Python 총정리 허브, 외부 데이터 수집·한국어 텍스트 마이닝 concept, Selenium/Folium/KoNLPy entity, BeautifulSoup vs Selenium comparison을 추가했다.
+- 범위 lint: frontmatter·sources·링크·index 등록·민감값 재노출·페이지 수·scoped diff를 확인한다.
+
+## [2026-07-13] ingest | 8. Passwordless 최신 MD 기준 고도화
+
+- 범위: `raw/KoreaICT/8. Passwordless` 날짜별 MD 6개와 `Passwordless 총정리.md`를 실제 내용으로 대조해 Passwordless 관련 summary, concept, entity, comparison을 고도화했다. `raw/`는 수정하지 않았다.
+- 정정: X1280 핵심 인증 흐름(소개 → Members/`setting.ap` → Docker Auth/User Connection/Push Request → Spring·MariaDB·Tomcat 샘플 → Postman REST API)과 05-19 AAM/APE 기업형 인증 관리, 05-20 FilingBox/NAS/WORM 저장소 보호를 분리했다.
+- 출처 경계: React polling·callback, JWT/세션, Member 상태, DTO/Service/Controller/SecurityConfig의 전체 프로젝트 설계는 8과목 날짜 수업 직접 구현이 아니라 9과목 중간 프로젝트 Passwordless 적용 가이드의 확장 범위로 표기했다.
+- 신규: `concepts/nas-worm-storage-protection`, `entities/aam-ape`, `comparisons/authentication-vs-authorization`를 추가하고 index Total pages를 248로 갱신했다. 범위 lint는 frontmatter·sources·링크·민감값 재노출·페이지 수·scoped diff를 확인한다.
+
+## [2026-07-13] ingest | 7. Ci&CD 최신 MD 기준 고도화
+
+- 범위: 2026-05-11~13 날짜별 MD와 `Ci&CD 총정리.md`를 실제 내용으로 대조해 CI/CD 관련 summary, concept, entity, comparison을 고도화했다. `raw/`는 수정하지 않았다.
+- 정정: 기본 `ci.yml`의 Maven CI, Docker Hub image build/push 확장, 별도 `cd.yml`을 통한 EC2 배포 연결을 구분했다. 날짜 원본에 없는 `cd.yml` 구현 전문과 HTTP 80 listener 구성은 추정하지 않고, EC2 container 갱신·ALB HTTPS Listener 역할로만 보존했다.
+- 반영: Route 53 Hosted Zone/NS → ACM CNAME 검증·발급 → ALB Target Group/HTTPS Listener → Alias A record, Terraform IaC, S3 객체 저장 → RDS `coffee.product`의 `image_url` 저장 흐름을 최신 원본에 맞췄다.
+- 신규 페이지는 만들지 않아 index Total pages 245를 유지했다. 범위 lint는 frontmatter·sources·링크·민감값 재노출·source 귀속·scoped diff를 확인한다.
+
+## [2026-07-13] ingest | 6. AWS 최신 MD 기준 고도화
+
+- 범위: 2026-05-06~08 날짜별 MD와 `AWS 총정리.md`를 실제 내용으로 대조해 AWS wiki를 고도화했다. `raw/`는 수정하지 않았다.
+- 정정: 05-07은 VPC·EC2·EIP·SSH·자원 해제, 05-08은 ping/ICMP·Nginx·Spring Boot jar·RDS MySQL·자원 정리로 날짜 경계를 바로잡았다. AWS 05-08에 잘못 귀속된 Route 53/ACM/ALB 실습은 실제 원본 `7. Ci&CD/2026.05.12(화)`로 재귀속했다.
+- 신규: `concepts/aws-resource-lifecycle-cost-management`를 생성해 On-Demand 비용, EIP release, EC2/RDS·네트워크 자원의 의존성 기반 정리 흐름을 보존했다.
+- index: 05-08 summary rename을 반영하고 신규 concept 1개를 등록해 Total pages를 245로 갱신했다. 범위 lint는 sources·frontmatter·링크·rename 잔존 경로·민감값 재노출·scoped diff를 확인한다.
+
+## [2026-07-13] ingest | 5. Linux 최신 MD 기준 고도화
+
+- 범위: `raw/KoreaICT/5. Linux`의 날짜별 MD 10개와 `Linux 총정리.md`를 주 출처로 삼아 Linux/Docker/GitHub 관련 summary, concept, entity, comparison을 최신 원본의 실습 흐름에 맞게 고도화했다. `raw/`는 수정하지 않았다.
+- 반영: VM/SSH·CLI → 파일/vi·사용자/권한 → 다운로드/압축·JDK → Maven/Spring Boot jar·host 포트 → Docker image/container/network/mount/Dockerfile/Compose → Git/GitHub branch/PR/conflict 흐름을 subject-review 및 기존 관련 페이지의 구체 실습 근거에 연결했다.
+- 신규 비교: `virtual-machine-vs-docker-container`, `host-port-forwarding-vs-docker-port-mapping`을 생성해 VM/SSH/Linux/container 층위와 Linux host 포트 전환/Docker `-p`의 반복 혼동을 분리했다.
+- index: 신규 비교 2개를 등록하고 Total pages를 244로 갱신했다. 고정점 검증은 Linux 범위 frontmatter·출처·링크·원본 경로·diff 점검으로 수행한다.
+
+## [2026-07-13] update | TXT→MD 작업 단계 완료 상태 정정
+
+- 정정: 9. 중간 프로젝트 공부의 민감정보 후보 탐지·처리는 이미 완료되었으며, 변환·재작성 대상이 아니다.
+- 현재 상태: 5~8과목 날짜별 TXT→MD와 과목 총정리, 10. Python 지정 범위 날짜별 TXT→MD와 Python 총정리가 완료되었다. 이에 따라 TXT→MD 정리 단계는 종료되었다.
+- 다음 단계: 현재 `raw/KoreaICT/` MD를 기준으로 과목별 wiki 고도화 ingest를 수행하고, 과목별 lint 후 전체 통합 lint를 진행한다.
+- 반영: `wiki/_meta/txt-to-md-conversion-work-plan.md`의 9과목 상태와 새 세션 체크리스트를 현재 완료 상태에 맞게 갱신했다. `raw/`는 수정하지 않았다.
+
 ## [2026-07-13] update | 10. Python Python 총정리 MD 작성
 
 - 범위: 사용자의 명시 지시에 따라 Python 날짜별 MD 14개(`2026.06.19(금) - 시작`~`2026.07.08(수)`)를 내용 근거로 사용해 `raw/KoreaICT/10. Python/Python 총정리/Python 총정리.md`를 새로 작성함. 기존 총정리의 표현·형식만 참고했으며, wiki ingest와 lint는 시작하지 않음.

@@ -1,7 +1,7 @@
 ---
 title: Linux 패키지·다운로드·압축
 created: 2026-07-02
-updated: 2026-07-09
+updated: 2026-07-13
 type: concept
 tags: [linux, backend]
 sources:
@@ -60,11 +60,9 @@ tar -xzvf vim.tar.gz
 - [[concepts/docker-install-permission-setup|Docker 설치와 권한 설정]]
 - [[entities/maven|Maven]]
 
-## 5과목 현재 raw MD 기준 재검증 메모
+## 최신 원본 대조
 
-- 2026-07-09에 `raw/KoreaICT/5. Linux` 날짜별 MD 10개와 `Linux 총정리.md`를 기준으로 다시 대조했다.
-- 이 페이지는 단순 명령어 사전이 아니라 VM/SSH/CLI → 파일·권한 → Spring Boot jar 실행 → Docker network/volume/Dockerfile/Compose → GitHub branch/PR/conflict 흐름 속에서 읽어야 한다.
-- 운영 관점에서는 코드보다 IP/포트/방화벽/권한/컨테이너 네트워크·볼륨이 문제 원인일 수 있음을 함께 기억한다.
+2026-04-27의 `wget`/`curl` 다운로드, `tar -xzvf`, `zip -r`, alias와 `.bashrc` 실습을 기준으로 보강했다. 다운로드 도구와 설치 도구를 혼동하지 않고, alias는 shell 종료 후 사라져 `source` 또는 `.bashrc` 반영이 필요함을 남긴다.
 
 ## 출처
 

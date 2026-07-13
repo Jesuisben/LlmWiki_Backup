@@ -1,11 +1,12 @@
 ---
 title: GitHub Actions workflow
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-13
 type: concept
 tags: [ci-cd, backend]
 sources:
   - raw/KoreaICT/7. Ci&CD/2026.05.11(월) - 시작/2026.05.11(월) - 시작.md
+  - raw/KoreaICT/7. Ci&CD/Ci&CD 총정리/Ci&CD 총정리.md
   - raw/KoreaICT/7. Ci&CD/교육 자료/CI&CD(SpringBoot_실습).pdf
 status: growing
 confidence: high
@@ -19,7 +20,7 @@ GitHub Actions workflow는 GitHub 저장소 안의 `.github/workflows/*.yml` 파
 
 ## 왜 중요한가
 
-수업에서는 Spring Boot 프로젝트를 GitHub에 push했을 때 자동으로 Maven build가 실행되도록 만들었다. 이후 같은 workflow에 Docker Hub login, Docker image build/push, EC2 배포 단계를 붙여 [[concepts/ci-cd-automation|CI/CD 자동화]]로 확장했다.
+수업에서는 Spring Boot 프로젝트를 GitHub에 push했을 때 기본 `ci.yml`로 Maven build가 실행되도록 만들었다. 이어 `ci.yml`에 Docker Hub login·image build/push 단계를 추가하고, 별도 `cd.yml`을 workflow 경로에 복사해 EC2 배포 단계와 연결했다. 날짜 원본에 `cd.yml` 전문은 없으므로 특정 구현 action은 추정하지 않는다.
 
 ## 핵심 구조
 

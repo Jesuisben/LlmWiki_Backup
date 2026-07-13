@@ -1,7 +1,7 @@
 ---
 title: Linux에서 Spring Boot 서버 실행
 created: 2026-07-02
-updated: 2026-07-09
+updated: 2026-07-13
 type: concept
 tags: [linux, spring-boot, backend]
 sources:
@@ -67,11 +67,9 @@ ENTRYPOINT ["java", "-jar", "/app.jar"]
 - [[concepts/docker-image-container|Docker 이미지와 컨테이너]]
 - [[concepts/spring-boot-cicd-docker-ec2-flow|Spring Boot CI/CD Docker-EC2 배포 흐름]]
 
-## 5과목 현재 raw MD 기준 재검증 메모
+## 최신 원본 대조
 
-- 2026-07-09에 `raw/KoreaICT/5. Linux` 날짜별 MD 10개와 `Linux 총정리.md`를 기준으로 다시 대조했다.
-- 이 페이지는 단순 명령어 사전이 아니라 VM/SSH/CLI → 파일·권한 → Spring Boot jar 실행 → Docker network/volume/Dockerfile/Compose → GitHub branch/PR/conflict 흐름 속에서 읽어야 한다.
-- 운영 관점에서는 코드보다 IP/포트/방화벽/권한/컨테이너 네트워크·볼륨이 문제 원인일 수 있음을 함께 기억한다.
+2026-04-28의 `grep port` → host 80→9000 전환/UFW → Maven package → `target` jar → `java -jar` 순서를 기준으로 보강했다. VM host 포트 전환과 Docker `-p`는 별도 층위이므로 새 비교 페이지를 함께 참조한다.
 
 ## 출처
 

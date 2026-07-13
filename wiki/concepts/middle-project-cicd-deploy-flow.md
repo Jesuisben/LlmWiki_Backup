@@ -1,14 +1,14 @@
 ---
 title: 중간 프로젝트 CI/CD 배포 흐름
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-14
 type: concept
 tags: [project, ci-cd, aws, spring-boot, react]
 sources:
   - raw/KoreaICT/7. Ci&CD/2026.05.11(월) - 시작/2026.05.11(월) - 시작.md
   - raw/KoreaICT/7. Ci&CD/교육 자료/CI&CD(SpringBoot_실습).pdf
-  - D:/Study_LLM_Wiki/raw/KoreaICT/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md
-  - D:/Study_LLM_Wiki/raw/KoreaICT/9. 중간 프로젝트 공부/CICD/Github_Secrets 예시.md
+  - raw/KoreaICT/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md
+  - raw/KoreaICT/9. 중간 프로젝트 공부/CICD/Github_Secrets 예시.md
 status: growing
 confidence: medium
 ---
@@ -26,10 +26,11 @@ confidence: medium
 ## 핵심 설명
 
 - **코드 저장소**: GitHub가 변경 이력과 workflow 실행의 출발점이다.
-- **빌드 단계**: Spring Boot는 jar로 빌드하고, 필요하면 Docker image로 패키징한다. React는 정적 파일 또는 프론트엔드 산출물로 준비된다.
+- **백엔드 준비**: Spring Boot의 환경 변수를 배포 환경에서 주입할 수 있게 정리하고 Dockerfile로 image 빌드 단위를 준비한다. React는 정적 파일 또는 프론트엔드 산출물로 준비된다. ^[raw/KoreaICT/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md]
 - **Registry 단계**: Spring Boot Docker image는 Docker Hub 같은 registry에 push할 수 있다.
-- **Secrets 단계**: Docker token, 서버 IP, SSH key, DB 접속값, JWT 키 같은 민감값은 workflow 파일에 직접 쓰지 않고 GitHub Secrets에서 읽는다.
-- **배포 단계**: EC2에서 새 image를 pull하거나 산출물을 복사하고 기존 프로세스/container 상태를 갱신한다.
+- **Secrets 단계**: Docker Hub 인증, backend/frontend image, EC2 host/key, DB 연결, JWT 키, S3 접근 항목은 역할별 GitHub Secrets로 분리하고 workflow 파일에는 실제 값을 쓰지 않는다. ^[raw/KoreaICT/9. 중간 프로젝트 공부/CICD/Github_Secrets 예시.md]
+- **CI와 CD의 분리**: CI는 빌드한 Docker image를 Docker Hub에 push하고, CD는 EC2에서 새 image를 받아 기존 container를 갱신한다. ^[raw/KoreaICT/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md]
+- **프론트·확장 단계**: React의 `/api` 요청을 Nginx proxy로 백엔드에 연결하고, 파일 저장소는 S3로 전환하며, 이후 도메인 하나로 서비스 접점을 확장한다. ^[raw/KoreaICT/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md]
 - **확인 단계**: 웹 접속, API 응답, Actions log, container/process/port 상태를 확인한다.
 
 ## 예시 흐름

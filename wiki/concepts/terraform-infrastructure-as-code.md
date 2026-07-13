@@ -1,11 +1,12 @@
 ---
 title: Terraform과 Infrastructure as Code
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-13
 type: concept
 tags: [aws, ci-cd]
 sources:
   - raw/KoreaICT/7. Ci&CD/2026.05.13(수)/2026.05.13(수).md
+  - raw/KoreaICT/7. Ci&CD/Ci&CD 총정리/Ci&CD 총정리.md
   - raw/KoreaICT/7. Ci&CD/교육 자료/cloud.02.AWS 교안(실습).pdf
   - raw/KoreaICT/7. Ci&CD/교육 자료/cloud.03.AWS 교안(이론).pdf
 status: seed
@@ -24,7 +25,7 @@ CI/CD가 애플리케이션 빌드와 배포를 자동화한다면, Terraform은
 
 ## 핵심 설명
 
-Terraform은 HCL(HashiCorp Configuration Language)을 사용한다. 수업에서는 Windows에 Terraform을 설치하고 `Path` 환경 변수에 등록한 뒤, `main.tf`로 AWS 리소스를 선언하는 흐름을 다뤘다.
+Terraform은 HCL(HashiCorp Configuration Language)을 사용한다. 수업에서는 Windows에 Terraform을 설치하고 `Path` 환경 변수에 등록한 뒤, `main.tf`로 VPC, 서로 다른 가용 영역의 Public Subnet, Internet Gateway, Route Table, Security Group, EC2, Elastic IP 같은 AWS 리소스를 선언하는 흐름을 다뤘다.
 
 ```hcl
 provider "aws" {
@@ -51,7 +52,7 @@ resource "aws_instance" "myserver" {
 - Terraform은 Spring Boot 코드를 배포하는 도구가 아니라 AWS 리소스를 만드는 도구다.
 - `plan`은 실제 생성 전 미리보기이고, `apply`가 실제 변경이다.
 - `destroy`는 리소스를 삭제하므로 비용 정리에는 유용하지만 운영 환경에서는 매우 위험하다.
-- AWS access key와 secret key는 원본에 있더라도 코드/wiki에 남기지 않는다.
+- AWS access key와 secret key는 원본에 있더라도 코드/wiki에 남기지 않는다. 수업에서는 shell 환경 변수로 주입했지만, 실제 프로젝트에서는 더 안전한 Secret 관리 방식을 선택해야 한다.
 
 ## 관련 개념
 

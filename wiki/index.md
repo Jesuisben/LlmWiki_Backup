@@ -2,7 +2,7 @@
 
 > 이 파일은 `wiki/` 전체의 목차이자 길잡이다.  
 > 질문에 답하거나 새 자료를 ingest할 때 이 파일을 먼저 읽는다.  
-> Last updated: 2026-07-12 | Total pages: 242
+> Last updated: 2026-07-14 | Total pages: 258
 
 ## 사용 방법
 
@@ -70,17 +70,17 @@
 - [[summaries/2026-05-06-github-branch-pr-conflict|2026-05-06 GitHub 브랜치, Pull Request, 충돌 해결]] — 팀원 브랜치, PR, merge, pull, 충돌 시나리오를 실습한 날이다.
 - [[summaries/2026-05-06-linux-subject-review|Linux 총정리]] — SSH/CLI/권한에서 Spring Boot 서버 실행, Docker/Compose, GitHub 협업까지 묶은 5과목 복습 허브
 - [[summaries/2026-05-06-aws-cloud-vpc-ec2|2026-05-06 AWS Cloud, VPC, EC2 입문]] — AWS 메뉴, On-Demand, VPC/Subnet/CIDR, Security Group, EC2 개념을 잡기 시작한 날
-- [[summaries/2026-05-07-aws-ec2-nginx-rds|2026-05-07 AWS EC2, Nginx, Spring Boot, RDS 연결]] — VPC/EC2 2대 구성, ping/ICMP, Nginx, Spring Boot, RDS MySQL 연결을 실습한 날
-- [[summaries/2026-05-08-aws-route53-load-balancer-https|2026-05-08 AWS Route 53, Load Balancer, HTTPS]] — Route 53, ACM, CLB/ALB, Target Group으로 도메인·HTTPS·로드밸런싱 구조를 구성한 날
-- [[summaries/2026-05-08-aws-subject-review|AWS 총정리]] — VPC/EC2/RDS/Route 53/ACM/Load Balancer/HTTPS를 묶은 클라우드 배포 복습 허브
-- [[summaries/2026-05-11-cicd-github-actions-spring-boot|2026-05-11 CI/CD, GitHub Actions, Spring Boot 자동 배포]] — GitHub push를 트리거로 Maven build, Docker Hub, EC2 컨테이너 배포를 자동화한 날
-- [[summaries/2026-05-12-route53-alb-https-review|2026-05-12 Route 53, ALB, HTTPS 복습과 도메인 배포]] — 도메인, Route 53 hosted zone, ACM 인증서, ALB/Target Group, HTTPS 접속 흐름을 복습한 날
-- [[summaries/2026-05-13-terraform-s3-file-upload|2026-05-13 Terraform과 S3 파일 업로드]] — Terraform IaC 기초와 Spring Boot에서 Amazon S3 bucket으로 이미지 업로드하는 흐름을 다룬 날
+- [[summaries/2026-05-07-aws-ec2-nginx-rds|2026-05-07 AWS VPC, EC2, EIP와 자원 관리]] — VPC·두 Subnet·IGW·Route Table·Security Group·EC2·EIP·SSH와 자원 해제를 실습한 날
+- [[summaries/2026-05-08-aws-rds-resource-cleanup|2026-05-08 AWS RDS MySQL 연결과 자원 정리]] — ping/ICMP 복구, Nginx, Spring Boot jar, RDS MySQL/JDBC와 정리 흐름을 실습한 날
+- [[summaries/2026-05-08-aws-subject-review|AWS 총정리]] — 비용 관점에서 VPC/EC2/RDS 구성과 의존성 기반 자원 관리를 묶은 복습 허브
+- [[summaries/2026-05-11-cicd-github-actions-spring-boot|2026-05-11 CI/CD, GitHub Actions, Spring Boot 자동 배포]] — `master` push를 Maven CI, Docker Hub image, EC2 container 갱신으로 연결한 날
+- [[summaries/2026-05-12-route53-alb-https-review|2026-05-12 Route 53, ALB, HTTPS 복습과 도메인 배포]] — Hosted Zone/ACM DNS 검증, ALB Target Group·HTTPS Listener, Alias A record 흐름을 복습한 날
+- [[summaries/2026-05-13-terraform-s3-file-upload|2026-05-13 Terraform과 S3 파일 업로드]] — Terraform IaC와 S3 객체·RDS 상품 데이터 분리 흐름을 다룬 날
 - [[summaries/2026-05-14-passwordless-x1280-intro|2026-05-14 Passwordless X1280 소개와 보안 배경]] — 피싱·랜섬웨어·RCE 배경에서 비밀번호 입력을 줄이는 X1280 인증 개념을 배운 날
 - [[summaries/2026-05-15-passwordless-x1280-docker-service|2026-05-15 Passwordless X1280 Docker 통합 서버와 서비스 등록]] — Members 서비스 등록, setting.ap, Docker 통합 서버, Auth 관리자 페이지 설정 흐름
 - [[summaries/2026-05-18-passwordless-x1280-server-spring-sample|2026-05-18 Passwordless 서버 설치와 Spring 샘플 연동]] — X1280 서버와 MariaDB/Spring 샘플 앱에서 등록·로그인·해제를 확인한 날
-- [[summaries/2026-05-19-aam-ape-authentication-filingbox|2026-05-19 인증 기본과 AAM/APE 통합 설치]] — 인증/인가/SSO/상호인증과 AAM/APE 서버·앱 계정 관리 흐름
-- [[summaries/2026-05-20-filingbox-giga-mega|2026-05-20 FilingBox GIGA/MEGA와 WORM 스토리지]] — 랜섬웨어 대응 관점의 NAS/WORM/FilingBox 저장소 보호 실습
+- [[summaries/2026-05-19-aam-ape-authentication-filingbox|2026-05-19 인증 기본과 AAM/APE 통합 설치]] — 인증/인가/SSO/상호인증을 구분하고 AAM/APE·DMZ의 라이선스·연동·사용자/인증기 관리 실습
+- [[summaries/2026-05-20-filingbox-giga-mega|2026-05-20 FilingBox GIGA/MEGA와 WORM 스토리지]] — 인증과 분리된 랜섬웨어 대응 NAS/WORM·FilingBox 저장소 보호 실습
 - [[summaries/2026-05-21-passwordless-x1280-rest-api|2026-05-21 Passwordless X1280 REST API와 Postman]] — X1280 REST API를 Postman으로 호출해 사용자 등록 여부 응답 구조를 확인한 날
 - [[summaries/2026-06-19-python-setup-basic-syntax|2026-06-19 Python 설치와 기본 문법 입문]] — Python/PyCharm 설치, 기본 출력·문자열·형변환·입력·연산자 학습
 - [[summaries/2026-06-22-python-control-flow-collections|2026-06-22 Python 제어문과 컬렉션]] — 조건문·반복문·range·list·tuple 학습
@@ -93,6 +93,10 @@
 - [[summaries/2026-07-01-python-pandas-dataframe|2026-07-01 Python Pandas DataFrame 조회와 입출력]] — Pandas DataFrame/Series의 `loc`/`iloc` 조회, 조건 수정, CSV 입출력, 통계, 기초 그래프를 학습한 날이다.
 - [[summaries/2026-07-02-python-pandas-reshape-merge|2026-07-02 Python Pandas 데이터 결합과 재구조화]] — `concat`, `merge`, `pivot`으로 여러 DataFrame을 결합하고 SQL JOIN과 비슷한 데이터 연결 흐름을 학습한 날이다.
 - [[summaries/2026-07-03-python-pandas-groupby-visualization|2026-07-03 Python Pandas groupby와 시각화]] — `groupby`, `agg`, `transform`, `pd.cut`, matplotlib 그래프로 범주별 집계와 분포 확인을 학습한 날이다.
+- [[summaries/2026-07-06-python-public-data-bicycle-analysis|2026-07-06 Python 공공데이터 API와 자전거 분석]] — Open API·DataFrame·CSV·결합·지도 시각화로 공공 자전거 데이터를 다룬 날
+- [[summaries/2026-07-07-python-web-crawling-geocoding-visualization|2026-07-07 Python 웹 크롤링, 지오코딩, 시각화]] — Selenium·BeautifulSoup·지오코딩으로 커피 매장 데이터를 수집·표현한 날
+- [[summaries/2026-07-08-python-korean-text-mining|2026-07-08 Python 한국어 텍스트 마이닝]] — 형태소 분석·불용어·빈도·WordCloud로 한국어 텍스트를 분석한 날
+- [[summaries/2026-07-08-python-subject-review|Python 총정리]] — 기초 문법에서 Pandas·API·크롤링·지도·텍스트 마이닝까지 묶은 과목 복습 허브
 
 - [[summaries/2026-05-middle-project-cicd-passwordless-guide|중간 프로젝트 CI/CD·배포·Passwordless 가이드]] — 중간 프로젝트 배포 자동화와 Passwordless 인증 적용 흐름을 묶은 프로젝트 가이드 요약
 
@@ -143,6 +147,7 @@
 - [[concepts/aws-cloud-vpc-networking|AWS Cloud와 VPC 네트워킹]] — Region/AZ/VPC/Subnet/CIDR, IGW, Route Table, Security Group으로 EC2 네트워크를 구성하는 흐름
 - [[concepts/aws-ec2-nginx-spring-deploy|AWS EC2에서 Nginx와 Spring Boot 배포]] — EC2 SSH, Nginx, JDK/Maven, Spring Boot jar 실행, 80→9000 포트 연결 흐름
 - [[concepts/aws-rds-spring-boot|AWS RDS와 Spring Boot 연결]] — RDS MySQL을 만들고 EC2/Spring Boot에서 JDBC로 연결하되 비밀값은 분리해야 하는 흐름
+- [[concepts/aws-resource-lifecycle-cost-management|AWS 자원 생명주기와 비용 관리]] — EIP·EC2·RDS·네트워크 자원의 의존성, 정리 순서, 잔존 비용을 관리하는 흐름
 - [[concepts/aws-route53-load-balancer-https|AWS Route 53, Load Balancer, HTTPS 흐름]] — 도메인, DNS, ACM 인증서, CLB/ALB, Target Group, Listener를 연결하는 배포 구조
 - [[concepts/ci-cd-automation|CI/CD 자동화]] — GitHub push를 트리거로 빌드·이미지 생성·배포를 반복 가능하게 만드는 흐름
 - [[concepts/github-actions-workflow|GitHub Actions workflow]] — `.github/workflows/*.yml`로 checkout, JDK 설정, Maven build, Docker push 같은 자동화 단계를 정의하는 방식
@@ -156,6 +161,8 @@
 - [[concepts/python-oop-basics|Python 객체지향 기본]] — class·__init__·self·상속·Has-A 관계
 - [[concepts/pandas-dataframe-basics|Pandas DataFrame 기본]] — 행/열 조회, 조건 수정, CSV 입출력, Series 통계, `concat`/`merge`/`pivot`, `groupby`까지 이어지는 Pandas 표 데이터 처리 기본
 - [[concepts/pandas-groupby-aggregation|Pandas groupby와 집계]] — 범주별 그룹화, `agg`, 다중 색인 정리, `transform`, `pd.cut` 기반 범주화와 그래프용 요약표 생성
+- [[concepts/python-external-data-collection-pipeline|Python 외부 데이터 수집 파이프라인]] — API·크롤링 데이터를 DataFrame으로 전처리·결합·시각화하는 흐름
+- [[concepts/korean-text-mining-pipeline|한국어 텍스트 마이닝 파이프라인]] — 형태소 분석·불용어·빈도·WordCloud로 이어지는 한국어 텍스트 분석 흐름
 
 - [[concepts/java-method-constructor-overloading|Java 메서드, 생성자, this, 오버로딩]] — 메서드, 접근 지정자, 생성자, `this`, 오버로딩을 클래스/객체 학습 흐름에서 분리 정리
 - [[concepts/java-object-array-memory|Java 객체 배열과 메모리 관점]] — 객체 배열과 stack/heap 관점으로 객체 생성·참조 흐름을 정리
@@ -185,7 +192,8 @@
 
 - [[concepts/passwordless-x1280-auth-flow|Passwordless X1280 인증 흐름]] — QR·앱 승인·외부 인증 서버를 연결하는 Passwordless 로그인 흐름
 - [[concepts/passwordless-qr-app-approval|Passwordless QR/앱 승인 흐름]] — QR 등록과 모바일 앱 승인 상태를 프론트·백엔드가 처리하는 구조
-- [[concepts/spring-boot-passwordless-integration|Spring Boot Passwordless 인증 연동]] — X1280 REST API를 Spring Boot Controller/Service/DTO/SecurityConfig와 연결하는 방식
+- [[concepts/spring-boot-passwordless-integration|Spring Boot Passwordless 인증 연동]] — Spring 샘플의 X1280 REST 설정·MariaDB·WAR/Tomcat 배포와 중간 프로젝트 적용 설계를 구분해 연결하는 방식
+- [[concepts/nas-worm-storage-protection|NAS·WORM 저장소 보호]] — Passwordless 과목에서 인증 이후의 데이터 보존·접근 제어 계층으로 다룬 NAS, WORM, RO/RW/AO와 FilingBox 흐름
 
 ## Entities
 
@@ -220,8 +228,12 @@
 - [[entities/pandas|Pandas]] — Series/DataFrame, CSV, 통계, 그래프, 결합·재구조화를 담당하는 Python 표 데이터 처리 라이브러리
 - [[entities/jupyter-notebook|Jupyter Notebook]] — Pandas와 matplotlib 코드를 셀 단위로 실행하며 표·그래프·설명을 함께 남긴 Python 학습 환경
 - [[entities/matplotlib|matplotlib]] — Pandas 집계 결과를 파이·산점도·박스플롯·히스토그램·막대 그래프로 확인하는 Python 시각화 라이브러리
+- [[entities/selenium|Selenium]] — 동적 웹 페이지의 클릭·대기·이동을 자동화한 Python 브라우저 도구
+- [[entities/folium|Folium]] — 좌표 DataFrame을 Marker·HeatMap·GeoJSON 지도 결과로 만드는 Python 라이브러리
+- [[entities/konlpy|KoNLPy]] — Komoran 형태소 분석과 사용자 사전으로 한국어 텍스트를 처리한 라이브러리
 - [[entities/intellij-idea|IntelliJ IDEA]] — Java 첫 프로젝트·패키지·클래스 생성부터 Spring Boot까지 사용한 Java/Spring IDE
 - [[entities/passwordless-x1280|Passwordless X1280]] — QR 등록·앱 승인·REST API로 비밀번호 없는 인증을 구현하는 X1280 인증 기술
+- [[entities/aam-ape|AAM과 APE]] — AAM/APE/DMZ 통합 설치, 라이선스·연동 설정, 조직 사용자·인증기 관리 실습의 기업형 인증 관리 제품군
 
 ## Comparisons
 
@@ -240,6 +252,8 @@
 - [[comparisons/docker-commit-vs-dockerfile|docker commit vs Dockerfile]] — 컨테이너 상태 스냅샷과 재현 가능한 이미지 빌드 파일의 차이
 - [[comparisons/docker-cp-vs-bind-mount-vs-volume|docker cp vs bind mount vs volume]] — 컨테이너 파일 복사, 호스트 경로 연결, Docker 관리 볼륨의 차이
 - [[comparisons/git-fetch-vs-pull-vs-clone|git fetch vs pull vs clone]] — 원격 저장소 정보를 가져오는 세 명령의 시점과 결과 차이
+- [[comparisons/virtual-machine-vs-docker-container|가상 머신(VM) vs Docker 컨테이너]] — VirtualBox Ubuntu VM, SSH 클라이언트, Linux host와 Docker 실행 단위의 층위 차이
+- [[comparisons/host-port-forwarding-vs-docker-port-mapping|호스트 포트 포워딩 vs Docker 포트 매핑]] — VM/Linux host의 80→9000 전환과 host:container 포트 연결을 구분하는 기준
 - [[comparisons/ec2-vs-rds|EC2 vs RDS]] — AWS에서 애플리케이션 서버와 관리형 데이터베이스의 역할·관리 범위·보안 경계 차이
 - [[comparisons/clb-vs-alb|CLB vs ALB]] — AWS 로드밸런서의 기초형과 Target Group/Listener 중심 HTTP/HTTPS 애플리케이션형 구조 차이
 - [[comparisons/mpa-vs-spa|MPA vs SPA]] — 서버 렌더링 중심 다중 페이지 구조와 React 기반 단일 페이지 앱 구조의 차이
@@ -254,8 +268,10 @@
 - [[comparisons/ddl-vs-dml-vs-dql|DDL vs DML vs DQL]] — 구조 정의, 데이터 조작, 데이터 조회 SQL의 역할과 commit 관계 차이
 - [[comparisons/primary-key-vs-foreign-key|Primary Key vs Foreign Key]] — 행을 식별하는 기본키와 다른 테이블을 참조하는 외래키의 차이
 - [[comparisons/oracle-inner-vs-outer-join|Oracle Inner Join vs Outer Join]] — 매칭 행만 조회하는 조인과 기준 테이블의 미매칭 행까지 보존하는 조인의 차이
+- [[comparisons/beautifulsoup-vs-selenium|BeautifulSoup vs Selenium]] — 정적 HTML 파싱과 동적 브라우저 자동화의 역할 차이
 
 - [[comparisons/passwordless-vs-password-login|Passwordless 로그인 vs 비밀번호 로그인]] — 비밀번호 입력형 로그인과 앱 승인 기반 Passwordless 로그인의 책임 차이
+- [[comparisons/authentication-vs-authorization|인증(Authentication) vs 인가(Authorization)]] — 신원을 확인하는 인증과 인증 이후 접근 범위를 판단하는 인가의 책임 차이
 
 ## Queries
 

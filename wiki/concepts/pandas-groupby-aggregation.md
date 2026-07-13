@@ -1,11 +1,13 @@
 ---
 title: Pandas groupby와 집계
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-13
 type: concept
 tags: [python]
 sources:
   - raw/KoreaICT/10. Python/2026.07.03(금)/2026.07.03(금).md
+  - raw/KoreaICT/10. Python/2026.07.06(월)/2026.07.06(월).md
+  - raw/KoreaICT/10. Python/2026.07.07(화)/2026.07.07(화).md
 status: growing
 confidence: high
 ---
@@ -93,6 +95,8 @@ chartdata.plot(kind='barh')
 ```
 
 이 흐름은 “원본 데이터 → 범주별 평균 요약 → 그래프에 맞는 wide format → 막대 그래프”로 이어지는 전형적인 분석 패턴이다.
+
+공공 자전거 실습에서는 `자치구`·`대여구분코드`별 `대여건수`를 합산해 정렬한 뒤 `drop_duplicates()`로 그룹마다 가장 큰 항목을 남겼다. 즉 groupby 결과는 집계표 자체로 끝나지 않고 정렬·결측치 처리·그래프·지도 분석의 입력이 된다.
 
 ## 자주 헷갈리는 점
 

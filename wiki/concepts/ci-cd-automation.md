@@ -1,11 +1,12 @@
 ---
 title: CI/CD 자동화
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-13
 type: concept
 tags: [ci-cd, backend, curriculum]
 sources:
   - raw/KoreaICT/7. Ci&CD/2026.05.11(월) - 시작/2026.05.11(월) - 시작.md
+  - raw/KoreaICT/7. Ci&CD/Ci&CD 총정리/Ci&CD 총정리.md
   - raw/KoreaICT/7. Ci&CD/교육 자료/CI&CD(SpringBoot_이론).pdf
 status: growing
 confidence: high
@@ -35,8 +36,8 @@ AWS EC2
 사용자가 접속하는 서비스
 ```
 
-- **CI(Continuous Integration, 지속적 통합)**: push된 코드를 가져와 빌드하고, 필요한 경우 테스트를 돌려 통합 가능한 상태인지 확인한다.
-- **CD(Continuous Delivery/Deployment, 지속적 전달/배포)**: 빌드 산출물을 실제 서버나 컨테이너 환경에 반영한다.
+- **CI(Continuous Integration, 지속적 통합)**: push된 코드를 가져와 JDK를 맞추고 Maven build로 통합 가능한 상태인지 확인한다. 수업의 기본 `ci.yml`은 이 역할을 직접 보여 준다.
+- **CD(Continuous Delivery/Deployment, 지속적 전달/배포)**: Docker Hub registry의 image를 EC2가 pull하고 새 container로 실행해 실제 서버에 반영한다. 수업의 Docker build/push 확장과 별도 `cd.yml`은 CI 결과물을 배포 단계로 연결한다.
 - **Trigger**: workflow를 시작하는 사건이다. 수업에서는 GitHub `push`가 대표 trigger였다.
 
 ## 예시

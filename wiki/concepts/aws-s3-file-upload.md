@@ -1,11 +1,12 @@
 ---
 title: AWS S3 파일 업로드 흐름
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-13
 type: concept
 tags: [aws, spring-boot, backend]
 sources:
   - raw/KoreaICT/7. Ci&CD/2026.05.13(수)/2026.05.13(수).md
+  - raw/KoreaICT/7. Ci&CD/Ci&CD 총정리/Ci&CD 총정리.md
   - raw/KoreaICT/7. Ci&CD/교육 자료/cloud.02.AWS 교안(실습).pdf
 status: growing
 confidence: high
@@ -48,7 +49,7 @@ RDS MySQL product table에 상품 정보 + image_url 저장
 | AWS SDK S3 dependency | Java 코드에서 S3 API를 호출하게 해 주는 라이브러리 |
 | `S3Service` | 실제 업로드 담당 서비스 |
 | `UploadController` | 업로드 화면 이동, POST 처리, 목록 조회 담당 |
-| RDS/MySQL | 파일 자체가 아니라 상품 정보와 이미지 URL/key 저장 |
+| RDS/MySQL | 파일 자체가 아니라 `coffee.product` 같은 상품 행과 이미지 URL/key 저장 |
 
 ## Spring Boot 설정 예시
 
@@ -77,7 +78,7 @@ AWS SDK 의존성 예시는 다음과 같다.
 ## 자주 헷갈리는 점
 
 - S3 bucket과 RDS는 역할이 다르다. S3는 파일 저장소, RDS는 구조화된 데이터 저장소다.
-- DB에 이미지 binary 자체를 넣는 것이 아니라, 보통 S3 object URL/key를 저장한다.
+- DB에 이미지 binary 자체를 넣는 것이 아니라, 보통 S3 object URL/key를 저장한다. 수업의 검증도 bucket 객체 목록과 RDS `product` table을 함께 확인하는 방식이었다.
 - bucket public access를 열면 실습은 쉽지만 보안상 위험하다. 실제 서비스는 IAM 권한, bucket policy, presigned URL, CloudFront 같은 선택지를 검토해야 한다.
 - access key와 secret key는 password와 같은 민감값이다. GitHub, wiki, 코드 저장소에 그대로 남기지 않는다.
 

@@ -1,7 +1,7 @@
 ---
 title: Dockerfile vs Docker Compose
 created: 2026-07-02
-updated: 2026-07-09
+updated: 2026-07-13
 type: comparison
 tags: [linux, docker, backend]
 sources:

@@ -1,7 +1,7 @@
 ---
 title: 2026-05-21 Passwordless X1280 REST API와 Postman
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-13
 type: summary
 tags: [auth, backend, spring-boot, project, curriculum]
 sources:
@@ -23,7 +23,7 @@ X1280 인증 서버를 다시 구성하고 Postman collection으로 REST API를 
 - API 사용 실습을 위해 Postman을 설치하고 교육용 collection JSON을 import했다.
 - VM을 clone해 PX1280 서버를 준비하고 Docker 통합 컨테이너를 다시 실행했다.
 - Auth 관리자 페이지에서 `setting.ap`를 업로드하고 서버 아이디/서버키를 발급했다.
-- Postman Variables에 인증 서버 IP, 사용자 ID, serverKey 같은 값을 넣고 API 요청을 보냈다.
+- Postman Variables에 인증 서버 주소, 사용자 ID, serverKey 같은 환경별 값을 넣고 API 요청을 보냈다.
 - 사용자 등록 여부 확인 API(`isAP`) 응답에서 `result`, `code`, `msg`, `data.exist` 같은 JSON 구조를 확인했다.
 
 ## 핵심 개념
@@ -62,7 +62,7 @@ X1280 Docker 서버 실행
 
 ## 헷갈린 점 / 질문
 
-- Postman에서 직접 API가 성공해도 Spring Boot 연동이 자동으로 끝나는 것은 아니다. 백엔드에서는 API 호출 client, DTO, 서비스 로직, 컨트롤러, 보안 설정을 별도로 연결해야 한다.
+- Postman에서 직접 API가 성공해도 Spring 샘플 또는 프로젝트 연동이 자동으로 끝나는 것은 아니다. 이 날짜의 직접 실습은 API 요청·응답 계약 확인이며, client·DTO·Service·Controller·SecurityConfig 설계는 중간 프로젝트 적용 가이드에서 확장된 범위다.
 - `exist: false`는 사용자가 Passwordless에 아직 등록되지 않았다는 의미로 읽어야 하며, 로그인 실패와 같은 의미가 아니다.
 - serverKey와 같은 연동 비밀값은 원본 실습 파일에는 있어도 wiki나 Git 저장소에 남기면 안 된다.
 

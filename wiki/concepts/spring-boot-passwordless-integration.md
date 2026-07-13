@@ -1,7 +1,7 @@
 ---
 title: Spring Boot Passwordless 인증 연동
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-13
 type: concept
 tags: [spring-boot, auth, backend, project]
 sources:
@@ -16,7 +16,7 @@ confidence: high
 
 ## 정의
 
-Spring Boot Passwordless 인증 연동은 React 로그인 화면에서 들어온 등록/로그인/해제 요청을 Spring Boot 백엔드가 받아 X1280 인증 서버 REST API와 통신하고, 승인 결과를 기존 회원·JWT·세션 흐름과 연결하는 구조다.
+Spring Boot Passwordless 인증 연동은 Spring 기반 웹 애플리케이션이 X1280 인증 서버 REST API와 통신하고, 등록·로그인·해제 결과를 서비스 로그인 흐름과 연결하는 구조다. React·JWT·SecurityConfig를 포함한 전체 프로젝트 설계는 별도 중간 프로젝트 가이드의 확장 범위다.
 
 ## 왜 중요한가
 
@@ -29,30 +29,25 @@ Spring Boot Passwordless 인증 연동은 React 로그인 화면에서 들어온
 - **설정값**: 인증 서버 REST URL, corpId/serverId, serverKey, Push/User Connection URL 등. 실제 값은 환경변수나 secret으로 분리한다.
 - **REST client**: X1280 인증 서버 API를 호출한다.
 - **공통 응답 DTO**: `result`, `code`, `msg`, `data` 같은 API 응답 구조를 받는다.
-- **기능별 DTO**: 프론트엔드에 QR, 대기 상태, 등록 여부, 승인 결과를 내려준다.
-- **PasswordlessService**: 등록, 로그인, 해제, 결과 확인 흐름을 조립한다.
-- **PasswordlessController**: React가 호출할 API endpoint를 제공한다.
-- **SecurityConfig**: 등록/로그인 시작, 결과 확인 같은 공개 endpoint를 `permitAll` 등으로 열어준다.
-- **Member Entity**: Passwordless 등록 여부 같은 상태 컬럼을 둘 수 있다.
+- **기능별 DTO·Service·Controller·SecurityConfig·Member 상태**: 중간 프로젝트 가이드에서 제안한 프로젝트 적용 구조다. 05-18·05-21 날짜 원본은 이 전체 구현을 직접 작성한 근거가 아니라, 샘플 설정과 API 계약을 확인한 근거다.
 
 ### 요청 흐름
 
 ```text
-React LoginPage
-→ PasswordlessController
-→ PasswordlessService
+웹 애플리케이션 요청
+→ 프로젝트의 연동 계층
 → X1280 REST client
 → X1280 Auth Server
 → 앱 승인/QR 등록
-→ 결과 DTO
-→ JWT/세션 발급 또는 로그인 실패 처리
+→ 결과 해석
+→ 서비스 로그인 처리 또는 실패 안내
 ```
 
 ## 수업 예시
 
-- 2026-05-18 샘플 프로젝트에서는 `config.properties`에 인증 서버 URL, corpId/serverId, serverKey, REST check URL, Push connector URL을 넣고 Spring Boot App을 실행했다.
+- 2026-05-18 샘플 프로젝트에서는 `config.properties`에 인증 서버 URL, corpId/serverId, serverKey, REST check URL, Push connector URL을 넣고 Spring 기반 샘플 앱을 실행했다. 뒤쪽 실습에서는 MariaDB `userinfo`와 WAR/Tomcat 배포도 확인했다.
 - 2026-05-21 Postman 실습에서는 `isAP` 같은 API 응답 구조를 직접 확인했다. 이 경험이 Spring Boot REST client/DTO 설계의 기준이 된다.
-- 중간 프로젝트 적용 가이드는 `application.properties`, Member 등록 여부 컬럼, REST client, DTO, Service, Controller, SecurityConfig, React 화면 연결을 순서대로 제시한다.
+- 중간 프로젝트 적용 가이드는 `application.properties`, Member 등록 여부 컬럼, REST client, DTO, Service, Controller, SecurityConfig, React 화면 연결을 순서대로 제시한다. 이 설계는 날짜 수업에 없는 구현 세부사항을 보완하는 후속 출처다.
 
 ## 자주 헷갈리는 점
 

@@ -1,7 +1,7 @@
 ---
 title: 2026-05-06 GitHub 브랜치, Pull Request, 충돌 해결
 created: 2026-07-06
-updated: 2026-07-09
+updated: 2026-07-13
 type: summary
 tags: [github, backend, curriculum, study-log]
 sources:

@@ -1,11 +1,11 @@
 ---
 title: EC2 vs RDS
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-13
 type: comparison
 tags: [aws, backend]
 sources:
-  - raw/KoreaICT/6. AWS/2026.05.07(목)/2026.05.07(목).md
+
   - raw/KoreaICT/6. AWS/2026.05.08(금)/2026.05.08(금).md
   - raw/KoreaICT/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf
   - raw/KoreaICT/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf
@@ -48,8 +48,7 @@ AWS 수업에서 EC2와 RDS는 모두 “클라우드에 있는 서버처럼 보
 
 ## 관련 페이지
 
-- [[summaries/2026-05-07-aws-ec2-nginx-rds|2026-05-07 AWS EC2, Nginx, Spring Boot, RDS 연결]]
-- [[summaries/2026-05-08-aws-route53-load-balancer-https|2026-05-08 AWS Route 53, Load Balancer, HTTPS]]
+- [[summaries/2026-05-08-aws-rds-resource-cleanup|2026-05-08 AWS RDS MySQL 연결과 자원 정리]]
 - [[entities/amazon-ec2|Amazon EC2]]
 - [[entities/amazon-rds|Amazon RDS]]
 - [[concepts/aws-rds-spring-boot|AWS RDS와 Spring Boot 연결]]
@@ -57,7 +56,7 @@ AWS 수업에서 EC2와 RDS는 모두 “클라우드에 있는 서버처럼 보
 
 ## 출처
 
-- `raw/KoreaICT/6. AWS/2026.05.07(목)/2026.05.07(목).md`
+
 - `raw/KoreaICT/6. AWS/2026.05.08(금)/2026.05.08(금).md`
 - `raw/KoreaICT/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf`
 - `raw/KoreaICT/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf`

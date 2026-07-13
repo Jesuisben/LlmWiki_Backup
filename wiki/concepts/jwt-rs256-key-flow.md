@@ -1,12 +1,12 @@
 ---
 title: JWT RS256 키 흐름
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-14
 type: concept
 tags: [auth, spring-boot, backend]
 sources:
-  - D:/Study_LLM_Wiki/raw/KoreaICT/9. 중간 프로젝트 공부/CICD/JWT(RS256)생성 방법.md
-  - D:/Study_LLM_Wiki/raw/KoreaICT/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md
+  - raw/KoreaICT/9. 중간 프로젝트 공부/CICD/JWT(RS256)생성 방법.md
+  - raw/KoreaICT/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md
 status: growing
 confidence: medium
 ---

@@ -1,10 +1,13 @@
 ---
 title: TXT→MD 남은 과목 변환 작업 인계
 created: 2026-07-12
-updated: 2026-07-13
+updated: 2026-07-14
 type: meta
 tags: [curriculum, study-log]
-sources: []
+sources:
+  - AGENTS.md
+  - wiki/index.md
+  - wiki/log.md
 status: growing
 confidence: high
 ---
@@ -88,8 +91,8 @@ confidence: high
 ## 9. 중간 프로젝트 공부
 
 - 사용자가 이미 직접 MD로 변환했으므로 변환·재작성하지 않는다.
-- 해당 MD의 민감정보 후보만 탐지해 보고한다.
-- 후보가 있더라도 사용자의 추가 지시 없이 원본이나 MD를 수정하지 않는다.
+- 민감정보 후보 탐지·사용자 확인·처리는 완료되었다.
+- 외부 원본이나 해당 MD는 이 작업 계획에서 수정하지 않는다.
 
 ## 10. Python
 
@@ -107,10 +110,10 @@ confidence: high
 
 1. `AGENTS.md`, `wiki/index.md`, `wiki/log.md`를 읽는다.
 2. 이 문서의 범위와 현재 `todo` 상태를 확인한다.
-3. 완료 기록에서 바로 다음 날짜별 대상 파일 1개만 확정하고, 해당 과목의 실제 외부 원본 TXT 경로와 대응 `raw/KoreaICT/` 경로를 먼저 매핑한다.
-4. 민감정보 검사 → 사용자 재개 지시 → 파일 1개 변환 → 고정점 검증 → 완료 기록 → 다음 세션 복붙 프롬프트 순서를 지킨다.
-5. 날짜별 변환 완료 전에는 총정리·ingest·lint를 시작하지 않는다. 이후 단계도 `확정 작업 순서`의 보류 규칙을 따른다.
-6. 다른 과목의 미완료 작업을 추측으로 포함하거나, 사용자 제외 범위를 건드리지 않는다.
+3. 5~10과목의 지정 TXT→MD·총정리와 9. 중간 프로젝트 공부의 민감정보 처리가 모두 완료되었음을 전제로 한다.
+4. 다음 단계인 과목별 고도화 ingest를 시작할 때는 대상 과목의 현재 `raw/KoreaICT/` MD와 기존 wiki 페이지를 먼저 대조한다.
+5. ingest가 끝난 과목부터 과목별 lint를 수행하고, 모든 과목의 lint가 끝난 뒤 전체 통합 lint를 수행한다.
+6. 사용자 제외 범위를 추측으로 포함하거나 `raw/` 원본을 수정하지 않는다.
 
 ## 관련 문서
 
@@ -159,3 +162,4 @@ confidence: high
 | 2026-07-13 | 7. Ci&CD Ci&CD 총정리 | 완료된 Ci&CD 날짜별 MD 3개: `2026.05.11(월) - 시작`~`2026.05.13(수)` | `raw/KoreaICT/7. Ci&CD/Ci&CD 총정리/Ci&CD 총정리.md` | 완료 (새 MD 생성) | 날짜별 흐름 근거 대조, Markdown escape, fence 20개(`java` 1·`properties` 2·`xml` 2·`yaml` 2·`shell` 7·`text` 3·`hcl` 1·`json` 1·`sql` 1) semantic inventory, prose-in-fence·code-outside-fence·분리 code unit 0건, scoped `git diff --check` exit 0 | 완료 / 다음 파일 자동 진행 안 함 |
 | 2026-07-13 | 8. Passwordless Passwordless 총정리 | 완료된 Passwordless 날짜별 원본/결과 MD 6개: `2026.05.14(목) - 시작`~`2026.05.21(목)` | `raw/KoreaICT/8. Passwordless/Passwordless 총정리/Passwordless 총정리.md` | 완료 (새 MD 생성) | 날짜별 전체 흐름 근거 대조, Markdown escape(흐름 화살표 5개 모두 `-\>`), fence 8개(`shell` 5·`properties` 1·`sql` 1·`json` 1) semantic inventory, prose-in-fence·code-outside-fence·분리 code unit 0건, scoped `git diff --check` exit 0 및 새 파일 `--no-index --check` 출력 없음 | 완료 / 다음 파일 자동 진행 안 함 |
 | 2026-07-13 | 10. Python Python 총정리 | 날짜별 MD 14개: `2026.06.19(금) - 시작`~`2026.07.08(수)` | `raw/KoreaICT/10. Python/Python 총정리/Python 총정리.md` | 완료 (새 MD 생성, 사용자 명시 지시) | 날짜별 전체 흐름 근거 대조, Markdown escape(흐름 화살표 4개 모두 `-\>`), fence 18개(`python` 18) semantic inventory, prose-in-fence·code-outside-fence·분리 code unit 0건, scoped `git diff --check` exit 0 및 새 파일 `--no-index --check` 출력 없음 | 완료 / 다음 파일 자동 진행 안 함 |
+| 2026-07-13 | 9. 중간 프로젝트 공부 민감정보 후보 처리 | 사용자가 이미 작성한 중간 프로젝트 MD 범위 | 해당 없음 (변환·재작성 대상 아님) | 완료 (문서 상태 동기화) | 민감정보 후보 탐지·사용자 확인·처리 완료 사실을 사용자 확인으로 반영함. 외부 원본과 `raw/`는 수정하지 않음 | 완료 / TXT→MD 정리 단계 종료, 다음: 과목별 고도화 ingest |

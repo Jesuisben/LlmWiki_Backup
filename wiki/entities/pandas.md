@@ -1,7 +1,7 @@
 ---
 title: Pandas
 created: 2026-07-01
-updated: 2026-07-03
+updated: 2026-07-13
 type: entity
 tags: [python]
 sources:
@@ -10,6 +10,8 @@ sources:
   - raw/KoreaICT/10. Python/2026.07.01(수)/2026.07.01(수).md
   - raw/KoreaICT/10. Python/2026.07.02(목)/2026.07.02(목).md
   - raw/KoreaICT/10. Python/2026.07.03(금)/2026.07.03(금).md
+  - raw/KoreaICT/10. Python/2026.07.06(월)/2026.07.06(월).md
+  - raw/KoreaICT/10. Python/2026.07.07(화)/2026.07.07(화).md
 status: growing
 confidence: high
 ---
@@ -22,7 +24,7 @@ Pandas는 Python에서 표 형태 데이터를 다루기 위한 대표 Third Par
 
 ## 이 위키에서의 맥락
 
-2026-06-29 수업에서 Pandas는 `pip install pandas`로 설치하는 외부 라이브러리로 소개되었다. 2026-06-30에는 Jupyter Notebook에서 `Series`와 `DataFrame`의 개념을 처음 다루며 Oracle 테이블 감각과 연결했고, 2026-07-01~07-02에는 DataFrame 조회·CSV 입출력·`concat`·`merge`·`pivot`으로 확장했다. 2026-07-03에는 `groupby`, `agg`, `transform`, `pd.cut`, matplotlib 그래프를 이용해 범주별 요약과 시각화까지 다뤘다.
+2026-06-29~07-03에는 Series/DataFrame, 조회·CSV·결합·집계·그래프를 익혔다. 07-06~07에는 공공 자전거·커피 매장 데이터를 DataFrame으로 만들고 문자열·결측치·index를 정리한 뒤 `merge`, `concat`, `pivot_table`, `groupby`와 지도·차트 분석에 적용했다.
 
 ## 핵심 기능 / 특징
 

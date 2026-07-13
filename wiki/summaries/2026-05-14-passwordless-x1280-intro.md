@@ -1,7 +1,7 @@
 ---
 title: 2026-05-14 Passwordless X1280 소개와 보안 배경
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-13
 type: summary
 tags: [auth, backend, project, curriculum]
 sources:
@@ -23,7 +23,8 @@ confidence: high
 - 기존 보안의 약점은 사용자가 ID/PW 같은 credential을 직접 입력한다는 점이다.
 - [[concepts/passwordless-x1280-auth-flow|Passwordless X1280 인증 흐름]]은 “사용자가 입력해서 증명하는 방식”을 줄이고, 온라인 시스템과 사용자 단말/앱이 서로 확인하는 구조로 바꾼다.
 - 인증은 신원인증, 계정인증, 연합인증으로 나눠 볼 수 있고, X1280은 주로 계정 로그인 영역의 비밀번호 대체·강화 기술로 등장했다.
-- FIDO/Passkey처럼 단말 내 센서를 쓰는 대역내 인증과 달리, 수업에서는 X1280을 스마트폰 앱 승인 기반의 대역외 인증으로 소개했다.
+- 이 날짜에는 X1280의 개념과 보안 배경을 다뤘다. Members 서비스 등록, Docker 설치, Spring 연동은 다음 날짜의 실습이다.
+- FIDO/Passkey처럼 단말 내 센서를 쓰는 대역내 인증과 달리, 수업에서는 X1280을 스마트폰 앱 승인 기반의 대역외 인증으로 소개했다. 이는 수업에서의 비교 설명이며, 제품 일반화로 확대하지 않는다.
 
 ## 핵심 개념
 

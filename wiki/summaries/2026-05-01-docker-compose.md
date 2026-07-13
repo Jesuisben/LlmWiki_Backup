@@ -1,7 +1,7 @@
 ---
 title: 2026-05-01 Docker Compose와 다중 컨테이너 실행
 created: 2026-07-06
-updated: 2026-07-09
+updated: 2026-07-13
 type: summary
 tags: [linux, docker, backend, curriculum, study-log]
 sources:

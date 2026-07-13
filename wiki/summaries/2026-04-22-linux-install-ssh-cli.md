@@ -1,7 +1,7 @@
 ---
 title: 2026-04-22 Linux 설치, SSH 접속, 기본 CLI
 created: 2026-07-06
-updated: 2026-07-09
+updated: 2026-07-13
 type: summary
 tags: [linux, backend, curriculum, study-log]
 sources:

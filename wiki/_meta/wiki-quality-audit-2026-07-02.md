@@ -1,7 +1,7 @@
 ---
 title: 2026-07-02 LLM Wiki 품질 감사 리포트
 created: 2026-07-02
-updated: 2026-07-09
+updated: 2026-07-14
 type: meta
 tags: [study-log]
 sources:
@@ -29,8 +29,9 @@ confidence: high
 
 ## 현재 전체 수치
 
-- `wiki/` Markdown 파일 수: 243개
-- `wiki/index.md`의 `Total pages` 표기: 241개
+- `wiki/` Markdown 파일 수: 260개 (`index.md`, `log.md` 포함)
+- 지식 페이지 수: 258개 (`index.md`, `log.md` 제외)
+- `wiki/index.md`의 `Total pages` 표기: 258개 — 실제 지식 페이지 수와 일치
 - index 누락 페이지: 0개
 - frontmatter 누락 페이지(`index.md`, `log.md` 제외): 0개
 - frontmatter `sources: []` 페이지: 0개
@@ -41,6 +42,28 @@ confidence: high
 - 고립 페이지 후보(본문 링크 기준, index/log 제외): 0개
 
 > 주의: 고립 페이지는 `index.md` 등록 여부가 아니라 다른 본문 페이지에서 링크되는지를 기준으로 한 보수적 후보다. 운영 문서나 최신 신규 페이지는 일시적으로 고립 후보가 될 수 있다.
+
+### 과목별 frontmatter 출처 누적 점검
+
+아래 수치는 각 지식 페이지의 frontmatter `sources`에서 직접 확인한 `raw/KoreaICT` 과목별 페이지 수와 고유 출처 경로 수다. 페이지 품질의 우열이나 전체 본문 언급 횟수를 뜻하지 않으며, 과목별 누적 출처가 실제 경로를 가리키는지 확인하는 구조 점검이다.
+
+| 과목 | 직접 출처가 있는 지식 페이지 | 고유 출처 경로 |
+|---|---:|---:|
+| 1. Java | 35 | 24 |
+| 2. Oracle | 28 | 18 |
+| 3. UI&UX | 1 | 1 |
+| 4. FrontEnd_BackEnd | 54 | 28 |
+| 5. Linux | 35 | 21 |
+| 6. AWS | 13 | 9 |
+| 7. Ci&CD | 20 | 8 |
+| 8. Passwordless | 15 | 17 |
+| 9. 중간 프로젝트 공부 | 5 | 1 |
+| 10. Python | 33 | 15 |
+
+- 실제로 존재하지 않는 frontmatter source 경로: 0개
+- 허용 목록 밖 태그, 깨진·모호한 위키링크, index 미등록: 모두 0개
+- 이전 `235`, `243/241`, `247/245` 수치는 당시 작업의 역사 기록으로 보존한다. 이 섹션의 `260/258`만 2026-07-14 전체 통합 lint 기준 현재값이다.
+- TXT→MD 단계 완료 상태는 [[_meta/txt-to-md-conversion-work-plan|TXT→MD 남은 과목 변환 작업 인계]]에서 확인한다.
 
 ## 이번 Java 잔여 후보 처리 내역
 
@@ -103,11 +126,11 @@ confidence: high
 
 사용자가 ingest는 직접 진행하기로 했으므로, 여기서는 잔여 후보만 유지한다.
 
-- `raw/KoreaICT/6. AWS/2026.05.06(수) - 시작/` ~ `raw/KoreaICT/6. AWS/2026.05.08(금)/` — 2026-07-03 course-material-aware ingest 후, 같은 날 사용자가 지정한 날짜별 MD 3개가 실제 수업 메모를 포함함을 재확인해 기존 AWS wiki를 날짜 MD + 교육자료 PDF/실습 관리 대장 기준으로 보강·정정 완료. AWS 총정리류는 제외함.
-- `raw/KoreaICT/7. Ci&CD/2026.05.11(월) - 시작/` ~ `raw/KoreaICT/7. Ci&CD/2026.05.13(수)/` — 2026-07-03 날짜별 MD 3개가 실제 수업 메모를 포함함을 확인하고, CI/CD 자동화·GitHub Actions·Spring Boot Docker/EC2 배포·Route 53/ALB/HTTPS 복습·Terraform·S3 파일 업로드를 wiki에 반영 완료.
-- `raw/KoreaICT/8. Passwordless/2026.05.14(목) - 시작/` ~ `raw/KoreaICT/8. Passwordless/2026.05.21(목)/` — 2026-07-03 날짜별 ingest 완료. X1280 인증 흐름, QR/앱 승인, Spring Boot 연동, REST API/Postman, AAM/APE·FilingBox 보안 제품군 흐름을 wiki에 반영함.
+- `raw/KoreaICT/6. AWS/2026.05.06(수) - 시작/` ~ `raw/KoreaICT/6. AWS/2026.05.08(금)/` — 2026-07-13 최신 날짜별 MD와 AWS 총정리 기준으로 재대조했다. Route 53/ACM/ALB 실습을 AWS 05-08에 배치한 이전 정리는 CI/CD 05-12 출처로 재귀속했고, AWS는 비용→VPC/EC2→Nginx/jar→RDS→자원 정리 흐름으로 고도화했다.
+- `raw/KoreaICT/7. Ci&CD/2026.05.11(월) - 시작/` ~ `raw/KoreaICT/7. Ci&CD/2026.05.13(수)/` — 2026-07-13 최신 날짜별 MD 3개와 `Ci&CD 총정리.md`를 다시 대조했다. Maven CI → Docker Hub image → EC2 container, Route 53/ACM DNS 검증 → ALB HTTPS Listener, Terraform IaC, S3 객체 → RDS 상품 데이터 흐름을 현재 원본에 맞춰 고도화했다. 80 listener와 `cd.yml` 구현 전문은 날짜 원본에 직접 근거가 없으므로 단정하지 않았다.
+- `raw/KoreaICT/8. Passwordless/2026.05.14(목) - 시작/` ~ `raw/KoreaICT/8. Passwordless/2026.05.21(목)/` — 2026-07-13 최신 날짜별 MD와 `Passwordless 총정리.md`를 다시 대조했다. X1280 인증·QR/앱 승인·Spring 샘플/MariaDB/Tomcat·REST API/Postman은 직접 수업 흐름으로, AAM/APE는 기업형 인증 관리, FilingBox/NAS/WORM은 저장소 보호 계층으로 분리해 고도화했다. React polling·JWT/세션·SecurityConfig 등은 9과목 중간 프로젝트 적용 가이드의 확장 설계로 귀속했다.
 - `raw/KoreaICT/10. Python/2026.06.19(금) - 시작/` ~ `raw/KoreaICT/10. Python/2026.06.30(화)/` — 2026-07-03 날짜별 ingest 완료. Python 설치·기초 문법·컬렉션·함수·모듈·표준 라이브러리·객체지향·예외 처리·파일/정규표현식·XML/JSON·Jupyter/Pandas 입문 흐름을 wiki에 반영함.
-- `raw/KoreaICT/10. Python/2026.07.01(수)/` ~ `raw/KoreaICT/10. Python/2026.07.03(금)/` — Pandas DataFrame 조회·입출력, 결합·재구조화, `groupby` 집계·시각화 흐름을 기존 Python/Pandas/Jupyter 페이지에 반영 완료.
+- `raw/KoreaICT/10. Python/2026.07.01(수)/` ~ `raw/KoreaICT/10. Python/2026.07.08(수)/` — Pandas DataFrame 조회·입출력, 결합·재구조화, `groupby` 집계·시각화에 이어 Open API·크롤링·지오코딩·Folium·한국어 텍스트 마이닝까지 최신 원본 기준으로 고도화했다.
 
 ## 앞으로의 고품질 ingest 기준
 

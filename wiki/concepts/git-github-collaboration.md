@@ -1,7 +1,7 @@
 ---
 title: GitHub 협업 흐름
 created: 2026-07-02
-updated: 2026-07-09
+updated: 2026-07-13
 type: concept
 tags: [github, ci-cd, project]
 sources:
@@ -66,11 +66,9 @@ git pull origin master
 - [[entities/github|GitHub]]
 - [[entities/source-tree|SourceTree]]
 
-## 5과목 현재 raw MD 기준 재검증 메모
+## 최신 원본 대조
 
-- 2026-07-09에 `raw/KoreaICT/5. Linux` 날짜별 MD 10개와 `Linux 총정리.md`를 기준으로 다시 대조했다.
-- 이 페이지는 단순 명령어 사전이 아니라 VM/SSH/CLI → 파일·권한 → Spring Boot jar 실행 → Docker network/volume/Dockerfile/Compose → GitHub branch/PR/conflict 흐름 속에서 읽어야 한다.
-- 운영 관점에서는 코드보다 IP/포트/방화벽/권한/컨테이너 네트워크·볼륨이 문제 원인일 수 있음을 함께 기억한다.
+2026-05-04의 init/status/add/commit/push/pull/clone과 05-06의 IntelliJ merge, branch PR, local 최신화, merge/rebase conflict 실습을 기준으로 보강했다. PR은 Git 명령이 아닌 GitHub의 검토·병합 단위다.
 
 ## 출처
 

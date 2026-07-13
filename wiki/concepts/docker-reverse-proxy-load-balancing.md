@@ -1,7 +1,7 @@
 ---
 title: Docker reverse proxy와 로드 밸런싱
 created: 2026-07-02
-updated: 2026-07-09
+updated: 2026-07-13
 type: concept
 tags: [linux, docker, backend]
 sources:
@@ -73,11 +73,9 @@ http {
 - [[concepts/aws-route53-load-balancer-https|AWS Route 53, Load Balancer, HTTPS 흐름]]
 - [[comparisons/clb-vs-alb|CLB vs ALB]]
 
-## 5과목 현재 raw MD 기준 재검증 메모
+## 최신 원본 대조
 
-- 2026-07-09에 `raw/KoreaICT/5. Linux` 날짜별 MD 10개와 `Linux 총정리.md`를 기준으로 다시 대조했다.
-- 이 페이지는 단순 명령어 사전이 아니라 VM/SSH/CLI → 파일·권한 → Spring Boot jar 실행 → Docker network/volume/Dockerfile/Compose → GitHub branch/PR/conflict 흐름 속에서 읽어야 한다.
-- 운영 관점에서는 코드보다 IP/포트/방화벽/권한/컨테이너 네트워크·볼륨이 문제 원인일 수 있음을 함께 기억한다.
+2026-04-30의 `proxy-net`, host nginx.conf mount, `upstream`과 `proxy_pass` 실습을 기준으로 보강했다. upstream은 backend 묶음 이름이고 proxy_pass가 전달을 수행하며, 이는 이후 AWS ALB의 작은 규모 선행 경험이다.
 
 ## 출처
 

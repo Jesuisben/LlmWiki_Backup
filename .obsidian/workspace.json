@@ -4,20 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "e2907b82c39940d0",
+        "id": "f765ccbc4fcac26b",
         "type": "tabs",
         "children": [
           {
-            "id": "26f6442552eade8c",
+            "id": "c02f655a1138901b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "wiki/_meta/txt-to-md-conversion-work-plan.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "txt-to-md-conversion-work-plan"
+            }
+          },
+          {
+            "id": "667aa7c1e21f32c3",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "그래프 뷰"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -74,7 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 306.5
+    "width": 305.5
   },
   "right": {
     "id": "dae217cf4dff2dfe",
@@ -175,11 +190,10 @@
       }
     ],
     "direction": "horizontal",
-    "width": 293.5
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
-      "code-files:Create Code File": false,
       "switcher:빠른 전환기 열기": false,
       "graph:그래프 뷰 열기": false,
       "canvas:새 캔버스 만들기": false,
@@ -188,50 +202,51 @@
       "command-palette:명령어 팔레트 열기": false,
       "bases:새 베이스 생성하기": false,
       "obsidian-git:Open Git source control": false,
+      "code-files:Create Code File": false,
       "pdf-plus:PDF++: Toggle auto-copy": false,
       "pdf-plus:PDF++: Toggle auto-focus": false,
       "pdf-plus:PDF++: Toggle auto-paste": false,
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "26f6442552eade8c",
+  "active": "667aa7c1e21f32c3",
   "lastOpenFiles": [
-    "raw/KoreaICT/10. Python/Python 총정리/Python 총정리.md",
-    "raw/KoreaICT/8. Passwordless/Passwordless 총정리/Passwordless 총정리.md",
-    "raw/KoreaICT/7. Ci&CD/Ci&CD 총정리/Ci&CD 총정리.md",
-    "raw/KoreaICT/6. AWS/AWS 총정리/AWS 총정리.md",
-    "raw/KoreaICT/5. Linux/Linux 총정리/Linux 총정리.md",
-    "raw/KoreaICT/11. Machine Learning/Machine Learning 총정리/Machine Learning 총정리.md",
-    "raw/KoreaICT/10. Python/2026.06.24(수)/2026.06.24(수).md",
-    "raw/KoreaICT/10. Python/2026.06.25(목)/2026.06.25(목).md",
-    "raw/KoreaICT/10. Python/2026.06.23(화)/2026.06.23(화).md",
-    "raw/KoreaICT/10. Python/2026.06.22(월)/2026.06.22(월).md",
-    "raw/KoreaICT/10. Python/2026.06.19(금) - 시작/2026.06.19(금) - 시작.md",
-    "raw/KoreaICT/10. Python/2026.06.26(금)/2026.06.26(금).md",
-    "raw/KoreaICT/8. Passwordless/2026.05.21(목)/2026.05.21(목).md",
-    "raw/KoreaICT/8. Passwordless/2026.05.20(수)/2026.05.20(수).md",
-    "raw/KoreaICT/8. Passwordless/2026.05.19(화)/2026.05.19(화).md",
-    "raw/KoreaICT/8. Passwordless/2026.05.18(월)/2026.05.18(월).md",
-    "raw/KoreaICT/8. Passwordless/2026.05.15(금)/2026.05.15(금).md",
-    "raw/KoreaICT/8. Passwordless/2026.05.14(목) - 시작/2026.05.14(목) - 시작.md",
     "wiki/_meta/txt-to-md-conversion-work-plan.md",
-    "raw/KoreaICT/9. 중간 프로젝트 공부/패스워드리스 적용/중간 프로젝트 패스워드리스 적용 가이드.md",
-    "raw/KoreaICT/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md",
-    "raw/KoreaICT/9. 중간 프로젝트 공부/CICD/Github_Secrets 예시.md",
-    "raw/KoreaICT/9. 중간 프로젝트 공부/CICD/JWT(RS256)생성 방법.md",
-    "raw/KoreaICT/7. Ci&CD/2026.05.11(월) - 시작/2026.05.11(월) - 시작.md",
+    "wiki/comparisons/beautifulsoup-vs-selenium.md",
+    "wiki/concepts/python-external-data-collection-pipeline.md",
+    "wiki/entities/folium.md",
+    "wiki/concepts/korean-text-mining-pipeline.md",
+    "wiki/entities/selenium.md",
+    "wiki/entities/konlpy.md",
+    "wiki/summaries/2026-07-08-python-subject-review.md",
+    "wiki/summaries/2026-07-07-python-web-crawling-geocoding-visualization.md",
+    "wiki/summaries/2026-07-08-python-korean-text-mining.md",
+    "wiki/summaries/2026-07-06-python-public-data-bicycle-analysis.md",
+    "wiki/comparisons/authentication-vs-authorization.md",
+    "wiki/concepts/nas-worm-storage-protection.md",
+    "wiki/entities/aam-ape.md",
+    "wiki/concepts/aws-resource-lifecycle-cost-management.md",
+    "wiki/summaries/2026-05-08-aws-rds-resource-cleanup.md",
+    "wiki/comparisons/host-port-forwarding-vs-docker-port-mapping.md",
+    "wiki/comparisons/virtual-machine-vs-docker-container.md",
+    "raw/KoreaICT/8. Passwordless/Passwordless 총정리/Passwordless 총정리.md",
+    "raw/KoreaICT/8. Passwordless/Passwordless 총정리",
+    "raw/KoreaICT/7. Ci&CD/Ci&CD 총정리/Ci&CD 총정리.md",
+    "raw/KoreaICT/7. Ci&CD/Ci&CD 총정리",
+    "raw/KoreaICT/11. Machine Learning/Machine Learning 총정리/Machine Learning 총정리.md",
+    "raw/KoreaICT/11. Machine Learning/Machine Learning 총정리",
     "raw/KoreaICT/11. Machine Learning/2026.07.13(월)/2026.07.13(월).md",
-    "raw/KoreaICT/1. Java/2026.02.26(목) - 시작/2026.02.26(목) - 시작.md",
-    "raw/KoreaICT/8. Passwordless/2026.05.14(목) - 시작",
     "raw/KoreaICT/11. Machine Learning/2026.07.13(월)",
+    "raw/KoreaICT/10. Python/Python 총정리/Python 총정리.md",
+    "raw/KoreaICT/10. Python/Python 총정리",
+    "raw/KoreaICT/1. Java/2026.02.26(목) - 시작/2026.02.26(목) - 시작.md",
+    "raw/KoreaICT/1. Java/2026.02.26(목) - 시작",
+    "raw/KoreaICT/5. Linux/Linux 총정리/Linux 총정리.md",
+    "raw/KoreaICT/5. Linux/2026.04.23(목)/2026.04.23(목).md",
     "raw/References/hermes-home-laptop-migration",
     "agent-skills/academy-txt-to-md-conversion/references",
     "agent-skills/academy-txt-to-md-conversion",
     "agent-skills",
-    "agent-rules",
-    "raw/KoreaICT/11. Machine Learning/2026.07.10(금)",
-    "wiki_status_tmp.txt",
-    "raw/References/markdown-grammar",
     "raw/KoreaICT/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/A.html&js&css/회원가입화면.png",
     "raw/KoreaICT/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/A.html&js&css/Koala.jpg",
     "raw/KoreaICT/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/A.html&js&css/fanta02.png",

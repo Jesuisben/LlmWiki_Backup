@@ -1,15 +1,17 @@
 ---
 title: Amazon RDS
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-13
 type: entity
 tags: [aws, backend]
 sources:
-  - raw/KoreaICT/6. AWS/2026.05.07(목)/2026.05.07(목).md
+
   - raw/KoreaICT/6. AWS/2026.05.08(금)/2026.05.08(금).md
   - raw/KoreaICT/6. AWS/교육 자료/cloud.01.AWS 교안(이론_미니파일).pdf
   - raw/KoreaICT/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf
   - raw/KoreaICT/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf
+  - raw/KoreaICT/7. Ci&CD/2026.05.13(수)/2026.05.13(수).md
+  - raw/KoreaICT/7. Ci&CD/Ci&CD 총정리/Ci&CD 총정리.md
 status: growing
 confidence: high
 ---
@@ -35,8 +37,8 @@ Oracle/MySQL과 Spring Boot를 배운 뒤, AWS 수업에서는 DB 서버를 직�
 
 ## 학습 이력
 
-- [[summaries/2026-05-07-aws-ec2-nginx-rds|2026-05-07]]: RDS MySQL 생성, EC2에서 mysql-client 접속, `shopping` DB와 `products` 테이블 구성, Spring Boot JDBC URL 연결.
-- [[summaries/2026-05-08-aws-route53-load-balancer-https|2026-05-08]]: 두 EC2와 Load Balancer 뒤의 애플리케이션이 하나의 RDS를 공유하는 데이터 계층으로 연결.
+- [[summaries/2026-05-08-aws-rds-resource-cleanup|2026-05-08]]: RDS MySQL 생성, EC2에서 mysql-client 접속, `shopping.products` 구성, Spring Boot JDBC URL 연결과 두 EC2의 공유 DB 확인.
+- [[summaries/2026-05-13-terraform-s3-file-upload|2026-05-13]]: S3에 파일을 저장하고 RDS MySQL `coffee.product`에는 상품 정보와 `image_url`을 저장하는 역할 분리를 확인.
 
 ## 보안 메모
 
@@ -52,7 +54,6 @@ Oracle/MySQL과 Spring Boot를 배운 뒤, AWS 수업에서는 DB 서버를 직�
 
 ## 출처
 
-- `raw/KoreaICT/6. AWS/2026.05.07(목)/2026.05.07(목).md`
 - `raw/KoreaICT/6. AWS/2026.05.08(금)/2026.05.08(금).md`
 - `raw/KoreaICT/6. AWS/교육 자료/cloud.01.AWS 교안(이론_미니파일).pdf`
 - `raw/KoreaICT/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf`

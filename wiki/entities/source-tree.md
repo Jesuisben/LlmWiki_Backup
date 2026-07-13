@@ -1,7 +1,7 @@
 ---
 title: SourceTree
 created: 2026-07-02
-updated: 2026-07-09
+updated: 2026-07-13
 type: entity
 tags: [github, ci-cd]
 sources:
@@ -46,11 +46,9 @@ Git Bash로 Git 명령어 흐름을 복습한 뒤, 같은 작업을 시각적으
 - [[entities/git|Git]]
 - [[entities/github|GitHub]]
 
-## 5과목 현재 raw MD 기준 재검증 메모
+## 최신 원본 대조
 
-- 2026-07-09에 `raw/KoreaICT/5. Linux` 날짜별 MD 10개와 `Linux 총정리.md`를 기준으로 다시 대조했다.
-- 이 페이지는 단순 명령어 사전이 아니라 VM/SSH/CLI → 파일·권한 → Spring Boot jar 실행 → Docker network/volume/Dockerfile/Compose → GitHub branch/PR/conflict 흐름 속에서 읽어야 한다.
-- 운영 관점에서는 코드보다 IP/포트/방화벽/권한/컨테이너 네트워크·볼륨이 문제 원인일 수 있음을 함께 기억한다.
+2026-05-04에서 SourceTree가 Git Bash로 만든 repository의 stage/commit/push/pull과 history를 시각화한 도구임을 구체화했다. GUI 버튼은 git status/add/commit/pull/push와 대응한다.
 
 ## 출처
 

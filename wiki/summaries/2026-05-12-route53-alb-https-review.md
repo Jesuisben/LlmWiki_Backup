@@ -2,11 +2,12 @@
 title: 2026-05-12 Route 53, ALB, HTTPS 복습과 도메인 배포
 author: Hermes Agent
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-13
 type: summary
 tags: [aws, ci-cd, backend, curriculum]
 sources:
   - raw/KoreaICT/7. Ci&CD/2026.05.12(화)/2026.05.12(화).md
+  - raw/KoreaICT/7. Ci&CD/Ci&CD 총정리/Ci&CD 총정리.md
   - raw/KoreaICT/7. Ci&CD/교육 자료/cloud.02.AWS 교안(실습).pdf
   - raw/KoreaICT/7. Ci&CD/교육 자료/cloud.03.AWS 교안(이론).pdf
 status: growing
@@ -75,7 +76,7 @@ Route 53 hosted zone에서 루트 도메인과 `www` subdomain 각각에 A/Alias
 3. ACM 인증서 요청 후 DNS 검증 CNAME 생성.
 4. EC2 두 대에 Nginx 정적 페이지 배포.
 5. Target Group 생성 후 2A/2C EC2 등록.
-6. ALB 생성, 80/443 listener와 ACM 인증서 연결.
+6. ALB 생성, HTTPS listener에 ACM 인증서 연결. 날짜 원본은 HTTPS listener 구성을 직접 기록하므로 HTTP 80 listener의 별도 구성 여부는 단정하지 않는다.
 7. Route 53 A/Alias record로 ALB 연결.
 8. 도메인과 HTTPS 접속 확인.
 

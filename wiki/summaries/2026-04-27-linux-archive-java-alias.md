@@ -1,7 +1,7 @@
 ---
 title: 2026-04-27 Linux 압축, 다운로드, Java 실행 준비
 created: 2026-07-06
-updated: 2026-07-09
+updated: 2026-07-13
 type: summary
 tags: [linux, backend, curriculum, study-log]
 sources:

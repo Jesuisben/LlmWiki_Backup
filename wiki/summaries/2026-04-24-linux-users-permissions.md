@@ -1,7 +1,7 @@
 ---
 title: 2026-04-24 Linux 사용자, 그룹, 권한
 created: 2026-07-06
-updated: 2026-07-09
+updated: 2026-07-13
 type: summary
 tags: [linux, backend, curriculum, study-log]
 sources:

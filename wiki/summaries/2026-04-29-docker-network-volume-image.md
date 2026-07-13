@@ -1,7 +1,7 @@
 ---
 title: 2026-04-29 Docker 네트워크, 볼륨, 사용자 정의 이미지
 created: 2026-07-06
-updated: 2026-07-09
+updated: 2026-07-13
 type: summary
 tags: [linux, docker, backend, curriculum, study-log]
 sources:

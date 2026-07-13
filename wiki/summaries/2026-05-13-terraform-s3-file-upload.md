@@ -1,11 +1,12 @@
 ---
 title: 2026-05-13 Terraform과 S3 파일 업로드
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-13
 type: summary
 tags: [aws, ci-cd, spring-boot, backend, curriculum]
 sources:
   - raw/KoreaICT/7. Ci&CD/2026.05.13(수)/2026.05.13(수).md
+  - raw/KoreaICT/7. Ci&CD/Ci&CD 총정리/Ci&CD 총정리.md
   - raw/KoreaICT/7. Ci&CD/교육 자료/cloud.02.AWS 교안(실습).pdf
   - raw/KoreaICT/7. Ci&CD/교육 자료/cloud.03.AWS 교안(이론).pdf
 status: growing
@@ -96,9 +97,9 @@ RDS MySQL product table
 3. `main.tf`로 VPC/Subnet/IGW/Route Table/Security Group/EC2/EIP를 선언.
 4. `terraform init`, `terraform plan`, `terraform apply`로 리소스 생성.
 5. S3 bucket 생성과 IAM 사용자 권한 설정.
-6. Spring Boot `application.properties`에 RDS/S3 설정 추가. 실제 값은 코드 저장소에 직접 넣지 않는 것이 안전하다.
+6. Spring Boot `application.properties`에 RDS/S3 설정을 역할별로 추가. 실제 값은 코드 저장소에 직접 넣지 않는 것이 안전하다.
 7. S3 bucket policy를 조정해 업로드와 조회를 테스트.
-8. MySQL Workbench에서 `product` table의 `image_url` 저장 결과 확인.
+8. MySQL Workbench에서 `coffee` DB의 `product` table을 조회해 S3 파일과 별도로 `image_url`을 포함한 상품 행이 저장됐는지 확인.
 
 ## 헷갈린 점 / 질문
 

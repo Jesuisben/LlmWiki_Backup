@@ -1,7 +1,7 @@
 ---
 title: 2026-04-23 Linux 파일·디렉터리와 vi 편집기
 created: 2026-07-06
-updated: 2026-07-09
+updated: 2026-07-13
 type: summary
 tags: [linux, backend, curriculum, study-log]
 sources:

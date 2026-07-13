@@ -1,7 +1,7 @@
 ---
 title: Jupyter Notebook
 created: 2026-07-01
-updated: 2026-07-03
+updated: 2026-07-13
 type: entity
 tags: [python]
 sources:
@@ -22,7 +22,7 @@ Jupyter Notebook은 코드 셀, 실행 결과, 표, 그래프, 설명을 한 화
 
 ## 이 위키에서의 맥락
 
-2026-06-29 수업에서는 `jupyter notebook` 명령으로 D 드라이브에서 노트북 서버를 실행하고, `myju.cmd`를 만들어 `D:\PythonProject\python_project`에서 바로 Jupyter를 열 수 있게 하는 흐름을 배웠다. 2026-06-30부터는 `ch13_pandas` 폴더에서 Pandas `Series`와 `DataFrame` 실습을 진행했다. 2026-07-03에는 `Chap08.Data Grouping.ipynb` 템플릿을 참고해 새 노트북에 직접 타이핑하며 `groupby` 집계와 그래프 결과를 셀 단위로 확인했다.
+2026-06-29부터 07-03까지 Pandas 실습을 셀 단위로 진행했다. 07-06에는 VS Code에서 `.ipynb`를 열어 Python/Jupyter kernel을 선택하는 실행 환경도 확인했다. VS Code는 편집·실행 도구이고 Jupyter Notebook은 셀·출력·메타데이터를 담는 노트북 형식/환경이라는 점을 구분한다.
 
 ## 핵심 기능 / 특징
 

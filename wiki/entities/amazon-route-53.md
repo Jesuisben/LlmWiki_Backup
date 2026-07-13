@@ -1,14 +1,12 @@
 ---
 title: Amazon Route 53
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-13
 type: entity
 tags: [aws, backend]
 sources:
-  - raw/KoreaICT/6. AWS/2026.05.08(금)/2026.05.08(금).md
-  - raw/KoreaICT/6. AWS/교육 자료/AWS 기초 용어.pdf
-  - raw/KoreaICT/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf
-  - raw/KoreaICT/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf
+  - raw/KoreaICT/7. Ci&CD/2026.05.12(화)/2026.05.12(화).md
+  - raw/KoreaICT/7. Ci&CD/Ci&CD 총정리/Ci&CD 총정리.md
 status: growing
 confidence: high
 ---
@@ -21,7 +19,7 @@ Amazon Route 53은 AWS의 DNS 서비스다. 도메인 이름을 IP 주소나 AWS
 
 ## 이 위키에서의 맥락
 
-EC2 Public IP로 직접 접속하던 실습을 실제 서비스 주소 형태로 바꾸기 위해 Route 53이 등장했다. 수업에서는 외부 도메인 등록기관의 NS를 Route 53으로 연결하고, root domain과 `www` subdomain이 CLB/ALB를 가리키도록 설정했다.
+6. AWS에서는 Route 53 메뉴만 확인했고, 실제 도메인 등록기관 NS 연결, ACM DNS 검증, ALB Alias record 구성은 7. CI/CD의 2026-05-12에 수행했다.
 
 ## 핵심 기능 / 특징
 
@@ -34,7 +32,7 @@ EC2 Public IP로 직접 접속하던 실습을 실제 서비스 주소 형태로
 
 ## 학습 이력
 
-- [[summaries/2026-05-08-aws-route53-load-balancer-https|2026-05-08]]: Route 53 hosted zone, 도메인 등록기관 NS 변경, ACM DNS 검증, Load Balancer record 연결.
+- [[summaries/2026-05-12-route53-alb-https-review|2026-05-12]]: Route 53 hosted zone, 도메인 등록기관 NS 변경, ACM DNS 검증 CNAME, 발급된 인증서를 연결한 ALB HTTPS Listener, Load Balancer Alias A record 연결.
 
 ## 관련 개념
 
@@ -45,7 +43,4 @@ EC2 Public IP로 직접 접속하던 실습을 실제 서비스 주소 형태로
 
 ## 출처
 
-- `raw/KoreaICT/6. AWS/2026.05.08(금)/2026.05.08(금).md`
-- `raw/KoreaICT/6. AWS/교육 자료/AWS 기초 용어.pdf`
-- `raw/KoreaICT/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf`
-- `raw/KoreaICT/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf`
+- `raw/KoreaICT/7. Ci&CD/2026.05.12(화)/2026.05.12(화).md`

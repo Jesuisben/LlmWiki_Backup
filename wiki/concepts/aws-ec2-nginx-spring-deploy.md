@@ -1,11 +1,11 @@
 ---
 title: AWS EC2에서 Nginx와 Spring Boot 배포
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-13
 type: concept
 tags: [aws, linux, spring-boot, backend]
 sources:
-  - raw/KoreaICT/6. AWS/2026.05.07(목)/2026.05.07(목).md
+
   - raw/KoreaICT/6. AWS/2026.05.08(금)/2026.05.08(금).md
   - raw/KoreaICT/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf
   - raw/KoreaICT/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf
@@ -73,17 +73,16 @@ java -jar shopping-0.0.1-SNAPSHOT.jar
 
 ## 관련 개념
 
-- [[summaries/2026-05-07-aws-ec2-nginx-rds|2026-05-07 AWS EC2, Nginx, Spring Boot, RDS 연결]]
-- [[summaries/2026-05-08-aws-route53-load-balancer-https|2026-05-08 AWS Route 53, Load Balancer, HTTPS]]
+- [[summaries/2026-05-08-aws-rds-resource-cleanup|2026-05-08 AWS RDS MySQL 연결과 자원 정리]]
 - [[entities/amazon-ec2|Amazon EC2]]
 - [[concepts/aws-cloud-vpc-networking|AWS Cloud와 VPC 네트워킹]]
-- [[concepts/aws-route53-load-balancer-https|AWS Route 53, Load Balancer, HTTPS 흐름]]
+- [[summaries/2026-05-12-route53-alb-https-review|2026-05-12 Route 53, ALB, HTTPS]]
 - [[entities/spring-boot|Spring Boot]]
 - [[entities/maven|Maven]]
 
 ## 출처
 
-- `raw/KoreaICT/6. AWS/2026.05.07(목)/2026.05.07(목).md`
+
 - `raw/KoreaICT/6. AWS/2026.05.08(금)/2026.05.08(금).md`
 - `raw/KoreaICT/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf`
 - `raw/KoreaICT/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf`

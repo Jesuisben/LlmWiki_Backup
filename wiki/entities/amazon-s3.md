@@ -1,11 +1,12 @@
 ---
 title: Amazon S3
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-13
 type: entity
 tags: [aws]
 sources:
   - raw/KoreaICT/7. Ci&CD/2026.05.13(수)/2026.05.13(수).md
+  - raw/KoreaICT/7. Ci&CD/Ci&CD 총정리/Ci&CD 총정리.md
   - raw/KoreaICT/7. Ci&CD/교육 자료/cloud.02.AWS 교안(실습).pdf
 status: growing
 confidence: high
@@ -36,7 +37,7 @@ S3: 이미지/첨부 파일 같은 객체 파일 저장
 
 ## 학습 이력
 
-- [[summaries/2026-05-13-terraform-s3-file-upload|2026-05-13]]: S3 bucket 생성, IAM 사용자/권한, Spring Boot `S3Service`, `UploadController`, RDS `image_url` 저장 흐름을 실습했다.
+- [[summaries/2026-05-13-terraform-s3-file-upload|2026-05-13]]: S3 bucket 생성, IAM 사용자/권한, Spring Boot `S3Service`, `UploadController`, RDS `coffee.product`의 `image_url` 저장 흐름을 실습했다.
 
 ## 프로젝트/면접 관점
 

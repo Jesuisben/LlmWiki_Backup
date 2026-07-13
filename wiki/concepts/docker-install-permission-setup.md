@@ -1,7 +1,7 @@
 ---
 title: Docker 설치와 권한 설정
 created: 2026-07-02
-updated: 2026-07-09
+updated: 2026-07-13
 type: concept
 tags: [linux, docker, backend]
 sources:

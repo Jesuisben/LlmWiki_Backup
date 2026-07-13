@@ -1,7 +1,7 @@
 ---
 title: Docker
 created: 2026-07-02
-updated: 2026-07-09
+updated: 2026-07-13
 type: entity
 tags: [linux, docker, backend]
 sources:
@@ -14,6 +14,8 @@ sources:
   - raw/KoreaICT/5. Linux/교육 자료/Docker/Docker 교안(실습).pdf
   - raw/KoreaICT/5. Linux/교육 자료/docker image를 docker hub에 업로드 하기.md
   - raw/KoreaICT/5. Linux/교육 자료/도커 컴포즈 종합 실습.md
+  - raw/KoreaICT/7. Ci&CD/2026.05.11(월) - 시작/2026.05.11(월) - 시작.md
+  - raw/KoreaICT/7. Ci&CD/Ci&CD 총정리/Ci&CD 총정리.md
 status: growing
 confidence: high
 ---
@@ -44,6 +46,7 @@ Linux에서 Spring Boot를 직접 빌드·실행한 뒤, 같은 실행 환경을
 - [[summaries/2026-04-29-docker-network-volume-image|2026-04-29]]: network, volume, `exec`, `cp`, `commit`.
 - [[summaries/2026-04-30-dockerfile-spring-load-balancing|2026-04-30]]: Dockerfile, Spring Boot image, reverse proxy.
 - [[summaries/2026-05-01-docker-compose|2026-05-01]]: Docker Compose.
+- [[summaries/2026-05-11-cicd-github-actions-spring-boot|2026-05-11]]: GitHub Actions가 만든 Spring Boot image를 Docker Hub에 저장하고 EC2에서 pull/run하는 CI/CD 배포 단위로 확장.
 
 ## 관련 개념
 
@@ -52,11 +55,9 @@ Linux에서 Spring Boot를 직접 빌드·실행한 뒤, 같은 실행 환경을
 - [[concepts/docker-compose-manifest|Docker Compose manifest]]
 - [[concepts/dockerfile-vs-compose|Dockerfile vs Docker Compose]]
 
-## 5과목 현재 raw MD 기준 재검증 메모
+## 최신 원본 대조
 
-- 2026-07-09에 `raw/KoreaICT/5. Linux` 날짜별 MD 10개와 `Linux 총정리.md`를 기준으로 다시 대조했다.
-- 이 페이지는 단순 명령어 사전이 아니라 VM/SSH/CLI → 파일·권한 → Spring Boot jar 실행 → Docker network/volume/Dockerfile/Compose → GitHub branch/PR/conflict 흐름 속에서 읽어야 한다.
-- 운영 관점에서는 코드보다 IP/포트/방화벽/권한/컨테이너 네트워크·볼륨이 문제 원인일 수 있음을 함께 기억한다.
+Docker의 학습 이력을 04-28 image/container/port mapping → 04-29 network·mount·commit → 04-30 Dockerfile·reverse proxy → 05-01 Compose → 05-11 Docker Hub registry·EC2 container 배포로 명시했다. 따라서 Docker는 단일 컨테이너 명령어가 아니라 실행 구성을 재현하고 배포하는 도구다.
 
 ## 출처
 

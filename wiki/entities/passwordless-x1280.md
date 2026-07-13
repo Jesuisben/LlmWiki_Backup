@@ -1,7 +1,7 @@
 ---
 title: Passwordless X1280
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-13
 type: entity
 tags: [auth, backend, project]
 sources:
@@ -38,15 +38,18 @@ Passwordless X1280은 비밀번호 입력 대신 인증 서버와 모바일 앱 
 - [[summaries/2026-05-14-passwordless-x1280-intro|2026-05-14]]: 보안 위협과 X1280 개념 소개.
 - [[summaries/2026-05-15-passwordless-x1280-docker-service|2026-05-15]]: Docker 통합 서버, 서비스 등록, `setting.ap`, 관리자 페이지.
 - [[summaries/2026-05-18-passwordless-x1280-server-spring-sample|2026-05-18]]: Spring 샘플 앱과 MariaDB를 이용한 등록/로그인/해제 확인.
-- [[summaries/2026-05-19-aam-ape-authentication-filingbox|2026-05-19]]: 인증/인가/SSO/상호인증과 AAM/APE 제품군 흐름.
 - [[summaries/2026-05-21-passwordless-x1280-rest-api|2026-05-21]]: Postman으로 REST API 응답 구조 확인.
 - [[summaries/2026-05-middle-project-cicd-passwordless-guide|중간 프로젝트 CI/CD·배포·Passwordless 가이드]]: 중간 프로젝트 Spring Boot/React 로그인에 X1280을 붙이는 적용 흐름.
+
+05-19의 AAM/APE는 기업형 인증 관리 실습이고, 05-20의 FilingBox는 NAS/WORM 저장소 보호 실습이다. 둘은 같은 과목의 보안 확장 흐름이지만 X1280 Auth/User Connection/Push Request 서버 구성 요소로 동일시하지 않는다.
 
 ## 관련 개념
 
 - [[concepts/passwordless-x1280-auth-flow|Passwordless X1280 인증 흐름]]
 - [[concepts/passwordless-qr-app-approval|Passwordless QR/앱 승인 흐름]]
 - [[concepts/spring-boot-passwordless-integration|Spring Boot Passwordless 인증 연동]]
+- [[entities/aam-ape|AAM과 APE]]
+- [[concepts/nas-worm-storage-protection|NAS·WORM 저장소 보호]]
 - [[comparisons/passwordless-vs-password-login|Passwordless 로그인 vs 비밀번호 로그인]]
 
 ## 출처

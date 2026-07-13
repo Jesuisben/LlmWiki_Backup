@@ -1,7 +1,7 @@
 ---
 title: 2026-05-20 FilingBox GIGA/MEGA와 WORM 스토리지
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-13
 type: summary
 tags: [auth, linux, project, curriculum]
 sources:
@@ -30,7 +30,7 @@ confidence: high
 
 ## 핵심 개념
 
-- [[concepts/passwordless-x1280-auth-flow|Passwordless X1280 인증 흐름]]
+- [[concepts/nas-worm-storage-protection|NAS·WORM 저장소 보호]]
 - [[summaries/2026-05-19-aam-ape-authentication-filingbox|2026-05-19 인증 기본과 AAM/APE 통합 설치]]
 - [[concepts/linux-users-permissions|Linux 사용자·그룹·권한]]
 
@@ -45,6 +45,8 @@ FilingBox GIGA OVA import
 → Windows 네트워크 드라이브 연결
 → 용량 확장 시 LVM/파일시스템 확장 확인
 ```
+
+GIGA 실습은 사용자·그룹·공유 폴더와 RO/RW/AO/WORM 모드를 설정한 뒤 Windows 네트워크 드라이브로 접근하는 흐름이었다. MEGA는 장치 관리자, MAC/IP 등록, Windows Client 연결을 중심으로 다뤘다. 두 제품을 X1280 인증 서버의 구성 요소로 쓰지 않고, 인증 이후의 데이터 보존·접근 제어 계층으로 구분한다.
 
 ## 헷갈린 점 / 질문
 

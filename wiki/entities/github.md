@@ -1,7 +1,7 @@
 ---
 title: GitHub
 created: 2026-07-02
-updated: 2026-07-09
+updated: 2026-07-13
 type: entity
 tags: [github, ci-cd]
 sources:
@@ -48,11 +48,9 @@ Java 수업 초기에 `MyJava` 원격 저장소를 만들며 처음 등장했다
 - [[concepts/github-actions-workflow|GitHub Actions workflow]]
 - [[concepts/github-actions-secrets-deploy|GitHub Actions Secrets 기반 배포]]
 
-## 5과목 현재 raw MD 기준 재검증 메모
+## 최신 원본 대조
 
-- 2026-07-09에 `raw/KoreaICT/5. Linux` 날짜별 MD 10개와 `Linux 총정리.md`를 기준으로 다시 대조했다.
-- 이 페이지는 단순 명령어 사전이 아니라 VM/SSH/CLI → 파일·권한 → Spring Boot jar 실행 → Docker network/volume/Dockerfile/Compose → GitHub branch/PR/conflict 흐름 속에서 읽어야 한다.
-- 운영 관점에서는 코드보다 IP/포트/방화벽/권한/컨테이너 네트워크·볼륨이 문제 원인일 수 있음을 함께 기억한다.
+2026-05-04의 remote repository, 05-06의 Pull Request·merge·activity·branch 협업을 명시해 GitHub를 백업 장소가 아니라 검토·합의·공유 공간으로 정리했다. 이어 2026-05-11에는 `master` push가 GitHub Actions의 trigger가 되고, Repository Secrets가 Docker Hub 인증·EC2 접속 정보·image/container 이름을 workflow에 안전하게 전달하는 출발점이 되었다. GitHub는 build와 배포 자동화의 제어면으로도 확장된다.
 
 ## 출처
 
