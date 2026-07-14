@@ -4,17 +4,105 @@
     "type": "split",
     "children": [
       {
-        "id": "948c8174c18da98a",
+        "id": "5d27b6ac3b78aacc",
         "type": "tabs",
         "children": [
           {
-            "id": "de1c467607d257fb",
+            "id": "1a7cb16ccb996dde",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "raw/KoreaICT/10. Python/2026.06.30(화)/2026.06.30(화).md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "2026.06.30(화)"
+            }
+          },
+          {
+            "id": "413bc9b690ae5a5e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "raw/KoreaICT/10. Python/2026.07.01(수)/2026.07.01(수).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026.07.01(수)"
+            }
+          },
+          {
+            "id": "f4c2a686289c807c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "raw/KoreaICT/10. Python/2026.07.02(목)/2026.07.02(목).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026.07.02(목)"
+            }
+          },
+          {
+            "id": "6f6e621fcf714723",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "raw/KoreaICT/10. Python/2026.07.03(금)/2026.07.03(금).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026.07.03(금)"
+            }
+          },
+          {
+            "id": "508dbe9128ded052",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "raw/KoreaICT/10. Python/2026.07.06(월)/2026.07.06(월).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026.07.06(월)"
+            }
+          },
+          {
+            "id": "3df00d2a8ac8b985",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "raw/KoreaICT/10. Python/2026.07.07(화)/2026.07.07(화).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026.07.07(화)"
+            }
+          },
+          {
+            "id": "a4a2a483b2f8c892",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "raw/KoreaICT/10. Python/2026.07.08(수)/2026.07.08(수).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026.07.08(수)"
             }
           }
         ]
@@ -175,7 +263,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 293.5
+    "width": 276.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -194,8 +282,19 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "26ea1fd6799a6e07",
+  "active": "1a7cb16ccb996dde",
   "lastOpenFiles": [
+    "raw/KoreaICT/10. Python/2026.06.29(월)/2026.06.29(월).md",
+    "raw/KoreaICT/10. Python/2026.06.26(금)/2026.06.26(금).md",
+    "raw/KoreaICT/10. Python/2026.06.25(목)/2026.06.25(목).md",
+    "raw/KoreaICT/10. Python/2026.06.30(화)/2026.06.30(화).md",
+    "raw/KoreaICT/10. Python/2026.07.01(수)/2026.07.01(수).md",
+    "raw/KoreaICT/10. Python/2026.07.08(수)/2026.07.08(수).md",
+    "raw/KoreaICT/10. Python/2026.07.07(화)/2026.07.07(화).md",
+    "raw/KoreaICT/10. Python/2026.07.06(월)/2026.07.06(월).md",
+    "raw/KoreaICT/10. Python/2026.07.03(금)/2026.07.03(금).md",
+    "raw/KoreaICT/10. Python/2026.07.02(목)/2026.07.02(목).md",
+    "raw/KoreaICT/11. Machine Learning/2026.07.14(화)/2026.07.14(화).md",
     "raw/KoreaICT/11. Machine Learning/교육 자료/데이터 셋 만들기.txt",
     "raw/KoreaICT/11. Machine Learning/교육 자료/머신러닝/Utility/__pycache__/keras_graph_util.cpython-311.pyc",
     "raw/KoreaICT/11. Machine Learning/교육 자료/머신러닝/Utility/__pycache__",
@@ -206,7 +305,6 @@
     "raw/KoreaICT/11. Machine Learning/교육 자료/머신러닝/k.national/toji-word2vec.py",
     "raw/KoreaICT/11. Machine Learning/교육 자료/머신러닝/k.national/sentiment_analysis_02.py",
     "raw/KoreaICT/11. Machine Learning/교육 자료/머신러닝/k.national/sentiment_analysis_01.py",
-    "raw/KoreaICT/11. Machine Learning/교육 자료/머신러닝/k.national/ngram_test.py",
     "raw/KoreaICT/11. Machine Learning/교육 자료/머신러닝/datasets/cats_and_dogs/dog.999.jpg",
     "raw/KoreaICT/11. Machine Learning/교육 자료/머신러닝/datasets/cats_and_dogs/dog.998.jpg",
     "raw/KoreaICT/11. Machine Learning/교육 자료/머신러닝/datasets/cats_and_dogs/dog.997.jpg",
@@ -217,7 +315,6 @@
     "raw/KoreaICT/11. Machine Learning/교육 자료/머신러닝/datasets/cats_and_dogs/dog.992.jpg",
     "raw/KoreaICT/11. Machine Learning/교육 자료/머신러닝/datasets/cats_and_dogs/dog.991.jpg",
     "raw/KoreaICT/11. Machine Learning/교육 자료/머신러닝/datasets/cats_and_dogs/dog.990.jpg",
-    "raw/KoreaICT/11. Machine Learning/2026.07.14(화)/2026.07.14(화).md",
     "raw/KoreaICT/10. Python/Python 총정리/Python 총정리.md",
     "wiki/concepts/korean-text-mining-pipeline.md",
     "2026-07-14.md",
@@ -233,15 +330,6 @@
     "wiki/_meta/wiki-log-archive-2026-06.md",
     "wiki/_meta/llm-wiki-operating-model.md",
     "wiki/_meta/llm-wiki-command-reference.md",
-    "wiki/_meta/hermes-home-laptop-git-obsidian-setup.md",
-    "wiki/_meta/hermes-default-profile-mode-system.md",
-    "wiki/_meta/agent-coding-guidelines.md",
-    "raw/References/ai-instructions/llm-wiki-command-cheatsheet.md",
-    "raw/KoreaICT/11. Machine Learning/2026.00.00(00)/2026.00.00(00).md",
-    "wiki/summaries/2026-07-08-python-subject-review.md",
-    "wiki/summaries/2026-07-08-python-korean-text-mining.md",
-    "wiki/summaries/2026-07-07-python-web-crawling-geocoding-visualization.md",
-    "wiki/summaries/2026-07-06-python-public-data-bicycle-analysis.md",
     "무제.canvas"
   ]
 }
