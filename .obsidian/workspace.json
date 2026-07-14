@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1133931dc499ef6e",
+        "id": "fe3a37093b6944b4",
         "type": "tabs",
         "children": [
           {
-            "id": "4a6d17433828269a",
+            "id": "0a9ba4c577a1737d",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -74,7 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 305.5
+    "width": 282.5
   },
   "right": {
     "id": "dae217cf4dff2dfe",
@@ -175,10 +175,11 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 293.5
   },
   "left-ribbon": {
     "hiddenItems": {
+      "code-files:Create Code File": false,
       "switcher:빠른 전환기 열기": false,
       "graph:그래프 뷰 열기": false,
       "canvas:새 캔버스 만들기": false,
@@ -187,51 +188,89 @@
       "command-palette:명령어 팔레트 열기": false,
       "bases:새 베이스 생성하기": false,
       "obsidian-git:Open Git source control": false,
-      "code-files:Create Code File": false,
       "pdf-plus:PDF++: Toggle auto-copy": false,
       "pdf-plus:PDF++: Toggle auto-focus": false,
       "pdf-plus:PDF++: Toggle auto-paste": false,
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "4a6d17433828269a",
+  "floating": {
+    "id": "424438bfc30dc899",
+    "type": "floating",
+    "children": [
+      {
+        "id": "205184868bfcb970",
+        "type": "window",
+        "children": [
+          {
+            "id": "d00669d6fc165714",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "3947e9ea209049c4",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "raw/KoreaICT/11. Machine Learning/2026.07.14(화)/2026.07.14(화).md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "2026.07.14(화)"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 1080,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "7c29ee296c96d9f0",
   "lastOpenFiles": [
-    "wiki/_meta/txt-to-md-conversion-work-plan.md",
-    "wiki/index.md",
-    "wiki/comparisons/beautifulsoup-vs-selenium.md",
-    "wiki/concepts/python-external-data-collection-pipeline.md",
-    "wiki/entities/folium.md",
     "wiki/concepts/korean-text-mining-pipeline.md",
-    "wiki/entities/selenium.md",
-    "wiki/entities/konlpy.md",
+    "raw/KoreaICT/11. Machine Learning/2026.07.14(화)/2026.07.14(화).md",
+    "2026-07-14.md",
+    "wiki/summaries/2026-02-26-orientation.md",
+    "wiki/concepts/aws-cloud-vpc-networking.md",
+    "wiki/comparisons/array-vs-collection.md",
+    "wiki/_meta/wiki-quality-audit-2026-07-02.md",
+    "wiki/_meta/wiki-log-archive-2026-07-02-part-2.md",
+    "wiki/_meta/wiki-log-archive-2026-07-02-part-1.md",
+    "wiki/_meta/wiki-log-archive-2026-07-02.md",
+    "wiki/_meta/wiki-log-archive-2026-07-01.md",
+    "wiki/_meta/wiki-log-archive-2026-07.md",
+    "wiki/_meta/wiki-log-archive-2026-06.md",
+    "wiki/_meta/llm-wiki-operating-model.md",
+    "wiki/_meta/llm-wiki-command-reference.md",
+    "wiki/_meta/hermes-home-laptop-git-obsidian-setup.md",
+    "wiki/_meta/hermes-default-profile-mode-system.md",
+    "wiki/_meta/agent-coding-guidelines.md",
+    "raw/References/ai-instructions/llm-wiki-command-cheatsheet.md",
+    "무제.base",
+    "raw/KoreaICT/11. Machine Learning/2026.00.00(00)/2026.00.00(00).md",
+    "raw/KoreaICT/11. Machine Learning/2026.07.14(화)",
     "wiki/summaries/2026-07-08-python-subject-review.md",
-    "wiki/summaries/2026-07-07-python-web-crawling-geocoding-visualization.md",
     "wiki/summaries/2026-07-08-python-korean-text-mining.md",
+    "wiki/summaries/2026-07-07-python-web-crawling-geocoding-visualization.md",
     "wiki/summaries/2026-07-06-python-public-data-bicycle-analysis.md",
-    "wiki/comparisons/authentication-vs-authorization.md",
-    "wiki/concepts/nas-worm-storage-protection.md",
-    "wiki/entities/aam-ape.md",
-    "wiki/concepts/aws-resource-lifecycle-cost-management.md",
     "wiki/summaries/2026-05-08-aws-rds-resource-cleanup.md",
-    "wiki/comparisons/host-port-forwarding-vs-docker-port-mapping.md",
-    "wiki/comparisons/virtual-machine-vs-docker-container.md",
-    "raw/KoreaICT/8. Passwordless/Passwordless 총정리/Passwordless 총정리.md",
-    "raw/KoreaICT/8. Passwordless/Passwordless 총정리",
-    "raw/KoreaICT/7. Ci&CD/Ci&CD 총정리/Ci&CD 총정리.md",
-    "raw/KoreaICT/7. Ci&CD/Ci&CD 총정리",
-    "raw/KoreaICT/11. Machine Learning/Machine Learning 총정리/Machine Learning 총정리.md",
-    "raw/KoreaICT/11. Machine Learning/Machine Learning 총정리",
-    "raw/KoreaICT/11. Machine Learning/2026.07.13(월)/2026.07.13(월).md",
+    "wiki/entities/selenium.md",
+    "raw/KoreaICT/8. Passwordless/2026.05.14(목) - 시작",
     "raw/KoreaICT/11. Machine Learning/2026.07.13(월)",
-    "raw/KoreaICT/10. Python/Python 총정리/Python 총정리.md",
-    "raw/KoreaICT/10. Python/Python 총정리",
-    "raw/KoreaICT/1. Java/2026.02.26(목) - 시작/2026.02.26(목) - 시작.md",
-    "raw/KoreaICT/1. Java/2026.02.26(목) - 시작",
-    "raw/KoreaICT/5. Linux/Linux 총정리/Linux 총정리.md",
     "raw/References/hermes-home-laptop-migration",
     "agent-skills/academy-txt-to-md-conversion/references",
     "agent-skills/academy-txt-to-md-conversion",
     "agent-skills",
+    "agent-rules",
+    "raw/KoreaICT/11. Machine Learning/2026.07.10(금)",
     "raw/KoreaICT/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/A.html&js&css/회원가입화면.png",
     "raw/KoreaICT/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/A.html&js&css/Koala.jpg",
     "raw/KoreaICT/3. UI&UX/교육 자료/소스코드 파일들/ui_ux_project/A.html&js&css/fanta02.png",
