@@ -1,7 +1,7 @@
 ---
 title: Oracle SQL 함수
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-15
 type: concept
 tags: [oracle, sql]
 sources:
@@ -17,6 +17,10 @@ confidence: high
 ## 정의
 
 SQL 함수는 컬럼값이나 입력값을 받아 계산·변환·집계 결과를 만드는 도구다. 수업에서는 Java의 메서드와 비슷한 감각으로 이해했다.
+
+## 수업에서 등장한 맥락과 중요성
+
+03-18의 기본 DQL이 “어떤 행을 가져올까”를 다뤘다면, 03-19 함수 수업은 “가져온 값을 어떻게 표시·계산하고 여러 행을 어떻게 요약할까”로 확장했다. `dual`에서 한 함수의 동작을 확인한 뒤 `PRODUCTS`, `MEMBERS`, `BOARDS` 컬럼에 적용했고, 마지막에는 카테고리·회사별 집계로 웹 목록의 통계 질문까지 표현했다.
 
 ## `dual` 테이블
 
@@ -42,10 +46,13 @@ select upper('hello'), lower('HELLO') from dual;
 
 Oracle의 `substr`는 Java와 달리 위치가 1부터 시작한다.
 
+- Oracle `CONCAT` 함수는 인자 2개를 결합한다. 세 값 이상은 `CONCAT`을 중첩하거나 수업에서 함께 사용한 `||` 연산자로 연결한다.
+- `RTRIM(company, '커피')`의 두 번째 인자는 “커피”라는 부분 문자열이 아니라 오른쪽 끝에서 제거할 문자 집합이다. 단어 치환 의도라면 `REPLACE`와 구분한다.
+
 ## 숫자·날짜 함수
 
 ```sql
-SELECT abs(-5) FROM dual;
+SELECT -5, abs(-5) FROM dual ;
 SELECT round(1234.567, 2), trunc(1234.567, 2) FROM dual;
 SELECT ceil(1234.567), floor(1234.567) FROM dual;
 SELECT sqrt(5) FROM dual;
@@ -62,6 +69,8 @@ SELECT NAME, ADD_MONTHS(INPUTDATE, 1) AS NEXT_MONTH FROM PRODUCTS;
 
 `count(*)`는 `NULL` 포함 전체 행 수, `count(expr)`는 해당 컬럼이 `NULL`이 아닌 행 수, `count(distinct expr)`는 중복 제거 후 개수다.
 
+이 차이는 outer join에서 특히 중요하다. 게시물을 쓰지 않은 회원도 남긴 상태에서 실제 게시물 수를 세려면 `COUNT(*)`가 아니라 값이 있는 게시물 컬럼 `COUNT(writer)`를 사용한 수업 예제를 기준으로 판단한다.
+
 ## GROUP BY와 HAVING
 
 ```sql
@@ -77,6 +86,15 @@ ORDER BY company;
 ```
 
 `WHERE`와 `HAVING`의 차이는 [[comparisons/where-vs-having|WHERE vs HAVING]]에 정리했다.
+
+## 자주 틀리는 이해와 연결
+
+- 단일행 함수는 “결과가 전체에서 한 행”이라는 뜻이 아니라 **입력 행마다 결과 하나**가 나온다는 뜻이다.
+- 그룹 함수와 일반 컬럼을 함께 SELECT하면 일반 컬럼을 `GROUP BY`에 넣어야 한다.
+- `WHERE`는 그룹 함수 결과가 만들어지기 전이므로 집계 조건은 `HAVING`에 둔다.
+- `GROUP BY`는 연속형 숫자에 문법적으로 금지되는 기능이 아니다. 수업에서는 카테고리·회사처럼 반복되는 범주로 묶을 때 집계 의미가 잘 드러난다는 사용 맥락으로 이해한다.
+- `ceil/floor`, `months_between`, `add_months` 등 원본에서 “추가 공부”로 표시된 항목은 직접 핵심 실습과 같은 숙련도로 간주하지 않는다.
+- 함수·집계를 익힌 뒤에는 [[concepts/oracle-join|Oracle JOIN]]으로 여러 테이블을 묶고 [[concepts/oracle-subquery|Oracle 서브쿼리]]로 계산 결과를 조건에 재사용한다.
 
 ## 관련 페이지
 

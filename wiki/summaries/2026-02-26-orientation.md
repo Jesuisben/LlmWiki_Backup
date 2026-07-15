@@ -1,7 +1,7 @@
 ---
 title: 2026-02-26 오리엔테이션과 개발 환경 준비
 created: 2026-07-02
-updated: 2026-07-13
+updated: 2026-07-15
 type: summary
 tags: [java, curriculum, study-log]
 sources:
@@ -30,6 +30,9 @@ confidence: high
 - IntelliJ에서 `New Project`, `Package`, `Java Class`를 만들고 첫 Java 파일을 실행했다.
 - Java 프로그램은 최소한 클래스 안에 `main` 메서드가 있어야 실행 출발점을 가진다는 점을 확인했다.
 - 세미콜론은 문장의 끝에 붙지만 클래스/메서드 바디 `{}` 자체 뒤에는 붙이지 않는다는 규칙을 익혔다.
+- `int x`, `y`, `sum`을 선언하고, 대입은 변수에 **쓰기**, `x + y` 계산은 기존 값을 **읽기**라는 관점으로 추적했다.
+- `+`가 숫자끼리 만나면 덧셈이고 문자열이 섞이면 연결이 되는 차이를 출력으로 확인했다.
+- 마지막 교시에는 IntelliJ VCS에서 commit과 push를 구분하며 GitHub 연결을 시작했다. 이는 Java 문법이 아니라 실습 소스 관리 지원 흐름이다.
 
 ## 핵심 실습 / 예제
 
@@ -40,10 +43,17 @@ confidence: high
 
 이날 실습은 단순 출력이지만, 이후 모든 수업 코드가 “패키지 안의 클래스, 클래스 안의 `main`, `main` 안의 실행문” 구조로 작성된다는 점에서 중요하다.
 
+```text
+MyJava 프로젝트 → 패키지 → 클래스 → main() → println()
+→ 변수 선언 → 값 대입(쓰기) → 계산에 사용(읽기) → 결과 출력
+```
+
 ## 헷갈린 점 / 질문
 
 - 원본에는 `static void main()`처럼 `String[] args`가 빠진 예시도 등장한다. 실제 IntelliJ 자동 생성 기본형은 `public static void main(String[] args)`이며, 학습 초기에는 “실행 시작점”이라는 의미를 먼저 잡는 단계로 보면 된다.
 - `String`은 교안/노트에서 문자열형처럼 다루지만, Java 문법상 기본 자료형이 아니라 클래스 기반 참조 자료형이다. 이 차이는 [[comparisons/primitive-vs-reference-types|기본 자료형 vs 참조 자료형]]에서 다시 정리한다.
+- `'A'`는 문자 한 개이고 `"A"`는 문자열이다. 원본의 문자·문자열 메모리 크기 설명은 첫날의 단순화이므로 확정적인 JVM 규칙으로 재사용하지 않는다.
+- `x = 3`의 `=`는 비교가 아니라 대입이다. `sum = x + y`에서는 `x`, `y`를 읽고 계산 결과를 `sum`에 쓴다.
 
 ## 관련 페이지
 
@@ -51,6 +61,7 @@ confidence: high
 - [[entities/java|Java]]
 - [[concepts/java-basic-types|Java 기본 자료형]]
 - [[concepts/java-class-object|Java 클래스와 객체]]
+- [[summaries/2026-02-27-github-initial-setup|2026-02-27 GitHub 초기 설정]]
 
 ## 출처
 

@@ -1,7 +1,7 @@
 ---
 title: Oracle 함수·조인·서브쿼리
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-15
 type: concept
 tags: [oracle, sql]
 sources:
@@ -36,6 +36,20 @@ Oracle SQL에서 **함수(function)**는 컬럼 값을 가공하거나 계산하
 - [[concepts/oracle-sql-functions|Oracle SQL 함수]] — 문자열/숫자/날짜 함수, 단일행 함수와 그룹 함수, `GROUP BY`/`HAVING`
 - [[concepts/oracle-join|Oracle JOIN]] — 여러 테이블을 연결하는 조회
 - [[concepts/oracle-subquery|Oracle 서브쿼리]] — SQL 안의 SQL, 단일행/다중행/다중컬럼 서브쿼리
+
+이 페이지는 세 주제를 다시 축약하는 사전이 아니라 **03-19 수업의 탐색 지도**다. 함수가 값을 가공하고, 집계가 여러 행을 그룹 결과로 줄이고, JOIN이 여러 테이블의 컬럼을 옆으로 붙이며, 서브쿼리가 한 조회 결과를 다른 조회의 조건으로 넘긴다. 구체 문법과 오류는 위 하위 페이지에서 관리한다.
+
+## 한 흐름으로 보는 실제 SQL
+
+```sql
+SELECT m.id, m.Name, count(writer) AS cnt
+FROM members m LEFT OUTER JOIN BOARDS b
+ON m.id = b.writer
+group by m.id, m.NAME
+ORDER BY cnt DESC, m.name ASC ;
+```
+
+이 쿼리에는 JOIN, 그룹 함수, `GROUP BY`, 정렬이 함께 들어간다. 그룹 결과 조건은 별도의 회사별 집계 예제에서 `HAVING count(*) >= 3`으로 확인했다. 반면 “최소 급여와 같은 회원”처럼 먼저 기준값을 계산해야 하는 질문은 `WHERE salary = (SELECT MIN(salary) ...)`처럼 서브쿼리로 바뀐다.
 
 ## 자주 헷갈리는 점
 

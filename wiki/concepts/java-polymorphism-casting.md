@@ -1,7 +1,7 @@
 ---
 title: Java 다형성과 참조 형변환
 created: 2026-07-02
-updated: 2026-07-03
+updated: 2026-07-15
 type: concept
 tags: [java]
 sources:
@@ -48,15 +48,23 @@ if (drink instanceof Americano03) {
 
 ## 수업 예시
 
-- 부모 타입 배열에 여러 음료 객체 저장
-- 반복문과 선택문으로 객체 타입 구분
-- `Object → Beverage03 → Americano03` 순서의 `toString()` 재정의 흐름 확인
+- `Beverage04[]`에 `Espresso04`, `Latte04` 객체를 함께 저장하고 반복문에서 공통 `showInfo()` 호출.
+- `beverage[i] instanceof Americano04`처럼 실제 생성 타입을 확인한 뒤 자식 기능을 호출하기 위한 다운캐스팅 수행.
+- `Object → Animal → Dog` 또는 음료 계층에서 `toString()`을 재정의하고 실제 객체의 메서드가 선택되는 흐름 확인.
+
+## 학습 연결과 범위
+
+- **선행:** [[concepts/java-inheritance|상속]]과 [[concepts/java-object-array-memory|객체 배열]].
+- **후속:** 추상 클래스·인터페이스 타입으로 여러 구현 객체를 다루는 설계.
+- Spring에서 인터페이스 타입으로 구현체를 다루는 설명은 후속 확장이며, 직접 수업 근거는 음료 배열·`instanceof`·다운캐스팅이다.
 
 ## 자주 헷갈리는 점
 
 - 업캐스팅은 안전하지만, 부모 타입으로 보이는 동안 자식 전용 메서드는 바로 호출할 수 없다.
 - 다운캐스팅은 실제 객체 타입이 맞을 때만 안전하다.
 - `instanceof`는 “이 참조가 실제로 해당 타입 객체를 가리키는가”를 확인하는 도구다.
+- 업캐스팅은 객체 자체를 부모 객체로 바꾸는 것이 아니라 같은 객체를 부모 타입 관점으로 참조하는 것이다.
+- 호출 가능한 멤버는 컴파일 시 참조 타입이 제한하지만, 오버라이딩된 메서드의 실제 구현은 런타임 객체 타입에 따라 선택된다.
 
 ## 관련 개념
 

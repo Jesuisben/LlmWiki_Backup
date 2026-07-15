@@ -1,7 +1,7 @@
 ---
 title: 2026-03-09 Java 클래스와 객체
 created: 2026-07-02
-updated: 2026-07-03
+updated: 2026-07-15
 type: summary
 tags: [java, curriculum, study-log]
 sources:
@@ -34,10 +34,13 @@ confidence: high
 
 ## 핵심 실습 / 예제
 
-- `Product` 클래스에 `name`, `price`, `inputdate` 필드를 정의했다.
-- `Product shin = new Product();`로 객체를 생성했다.
-- `shin.name = "신라면"`처럼 객체의 필드에 값을 넣고 출력했다.
-- `Product03` 등으로 접근 지정자와 getter/setter 실습을 진행했다.
+실습은 다음 순서로 진행됐다.
+
+1. 업무 대상인 상품에서 `name`, `price`, `inputdate`를 뽑아 `Product` 클래스를 정의했다.
+2. `Product shin = new Product();`로 객체를 만들었다.
+3. `shin.name = "신라면"`처럼 멤버 참조 연산자 `.`로 필드에 값을 넣고 출력했다.
+4. `plus5(int x)`에 값을 전달하고 반환값을 변수에 받으면서 **호출자 입력 → 매개변수 → 메서드 처리 → `return` → 호출자 저장** 흐름을 추적했다.
+5. 필드를 `private`으로 바꾼 뒤 getter/setter를 외부 접근 통로로 사용했다.
 
 ## 헷갈린 점 / 질문
 

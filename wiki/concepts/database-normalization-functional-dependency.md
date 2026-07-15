@@ -1,12 +1,13 @@
 ---
 title: 함수 종속성과 정규화
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-15
 type: concept
 tags: [oracle, sql]
 sources:
   - raw/KoreaICT/2. Oracle/2026.03.20(금)/2026.03.20(금).md
   - raw/KoreaICT/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf
+  - raw/KoreaICT/4. FrontEnd_BackEnd/2026.03.30(월) - 시작/2026.03.30(월) - 시작.md
 status: growing
 confidence: high
 ---
@@ -16,6 +17,14 @@ confidence: high
 ## 정의
 
 함수 종속성은 어떤 속성 X를 알면 다른 속성 Y가 결정되는 관계다. 정규화에서는 이 관계를 분석해 테이블을 어떻게 나눌지 판단한다.
+
+## 왜 중요한가
+
+중복 표를 느낌대로 쪼개지 않고, 어떤 값이 다른 값을 결정하는지 근거를 세워 학생·학과·성적의 저장 위치를 정하게 한다. 그 결과 삽입·갱신·삭제 이상을 줄이고 분리한 관계를 PK/FK와 JOIN으로 구현·복원할 수 있다.
+
+## 자주 틀리는 이해
+
+> 03-20 원본의 “X는 기본키, Y는 외래키”라는 메모는 함수 종속성의 일반 정의로 사용하지 않는다. 결정자 X가 후보키가 아닐 수도 있고, 종속 속성 Y가 FK가 아닐 수도 있다. PK/FK 여부는 행 식별과 다른 테이블 참조라는 별도 설계 판단이다.
 
 ## 수업 예시
 
@@ -46,6 +55,23 @@ confidence: high
 
 그래서 `{학번, 과목 코드}`가 복합 기본키가 된다. 학번은 학생 테이블을 참조하는 외래키가 될 수 있다.
 
+## 정규화 판단으로 연결하기
+
+- `학생번호 → 이름/주소/학과`: 학생 한 명의 속성은 학생 테이블에 둔다.
+- `학과 → 사무실`: 학과마다 반복되는 사무실은 학과 테이블에 분리해 갱신 이상을 줄인다.
+- `{학번, 과목 코드} → 성적`: 한 학생의 한 과목 성적은 두 값의 조합으로 식별한다.
+- 분리 후에는 FK를 만들어 부모에 없는 학과나 학생을 참조하지 못하게 한다.
+
+원본 표에서 이름·주소·학과를 모두 “외래키”로 적은 부분도 그대로 일반화하지 않는다. 이 예제에서 실제 FK인지는 다른 테이블의 키를 참조하는 DDL이 있는지로 판정한다.
+
+### 정규형과 함수 종속성의 연결
+
+| 정규형 | 이 예제에서 줄이려는 문제 |
+|---|---|
+| 1NF | 한 칸의 반복값을 원자값으로 정리하고 `{학번, 과목 코드}`로 한 성적 행을 식별한다. |
+| 2NF | 복합키 일부인 학번만으로 결정되는 이름·주민번호·학과를 성적 관계에서 분리한다. |
+| 3NF | `학생번호 → 학과 → 대학/사무실`처럼 키가 아닌 속성을 거치는 이행적 종속을 학과 테이블로 분리한다. |
+
 ## 정규화 실습
 
 ```sql
@@ -58,6 +84,14 @@ ADD CONSTRAINT SUBJECTS_STUDENTS_FK FOREIGN KEY (HAKBUN)
 REFERENCES GOMDORI.STUDENTS(HAKBUN);
 ```
 
+이 SQL은 함수 종속성 그 자체를 선언하는 문법이 아니라, 분석 결과로 나눈 테이블 사이 참조 무결성을 DB에 구현하는 단계다. **함수 종속성 분석 → 테이블 분해 → PK/FK DDL → JOIN으로 복원** 순서를 구분해야 한다.
+
+## 이전·후속 학습 연결
+
+이 개념의 선행 실습은 [[concepts/oracle-referential-integrity|Oracle 참조 무결성]]과 [[concepts/oracle-join|Oracle JOIN]]이다. PK/FK가 저장 관계를 검사하고 JOIN이 분리된 데이터를 조회 결과로 복원한다는 사실을 알아야 정규화의 목적을 이해할 수 있다.
+
+Oracle 수업에서 직접 수행한 범위는 함수 종속성 표시, 테이블 분해, PK/FK DDL, JOIN 복원까지다. 03-30 이후 MySQL 환경의 Spring/JPA에서는 같은 관계를 Entity의 식별자와 연관관계 매핑으로 표현하지만, 그것은 Oracle 수업에서 직접 구현한 내용이 아니라 [[comparisons/jpql-vs-sql|JPQL vs SQL]]로 이어지는 확장이다.
+
 ## 관련 페이지
 
 - [[concepts/database-modeling-normalization|데이터 모델링과 정규화]]
@@ -68,3 +102,4 @@ REFERENCES GOMDORI.STUDENTS(HAKBUN);
 
 - `raw/KoreaICT/2. Oracle/2026.03.20(금)/2026.03.20(금).md`
 - `raw/KoreaICT/2. Oracle/교육 자료/디비버(Dbeaver) 사용법.pdf` — p.24~43 정규화 예제
+- `raw/KoreaICT/4. FrontEnd_BackEnd/2026.03.30(월) - 시작/2026.03.30(월) - 시작.md` — MySQL/JPA 후속 환경

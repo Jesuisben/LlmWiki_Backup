@@ -1,7 +1,7 @@
 ---
 title: GitHub
 created: 2026-07-02
-updated: 2026-07-13
+updated: 2026-07-15
 type: entity
 tags: [github, ci-cd]
 sources:
@@ -36,10 +36,16 @@ Java 수업 초기에 `MyJava` 원격 저장소를 만들며 처음 등장했다
 
 ## 학습 이력
 
-- [[summaries/2026-02-27-github-initial-setup|2026-02-27]]: Java 실습 저장소 준비.
+- [[summaries/2026-02-27-github-initial-setup|2026-02-27]]: `MyJava` 원격 저장소를 준비하고 로컬 Git·IntelliJ와 연결하는 첫 흐름.
 - [[summaries/2026-05-04-git-github-sourcetree|2026-05-04]]: GitHub 원격 저장소와 SourceTree 연동.
 - [[summaries/2026-05-06-github-branch-pr-conflict|2026-05-06]]: branch/PR/merge/conflict 협업.
 - [[summaries/2026-05-11-cicd-github-actions-spring-boot|2026-05-11]]: GitHub Actions 기반 CI/CD로 확장.
+
+## 구현 역할과 설명 관점
+
+- **Java 수업의 직접 역할:** 개인 Java 실습 저장소를 원격에 두기 위한 서비스로 처음 사용했다.
+- **후속 협업·자동화 역할:** branch/PR 검토 공간을 거쳐 GitHub Actions의 push trigger와 Secrets 관리 지점으로 확장됐다.
+- **프로젝트/면접 관점:** GitHub를 Git 자체와 동일시하지 않고, Git 저장소 호스팅·리뷰·협업·자동화를 제공하는 서비스라고 설명한다.
 
 ## 관련 개념
 
@@ -54,5 +60,8 @@ Java 수업 초기에 `MyJava` 원격 저장소를 만들며 처음 등장했다
 
 ## 출처
 
+- `raw/KoreaICT/1. Java/2026.02.27(금)/깃허브 초기 설정.md`
+- `raw/KoreaICT/1. Java/교육 자료/Github 교안(실습).pdf`
 - `raw/KoreaICT/5. Linux/2026.05.04(월)/2026.05.04(월).md`
 - `raw/KoreaICT/5. Linux/2026.05.06(수)/2026.05.06(수).md`
+- `raw/KoreaICT/7. Ci&CD/2026.05.11(월) - 시작/2026.05.11(월) - 시작.md`

@@ -13,6 +13,84 @@
 
 ## 현재 로그
 
+## [2026-07-15] update | FrontEnd_BackEnd Summary 전반부 B 고도화
+
+- 범위: 실행 분할 세션 3의 지정 대상인 2026-04-03·04-06·04-07·04-08 summary 4개만 날짜 MD 전체 교시 흐름과 4/4 대응해 전면 재작성했다. 다른 summary·concept·entity·comparison 본문과 `raw/`는 수정하지 않았다.
+- 흐름 복원: 04-03은 Member seed와 SignupPage event→Repository→Service→Controller→Validation/BindingResult→저장·응답, 04-06은 Cookie/Session/JWT·MPA/SPA→axiosInstance/LoginPage→LoginDto/JwtTokenProvider, 04-07은 String/Bearer→JWT Filter·SecurityContext와 별도 사용자 조회 경로→CORS/SecurityConfig→login/logout 테스트, 04-08은 Category/Product→이미지 seed·단위 테스트→목록 REST API→React Product type·card 화면 순서로 정리했다.
+- 내용 경계: 각 페이지에 이전·다음 날짜, 대표 artifact, 입력→처리→결과, 실제 혼동 원인과 직접 수업/후속 Product·Cart·Order·Linux·AWS·CI/CD·Passwordless 경계를 명시했다. 04-08의 OCI는 raw의 짧은 소개·가입 자료 안내 범위만 보존하고 상품 기능을 중심에 두었다.
+- provenance: summary에는 code fence를 사용하지 않았다. 따라서 fence 전체 0개/선언 텍스트 raw 원문 검증 0개/수동 예외 0개이며, PDF 전용 주장이나 합성 코드를 추가하지 않았다.
+- 검증: summary↔raw 4/4, 날짜·전체 교시 흐름·이전/다음·artifact·입력→처리→결과·혼동·직접/후속 경계 4/4를 확인했다. frontmatter·source 실경로·허용 태그·위키링크·index 설명·placeholder·scoped diff와 `git diff --check`, FrontEnd_BackEnd raw status/diff를 검사했다.
+- 상태: 단계 4 FrontEnd_BackEnd는 미완료다. 세션 3만 처리했으며 세션 4와 단계 5 Linux는 시작하지 않았다.
+
+## [2026-07-15] update | FrontEnd_BackEnd Summary 전반부 A 고도화
+
+- 범위: 실행 분할 세션 2의 지정 대상인 2026-03-30~04-02 날짜 summary 4개만 각 날짜 MD 전체 교시 흐름과 4/4 대응해 전면 재작성했다. 다른 summary·concept·entity·comparison 본문과 `raw/`는 수정하지 않았다.
+- 흐름 복원: 03-30은 환경 준비→Spring 정적 응답→Vite React→MySQL/Spring 설정→`Fruit`, 03-31은 `FruitHtmlController`/Thymeleaf→REST JSON→React 컴포넌트/Router, 04-01은 `Fruit` type→axios/state/effect→CORS/`WebConfig`→목록/props, 04-02는 React Bootstrap HomePage→Member JPA/Validation→Security→Repository/DI 순서로 정리했다.
+- 내용 경계: 각 페이지에 이전·다음 날짜, 대표 artifact, 입력→처리→결과, 실제 혼동 원인과 직접 수업/후속 Member·JWT·Product·Linux·AWS 확장 경계를 명시했다. 원본에 없는 코드·출력·사용자 질문을 만들지 않았고 새 지식 페이지도 만들지 않았다.
+- 보조 근거: 세션 범위 이미지 I03의 Router 안내 비유와 I05의 template→Controller→Service→Repository→DB 계층 도식을 확인했다. 날짜별 직접 구현 순서는 해당 날짜 MD를 우선했으며 summary에는 code fence를 사용하지 않았다.
+- 검증: summary↔raw 4/4, 필수 내용 구조 4/4, code fence 0개/원문 검증 0개/수동 예외 0개다. frontmatter·source 실경로·허용 태그·위키링크·index 설명·placeholder 오류 0건, scoped whitespace와 `git diff --check` 통과, FrontEnd_BackEnd raw status 0건·diff exit 0을 확인했다.
+- 상태: 단계 4 FrontEnd_BackEnd는 미완료다. 세션 2만 처리했으며 세션 3과 단계 5 Linux는 시작하지 않았다.
+
+## [2026-07-15] update | FrontEnd_BackEnd 읽기 감사·실행 분할 계획
+
+- 범위: `raw/KoreaICT/4. FrontEnd_BackEnd` 실제 파일 34개(Markdown 19, PDF 10, PNG 5)를 전체 경로로 재고화했다. Markdown은 날짜별 18개와 총정리 1개이며, 독립 코드·설정 파일은 없고 코드 근거는 MD 내부 fence에 있다.
+- 중복·보조자료: 과목 내부 byte-identical 중복과 0바이트 파일은 0개다. `IntelliJ 교안.pdf`는 Java 과목의 동일 교안과 byte-identical인 보존형 중복이며, PDF/PNG는 날짜 MD의 수업일·실습 순서를 대체하지 않는 보조 근거로 분류했다.
+- wiki 대응: FrontEnd_BackEnd raw를 직접 source로 가진 기존 지식 페이지 56개(summary 19, concept 20, entity 9, comparison 8, query 0)를 전수 대응했다. 분류 초안은 유지 5, 부분 보강 19, 전면 재작성 30, 통합 후보 2, 근거 부족·미분류 0이며 신규 후보 4개는 실행 세션에서 생성/흡수 여부를 재판정한다.
+- 실행 분할: 이번 세션을 포함해 총 16개 세션으로 나눴다. summary 5개 묶음(각 4개 이하), Frontend/React/TypeScript 및 Backend/Spring/인증/데이터 concept 5개 묶음(각 5개 이하), entity 2개 묶음, comparison/query 2개 묶음(각 6개 이하), 최종 고정점 1개 세션이다.
+- 기록: `wiki/_meta/frontend-backend-rehighquality-inventory-plan.md`를 만들고 index에 등록했다. 이번 기록은 과목 완료가 아닌 읽기 감사·실행 분할 계획이며, 기존 지식 페이지 본문과 `raw/`는 수정하지 않았고 단계 5 Linux도 시작하지 않았다.
+
+## [2026-07-15] update | UI&UX 비동기 3계통 감사 반영 및 최종 재검증
+
+- 배경: 단계 3의 첫 완료 기록 뒤 병렬 summary, concept, entity/comparison 감사 3계통이 도착했다. 감사 시점이 본 수정과 겹쳐 이미 해결된 지적과 실제 잔여 공백을 현재 wiki와 raw에 다시 대조했다.
+- 분류 정정: 기존 21개는 유지 1, 부분 보강 16, 전면 재작성 4로 확정했다. 03-24·03-26·03-27 날짜 summary와 UI&UX 총정리 허브는 실제 날짜 흐름·artifact 차이·혼동을 중심으로 전면 재작성급 보강했고, jQuery concept는 기존 구조를 유지하며 경미 보강했다.
+- 추가 보정: UI/UX 첫 정의와 IntelliJ/DevTools 흐름, list/span/box/non-Bootstrap CartList, 날짜 노트와 현재 ProductInsertForm의 id/grid/error class 차이, ProductList alert와 ProductDetailNew URL 이동의 분리, jQuery selector/class/file명 차이를 복원했다. raw에서 확인되지 않은 `.addClass(...).attr(...).show()` 합성 method-chaining 예시는 제거했다.
+- 신규 판단: `wiki/concepts/html-form-controls-submission.md`, `wiki/comparisons/ui-vs-ux.md`, `wiki/comparisons/custom-css-vs-bootstrap.md`를 신설했다. CSS layout·JavaScript 언어 기초는 기존 concept 보강으로 유지했고 loading/error/success 상태도 JavaScript DOM·03-26 summary에 흡수했다. 반복된 독립 사용자 질문 근거가 없어 query는 0개다.
+- 최종 검증: UI&UX 대상은 기존 21개+신규 3개=24개다. raw 96/96, code fence 39개(HTML 11, CSS 3, JavaScript 25)를 39/39 원문 연속 코드로 대조했다. 전체 지식 페이지 265개, source 974건, 위키링크 1,801건이며 frontmatter·source·허용 태그·깨진/모호 링크·index 등록/페이지 수·유형별 내용 게이트 오류는 0건이다.
+- raw/범위 경계: `raw/KoreaICT/3. UI&UX`는 수정하지 않았고 status/diff 0건을 유지했다. `FrontEnd&BackEnd.pdf`는 UI&UX 교육자료 경계로만 확인했으며 단계 4 FrontEnd_BackEnd 감사·수정은 시작하지 않았다.
+
+## [2026-07-15] update | 내용 재고도화 단계 3 UI&UX 완료
+
+- 범위: `raw/KoreaICT/3. UI&UX` 실제 파일 96개(Markdown 8, PDF 5, HTML 59, CSS 1, JavaScript 1, PNG 11, JPG 9, GIF 2)와 직접 관련 기존 wiki 21개(summary 6, concept 4, entity 5, comparison 6)를 전수 대응했다. 감사 분류는 21개 모두 부분 보강이며 유지·전면 재작성·통합 후보·근거 부족·미분류는 0개다.
+- 실제 수정: 기존 21개에 날짜별 학습 순서, 실제 table/form/상품 목록-상세/jQuery image 코드, 실행 데이터 흐름, 혼동 원인, 직접 구현과 후속 React·Spring 확장 경계를 보강했다. 독립 학습 단위는 기존 페이지로 충분하고 실제 보존 질문도 없어 신규 페이지와 query는 만들지 않았다.
+- 내용 정정: 총정리 원본의 `<alt>` 표기를 실제 `img` 속성으로 교정하고, non-Bootstrap form→Bootstrap class 적용, relative 부모→absolute 자식, 더미 배열→DOM card→query string→`Number`→`find`, jQuery 선택→이벤트→class/attribute/display/노드 이동 흐름을 복원했다. POST는 주소창에 보이지 않는 것만으로 안전하지 않으며 HTTPS·서버 검증이 필요함을 명시했다.
+- 코드 근거: 의미만 같던 축약·합성 fence를 날짜별 MD와 교육 HTML/CSS/JavaScript의 연속된 실제 코드로 교체했다. 최종 code fence 37개(HTML 10, CSS 3, JavaScript 24)를 37/37 원문 대조했다. PDF에서 추출되지 않은 코드나 실행 결과는 만들지 않았다.
+- 검증: 전체 지식 페이지 262개, source 908건, 위키링크 2,031건이며 frontmatter·source 존재·허용 태그·깨진 링크·index 등록/페이지 수·유형별 내용 게이트·raw 재고 96/96·대응표 21행·scoped diff 오류는 0건이다. `wiki/index.md`의 UI&UX 21개 설명을 현재 내용에 맞게 갱신했고 `Total pages: 262`를 유지했다.
+- raw/범위 경계: `raw/KoreaICT/3. UI&UX`의 Git status와 diff는 0건이며 수정하지 않았다. 해당 폴더의 `FrontEnd&BackEnd.pdf`는 UI&UX 재고의 교육자료 경계만 확인했고 단계 4 날짜별 raw·관련 wiki 감사/수정은 시작하지 않았다.
+
+## [2026-07-15] update | Oracle 비동기 3계통 감사 반영 및 최종 재검증
+
+- 배경: 단계 2 완료 직후 병렬로 실행한 summary, concept, entity/comparison 감사 3계통이 도착했다. 감사 시점이 본 수정과 겹쳐 이미 해결된 지적과 실제 잔여 공백을 현재 파일·raw에 다시 대조했다.
+- 추가 보정: 03-16의 INSERT 방식·DBeaver 단축키·COMMIT/ROLLBACK·BOARDS/PRODUCTS/sequence 후반, 03-17의 삭제 테스트·제약조건 5종·DDL 재생성, 03-18의 `SAVEPOINT`·`ORA-12899` 우선순위·A04/A05 source 불일치, 03-19의 `RTRIM` 문자 집합·GROUP BY 오해, 03-20의 1NF→2NF→3NF·No Action·관리자/ORAMAN/GOMDORI View 세션을 복원했다.
+- 정확성 경계: Oracle DDL implicit commit과 DBeaver Auto Commit, sequence gap과 `NOCACHE`, 서브쿼리의 논리적 읽기와 옵티마이저의 물리 실행, FK의 PK/UNIQUE 참조와 nullable 조건을 구분했다. 03-30부터 MySQL·MySQL Driver·Spring Data JPA 환경으로 전환했음을 명시해 Oracle→JPA가 같은 DB 실행환경의 연속으로 보이지 않게 했다.
+- 신규 concept: `wiki/concepts/oracle-data-dictionary-schema-objects.md`를 만들었다. 03-17·03-20·총정리에 반복된 `USER_TABLES`, `USER_SEQUENCES`, `USER_VIEWS`를 DDL 결과와 사용자 소유 schema 객체 검증이라는 독립 학습축으로 정리하고 index·시퀀스·View·Oracle entity에 연결했다. 실제 질문은 기존 concept/comparison에 흡수돼 별도 query는 만들지 않았다.
+- 최종 검증: 기존 28개+신규 1개=Oracle 지식 페이지 29개, raw 24개, SQL fence 61/61을 통과했다. 전체 지식 페이지 262개, source 904건, 위키링크 2,028건이며 frontmatter·source 존재·허용 태그·깨진 링크·index 누락·페이지 수·placeholder·scoped diff 오류는 모두 0건이다.
+- raw/범위 경계: `raw/KoreaICT/2. Oracle` Git 상태는 0건이며 수정하지 않았다. UI&UX는 시작하지 않았다.
+
+## [2026-07-15] update | 내용 재고도화 단계 2 Oracle 완료
+
+- 범위: Oracle raw 24개(날짜별 MD 6개, 총정리 1개, PDF 3개, 수업 SQL 14개)와 관련 기존 wiki 28개(summary 7, concept 12, entity 2, comparison 7)를 전수 대응했다. 감사 분류는 부분 보강 19개, 전면 재작성 7개, 통합 후보 2개이며 미분류·근거 부족은 0개다.
+- 실제 수정: 기존 28개를 모두 수업 순서·대표 SQL·혼동 원인·선행/후속 연결 중심으로 고도화했다. 통합 후보 `oracle-constraints-sequence`와 `oracle-functions-join-subquery`는 각각 공동 overview와 03-19 탐색 지도로 역할을 명확히 해 유지했다. 기존 페이지로 학습 단위가 충분해 신규 페이지와 query는 만들지 않았다.
+- 내용 정정: DBMS/클라이언트와 관리자/일반 사용자를 구분하고, 시퀀스→데이터 사전→PK/FK, 제약조건 위반→트랜잭션→DDL/DQL, 함수→집계→JOIN→서브쿼리, 이상 현상→함수 종속성→분해→FK/JOIN 흐름을 복원했다. 원본의 “X는 기본키, Y는 외래키” 메모를 함수 종속성의 일반 정의로 사용하지 않도록 교정하고, JOIN/FK·`MAX(id)`/`NEXTVAL`·`COUNT(*)`/`COUNT(expr)`·`WHERE`/`HAVING`·DB `ON DELETE`/JPA cascade 경계를 명시했다.
+- 원문 경계: 원본에 없던 합성 SQL을 만들지 않도록 모든 SQL fence를 MD/SQL source와 재대조했다. schema 접두사·축약 함수·임의 WHERE 조건·결합 HAVING처럼 원문과 달랐던 표기는 실제 03-18~03-19 SQL로 교체했다. View의 `password` 컬럼은 수업 문법 예제임을 밝히고 실제 서비스의 비밀값 비노출 경계를 추가했다.
+- 검증: 대상 28개·raw 24개·대응표 28행, SQL fence 56/56, 시작(03-16)·중간(03-19)·끝(03-20)·총정리 고위험 대조 4/4를 통과했다. 전체 위키는 지식 페이지 261개, source 883건, 위키링크 1,750건, frontmatter/source/허용 태그/링크/index 누락·초과 오류 0건이며 `Total pages: 261`과 일치했다. 대상 범위 `git diff --check`도 통과했다.
+- raw 경계: Oracle raw에 쓰기 도구를 사용하지 않았다. 최종 Git 상태는 시작과 같은 tracked modified 64개·untracked 3개였고, raw status의 유일한 항목은 작업 전부터 있던 `raw/KoreaICT/10. Python/2026.06.30(화)/2026.06.30(화).md`였다. 다음 단계 UI&UX는 시작하지 않았다.
+
+## [2026-07-15] update | 내용 재고도화 단계 1 Java 완료
+
+- 범위: 기존 Java summary 13개, concept 13개, Java·Git·GitHub·IntelliJ entity 4개, comparison 4개를 전수 감사했다. 감사 분류는 유지 1개, 부분 보강 22개, 전면 재작성 10개, 통합 후보 1개이며, 통합 후보는 고유 역할을 강화해 유지했다.
+- 실제 수정: 기존 34개를 모두 고도화하고 `java-access-modifier-encapsulation` concept과 `java-homework-research-review` summary를 신설해 최종 대상은 36개가 됐다. 별도 query는 만들지 않았다.
+- 내용 정정: 02-26 변수 읽기/쓰기, 02-27 증감 추적과 Git 전체 흐름, 03-03 형변환·char, 03-04 `printf`, 03-06 입력 배열·요구/구현 불일치, 03-10 `Animal` 날짜 귀속과 원천 코드 불일치, 03-12 `beverageCount`·기능 인터페이스를 복원했다. 비근거 `Cookable`·`Iceable` 예시는 실제 `Beverage05`, `WaterAdjustable`, `ShotAddable`, `MilkAddable`, `SpecialCoffee05` 흐름으로 교정했다.
+- 근거 경계: Java 직접 수업과 숙제 사전조사, 이후 Spring/프로젝트 확장을 분리했다. 03-13 프로젝트 세부는 raw 근거가 없어 팀 프로젝트·코드 리뷰 사실만 남겼고, 숙제의 메모리·컬렉션·제네릭 및 현대 Java 인터페이스 예외는 직접 실행 여부와 정확성 경계를 명시했다.
+- 검증: Java 대상 36개·frontmatter source 155건에서 유형별 내용 게이트, 존재 source, 허용 태그, 링크, placeholder, 고립, 비근거 인터페이스명을 검사해 오류 0건이었다. 전체 위키는 지식 페이지 261개, source 881건, 위키링크 1,731건, index 누락·초과·오류 0건이며 `Total pages: 261`과 일치했다. 추적/미추적 대상 모두 `git diff --check`를 통과했다.
+- raw 경계: `raw/KoreaICT/1. Java`의 status/diff는 0건으로 Agent가 수정하지 않았다. 작업 중 대상 밖 `raw/KoreaICT/10. Python/2026.06.30(화)/2026.06.30(화).md` 변경이 별도로 나타났으나 이 세션에서는 읽기 확인만 하고 수정·되돌리기하지 않았다. Oracle은 시작하지 않았다.
+
+## [2026-07-15] create | LLM Wiki 내용 재고도화 작업 계획
+
+- 목적: 구조 lint 중심의 기존 완료 판정에서 벗어나, 사용자가 직접 다시 공부할 수 있고 Agent도 수업 맥락을 복원할 수 있도록 기존 wiki를 과목별로 내용 재고도화하는 실행 계획을 만들었다.
+- 세션 단위: 과목 하나의 감사 → 수정 → 검증을 새 세션 하나에서 완결한다. 정상 완료 보고 마지막에는 다음 과목 하나의 복붙 프롬프트를 제공하고, 미완료 시에는 같은 과목의 재개 프롬프트를 제공한다.
+- 순서: Java → Oracle → UI&UX → FrontEnd_BackEnd → Linux → AWS → Ci&CD → Passwordless → 중간 프로젝트 공부 → Python → 전체 통합 품질 검증.
+- 완료 기준: 구조 정합성뿐 아니라 실제 raw 대조, 구체 실습·혼동·이전/다음 연결, 페이지 유형별 내용 게이트, 미분류 후보 0건, scoped diff 검증을 요구한다. `raw/`는 수정하지 않았다.
+
 ## [2026-07-15] update | 날짜 기반 학습 회상 규칙
 
 - 목적: 공유된 Vault를 Codex 등 다른 Agent가 작업 폴더로 열어도 “어제 뭐 했지?” 같은 학습 회상 질문을 날짜별 원본 수업 메모 기준으로 답하도록 공통 규칙을 추가했다.

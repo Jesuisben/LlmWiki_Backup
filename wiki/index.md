@@ -2,7 +2,7 @@
 
 > 이 파일은 `wiki/` 전체의 목차이자 길잡이다.  
 > 질문에 답하거나 새 자료를 ingest할 때 이 파일을 먼저 읽는다.  
-> Last updated: 2026-07-14 | Total pages: 258
+> Last updated: 2026-07-15 | Total pages: 266
 
 ## 사용 방법
 
@@ -24,30 +24,31 @@
 - [[summaries/2026-03-09-java-class-object|2026-03-09 Java 클래스와 객체]] — 사용자 정의 타입으로서 클래스, 객체, 멤버 변수, 메서드, getter/setter를 배운 날이다.
 - [[summaries/2026-03-10-java-constructor-overloading-inheritance|2026-03-10 Java 생성자, 오버로딩, 상속 입문]] — 생성자와 오버로딩을 중심으로 객체 초기화와 상속의 입문 개념을 배운 날이다.
 - [[summaries/2026-03-11-java-inheritance-polymorphism|2026-03-11 Java 상속과 참조 형변환]] — 상속 구조에서 `private`, 생성자, 참조 형변환, 오버라이딩을 다룬 날이다.
-- [[summaries/2026-03-12-java-abstract-interface-static|2026-03-12 Java 추상 클래스, 인터페이스, static/final]] — 확장 for, 추상 메서드, 인터페이스, static/final을 통해 객체지향 설계를 확장한 날이다.
-- [[summaries/2026-03-13-java-project-oracle-start|2026-03-13 Java 팀 프로젝트와 Oracle 시작]] — Java 팀 프로젝트를 진행하고 Oracle/DBeaver 학습으로 넘어가기 시작한 날이다.
+- [[summaries/2026-03-12-java-abstract-interface-static|2026-03-12 Java 추상 클래스, 인터페이스, static/final]] — `Beverage05`와 물·샷·우유 기능 인터페이스, 향상된 for, static/final로 객체지향 설계를 마무리한 날
+- [[summaries/2026-03-13-java-project-oracle-start|2026-03-13 Java 팀 프로젝트와 Oracle 시작]] — Java 프로젝트·코드 리뷰를 마치고 Oracle/DBeaver 설치로 전환하되 객체-테이블 매핑은 후속 범위로 구분한 날
 - [[summaries/2026-03-13-java-subject-review|Java 총정리]] — Java 문법에서 객체지향·상속·추상화·static/final까지 전체 흐름을 총정리 원본과 날짜별 노트 기준으로 재구성한 복습 허브
-- [[summaries/2026-03-16-oracle-dbms-sql-dbeaver|2026-03-16 Oracle DBMS, SQL, DBeaver 입문]] — DBMS와 SQL의 기본 의미를 배우고 DBeaver로 Oracle 학습을 시작한 날이다.
-- [[summaries/2026-03-17-oracle-ddl-dml-constraints-sequence|2026-03-17 Oracle DDL/DML, 제약조건, 시퀀스]] — 테이블 조작과 데이터 조작, 제약조건, 시퀀스를 실습한 날이다.
-- [[summaries/2026-03-18-oracle-constraints-validation|2026-03-18 Oracle 제약조건 테스트와 유효성 검사]] — Oracle 사용자 재설정, 제약조건 테스트, 폼 유효성 검사 개념을 연결한 날이다.
-- [[summaries/2026-03-19-oracle-functions-join-subquery|2026-03-19 Oracle 함수, GROUP BY, JOIN, 서브쿼리]] — Oracle의 단일행 함수, 그룹 함수, 조인, 서브쿼리를 폭넓게 다룬 날이다.
-- [[summaries/2026-03-20-database-modeling-normalization-view-index|2026-03-20 데이터 모델링, 정규화, View, Index]] — ERD, 데이터 모델링, 정규화, View, Index를 통해 DB 설계 관점을 배운 날이다.
-- [[summaries/2026-03-20-oracle-subject-review|Oracle 총정리]] — DBMS/SQL, DDL/DML, 제약조건, JOIN/서브쿼리, ERD/정규화를 총정리 원본과 날짜별 노트 기준으로 재구성한 복습 허브
-- [[summaries/2026-03-23-html-css-intro|2026-03-23 HTML/CSS와 웹 UI 입문]] — 웹 서비스의 데이터 흐름과 HTML/CSS 기본 문법을 배우기 시작한 날이다.
-- [[summaries/2026-03-24-css-layout-javascript-intro|2026-03-24 CSS 레이아웃과 JavaScript 입문]] — CSS 박스 모델·position·글꼴 스타일과 JavaScript 기초를 배운 날이다.
-- [[summaries/2026-03-25-bootstrap-form|2026-03-25 Bootstrap과 HTML Form]] — Bootstrap 5, CDN, 그리드 시스템, Form 요소를 학습한 날이다.
-- [[summaries/2026-03-26-javascript-dom-product-pages|2026-03-26 JavaScript DOM과 상품 목록/상세 페이지]] — JavaScript 배열, DOM 조작, 이벤트를 이용해 상품 목록/상세 페이지를 만든 날이다.
-- [[summaries/2026-03-27-jquery-ui-interaction|2026-03-27 jQuery와 UI 상호작용]] — jQuery, CSS transition, pseudo-class를 이용해 이미지/토글 UI 상호작용을 구현한 날이다.
-- [[summaries/2026-03-27-uiux-subject-review|UI&UX 총정리]] — HTML/CSS/JavaScript/Bootstrap/jQuery 입문 흐름을 총정리 원본 기준으로 묶은 복습 허브
-- [[summaries/2026-03-30-fullstack-environment-setup|2026-03-30 FrontEnd/BackEnd 개발 환경과 커리큘럼 전환]] — FrontEnd_BackEnd 과정 첫날로, Spring Boot·React·TypeScript·MySQL·Node.js·VS Code 등 풀스택 개발 환경을 준비했다.
-- [[summaries/2026-03-31-spring-boot-controller-html|2026-03-31 Spring Boot Controller와 HTML 응답]] — Spring Boot에서 Entity와 Controller를 만들고, 브라우저 요청에 HTML 문자열 또는 데이터를 응답하는 기본 흐름을 배웠다.
-- [[summaries/2026-04-01-react-router-spring-boot|2026-04-01 React 라우팅과 Spring Boot 연동 흐름]] — React의 페이지 구성과 라우팅을 App/MenuItems 구조로 정리하고 Spring Boot Controller 학습을 이어갔다.
-- [[summaries/2026-04-02-react-bootstrap-homepage|2026-04-02 React Bootstrap과 HomePage 구성]] — React Bootstrap의 Carousel·Card 등 UI 컴포넌트를 이용해 홈 화면을 구성하고 Spring/React 프로젝트 구조를 보강했다.
-- [[summaries/2026-04-03-spring-member-seed-react-comments|2026-04-03 Member 데이터 준비와 React JSX 기초]] — Spring Boot 쪽 Member 데이터를 준비하고 React/JSX에서 주석, 단축키, 기본 편집 흐름을 익혔다.
+- [[summaries/java-homework-research-review|Java 클래스 숙제와 사전조사 정리]] — 직접 수업 복습과 메모리·컬렉션·제네릭 사전조사를 근거 수준별로 분리한 숙제 허브
+- [[summaries/2026-03-16-oracle-dbms-sql-dbeaver|2026-03-16 Oracle DBMS, SQL, DBeaver 입문]] — DBMS/클라이언트를 구분하고 관리자→일반 사용자→테이블 생성으로 내려간 Oracle 첫날
+- [[summaries/2026-03-17-oracle-ddl-dml-constraints-sequence|2026-03-17 Oracle DDL/DML, 제약조건, 시퀀스]] — 시퀀스·데이터 사전·DDL 복구에서 PK/FK·삭제 업무 규칙으로 이어진 날
+- [[summaries/2026-03-18-oracle-constraints-validation|2026-03-18 Oracle 제약조건 테스트와 유효성 검사]] — 위반 데이터·ORA 오류를 검증하고 트랜잭션→DDL→기본 DQL로 확장한 날
+- [[summaries/2026-03-19-oracle-functions-join-subquery|2026-03-19 Oracle 함수, GROUP BY, JOIN, 서브쿼리]] — 값 가공→집계→테이블 결합→중첩 조건으로 DQL을 심화한 날
+- [[summaries/2026-03-20-database-modeling-normalization-view-index|2026-03-20 데이터 모델링, 정규화, View, Index]] — 함수 종속성 오해를 교정하며 ERD·정규화·FK·View/Index로 설계를 마무리한 날
+- [[summaries/2026-03-20-oracle-subject-review|Oracle 총정리]] — SQL/트랜잭션/무결성/조회/설계를 실제 SQL과 직접 수업·후속 JPA 경계로 엮은 Oracle 복습 허브
+- [[summaries/2026-03-23-html-css-intro|2026-03-23 HTML/CSS와 웹 UI 입문]] — tag·attribute·선택자에서 실제 table/image 정적 화면까지 연결한 UI&UX 첫날
+- [[summaries/2026-03-24-css-layout-javascript-intro|2026-03-24 CSS 레이아웃과 JavaScript 입문]] — relative 부모/absolute 자식 배치와 첫 DOM 출력·객체/배열을 연결한 날
+- [[summaries/2026-03-25-bootstrap-form|2026-03-25 Bootstrap과 HTML Form]] — non-Bootstrap form을 먼저 만든 뒤 CDN·grid·form class로 같은 입력 화면을 확장한 날
+- [[summaries/2026-03-26-javascript-dom-product-pages|2026-03-26 JavaScript DOM과 상품 목록/상세 페이지]] — 더미 배열→DOM card→query string→`find`로 목록-상세 흐름을 구현한 날
+- [[summaries/2026-03-27-jquery-ui-interaction|2026-03-27 jQuery와 UI 상호작용]] — 선택·이벤트·class/속성/display 변경과 이미지 노드 이동을 한 화면에서 구현한 날
+- [[summaries/2026-03-27-uiux-subject-review|UI&UX 총정리]] — HTML→CSS→Bootstrap→JavaScript/DOM→jQuery 순서와 직접 구현/후속 확장 경계를 묶은 복습 허브
+- [[summaries/2026-03-30-fullstack-environment-setup|2026-03-30 FrontEnd/BackEnd 개발 환경과 Fruit 시작]] — MySQL·Spring Boot·Vite React를 각각 실행하고 DB 설정과 `Fruit` 클래스로 첫 요청·응답 기반을 만든 날
+- [[summaries/2026-03-31-spring-boot-controller-html|2026-03-31 Spring HTML 응답에서 REST/React Router로 전환]] — Fruit의 Thymeleaf HTML 응답을 REST JSON으로 바꾸고 React 메뉴·Router 화면 구조를 만든 날
+- [[summaries/2026-04-01-react-router-spring-boot|2026-04-01 React axios와 Spring CORS 연결]] — Fruit type·axios·state/effect·CORS·WebConfig를 연결해 JSON 한 개와 목록을 React 표에 표시한 날
+- [[summaries/2026-04-02-react-bootstrap-homepage|2026-04-02 React HomePage와 Member JPA/Security 시작]] — 오전 Carousel HomePage를 완성하고 오후 Member JPA·Validation·Security·Repository 저장을 시작한 날
+- [[summaries/2026-04-03-spring-member-seed-react-comments|2026-04-03 React 회원가입과 Spring 검증·저장 흐름]] — SignupPage 입력에서 Validation·이메일 중복 확인·비밀번호 인코딩·Repository 저장·HTTP 응답까지 연결한 날
 - [[summaries/2026-04-03-frontend-backend-subject-review|FrontEnd_BackEnd 총정리]] — 초기 풀스택 세팅과 Spring Boot ↔ React 연결 흐름을 총정리 원본 기준으로 묶은 복습 허브
-- [[summaries/2026-04-06-login-jwt-session-cookie|2026-04-06 로그인, JWT, 세션과 쿠키]] — 로그인 구현을 시작하며 JWT 토큰, 세션, 쿠키, DTO, React 로그인 흐름의 차이를 학습했다.
-- [[summaries/2026-04-07-member-api-string-token|2026-04-07 회원 API와 문자열/토큰 처리]] — 회원 기능 구현 과정에서 Java String 메서드, Bearer 토큰 처리, Spring Controller/DTO 흐름을 다뤘다.
-- [[summaries/2026-04-08-product-domain-oci|2026-04-08 상품 도메인과 OCI 소개]] — 상품 기능 구현을 시작하며 Category, Product 도메인과 Spring/React 상품 구조, OCI 개념을 배웠다.
+- [[summaries/2026-04-06-login-jwt-session-cookie|2026-04-06 Cookie·Session·JWT 이론과 로그인 토큰 생성]] — 인증 이론을 axiosInstance·LoginPage·LoginDto·JwtTokenProvider의 token 저장·전달·생성 흐름으로 연결한 날
+- [[summaries/2026-04-07-member-api-string-token|2026-04-07 Bearer token과 Spring Security JWT 인증 흐름]] — Bearer parsing에서 JWT Filter·사용자 조회·SecurityContext·CORS/SecurityConfig·로그인 테스트까지 연결한 날
+- [[summaries/2026-04-08-product-domain-oci|2026-04-08 Category·Product 도메인과 상품 목록 시작]] — Product Entity·이미지 기반 seed·Repository 단위 테스트에서 목록 REST API와 React card 화면까지 만든 날
 - [[summaries/2026-04-09-product-delete-routing-jsx-table|2026-04-09 상품 삭제, 라우팅, JSX와 표]] — 상품 삭제 기능과 React 라우팅, JSX 내부 JavaScript 표현, HTML 표 병합 속성을 함께 다뤘다.
 - [[summaries/2026-04-10-react-event-spread-product-form|2026-04-10 React 이벤트 객체와 전개 연산자]] — React에서 이벤트 객체와 전개 연산자를 사용해 상품 입력 폼 상태를 관리하는 방법을 학습했다.
 - [[summaries/2026-04-13-product-detail-useeffect-service|2026-04-13 상품 상세와 useEffect, 서비스 계층]] — 상품 상세 조회를 위해 Spring ProductService와 React useEffect Hook을 연결하는 흐름을 학습했다.
@@ -110,17 +111,19 @@
 - [[concepts/java-loop|Java 반복문]] — `for`, `while`, 무한 반복, `break`, 향상된 for를 합계·입력·배열 처리 예제로 정리
 - [[concepts/java-array|Java 배열]] — `new` 배열, 초기화 기법, `length`, 입력값 배열 처리, 객체 배열로 이어지는 흐름 정리
 - [[concepts/java-class-object|Java 클래스와 객체]] — `Product` 예제로 클래스, 객체, 필드, 메서드, getter/setter를 정리
+- [[concepts/java-access-modifier-encapsulation|Java 접근 지정자와 캡슐화]] — `public`·`protected`·package-private·`private`, getter/setter, 상속 접근 범위를 실제 수업 흐름으로 정리
 - [[concepts/java-inheritance|Java 상속]] — 음료 예제로 일반화, `extends`, `super`, 접근 지정자 흐름을 정리
-- [[concepts/java-abstract-interface|Java 추상 클래스와 인터페이스]] — 공통 부모 설계도와 기능 규격의 차이를 Java 음료 예제로 정리
+- [[concepts/java-abstract-interface|Java 추상 클래스와 인터페이스]] — `Beverage05` 공통 부모와 `WaterAdjustable` 등 실제 음료 기능 규격의 차이를 정리
 - [[concepts/java-memory-static-final|Java 메모리, static, final]] — stack/heap/static 영역, 클래스 변수, 상수, final 메서드를 Java 객체지향 복습 흐름으로 정리
-- [[concepts/oracle-sql-basics|Oracle SQL 기본]] — Oracle Database에 데이터를 조회·정의·조작하도록 요청하는 SQL의 기본 구조다.
-- [[concepts/oracle-constraints-sequence|Oracle 제약조건과 시퀀스]] — 데이터 무결성을 지키는 규칙과 자동 번호 생성 도구다.
-- [[concepts/oracle-functions-join-subquery|Oracle 함수·조인·서브쿼리]] — SQL에서 값을 가공하고 여러 데이터 집합을 연결·중첩 조회하는 핵심 기능이다.
-- [[concepts/database-modeling-normalization|데이터 모델링과 정규화]] — 업무 데이터를 테이블 구조로 설계하고 이상 현상을 줄이도록 분해·정리하는 과정이다.
-- [[concepts/html-css-basics|HTML/CSS 기본]] — HTML 태그·속성·표·이미지와 CSS 선택자·박스 모델·레이아웃을 UI&UX 수업 흐름으로 정리
-- [[concepts/javascript-dom|JavaScript와 DOM]] — `document`, `innerHTML`, 객체/배열, `forEach`, 동적 태그 생성, 이벤트, URL 파라미터를 상품 페이지 예제로 정리
-- [[concepts/bootstrap-basics|Bootstrap 기본]] — CDN, 반응형 grid, form, button, `container/row/col`을 장바구니·상품 등록 화면 예제로 정리
-- [[concepts/jquery-basics|jQuery 기본]] — `$()` 선택자, ready, 이벤트, class/속성 조작, show/hide 필터링을 이미지 UI 실습 중심으로 정리
+- [[concepts/oracle-sql-basics|Oracle SQL 기본]] — 환경 생성·데이터 입력·조건 조회 수업을 DQL/DML/DDL/TCL/DCL과 기본 SELECT 흐름으로 연결
+- [[concepts/oracle-constraints-sequence|Oracle 제약조건과 시퀀스]] — 번호 발급과 PK/NOT NULL/CHECK/FK 오류 검증이 한 INSERT 흐름에서 만나는 이유
+- [[concepts/oracle-functions-join-subquery|Oracle 함수·조인·서브쿼리]] — 함수→집계→JOIN→서브쿼리의 03-19 수업 순서를 하위 concept로 안내하는 탐색 지도
+- [[concepts/database-modeling-normalization|데이터 모델링과 정규화]] — 이상 현상→함수 종속성→테이블 분해→FK DDL→JOIN 복원의 실제 설계 흐름
+- [[concepts/html-css-basics|HTML/CSS 기본]] — 실제 table/form·class cascade·박스 배치와 `alt` 속성 정정을 UI&UX 수업 순서로 정리
+- [[concepts/javascript-dom|JavaScript와 DOM]] — 정적 요소 선택에서 더미 배열·동적 생성·query string 기반 상품 선택까지 실행 흐름으로 정리
+- [[concepts/bootstrap-basics|Bootstrap 기본]] — non-Bootstrap HTML 구조와 CDN/grid/form/card class의 역할·수업 범위 경계를 정리
+- [[concepts/html-form-controls-submission|HTML Form control과 제출 흐름]] — input/select/button의 의미에서 submit event·FormData·서버 검증 경계까지 연결
+- [[concepts/jquery-basics|jQuery 기본]] — 이미지 UI의 선택·이벤트·필터·노드 이동을 실제 `jQueryImageTest` 코드로 정리
 - [[concepts/fullstack-project-flow|풀스택 프로젝트 흐름]] — React 화면, Spring API, Service/Repository, DB가 기능 단위로 이어지는 전체 흐름
 - [[concepts/spring-boot-rest-api|Spring Boot REST API]] — React와 데이터를 주고받는 Controller/Service/Repository 기반 백엔드 API 흐름
 - [[concepts/react-typescript-basics|React와 TypeScript 기본]] — 컴포넌트, props/state, Hook, Router, 타입 정의를 프로젝트 화면 예제로 정리
@@ -167,15 +170,16 @@
 - [[concepts/java-method-constructor-overloading|Java 메서드, 생성자, this, 오버로딩]] — 메서드, 접근 지정자, 생성자, `this`, 오버로딩을 클래스/객체 학습 흐름에서 분리 정리
 - [[concepts/java-object-array-memory|Java 객체 배열과 메모리 관점]] — 객체 배열과 stack/heap 관점으로 객체 생성·참조 흐름을 정리
 - [[concepts/java-polymorphism-casting|Java 다형성과 참조 형변환]] — 업캐스팅, 다운캐스팅, `instanceof`, 오버라이딩의 연결 정리
-- [[concepts/java-interface-capability-design|Java 인터페이스 기능 설계]] — 기능별 인터페이스, `implements`, 다운캐스팅을 음료 예제로 정리
-- [[concepts/oracle-ddl-dml-transaction|Oracle DDL, DML, 트랜잭션]] — SQL 분류, 테이블 생성, INSERT, COMMIT/ROLLBACK 흐름 정리
-- [[concepts/oracle-sequence|Oracle 시퀀스]] — 게시물/상품/주문 번호를 자동 생성하는 Oracle sequence 정리
-- [[concepts/oracle-referential-integrity|Oracle 참조 무결성과 ON DELETE]] — 외래키, 참조 무결성, ON DELETE 옵션과 데이터 사전 확인 정리
-- [[concepts/oracle-sql-functions|Oracle SQL 함수]] — 문자열·숫자·날짜 함수, 그룹 함수, GROUP BY/HAVING 정리
-- [[concepts/oracle-join|Oracle JOIN]] — 여러 테이블을 공통 컬럼으로 연결해 조회하는 JOIN 정리
-- [[concepts/oracle-subquery|Oracle 서브쿼리]] — SQL 안의 SQL, 단일행/다중행/다중컬럼 서브쿼리 정리
-- [[concepts/database-normalization-functional-dependency|함수 종속성과 정규화]] — 이상 현상, 함수 종속성, 복합 기본키, 참조 무결성과 정규화 연결
-- [[concepts/database-view-index|Database View와 Index]] — View와 Index의 역할, 장단점, 사용 맥락 정리
+- [[concepts/java-interface-capability-design|Java 인터페이스 기능 설계]] — 물·샷·우유 기능 인터페이스와 `SpecialCoffee05`의 다중 구현을 실제 수업 예제로 정리
+- [[concepts/oracle-ddl-dml-transaction|Oracle DDL, DML, 트랜잭션]] — 구조/행 변경과 Auto/Manual Commit을 실제 INSERT→ROLLBACK 흐름으로 구분
+- [[concepts/oracle-sequence|Oracle 시퀀스]] — `NEXTVAL`, 데이터 사전, 테이블 독립 객체, `MAX(id)`와의 차이를 주문·게시물 예제로 정리
+- [[concepts/oracle-data-dictionary-schema-objects|Oracle 데이터 사전과 schema 객체]] — `USER_TABLES`·`USER_SEQUENCES`·`USER_VIEWS`로 DDL 결과와 사용자 소유 객체를 검증하는 흐름
+- [[concepts/oracle-referential-integrity|Oracle 참조 무결성과 ON DELETE]] — 회원-게시글·주문-상세 FK 오류와 삭제 정책, 후속 JPA cascade 경계를 구분
+- [[concepts/oracle-sql-functions|Oracle SQL 함수]] — 행별 가공과 그룹 집계, `COUNT(*)`/`COUNT(expr)`, GROUP BY/HAVING을 수업 SQL로 연결
+- [[concepts/oracle-join|Oracle JOIN]] — 정규화된 테이블 복원, inner/outer 선택, JOIN과 FK의 역할 차이
+- [[concepts/oracle-subquery|Oracle 서브쿼리]] — 최소·평균 급여와 여러 관리자 예제로 결과 개수·연산자·JOIN 선택을 구분
+- [[concepts/database-normalization-functional-dependency|함수 종속성과 정규화]] — 결정 관계를 PK/FK와 분리하고 학생·학과·성적 분해에서 DDL로 이어지는 과정
+- [[concepts/database-view-index|Database View와 Index]] — 실제 View 권한 실습, 비밀값 노출 경계, Index 직접 학습 범위 정리
 - [[concepts/spring-data-jpa-specification-pageable|Spring Data JPA Specification과 Pageable]] — 동적 검색 조건과 페이징 요청/결과 객체 정리
 - [[concepts/spring-product-search-flow|Spring 상품 검색 흐름]] — React 요청에서 Controller/Service/Repository 검색 조회까지의 흐름 정리
 - [[concepts/frontend-backend-architecture|Frontend/Backend 구조]] — React 화면과 Spring Boot API가 요청·응답·DB 흐름으로 연결되는 전체 구조
@@ -201,13 +205,13 @@
 - [[entities/java|Java]] — 2026-02-26~03-13 문법·제어문·배열·객체지향·상속/추상화를 관통하는 백엔드 기반 언어 허브
 - [[entities/git|Git]] — Java `MyJava` 프로젝트 초기화에서 GitHub 협업 흐름까지 이어지는 버전 관리 도구
 - [[entities/github|GitHub]] — Java 실습 저장소 백업에서 branch/PR 협업까지 이어지는 원격 Git 서비스
-- [[entities/oracle-database|Oracle Database]] — SQL, 제약조건, 트랜잭션, JOIN/서브쿼리, ERD/정규화 학습을 관통하는 관계형 DB 허브
-- [[entities/dbeaver|DBeaver]] — Oracle/MySQL 접속, SQL 실행, 테이블·ERD 확인에 사용한 데이터베이스 IDE
-- [[entities/html|HTML]] — 웹 문서 구조와 form/table/image 같은 UI 기본 요소를 표현하는 마크업 언어
-- [[entities/css|CSS]] — 선택자, 박스 모델, position, transition 등 화면 표현과 배치를 담당하는 스타일 언어
-- [[entities/javascript|JavaScript]] — DOM 조작, 이벤트, 배열 렌더링, URL 파라미터 처리로 웹 상호작용을 구현하는 언어
-- [[entities/bootstrap|Bootstrap]] — CDN, grid, card, form/button class로 반응형 UI를 빠르게 구성하는 도구
-- [[entities/jquery|jQuery]] — `$()` 선택자, 이벤트, class/속성 조작으로 DOM 상호작용을 간결하게 쓰는 라이브러리
+- [[entities/oracle-database|Oracle Database]] — 날짜별 SQL·무결성·트랜잭션·조회·설계와 이후 Spring/JPA 경계를 관통하는 관계형 DB 허브
+- [[entities/dbeaver|DBeaver]] — 관리자/일반 연결·SQL Preview·Manual Commit·ERD로 Oracle을 검증한 DB 클라이언트
+- [[entities/html|HTML]] — table/form/image 구조, tag·attribute 구분과 후속 서버/React 경계를 잇는 마크업 언어
+- [[entities/css|CSS]] — cascade·box·position·상태 class로 화면 표현과 배치를 담당한 스타일 언어
+- [[entities/javascript|JavaScript]] — 더미 배열→DOM→이벤트→query string 상품 흐름을 구현한 브라우저 언어
+- [[entities/bootstrap|Bootstrap]] — 기존 HTML에 CDN·grid·form/card class를 조합해 반응형 UI를 구성한 UI framework
+- [[entities/jquery|jQuery]] — 이미지 UI의 DOM 선택·이벤트·class/attribute/display 변경을 간결하게 쓴 JavaScript library
 - [[entities/spring-boot|Spring Boot]] — Controller/Service/Repository 계층으로 API와 업무 로직을 구현한 백엔드 프레임워크
 - [[entities/react|React]] — 컴포넌트, state/props, Hook, Router로 상품·장바구니·주문 화면을 만든 프론트엔드 라이브러리
 - [[entities/typescript|TypeScript]] — React 컴포넌트 props와 API 데이터 구조를 interface/type으로 표현하는 JavaScript 확장 언어
@@ -240,10 +244,10 @@
 <!-- 비교 페이지. 예: `comparisons/interface-vs-abstract-class` — Java에서 두 추상화 방식의 차이 -->
 - [[comparisons/controller-service-repository|Controller vs Service vs Repository]] — Spring Boot 백엔드에서 요청 처리, 업무 로직, DB 접근 계층의 역할 차이
 - [[comparisons/entity-vs-dto|Entity vs DTO]] — DB와 가까운 객체와 요청/응답 전달 객체의 차이
-- [[comparisons/jpql-vs-sql|JPQL vs SQL]] — Entity/필드 기준 쿼리와 테이블/컬럼 기준 쿼리의 차이
-- [[comparisons/interface-vs-abstract-class|인터페이스 vs 추상 클래스]] — Java에서 공통 부모 클래스와 기능 규격을 구분하는 기준
-- [[comparisons/single-row-vs-multi-row-subquery|단일행 서브쿼리 vs 다중행 서브쿼리]] — 서브쿼리 결과 개수에 따라 `=`, `IN` 등 연산자를 고르는 기준
-- [[comparisons/where-vs-having|WHERE vs HAVING]] — 그룹화 전 행 필터링과 그룹화 후 집계 결과 필터링의 차이
+- [[comparisons/jpql-vs-sql|JPQL vs SQL]] — Oracle 직접 SQL과 후속 Spring `Order` Entity `@Query`·Specification의 학습 경계
+- [[comparisons/interface-vs-abstract-class|인터페이스 vs 추상 클래스]] — 음료 공통 상태와 선택 기능을 함께 설계하는 실제 사용 기준
+- [[comparisons/single-row-vs-multi-row-subquery|단일행 서브쿼리 vs 다중행 서브쿼리]] — 평균 1개와 관리자 여러 명 예제로 `=`/`IN`을 고르는 기준
+- [[comparisons/where-vs-having|WHERE vs HAVING]] — 상품 행 조건과 회사별 집계 조건을 함께 쓸 때의 실행 단계 차이
 - [[comparisons/session-vs-cookie-vs-jwt|Session vs Cookie vs JWT]] — 로그인 상태 유지에서 쿠키·세션·JWT의 층위와 사용 기준 비교
 - [[comparisons/react-router-vs-spring-api-url|React Router 주소 vs Spring API 주소]] — 프론트 화면 라우팅과 백엔드 데이터 요청 URL의 역할 차이
 - [[comparisons/primitive-vs-reference-types|기본 자료형 vs 참조 자료형]] — 값 자체를 담는 타입과 객체 참조를 담는 타입의 Java 입문 구분
@@ -258,16 +262,18 @@
 - [[comparisons/clb-vs-alb|CLB vs ALB]] — AWS 로드밸런서의 기초형과 Target Group/Listener 중심 HTTP/HTTPS 애플리케이션형 구조 차이
 - [[comparisons/mpa-vs-spa|MPA vs SPA]] — 서버 렌더링 중심 다중 페이지 구조와 React 기반 단일 페이지 앱 구조의 차이
 - [[comparisons/props-vs-state|props vs state]] — React에서 부모가 내려주는 값과 컴포넌트 내부 변경 상태의 차이
-- [[comparisons/library-vs-framework|Library vs Framework]] — 필요할 때 호출하는 도구와 정해진 틀 안에서 개발하는 구조의 차이
-- [[comparisons/inline-style-vs-internal-css-vs-external-css|inline style vs internal CSS vs external CSS]] — 태그 안 style, 문서 내부 style, 외부 CSS 파일 연결 방식 비교
-- [[comparisons/get-vs-post|GET vs POST]] — URL query string으로 보내는 요청과 HTTP body로 보내는 요청의 차이
-- [[comparisons/javascript-dom-vs-jquery|JavaScript DOM vs jQuery]] — 브라우저 기본 DOM API와 이를 짧게 감싼 jQuery 라이브러리의 관계
-- [[comparisons/id-vs-class|id vs class]] — CSS/JavaScript/jQuery에서 단일 식별자와 반복 그룹 선택자를 구분하는 기준
-- [[comparisons/html-tag-vs-attribute|HTML 태그 vs 속성]] — 문서 구조를 만드는 태그와 태그에 추가 정보를 붙이는 속성의 차이
-- [[comparisons/on-delete-set-null-vs-cascade|ON DELETE SET NULL vs CASCADE]] — 부모 데이터 삭제 시 자식 FK를 NULL로 남길지 자식 행도 함께 삭제할지의 업무 규칙 차이
-- [[comparisons/ddl-vs-dml-vs-dql|DDL vs DML vs DQL]] — 구조 정의, 데이터 조작, 데이터 조회 SQL의 역할과 commit 관계 차이
-- [[comparisons/primary-key-vs-foreign-key|Primary Key vs Foreign Key]] — 행을 식별하는 기본키와 다른 테이블을 참조하는 외래키의 차이
-- [[comparisons/oracle-inner-vs-outer-join|Oracle Inner Join vs Outer Join]] — 매칭 행만 조회하는 조인과 기준 테이블의 미매칭 행까지 보존하는 조인의 차이
+- [[comparisons/library-vs-framework|Library vs Framework]] — jQuery 호출과 Bootstrap 규칙을 같은 교육 화면에서 함께 사용하며 제어 주체를 비교
+- [[comparisons/inline-style-vs-internal-css-vs-external-css|inline style vs internal CSS vs external CSS]] — 단일 확인·문서 공통·CDN 공유의 실제 선택 상황과 공존 관계
+- [[comparisons/get-vs-post|GET vs POST]] — 상품 상세 query string과 후속 form 등록을 조회/변경 목적·HTTPS 경계로 비교
+- [[comparisons/javascript-dom-vs-jquery|JavaScript DOM vs jQuery]] — 기본 DOM API와 jQuery wrapper의 실제 선택·이벤트·상태 변경 관계
+- [[comparisons/id-vs-class|id vs class]] — 단일 product container와 반복 image group에서 유일성·재사용 기준을 비교
+- [[comparisons/html-tag-vs-attribute|HTML 태그 vs 속성]] — 실제 `img`·`input`에서 요소 종류와 추가 정보를 함께 구성하는 관계
+- [[comparisons/ui-vs-ux|UI vs UX]] — 사용자가 보고 조작하는 접점과 서비스 이용 전체 경험을 form·상태 화면으로 비교
+- [[comparisons/custom-css-vs-bootstrap|직접 CSS 구현 vs Bootstrap]] — 대응하는 non-Bootstrap/Bootstrap 화면 9쌍으로 직접 규칙과 framework class의 선택·공존을 비교
+- [[comparisons/on-delete-set-null-vs-cascade|ON DELETE SET NULL vs CASCADE]] — 게시글 보존과 주문상세 삭제 상황으로 선택하는 DB 삭제 업무 규칙
+- [[comparisons/ddl-vs-dml-vs-dql|DDL vs DML vs DQL]] — 이메일 컬럼/값/조회와 주문 저장/표시 상황으로 구분하는 구조·행·조회 SQL
+- [[comparisons/primary-key-vs-foreign-key|Primary Key vs Foreign Key]] — 회원 식별과 게시글·주문상세 참조를 나누고 함수 종속성 오해를 피하는 기준
+- [[comparisons/oracle-inner-vs-outer-join|Oracle Inner Join vs Outer Join]] — 게시글 0개 회원 보존 여부와 `COUNT(*)`/`COUNT(writer)` 선택 차이
 - [[comparisons/beautifulsoup-vs-selenium|BeautifulSoup vs Selenium]] — 정적 HTML 파싱과 동적 브라우저 자동화의 역할 차이
 
 - [[comparisons/passwordless-vs-password-login|Passwordless 로그인 vs 비밀번호 로그인]] — 비밀번호 입력형 로그인과 앱 승인 기반 Passwordless 로그인의 책임 차이
@@ -280,6 +286,8 @@
 ## Meta
 
 <!-- 위키 운영 문서, lint 리포트, 토픽맵 등 -->
+- [[_meta/frontend-backend-rehighquality-inventory-plan|FrontEnd_BackEnd 내용 재고도화 전수 재고와 실행 분할 계획]] — raw 34개와 기존 지식 페이지 56개를 전수 대응하고 단계 4를 16개 초세분화 세션으로 나눈 읽기 감사 계획
+- [[_meta/wiki-content-rehighquality-work-plan|LLM Wiki 내용 재고도화 작업 계획]] — 과목 하나를 한 세션에서 내용 감사·수정·검증하고 다음 세션 프롬프트로 인계하는 실행 계획
 - [[_meta/txt-to-md-conversion-work-plan|TXT→MD 남은 과목 변환 작업 인계]] — 5~8과목 날짜별 변환·총정리 작성, 9과목 민감정보 탐지, 10과목 Python 제한 범위를 새 세션에서도 이어가기 위한 작업 인계
 - [[_meta/wiki-log-archive-2026-07-02-part-2|Wiki Log Archive 2026-07-02 Part 2]] — 2026년 7월 2일 작업 기록 후반부 아카이브
 - [[_meta/wiki-log-archive-2026-07-02-part-1|Wiki Log Archive 2026-07-02 Part 1]] — 2026년 7월 2일 작업 기록 전반부 아카이브

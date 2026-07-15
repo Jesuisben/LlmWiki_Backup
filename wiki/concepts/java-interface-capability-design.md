@@ -1,7 +1,7 @@
 ---
 title: Java 인터페이스 기능 설계
 created: 2026-07-02
-updated: 2026-07-03
+updated: 2026-07-15
 type: concept
 tags: [java]
 sources:
@@ -24,24 +24,33 @@ confidence: high
 ## 핵심 설명
 
 ```java
-public interface Iceable {
-    void addIce();
+public interface WaterAdjustable {
+    void adjustWater(double amount);
 }
 
-public interface Cookable {
-    void cook();
+public interface ShotAddable {
+    void addShot(int count);
 }
 
-public class Americano extends Beverage implements Iceable {
-    public void addIce() { }
+public class SpecialCoffee05 extends Beverage05
+        implements WaterAdjustable, ShotAddable, MilkAddable {
+    public void adjustWater(double amount) { }
+    public void addShot(int count) { }
+    public void changeMilk(String milkType) { }
 }
 ```
 
-이런 식으로 음료가 공통적으로 `Beverage` 계열에 속하면서도, 얼음 추가·조리·포장 같은 기능은 인터페이스로 따로 표현할 수 있다.
+이런 식으로 음료가 공통적으로 `Beverage05` 계열에 속하면서도, 물 조절·샷 추가·우유 추가/변경처럼 제품별로 가능한 기능은 별도 인터페이스로 표현할 수 있다.
 
 ## 수업 예시
 
-[[summaries/2026-03-12-java-abstract-interface-static|2026-03-12]]에는 한 개의 수퍼클래스와 여러 인터페이스를 함께 사용하는 예제가 등장했다. 이는 기능을 수평적으로 붙이는 연습이었다.
+[[summaries/2026-03-12-java-abstract-interface-static|2026-03-12]]에는 한 개의 수퍼클래스와 `WaterAdjustable`, `ShotAddable`, `MilkAddable`을 함께 사용하는 예제가 등장했다. `SpecialCoffee05`처럼 여러 기능을 가진 클래스와, 일부 기능만 가진 음료 클래스를 같은 상속 계층 안에서 구분하는 연습이었다.
+
+## 학습 연결과 범위
+
+- **선행 개념:** [[concepts/java-inheritance|Java 상속]]과 [[concepts/java-polymorphism-casting|참조 형변환]]을 먼저 알아야 “공통 타입”과 “추가 기능 타입”을 구분할 수 있다.
+- **Java 수업에서 직접 학습:** 음료별 기능 인터페이스 선언, `implements`, 메서드 오버라이딩, 인터페이스 타입 확인과 다운캐스팅.
+- **이후 확장 관점:** Spring의 의존성 주입을 설명할 때도 “구현 클래스보다 계약을 먼저 본다”는 관점이 재등장하지만, 이 페이지의 코드는 03-12 음료 실습에 한정한다.
 
 ## 자주 헷갈리는 점
 

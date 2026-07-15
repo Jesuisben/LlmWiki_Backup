@@ -1,7 +1,7 @@
 ---
 title: Oracle JOIN
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-15
 type: concept
 tags: [oracle, sql]
 sources:
@@ -17,6 +17,10 @@ confidence: high
 ## 정의
 
 JOIN은 서로 다른 두 개 이상의 테이블을 공통 컬럼으로 연결해 하나의 결과처럼 조회하는 기술이다. 수업에서는 `members.id`와 `boards.writer`처럼 PK/FK 연결고리를 기준으로 조인했다.
+
+## 왜 중요하고 수업에서 어떻게 이어졌나
+
+정규화된 DB에서는 회원 이름은 `MEMBERS`, 게시글 제목은 `BOARDS`에 나뉜다. 03-19에는 작성자 ID만 보던 게시글 조회를 이름과 제목이 함께 보이는 결과로 복원했고, 게시물을 쓰지 않은 회원을 포함할지에 따라 inner/outer join을 선택했다. 03-20의 정규화가 “왜 나누는가”라면 JOIN은 “나눈 정보를 어떻게 다시 읽는가”다.
 
 ## Equi Join과 ANSI Join
 
@@ -55,6 +59,18 @@ ORDER BY cnt DESC, m.name ASC;
 ```
 
 자세한 비교는 [[comparisons/oracle-inner-vs-outer-join|Oracle Inner Join vs Outer Join]]에 정리했다.
+
+## 자주 틀리는 이해: JOIN과 FK를 구분하기
+
+- JOIN은 SELECT 결과를 만드는 조회 방법이다. 두 컬럼 값이 맞으면 FK가 없어도 조인할 수 있다.
+- FK는 저장되는 데이터의 참조 관계를 DB가 검사하는 제약조건이다. JOIN을 자동 실행해주는 기능이 아니다.
+- outer join에서 `COUNT(*)`는 보존된 회원 행도 세므로 실제 게시글 수는 `COUNT(writer)`처럼 자식 컬럼을 세어야 한다.
+
+## 선행·후속 연결
+
+- 선행: [[concepts/oracle-referential-integrity|참조 무결성]]에서 부모/자식 키 관계를 만들었다.
+- 후속: [[concepts/database-modeling-normalization|데이터 모델링과 정규화]]에서 분리한 테이블을 JOIN으로 복원한다.
+- 다른 질문: 기준값을 먼저 계산해 조건으로 넘기는 문제는 [[concepts/oracle-subquery|Oracle 서브쿼리]]가 더 자연스럽다.
 
 ## 관련 페이지
 
