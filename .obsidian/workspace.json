@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "raw/KoreaICT/10. Python/2026.06.30(화)/2026.06.30(화).md",
+                "file": "raw/KoreaICT/5. Linux/2026.04.24(금)/2026.04.24(금).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026.06.30(화)"
+              "title": "2026.04.24(금)"
             }
           },
           {
@@ -105,8 +105,7 @@
               "title": "2026.07.08(수)"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -322,13 +321,14 @@
       }
     ]
   },
-  "active": "413bc9b690ae5a5e",
+  "active": "1a7cb16ccb996dde",
   "lastOpenFiles": [
     "raw/KoreaICT/11. Machine Learning/2026.07.15(수)/2026.07.15(수).md",
+    "raw/KoreaICT/5. Linux/2026.04.24(금)/2026.04.24(금).md",
+    "raw/KoreaICT/11. Machine Learning/2026.07.14(화)/2026.07.14(화).md",
+    "raw/KoreaICT/10. Python/2026.06.30(화)/2026.06.30(화).md",
     "raw/KoreaICT/10. Python/2026.07.01(수)/2026.07.01(수).md",
     "AGENTS.md",
-    "raw/KoreaICT/10. Python/2026.06.30(화)/2026.06.30(화).md",
-    "raw/KoreaICT/11. Machine Learning/2026.07.14(화)/2026.07.14(화).md",
     "raw/KoreaICT/11. Machine Learning/2026.07.15(수)",
     "raw/KoreaICT/10. Python/2026.06.29(월)/2026.06.29(월).md",
     "raw/KoreaICT/10. Python/2026.06.26(금)/2026.06.26(금).md",
@@ -369,7 +369,6 @@
     "wiki/_meta/wiki-log-archive-2026-07-02.md",
     "wiki/_meta/wiki-log-archive-2026-07-01.md",
     "wiki/_meta/wiki-log-archive-2026-07.md",
-    "wiki/_meta/wiki-log-archive-2026-06.md",
     "무제.canvas"
   ]
 }
