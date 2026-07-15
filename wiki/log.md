@@ -13,6 +13,12 @@
 
 ## 현재 로그
 
+## [2026-07-15] update | 날짜 기반 학습 회상 규칙
+
+- 목적: 공유된 Vault를 Codex 등 다른 Agent가 작업 폴더로 열어도 “어제 뭐 했지?” 같은 학습 회상 질문을 날짜별 원본 수업 메모 기준으로 답하도록 공통 규칙을 추가했다.
+- 반영: `AGENTS.md` Query 작업 순서 아래에 현재 날짜 계산, `raw/KoreaICT/` 날짜 메모 최우선 조회, wiki summary 보조 활용, 수업 메모 부재 시 명시적 안내 규칙을 추가했다. `wiki/log.md`·Git 수정 시각으로 학습 내용을 추측하지 않도록 명시했다.
+- 경계: `raw/`는 수정하지 않았으며, 이 규칙은 Hermes 전용 memory/skill이 아닌 Vault 공유 규칙으로 유지한다.
+
 ## [2026-07-14] update | 9. 중간 프로젝트 공부 provenance 보강
 
 - 범위: 중간 프로젝트 CI/CD·Passwordless 관련 wiki 4개 페이지의 `sources`에서 절대 경로 10개를 현재 Vault 상대 경로 `raw/KoreaICT/9. 중간 프로젝트 공부/...`로 정정했다. 새 페이지를 만들지 않아 Total pages는 258로 유지했다.
