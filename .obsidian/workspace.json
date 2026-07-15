@@ -105,7 +105,8 @@
               "title": "2026.07.08(수)"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -321,16 +322,17 @@
       }
     ]
   },
-  "active": "1a7cb16ccb996dde",
+  "active": "413bc9b690ae5a5e",
   "lastOpenFiles": [
     "raw/KoreaICT/11. Machine Learning/2026.07.15(수)/2026.07.15(수).md",
+    "raw/KoreaICT/10. Python/2026.07.01(수)/2026.07.01(수).md",
+    "AGENTS.md",
     "raw/KoreaICT/10. Python/2026.06.30(화)/2026.06.30(화).md",
     "raw/KoreaICT/11. Machine Learning/2026.07.14(화)/2026.07.14(화).md",
     "raw/KoreaICT/11. Machine Learning/2026.07.15(수)",
     "raw/KoreaICT/10. Python/2026.06.29(월)/2026.06.29(월).md",
     "raw/KoreaICT/10. Python/2026.06.26(금)/2026.06.26(금).md",
     "raw/KoreaICT/10. Python/2026.06.25(목)/2026.06.25(목).md",
-    "raw/KoreaICT/10. Python/2026.07.01(수)/2026.07.01(수).md",
     "raw/KoreaICT/10. Python/2026.07.08(수)/2026.07.08(수).md",
     "raw/KoreaICT/10. Python/2026.07.07(화)/2026.07.07(화).md",
     "raw/KoreaICT/10. Python/2026.07.06(월)/2026.07.06(월).md",
@@ -368,7 +370,6 @@
     "wiki/_meta/wiki-log-archive-2026-07-01.md",
     "wiki/_meta/wiki-log-archive-2026-07.md",
     "wiki/_meta/wiki-log-archive-2026-06.md",
-    "wiki/_meta/llm-wiki-operating-model.md",
     "무제.canvas"
   ]
 }
