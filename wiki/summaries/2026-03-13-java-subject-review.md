@@ -139,6 +139,9 @@ Java에서 배운 “객체와 로직”은 Oracle에서 배울 “데이터 저
 - [[comparisons/primitive-vs-reference-types|기본 자료형 vs 참조 자료형]]
 - [[comparisons/overloading-vs-overriding|오버로딩 vs 오버라이딩]]
 - [[comparisons/interface-vs-abstract-class|인터페이스 vs 추상 클래스]]
+- [[comparisons/array-vs-collection|배열 vs 컬렉션]]
+- [[concepts/java-access-modifier-encapsulation|Java 접근 지정자와 캡슐화]]
+- [[summaries/java-homework-research-review|Java 클래스 숙제와 사전조사 정리]]
 
 ## 출처
 

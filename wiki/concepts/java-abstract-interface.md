@@ -1,7 +1,7 @@
 ---
 title: Java 추상 클래스와 인터페이스
 created: 2026-07-02
-updated: 2026-07-03
+updated: 2026-07-15
 type: concept
 tags: [java]
 sources:
@@ -28,7 +28,7 @@ confidence: high
 ### 추상 클래스
 
 ```java
-public abstract class Beverage {
+public abstract class Beverage05 {
     public abstract void drink();
 }
 ```
@@ -40,8 +40,8 @@ public abstract class Beverage {
 ### 인터페이스
 
 ```java
-public interface Cookable {
-    void cook();
+public interface WaterAdjustable {
+    void adjustWater(double amount);
 }
 ```
 
@@ -51,13 +51,20 @@ public interface Cookable {
 
 ## 수업 예시
 
-[[summaries/2026-03-12-java-abstract-interface-static|2026-03-12]]에는 음료/가게 예제에서 추상 메서드, 인터페이스, 여러 기능 구현을 함께 다뤘다.
+[[summaries/2026-03-12-java-abstract-interface-static|2026-03-12]]에는 `Beverage05`가 `drink()`를 추상 메서드로 선언하고, `WaterAdjustable`, `ShotAddable`, `MilkAddable`이 물 조절·샷 추가·우유 추가/변경 기능을 각각 규격으로 분리하는 음료 예제가 등장했다. 하위 클래스는 공통 음료 상태는 상속받고, 실제로 제공하는 기능만 인터페이스로 골라 구현했다.
+
+## 학습 연결과 범위
+
+- **Java 수업에서 직접 학습:** 추상 클래스의 직접 생성 금지, 추상 메서드 구현 강제, 클래스 단일 상속, 여러 인터페이스 구현, 음료 기능 분리.
+- **이후 확장 관점:** Spring에서 인터페이스 타입으로 구현체를 다루는 방식과 연결할 수 있지만, 이는 Java 수업의 음료 코드 다음에 배우는 응용 관점이다.
+- **현대 Java 경계:** 이날 인터페이스에는 추상 기능 계약만 작성했다. 현대 Java 인터페이스는 `default`, `static`, `private` 메서드도 가질 수 있으므로 “모든 인터페이스 메서드는 언제나 구현이 없다”로 일반화하지 않는다.
 
 ## 자주 헷갈리는 점
 
 - 추상 클래스는 “부모로서 공통 상태와 기본 구현”이 필요할 때 적합하다.
 - 인터페이스는 “이 기능을 할 수 있다”는 약속을 여러 클래스에 붙이고 싶을 때 적합하다.
 - Java 클래스는 하나만 상속하지만, 인터페이스는 여러 개 구현할 수 있다.
+- 추상 클래스는 추상 메서드가 없어도 선언할 수 있고, 일반 필드·생성자·구현된 메서드를 가질 수 있다.
 
 ## 관련 개념
 

@@ -2,7 +2,7 @@
 title: Oracle 총정리
 type: summary
 created: 2026-07-03
-updated: 2026-07-04
+updated: 2026-07-15
 tags: [oracle, sql, curriculum, study-log]
 sources:
   - raw/KoreaICT/2. Oracle/Oracle 총정리/Oracle 총정리.md
@@ -51,7 +51,7 @@ Java에서 클래스/객체가 메모리 안의 구조였다면, Oracle에서는
 - DDL: `CREATE`, `ALTER`, `DROP`으로 테이블·시퀀스·사용자 같은 구조를 바꾼다.
 - TCL: `COMMIT`, `ROLLBACK`, `SAVEPOINT`로 트랜잭션을 제어한다.
 
-중요한 차이는 DML은 `COMMIT` 전까지 확정되지 않고 `ROLLBACK`할 수 있지만, DDL은 구조 변경 성격이라 자동 커밋된다는 점이다. 이 구분은 [[concepts/oracle-ddl-dml-transaction|Oracle DDL, DML, 트랜잭션]], [[comparisons/ddl-vs-dml-vs-dql|DDL vs DML vs DQL]]에서 반복 복습한다.
+중요한 차이는 DML은 `COMMIT` 전까지 확정되지 않고 `ROLLBACK`할 수 있지만, Oracle DDL은 실행 전후 암시적 커밋이 일어날 수 있다는 점이다. 이는 SQL 클라이언트인 DBeaver의 Auto Commit 설정과 별개다. 이 구분은 [[concepts/oracle-ddl-dml-transaction|Oracle DDL, DML, 트랜잭션]], [[comparisons/ddl-vs-dml-vs-dql|DDL vs DML vs DQL]]에서 반복 복습한다.
 
 ### 3. DBeaver 접속과 사용자/권한 흐름
 
@@ -69,7 +69,7 @@ Java에서 클래스/객체가 메모리 안의 구조였다면, Oracle에서는
 
 테이블은 최소 하나 이상의 컬럼이 있어야 하고, 수업에서는 `VARCHAR2`, `CHAR`, `NUMBER`, `DATE`를 중심으로 자료형을 다뤘다. `NUMBER(precision, scale)`은 전체 자릿수와 소수 자릿수를 나누어 저장하므로, 소수 자릿수 초과는 반올림될 수 있지만 정수 자릿수 초과는 에러가 날 수 있다.
 
-기본키(PK)는 행을 식별하는 값이고, 외래키(FK)는 다른 테이블의 기본키를 참조하는 값이다. 시퀀스는 중복되지 않는 순차 번호를 만들어 주는 독립 객체이며, 기본키 번호에 사용할 때는 `Cycle` 설정이 중복 위험을 만들 수 있음을 주의해야 한다. 관련 페이지는 [[concepts/oracle-constraints-sequence|Oracle 제약조건과 시퀀스]], [[concepts/oracle-sequence|Oracle 시퀀스]], [[comparisons/primary-key-vs-foreign-key|Primary Key vs Foreign Key]]다.
+기본키(PK)는 행을 식별하는 값이고, 외래키(FK)는 다른 테이블의 키를 참조하는 값이다. 시퀀스는 호출할 때마다 다음 번호를 발급하는 독립 객체지만 rollback으로 이미 발급한 번호가 반환되지 않아 빈 번호가 생길 수 있다. 즉 “중복을 피하는 번호 발급”과 “빈 번호 없는 연속 번호”는 같은 뜻이 아니다. 기본키 번호에 사용할 때는 `Cycle` 설정이 중복 위험을 만들 수 있음을 주의해야 한다. 관련 페이지는 [[concepts/oracle-constraints-sequence|Oracle 제약조건과 시퀀스]], [[concepts/oracle-sequence|Oracle 시퀀스]], [[comparisons/primary-key-vs-foreign-key|Primary Key vs Foreign Key]]다.
 
 ### 5. 참조 무결성과 ON DELETE
 
@@ -95,7 +95,7 @@ JOIN은 두 개 이상의 테이블을 공통 컬럼 또는 매칭 조건으로 
 
 ### 8. 서브쿼리: SQL 안의 SQL
 
-서브쿼리는 메인 쿼리 안에 들어가는 쿼리이며, 보통 먼저 실행되어 메인 쿼리의 조건값을 제공한다. 총정리 원본은 최소 급여자, 평균 급여보다 많이 받는 사원, 특정 관리자의 사원 목록을 예시로 든다.
+서브쿼리는 메인 쿼리 안에 들어가는 쿼리이며, 학습할 때는 안쪽 쿼리가 조건값을 만들고 바깥 쿼리가 이를 사용하는 논리적 두 단계로 읽는다. 실제 물리 실행 순서는 Oracle 옵티마이저가 바꿀 수 있으므로 “항상 안쪽이 먼저 실행된다”고 보장하는 규칙은 아니다. 총정리 원본은 최소 급여자, 평균 급여보다 많이 받는 사원, 특정 관리자의 사원 목록을 예시로 든다.
 
 핵심 판단은 결과 개수다.
 
@@ -119,6 +119,12 @@ JOIN은 두 개 이상의 테이블을 공통 컬럼 또는 매칭 조건으로 
 
 관련 페이지는 [[concepts/database-modeling-normalization|데이터 모델링과 정규화]], [[concepts/database-normalization-functional-dependency|함수 종속성과 정규화]], [[concepts/database-view-index|Database View와 Index]]다.
 
+> 원본의 “X는 PK, Y는 FK”라는 메모는 함수 종속성의 일반 정의로는 정확하지 않다. 함수 종속성은 결정 관계이고, PK/FK는 행 식별·테이블 참조를 강제하는 키/제약조건이다. 이번 정리는 이 둘을 분리한다.
+
+### 10. View와 Index의 직접 학습 범위
+
+View는 `CREATE OR REPLACE VIEW`로 조회 결과에 이름을 붙이고, `GRANT SELECT`로 다른 schema 사용자에게 공개한 뒤 `REVOKE`와 `DROP VIEW`까지 실습했다. 반면 Index는 검색을 돕는 구조와 PK/UNIQUE 생성 시 함께 만들어질 수 있다는 입문 설명까지만 확인했다. 별도 `CREATE INDEX`, 실행 계획, 성능 수치 실습은 원본에 없다.
+
 ## 핵심 실습 / 예제 앵커
 
 - DBeaver 관리자 연결과 일반 사용자 연결 생성
@@ -133,6 +139,18 @@ JOIN은 두 개 이상의 테이블을 공통 컬럼 또는 매칭 조건으로 
 - 단일행/다중행/다중컬럼 서브쿼리
 - ERD를 보며 정규화된 테이블과 참조 무결성 제약조건 구성
 
+대표 흐름 하나를 SQL로 묶으면 다음과 같다. 구조를 만든 뒤 데이터를 넣고 확정하고, 관계를 따라 조회한다.
+
+```sql
+INSERT INTO orders(oid, mid, orderdate)
+VALUES(order_seq.nextval, 'an', sysdate);
+COMMIT;
+
+SELECT m.name, b.subject
+FROM members m LEFT OUTER JOIN boards b
+ON m.id = b.writer;
+```
+
 ## 헷갈린 점 / 질문
 
 - SQL의 `=`는 비교이고, Java의 대입문 `x = 1`과 다르다.
@@ -146,7 +164,7 @@ JOIN은 두 개 이상의 테이블을 공통 컬럼 또는 매칭 조건으로 
 
 ## 다음 과목과의 연결
 
-Oracle에서 배운 테이블, PK/FK, JOIN, 정규화는 이후 Spring Boot와 React 프로젝트의 데이터 흐름을 이해하는 기반이 된다. 예를 들어 Spring의 Entity는 DB 테이블 구조와 연결되고, Repository는 SQL/JPA를 통해 데이터를 조회하며, React 화면의 상품 목록·장바구니·주문 기능은 결국 Oracle/MySQL에서 배운 관계형 데이터 모델을 웹서비스 기능으로 끌어올린 것이다.
+Oracle에서 **직접 실습한 범위**는 SQL, 테이블, 제약조건, 트랜잭션, JOIN/서브쿼리, ERD/정규화다. 03-30부터 시작한 FrontEnd_BackEnd 과정에서는 MySQL 환경과 Spring Boot/JPA의 Entity·Repository가 등장한다. 따라서 Oracle→JPA 연결은 PK/FK·JOIN·SQL 사고방식의 학습 연결이지 같은 Oracle 실행환경이 이어진다는 뜻이 아니다. 프로젝트에서는 React 화면의 상품·장바구니·주문 요청이 API를 거쳐 관계형 DB로 이어지며, 자세한 경계는 [[comparisons/jpql-vs-sql|JPQL vs SQL]]에서 확인한다.
 
 ## 관련 페이지
 

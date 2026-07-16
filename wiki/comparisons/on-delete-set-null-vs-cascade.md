@@ -1,7 +1,7 @@
 ---
 title: ON DELETE SET NULL vs CASCADE
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-15
 type: comparison
 tags: [oracle, sql]
 sources:
@@ -48,6 +48,18 @@ ON DELETE CASCADE;
 ## 헷갈리기 쉬운 포인트
 
 `ON DELETE`는 “문법적으로 뭐가 맞나”보다 “업무적으로 무엇을 보존해야 하나”의 문제다. 게시물은 작성자가 탈퇴해도 남길 수 있지만, 주문상세는 주문이 사라지면 독립적으로 의미를 갖기 어렵다.
+
+## 구체적인 선택 상황
+
+1. 회원 탈퇴 뒤에도 게시글 내용과 작성 시점을 보존해야 한다면 `BOARDS.WRITER`에 `SET NULL`을 선택한다. 작성자 연결만 끊고 게시글 행은 남는다.
+2. 주문이 사라지면 그 주문의 품목·수량인 주문상세가 독립 의미를 잃는다면 `ORDERDETAILS.OID`에 `CASCADE`를 선택한다.
+
+## 흔한 오해
+
+- `SET NULL`은 자식 FK 컬럼이 `NULL`을 허용해야 사용할 수 있다.
+- `CASCADE`는 삭제 오류를 없애는 편의 옵션이 아니라 자식 데이터까지 실제로 지우는 업무 규칙이다.
+- 아무 옵션도 없으면 자식이 남아 있는 부모 삭제가 제한되는 No Action 동작을 별도로 고려해야 한다.
+- 이후 JPA의 cascade 설정과 DB의 `ON DELETE CASCADE`는 같은 설정이 아니다. 이 페이지의 근거 범위는 Oracle FK DDL이다.
 
 ## 관련 페이지
 

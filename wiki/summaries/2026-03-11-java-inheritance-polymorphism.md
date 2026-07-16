@@ -1,7 +1,7 @@
 ---
 title: 2026-03-11 Java 상속과 참조 형변환
 created: 2026-07-02
-updated: 2026-07-03
+updated: 2026-07-15
 type: summary
 tags: [java, curriculum, study-log]
 sources:
@@ -40,11 +40,20 @@ confidence: high
 - 부모 타입 배열에 여러 음료 객체를 담고 반복문/조건문으로 구분
 - `toString()` 오버라이딩으로 객체 출력 결과를 사람이 읽기 좋게 변경
 
+```text
+new Americano04(...) → 자식 생성자 → super(name, price)
+→ 부모 공통 필드 초기화 → 자식 waterAmount 초기화
+→ Beverage04 참조/배열에 업캐스팅 → 공통 showInfo() 호출
+→ instanceof로 실제 타입 확인 → 다운캐스팅 → 자식 전용 기능 호출
+```
+
 ## 헷갈린 점 / 질문
 
 - 상속받았다는 말이 모든 필드를 직접 만질 수 있다는 뜻은 아니다. `private`은 클래스 내부에서만 직접 접근 가능하다.
 - 다운캐스팅은 실제 객체가 그 타입일 때만 안전하다.
 - `Object → 부모 → 자식` 순서로 메서드가 계속 오버라이딩될 수 있다.
+- 업캐스팅은 객체 자체를 바꾸는 것이 아니라 참조 타입의 관점을 부모 쪽으로 넓히는 것이다.
+- `super(...)`는 부모 생성자 호출이고 `super.method()`는 부모 구현 호출이므로 역할이 다르다.
 
 ## 관련 페이지
 
@@ -52,6 +61,7 @@ confidence: high
 - [[concepts/java-polymorphism-casting|Java 다형성과 참조 형변환]]
 - [[comparisons/overloading-vs-overriding|오버로딩 vs 오버라이딩]]
 - [[concepts/java-method-constructor-overloading|Java 메서드, 생성자, this, 오버로딩]]
+- [[concepts/java-access-modifier-encapsulation|Java 접근 지정자와 캡슐화]]
 
 ## 출처
 

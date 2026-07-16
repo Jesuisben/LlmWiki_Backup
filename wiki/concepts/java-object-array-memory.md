@@ -1,7 +1,7 @@
 ---
 title: Java 객체 배열과 메모리 관점
 created: 2026-07-02
-updated: 2026-07-03
+updated: 2026-07-15
 type: concept
 tags: [java]
 sources:
@@ -36,7 +36,13 @@ products[1] = new Product03("새우깡", 1500);
 
 ## 수업 예시
 
-[[summaries/2026-03-10-java-constructor-overloading-inheritance|2026-03-10]]에는 `Product` 객체 여러 개를 배열에 담고 반복문으로 처리하는 예제가 등장했다. [[summaries/2026-03-11-java-inheritance-polymorphism|2026-03-11]]에는 부모 타입 배열에 여러 자식 객체를 담는 다형성 예제로 확장되었다.
+[[summaries/2026-03-10-java-constructor-overloading-inheritance|2026-03-10]]에는 참조 칸 두 개를 먼저 만든 뒤 `소이조이`와 `맥심커피` 객체를 각각 연결하고 `display()`로 출력했다. [[summaries/2026-03-11-java-inheritance-polymorphism|2026-03-11]]에는 `Beverage04[]`에 `Espresso04`, `Latte04`를 함께 넣고 공통 `showInfo()`를 호출하는 다형성 예제로 확장되었다.
+
+## 학습 연결과 범위
+
+- **선행:** 기본 배열의 인덱스·고정 크기와 [[comparisons/primitive-vs-reference-types|참조 자료형]].
+- **후속:** 부모 타입 배열, 업캐스팅, `instanceof`, 안전한 다운캐스팅.
+- 상품·회원·장바구니 목록은 이후 프로젝트에서의 확장 예이고, Java 수업 직접 근거는 `Product03[]`와 `Beverage04[]`이다.
 
 ## 자주 헷갈리는 점
 

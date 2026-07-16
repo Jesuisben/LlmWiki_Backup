@@ -1,0 +1,399 @@
+from keras.datasets import mnist
+
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
+
+print(f'x_train.shape = {x_train.shape}')
+print(f'y_train.shape = {y_train.shape}')
+print(f'x_test.shape = {x_test.shape}')
+print(f'y_test.shape = {y_test.shape}')
+
+
+위의 예시는 mnist 데이터 셋을 가져오는 예시입니다.
+mnist 데이터 셋과 유사한 데이터 셋을 개발자라 만들려면 어떻게 해야 하나?
+
+좋은 질문입니다.
+
+MNIST는 단순히 "이미지 파일들의 모음"이 아니라, 머신러닝이 학습하기 좋은 형태로 정리된 데이터셋입니다. 개발자가 직접 MNIST와 비슷한 데이터셋을 만드는 것도 충분히 가능합니다.
+
+MNIST 데이터셋의 구조부터 이해하기
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
+
+를 실행하면
+
+x_train : (60000, 28, 28)
+y_train : (60000,)
+
+x_test : (10000, 28, 28)
+y_test : (10000,)
+
+즉,
+
+이미지 60,000장
+정답(Label) 60,000개
+테스트 이미지 10,000장
+테스트 정답 10,000개
+
+로 구성되어 있습니다.
+
+예를 들어
+
+x_train[0]
+
+은
+
+28 × 28
+
+크기의 숫자 이미지입니다.
+
+y_train[0]
+
+은
+
+5
+
+처럼 정답 숫자입니다.
+
+개발자가 만드는 과정
+
+예를 들어 고양이와 강아지를 구분하는 AI를 만든다고 하겠습니다.
+
+① 이미지 수집
+dataset/
+    cat/
+        cat001.jpg
+        cat002.jpg
+        ...
+    dog/
+        dog001.jpg
+        dog002.jpg
+
+먼저 많은 이미지를 모읍니다.
+
+② 이미지 크기 통일
+
+사진마다 크기가 다릅니다.
+
+예를 들어
+
+1920 × 1080
+
+640 × 480
+
+300 × 500
+
+이렇게 다양하면 학습할 수 없습니다.
+
+그래서 모두
+
+128 × 128
+
+또는
+
+224 × 224
+
+처럼 동일한 크기로 변경합니다.
+
+예를 들면
+
+img = cv2.resize(img, (128,128))
+③ 숫자로 변환
+
+컴퓨터는 이미지를 숫자로 저장합니다.
+
+예를 들어
+
+[255 240 210 ...]
+
+RGB라면
+
+(128,128,3)
+
+배열이 됩니다.
+
+MNIST는 흑백이라
+
+(28,28)
+
+입니다.
+
+④ 라벨(Label) 만들기
+
+고양이는
+
+0
+
+강아지는
+
+1
+
+이라고 정합니다.
+
+예를 들어
+
+cat001.jpg → 0
+
+cat002.jpg → 0
+
+dog001.jpg → 1
+
+dog002.jpg → 1
+⑤ 배열 만들기
+
+모든 이미지를 리스트에 넣습니다.
+
+x = [
+    img1,
+    img2,
+    img3,
+    ...
+]
+
+정답은
+
+y = [
+    0,
+    0,
+    1,
+    1,
+    ...
+]
+⑥ NumPy 배열로 변환
+import numpy as np
+
+x = np.array(x)
+y = np.array(y)
+
+그러면
+
+x.shape
+
+(5000,128,128,3)
+
+처럼 됩니다.
+
+⑦ Train / Test 분리
+
+MNIST처럼
+
+from sklearn.model_selection import train_test_split
+
+x_train, x_test, y_train, y_test = train_test_split(
+    x,
+    y,
+    test_size=0.2,
+    random_state=0
+)
+
+이제
+
+(x_train, y_train)
+
+(x_test, y_test)
+
+형태가 만들어집니다.
+
+최종적으로는 MNIST와 똑같은 구조
+
+예를 들어
+
+x_train.shape
+
+(4000,128,128,3)
+y_train.shape
+
+(4000,)
+x_test.shape
+
+(1000,128,128,3)
+y_test.shape
+
+(1000,)
+
+이렇게 만들면
+
+model.fit(
+    x_train,
+    y_train
+)
+
+으로 바로 학습할 수 있습니다.
+
+실제 개발에서는 이미지를 어떻게 읽을까?
+
+보통 OpenCV나 PIL을 사용합니다.
+
+예를 들어 OpenCV를 사용하면 다음과 같습니다.
+
+import cv2
+import os
+import numpy as np
+
+images = []
+labels = []
+
+for filename in os.listdir("dataset/cat"):
+    img = cv2.imread(f"dataset/cat/{filename}")
+    img = cv2.resize(img, (128, 128))
+    images.append(img)
+    labels.append(0)
+
+for filename in os.listdir("dataset/dog"):
+    img = cv2.imread(f"dataset/dog/{filename}")
+    img = cv2.resize(img, (128, 128))
+    images.append(img)
+    labels.append(1)
+
+x = np.array(images)
+y = np.array(labels)
+
+이후 train_test_split()으로 학습용과 테스트용으로 나누면 됩니다.
+
+MNIST처럼 load_data() 형태로 만들려면?
+
+개발자가 직접 다음과 같은 함수를 만들어 사용할 수도 있습니다.
+
+def load_data():
+    # 이미지 읽기
+    # 라벨 생성
+    # train/test 분리
+    return (x_train, y_train), (x_test, y_test)
+
+그러면 사용자는 MNIST와 동일하게
+
+(x_train, y_train), (x_test, y_test) = load_data()
+
+처럼 사용할 수 있습니다.
+
+핵심 정리
+
+MNIST와 같은 데이터셋은 특별한 형식이 아니라, **"입력 데이터(x)와 정답(y)를 학습용과 테스트용으로 나눈 NumPy 배열"**입니다. 따라서 개발자는 다음 순서로 직접 만들 수 있습니다.
+
+데이터를 수집한다.
+모든 데이터를 같은 크기와 형식으로 전처리한다.
+각 데이터에 정답(Label)을 붙인다.
+NumPy 배열로 변환한다.
+train_test_split() 등으로 학습용과 테스트용으로 나눈다.
+필요하다면 load_data() 함수를 만들어 MNIST처럼 (x_train, y_train), (x_test, y_test) 형태로 반환한다.
+
+이 과정을 따르면 자신만의 MNIST와 유사한 데이터셋을 만들어 다양한 딥러닝 모델에 사용할 수 있습니다.
+
+그럼 이것을 파일로 만들 수 있나요?
+
+네, 파일로 만들 수 있습니다. 실제로 대부분의 공개 데이터셋도 내부적으로는 파일 형태로 저장되어 있습니다.
+
+방법은 여러 가지가 있는데, 가장 많이 사용하는 방법을 설명드리겠습니다.
+
+방법 1. NumPy 파일(.npz)로 저장 (가장 추천)
+
+MNIST처럼 x_train, y_train 등을 한 번에 저장할 수 있습니다.
+
+저장
+import numpy as np
+
+np.savez(
+    "my_dataset.npz",
+    x_train=x_train,
+    y_train=y_train,
+    x_test=x_test,
+    y_test=y_test
+)
+
+그러면
+
+my_dataset.npz
+
+라는 파일이 생성됩니다.
+
+불러오기
+import numpy as np
+
+data = np.load("my_dataset.npz")
+
+x_train = data["x_train"]
+y_train = data["y_train"]
+x_test = data["x_test"]
+y_test = data["y_test"]
+
+사용 방법은 MNIST와 거의 같습니다.
+
+방법 2. pickle 파일
+import pickle
+
+with open("dataset.pkl", "wb") as f:
+    pickle.dump(
+        (x_train, y_train, x_test, y_test),
+        f
+    )
+
+읽을 때는
+
+with open("dataset.pkl", "rb") as f:
+    x_train, y_train, x_test, y_test = pickle.load(f)
+방법 3. HDF5 파일
+
+대용량 데이터에서는 많이 사용합니다.
+
+import h5py
+
+with h5py.File("dataset.h5", "w") as f:
+    f.create_dataset("x_train", data=x_train)
+    f.create_dataset("y_train", data=y_train)
+    f.create_dataset("x_test", data=x_test)
+    f.create_dataset("y_test", data=y_test)
+방법 4. CSV 파일
+
+이미지가 아닌 일반적인 표 형태의 데이터라면 CSV를 사용할 수도 있습니다.
+
+예를 들어
+
+age,height,weight,label
+20,170,65,0
+35,180,82,1
+...
+
+하지만 이미지 데이터에는 적합하지 않습니다.
+
+MNIST처럼 load_data() 만들기
+
+예를 들어
+
+my_dataset.npz
+
+를 만들어 놓았다면
+
+import numpy as np
+
+def load_data():
+    data = np.load("my_dataset.npz")
+
+    return (
+        (data["x_train"], data["y_train"]),
+        (data["x_test"], data["y_test"])
+    )
+
+사용은
+
+(x_train, y_train), (x_test, y_test) = load_data()
+
+처럼 MNIST와 완전히 동일합니다.
+
+실제 Keras의 MNIST는 어떻게 저장되어 있을까?
+
+Keras의 mnist.load_data()는 내부적으로 .npz 파일을 사용합니다.
+
+예를 들어 처음 실행하면 인터넷에서 mnist.npz 파일을 다운로드하여 캐시에 저장하고, 이후에는 그 파일을 읽어서 다음과 같이 반환합니다.
+
+(x_train, y_train), (x_test, y_test)
+
+즉, Keras도 여러분이 만들 수 있는 것과 같은 방식으로 데이터를 저장하고 불러오는 것입니다.
+
+가장 추천하는 방법
+
+직접 데이터셋을 만든다면 .npz 파일을 사용하는 것을 추천합니다. 이유는 다음과 같습니다.
+
+여러 개의 NumPy 배열을 하나의 파일에 저장할 수 있습니다.
+저장과 불러오기가 매우 빠릅니다.
+코드가 간단합니다.
+mnist.load_data()와 유사한 방식으로 쉽게 사용할 수 있습니다.
+
+따라서 사용자 정의 이미지 데이터셋을 만들 때는 .npz 파일 + load_data() 함수 조합이 가장 간편하고 실용적인 방법입니다.

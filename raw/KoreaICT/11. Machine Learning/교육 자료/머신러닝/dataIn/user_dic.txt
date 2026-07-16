@@ -1,0 +1,8 @@
+챗GPT	NNP
+스프링AI	NNP
+LangChain	NNP
+Word2Vec	NNP
+TensorFlow	NNP
+PyTorch	NNP
+세일	NNP
+배송	NNP
