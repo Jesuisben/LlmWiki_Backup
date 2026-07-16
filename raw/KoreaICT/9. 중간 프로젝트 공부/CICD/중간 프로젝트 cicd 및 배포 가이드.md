@@ -845,7 +845,7 @@ GitHub → Actions → "CI - Build and Push" → 최근 실행 → "Re-run all j
 
 
 
-# \#2부: 프론트 얹기
+# \# 2부: 프론트 얹기
 #### \[8단계] React 코드 수정 (API 주소 + nginx)
 ##### 1. 백엔드에 요청하는 주소를 수정하기 (config.tsx)
 1) 개념
@@ -1120,7 +1120,7 @@ push → 프론트 배포
 
 
 
-# \#3부: 마무리
+# \# 3부: 마무리
 #### \[12단계] 파일을 넣을 로컬 파일 수정
 ##### 1. pom.xml — S3 SDK 의존성 추가
 backend_semi/pom.xml의 \<dependencies> 안에 추가하고 Maven 새로고침하기

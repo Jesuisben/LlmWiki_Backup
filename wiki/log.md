@@ -13,6 +13,47 @@
 
 ## 현재 로그
 
+## [2026-07-16] update | Linux Git·GitHub Entity/Concept 고도화
+
+- 범위: 단계 5 Linux 세션 8로 기존 `git-github-collaboration`, `git`, `github`, `source-tree` 4개를 고도화했다. 신규 지식 페이지는 만들지 않았고 Summary·Comparison·Query·Docker 관련 페이지·sudo/root·permission 후보는 수정하지 않았다.
+- 협업 artifact: R09의 WorkTree→stage→commit→remote, commit 없는 push, clone·pull, SourceTree 두 local repository의 push 거부·수동 통합과 `animal` branch 시작을 복원했다. R10의 팀원 clone·`sport` push, `animal`·`sport` PR review/merge, remote `master`→각 local pull, fetch→remote-tracking/local branch, `Main.java`·`Cat.java` conflict와 merge/rebase 범위를 실제 순서로 연결했다.
+- 상태·완료 조건: working tree·staging area·commit·local branch·remote-tracking branch·remote branch·PR·merge 결과를 분리했다. add·commit·push·fetch·pull·merge·rebase의 입력→처리→결과와 push·PR 생성·PR merge·remote master·local master pull·fetch·conflict 해결을 별도 완료 상태로 기록했다.
+- 책임·경계: Git의 local 상태·이력, GitHub의 remote hosting·PR, SourceTree·IntelliJ의 서로 다른 client 실행, GitHub Actions의 후속 workflow 책임을 분리했다. Java 개인 Git 선행, Linux 05-04~05-06 팀 협업 직접 수업, CI/CD 후속 활용을 같은 학습일이나 성공 결과로 합치지 않았다.
+- provenance·검증: R09·R10·R11 3/3·미분류 0건이다. P04는 Git Bash P.11~31, SourceTree P.35~60, branch·PR·conflict P.62~131의 화면 절차만 보조했다. 시작 fence 2개(`bash` 2)의 placeholder URL·합성 feature 예시를 prose·표로 해소해 최종 대상 `0 / 원문 검증 0 / 수동 예외 0 / 실패 0`, `bash` 0개이며 실제 식별자·credential 재노출도 0건이다.
+- 기록·상태: 고도화 결과와 어긋난 index 설명 4개와 Linux inventory의 세션 8 상태·대응표·fence 재고를 갱신했다. 신규 페이지가 없어 Total pages는 272를 유지했고 `raw/KoreaICT/5. Linux`는 수정하지 않았다.
+- 단계 상태: 단계 5 Linux는 미완료다. 세션 9, 상위 계획의 단계 5 완료 기록, 단계 6 AWS, Git commit·push를 시작하지 않았다.
+
+## [2026-07-16] update | Linux Dockerfile·reverse proxy·Compose Concept/Entity 고도화
+
+- 범위: 단계 5 Linux 세션 7로 기존 `docker-reverse-proxy-load-balancing`, `docker-compose-manifest`, `docker` 3개를 고도화하고 `docker-registry-tag-push-pull` Concept 1개를 신규 생성했다. Summary·Comparison·Query, 세션 6 Docker core Concept, Git/GitHub 페이지는 수정하지 않았다.
+- Dockerfile·proxy: R07의 Apache/Nginx Dockerfile과 Spring JAR image artifact를 Docker Entity 이력에 연결했다. `proxy-net`의 backend 여섯 개, host-mounted `nginx.conf`, `reverse-proxy`의 host 80 진입, upstream·proxy_pass→browser 응답을 복원하고 backend 실행·network·config·proxy process·backend 응답·browser 분배를 별도 완료 조건으로 분리했다. I03은 상담자 업무 분배 비유로만 사용했다.
+- Compose: R08의 MySQL+Spring과 MySQL+WordPress manifest를 service/container 이름, image·network·volume·environment·ports·depends_on에 대응했다. 제공 WordPress manifest의 YAML 들여쓰기와 요구사항 값 수정 범위, service name/container_name, depends_on/readiness, up/application 성공, down/image·volume 삭제를 구분하고 삭제 명령의 volume 이름 불일치도 미확정으로 보존했다.
+- Docker Entity·registry 판정: R05 설치/image/container→R06 network/storage/commit/registry→R07 Dockerfile/Spring+DB/proxy→R08 Compose의 날짜별 이력을 복원했다. registry는 local image 생성·실행과 다른 naming·인증·push·다른 환경 retrieval 질문, namespace 오류, credential 경고, 수동/CI 경계가 독립 탐색 가치가 있어 신규 Concept로 만들고 Entity에서 역링크했다. push digest는 확인됐지만 다른 환경의 최종 browser/file 결과는 미보존으로 남겼다.
+- 책임·완료 경계: Linux host·Docker Engine·image/container/network/volume·Dockerfile·Compose·registry·CI/CD와 04-27 host Nginx·04-28 web container·04-30 reverse proxy·후속 AWS ALB를 분리했다. 설치·image build·container Up·network·DB readiness·proxy/browser·Compose up/down·registry push/pull을 같은 성공 상태로 합치지 않았다.
+- provenance·검증: R06·R07·R08·R11 핵심 대응 4/4·미분류 0건이다. 세션 시작 대상 fence 4개(`text/nginx/yaml/bash` 각 1) 중 합성 3개를 prose·표로 해소하고 `nginx` 1개를 R07 lines 803~844의 연속 원문으로 교체해 최종 1/원문 검증 1/수동 예외 0/실패 0, 대상 `bash` 0개다. P02·P03·P08·P09와 I03은 날짜 귀속·성공 결과를 만들지 않는 보조자료로만 판정했고 실제 account·email·repository URL·password·PAT·token·credential 재노출은 0건이다.
+- 기록·상태: 신규 Concept와 실제 설명 변경을 index에 반영하고 Total pages를 272로 재계산했다. Linux inventory의 세션 7 상태·대응표·registry·fence 판정을 갱신했으며 `raw/KoreaICT/5. Linux`는 수정하지 않았다.
+- 단계 상태: 단계 5 Linux는 미완료다. 세션 8, 상위 계획의 단계 5 완료 기록, 단계 6 AWS, Git commit·push를 시작하지 않았다.
+
+## [2026-07-16] update | Linux Docker core Concept 고도화
+
+- 범위: 단계 5 Linux 세션 6으로 기존 `docker-install-permission-setup`, `docker-image-container`, `docker-cp-exec-container-files`, `docker-network-volume` 4개만 고도화했다. Summary·Entity·Comparison·Query와 Dockerfile·reverse proxy·Compose Concept는 수정하지 않았고 신규 페이지를 만들지 않았다.
+- 설치·권한: R05 setup script·CRLF·execute bit·root 위치, Docker service, socket/docker group과 재login을 복원하고 설치·service active·계정 group 등록·현재 session 반영·일반 사용자 daemon 접근을 별도 완료 조건으로 분리했다. R08/P09 setup은 반복 checklist로만 사용했다.
+- image/container·exec/cp: R05 기성 `httpd`·Nginx·MySQL·WordPress lifecycle·port·browser/DB 상태를 R06 commit image·R07 Dockerfile·registry/CI image와 분리했다. 실제 Apache/Nginx/MySQL container와 document root를 대조해 내부 명령, host↔container 양방향 일회 copy, browser 반영, commit image 결과를 서로 다른 완료 조건으로 복원했다.
+- network/storage: R05 `network01` WordPress–MySQL과 R06 `network02` MariaDB–Redmine의 이름 기반 통신을 host port 공개와 분리했다. Apache 빈 bind의 `Index of /`, Nginx 403, `mount-vol` inspect·삭제를 실제 날짜에 연결하고 R06에는 재생성 뒤 persistence 실측이 없음을 명시했다. Compose·VirtualBox NAT·iptables·AWS VPC는 별도 계층으로 유지했다.
+- provenance·검증: R05·R06·R08·R11 source union 4/4·미분류 0건이다. 기존 합성 `bash` fence 4개를 prose·표로 해소해 최종 대상 fence 0/원문 검증 0/수동 예외 0/실패 0, `bash` 0개이며 실제 IP·account·email·repository URL·Docker Hub account·credential 재노출도 0건이다.
+- 기록·상태: Linux inventory의 세션 6 상태·대응표·fence 잔여를 갱신했다. 신규 페이지와 설명 불일치가 없어 index는 수정하지 않았고 Total pages는 271이다. Docker registry 후보는 세션 7 판단으로 유지했다.
+- 단계 상태: 단계 5 Linux는 미완료다. 세션 7, 상위 계획의 단계 5 완료 기록, 단계 6 AWS, Git commit·push를 시작하지 않았다.
+
+## [2026-07-16] update | Linux VM·SSH·process·service·network·server Concept/Entity 고도화
+
+- 범위: 단계 5 Linux 세션 5로 기존 `linux-spring-boot-server-deploy`, `linux-web-server-apache-nginx`, `linux`, `maven` 4개를 고도화하고 `linux-process-service-port-firewall` Concept 1개를 신규 생성했다. Summary·Comparison·Query·Docker core·세션 4 Concept는 수정하지 않았다.
+- Spring Boot·Maven: R05의 project/9000→VirtualBox NAT→guest iptables/UFW→Maven 설치/version→project root package→`target` JAR→host process→browser를 복원하고 설치·build·artifact·process·port·응답 완료 조건을 분리했다. R07 Dockerfile/JAR와 CI Maven build는 후속 책임으로 구분했다.
+- web server·Linux: 누락됐던 핵심 R04 source를 바로잡고 Apache/Nginx package·enable/start/status, UFW 22/80/443, SSH 보호, document root backup·homepage 교체·browser 결과를 복원했다. VirtualBox Ubuntu·OpenSSH·MobaXterm에서 permission·process/service·network·host server로 확장된 Linux 이력과 Docker·EC2·CI/CD 경계를 분리했다.
+- 신규 판단: SSH·Apache/Nginx·Spring에 반복되는 process→service→listening port→firewall→NAT/redirect→client 응답은 독립 탐색 가치가 있어 신규 Concept 1개로 보존하고 기존 대상 4개에서 역링크했다. 별도 VM·SSH·service·firewall·port Comparison은 만들지 않았다.
+- provenance·검증: R01·R03~R05·R07·R11 핵심 대응 6/6·미분류 0건이다. 대상 기존 합성 fence 4개를 prose·표로 해소해 최종 대상 5개 fence 0/원문 검증 0/수동 예외 0/실패 0, `bash` 0개이며 실제 IP·account·email·repository URL·credential 재노출도 0건이다.
+- 기록·상태: 신규 Concept와 고도화 결과 설명을 index에 반영하고 Total pages를 실제 정의에 따라 271로 재계산했다. Linux inventory의 세션 5 상태·대응표·후보 판정·fence 잔여를 갱신했고 `raw/KoreaICT/5. Linux`는 수정하지 않았다.
+- 단계 상태: 단계 5 Linux는 미완료다. 세션 6, 상위 계획의 단계 5 완료 기록, 단계 6 AWS, Git commit·push를 시작하지 않았다.
+
 ## [2026-07-16] update | Linux CLI·파일·vi·권한 Concept 고도화
 
 - 범위: 단계 5 Linux 세션 4로 지정 Concept `linux-cli-files`, `linux-package-archive`, `linux-users-permissions` 3개만 부분 보강했다. Summary·Entity·Comparison·Query와 다른 Concept는 수정하지 않았고 신규 지식 페이지를 만들지 않았다.

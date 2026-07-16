@@ -2,7 +2,7 @@
 
 > 이 파일은 `wiki/` 전체의 목차이자 길잡이다.  
 > 질문에 답하거나 새 자료를 ingest할 때 이 파일을 먼저 읽는다.  
-> Last updated: 2026-07-16 | Total pages: 270
+> Last updated: 2026-07-16 | Total pages: 272
 
 ## 사용 방법
 
@@ -138,16 +138,18 @@
 - [[concepts/linux-cli-files|Linux CLI와 파일 시스템]] — `/` 기반 경로, 파일/디렉터리 조작, redirection, 검색, `vi` 편집의 서버 기본기
 - [[concepts/linux-users-permissions|Linux 사용자·그룹·권한]] — `ls -l`, owner/group/others, root/sudo, 계정 파일과 권한 오류 해석
 - [[concepts/linux-package-archive|Linux 패키지·다운로드·압축]] — `apt`, `wget`, `curl`, `tar`, `zip`으로 서버 도구와 파일을 준비하는 흐름
-- [[concepts/linux-web-server-apache-nginx|Linux Apache/Nginx 웹서버]] — Apache/Nginx 설치, UFW, `/var/www/html/` 문서 교체, 포트 확인 흐름
-- [[concepts/linux-spring-boot-server-deploy|Linux에서 Spring Boot 서버 실행]] — Maven 패키징, `.jar` 실행, 포트/방화벽 확인으로 IDE 밖에서 서버를 띄우는 과정
+- [[concepts/linux-web-server-apache-nginx|Linux Apache/Nginx 웹서버]] — 04-27 host Apache/Nginx의 설치·service·UFW·document root·browser 확인과 후속 container/proxy 경계
+- [[concepts/linux-spring-boot-server-deploy|Linux에서 Spring Boot 서버 실행]] — Maven package→`target` JAR→host process→NAT·iptables·UFW→browser를 단계별로 검증하는 과정
+- [[concepts/linux-process-service-port-firewall|Linux process·service·port·firewall 진단]] — SSH·웹서버·Spring 접속 실패를 process→service→port→firewall→NAT/redirect→client 응답 순으로 좁히는 진단 축
 - [[concepts/docker-install-permission-setup|Docker 설치와 권한 설정]] — `docker_setup.sh`, `dos2unix`, `docker` 그룹 권한, 재로그인 문제 정리
 - [[concepts/docker-image-container|Docker 이미지와 컨테이너]] — image/container 생명주기, port mapping, 서버 실행 환경 재현의 기본 단위
 - [[concepts/docker-cp-exec-container-files|Docker exec/cp와 컨테이너 파일 다루기]] — 컨테이너 내부 명령 실행과 host↔container 파일 복사 흐름
 - [[concepts/docker-network-volume|Docker 네트워크와 볼륨]] — 컨테이너 간 통신과 데이터/파일 보존을 위한 network, bind mount, volume
-- [[concepts/docker-reverse-proxy-load-balancing|Docker reverse proxy와 로드 밸런싱]] — nginx upstream/proxy_pass로 여러 컨테이너에 요청을 분산하는 구조
-- [[concepts/docker-compose-manifest|Docker Compose manifest]] — `services`, `networks`, `volumes`, `environment`, `depends_on`으로 다중 컨테이너를 선언하는 YAML 구성
+- [[concepts/docker-registry-tag-push-pull|Docker registry tag·push·pull]] — local image를 registry 이름으로 tag·인증·push하고 다른 환경에서 pull/run하는 수동 전달 생명주기
+- [[concepts/docker-reverse-proxy-load-balancing|Docker reverse proxy와 로드 밸런싱]] — `proxy-net`의 Nginx가 mounted config와 upstream으로 Apache·Nginx backend 응답을 분배한 흐름
+- [[concepts/docker-compose-manifest|Docker Compose manifest]] — MySQL+Spring·MySQL+WordPress의 service 관계와 `up`·DB·browser·`down` 완료 조건을 구분한 YAML 구성
 - [[concepts/dockerfile-vs-compose|Dockerfile vs Docker Compose]] — 이미지 생성 레시피와 다중 컨테이너 실행 manifest의 역할 차이
-- [[concepts/git-github-collaboration|GitHub 협업 흐름]] — branch, push, Pull Request, merge, pull, conflict를 이용한 팀 협업 절차
+- [[concepts/git-github-collaboration|GitHub 협업 흐름]] — WorkTree→stage→commit→remote와 `animal`·`sport` branch→PR→remote merge→local pull·conflict의 상태별 협업 절차
 - [[concepts/aws-cloud-vpc-networking|AWS Cloud와 VPC 네트워킹]] — Region/AZ/VPC/Subnet/CIDR, IGW, Route Table, Security Group으로 EC2 네트워크를 구성하는 흐름
 - [[concepts/aws-ec2-nginx-spring-deploy|AWS EC2에서 Nginx와 Spring Boot 배포]] — EC2 SSH, Nginx, JDK/Maven, Spring Boot jar 실행, 80→9000 포트 연결 흐름
 - [[concepts/aws-rds-spring-boot|AWS RDS와 Spring Boot 연결]] — RDS MySQL을 만들고 EC2/Spring Boot에서 JDBC로 연결하되 비밀값은 분리해야 하는 흐름
@@ -204,8 +206,8 @@
 
 <!-- 기술/도구/프레임워크 페이지. 예: - [[entities/java|Java]] — 객체지향 프로그래밍 언어이자 백엔드 학습의 출발점 -->
 - [[entities/java|Java]] — 2026-02-26~03-13 문법·제어문·배열·객체지향·상속/추상화를 관통하는 백엔드 기반 언어 허브
-- [[entities/git|Git]] — Java `MyJava` 프로젝트 초기화에서 GitHub 협업 흐름까지 이어지는 버전 관리 도구
-- [[entities/github|GitHub]] — Java 실습 저장소 백업에서 branch/PR 협업까지 이어지는 원격 Git 서비스
+- [[entities/git|Git]] — Java 개인 repository에서 Linux 팀 협업으로 확장된 working tree·stage·commit·local/remote branch 이력 관리 도구
+- [[entities/github|GitHub]] — remote repository·branch 공유와 PR review/merge를 제공하되 local Git·Actions 실행 책임과 분리되는 협업 서비스
 - [[entities/oracle-database|Oracle Database]] — 03-13~20 직접 SQL·schema·sequence·무결성 학습과 03-30 MySQL/JPA runtime 전환 경계를 잇는 관계형 DB 허브
 - [[entities/dbeaver|DBeaver]] — 관리자/일반 연결·SQL Preview·Manual Commit·ERD로 Oracle을 검증한 DB 클라이언트
 - [[entities/html|HTML]] — table/form/image 구조, tag·attribute 구분과 후속 서버/React 경계를 잇는 마크업 언어
@@ -220,10 +222,10 @@
 - [[entities/mysql|MySQL]] — Oracle 직접 SQL 이후 Spring/JPA runtime으로 전환해 Member·Product·Cart·Order와 페이징/검색 SQL에 연결한 DBMS
 - [[entities/node-js|Node.js]] — 03-30 npm 확인·Vite React 개발환경 실행의 기반이 된 JavaScript runtime
 - [[entities/visual-studio-code|Visual Studio Code]] — 03-30 설치 후 React/TypeScript component·type·route를 편집한 frontend editor
-- [[entities/linux|Linux]] — SSH·CLI·권한·빌드·Docker 배포를 통해 웹서비스 운영 환경으로 배운 서버 OS
-- [[entities/docker|Docker]] — image/container, network, mount, Dockerfile, Compose로 Spring Boot+DB 실행 환경을 재현하는 도구
-- [[entities/maven|Maven]] — `pom.xml` 기반 Java/Spring Boot 빌드와 `.jar` 패키징 도구
-- [[entities/source-tree|SourceTree]] — Git commit/push/pull/branch 작업을 GUI로 수행하는 Git 클라이언트
+- [[entities/linux|Linux]] — VirtualBox Ubuntu·SSH에서 file/permission·process/service·network·host server로 확장하고 Docker·EC2·CI/CD 책임을 구분한 서버 OS
+- [[entities/docker|Docker]] — 04-28~05-01 image/container에서 network·storage·registry·Dockerfile·proxy·Compose로 확장된 실행환경 재현 platform
+- [[entities/maven|Maven]] — `pom.xml` 기반 수동 package·`target` JAR와 Java runtime·Dockerfile·CI build의 책임을 구분한 build tool
+- [[entities/source-tree|SourceTree]] — 05-04 두 local repository의 stage·commit·push·pull·history·conflict를 Git 상태에 대응한 GUI client
 - [[entities/aws|AWS]] — VPC, EC2, RDS, Route 53, Load Balancer, ACM으로 웹서비스를 클라우드에 배포하는 플랫폼
 - [[entities/amazon-ec2|Amazon EC2]] — Nginx와 Spring Boot를 실행하고 Load Balancer 대상이 된 AWS 가상 서버 서비스
 - [[entities/amazon-rds|Amazon RDS]] — Spring Boot가 JDBC로 연결한 AWS 관리형 MySQL 데이터베이스 서비스
