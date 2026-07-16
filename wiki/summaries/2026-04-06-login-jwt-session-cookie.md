@@ -108,6 +108,7 @@ Cookie·Session·JWT와 MPA·SPA, stateful·stateless의 층위를 구분한 뒤
 - [[concepts/jwt-session-cookie-auth|JWT, 세션, 쿠키 인증]]
 - [[comparisons/session-vs-cookie-vs-jwt|Session vs Cookie vs JWT]]
 - [[comparisons/mpa-vs-spa|MPA vs SPA]]
+- [[comparisons/passwordless-vs-password-login|Passwordless 로그인 vs 비밀번호 로그인]]
 - [[concepts/axios-interceptor-error-handling|Axios interceptor와 API 오류 처리]]
 - [[entities/jwt|JWT]]
 

@@ -1,7 +1,7 @@
 ---
 title: JPQL vs SQL
 created: 2026-07-06
-updated: 2026-07-15
+updated: 2026-07-16
 type: comparison
 tags: [spring, spring-boot, backend, sql]
 sources:
@@ -40,15 +40,14 @@ confidence: high
 2. Spring Repository에서 `Order` Entity의 `orderStatus` 필드를 수정할 때는 04-20 수업처럼 JPQL `@Query`를 쓴다.
 
 ```sql
-SELECT * FROM orders;
+select * from orders ;
 ```
 
 ```java
-@Modifying
-@Transactional
+@Modifying // 이 쿼리는 select 구문이 아니고, 데이터 변경을 위한 쿼리입니다.
+@Transactional // import jakarta.transaction.Transactional; // 롤백할 수도 있으니까
 @Query("update Order o set o.orderStatus = :status where o.id = :orderId")
-int updateOrderStatus(@Param("orderId") Long orderId,
-                      @Param("status") OrderStatus status);
+int updateOrderStatus(@Param("orderId") Long orderId, @Param("status") OrderStatus status);
 ```
 
 ## Oracle 직접 수업과 후속 확장 경계

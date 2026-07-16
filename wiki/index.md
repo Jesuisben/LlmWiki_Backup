@@ -2,10 +2,11 @@
 
 > 이 파일은 `wiki/` 전체의 목차이자 길잡이다.  
 > 질문에 답하거나 새 자료를 ingest할 때 이 파일을 먼저 읽는다.  
-> Last updated: 2026-07-15 | Total pages: 266
+> Last updated: 2026-07-16 | Total pages: 270
 
 ## 사용 방법
 
+- **처음 공부를 시작한다면 [[_meta/wiki-user-study-guide|LLM Wiki 사용자 학습 가이드]]부터 읽는다.**
 - 모든 위키 페이지는 아래 섹션 중 하나에 등록한다.
 - 각 항목은 `- 위키링크 — 한 줄 설명` 형식을 권장한다.
 - 새 페이지를 만들면 반드시 이 파일을 업데이트한다.
@@ -45,31 +46,31 @@
 - [[summaries/2026-04-01-react-router-spring-boot|2026-04-01 React axios와 Spring CORS 연결]] — Fruit type·axios·state/effect·CORS·WebConfig를 연결해 JSON 한 개와 목록을 React 표에 표시한 날
 - [[summaries/2026-04-02-react-bootstrap-homepage|2026-04-02 React HomePage와 Member JPA/Security 시작]] — 오전 Carousel HomePage를 완성하고 오후 Member JPA·Validation·Security·Repository 저장을 시작한 날
 - [[summaries/2026-04-03-spring-member-seed-react-comments|2026-04-03 React 회원가입과 Spring 검증·저장 흐름]] — SignupPage 입력에서 Validation·이메일 중복 확인·비밀번호 인코딩·Repository 저장·HTTP 응답까지 연결한 날
-- [[summaries/2026-04-03-frontend-backend-subject-review|FrontEnd_BackEnd 총정리]] — 초기 풀스택 세팅과 Spring Boot ↔ React 연결 흐름을 총정리 원본 기준으로 묶은 복습 허브
+- [[summaries/2026-04-03-frontend-backend-subject-review|FrontEnd_BackEnd 총정리]] — 환경·Fruit에서 Member/JWT·Product·Cart·Order·대표 상품·검색까지 18일 요청·응답 흐름과 직접/후속 경계를 연결한 복습 허브
 - [[summaries/2026-04-06-login-jwt-session-cookie|2026-04-06 Cookie·Session·JWT 이론과 로그인 토큰 생성]] — 인증 이론을 axiosInstance·LoginPage·LoginDto·JwtTokenProvider의 token 저장·전달·생성 흐름으로 연결한 날
 - [[summaries/2026-04-07-member-api-string-token|2026-04-07 Bearer token과 Spring Security JWT 인증 흐름]] — Bearer parsing에서 JWT Filter·사용자 조회·SecurityContext·CORS/SecurityConfig·로그인 테스트까지 연결한 날
 - [[summaries/2026-04-08-product-domain-oci|2026-04-08 Category·Product 도메인과 상품 목록 시작]] — Product Entity·이미지 기반 seed·Repository 단위 테스트에서 목록 REST API와 React card 화면까지 만든 날
-- [[summaries/2026-04-09-product-delete-routing-jsx-table|2026-04-09 상품 삭제, 라우팅, JSX와 표]] — 상품 삭제 기능과 React 라우팅, JSX 내부 JavaScript 표현, HTML 표 병합 속성을 함께 다뤘다.
-- [[summaries/2026-04-10-react-event-spread-product-form|2026-04-10 React 이벤트 객체와 전개 연산자]] — React에서 이벤트 객체와 전개 연산자를 사용해 상품 입력 폼 상태를 관리하는 방법을 학습했다.
-- [[summaries/2026-04-13-product-detail-useeffect-service|2026-04-13 상품 상세와 useEffect, 서비스 계층]] — 상품 상세 조회를 위해 Spring ProductService와 React useEffect Hook을 연결하는 흐름을 학습했다.
-- [[summaries/2026-04-14-cart-service|2026-04-14 장바구니 Service와 DTO]] — 장바구니 기능 구현을 시작하며 CartProductService, CartService, CartProductDto 등 백엔드 계층을 작성했다.
-- [[summaries/2026-04-15-cart-list-selection-typescript|2026-04-15 장바구니 목록과 TypeScript props]] — React 장바구니 목록에서 전체 선택, props 구조 분해, 타입 지정, 로그인 사용자 조건 처리를 학습했다.
-- [[summaries/2026-04-16-cart-quantity-stock|2026-04-16 장바구니 수량 변경과 재고 검증]] — CartProductService와 CartController를 수정해 장바구니 품목 찾기, 수량 변경, 재고 부족 처리를 다뤘다.
-- [[summaries/2026-04-17-cart-total-array-some|2026-04-17 장바구니 합계와 Array some]] — 장바구니 화면에서 재고/합계 계산을 보강하고 JavaScript Array some 메서드를 학습했다.
-- [[summaries/2026-04-20-order-list-scenario|2026-04-20 주문 목록과 테스트 시나리오]] — 주문 기능으로 넘어가 OrderList 화면을 만들고 관리자/일반 사용자 기준 테스트 시나리오를 정리했다.
-- [[summaries/2026-04-21-product-pagination-search-react|2026-04-21 상품 목록 페이징과 필드 검색]] — React 상품 목록에서 pageNumber 등 페이징 파라미터를 추가하고 Paging 컴포넌트와 검색 상태를 다뤘다.
-- [[summaries/2026-04-22-product-repository-pageable-search|2026-04-22 ProductRepository와 Pageable 검색]] — Spring Data Repository에서 Pageable 정렬/검색 조건을 받아 상품 목록을 조회하는 백엔드 흐름을 학습했다.
-- [[summaries/2026-04-22-linux-install-ssh-cli|2026-04-22 Linux 설치, SSH 접속, 기본 CLI]] — VirtualBox Ubuntu VM, SSH 서버, MobaXterm 접속, 브리지 네트워크와 기본 CLI 출발점
-- [[summaries/2026-04-23-linux-files-vi|2026-04-23 Linux 파일·디렉터리와 vi 편집기]] — 경로, 파일 생성/복사/이동/검색/삭제, redirection, `vi` 편집 흐름
-- [[summaries/2026-04-24-linux-users-permissions|2026-04-24 Linux 사용자, 그룹, 권한]] — `ls -l` 권한 문자열, owner/group/others, 사용자·그룹·시스템 계정 파일 정리
-- [[summaries/2026-04-27-linux-archive-java-alias|2026-04-27 Linux 압축, 다운로드, Java 실행 준비]] — `wget`, `curl`, `tar`, `zip`, `chown`, `alias`로 서버 파일 준비와 권한 문제를 연결
-- [[summaries/2026-04-28-maven-spring-boot-docker-intro|2026-04-28 Maven, Spring Boot 서버 실행, Docker 입문]] — Linux에서 Spring Boot jar를 빌드·실행하고 Docker image/container로 확장한 날
-- [[summaries/2026-04-29-docker-network-volume-image|2026-04-29 Docker 네트워크, 볼륨, 사용자 정의 이미지]] — MariaDB/Redmine 컨테이너 연결, bind/volume mount, 사용자 정의 이미지 흐름을 배운 날이다.
-- [[summaries/2026-04-30-dockerfile-spring-load-balancing|2026-04-30 Dockerfile, Spring Boot 컨테이너, 로드 밸런싱]] — Dockerfile 빌드, Spring Boot 컨테이너, nginx upstream 로드 밸런싱을 배운 날이다.
-- [[summaries/2026-05-01-docker-compose|2026-05-01 Docker Compose와 다중 컨테이너 실행]] — Compose manifest로 MySQL+Spring Boot 같은 다중 컨테이너 구성을 실행한 날이다.
-- [[summaries/2026-05-04-git-github-sourcetree|2026-05-04 GitHub, Git Bash, SourceTree 협업 입문]] — Git Bash와 SourceTree로 init/add/commit/push/pull/clone 흐름을 복습한 날이다.
-- [[summaries/2026-05-06-github-branch-pr-conflict|2026-05-06 GitHub 브랜치, Pull Request, 충돌 해결]] — 팀원 브랜치, PR, merge, pull, 충돌 시나리오를 실습한 날이다.
-- [[summaries/2026-05-06-linux-subject-review|Linux 총정리]] — SSH/CLI/권한에서 Spring Boot 서버 실행, Docker/Compose, GitHub 협업까지 묶은 5과목 복습 허브
+- [[summaries/2026-04-09-product-delete-routing-jsx-table|2026-04-09 상품 삭제, 라우팅, JSX와 표]] — 관리자 삭제 클릭을 이미지·DB 처리와 목록 갱신까지 연결하고 상품 등록 route/form을 시작한 날
+- [[summaries/2026-04-10-react-event-spread-product-form|2026-04-10 React 이벤트 객체와 전개 연산자]] — event·spread·FileReader로 등록 body를 만들고 Validation 오류 표시와 수정 form 시작까지 연결한 날
+- [[summaries/2026-04-13-product-detail-useeffect-service|2026-04-13 상품 상세와 useEffect, 서비스 계층]] — 상품 수정·상세 GET/PUT을 마무리하고 Cart/CartProduct 관계와 장바구니 추가 요청을 시작한 날
+- [[summaries/2026-04-14-cart-service|2026-04-14 장바구니 Service와 DTO]] — 인증 사용자 기준 Cart 추가·수량 누적·DTO 목록 조회를 React CartList 표시까지 연결한 날
+- [[summaries/2026-04-15-cart-list-selection-typescript|2026-04-15 장바구니 목록과 TypeScript props]] — 로그인 user props에서 전체·개별 선택과 합계를 연결하고 수량 PATCH·삭제 API 기반까지 확장한 날
+- [[summaries/2026-04-16-cart-quantity-stock|2026-04-16 장바구니 수량 변경과 주문 Entity]] — Cart 수량·삭제를 보정하고 Order/OrderProduct·DTO·Service·Controller로 선택 품목 주문 저장을 구현한 날
+- [[summaries/2026-04-17-cart-total-array-some|2026-04-17 장바구니 합계와 Array some]] — stock 표시·`some` 수량 검증에서 상품 상세 주문과 역할별 PENDING 주문 목록 조회로 확장한 날
+- [[summaries/2026-04-20-order-list-scenario|2026-04-20 주문 목록과 테스트 시나리오]] — 역할별 주문 카드와 완료·취소·재고 복원을 구현하고 대표 상품·페이징을 시작한 날
+- [[summaries/2026-04-21-product-pagination-search-react|2026-04-21 React 상품 페이징과 필드 검색 준비]] — page control→Spring Page 왕복을 연결하고 검색 state·parameter·DTO·개별 Specification을 다음 날 backend 조회 전까지 준비한 날
+- [[summaries/2026-04-22-product-repository-pageable-search|2026-04-22 Specification·Pageable 상품 검색 완성]] — 검색 parameter를 Controller·Service 조건 조립·Repository의 Specification+Pageable 조회와 MySQL 시나리오까지 연결한 날
+- [[summaries/2026-04-22-linux-install-ssh-cli|2026-04-22 Linux 설치, SSH 접속, 기본 CLI]] — Ubuntu VM→bridge/IP→OpenSSH service→MobaXterm→prompt·절대/상대 경로로 Linux 접속 기반을 만든 날
+- [[summaries/2026-04-23-linux-files-vi|2026-04-23 Linux 파일·디렉터리와 vi 편집기]] — 방송사/Librarian tree의 파일 상태 변화에서 vi 3모드·redirection·grep·more·diff까지 이어간 날
+- [[summaries/2026-04-24-linux-users-permissions|2026-04-24 Linux 사용자, 그룹, 권한]] — account file·UID/GID·shell에서 chmod 숫자/기호·chown/chgrp·실행 권한 오류 해결까지 연결한 날
+- [[summaries/2026-04-27-linux-archive-java-alias|2026-04-27 Linux 압축, Java 실행, Git과 웹서버]] — download/archive·alias·Java compile/run·Git remote·Apache/Nginx/UFW로 server 작업을 확장한 날
+- [[summaries/2026-04-28-maven-spring-boot-docker-intro|2026-04-28 Maven, Spring Boot 서버 실행, Docker 입문]] — Maven JAR·VirtualBox/guest port 계층에서 Docker web/DB container와 WordPress–MySQL network로 전환한 날
+- [[summaries/2026-04-29-docker-network-volume-image|2026-04-29 Docker 네트워크, 마운트, 사용자 정의 이미지와 registry]] — MariaDB–Redmine network에서 exec/cp·bind/volume·commit을 거쳐 Docker Hub push/pull까지 연결한 날
+- [[summaries/2026-04-30-dockerfile-spring-load-balancing|2026-04-30 Dockerfile, Spring Boot 컨테이너와 Nginx 로드 밸런싱]] — build context·JAR image·MySQL 연결과 proxy-net의 upstream/proxy_pass 요청 분배를 구현한 날
+- [[summaries/2026-05-01-docker-compose|2026-05-01 Docker Compose와 다중 service 실행]] — MySQL+Spring Boot·MySQL+WordPress 관계를 YAML로 선언하고 up/down·DB·browser 결과와 시험 경계를 확인한 날
+- [[summaries/2026-05-04-git-github-sourcetree|2026-05-04 Git 상태 전이, GitHub remote와 SourceTree 협업 입문]] — WorkTree→stage→local→remote와 두 작업자 pull/push·SourceTree·branch 시작을 연결한 날
+- [[summaries/2026-05-06-github-branch-pr-conflict|2026-05-06 GitHub branch, Pull Request와 conflict 해결]] — 팀장·팀원 branch를 PR review·merge하고 master pull·fetch·merge/rebase 충돌을 실습한 날
+- [[summaries/2026-05-06-linux-subject-review|Linux 총정리]] — VM/SSH→CLI/권한→host server→Docker registry·Dockerfile·Compose→GitHub 협업과 AWS/CI/CD 경계를 잇는 복습 허브
 - [[summaries/2026-05-06-aws-cloud-vpc-ec2|2026-05-06 AWS Cloud, VPC, EC2 입문]] — AWS 메뉴, On-Demand, VPC/Subnet/CIDR, Security Group, EC2 개념을 잡기 시작한 날
 - [[summaries/2026-05-07-aws-ec2-nginx-rds|2026-05-07 AWS VPC, EC2, EIP와 자원 관리]] — VPC·두 Subnet·IGW·Route Table·Security Group·EC2·EIP·SSH와 자원 해제를 실습한 날
 - [[summaries/2026-05-08-aws-rds-resource-cleanup|2026-05-08 AWS RDS MySQL 연결과 자원 정리]] — ping/ICMP 복구, Nginx, Spring Boot jar, RDS MySQL/JDBC와 정리 흐름을 실습한 날
@@ -124,13 +125,13 @@
 - [[concepts/bootstrap-basics|Bootstrap 기본]] — non-Bootstrap HTML 구조와 CDN/grid/form/card class의 역할·수업 범위 경계를 정리
 - [[concepts/html-form-controls-submission|HTML Form control과 제출 흐름]] — input/select/button의 의미에서 submit event·FormData·서버 검증 경계까지 연결
 - [[concepts/jquery-basics|jQuery 기본]] — 이미지 UI의 선택·이벤트·필터·노드 이동을 실제 `jQueryImageTest` 코드로 정리
-- [[concepts/fullstack-project-flow|풀스택 프로젝트 흐름]] — React 화면, Spring API, Service/Repository, DB가 기능 단위로 이어지는 전체 흐름
-- [[concepts/spring-boot-rest-api|Spring Boot REST API]] — React와 데이터를 주고받는 Controller/Service/Repository 기반 백엔드 API 흐름
+- [[concepts/fullstack-project-flow|풀스택 프로젝트 흐름]] — 환경·Fruit 최소 왕복에서 Member/JWT·Product·Cart·Order·검색으로 기능을 확장한 반복 구현 절차
+- [[concepts/spring-boot-rest-api|Spring Boot REST API]] — Fruit HTML/JSON부터 Member·Product·Cart·Order·Page까지 method·URL·입력·status/body 왕복
 - [[concepts/react-typescript-basics|React와 TypeScript 기본]] — 컴포넌트, props/state, Hook, Router, 타입 정의를 프로젝트 화면 예제로 정리
-- [[concepts/jwt-session-cookie-auth|JWT, 세션, 쿠키 인증]] — 로그인 상태 유지를 위한 쿠키·세션·JWT·Bearer 토큰의 역할 정리
+- [[concepts/jwt-session-cookie-auth|JWT, 세션, 쿠키 인증]] — Session·Cookie 비교와 JWT의 생성·저장·Bearer 전달·삭제 생명주기
 - [[concepts/axios-interceptor-error-handling|Axios interceptor와 API 오류 처리]] — JWT 401 처리와 화면별 검증 오류 표시를 나누는 React API 오류 처리 흐름
-- [[concepts/dto-entity-service-controller|DTO, Entity, Service, Controller]] — Spring Boot 백엔드 계층과 데이터 전달 객체/도메인 객체의 역할 구분
-- [[concepts/spring-data-jpa-repository|Spring Data JPA Repository]] — Spring Data JPA Repository
+- [[concepts/dto-entity-service-controller|DTO, Entity, Service, Controller]] — Fruit·Member·Product·Cart·Order에서 runtime JSON·DTO·Entity·Service 사이 데이터 모양과 변환
+- [[concepts/spring-data-jpa-repository|Spring Data JPA Repository]] — 기본 CRUD·이름 기반 query·JPQL·Pageable·Specification 호출과 원본 정합성 경계
 - [[concepts/shopping-cart-flow|장바구니 기능 흐름]] — 장바구니 저장, 목록, 선택, 수량 변경, 재고 검증의 풀스택 흐름
 - [[concepts/order-flow|주문 기능 흐름]] — 장바구니 이후 주문 생성, 주문 상품, 상태 변경, 목록 조회 흐름
 - [[concepts/pagination-search|페이징과 검색]] — React 페이지 상태와 Spring Pageable/검색 조건이 연결되는 상품 목록 흐름
@@ -172,20 +173,20 @@
 - [[concepts/java-polymorphism-casting|Java 다형성과 참조 형변환]] — 업캐스팅, 다운캐스팅, `instanceof`, 오버라이딩의 연결 정리
 - [[concepts/java-interface-capability-design|Java 인터페이스 기능 설계]] — 물·샷·우유 기능 인터페이스와 `SpecialCoffee05`의 다중 구현을 실제 수업 예제로 정리
 - [[concepts/oracle-ddl-dml-transaction|Oracle DDL, DML, 트랜잭션]] — 구조/행 변경과 Auto/Manual Commit을 실제 INSERT→ROLLBACK 흐름으로 구분
-- [[concepts/oracle-sequence|Oracle 시퀀스]] — `NEXTVAL`, 데이터 사전, 테이블 독립 객체, `MAX(id)`와의 차이를 주문·게시물 예제로 정리
+- [[concepts/oracle-sequence|Oracle 시퀀스]] — Oracle 독립 schema 객체·`NEXTVAL`·데이터 사전과 MySQL/JPA `GeneratedValue(AUTO)` 후속 경계를 구분
 - [[concepts/oracle-data-dictionary-schema-objects|Oracle 데이터 사전과 schema 객체]] — `USER_TABLES`·`USER_SEQUENCES`·`USER_VIEWS`로 DDL 결과와 사용자 소유 객체를 검증하는 흐름
 - [[concepts/oracle-referential-integrity|Oracle 참조 무결성과 ON DELETE]] — 회원-게시글·주문-상세 FK 오류와 삭제 정책, 후속 JPA cascade 경계를 구분
 - [[concepts/oracle-sql-functions|Oracle SQL 함수]] — 행별 가공과 그룹 집계, `COUNT(*)`/`COUNT(expr)`, GROUP BY/HAVING을 수업 SQL로 연결
 - [[concepts/oracle-join|Oracle JOIN]] — 정규화된 테이블 복원, inner/outer 선택, JOIN과 FK의 역할 차이
 - [[concepts/oracle-subquery|Oracle 서브쿼리]] — 최소·평균 급여와 여러 관리자 예제로 결과 개수·연산자·JOIN 선택을 구분
-- [[concepts/database-normalization-functional-dependency|함수 종속성과 정규화]] — 결정 관계를 PK/FK와 분리하고 학생·학과·성적 분해에서 DDL로 이어지는 과정
+- [[concepts/database-normalization-functional-dependency|함수 종속성과 정규화]] — 함수 종속성→분해→PK/FK→JOIN 계층과 Order/OrderProduct의 후속 JPA 적용 경계를 구분
 - [[concepts/database-view-index|Database View와 Index]] — 실제 View 권한 실습, 비밀값 노출 경계, Index 직접 학습 범위 정리
-- [[concepts/spring-data-jpa-specification-pageable|Spring Data JPA Specification과 Pageable]] — 동적 검색 조건과 페이징 요청/결과 객체 정리
-- [[concepts/spring-product-search-flow|Spring 상품 검색 흐름]] — React 요청에서 Controller/Service/Repository 검색 조회까지의 흐름 정리
+- [[concepts/spring-data-jpa-specification-pageable|Spring Data JPA Specification과 Pageable]] — 04-21~04-22 동적 조건·page/sort 조립과 executor·날짜 type 실행 미확정 경계
+- [[concepts/spring-product-search-flow|Spring 상품 검색 흐름]] — React control/state부터 request·Controller·Service·Repository·Page·MySQL 대조까지의 단계별 왕복
 - [[concepts/frontend-backend-architecture|Frontend/Backend 구조]] — React 화면과 Spring Boot API가 요청·응답·DB 흐름으로 연결되는 전체 구조
-- [[concepts/react-form-state-event|React 폼 상태와 이벤트]] — event object, 전개 연산자, 입력 폼 state 갱신 패턴 정리
-- [[concepts/react-useeffect-data-fetching|React useEffect와 데이터 요청]] — 상품 상세 조회처럼 컴포넌트 생명주기와 API 호출을 연결하는 Hook 흐름
-- [[concepts/spring-security-jwt-filter|Spring Security JWT Filter]] — Bearer 토큰 추출, JWT 검증, SecurityContext 설정 흐름
+- [[concepts/react-form-state-event|React 폼 상태와 이벤트]] — 회원가입·상품 등록/수정·Cart 수량에서 controlled input, FileReader, 검증 오류를 연결한 입력 흐름
+- [[concepts/react-useeffect-data-fetching|React useEffect와 데이터 요청]] — Fruit·Product·Cart·Order·페이징/검색 조회의 실행 시점, dependency, 재요청 조건 정리
+- [[concepts/spring-security-jwt-filter|Spring Security JWT Filter]] — login 인증과 후속 Bearer 검증·Authentication·SecurityContext 구성 및 authorization 경계
 - [[concepts/product-domain-flow|상품 도메인 기능 흐름]] — Category/Product 기반 상품 등록·상세·삭제·검색·페이징의 풀스택 흐름
 - [[concepts/jpa-relationship-mapping|JPA 연관관계 매핑]] — Cart/Product/Order 도메인에서 Entity 관계와 외래키 주인을 이해하는 JPA 매핑 정리
 - [[concepts/middle-project-cicd-deploy-flow|중간 프로젝트 CI/CD 배포 흐름]] — GitHub Actions와 AWS 서버를 이용해 중간 프로젝트를 반복 가능하게 배포하는 흐름
@@ -205,7 +206,7 @@
 - [[entities/java|Java]] — 2026-02-26~03-13 문법·제어문·배열·객체지향·상속/추상화를 관통하는 백엔드 기반 언어 허브
 - [[entities/git|Git]] — Java `MyJava` 프로젝트 초기화에서 GitHub 협업 흐름까지 이어지는 버전 관리 도구
 - [[entities/github|GitHub]] — Java 실습 저장소 백업에서 branch/PR 협업까지 이어지는 원격 Git 서비스
-- [[entities/oracle-database|Oracle Database]] — 날짜별 SQL·무결성·트랜잭션·조회·설계와 이후 Spring/JPA 경계를 관통하는 관계형 DB 허브
+- [[entities/oracle-database|Oracle Database]] — 03-13~20 직접 SQL·schema·sequence·무결성 학습과 03-30 MySQL/JPA runtime 전환 경계를 잇는 관계형 DB 허브
 - [[entities/dbeaver|DBeaver]] — 관리자/일반 연결·SQL Preview·Manual Commit·ERD로 Oracle을 검증한 DB 클라이언트
 - [[entities/html|HTML]] — table/form/image 구조, tag·attribute 구분과 후속 서버/React 경계를 잇는 마크업 언어
 - [[entities/css|CSS]] — cascade·box·position·상태 class로 화면 표현과 배치를 담당한 스타일 언어
@@ -216,9 +217,9 @@
 - [[entities/react|React]] — 컴포넌트, state/props, Hook, Router로 상품·장바구니·주문 화면을 만든 프론트엔드 라이브러리
 - [[entities/typescript|TypeScript]] — React 컴포넌트 props와 API 데이터 구조를 interface/type으로 표현하는 JavaScript 확장 언어
 - [[entities/jwt|JWT]] — 로그인 후 Bearer 토큰으로 API 인증 정보를 전달하는 서명 토큰 형식
-- [[entities/mysql|MySQL]] — 관계형 데이터베이스 관리 시스템이다.
-- [[entities/node-js|Node.js]] — 브라우저 밖에서 JavaScript를 실행하는 런타임이다.
-- [[entities/visual-studio-code|Visual Studio Code]] — 프론트엔드/풀스택 실습에서 사용하는 코드 편집기다.
+- [[entities/mysql|MySQL]] — Oracle 직접 SQL 이후 Spring/JPA runtime으로 전환해 Member·Product·Cart·Order와 페이징/검색 SQL에 연결한 DBMS
+- [[entities/node-js|Node.js]] — 03-30 npm 확인·Vite React 개발환경 실행의 기반이 된 JavaScript runtime
+- [[entities/visual-studio-code|Visual Studio Code]] — 03-30 설치 후 React/TypeScript component·type·route를 편집한 frontend editor
 - [[entities/linux|Linux]] — SSH·CLI·권한·빌드·Docker 배포를 통해 웹서비스 운영 환경으로 배운 서버 OS
 - [[entities/docker|Docker]] — image/container, network, mount, Dockerfile, Compose로 Spring Boot+DB 실행 환경을 재현하는 도구
 - [[entities/maven|Maven]] — `pom.xml` 기반 Java/Spring Boot 빌드와 `.jar` 패키징 도구
@@ -235,21 +236,21 @@
 - [[entities/selenium|Selenium]] — 동적 웹 페이지의 클릭·대기·이동을 자동화한 Python 브라우저 도구
 - [[entities/folium|Folium]] — 좌표 DataFrame을 Marker·HeatMap·GeoJSON 지도 결과로 만드는 Python 라이브러리
 - [[entities/konlpy|KoNLPy]] — Komoran 형태소 분석과 사용자 사전으로 한국어 텍스트를 처리한 라이브러리
-- [[entities/intellij-idea|IntelliJ IDEA]] — Java 첫 프로젝트·패키지·클래스 생성부터 Spring Boot까지 사용한 Java/Spring IDE
+- [[entities/intellij-idea|IntelliJ IDEA]] — Java 첫 project·Run에서 Spring Boot backend Java·properties·계층 작성·실행으로 이어진 IDE
 - [[entities/passwordless-x1280|Passwordless X1280]] — QR 등록·앱 승인·REST API로 비밀번호 없는 인증을 구현하는 X1280 인증 기술
 - [[entities/aam-ape|AAM과 APE]] — AAM/APE/DMZ 통합 설치, 라이선스·연동 설정, 조직 사용자·인증기 관리 실습의 기업형 인증 관리 제품군
 
 ## Comparisons
 
 <!-- 비교 페이지. 예: `comparisons/interface-vs-abstract-class` — Java에서 두 추상화 방식의 차이 -->
-- [[comparisons/controller-service-repository|Controller vs Service vs Repository]] — Spring Boot 백엔드에서 요청 처리, 업무 로직, DB 접근 계층의 역할 차이
-- [[comparisons/entity-vs-dto|Entity vs DTO]] — DB와 가까운 객체와 요청/응답 전달 객체의 차이
+- [[comparisons/controller-service-repository|Controller vs Service vs Repository]] — Member·Product·Cart·Order·검색에서 HTTP 경계, 업무·transaction 경계, DB 접근과 실제 호출 범위를 비교
+- [[comparisons/entity-vs-dto|Entity vs DTO]] — Fruit·Member·Cart·Order에서 JPA Entity, 요청/응답 DTO, TypeScript type, runtime JSON, DB row와 변환 지점을 구분
 - [[comparisons/jpql-vs-sql|JPQL vs SQL]] — Oracle 직접 SQL과 후속 Spring `Order` Entity `@Query`·Specification의 학습 경계
 - [[comparisons/interface-vs-abstract-class|인터페이스 vs 추상 클래스]] — 음료 공통 상태와 선택 기능을 함께 설계하는 실제 사용 기준
 - [[comparisons/single-row-vs-multi-row-subquery|단일행 서브쿼리 vs 다중행 서브쿼리]] — 평균 1개와 관리자 여러 명 예제로 `=`/`IN`을 고르는 기준
 - [[comparisons/where-vs-having|WHERE vs HAVING]] — 상품 행 조건과 회사별 집계 조건을 함께 쓸 때의 실행 단계 차이
-- [[comparisons/session-vs-cookie-vs-jwt|Session vs Cookie vs JWT]] — 로그인 상태 유지에서 쿠키·세션·JWT의 층위와 사용 기준 비교
-- [[comparisons/react-router-vs-spring-api-url|React Router 주소 vs Spring API 주소]] — 프론트 화면 라우팅과 백엔드 데이터 요청 URL의 역할 차이
+- [[comparisons/session-vs-cookie-vs-jwt|Session vs Cookie vs JWT]] — browser 저장·전달, server-side 상태, 서명 token과 04-06 준비→04-07 Bearer/SecurityContext 연결을 구분
+- [[comparisons/react-router-vs-spring-api-url|React Router 주소 vs Spring API 주소]] — Fruit·Cart·Paging에서 browser path와 API URL의 runtime·port·요청 주체·결과 및 CORS 경계를 비교
 - [[comparisons/primitive-vs-reference-types|기본 자료형 vs 참조 자료형]] — 값 자체를 담는 타입과 객체 참조를 담는 타입의 Java 입문 구분
 - [[comparisons/array-vs-collection|배열 vs 컬렉션]] — 고정 크기 배열과 List/Set/Map 컬렉션의 사용 기준 비교
 - [[comparisons/overloading-vs-overriding|오버로딩 vs 오버라이딩]] — 같은 이름의 다중 정의와 상속받은 메서드 재정의의 차이
@@ -260,8 +261,8 @@
 - [[comparisons/host-port-forwarding-vs-docker-port-mapping|호스트 포트 포워딩 vs Docker 포트 매핑]] — VM/Linux host의 80→9000 전환과 host:container 포트 연결을 구분하는 기준
 - [[comparisons/ec2-vs-rds|EC2 vs RDS]] — AWS에서 애플리케이션 서버와 관리형 데이터베이스의 역할·관리 범위·보안 경계 차이
 - [[comparisons/clb-vs-alb|CLB vs ALB]] — AWS 로드밸런서의 기초형과 Target Group/Listener 중심 HTTP/HTTPS 애플리케이션형 구조 차이
-- [[comparisons/mpa-vs-spa|MPA vs SPA]] — 서버 렌더링 중심 다중 페이지 구조와 React 기반 단일 페이지 앱 구조의 차이
-- [[comparisons/props-vs-state|props vs state]] — React에서 부모가 내려주는 값과 컴포넌트 내부 변경 상태의 차이
+- [[comparisons/mpa-vs-spa|MPA vs SPA]] — 03-31 Fruit Thymeleaf HTML→REST/React 전환으로 rendering 구조를 비교하고 Session/JWT 인증 축과 분리
+- [[comparisons/props-vs-state|props vs state]] — Product form·Cart 선택/수량·Paging에서 부모 전달과 local 변경을 callback·setter·API·DB 저장과 구분
 - [[comparisons/library-vs-framework|Library vs Framework]] — jQuery 호출과 Bootstrap 규칙을 같은 교육 화면에서 함께 사용하며 제어 주체를 비교
 - [[comparisons/inline-style-vs-internal-css-vs-external-css|inline style vs internal CSS vs external CSS]] — 단일 확인·문서 공통·CDN 공유의 실제 선택 상황과 공존 관계
 - [[comparisons/get-vs-post|GET vs POST]] — 상품 상세 query string과 후속 form 등록을 조회/변경 목적·HTTPS 경계로 비교
@@ -276,17 +277,21 @@
 - [[comparisons/oracle-inner-vs-outer-join|Oracle Inner Join vs Outer Join]] — 게시글 0개 회원 보존 여부와 `COUNT(*)`/`COUNT(writer)` 선택 차이
 - [[comparisons/beautifulsoup-vs-selenium|BeautifulSoup vs Selenium]] — 정적 HTML 파싱과 동적 브라우저 자동화의 역할 차이
 
-- [[comparisons/passwordless-vs-password-login|Passwordless 로그인 vs 비밀번호 로그인]] — 비밀번호 입력형 로그인과 앱 승인 기반 Passwordless 로그인의 책임 차이
-- [[comparisons/authentication-vs-authorization|인증(Authentication) vs 인가(Authorization)]] — 신원을 확인하는 인증과 인증 이후 접근 범위를 판단하는 인가의 책임 차이
+- [[comparisons/passwordless-vs-password-login|Passwordless 로그인 vs 비밀번호 로그인]] — 04-06~07 비밀번호/JWT 직접 구현과 후속 X1280 QR·앱 승인·외부 인증 서버 책임 비교
+- [[comparisons/authentication-vs-authorization|인증(Authentication) vs 인가(Authorization)]] — credential/Bearer 인증과 role·소유자 기반 endpoint 인가를 실제 04-06~04-20 흐름으로 구분
 
 ## Queries
 
 <!-- 보존 가치 있는 질문/답변. 예: `queries/why-learn-oracle-before-spring` — 커리큘럼 순서의 의미를 정리한 답변 -->
+- [[queries/why-shopping-cart-order-flow-is-complex|장바구니와 주문 흐름은 왜 복잡한가]] — 04-14~20 관계·DTO·checked/quantity/stock·Cart/Order 생명주기·transaction을 한 질문으로 추적
+- [[queries/jwt-role-ui-vs-server-authorization|JWT role UI와 서버 인가는 왜 다른가]] — React role UI·client user·JWT Claim·GrantedAuthority·SecurityContext·endpoint authorization의 계층을 분리
 
 ## Meta
 
 <!-- 위키 운영 문서, lint 리포트, 토픽맵 등 -->
-- [[_meta/frontend-backend-rehighquality-inventory-plan|FrontEnd_BackEnd 내용 재고도화 전수 재고와 실행 분할 계획]] — raw 34개와 기존 지식 페이지 56개를 전수 대응하고 단계 4를 16개 초세분화 세션으로 나눈 읽기 감사 계획
+- [[_meta/wiki-user-study-guide|LLM Wiki 사용자 학습 가이드]] — 과목·날짜·개념·프로젝트·면접 목적에 따라 어떤 페이지를 어떤 순서로 공부할지 안내하는 사용자용 시작 문서
+- [[_meta/linux-rehighquality-inventory-plan|Linux 내용 재고도화 전수 재고와 실행 분할 계획]] — R01~R11·P01~P10·I01~I03 raw 24개와 직접 지식 페이지 35개·후속 경계 15개를 재고화하고 10개 세션으로 분할한 단계 5 기준선
+- [[_meta/frontend-backend-rehighquality-inventory-plan|FrontEnd_BackEnd 내용 재고도화 전수 재고와 실행 분할 계획]] — R01~R19·P01~P10·I01~I05와 지식 페이지 59개를 16개 세션으로 고도화·검증해 단계 4 고정점을 완료한 기록
 - [[_meta/wiki-content-rehighquality-work-plan|LLM Wiki 내용 재고도화 작업 계획]] — 과목 하나를 한 세션에서 내용 감사·수정·검증하고 다음 세션 프롬프트로 인계하는 실행 계획
 - [[_meta/txt-to-md-conversion-work-plan|TXT→MD 남은 과목 변환 작업 인계]] — 5~8과목 날짜별 변환·총정리 작성, 9과목 민감정보 탐지, 10과목 Python 제한 범위를 새 세션에서도 이어가기 위한 작업 인계
 - [[_meta/wiki-log-archive-2026-07-02-part-2|Wiki Log Archive 2026-07-02 Part 2]] — 2026년 7월 2일 작업 기록 후반부 아카이브
