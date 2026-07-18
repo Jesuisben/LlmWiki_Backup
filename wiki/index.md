@@ -2,7 +2,7 @@
 
 > 이 파일은 `wiki/` 전체의 목차이자 길잡이다.  
 > 질문에 답하거나 새 자료를 ingest할 때 이 파일을 먼저 읽는다.  
-> Last updated: 2026-07-16 | Total pages: 272
+> Last updated: 2026-07-18 | Total pages: 274
 
 ## 사용 방법
 
@@ -148,7 +148,7 @@
 - [[concepts/docker-registry-tag-push-pull|Docker registry tag·push·pull]] — local image를 registry 이름으로 tag·인증·push하고 다른 환경에서 pull/run하는 수동 전달 생명주기
 - [[concepts/docker-reverse-proxy-load-balancing|Docker reverse proxy와 로드 밸런싱]] — `proxy-net`의 Nginx가 mounted config와 upstream으로 Apache·Nginx backend 응답을 분배한 흐름
 - [[concepts/docker-compose-manifest|Docker Compose manifest]] — MySQL+Spring·MySQL+WordPress의 service 관계와 `up`·DB·browser·`down` 완료 조건을 구분한 YAML 구성
-- [[concepts/dockerfile-vs-compose|Dockerfile vs Docker Compose]] — 이미지 생성 레시피와 다중 컨테이너 실행 manifest의 역할 차이
+- [[concepts/dockerfile-vs-compose|Dockerfile vs Docker Compose]] — 04-30 image build recipe와 05-01 다중 service runtime manifest를 선택·공존·완료 조건으로 비교
 - [[concepts/git-github-collaboration|GitHub 협업 흐름]] — WorkTree→stage→commit→remote와 `animal`·`sport` branch→PR→remote merge→local pull·conflict의 상태별 협업 절차
 - [[concepts/aws-cloud-vpc-networking|AWS Cloud와 VPC 네트워킹]] — Region/AZ/VPC/Subnet/CIDR, IGW, Route Table, Security Group으로 EC2 네트워크를 구성하는 흐름
 - [[concepts/aws-ec2-nginx-spring-deploy|AWS EC2에서 Nginx와 Spring Boot 배포]] — EC2 SSH, Nginx, JDK/Maven, Spring Boot jar 실행, 80→9000 포트 연결 흐름
@@ -256,11 +256,12 @@
 - [[comparisons/primitive-vs-reference-types|기본 자료형 vs 참조 자료형]] — 값 자체를 담는 타입과 객체 참조를 담는 타입의 Java 입문 구분
 - [[comparisons/array-vs-collection|배열 vs 컬렉션]] — 고정 크기 배열과 List/Set/Map 컬렉션의 사용 기준 비교
 - [[comparisons/overloading-vs-overriding|오버로딩 vs 오버라이딩]] — 같은 이름의 다중 정의와 상속받은 메서드 재정의의 차이
-- [[comparisons/docker-commit-vs-dockerfile|docker commit vs Dockerfile]] — 컨테이너 상태 스냅샷과 재현 가능한 이미지 빌드 파일의 차이
-- [[comparisons/docker-cp-vs-bind-mount-vs-volume|docker cp vs bind mount vs volume]] — 컨테이너 파일 복사, 호스트 경로 연결, Docker 관리 볼륨의 차이
-- [[comparisons/git-fetch-vs-pull-vs-clone|git fetch vs pull vs clone]] — 원격 저장소 정보를 가져오는 세 명령의 시점과 결과 차이
-- [[comparisons/virtual-machine-vs-docker-container|가상 머신(VM) vs Docker 컨테이너]] — VirtualBox Ubuntu VM, SSH 클라이언트, Linux host와 Docker 실행 단위의 층위 차이
-- [[comparisons/host-port-forwarding-vs-docker-port-mapping|호스트 포트 포워딩 vs Docker 포트 매핑]] — VM/Linux host의 80→9000 전환과 host:container 포트 연결을 구분하는 기준
+- [[comparisons/docker-commit-vs-dockerfile|docker commit vs Dockerfile]] — 변경 container snapshot과 instruction 기반 image build를 재현성·registry 전달·검증 단계로 비교
+- [[comparisons/docker-cp-vs-bind-mount-vs-volume|docker cp vs bind mount vs volume]] — 일회 copy, host path 지속 연결, Docker 관리 storage를 실제 오류·lifecycle로 비교
+- [[comparisons/git-fetch-vs-pull-vs-clone|git fetch vs pull vs clone]] — 새 local repository, remote-tracking 갱신, 현재 branch 통합의 결과 차이
+- [[comparisons/virtual-machine-vs-docker-container|가상 머신(VM) vs Docker 컨테이너]] — VirtualBox guest OS와 Docker host-kernel process를 실제 중첩 계층·접속·완료 조건으로 비교
+- [[comparisons/host-port-forwarding-vs-docker-port-mapping|호스트 포트 포워딩 vs Docker 포트 매핑]] — VirtualBox NAT·guest iptables/UFW와 Docker host→container publish를 층별로 구분
+- [[comparisons/sudo-vs-sudo-su-vs-root-session|sudo vs sudo su - vs root session]] — 한 명령의 관리자 권한과 root login shell·지속 session의 선택·소유권 위험 비교
 - [[comparisons/ec2-vs-rds|EC2 vs RDS]] — AWS에서 애플리케이션 서버와 관리형 데이터베이스의 역할·관리 범위·보안 경계 차이
 - [[comparisons/clb-vs-alb|CLB vs ALB]] — AWS 로드밸런서의 기초형과 Target Group/Listener 중심 HTTP/HTTPS 애플리케이션형 구조 차이
 - [[comparisons/mpa-vs-spa|MPA vs SPA]] — 03-31 Fruit Thymeleaf HTML→REST/React 전환으로 rendering 구조를 비교하고 Session/JWT 인증 축과 분리
@@ -287,6 +288,7 @@
 <!-- 보존 가치 있는 질문/답변. 예: `queries/why-learn-oracle-before-spring` — 커리큘럼 순서의 의미를 정리한 답변 -->
 - [[queries/why-shopping-cart-order-flow-is-complex|장바구니와 주문 흐름은 왜 복잡한가]] — 04-14~20 관계·DTO·checked/quantity/stock·Cart/Order 생명주기·transaction을 한 질문으로 추적
 - [[queries/jwt-role-ui-vs-server-authorization|JWT role UI와 서버 인가는 왜 다른가]] — React role UI·client user·JWT Claim·GrantedAuthority·SecurityContext·endpoint authorization의 계층을 분리
+- [[queries/why-sudo-created-directory-denies-normal-user|sudo로 만든 디렉터리는 왜 일반 사용자로 수정·복사할 수 없는가]] — 반복 `Permission denied`를 실행 주체·ownership·directory `w/x`·최소 수정 순서로 진단
 
 ## Meta
 

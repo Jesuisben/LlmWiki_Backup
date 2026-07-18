@@ -1,7 +1,7 @@
 ---
 title: 2026-04-24 Linux 사용자, 그룹, 권한
 created: 2026-07-06
-updated: 2026-07-16
+updated: 2026-07-18
 type: summary
 tags: [linux, backend, curriculum, study-log]
 sources:
@@ -134,6 +134,8 @@ confidence: high
 
 - [[concepts/linux-users-permissions|Linux 사용자·그룹·권한]]
 - [[concepts/linux-cli-files|Linux CLI와 파일 시스템]]
+- [[comparisons/sudo-vs-sudo-su-vs-root-session|sudo vs sudo su - vs root session]]
+- [[queries/why-sudo-created-directory-denies-normal-user|sudo로 만든 디렉터리의 권한 오류 진단]]
 - [[entities/linux|Linux]]
 - [[concepts/docker-install-permission-setup|Docker 설치와 권한 설정]]
 - [[concepts/linux-package-archive|Linux 패키지·다운로드·압축]]

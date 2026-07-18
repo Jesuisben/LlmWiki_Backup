@@ -1,7 +1,7 @@
 ---
 title: Linux 내용 재고도화 전수 재고와 실행 분할 계획
 created: 2026-07-16
-updated: 2026-07-16
+updated: 2026-07-18
 type: meta
 tags: [linux, docker, github, spring-boot, curriculum, study-log]
 sources:
@@ -11,7 +11,7 @@ sources:
   - wiki/_meta/wiki-content-rehighquality-work-plan.md
   - wiki/_meta/frontend-backend-rehighquality-inventory-plan.md
   - raw/KoreaICT/5. Linux/Linux 총정리/Linux 총정리.md
-status: growing
+status: stable
 confidence: high
 ---
 
@@ -19,12 +19,12 @@ confidence: high
 
 ## 문서 상태와 범위
 
-이 문서는 내용 재고도화 단계 5 `Linux`의 **세션 1 재고·대응·분류·실행 분할 기준선**이자 분할 세션별 실행 기록이다. 세션 2에서는 Summary 전반부 R01~R05, 세션 3에서는 Summary 후반부·총정리 R06~R11, 세션 4에서는 CLI·파일·vi·권한 Concept 3개, 세션 5에서는 VM·SSH·process·service·network·server Concept/Entity, 세션 6에서는 Docker core Concept 4개, 세션 7에서는 Dockerfile·reverse proxy·Compose Concept/Entity와 registry Concept, 세션 8에서는 Git·GitHub Concept/Entity 4개를 고도화했다.
+이 문서는 내용 재고도화 단계 5 `Linux`의 **세션 1 재고·대응·분류·실행 분할 기준선**이자 분할 세션별 실행 기록이다. 세션 2에서는 Summary 전반부 R01~R05, 세션 3에서는 Summary 후반부·총정리 R06~R11, 세션 4에서는 CLI·파일·vi·권한 Concept 3개, 세션 5에서는 VM·SSH·process·service·network·server Concept/Entity, 세션 6에서는 Docker core Concept 4개, 세션 7에서는 Dockerfile·reverse proxy·Compose Concept/Entity와 registry Concept, 세션 8에서는 Git·GitHub Concept/Entity 4개, 세션 9에서는 최종 Comparison 7개와 Query 1개를 고도화했다. 세션 10에서는 과목 전체 고정점을 전수 검증하고 신규 페이지의 역링크만 최소 교정했다.
 
-- 현재 상태: **미완료 — 세션 8 Git·GitHub Entity/Concept까지 완료**
-- 세션 8 수정 범위: 지정 기존 Concept/Entity 4개, 이 meta 문서, `wiki/index.md`, `wiki/log.md`
-- 세션 8 비수정 범위: `raw/` 전체, Summary·Comparison·Query, Docker 관련 페이지, sudo/root·permission 후보, 상위 계획의 단계 5 완료 기록
-- 다음 실행 단위: 세션 9 `최종 Comparison/Query`
+- 현재 상태: **최종 완료 — 세션 10 과목 전체 고정점 통과**
+- 세션 10 최소 교정 범위: 신규 sudo/root Comparison·permission Query를 관련 Summary 2개·Concept 1개·Linux Entity 1개에서 탐색할 수 있도록 역링크를 보강하고, 이 meta 문서·상위 계획·`wiki/log.md`에 완료 상태를 기록했다.
+- 세션 10 비수정 범위: `raw/` 전체, 세션 2~9의 그 밖의 본문, 후속 AWS/CI/CD 경계 15개 본문, `wiki/index.md`
+- 다음 실행 단위: 단계 6 `AWS` 실용형 첫 세션. 이 문서에서는 시작하지 않는다.
 - 다음 세션 자동 실행: 하지 않음
 
 ## 작업 전 기준선
@@ -125,10 +125,10 @@ confidence: high
 
 ## 기존 Linux 직접 source 지식 페이지
 
-세션 1의 기존 직접 source 지식 페이지는 35개였고, 세션 7의 registry Concept 신규 생성 뒤 frontmatter `sources`가 `raw/KoreaICT/5. Linux`를 직접 참조하는 현재 지식 페이지는 **36개**다.
+세션 1의 기존 직접 source 지식 페이지는 35개였고, 세션 5의 process/service 진단 Concept, 세션 7의 registry Concept, 세션 9의 sudo/root Comparison·permission Query 신규 생성 뒤 frontmatter `sources`가 `raw/KoreaICT/5. Linux`를 직접 참조하는 현재 지식 페이지는 **39개**다. 앞선 중간 집계에서 세션 5 신규 Concept 1개가 누락됐으며 세션 9 전수 계산으로 바로잡았다.
 
-- 실제 디렉터리 기준: `summaries 11 / concepts 14 / entities 6 / comparisons 5 / queries 0`
-- frontmatter `type` 기준: `summary 11 / concept 13 / entity 6 / comparison 6 / query 0`
+- 실제 디렉터리 기준: `summaries 11 / concepts 15 / entities 6 / comparisons 6 / queries 1`
+- frontmatter `type` 기준: `summary 11 / concept 14 / entity 6 / comparison 7 / query 1`
 - 차이 원인: `wiki/concepts/dockerfile-vs-compose.md`는 위치는 `concepts/`지만 frontmatter `type: comparison`이다. 이번 단계에서는 무단 이동하지 않고 comparison으로 처리한다.
 
 ### Summary 대응 및 분류
@@ -181,12 +181,19 @@ confidence: high
 
 | wiki 경로 | raw·수업일 | 대표 비교 | 분류 | 누락·오류·중복 책임 | 직접/후속 경계 | 예정 세션 |
 |---|---|---|---|---|---|---:|
-| `wiki/concepts/dockerfile-vs-compose.md` | R07~R08·R11·P02 | image recipe vs multi-service manifest | 부분 보강 | 위치/type 불일치가 있으나 이동은 보류. 실제 Spring+MySQL 선택 상황·원문 경계 보강 | Docker 직접 / CI 후속 | 9 |
-| `wiki/comparisons/docker-commit-vs-dockerfile.md` | R06~R07·P02·P08 | state snapshot vs reproducible recipe | 유지 | 현재 선택 기준이 명확함. 실제 container/image 이름과 Hub 후속만 확인 | Docker 직접 / CI 후속 | 9 |
-| `wiki/comparisons/docker-cp-vs-bind-mount-vs-volume.md` | R06·R08·P02~P03 | copy vs host link vs managed storage | 유지 | 일회성 복사·host 직접 연결·Docker 관리 저장공간의 선택 축이 명확하다. 실행 시 provenance만 재확인 | Docker 직접 | 9 |
-| `wiki/comparisons/git-fetch-vs-pull-vs-clone.md` | R09~R10·R11·P04 | remote 정보/병합/최초 복제 | 부분 보강 | 1개 fence가 합성 placeholder. 실제 05-06 remote branch fetch UI와 pull/clone 흐름 필요 | Linux 협업 직접 | 9 |
-| `wiki/comparisons/host-port-forwarding-vs-docker-port-mapping.md` | R04~R07·R11 | host iptables/UFW vs `-p` | 전면 재작성 | VirtualBox NAT host→guest, Linux iptables guest 80→process 9000, Docker host→container를 현재 두 축으로 합쳤다 | Linux/Docker 직접 / SG·ALB 후속 | 9 |
-| `wiki/comparisons/virtual-machine-vs-docker-container.md` | R01·R05·R11 | guest OS vs host-kernel process | 부분 보강 | 비교 축은 양호하다. bridge/NAT·SSH·Docker Engine·AWS EC2 후속 경계를 보강 | Linux 직접 / EC2 후속 | 9 |
+| `wiki/concepts/dockerfile-vs-compose.md` | R07~R08·R11·P02~P03 | image recipe vs multi-service manifest | 부분 보강 완료 | 위치/type 불일치는 유지하고 build image와 project runtime, 실제 MySQL+Spring/WordPress 선택·함께 쓰기·readiness/down 경계를 복원 | Docker 직접 / CI 후속 | 9 완료 |
+| `wiki/comparisons/docker-commit-vs-dockerfile.md` | R06~R07·R11·P02·P08 | state snapshot vs reproducible recipe | 부분 보강 완료 | 변경 container→commit image→새 container와 Dockerfile→build image의 artifact·검증을 분리하고 registry 전달 가능 여부는 공통점으로 바로잡음 | Docker 직접 / CI 후속 | 9 완료 |
+| `wiki/comparisons/docker-cp-vs-bind-mount-vs-volume.md` | R06·R08·R11·P02~P03 | copy vs host link vs managed storage | 부분 보강 완료 | 양방향 일회 copy, 빈 bind source의 Apache listing/Nginx 403, `mount-vol`·Compose volume과 재생성 persistence 미확정을 분리 | Docker 직접 | 9 완료 |
+| `wiki/comparisons/git-fetch-vs-pull-vs-clone.md` | R09~R10·R11·P04 | remote 정보/통합/최초 복제 | 부분 보강 완료 | placeholder URL·합성 `bash` fence를 제거하고 R09 clone/pull과 R10 fetch→remote-tracking→local branch를 날짜·상태별 prose·표로 분리 | Linux 협업 직접 | 9 완료 |
+| `wiki/comparisons/host-port-forwarding-vs-docker-port-mapping.md` | R05~R07·R11 | VirtualBox NAT·guest iptables/UFW vs Docker publish | 전면 재작성 완료 | Windows host→guest→Spring process와 Docker host→container를 계층별 선택·함께 쓰기·완료 조건으로 분리 | Linux/Docker 직접 / SG·ALB 후속 | 9 완료 |
+| `wiki/comparisons/virtual-machine-vs-docker-container.md` | R01·R05·R08·R11·P03 | guest OS vs host-kernel process | 부분 보강 완료 | VM/SSH와 Docker Engine/container의 host/application 계층, 새 VM+Compose 공존, 접속·port·readiness 경계를 복원 | Linux 직접 / EC2 후속 | 9 완료 |
+| `wiki/comparisons/sudo-vs-sudo-su-vs-root-session.md` | R01·R03~R05·R08·R11 | 한 명령 privilege vs root login shell·지속 session | 신규 생성 완료 | 명시적 “꼭 root?” 혼동과 package/service·user/group·Docker setup 반복을 독립 선택 축으로 보존하고 root-owned artifact 위험을 연결 | Linux 직접 / EC2·CI/CD 후속 | 9 완료 |
+
+### Query 대응 및 분류
+
+| wiki 경로 | raw·수업일 | 대표 질문 | 분류 | 독립 탐색 책임 | 직접/후속 경계 | 예정 세션 |
+|---|---|---|---|---|---|---:|
+| `wiki/queries/why-sudo-created-directory-denies-normal-user.md` | R03~R04·R11 | root-owned directory의 일반 사용자 생성·복사 실패 | 신규 생성 완료 | 04-24 `touch`와 04-27 drag-and-drop의 반복 `Permission denied`를 실행 주체→ownership→directory `w/x`→`chown`/`chmod` 선택 순서로 종합 | Linux 직접 / Docker group·EC2·CI/CD 후속 | 9 완료 |
 
 ## 후속 적용 경계 페이지
 
@@ -241,8 +248,8 @@ confidence: high
 |---|---|---|---|---|
 | Linux process·service·firewall·port | concept | R01, R03~R05, R11 | 신규 생성 완료 | `ps/kill`, `systemctl`, UFW/iptables, SSH/Apache/Nginx/Spring port를 process→service→listening port→firewall→NAT/redirect→client 응답으로 탐색하는 독립 진단 축이 명확했다. 기존 server Concept·Linux Entity·Maven Entity 4개에서 역링크했다. |
 | Docker registry tag·push·pull | concept | R06, P08, R11 | 신규 생성 완료 | local image의 생성/실행과 다른 질문인 registry naming·인증·layer push·다른 환경 retrieval이 독립 교시에 이어지고 namespace 오류·credential 경고·수동/CI 경계도 반복 탐색 가치가 있어 신규 Concept로 보존했다. Docker Entity에서 역링크하고 image/container 기본 책임은 기존 페이지에 위임함. |
-| sudo vs `sudo su -` vs root session | comparison | R01, R03~R05 | 신규 필요 후보 | 관리자 권한·root prompt·root 소유권·Docker 설치가 반복되고 “사용자 만들기는 꼭 root로 가야 하나?”라는 명시적 혼동이 있다. 세션 9에서 최종 판단. |
-| sudo로 만든 디렉터리는 왜 일반 사용자로 수정·복사할 수 없는가 | query | R03~R04 | 신규 필요 후보 | 실제 `Permission denied`, root 소유권, `chown`, directory write 권한을 종합하는 재사용 가능한 troubleshooting 질문이다. 세션 9에서 최종 판단. |
+| sudo vs `sudo su -` vs root session | comparison | R01, R03~R05, R08 | 신규 생성 완료 | 관리자 권한·root prompt·root 소유권·Docker 설치가 여러 날짜에 반복되고 “사용자 만들기는 꼭 root로 가야 하나?”라는 명시적 혼동이 있다. 기존 권한 Concept의 한 section만으로는 한 명령 상승·login shell·지속 session의 선택 축을 독립 탐색하기 어려워 Comparison으로 보존했다. |
+| sudo로 만든 디렉터리는 왜 일반 사용자로 수정·복사할 수 없는가 | query | R03~R04 | 신규 생성 완료 | 04-24 `touch`와 04-27 MobaXterm drag-and-drop에서 같은 class의 `Permission denied`가 반복됐다. Concept 설명을 복제하지 않고 실행 주체→owner/group→directory `w/x`→최소 `chown`/`chmod` 선택의 재사용 troubleshooting 순서로 종합했다. |
 | VirtualBox·SSH·MobaXterm 연결 계층 | concept | R01, P06, P10 | 기존 보강으로 흡수 | 04-22 Summary, Linux entity, `virtual-machine-vs-docker-container`에 VM·guest OS·OpenSSH service·bridge/IP·client 층위를 보강한다. |
 | vi 편집기 | concept | R02, P05~P07 | 기존 보강으로 흡수 완료 | `linux-cli-files`가 명령/입력/마지막 행 모드, 저장·종료·검색·치환과 외부 확인을 직접 책임한다. 신규 페이지를 만들지 않았다. |
 | 절대 경로 vs 상대 경로 | comparison | R01~R02, R11 | 기존 보강으로 흡수 완료 | `linux-cli-files`에 기준 위치와 고정 path/현재 tree 작업의 선택 상황을 보강했다. Comparison을 수정·신설하지 않았다. |
@@ -254,14 +261,14 @@ confidence: high
 
 ## 세션 1 기준 code fence 재고와 현재 잔여
 
-세션 1 기준 직접 source 페이지 35개 중 code fence가 있는 페이지는 13개, fence는 **18개**였다. 세션 4에서 대상 Concept의 `bash` fence 3개, 세션 5에서 대상 기존 페이지의 fence 4개(`bash` 3, `dockerfile` 1), 세션 6에서 Docker core Concept의 `bash` fence 4개를 제거했다. 세션 7에서는 reverse proxy의 합성 `text` 도식과 Compose의 합성 `yaml`·`bash` fence를 제거하고, 합성 `nginx` fence를 R07의 실제 연속 `nginx.conf` 1개로 교체했다. 세션 8에서는 Git 협업 Concept의 합성 `bash` fence 2개를 prose·표로 전환했다. 현재 미처리 잔여는 **1개 Comparison·`bash` fence 1개**이며, 검증 완료된 `nginx` fence 1개는 유지한다.
+세션 1 기준 직접 source 페이지 35개 중 code fence가 있는 페이지는 13개, fence는 **18개**였다. 세션 4에서 대상 Concept의 `bash` fence 3개, 세션 5에서 대상 기존 페이지의 fence 4개(`bash` 3, `dockerfile` 1), 세션 6에서 Docker core Concept의 `bash` fence 4개를 제거했다. 세션 7에서는 reverse proxy의 합성 `text` 도식과 Compose의 합성 `yaml`·`bash` fence를 제거하고, 합성 `nginx` fence를 R07의 실제 연속 `nginx.conf` 1개로 교체했다. 세션 8에서는 Git 협업 Concept의 합성 `bash` fence 2개를 prose·표로 전환했다. 세션 9에서는 마지막 Git Comparison의 합성 `bash` fence 1개를 prose·표로 전환했다. 현재 미처리 잔여는 **0개**이며, 검증 완료된 `nginx` fence 1개만 유지한다.
 
 - 세션 1 기준 `bash`: 14개 — 모두 Linux 명령이므로 실행 세션에서 `shell`로 교정 대상
 - `yaml`: 1개
 - `text`: 1개
 - `nginx`: 1개
 - `dockerfile`: 1개
-- 세션 8 이후 미처리 잔여 언어 수: `bash 1`. 검증 완료되어 유지한 `nginx` fence 1개는 R07 연속 원문과 일치한다.
+- 세션 9 이후 미처리 잔여 언어 수: 0. 검증 완료되어 유지한 `nginx` fence 1개는 R07 연속 원문과 일치한다.
 - 세션 1의 18개는 모두 선언된 텍스트 raw source의 공백 정규화 연속 부분문자열과 일치하지 않았다. 세션 4에서는 대상 3개를 prose·표로 바꿔 합성 provenance를 해소했다.
 - 불일치는 곧 오류 확정이 아니라 **원문 연속 대조가 필요한 합성·일반화 후보**라는 뜻이다. PDF/이미지에서 온 예시는 별도 수동 근거로 판정한다.
 - 한국어 설명이나 terminal output이 `bash` fence 안에 직접 섞인 확정 사례는 0개다. 더 큰 문제는 서로 다른 실행 위치·날짜·실습 단계를 한 실행 예제처럼 합친 provenance 오류다.
@@ -281,7 +288,7 @@ confidence: high
 | `wiki/concepts/linux-spring-boot-server-deploy.md` | 세션 1 `bash` 1·`dockerfile` 1 → 현재 0 | R05 host jar 명령 합성과 R07에서 떨어진 Dockerfile instruction 3줄 합성을 제거 | R05 host source→package→JAR→process→port→browser와 R07 Dockerfile 후속을 prose·표로 분리 완료 |
 | `wiki/concepts/linux-users-permissions.md` | 세션 1 `bash` 1 → 현재 0 | R03 계정·그룹과 source 밖 R04 사례를 합친 후보를 제거하고 R04를 source에 추가 | 사용자/group, chmod, chown/chgrp, R04 download directory 오류를 prose·표로 분리 완료 |
 | `wiki/concepts/linux-web-server-apache-nginx.md` | 세션 1 `bash` 2 → 현재 0 | host service/UFW와 Docker nginx를 각각 합성한 fence를 제거 | R04 host webserver, R05 container webserver, R07 container proxy를 prose·표로 분리 완료 |
-| `wiki/comparisons/git-fetch-vs-pull-vs-clone.md` | 1: bash | placeholder URL과 세 명령 합성 예시 | R09 clone/pull과 R10 fetch를 표·단계로 비교하고 필요할 때만 연속 fence 사용. bash→shell |
+| `wiki/comparisons/git-fetch-vs-pull-vs-clone.md` | 세션 1 `bash` 1 → 현재 0 | placeholder URL과 R09 clone/pull·R10 fetch를 한 실행 예처럼 합친 fence를 제거 | 새 repository 생성·remote-tracking 갱신·현재 branch 통합을 날짜·artifact별 prose·표로 분리 완료 |
 
 ### fence 공통 처리 규칙
 
@@ -294,7 +301,7 @@ confidence: high
 
 ## 실행 세션 분할
 
-과목 전체는 총 **10개 세션**으로 분할한다. 세션 1은 기준선 재고, 세션 2~9는 지식 페이지 실행 묶음, 세션 10은 전체 대응·provenance·구조 고정점이다. 현재 세션 8까지 완료했으며 각 세션은 지정 범위만 처리하고 다음 세션을 자동 실행하지 않는다.
+과목 전체는 총 **10개 세션**으로 분할한다. 세션 1은 기준선 재고, 세션 2~9는 지식 페이지 실행 묶음, 세션 10은 전체 대응·provenance·구조 고정점이다. 세션 10까지 모두 완료했으며 각 세션은 지정 범위만 처리하고 다음 세션을 자동 실행하지 않았다.
 
 | 세션 | 구간·유형 | 대상 페이지·후보 | 주 raw |
 |---:|---|---|---|
@@ -331,6 +338,28 @@ confidence: high
 - 책임·과목 경계: Git의 local 상태·이력, GitHub의 remote hosting·PR review/merge, SourceTree와 IntelliJ의 서로 다른 client 실행, GitHub Actions의 후속 workflow 책임을 분리했다. Java의 개인 local/remote 선행, Linux 05-04~05-06 팀 협업 직접 수업, CI/CD push trigger 후속 활용을 같은 학습일·성공 상태로 합치지 않았다.
 - fence·보안: 세션 시작 직접 대상 fence 2개(`bash` 2)를 전수 조사해 placeholder URL·합성 feature branch 명령을 prose·표로 전환했다. 최종 대상 `0 / 원문 검증 0 / 수동 예외 0 / 실패 0`, Git/Linux command `bash` 0개다. P04는 prose 근거만 사용했으며 실제 account·email·repository URL·organization·password·PAT·token·one-time code·credential 재노출은 0건이다.
 - 구조·상태: 대상 frontmatter·R09·R10·R11·P04 source 실경로·허용 tag·wikilink·placeholder를 확인했다. 신규 페이지가 없어 Total pages는 272를 유지했고, index는 고도화된 책임 설명과 실제로 어긋난 4개 한 줄 설명만 갱신했다. `raw/KoreaICT/5. Linux`는 수정하지 않았으며 상위 계획·세션 9 대상은 건드리지 않았다.
+
+## 세션 9 실행 결과 — 최종 Comparison/Query
+
+- 상태: **완료**. 세션 10과 Linux 단계 5 전체 완료 처리는 시작하지 않았다.
+- 실행 범위: 기존 Comparison 6개를 고도화하고 `sudo-vs-sudo-su-vs-root-session` Comparison과 `why-sudo-created-directory-denies-normal-user` Query를 신규 생성했다. `dockerfile-vs-compose`는 기존 위치·type 불일치를 유지한 채 내용 책임만 고도화했다.
+- Docker 비교: R06~R08 날짜 MD를 최우선으로 commit snapshot/Dockerfile recipe/Compose runtime, cp 일회 copy/bind host link/named volume, build·container·network·DB·browser·down 완료 상태를 분리했다. P02~P03·P08은 날짜 MD에 전사된 이론·화면 절차와 registry naming 경고만 보조했으며 실제 account·repository URL·credential은 옮기지 않았다.
+- Git·network·VM 비교: R09 clone/pull과 R10 fetch를 새 repository·remote-tracking·현재 branch 통합으로 분리했다. R01·R05~R08은 VM guest OS→Docker host→container, Windows host→VirtualBox NAT→guest iptables/UFW→Spring process, Docker host→container publish를 서로 다른 계층과 함께 쓰는 관계로 복원했다.
+- 신규 후보 판정: sudo/root 후보는 R01·R03~R05·R08의 반복 관리자 작업과 R03의 명시적 “꼭 root?” 혼동 때문에 독립 Comparison으로 보존했다. permission 후보는 R03 `touch`와 R04 MobaXterm drag-and-drop의 반복 `Permission denied`를 실행 주체→ownership→directory `w/x`→최소 `chown`/`chmod` 선택으로 종합할 troubleshooting 가치가 있어 Query로 보존했다.
+- fence·보안: 기존 `git-fetch-vs-pull-vs-clone`의 placeholder URL·합성 `bash` fence 1개를 prose·표로 제거했다. 세션 9 대상 최종 `0 / 원문 검증 0 / 수동 예외 0 / 실패 0`, `bash` 0개다. Linux 직접 페이지 전체에서 미처리 fence는 0개이고 R07 연속 원문과 일치하는 `nginx` fence 1개만 유지한다. 실제 account·email·repository URL·password·PAT·token·credential 재노출은 0건이다.
+- 구조·상태: 8개 대상의 frontmatter·source 실경로·허용 tag·wikilink·placeholder·선택 상황·함께 쓰기·오류·완료 조건을 확인했다. 신규 2개를 index에 등록하고 Total pages를 274로 재계산했다. `raw/KoreaICT/5. Linux`는 수정하지 않았으며 상위 계획·후속 경계 본문은 건드리지 않았다.
+
+## 세션 10 실행 결과 — 과목 전체 고정점
+
+- 상태: **최종 완료**. Linux 직접 source 지식 페이지 39개와 후속 경계 15개, raw R01~R11·P01~P10·I01~I03 대응, 구조·내용·provenance·보안 고정점을 전수 재검증했다. 단계 6 AWS는 시작하지 않았다.
+- 세션 9 경고 재검증: 경고 대상 기존 6개는 모두 Git diff와 실제 본문에서 `updated: 2026-07-18`, 선택 상황·함께 쓰는 관계·artifact·오류·완료 조건 보강이 확인됐다. 신규 Comparison·Query, `wiki/index.md`, `wiki/log.md`, 이 inventory와 상호 대조해 부분 적용·본문 누락은 없다고 판정했다.
+- 직접 페이지 수: knowledge 디렉터리와 frontmatter를 각각 다시 계산해 39개를 확인했다. 디렉터리 기준은 `summaries 11 / concepts 15 / entities 6 / comparisons 6 / queries 1`, frontmatter type 기준은 `summary 11 / concept 14 / entity 6 / comparison 7 / query 1`이다. 차이는 `concepts/dockerfile-vs-compose.md`의 기존 위치/type 불일치 1개뿐이다.
+- raw 대응: R01~R11은 실제 경로 11/11과 직접 page source union 11/11, 대표 anchor와 최초 등장·후속 확장·artifact·오류·완료 조건을 모두 대조했다. P01~P10과 I01~I03은 inventory 실제 경로 10/10·3/3을 유지했다. P01·P05·P10은 독립 page source를 강제하지 않고 각각 AWS 가입 예고·Librarian 반복·OpenSSH 보조 경계로만 남겼다.
+- 내용·탐색성: Summary·Concept·Entity·Comparison·Query의 유형별 의미 게이트와 직접/후속 경계를 통과했다. 신규 sudo/root Comparison과 permission Query가 상호 링크뿐 아니라 04-24·04-27 Summary, Linux 권한 Concept, Linux Entity에서 탐색되도록 관련 링크 8개만 최소 보강했다. 후속 AWS/CI/CD 경계 15개는 존재·책임 경계·Linux 비직접 source 상태를 유지했다.
+- 구조: 필수 frontmatter·type·status·confidence·허용 tag·source 실경로 오류 0건, 깨진 링크·고립·index 누락·등록 중복 0건이다. `wiki/index.md`의 등록 274개와 실제 page 수 274개가 일치해 index는 수정하지 않았다. actionable placeholder와 `sources: []`, `관련 raw 참조`, `추후 보강 대상`, needs-review/low-confidence는 0건이다.
+- 장문 판정: 지식 페이지는 200줄 초과가 없다. 이 inventory 자체만 200줄을 넘지만 raw 대응표·세션별 실행 이력·고정점 근거를 보존하는 단일 운영 문서이므로 이번 단계에서는 분할하지 않는다.
+- fence: Linux 직접 source 지식 페이지 전체 fence는 `nginx` 1개뿐이며 미처리 0, `bash` 0이다. `docker-reverse-proxy-load-balancing.md`의 40줄 `nginx` fence는 R07의 실제 fenced 원문과 exact substring으로 일치하고 서로 다른 날짜·명령·출력을 합치지 않았다.
+- 보안·Git: Linux wiki 변경분에서 실제 account·email·repository URL·password·PAT·token·credential·one-time code 지표 0건이다. scoped `git diff --check`를 통과했고 `raw/KoreaICT/5. Linux`의 status/diff는 0건이다. Linux 범위 밖 기존 Python raw 변경은 보존했고 Git commit·push는 수행하지 않았다.
 
 ## 실행 세션 공통 완료 게이트
 

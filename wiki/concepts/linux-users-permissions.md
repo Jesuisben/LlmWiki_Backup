@@ -1,7 +1,7 @@
 ---
 title: Linux 사용자·그룹·권한
 created: 2026-07-02
-updated: 2026-07-16
+updated: 2026-07-18
 type: concept
 tags: [linux, backend]
 sources:
@@ -178,6 +178,8 @@ directory의 `x`는 “directory 실행”이 아니라 **경로 통과(search/t
 - [[summaries/2026-04-23-linux-files-vi|04-23 파일·vi]]
 - [[summaries/2026-04-27-linux-archive-java-alias|04-27 압축·Java·웹서버]]
 - [[summaries/2026-05-06-linux-subject-review|Linux 총정리]]
+- [[comparisons/sudo-vs-sudo-su-vs-root-session|sudo vs sudo su - vs root session]]
+- [[queries/why-sudo-created-directory-denies-normal-user|sudo로 만든 디렉터리의 권한 오류 진단]]
 - [[entities/linux|Linux]]
 - [[concepts/linux-spring-boot-server-deploy|Linux에서 Spring Boot 서버 실행]]
 

@@ -1,7 +1,7 @@
 ---
 title: LLM Wiki 내용 재고도화 작업 계획
 created: 2026-07-15
-updated: 2026-07-15
+updated: 2026-07-18
 type: meta
 tags: [curriculum, study-log]
 sources:
@@ -185,6 +185,7 @@ confidence: high
 | 2026-07-15 | 3 | UI&UX | 기존 21개 전수 부분 보강, 신규/query 0개, `<alt>`·POST 보안·축약/합성 코드·직접 구현/후속 React·Spring 경계 교정 | raw 96/96 재고·대응표 21행, HTML/CSS/JavaScript fence 37/37 원문 연속 코드 대조, summary/concept/entity/comparison 내용 게이트 통과 | 전체 262페이지·source 908건·위키링크 2,031건, frontmatter·source·태그·링크·index·diff 오류 0, UI&UX raw status/diff 0 | 완료 / 다음은 4. FrontEnd_BackEnd |
 | 2026-07-15 | 3 보강 | UI&UX 비동기 감사 반영 | 병렬 summary·concept·entity/comparison 감사 3계통을 완료본과 재대조해 기존 21개를 추가 보정하고 `html-form-controls-submission`, `ui-vs-ux`, `custom-css-vs-bootstrap` 3개 신설 | raw 96/96, UI&UX 지식 페이지 24개, HTML/CSS/JavaScript fence 39/39, 날짜 노트/교육 artifact 버전 차이와 직접 UI&UX/후속 React·Spring 경계 고정점 통과 | 전체 265페이지·source 974건·위키링크 1,801건, frontmatter·source·태그·링크·index·diff 오류 0, UI&UX raw status/diff 0 | 최종 완료 / 다음은 4. FrontEnd_BackEnd |
 | 2026-07-16 | 4 | FrontEnd_BackEnd | 세션 2~15에서 기존 지식 페이지를 고도화하고 Query 2개를 신설한 뒤 세션 16에서 59개 전체 고정점 QA, JPQL/SQL fence 2개 원문 교정, 신규 Query·Comparison 역링크 보강 | R01~R19 19/19·22,838행, P01~P10 10/10 텍스트 추출, I01~I05 5/5 실제 artifact 대응; JWT/인가·Cart/Order·검색 실행 미확정·후속 과목 경계 재검증 | 59개 frontmatter·source·태그·링크·index·고립·placeholder 오류 0, code fence 2/2 원문 일치, Total pages 269 유지 | 최종 완료 / 단계 5 Linux는 시작하지 않음 |
+| 2026-07-18 | 5 | Linux | 세션 2~9에서 Summary·Concept·Entity·Comparison·Query를 고도화하고 신규 Concept 2·Comparison 1·Query 1개를 신설한 뒤 세션 10에서 39개 전체 고정점과 신규 페이지 역링크를 최종 보정 | R01~R11 11/11 직접 source 대응, P01~P10·I01~I03 10/10·3/3 inventory 대응, 최초 등장·artifact·오류·완료 조건·AWS/CI/CD 후속 경계 재검증 | frontmatter·source·tag·link·index·고립·placeholder 오류 0, `nginx` fence 1/1 exact 원문 일치·`bash` 0, Total pages 274, raw Linux 무변경·scoped diff 통과 | 최종 완료 / 다음은 6. AWS 실용형 첫 세션 |
 
 ## 단계 1 Java 완료 상세
 

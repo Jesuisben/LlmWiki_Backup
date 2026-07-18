@@ -13,6 +13,26 @@
 
 ## 현재 로그
 
+## [2026-07-18] lint | Linux 과목 전체 고정점 완료
+
+- 범위: 단계 5 Linux 세션 10으로 직접 source 지식 페이지 39개, 후속 경계 15개, raw R01~R11·P01~P10·I01~I03, 신규 페이지·중요 허브·code fence를 전수 검증했다. AWS 단계 6은 시작하지 않았다.
+- 세션 9 재확인: patch 경고 대상 기존 6개는 실제 본문·Git diff·신규 2개·index·log·inventory를 상호 대조해 보강 내용이 모두 반영됐음을 확인했다. 경고 문구를 미수정 근거로 사용하지 않았다.
+- 직접 페이지·raw 대응: 디렉터리 기준 `summary 11 / concept 15 / entity 6 / comparison 6 / query 1`, frontmatter type 기준 `summary 11 / concept 14 / entity 6 / comparison 7 / query 1`로 총 39개다. R01~R11은 실제 경로·직접 source union·대표 artifact 대응 11/11, P01~P10·I01~I03 inventory 대응은 10/10·3/3이다.
+- 최소 교정: 신규 sudo/root Comparison과 permission Query가 상호 링크에만 의존하지 않도록 04-24·04-27 Summary, Linux 권한 Concept, Linux Entity에 관련 링크 8개를 보강했다. 그 밖의 세션 2~9 본문과 후속 경계 15개는 다시 쓰지 않았다.
+- 구조·내용: 필수 frontmatter·type·status·confidence·허용 tag·source 실경로·깨진 링크·고립·index 누락·등록 중복·actionable placeholder·needs-review/low-confidence 오류 0건이다. 실제 page 수와 index 등록은 274/274로 일치해 `wiki/index.md`는 수정하지 않았다. 200줄 초과 지식 페이지는 0개이며 장문 inventory는 대응표·실행 이력 보존 때문에 유지했다.
+- fence·보안: 직접 39개 전체 fence는 R07 exact 원문과 일치하는 `nginx` 1개뿐이며 미처리 0·`bash` 0이다. Linux wiki 변경분의 실제 account·email·repository URL·password·PAT·token·credential·one-time code 노출 지표는 0건이다.
+- Git·상태: scoped `git diff --check`를 통과했고 `raw/KoreaICT/5. Linux` status/diff는 0건이다. Linux 범위 밖 기존 Python raw 변경은 보존했으며 Git commit·push는 하지 않았다. 단계 5 Linux를 최종 완료로 기록하고 다음 실행 단위를 단계 6 AWS 실용형 첫 세션으로만 남겼다.
+
+## [2026-07-18] update | Linux 최종 Comparison/Query 고도화
+
+- 범위: 단계 5 Linux 세션 9로 기존 Comparison `dockerfile-vs-compose`, `docker-commit-vs-dockerfile`, `docker-cp-vs-bind-mount-vs-volume`, `git-fetch-vs-pull-vs-clone`, `host-port-forwarding-vs-docker-port-mapping`, `virtual-machine-vs-docker-container` 6개를 고도화했다. `dockerfile-vs-compose`의 위치/type 불일치는 이동하지 않고 내용만 보강했다.
+- Docker·실행 계층: R06~R08 날짜 MD를 최우선 근거로 commit snapshot/Dockerfile recipe/Compose runtime, cp/bind/volume, VM guest/Docker host/container, VirtualBox NAT·guest iptables/UFW/Docker publish의 선택 상황·함께 쓰는 관계·artifact·오류·완료 조건을 분리했다. P02~P03·P08은 전사된 이론·화면 절차와 registry naming 보조로만 사용했다.
+- Git: R09의 새 local clone·remote 변경 pull과 R10의 fetch→remote-tracking→local branch를 분리했다. 기존 placeholder repository URL과 서로 떨어진 세 명령을 합친 `bash` fence 1개를 제거해 수업 원문 한 실행 묶음처럼 보이지 않게 했다.
+- 신규 후보: `sudo vs sudo su - vs root session`은 R01·R03~R05·R08의 반복 관리자 작업과 R03의 명시적 “꼭 root?” 혼동 때문에 Comparison으로 생성했다. `sudo로 만든 디렉터리는 왜 일반 사용자로 수정·복사할 수 없는가`는 R03 `touch`와 R04 drag-and-drop의 반복 오류를 종합하는 독립 troubleshooting 가치가 있어 Query로 생성했다.
+- provenance·보안: R01·R03~R11 주 근거와 P02~P04·P08 역할을 8개 page claim에 필요한 범위로 대응했다. 세션 9 대상 fence는 최종 `0 / 원문 검증 0 / 수동 예외 0 / 실패 0`, `bash` 0개이며 Linux 직접 페이지의 미처리 fence도 0개다. 실제 account·email·repository URL·password·PAT·token·credential 재노출은 0건이다.
+- 기록·상태: 신규 2개와 실제 설명 변경을 index에 반영하고 Total pages를 274로 재계산했다. Linux 직접 source 지식 페이지는 세션 5 신규 Concept의 과거 집계 누락을 바로잡아 39개로 확정했고, inventory의 세션 9 결과·후보 판정·fence 잔여를 갱신했다. `raw/KoreaICT/5. Linux`는 수정하지 않았다.
+- 단계 상태: 단계 5 Linux는 미완료다. 세션 10 전체 고정점, 상위 계획의 단계 5 완료 기록, 단계 6 AWS, Git commit·push를 시작하지 않았다.
+
 ## [2026-07-16] update | Linux Git·GitHub Entity/Concept 고도화
 
 - 범위: 단계 5 Linux 세션 8로 기존 `git-github-collaboration`, `git`, `github`, `source-tree` 4개를 고도화했다. 신규 지식 페이지는 만들지 않았고 Summary·Comparison·Query·Docker 관련 페이지·sudo/root·permission 후보는 수정하지 않았다.

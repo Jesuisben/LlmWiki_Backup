@@ -1,7 +1,7 @@
 ---
 title: Linux
 created: 2026-07-02
-updated: 2026-07-16
+updated: 2026-07-18
 type: entity
 tags: [linux]
 sources:
@@ -151,6 +151,8 @@ AWS EC2는 Linux instance이지만 VPC·Subnet·Public IP·Key Pair·Security Gr
 - [[concepts/linux-process-service-port-firewall|Linux process·service·port·firewall 진단]]
 - [[concepts/linux-web-server-apache-nginx|Linux Apache/Nginx 웹서버]]
 - [[concepts/linux-spring-boot-server-deploy|Linux에서 Spring Boot 서버 실행]]
+- [[comparisons/sudo-vs-sudo-su-vs-root-session|sudo vs sudo su - vs root session]]
+- [[queries/why-sudo-created-directory-denies-normal-user|sudo로 만든 디렉터리의 권한 오류 진단]]
 - [[comparisons/virtual-machine-vs-docker-container|가상 머신(VM) vs Docker 컨테이너]]
 - [[entities/maven|Maven]]
 - [[entities/docker|Docker]]
