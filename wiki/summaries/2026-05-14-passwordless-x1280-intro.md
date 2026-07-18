@@ -1,12 +1,13 @@
 ---
 title: 2026-05-14 Passwordless X1280 소개와 보안 배경
 created: 2026-07-03
-updated: 2026-07-13
+updated: 2026-07-18
 type: summary
 tags: [auth, backend, project, curriculum]
 sources:
   - raw/KoreaICT/8. Passwordless/2026.05.14(목) - 시작/2026.05.14(목) - 시작.md
   - raw/KoreaICT/8. Passwordless/교육 자료/Passwordless 강의자료_X1280 기술 소개 및 제품소개_20260514.pdf
+  - raw/KoreaICT/8. Passwordless/교육 자료/QPM 기본 기능 및 사용법 안내서_교육용_251209.pdf
 status: growing
 confidence: high
 ---
@@ -15,46 +16,47 @@ confidence: high
 
 ## 한 줄 요약
 
-피싱·랜섬웨어·원격 코드 실행 같은 공격이 “사용자 입력값 탈취”와 “이미 침투한 환경”을 전제로 발전한다는 배경에서, ITU-T X.1280 Passwordless가 왜 비밀번호 입력을 없애고 상호 인증을 강조하는지 배운 날이다.
+피싱·랜섬웨어·원격 코드 실행(RCE)·DDoS에서 출발해, 이미 침투했을 가능성을 전제로 하는 Zero Trust와 비밀번호 입력면을 줄이는 X1280 Passwordless의 필요성을 배운 날이다.
+
+## 왜 이 순서로 배웠는가
+
+도구 설치보다 먼저 공격자가 무엇을 노리는지 살폈다. 피싱은 사용자를 속여 입력값을 빼앗고, 랜섬웨어는 침투한 환경의 데이터를 암호화하며, RCE는 로그인 절차 자체를 우회할 수 있다. 따라서 “비밀번호를 더 복잡하게 만든다”만으로는 부족하고, 사용자가 접속 대상과 요청을 별도 인증기에서 확인하는 구조가 필요하다는 문제의식으로 X1280을 소개했다.
 
 ## 배운 내용
 
-- 주요 사이버 공격을 피싱, 멀웨어/랜섬웨어, 소프트웨어 취약점/RCE, DDoS로 나눠 보았다.
-- 기존 보안의 약점은 사용자가 ID/PW 같은 credential을 직접 입력한다는 점이다.
-- [[concepts/passwordless-x1280-auth-flow|Passwordless X1280 인증 흐름]]은 “사용자가 입력해서 증명하는 방식”을 줄이고, 온라인 시스템과 사용자 단말/앱이 서로 확인하는 구조로 바꾼다.
-- 인증은 신원인증, 계정인증, 연합인증으로 나눠 볼 수 있고, X1280은 주로 계정 로그인 영역의 비밀번호 대체·강화 기술로 등장했다.
-- 이 날짜에는 X1280의 개념과 보안 배경을 다뤘다. Members 서비스 등록, Docker 설치, Spring 연동은 다음 날짜의 실습이다.
-- FIDO/Passkey처럼 단말 내 센서를 쓰는 대역내 인증과 달리, 수업에서는 X1280을 스마트폰 앱 승인 기반의 대역외 인증으로 소개했다. 이는 수업에서의 비교 설명이며, 제품 일반화로 확대하지 않는다.
+- 피싱, 멀웨어·랜섬웨어, 소프트웨어 취약점·RCE, DDoS의 공격 지점이 서로 다르다는 점을 구분했다.
+- Zero Trust는 내부 PC나 서버도 이미 공격받았을 수 있다고 가정하고 계속 검증하는 관점으로 배웠다.
+- Passwordless는 인증을 없애는 것이 아니라 사용자가 브라우저에 비밀번호를 입력하는 단계를 줄이고 다른 인증 요소와 승인 절차로 신원을 확인하는 방식이다.
+- 수업에서는 X1280을 스마트폰 앱에서 요청 출처와 내용을 확인하는 대역외(Out-of-Band) 인증 흐름으로 설명했다.
+- 인증을 신원인증·계정인증·연합인증으로 나눴고, IDP·SSO·RADIUS·FIDO·Passkey·QR Password Manager는 인접 용어로 소개했다. 제품 일반 기능이나 상호 호환을 직접 실습한 날은 아니다.
 
-## 핵심 개념
+## 수업 예시와 결과 경계
 
-- [[concepts/passwordless-x1280-auth-flow|Passwordless X1280 인증 흐름]]
-- [[comparisons/passwordless-vs-password-login|Passwordless 로그인 vs 비밀번호 로그인]]
-- [[concepts/passwordless-qr-app-approval|Passwordless QR/앱 승인 흐름]]
-- [[entities/passwordless-x1280|Passwordless X1280]]
+개념 예시는 사용자 ID 입력 → 서비스가 인증 요청 생성 → 모바일 인증기가 요청 출처와 내용을 표시 → 사용자가 승인 → 서비스가 결과를 확인하는 흐름이었다. 이 흐름은 [[concepts/passwordless-x1280-auth-flow|Passwordless X1280 인증 흐름]]의 배경 설명이며, 이날 원본에는 X1280 서버 설치 명령·설정 파일·API 요청·응답·화면 성공 결과가 없다.
 
-## 실습 / 예제
-
-수업의 핵심 예시는 “아이디를 입력하면 서버/서비스가 사용자에게 인증번호나 승인 요청을 제시하고, 사용자는 모바일 앱에서 요청이 맞는지 확인한다”는 흐름이다. 즉 사용자가 비밀번호를 브라우저에 입력하는 대신, 스마트폰 앱에서 요청 출처와 인증 내용을 확인해 승인한다.
-
-```text
-기존 로그인: 사용자가 ID/PW 입력 → 서버가 값 검증
-Passwordless: 사용자가 ID 입력 → 서버/인증 서버가 요청 생성 → 앱에서 요청 확인/승인 → 서버가 결과 검증
-```
+교육 PDF와 QPM 안내서는 제품 개념과 화면 절차를 보조하는 교육 입력자료다. 날짜 원본의 직접 실행 결과를 대신하지 않는다.
 
 ## 헷갈린 점 / 질문
 
-- Passwordless는 “인증이 없는 것”이 아니라 “비밀번호 입력이 없는 인증”이다.
-- OTP는 사용자가 일회용 값을 다시 입력하지만, X1280 수업 흐름에서는 앱 승인과 상호 인증으로 입력 탈취면을 줄이는 점이 강조됐다.
-- Zero Trust 관점에서는 내 PC가 이미 악성코드에 감염되어 있을 수 있다고 가정하고, 입력값 탈취에 기대지 않는 인증 방식을 고민한다.
+- **Passwordless = 인증 없음:** 아니다. 비밀번호 입력 대신 인증기 소지·앱 승인·서버 검증이 남는다.
+- **OTP와 앱 승인:** OTP는 사용자가 일회용 값을 다시 입력하는 방식이 일반적이고, 수업의 X1280 흐름은 앱에서 요청을 확인·승인하는 점을 강조했다.
+- **Passwordless면 RCE·랜섬웨어도 해결:** 아니다. 계정 인증 공격면을 줄일 뿐, 서버 취약점과 저장 데이터 보호는 별도 계층이다. 05-20에는 이 경계를 [[concepts/nas-worm-storage-protection|NAS·WORM 저장소 보호]]로 확장한다.
+
+## 이전·다음 연결
+
+- 선행: [[summaries/2026-04-06-login-jwt-session-cookie|2026-04-06 Cookie·Session·JWT 이론과 로그인 토큰 생성]]과 [[summaries/2026-04-07-member-api-string-token|2026-04-07 Bearer token과 Spring Security JWT 인증 흐름]]은 비밀번호 기반 로그인과 로그인 상태 전달을 구현했다.
+- 다음: [[summaries/2026-05-15-passwordless-x1280-docker-service|2026-05-15 Passwordless X1280 Docker 통합 서버와 서비스 등록]]에서 서비스 등록과 서버 구성 절차로 이동한다.
+- 후속: 중간 프로젝트 적용 설계는 단계 9의 [[summaries/2026-05-middle-project-cicd-passwordless-guide|중간 프로젝트 CI/CD·배포·Passwordless 가이드]] 범위다.
 
 ## 관련 페이지
 
-- [[summaries/2026-04-06-login-jwt-session-cookie|2026-04-06 로그인, JWT, 세션과 쿠키]]
-- [[summaries/2026-05-middle-project-cicd-passwordless-guide|중간 프로젝트 CI/CD·배포·Passwordless 가이드]]
-- [[concepts/jwt-session-cookie-auth|JWT, 세션, 쿠키 인증]]
+- [[entities/passwordless-x1280|Passwordless X1280]]
+- [[comparisons/passwordless-vs-password-login|Passwordless 로그인 vs 비밀번호 로그인]]
+- [[comparisons/authentication-vs-authorization|인증(Authentication) vs 인가(Authorization)]]
+- [[summaries/2026-05-21-passwordless-subject-review|Passwordless 총정리]]
 
 ## 출처
 
 - `raw/KoreaICT/8. Passwordless/2026.05.14(목) - 시작/2026.05.14(목) - 시작.md`
 - `raw/KoreaICT/8. Passwordless/교육 자료/Passwordless 강의자료_X1280 기술 소개 및 제품소개_20260514.pdf`
+- `raw/KoreaICT/8. Passwordless/교육 자료/QPM 기본 기능 및 사용법 안내서_교육용_251209.pdf`

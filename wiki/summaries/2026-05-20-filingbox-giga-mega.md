@@ -1,7 +1,7 @@
 ---
 title: 2026-05-20 FilingBox GIGA/MEGA와 WORM 스토리지
 created: 2026-07-03
-updated: 2026-07-13
+updated: 2026-07-18
 type: summary
 tags: [auth, linux, project, curriculum]
 sources:
@@ -18,47 +18,54 @@ confidence: high
 
 ## 한 줄 요약
 
-랜섬웨어 대응 관점에서 NAS, WORM, 읽기전용/추가전용/읽기쓰기 폴더 모드를 배우고, FilingBox GIGA/MEGA를 VM으로 구성해 네트워크 드라이브와 저장소 보호 흐름을 실습한 날이다.
+강한 로그인 인증만으로는 랜섬웨어 이후의 파일 변조를 막을 수 없다는 경계에서, NAS·WORM과 FilingBox GIGA/MEGA의 사용자·장치·공유 저장소 보호 절차를 배운 날이다.
+
+## 왜 이 순서로 배웠는가
+
+05-19까지는 “누가 접속하는가”와 조직 인증을 다뤘다. 이날은 인증된 계정이나 PC가 침해된 뒤에도 “어떤 데이터를 어떻게 쓰고 바꿀 수 있는가”가 남는다는 문제로 이동했다. 그래서 NAS·WORM·랜섬웨어 개념을 먼저 배우고 저장소와 client를 구성했다.
 
 ## 배운 내용
 
-- NAS는 네트워크를 통해 접근하는 저장 공간이며, 일반 클라우드 웹하드와는 운영·보호 관점이 다르다.
-- WORM(Write Once Read Many)은 한 번 기록한 뒤 임의 수정/삭제를 제한해 원본성과 보존성을 높이는 방식이다.
-- 랜섬웨어는 파일을 암호화해 사용할 수 없게 만들고 금전을 요구하므로, 저장소 모드와 접근 권한 설계가 중요하다.
-- FilingBox GIGA 실습에서는 관리자 계정, 사용자, 그룹, 공유 폴더, 폴더 모드(RO/RW/AO/WORM)를 설정했다.
-- MEGA 실습에서는 장치 관리자, MAC/IP 등록, Windows Client 설치처럼 endpoint/장치 관리에 가까운 흐름을 다뤘다.
+- NAS는 network를 통해 여러 client가 접근하는 저장소이며, browser 기반 cloud drive와 같은 사용 방식으로만 이해하면 안 된다.
+- WORM은 기록 후 임의 수정·삭제를 제한해 보존성과 원본성을 높이는 정책이다.
+- GIGA에서는 OVA 기반 server, 관리자 계정, group·user, 공유 folder와 RO/RW/AO/WORM mode를 설정했다.
+- Windows network drive를 연결하고 개인·공유 folder 접근 절차를 살폈다.
+- GIGA 저장 공간 확장 절차에서 disk·partition·LVM·filesystem 계층을 순서대로 다뤘다.
+- MEGA에서는 장치 관리자, client 장치 정보, Windows Client 설치처럼 endpoint 관리에 가까운 절차를 배웠다.
 
-## 핵심 개념
+## 저장 mode 구분
 
-- [[concepts/nas-worm-storage-protection|NAS·WORM 저장소 보호]]
-- [[summaries/2026-05-19-aam-ape-authentication-filingbox|2026-05-19 인증 기본과 AAM/APE 통합 설치]]
-- [[concepts/linux-users-permissions|Linux 사용자·그룹·권한]]
+| mode | 핵심 의미 | 판단 기준 |
+|---|---|---|
+| RO | 읽기 전용 | 기존 자료를 열람만 시킬 때 |
+| RW | 읽기·쓰기 | 일반 협업처럼 수정이 필요할 때 |
+| AO | 추가 전용 | 기존 기록을 바꾸지 않고 새 기록만 쌓을 때 |
+| WORM | 기록 후 변경 제한 | 보존 기간과 원본성 요구가 있을 때 |
 
-## 실습 / 예제
+## 직접 보존된 결과와 미보존 결과
 
-```text
-FilingBox GIGA OVA import
-→ 서버 IP 확인 및 관리자 페이지 접속
-→ 라이선스 적용
-→ 관리자 계정/사용자/그룹 생성
-→ 공유 폴더와 모드 설정
-→ Windows 네트워크 드라이브 연결
-→ 용량 확장 시 LVM/파일시스템 확장 확인
-```
+원본에는 OVA import, server IP 확인, 관리자 화면 접근, 계정·group·공유 folder·mode 입력, network drive 연결, 용량 확장 명령, MEGA client 설치 순서가 보존돼 있다. 그러나 각 folder mode의 실제 쓰기·수정·삭제 거부 결과, network drive 화면, LVM 확장 전후 용량 출력, MEGA client 연결 성공을 독립 결과로 보여주는 response나 screenshot은 없다.
 
-GIGA 실습은 사용자·그룹·공유 폴더와 RO/RW/AO/WORM 모드를 설정한 뒤 Windows 네트워크 드라이브로 접근하는 흐름이었다. MEGA는 장치 관리자, MAC/IP 등록, Windows Client 연결을 중심으로 다뤘다. 두 제품을 X1280 인증 서버의 구성 요소로 쓰지 않고, 인증 이후의 데이터 보존·접근 제어 계층으로 구분한다.
+교육 PDF는 제품별 hands-on 절차와 개념을 보조한다. 교육자료의 화면을 사용자의 실제 환경 성공 증거로 계산하지 않는다.
 
 ## 헷갈린 점 / 질문
 
-- WORM은 단순 “읽기전용”과 다르다. 이미 기록된 데이터의 변경 가능성을 줄이는 보존 정책에 가깝다.
-- RO/RW/AO/WORM 같은 모드는 인증 자체보다 인증 이후의 권한·저장소 보호 정책에 가깝다.
-- 이 날짜의 내용은 Passwordless 로그인 구현보다는 보안 제품군과 랜섬웨어 대응 저장소 보호 관점으로 연결된다.
+- WORM은 처음부터 아무것도 쓸 수 없는 RO와 다르다. 핵심은 기록 이후 변경을 제한하는 보존 정책이다.
+- storage mode는 사용자 인증이 성공했는지가 아니라 인증 이후 허용할 data operation을 결정한다.
+- GIGA/MEGA는 X1280 Auth Server의 하위 server가 아니다. 같은 보안 과목에서 data 보호를 다룬 별도 제품군이다.
+- LVM 명령을 실행했다는 사실과 실제 filesystem 용량 증가 확인은 다른 완료 조건이다.
+
+## 이전·다음 연결
+
+- 이전: [[summaries/2026-05-19-aam-ape-authentication-filingbox|05-19 AAM/APE]]의 조직 사용자·인증기 관리.
+- 다음: [[summaries/2026-05-21-passwordless-x1280-rest-api|05-21 X1280 REST API]]에서 다시 인증 서버의 요청·응답 검증으로 돌아간다.
+- 선행 기반: [[concepts/linux-users-permissions|Linux 사용자·그룹·권한]]과 [[concepts/linux-cli-files|Linux CLI와 파일 시스템]].
 
 ## 관련 페이지
 
-- [[summaries/2026-05-14-passwordless-x1280-intro|2026-05-14 Passwordless X1280 소개와 보안 배경]]
-- [[concepts/linux-cli-files|Linux CLI와 파일 시스템]]
-- [[concepts/linux-users-permissions|Linux 사용자·그룹·권한]]
+- [[concepts/nas-worm-storage-protection|NAS·WORM 저장소 보호]]
+- [[comparisons/authentication-vs-authorization|인증(Authentication) vs 인가(Authorization)]]
+- [[summaries/2026-05-21-passwordless-subject-review|Passwordless 총정리]]
 
 ## 출처
 

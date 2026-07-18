@@ -13,6 +13,69 @@
 
 ## 현재 로그
 
+## [2026-07-18] update | Passwordless 실용형 세션 1 전수 재고·핵심 지식 고도화
+
+- 범위: 단계 8 Passwordless 첫 실행 단위로 `raw/KoreaICT/8. Passwordless` 20개를 R01~R07·P01~P11·J01~J02에 전수 대응하고, frontmatter source 기준 직접 지식 페이지를 최종 `summary 7 / concept 4 / entity 2 / comparison 2 / query 0`, 총 15개로 재계산했다. 단계 9 중간 프로젝트 본문은 시작하지 않았다.
+- raw 재고: 날짜 MD 6·총정리 MD 1·PDF 11·Postman JSON 2, 총 39,906,657 bytes·Markdown 2,190줄·0바이트 0개·과목 내부 중복 0개다. image·archive·독립 실행 artifact와 독립 Java/properties/YAML/XML/shell/SQL source는 0개이며 PDF 11개는 모두 text 추출 가능했다.
+- 내용 고도화: 기존 Summary 6·Concept 4·Entity 2를 전면 고도화하고 `Passwordless 총정리` Summary를 신설했다. Summary는 날짜 순서와 직접 결과/미보존 결과, Concept는 구성요소·상태·완료 조건, Entity는 첫 등장·학습 이력과 제품 경계를 소유하도록 분리했다.
+- 결과 경계: 05-14 실행 결과 0, 05-15 일부 상태·plugin 성공 관찰, 05-18 DB 결과·등록/로그인/해제 관찰과 미보존 단계별 API/화면, 05-19 일부 service 상태·사용자 전달 확인 서술, 05-20 설정·명령만 보존, 05-21 등록 여부 JSON 한 건 직접으로 고정했다. 교육 PDF와 완성형 Postman saved response는 사용자 실행 결과로 세지 않았다.
+- fence·보안: 시작 직접 14페이지 fence 11개 중 합성·비연속 text diagram 10개를 prose/table로 바꾸고, 05-21 raw와 연속 일치하는 JSON 1개만 유지했다. `bash`는 0개다. 실제 account·contact·domain·IP·endpoint·organization·service/license/key/token/password/DB/X1280·AAM·APE 식별값은 wiki와 기록에 옮기지 않았다.
+- 기록·단계 상태: [[_meta/passwordless-rehighquality-inventory-plan|Passwordless 내용 재고도화 전수 재고와 실용형 실행 계획]]을 생성하고 index에 총정리 Summary·Meta를 등록해 실제 page 수와 `Total pages`를 278로 맞췄다. 신규 Comparison·Query는 만들지 않았고 후보만 inventory에 남겼다. 단계 8 전체 완료 행은 상위 계획에 추가하지 않았다.
+- 검증·raw/Git: 직접 15페이지 전수 분류·raw source union 20/20, frontmatter/source/body/tag/link/index/orphan/placeholder/empty/low-confidence·fence·민감정보·날짜/과목 경계·actual page count 검사를 통과했고 scoped `git diff --check`도 통과했다. Passwordless raw scoped status/diff는 시작·종료 모두 0건이며 정렬된 20개 SHA-256 manifest digest는 시작·종료 모두 `88645aa40d8e3a533ee916009e999a6c32de4eb49dbb0f103812f93f9ec0fd90`이다.
+
+## [2026-07-18] fix | CI/CD 세션 2 비동기 감사 후속 교정
+
+- 독립 Comparison·날짜/Query 감사 결과를 완료본과 다시 대조했다. 구조 감사는 직접 19페이지·fence 3개·source/link/index에서 오류 0건을 재확인했다.
+- 05-13 S3 첫 실패→policy 수정→재시도 성공·bucket object 확인은 원본 메모에 보존된 실행 관찰 서술이지만 listing·API 응답·screenshot은 없다. 이를 1차 결과처럼 읽히게 하던 Summary·Concept·Entity·inventory 표현을 교정했다.
+- 05-11 workflow의 `-DskipTests`가 테스트 성공이 아니라 테스트를 생략한 Maven package 절차임을 Summary와 GitHub Actions Concept에 명시했다.
+- Comparison 감사의 S3/RDS·CI/CD/Terraform 신설 권고는 기존 페이지가 역할·검증 경계를 이미 소유하고 반복 혼동 근거가 부족해 채택하지 않았다. `clb-vs-alb` 흡수 권고도 P04 일반 이론 출처·직접 근거 축소·`confidence: medium`으로 독립 비교 책임을 제한해 유지했다. Query 0개 판단은 감사와 일치했다.
+- 후속 교정 뒤 직접 페이지 구조·출처·fence·민감정보·page count·scoped diff와 raw manifest를 다시 검증했다. 단계 7 완료 상태는 유지하며 단계 8은 시작하지 않았다.
+
+## [2026-07-18] lint | CI/CD 실용형 세션 2 전체 고정점·단계 7 완료
+
+- 범위: 단계 7 CI/CD 두 번째이자 최종 실행 단위로 `clb-vs-alb` 최종 고도화, Comparison·Query 후보 판단, frontmatter source 기준 직접 19페이지와 R01~R04·P01~P04 전체 고정점을 처리했다. 단계 8 Passwordless 본문은 시작하지 않았다.
+- Comparison·Query: `clb-vs-alb`는 CLB 예정 항목/ALB 구성 절차/일반 기능/미보존 결과를 분리해 유지했다. Route 53/ALB, S3/RDS, CI/CD/Terraform 및 세부 후보는 기존 페이지가 검색 책임을 흡수해 신규 생성하지 않았다. 실제 장애 질문·해결 이력이 완전히 보존되지 않아 Query도 0개를 유지했다.
+- 내용·경계: 05-11 Docker group/version·container `Up`·80→9000 mapping, 05-12 절차만 보존, 05-13 Terraform version·apply 오류·S3 재시도 성공을 직접 결과로 고정했다. Actions/JAR/image/SSH/browser, DNS/ACM/target/ALB/삭제, 최종 Terraform apply/destroy·독립 artifact·RDS query 결과는 미보존이다.
+- 구조·fence·보안: 직접 페이지는 `summary 3 / concept 9 / entity 6 / comparison 1 / query 0`, 총 19개이며 R01~R04·P01~P04 source union 8/8이다. frontmatter·source 실경로·본문 출처 동기화·tag·link·index·고립·placeholder·빈 sources·장문·needs-review/low-confidence 오류 0개, YAML 1·XML 2 fence 3/3 원문 연속 일치, `bash` 0개, 민감정보 노출 지표 0개다.
+- 고정점: 실제 page 수와 index `Total pages`는 276/276이다. CI/CD raw는 시작/종료 scoped status·diff 0건이고 정렬된 8개 SHA-256 manifest digest `c1facebda686016a17322d4d65c09c40ab880b968d032189a5fac2c92ceceff1`가 동일하다. scoped `git diff --check`를 통과했고 commit·push는 하지 않았다.
+- 단계 상태: 단계 7 CI/CD를 최종 완료로 확정했다. 다음 작업 단위는 단계 8 Passwordless 실용형 첫 세션이며 이 세션에서는 시작하지 않았다.
+
+## [2026-07-18] update | CI/CD 실용형 세션 1 전수 재고·핵심 지식 고도화
+
+- 범위: 단계 7 CI/CD 첫 실행 단위로 `raw/KoreaICT/7. Ci&CD` 8개를 R01~R04·P01~P04에 전수 대응하고, frontmatter source 기준 직접 지식 페이지 19개를 `summary 3 / concept 9 / entity 6 / comparison 1 / query 0`으로 재계산했다. 단계 8 Passwordless 본문은 시작하지 않았다.
+- raw 재고: 날짜 MD 3·총정리 MD 1·PDF 4, 총 23,226,472 bytes·Markdown 1,466줄·0바이트 0개·과목 내부 중복 0개다. P04는 AWS 과목의 동일 교안과 byte-identical이다. 독립 source/config/script와 image/artifact는 0개다.
+- 내용 고도화: Summary 3·Concept 9·Entity 6에서 05-11 workflow/명령과 보존된 Docker/container 결과, 05-12 DNS·ACM·ALB 절차와 미보존 결과, 05-13 Terraform version·apply 오류·S3 재시도 성공·RDS query 미보존을 분리했다. Linux 선행, AWS 05-06~08 직접, CI/CD 직접, Passwordless·중간 프로젝트 후속 책임을 분리했다.
+- fence·보안: 직접 페이지의 시작 fence 18개 중 비연속 축약·합성 diagram/config/workflow 15개를 prose/table로 바꾸고, 원본 연속 YAML 1·XML 2만 유지했다. 최종 3/3 원문 일치·`bash` 0개다. 기존 `clb-vs-alb`는 최종 판단을 다음 세션에 남기되 실제 resource 이름과 접속 성공 과확정만 최소 교정했다. 실제 account·email·repository URL·IP·domain·endpoint·Key Pair/resource 이름·password·token·credential·AWS identifier 노출 지표는 0개다.
+- 구조 검증: 직접 19페이지의 frontmatter·source 실경로·허용 tag·링크·index·고립·placeholder·빈 sources·200줄 초과·needs-review/low-confidence 오류 0개다. 새 Meta를 index에 등록했고 실제 page 수와 `Total pages`는 276으로 일치한다.
+- raw/Git: 시작과 검증 시점의 CI/CD raw scoped status/diff는 0건이며, 8개 정렬 SHA-256 manifest digest는 `c1facebda686016a17322d4d65c09c40ab880b968d032189a5fac2c92ceceff1`로 동일하다. 변경 scope의 `git diff --check`를 통과했고 commit·push는 수행하지 않았다.
+- 기록: [[_meta/cicd-rehighquality-inventory-plan|CI/CD 내용 재고도화 전수 재고와 실용형 실행 계획]]을 생성했다. 신규 Comparison·Query는 만들지 않았으며 후보와 판단 근거만 inventory에 남겼다. 단계 7 전체 완료 행은 상위 계획에 추가하지 않았다.
+- 비동기 독립 감사 반영: 동시 수정 전 지적을 최신 본문과 재대조해 이미 해결된 Route 53·S3·RDS·05-12 항목을 확인하고, 남아 있던 AWS→Passwordless 무출처 확장과 CLB/ALB의 일반 기능·직접 근거 혼합을 교정했다. frontmatter에 선언한 `Ci&CD 총정리.md`가 본문 출처에서 빠진 13페이지도 동기화했다.
+
+## [2026-07-18] lint | AWS 실용형 세션 2 전체 고정점·단계 6 완료
+
+- 범위: 단계 6 AWS 두 번째이자 최종 실행 단위로 `ec2-vs-rds` 고도화, Query 최종 판단, 직접 source 지식 페이지 12개와 R01~R04·P01~P05, Linux 선행·CI/CD 05-11~13 후속 경계를 한 번에 검증했다. 단계 7 CI/CD 본문은 수정하지 않았다.
+- Comparison·Query: `ec2-vs-rds`를 EC2 process 실행/RDS data 계층, endpoint·3306·Security Group, 비용·삭제, 명령과 미보존 결과 중심으로 재구성했다. Multi-AZ·Read Replica는 05-08 직접 실습 결과가 아닌 일반 기능으로 분리했다. 독립 질문 기록이 없고 기존 Concept·Comparison이 혼동을 흡수하므로 AWS Query는 신규 **0개 유지**로 확정했다.
+- 내용·경계: 05-06 메뉴·이론, 05-07 VPC·EC2·EIP·SSH, 05-08 ICMP 성공과 Nginx·Spring·RDS/JDBC 절차를 재대조했다. 실제 출력이 없는 browser·build·DB query·application·삭제 결과를 성공으로 확대하지 않았고 Linux process/port와 CI/CD Actions·Route 53·ACM·ALB·Terraform·S3 책임을 분리했다.
+- 구조·보안: 직접 12페이지는 `summary 4 / concept 4 / entity 3 / comparison 1 / query 0`이며 frontmatter·source 실경로·허용 tag·링크·index·고립·placeholder·빈 sources·장문·needs-review/low-confidence 오류 0개다. fence·`bash`는 0개이며 실제 account·email·IP·endpoint·Key Pair/resource·DB 이름·password·token·credential·AWS identifier 노출 지표도 0개다.
+- 고정점: 실제 page 수와 index `Total pages`는 275/275다. AWS raw는 9개·23,952,751 bytes·MD 1,454줄이며 시작/종료 scoped status·diff 0건, 정렬된 SHA-256 manifest digest `b185d92d5866e27d1593681db97bbe8709059debdc3eef56527b5b220d51e2af` 무변경을 확인했다. AWS scoped `git diff --check`를 통과했고 commit·push는 하지 않았다.
+- 단계 상태: 단계 6 AWS를 최종 완료로 확정했다. 다음 작업 단위는 단계 7 CI/CD 실용형 첫 세션이며 이 세션에서는 시작하지 않았다.
+
+## [2026-07-18] update | AWS 실용형 세션 1 재고·핵심 지식 고도화
+
+- 범위: 단계 6 AWS 첫 실행 단위로 `raw/KoreaICT/6. AWS` 9개를 R01~R04·P01~P05로 전수 재고화하고, 직접 source 지식 페이지를 `summary 4 / concept 4 / entity 3 / comparison 1 / query 0`, 총 12개로 재계산했다. 단계 7 CI/CD 본문은 시작하지 않았다.
+- raw·대응: 날짜 MD 3개·AWS 총정리 1개·교육자료 MD 1개·PDF 4개를 실제 경로·쪽수·중복·역할과 대응했다. 과목 내부 byte-identical 중복은 0개이고 P04 PDF 1개만 CI/CD 교육자료와 동일하다. 교육자료는 이론·화면 절차 보조이며 날짜 MD에 없는 수업일·성공 결과를 만들지 않았다.
+- 핵심 고도화: 지정 Summary 4·Concept 4·Entity 3의 실제 내용 공백과 과확정만 교정했다. 05-06 메뉴·Subnet·IP/CIDR 사전 학습, 05-07 VPC·IGW·Route·SG·EC2·EIP·SSH, 05-08 ICMP·Nginx·Spring·RDS를 분리하고, 출력으로 확인된 ping 성공과 명령·설정만 남은 Nginx/browser·JAR·RDS SQL/JDBC·삭제 상태를 구분했다.
+- 경계·fence·보안: Linux의 VirtualBox·SSH·UFW·Nginx·JAR·iptables, AWS의 VPC·Subnet·IGW·Route·SG·EC2·EIP·RDS, CI/CD 05-11~13의 Actions·Route 53·ACM·Target Group·ALB·HTTPS·Terraform·S3 책임을 분리했다. 직접 페이지의 합성 fence 12개를 표·prose로 바꿔 최종 0개로 만들었고 실제 account·email·IP·endpoint·Key Pair/resource 이름·password·token·credential을 변경분에 옮기지 않았다.
+- 기록: `wiki/_meta/aws-rehighquality-inventory-plan.md`를 생성해 raw↔wiki 대응표·2개 세션 계획·다음 완료 게이트를 고정했다. 새 Meta 1개를 index에 등록하고 설명을 갱신했으며 실제 page count와 `Total pages`를 275/275로 맞췄다. 새 지식 페이지·Comparison·Query는 만들지 않았다.
+- 단계 상태: 세션 1의 재고와 핵심 Summary·Concept·Entity는 완료했다. 단계 6 AWS 전체와 상위 작업 계획 완료 행은 미완료이며, 다음 세션에서 `ec2-vs-rds`·Query 0개 유지 판단·직접 12페이지 전체 고정점을 한 번에 처리한다. Git commit·push는 하지 않았다.
+
+## [2026-07-18] fix | Linux 세션 10 비동기 감사 후속 교정
+
+- 비동기 Summary·Concept/Entity·Comparison/후속 경계 감사 3계통의 지적을 raw R06~R10·AWS 05-07~08·CI/CD 05-12와 직접 재대조했다. 1차 완료 보고를 최종 근거로 삼지 않고 실제 오류를 모두 교정한 뒤 고정점을 다시 실행했다.
+- 완료 상태: R06은 login→tag→push digest까지만 완료하고 remote pull/run은 올바른 명령만 존재함을 고정했다. R07은 container `Up`·DB row와 결과 미보존 Spring log/browser를, R08은 첫 Compose의 `Up`·DB 결과와 미보존 browser/down, WordPress 명령·volume 이름 불일치를 분리했다. R10의 닫히지 않은 `user.email` 명령은 정상 설정 완료로 확정하지 않았다.
+- 후속 경계·탐색: 05-07 VPC·EC2와 05-08 Nginx·Spring·RDS를 분리하고 ALB·Target Group·Route 53·ACM을 05-12 CI/CD 후속으로 귀속했다. CLB 예정 이름과 실제 ALB 생성 결과를 분리하고 Linux 직접 페이지↔05-07·05-08·05-12 Summary 링크를 보강했다. `dockerfile-vs-compose` index 등록은 파일 경로를 유지한 채 frontmatter type에 맞춰 Comparisons로 옮겼다.
+- 상태: 전체 구조·source·링크·page count·fence·민감정보·scoped diff·raw Linux 무변경 검증을 다시 통과한 뒤 단계 5 Linux 최종 완료를 확정했다. AWS 단계 6과 Git commit·push는 시작하지 않았다.
+
 ## [2026-07-18] lint | Linux 과목 전체 고정점 완료
 
 - 범위: 단계 5 Linux 세션 10으로 직접 source 지식 페이지 39개, 후속 경계 15개, raw R01~R11·P01~P10·I01~I03, 신규 페이지·중요 허브·code fence를 전수 검증했다. AWS 단계 6은 시작하지 않았다.

@@ -1,7 +1,7 @@
 ---
 title: GitHub Actions workflow
 created: 2026-07-03
-updated: 2026-07-13
+updated: 2026-07-18
 type: concept
 tags: [ci-cd, backend]
 sources:
@@ -24,31 +24,7 @@ GitHub Actions workflow는 GitHub 저장소 안의 `.github/workflows/*.yml` 파
 
 ## 핵심 구조
 
-```yaml
-name: Spring Boot CI
-
-on:
-  push:
-    branches:
-      - master
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout source
-        uses: actions/checkout@v4
-
-      - name: Set up JDK 21
-        uses: actions/setup-java@v4
-        with:
-          java-version: '21'
-          distribution: 'temurin'
-          cache: maven
-
-      - name: Build with Maven
-        run: mvn clean package -DskipTests
-```
+날짜 원본의 `ci.yml`은 `name`, `on.push.branches`, `jobs.build`, `runs-on`, `steps`, `uses`, `run`을 한 연속 단위로 보여 준다. 위키에서는 아래 표로 책임을 나누고, workflow 정의를 실제 runner 성공 결과와 구분한다.
 
 | 구성 | 의미 | 수업 예시 |
 |---|---|---|
@@ -81,6 +57,8 @@ Docker Hub나 EC2 배포 단계에서는 민감값이 필요하다. 이때 workf
 - 저장소 기본 브랜치가 `main`인데 YAML은 `master`로 되어 있으면 push해도 실행되지 않을 수 있다.
 - Secret 이름은 대소문자와 철자가 정확히 맞아야 한다.
 - Actions의 초록 체크는 자동화 절차가 성공했다는 뜻이지, 사용자가 접속하는 도메인까지 정상이라는 뜻은 아니다.
+- 수업 workflow의 `-DskipTests`는 테스트 실행을 생략하는 옵션이므로 Maven package 명령과 테스트 통과를 같은 결과로 보지 않는다.
+- 05-11 원본에는 Actions commit/build history를 여는 절차와 commit 이름은 있지만 job 종료 log는 없다. 따라서 해당 수업의 CI 성공을 출력 근거로 확정하지 않는다.
 
 ## 관련 개념
 
@@ -93,4 +71,5 @@ Docker Hub나 EC2 배포 단계에서는 민감값이 필요하다. 이때 workf
 ## 출처
 
 - `raw/KoreaICT/7. Ci&CD/2026.05.11(월) - 시작/2026.05.11(월) - 시작.md`
+- `raw/KoreaICT/7. Ci&CD/Ci&CD 총정리/Ci&CD 총정리.md`
 - `raw/KoreaICT/7. Ci&CD/교육 자료/CI&CD(SpringBoot_실습).pdf`

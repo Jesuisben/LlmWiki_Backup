@@ -1,7 +1,7 @@
 ---
 title: Linux에서 Spring Boot 서버 실행
 created: 2026-07-02
-updated: 2026-07-16
+updated: 2026-07-18
 type: concept
 tags: [linux, spring-boot, backend]
 sources:
@@ -88,7 +88,7 @@ Maven package는 반드시 `pom.xml`이 있는 project root에서 수행했다. 
 2. Dockerfile의 `ARG`와 `COPY`가 그 JAR를 image에 넣었다.
 3. `EXPOSE 9000`은 container가 사용할 port를 문서화했다.
 4. `ENTRYPOINT`가 container 시작 시 `java -jar`를 자동 실행했다.
-5. image build, container `Up`, Spring start log, DB 연결, browser 9000 응답을 각각 확인했다.
+5. image build와 MySQL·Spring container의 `Up`, DB row는 실제 결과를 확인했다. Spring start log와 browser 9000은 확인 기준·명령·URL만 기록돼 성공 결과는 보존되지 않았다.
 
 이것은 **R07의 container 활용**이며, R05의 host `java -jar` 실행과 같은 runtime으로 합치지 않는다. Dockerfile의 실제 instruction은 R07에 각각 분리된 연속 원문으로 존재하지만, 이 페이지에서는 서로 떨어진 조각을 하나의 수업 원문 fence로 합성하지 않고 역할만 설명한다. ^[raw/KoreaICT/5. Linux/2026.04.30(목)/2026.04.30(목).md]
 
@@ -117,6 +117,7 @@ Maven package는 반드시 `pom.xml`이 있는 project root에서 수행했다. 
 - [[comparisons/host-port-forwarding-vs-docker-port-mapping|호스트 포트 포워딩 vs Docker 포트 매핑]]
 - [[concepts/docker-image-container|Docker 이미지와 컨테이너]]
 - [[concepts/spring-boot-cicd-docker-ec2-flow|Spring Boot CI/CD Docker-EC2 배포 흐름]]
+- [[summaries/2026-05-08-aws-rds-resource-cleanup|2026-05-08 AWS EC2·Spring Boot·RDS]]
 
 ## 출처
 

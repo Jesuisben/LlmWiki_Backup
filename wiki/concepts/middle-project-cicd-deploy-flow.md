@@ -1,7 +1,7 @@
 ---
 title: 중간 프로젝트 CI/CD 배포 흐름
 created: 2026-07-03
-updated: 2026-07-14
+updated: 2026-07-18
 type: concept
 tags: [project, ci-cd, aws, spring-boot, react]
 sources:
@@ -33,22 +33,9 @@ confidence: medium
 - **프론트·확장 단계**: React의 `/api` 요청을 Nginx proxy로 백엔드에 연결하고, 파일 저장소는 S3로 전환하며, 이후 도메인 하나로 서비스 접점을 확장한다. ^[raw/KoreaICT/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md]
 - **확인 단계**: 웹 접속, API 응답, Actions log, container/process/port 상태를 확인한다.
 
-## 예시 흐름
+## 수업 직접 범위와 프로젝트 후속 범위
 
-```yaml
-# 구조 예시: 실제 secret 값은 저장하지 않는다.
-name: deploy
-on:
-  push:
-    branches: [main]
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Build and deploy
-        run: echo "build/deploy steps"
-```
+05-11 직접 수업은 Spring Boot 단일 실습의 `master` push·Maven·Docker Hub·EC2 container 흐름을 다뤘다. React build, Nginx `/api` proxy, 프로젝트 DB/JWT/S3 Secret 조합은 `raw/KoreaICT/9. 중간 프로젝트 공부/`의 후속 설계다. 두 범위를 한 workflow가 그날 실행된 것처럼 합성하지 않는다.
 
 ## 자주 헷갈리는 점
 

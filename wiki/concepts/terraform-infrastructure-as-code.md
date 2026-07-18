@@ -1,7 +1,7 @@
 ---
 title: Terraform과 Infrastructure as Code
 created: 2026-07-03
-updated: 2026-07-13
+updated: 2026-07-18
 type: concept
 tags: [aws, ci-cd]
 sources:
@@ -9,7 +9,7 @@ sources:
   - raw/KoreaICT/7. Ci&CD/Ci&CD 총정리/Ci&CD 총정리.md
   - raw/KoreaICT/7. Ci&CD/교육 자료/cloud.02.AWS 교안(실습).pdf
   - raw/KoreaICT/7. Ci&CD/교육 자료/cloud.03.AWS 교안(이론).pdf
-status: seed
+status: growing
 confidence: high
 ---
 
@@ -27,16 +27,7 @@ CI/CD가 애플리케이션 빌드와 배포를 자동화한다면, Terraform은
 
 Terraform은 HCL(HashiCorp Configuration Language)을 사용한다. 수업에서는 Windows에 Terraform을 설치하고 `Path` 환경 변수에 등록한 뒤, `main.tf`로 VPC, 서로 다른 가용 영역의 Public Subnet, Internet Gateway, Route Table, Security Group, EC2, Elastic IP 같은 AWS 리소스를 선언하는 흐름을 다뤘다.
 
-```hcl
-provider "aws" {
-  region = "ap-northeast-2"
-}
-
-resource "aws_instance" "myserver" {
-  ami           = "ami-..."
-  instance_type = "t3.micro"
-}
-```
+원본의 짧은 HCL block은 provider와 resource 문법 예시다. 실제 실습은 별도로 받은 `main.tf`를 사용했으므로 예시 block을 적용된 전체 infrastructure code로 확대하지 않는다.
 
 ## 기본 명령
 
@@ -46,6 +37,13 @@ resource "aws_instance" "myserver" {
 | `terraform plan` | 생성/변경/삭제될 리소스를 미리 확인 |
 | `terraform apply` | 선언한 인프라를 실제 클라우드에 적용 |
 | `terraform destroy` | Terraform이 관리하는 리소스 삭제 |
+
+## 05-13 실행 증거
+
+- `terraform -v` 출력은 설치 직후와 Path 등록 뒤 각각 보존되어 Windows 어디서나 CLI가 실행되는 상태를 확인할 수 있다.
+- `terraform init`은 명령과 생성될 `.terraform`·lock file 설명이 있지만 실제 init log는 없다.
+- 첫 apply는 account 제약과 instance type 문제로 오류가 났다고 기록되어 있다. 설정을 수정해 다시 plan/apply하는 절차는 있으나 최종 apply 성공 출력은 없다.
+- `terraform destroy`는 확인 prompt 일부만 남아 있고 삭제 완료 출력은 없다.
 
 ## 자주 헷갈리는 점
 
@@ -64,5 +62,6 @@ resource "aws_instance" "myserver" {
 ## 출처
 
 - `raw/KoreaICT/7. Ci&CD/2026.05.13(수)/2026.05.13(수).md`
+- `raw/KoreaICT/7. Ci&CD/Ci&CD 총정리/Ci&CD 총정리.md`
 - `raw/KoreaICT/7. Ci&CD/교육 자료/cloud.02.AWS 교안(실습).pdf`
 - `raw/KoreaICT/7. Ci&CD/교육 자료/cloud.03.AWS 교안(이론).pdf`

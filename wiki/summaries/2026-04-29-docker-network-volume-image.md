@@ -1,7 +1,7 @@
 ---
 title: 2026-04-29 Docker 네트워크, 마운트, 사용자 정의 이미지와 registry
 created: 2026-07-06
-updated: 2026-07-16
+updated: 2026-07-18
 type: summary
 tags: [linux, docker, backend, curriculum, study-log]
 sources:
@@ -79,9 +79,9 @@ bind mount는 host의 명시적 경로를 사용자가 관리하고, named volum
 - local image를 Docker Hub 형식의 `계정/image:tag`로 tag했다.
 - 로그인 뒤 push 결과에서 layer upload와 digest를 확인했다.
 - 다른 환경에서 local 이름만으로 실행했을 때는 image를 찾지 못하고 접근 오류가 발생했다.
-- registry namespace를 포함해 pull하거나 run하자 올바른 원격 image를 찾을 수 있었다.
+- registry namespace를 포함한 올바른 pull/run 명령을 기록했다. 다만 해당 명령의 성공 출력이나 새 container의 상태·browser 결과는 원본에 남아 있지 않다.
 
-이 흐름은 **local image → registry용 tag → 인증 → push → 다른 환경의 pull/run**이다. 계정명·repository URL·비밀번호·PAT와 같은 실제 식별자·credential은 일반화했다. 로그인 출력에 credential이 평문 설정 파일에 저장될 수 있다는 경고도 있었으므로, 성공 메시지만 보고 보안 저장이 해결됐다고 생각하면 안 된다.
+실제 수업 순서는 **local image 준비 → registry 인증 → registry용 tag → push → 다른 환경의 pull/run 명령 기록**이다. 계정명·repository URL·비밀번호·PAT와 같은 실제 식별자·credential은 일반화했다. 로그인 출력에 credential이 평문 설정 파일에 저장될 수 있다는 경고도 있었으므로, 성공 메시지만 보고 보안 저장이 해결됐다고 생각하면 안 된다.
 
 ### 8교시 — AWS 계정 생성 예고
 
@@ -95,9 +95,9 @@ bind mount는 host의 명시적 경로를 사용자가 관리하고, named volum
 4. 변경된 container를 image로 commit한다.
 5. 새 image로 다른 container를 실행해 HTML·이미지·text가 포함됐는지 다시 확인한다.
 6. image를 registry용으로 tag하고 push한다.
-7. 다른 환경에서는 registry namespace를 포함해 pull/run하고 같은 웹 결과를 확인한다.
+7. 다른 환경에서는 registry namespace를 포함한 pull/run 명령으로 원격 image를 참조한다. 해당 명령의 성공 출력과 같은 웹 결과는 원본에 보존되지 않았다.
 
-한 번의 파일 복사에서 끝나지 않고 **container 변경 → image 고정 → registry 전달 → 새 container 재생성**까지 확인한 것이 핵심이다.
+한 번의 파일 복사에서 끝나지 않고 **container 변경 → image 고정 → local 새 container 검증 → registry push digest 확인**까지 이어진 것이 핵심이다. 다른 환경에서는 namespace 누락 오류와 올바른 명령만 확인할 수 있으므로 remote 재생성 성공으로 확대하지 않는다.
 
 ## 헷갈리기 쉬운 지점
 

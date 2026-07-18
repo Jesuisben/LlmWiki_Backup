@@ -1,7 +1,7 @@
 ---
 title: 2026-05-13 Terraform과 S3 파일 업로드
 created: 2026-07-03
-updated: 2026-07-13
+updated: 2026-07-18
 type: summary
 tags: [aws, ci-cd, spring-boot, backend, curriculum]
 sources:
@@ -31,16 +31,7 @@ Terraform은 인프라를 문서/코드로 작성해 명령어로 생성·변경
 
 Terraform 구성은 provider, resource, module, variable 같은 요소로 나뉘며, HCL(HashiCorp Configuration Language)이라는 선언적 문법을 사용한다.
 
-```hcl
-provider "aws" {
-  region = "ap-northeast-2"
-}
-
-resource "aws_instance" "myserver" {
-  ami           = "ami-..."
-  instance_type = "t3.micro"
-}
-```
+원본의 HCL 예시는 AWS provider와 EC2 resource block의 형태를 보여 준다. 이 예시는 문법 설명용이며, 실제 실습은 별도로 받은 `main.tf`를 사용했으므로 예시 block 자체를 그날 적용한 완성 configuration으로 보지 않는다.
 
 ### 2. Terraform 기본 명령
 
@@ -57,19 +48,7 @@ resource "aws_instance" "myserver" {
 
 실습 흐름은 다음과 같다.
 
-```text
-사용자 upload.html
-  ↓ multipart/form-data
-UploadController
-  ↓ 파일 저장 요청
-S3Service
-  ↓ AWS SDK
-Amazon S3 bucket
-  ↓ public/object URL
-ProductService
-  ↓ image_url 저장
-RDS MySQL product table
-```
+사용자가 `upload.html`에서 파일을 제출하면 `UploadController`가 요청을 받고 `S3Service`가 S3 object 저장을 담당한다. `ProductService`와 `ProductRepository`는 상품 정보와 이미지 주소를 RDS에 저장하는 역할로 설명되었다. 다만 날짜 원본에는 실제 Java method 본문이나 RDS insert 결과가 없어, 이 연결은 구성요소 역할 설명과 검증 절차의 경계에서 읽어야 한다.
 
 ### 4. Spring Boot 구성 요소
 
@@ -95,11 +74,22 @@ RDS MySQL product table
 1. Terraform 설치 후 `Path` 등록과 버전 확인.
 2. IAM 사용자와 access key를 준비해 Terraform이 AWS API를 호출할 수 있게 함.
 3. `main.tf`로 VPC/Subnet/IGW/Route Table/Security Group/EC2/EIP를 선언.
-4. `terraform init`, `terraform plan`, `terraform apply`로 리소스 생성.
+4. `terraform init`, `terraform plan`, `terraform apply` 순서를 실행했다. 첫 apply는 계정 제약과 instance type 문제로 오류가 났고, 설정을 바꾸어 다시 plan/apply하라는 해결 절차까지만 남아 있으며 최종 apply 성공 출력은 없다.
 5. S3 bucket 생성과 IAM 사용자 권한 설정.
 6. Spring Boot `application.properties`에 RDS/S3 설정을 역할별로 추가. 실제 값은 코드 저장소에 직접 넣지 않는 것이 안전하다.
 7. S3 bucket policy를 조정해 업로드와 조회를 테스트.
-8. MySQL Workbench에서 `coffee` DB의 `product` table을 조회해 S3 파일과 별도로 `image_url`을 포함한 상품 행이 저장됐는지 확인.
+8. MySQL Workbench에서 실습 DB와 `product` table을 조회하는 SQL을 기록했다. query 결과 행은 보존되지 않아 RDS 저장 성공은 확정하지 않는다.
+
+### 보존된 결과와 미보존 경계
+
+| 단계 | 원본에 남은 증거 | 판단 |
+|---|---|---|
+| Terraform 설치 | Windows에서 두 차례 확인한 version 출력 | CLI 설치·Path 적용 확인 |
+| Terraform apply | instance type 관련 오류와 수정·재실행 지시 | 최종 resource 생성 성공 미보존 |
+| Terraform destroy | 확인 prompt 일부 | 실제 삭제 완료 출력 미보존 |
+| 첫 S3 upload | 실패했다는 수업 메모 | 실패 관찰 서술은 보존됐지만 오류 응답·화면은 미보존 |
+| bucket policy 후 재시도 | 업로드 성공과 bucket object 확인을 적은 수업 메모 | 원본 서술상 성공이며 listing·API 응답·화면은 미보존 |
+| RDS 상품 데이터 | Workbench 설정과 조회 SQL | query 결과·저장 행 미보존 |
 
 ## 헷갈린 점 / 질문
 
@@ -120,5 +110,6 @@ RDS MySQL product table
 ## 출처
 
 - `raw/KoreaICT/7. Ci&CD/2026.05.13(수)/2026.05.13(수).md`
+- `raw/KoreaICT/7. Ci&CD/Ci&CD 총정리/Ci&CD 총정리.md`
 - `raw/KoreaICT/7. Ci&CD/교육 자료/cloud.02.AWS 교안(실습).pdf`
 - `raw/KoreaICT/7. Ci&CD/교육 자료/cloud.03.AWS 교안(이론).pdf`

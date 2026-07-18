@@ -1,7 +1,7 @@
 ---
 title: 2026-05-19 인증 기본과 AAM/APE 통합 설치
 created: 2026-07-03
-updated: 2026-07-13
+updated: 2026-07-18
 type: summary
 tags: [auth, linux, project, curriculum]
 sources:
@@ -16,50 +16,56 @@ confidence: high
 
 ## 한 줄 요약
 
-인증(Authentication), 인가(Authorization), IDP, SSO, 상호인증을 구분한 뒤 AAM/APE와 DMZ 서버를 통합 설치하고, 라이선스·연동 설정·사용자·인증기 관리 흐름을 실습한 날이다.
+인증·인가·IDP·SSO·상호인증의 책임을 구분한 뒤, AAM/APE/DMZ 서버와 client를 준비해 조직 사용자·인증기·연동 설정이 전달되는 흐름을 따라간 날이다.
+
+## 왜 이 순서로 배웠는가
+
+앞선 X1280 샘플이 한 서비스의 등록·로그인에 초점을 맞췄다면, 이날은 기업 환경에서 여러 사용자·인증기·정책·연동 서비스를 어떻게 관리하는지로 범위를 넓혔다. 설치 전에 인증과 인가, SSO와 IDP를 구분해 어떤 제품 책임을 보고 있는지 먼저 정리했다.
 
 ## 배운 내용
 
-- 인증은 “당신이 정말 당신인지 확인”하는 과정이고, 인가는 “확인된 사용자가 무엇을 할 수 있는지”를 제한하는 과정이다.
-- MFA는 아는 것, 가진 것, 나 자신이라는 인증 요소 중 2개 이상을 조합한다.
-- SSO는 한 번의 로그인으로 여러 서비스 접근을 가능하게 하는 구조이며, IDP는 디지털 신분증을 발급·관리하는 역할로 이해했다.
-- 상호인증은 서비스가 사용자만 확인하는 것이 아니라 사용자가 서비스의 신뢰성도 확인하는 구조다.
-- AAM/APE 실습에서는 Rocky Linux VM 준비 → AAM/APE/DMZ 통합 설치 → 라이선스 적용 → APE와 AAM의 연동값 비교 → 부서·사용자 생성 → Enterprise 앱 계정 등록 흐름을 다뤘다.
-- 이 날짜는 FilingBox가 아니라 기업형 인증 관리 제품군을 다룬 날이다. FilingBox·NAS·WORM은 다음 날의 저장소 보호 실습으로 분리한다.
+- Authentication은 사용자가 누구인지 확인하고, Authorization은 확인된 사용자가 무엇을 할 수 있는지 판단한다.
+- MFA는 지식·소지·생체 요소 중 둘 이상을 조합하는 관점이고, SSO는 한 번 받은 인증 ticket/token으로 연결 서비스의 재로그인 부담을 줄인다.
+- IDP는 디지털 신원 정보를 발급·관리하는 주체이며, 상호인증은 서비스도 사용자가 신뢰할 수 있는 대상인지 확인하는 관점이다.
+- Rocky Linux 서버 환경과 Windows client 환경을 나눠 준비했다.
+- AAM·APE·DMZ 서버 package를 설치하고 DB·process·license 적용 절차를 진행했다.
+- APE와 AAM 관리자 화면의 조직·서비스 연동 항목을 맞춘 뒤 부서·사용자를 생성하고 사용자·인증기 정보 전달을 확인했다.
+- Enterprise 모바일 앱과 Windows Client의 계정 등록·로그인 절차를 살폈다.
 
-## 핵심 개념
+## 직접 보존된 결과와 미보존 결과
 
-- [[concepts/passwordless-x1280-auth-flow|Passwordless X1280 인증 흐름]]
-- [[entities/aam-ape|AAM과 APE]]
-- [[comparisons/authentication-vs-authorization|인증(Authentication) vs 인가(Authorization)]]
-- [[entities/passwordless-x1280|Passwordless X1280]]
-- [[comparisons/passwordless-vs-password-login|Passwordless 로그인 vs 비밀번호 로그인]]
-- [[concepts/linux-cli-files|Linux CLI와 파일 시스템]]
+| 구간 | 원본에 보존된 것 | 완료로 과확정하지 않는 것 |
+|---|---|---|
+| VM·SSH | service의 active 상태와 network 확인 명령·출력 | 전체 server package의 지속 실행 상태 |
+| 통합 설치 | 설치 script 입력 순서와 process 상태 확인 절차 | 모든 AAM·APE·DMZ process의 완전한 출력 |
+| 관리자 설정 | license 적용, 대응 연동값 비교·수정, 사용자 생성 절차 | 실제 식별자·license·token·credential 값 |
+| 사용자 전달 | AAM에서 만든 사용자 정보가 APE에 전달됐는지 확인했다는 수업 메모 | 독립 API response·screenshot·Windows 로그인 결과 |
 
-## 실습 / 예제
+교육 PDF는 설치·화면 순서를 제공하는 입력자료이며 실행 결과를 대신하지 않는다.
 
-```text
-Rocky Linux VM 준비
-→ AAM/APE/DMZ 서버 패키지 설치
-→ APE 관리자 웹에서 라이선스/연동 서비스 설정
-→ AAM 콘솔/관리자 웹에서 인증 서버 설정과 사용자 생성
-→ APE에서 사용자·인증기 정보 확인
-→ 모바일 앱 또는 클라이언트에서 계정 추가/로그인 확인
-```
+## 대표 실습 흐름
 
-APE에서 설정한 Corp ID·관리자 토큰·AAM용 키는 AAM 인증 서버 설정에서 대응 값과 일치해야 했다. 원본의 값 자체는 보존하지 않고, 두 관리 화면의 연동값을 비교·수정·저장했다는 절차만 남긴다.
+서버 설치 뒤 APE에서 조직·연동 서비스 정보를 준비하고, AAM의 인증 서버 설정이 같은 조직 문맥을 가리키는지 비교했다. 이후 AAM에서 사용자·인증기 관련 항목을 만들고 APE에서 전달 여부를 확인했다. 중요한 것은 제품 이름 암기가 아니라 AAM 쪽 접근·인증 관리와 APE 쪽 기업 사용자·정책 관리가 일치하는 설정으로 연결된다는 점이다.
 
 ## 헷갈린 점 / 질문
 
-- 인증과 인가는 항상 같이 등장하지만 책임이 다르다. 로그인 성공은 인증이고, 관리자 기능 접근 가능 여부는 인가다.
-- 상호인증은 단순히 MFA를 하나 더 붙이는 것이 아니라 “내가 접속한 서비스가 진짜인지”도 확인하는 관점이다.
-- 원본에는 라이선스 키·관리자 토큰·비밀번호가 실습값으로 적혀 있지만, wiki에서는 보안상 역할 설명만 남긴다.
+- 로그인 성공(Authentication)과 관리자 기능 실행 허용(Authorization)은 다른 판단이다.
+- SSO는 모든 서비스가 같은 비밀번호를 저장한다는 뜻이 아니라 신뢰된 인증 결과를 재사용하는 구조다.
+- AAM/APE는 05-15의 X1280 Auth/User Connection/Push Request 세 서버와 동일한 구성요소가 아니다.
+- DMZ는 네트워크 배치 경계이며 제품 간 secret·license·조직 식별자를 공개해도 된다는 뜻이 아니다.
+
+## 이전·다음 연결
+
+- 이전: [[summaries/2026-05-18-passwordless-x1280-server-spring-sample|05-18 X1280 Spring 샘플]].
+- 다음: [[summaries/2026-05-20-filingbox-giga-mega|05-20 FilingBox/NAS/WORM]]에서 인증 이후 데이터 보호로 이동한다.
+- 선행: [[comparisons/authentication-vs-authorization|인증 vs 인가]]는 FrontEnd_BackEnd JWT 구현과 이날의 용어 학습을 연결한다.
 
 ## 관련 페이지
 
-- [[summaries/2026-05-14-passwordless-x1280-intro|2026-05-14 Passwordless X1280 소개와 보안 배경]]
-- [[concepts/jwt-session-cookie-auth|JWT, 세션, 쿠키 인증]]
-- [[comparisons/session-vs-cookie-vs-jwt|Session vs Cookie vs JWT]]
+- [[entities/aam-ape|AAM과 APE]]
+- [[entities/passwordless-x1280|Passwordless X1280]]
+- [[concepts/nas-worm-storage-protection|NAS·WORM 저장소 보호]]
+- [[summaries/2026-05-21-passwordless-subject-review|Passwordless 총정리]]
 
 ## 출처
 

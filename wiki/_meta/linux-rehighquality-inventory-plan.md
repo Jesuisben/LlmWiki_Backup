@@ -22,8 +22,8 @@ confidence: high
 이 문서는 내용 재고도화 단계 5 `Linux`의 **세션 1 재고·대응·분류·실행 분할 기준선**이자 분할 세션별 실행 기록이다. 세션 2에서는 Summary 전반부 R01~R05, 세션 3에서는 Summary 후반부·총정리 R06~R11, 세션 4에서는 CLI·파일·vi·권한 Concept 3개, 세션 5에서는 VM·SSH·process·service·network·server Concept/Entity, 세션 6에서는 Docker core Concept 4개, 세션 7에서는 Dockerfile·reverse proxy·Compose Concept/Entity와 registry Concept, 세션 8에서는 Git·GitHub Concept/Entity 4개, 세션 9에서는 최종 Comparison 7개와 Query 1개를 고도화했다. 세션 10에서는 과목 전체 고정점을 전수 검증하고 신규 페이지의 역링크만 최소 교정했다.
 
 - 현재 상태: **최종 완료 — 세션 10 과목 전체 고정점 통과**
-- 세션 10 최소 교정 범위: 신규 sudo/root Comparison·permission Query를 관련 Summary 2개·Concept 1개·Linux Entity 1개에서 탐색할 수 있도록 역링크를 보강하고, 이 meta 문서·상위 계획·`wiki/log.md`에 완료 상태를 기록했다.
-- 세션 10 비수정 범위: `raw/` 전체, 세션 2~9의 그 밖의 본문, 후속 AWS/CI/CD 경계 15개 본문, `wiki/index.md`
+- 세션 10 최소 교정 범위: 신규 sudo/root Comparison·permission Query 역링크를 보강한 뒤, 비동기 3계통 감사에서 확인된 R06~R10 완료 상태 과확정과 AWS/CI/CD 후속 경계·index type 탐색 오류를 관련 페이지만 최소 교정했다. 이 meta 문서·상위 계획·`wiki/log.md`에 최종 결과를 기록했다.
+- 세션 10 비수정 범위: `raw/` 전체와 감사에서 오류가 확인되지 않은 지식 페이지
 - 다음 실행 단위: 단계 6 `AWS` 실용형 첫 세션. 이 문서에서는 시작하지 않는다.
 - 다음 세션 자동 실행: 하지 않음
 
@@ -140,9 +140,9 @@ confidence: high
 | `wiki/summaries/2026-04-24-linux-users-permissions.md` | R03, 04-24 | user/group/account files/chmod/chown | 전면 재작성 완료 | account files·UID/GID·shell·group·chmod 숫자/기호·chown/chgrp·script 실행과 “하지는 않음” 경계를 복원 | Linux 권한 직접 / EC2 user는 후속 | 2 완료 |
 | `wiki/summaries/2026-04-27-linux-archive-java-alias.md` | R04, 04-27 | download/archive/alias/JDK/Java/Git/web server | 전면 재작성 완료 | download/archive·permission 오류→alias 지속성→Java compile/run→Git remote→Apache/Nginx/UFW 흐름을 복원 | Linux server 직접 / Spring·Docker 전단계 | 2 완료 |
 | `wiki/summaries/2026-04-28-maven-spring-boot-docker-intro.md` | R05, 04-28 | Maven jar, 80→9000, Docker setup, web/DB containers | 전면 재작성 완료 | clone→Maven JAR→VirtualBox NAT·guest iptables/UFW→Docker 설치·생명주기→WordPress–MySQL `network01`을 복원 | Linux jar·Docker 직접 / AWS·CI/CD 후속 | 2 완료 |
-| `wiki/summaries/2026-04-29-docker-network-volume-image.md` | R06, 04-29 | MariaDB+Redmine, exec/cp, mount, commit, Hub | 전면 재작성 완료 | network→exec/cp→bind/volume→commit→registry→다른 환경 pull/run과 AWS 가입 예고 경계를 복원 | Docker 직접 / AWS 가입은 예고 | 3 완료 |
-| `wiki/summaries/2026-04-30-dockerfile-spring-load-balancing.md` | R07, 04-30 | Dockerfile, Spring+MySQL, nginx upstream | 전면 재작성 완료 | build context·instruction→DB/JAR/log/browser→proxy-net/upstream 분배와 빈 교시를 복원 | Docker 직접 / AWS LB는 후속 | 3 완료 |
-| `wiki/summaries/2026-05-01-docker-compose.md` | R08, 05-01 | Compose MySQL+Spring, Desktop, backend 시험 | 전면 재작성 완료 | services/network/volume/environment/depends_on→up/status/DB/browser/down, Desktop·시험·Git 예고 경계를 복원 | Docker/Compose 직접 / Git은 다음 | 3 완료 |
+| `wiki/summaries/2026-04-29-docker-network-volume-image.md` | R06, 04-29 | MariaDB+Redmine, exec/cp, mount, commit, Hub | 전면 재작성·세션 10 교정 완료 | network→exec/cp→bind/volume→commit→login/tag/push digest를 복원하고 remote는 namespace 오류·올바른 명령까지만, AWS 가입은 예고로 고정 | Docker 직접 / AWS 가입은 예고 | 3·10 완료 |
+| `wiki/summaries/2026-04-30-dockerfile-spring-load-balancing.md` | R07, 04-30 | Dockerfile, Spring+MySQL, nginx upstream | 전면 재작성·세션 10 교정 완료 | build context·instruction→container `Up`·DB row와 결과 미보존 log/browser를 분리하고 proxy-net/upstream 분배·빈 교시를 복원 | Docker 직접 / AWS LB는 후속 | 3·10 완료 |
+| `wiki/summaries/2026-05-01-docker-compose.md` | R08, 05-01 | Compose MySQL+Spring, Desktop, backend 시험 | 전면 재작성·세션 10 교정 완료 | services/network/volume/environment/depends_on과 보존된 `up`·`Up`·DB 결과, 미보존 browser·down·WordPress 결과 및 volume 이름 불일치를 분리 | Docker/Compose 직접 / Git은 다음 | 3·10 완료 |
 | `wiki/summaries/2026-05-04-git-github-sourcetree.md` | R09, 05-04 | Git Bash·remote·clone/pull/fetch·SourceTree·conflict | 전면 재작성 완료 | WorkTree→stage→local→remote, commit 없는 push, clone·SourceTree·두 작업자 conflict와 branch 시작을 복원 | Linux 과목 협업 직접 / Actions 후속 | 3 완료 |
 | `wiki/summaries/2026-05-06-github-branch-pr-conflict.md` | R10, 05-06 | branch→PR review→merge→pull→conflict/rebase | 전면 재작성 완료 | 팀장/팀원 branch·PR 검토·remote/local master·fetch·merge/rebase UI 범위와 같은 날 AWS 분리를 복원 | GitHub 협업 직접 / 같은 날 AWS는 별도 과목 | 3 완료 |
 | `wiki/summaries/2026-05-06-linux-subject-review.md` | R01~R11 | 과목 전체 운영·컨테이너·협업 흐름 | 부분 보강 완료 | 날짜별 대표 artifact·전환 이유와 04-27 host 웹서버·04-29 registry·05-01 시험·직접/후속 경계를 가진 복습 허브로 보강 | Linux 허브 / AWS·CI/CD는 후속 | 3 완료 |
@@ -162,8 +162,8 @@ confidence: high
 | `wiki/concepts/docker-cp-exec-container-files.md` | R05~R06·R11 | Apache/Nginx/MySQL exec, cp 양방향, file artifact | 부분 보강 완료 | `apache81/82`, `nginx83/84`, `mysql85`, `apache01-ctr`, `nginx88`의 서로 다른 container/path를 분리하고 host→container·container→host copy, 내부 확인, commit image를 별도 완료 조건으로 복원함 | Docker 직접 / mount·commit·Dockerfile 후속 | 6 완료 |
 | `wiki/concepts/docker-network-volume.md` | R05~R06·R08·R11 | WordPress+MySQL, Redmine+MariaDB, bind/volume, Compose 경계 | 부분 보강 완료 | container name 통신과 host port를 분리하고 `network01/02`, Apache `Index of /`, Nginx 403, `mount-vol` inspect·삭제를 복원했다. R06에는 재생성 뒤 data persistence 실측이 없음을 명시하고 Compose·VPC 경계를 분리함 | Docker 직접 / Compose·AWS networking 후속 | 6 완료 |
 | `wiki/concepts/docker-reverse-proxy-load-balancing.md` | R07·I03 | `proxy-net`, mounted `nginx.conf`, upstream/proxy_pass | 전면 재작성 완료 | Apache/Nginx backend 여섯 개→proxy container→browser 왕복과 network·port·config·process·backend·분배 완료 조건을 분리했다. I03은 상담자 업무 분배 비유로만 사용하고 host Nginx·web container·AWS ALB 경계를 고정함 | Docker 직접 / AWS LB 후속 | 7 완료 |
-| `wiki/concepts/docker-compose-manifest.md` | R08 | MySQL+Spring·MySQL+WordPress manifest/up/down | 부분 보강 완료 | 두 manifest의 service/container 이름, network·volume·environment·port·depends_on과 YAML 들여쓰기/값 수정 범위를 복원했다. up·Up·DB readiness·browser·down·volume/image 삭제와 Dockerfile·CI/CD·운영 orchestration 책임을 분리함 | Compose 직접 / Passwordless·프로젝트 후속 | 7 완료 |
-| `wiki/concepts/docker-registry-tag-push-pull.md` | R06·R11·P08 | local image→tag→login→push→다른 환경 pull/run | 신규 생성 완료 | 독립 7교시 실습과 namespace 누락 오류·credential 저장 경고·수동/CI 경계가 별도 탐색 가치를 가져 신규 Concept로 보존했다. push digest는 확인됐지만 다른 환경의 최종 browser/file 결과는 미보존으로 남김 | Docker 직접 / CI registry 자동화 후속 | 7 완료 |
+| `wiki/concepts/docker-compose-manifest.md` | R08 | MySQL+Spring·MySQL+WordPress manifest/up/down | 부분 보강·세션 10 교정 완료 | 첫 실습의 자원 생성·`Up`·DB 결과와 미보존 browser/down 결과, WordPress의 절차만 존재하는 상태, volume 이름 불일치를 분리 | Compose 직접 / Passwordless·프로젝트 후속 | 7·10 완료 |
+| `wiki/concepts/docker-registry-tag-push-pull.md` | R06·R11·P08 | local image→login→tag→push→다른 환경 pull/run 명령 | 신규 생성·세션 10 교정 완료 | 실제 순서와 namespace 누락 오류·credential 경고를 보존하고 push digest만 완료, remote pull/run은 명령만 있어 성공 미확정으로 고정 | Docker 직접 / CI registry 자동화 후속 | 7·10 완료 |
 | `wiki/concepts/git-github-collaboration.md` | R09~R11·P04 | branch/PR/merge/conflict | 전면 재작성 완료 | WorkTree→stage→commit→remote, `animal`·`sport`, PR 생성·merge·local master pull, fetch·conflict·merge/rebase를 artifact와 별도 완료 조건으로 복원하고 합성 fence 2개를 제거 | Linux 과목 협업 직접 / Actions 후속 | 8 완료 |
 
 ### Entity 대응 및 분류
@@ -321,7 +321,7 @@ confidence: high
 - 상태: **완료**. 세션 8과 Linux 단계 5 전체 완료 처리는 시작하지 않았다.
 - 고도화: `docker-reverse-proxy-load-balancing`, `docker-compose-manifest`, `docker` 3개를 고도화하고 `docker-registry-tag-push-pull` Concept를 신규 생성했다.
 - reverse proxy: R07의 `proxy-net`, Apache/Nginx backend 여섯 개, host-mounted `nginx.conf`, host 80의 `reverse-proxy`, URL별 upstream과 browser 분배를 복원했다. container 실행·network·config·proxy process·backend 응답·browser 분배를 별도 완료 조건으로 두고, 독립 `nginx -t`·proxy log·운영 health check는 미보존으로 남겼다. I03은 user 업무를 상담자에게 분배하는 비유일 뿐 network·port·container 증거로 쓰지 않았다.
-- Compose: R08의 MySQL+Spring Boot와 MySQL+WordPress를 각각 service 이름·`container_name`·image·network·volume·environment·ports·`depends_on`에 연결했다. 제공 WordPress manifest의 들여쓰기 수정과 요구사항 값 수정을 구분하고, 요구사항 network 이름 불일치와 후속 volume 삭제 이름 불일치도 보존했다. `up`·container `Up`·DB readiness·browser 성공·`down`·image/volume 삭제를 분리했다.
+- Compose: R08의 MySQL+Spring Boot와 MySQL+WordPress를 각각 service 이름·`container_name`·image·network·volume·environment·ports·`depends_on`에 연결했다. 제공 WordPress manifest의 들여쓰기 수정과 요구사항 값 수정, volume 삭제 이름 불일치를 보존했다. 세션 10 비동기 감사에서 첫 실습의 `Up`·DB 결과와 미보존 browser·down 결과, WordPress의 명령만 있는 상태를 다시 고정했다.
 - Docker Entity: R05 설치/image/container→R06 network/storage/commit/registry→R07 Dockerfile/Spring+DB/proxy→R08 Compose의 날짜별 기술 이력과 artifact를 복원했다. Linux host·Docker Engine·image/container/network/volume·Dockerfile·Compose·registry·CI/CD의 책임을 분리했다.
 - registry 후보: **신규 Concept로 보존**. local image의 기본 생명주기와 달리 namespace/repository/version naming, login, layer push/digest, 다른 환경 retrieval, namespace 누락 오류, credential 저장 경고, 수동/CI 경계가 독립 탐색 역할을 갖는다. push와 remote repository 확인은 기록됐지만 다른 환경의 최종 browser/file 동일성은 미보존이다.
 - fence: 세션 시작 직접 대상 4개(`text 1 / nginx 1 / yaml 1 / bash 1`)를 전수 조사했다. 합성 3개는 credential 없는 prose·표로 전환했고, `nginx` 1개는 R07 lines 803~844의 공백 정규화 연속 원문으로 교체했다. 최종 `1 / 원문 일치 1 / 수동 예외 0 / 실패 0`, Linux/Docker command `bash 0`이다.
@@ -360,6 +360,7 @@ confidence: high
 - 장문 판정: 지식 페이지는 200줄 초과가 없다. 이 inventory 자체만 200줄을 넘지만 raw 대응표·세션별 실행 이력·고정점 근거를 보존하는 단일 운영 문서이므로 이번 단계에서는 분할하지 않는다.
 - fence: Linux 직접 source 지식 페이지 전체 fence는 `nginx` 1개뿐이며 미처리 0, `bash` 0이다. `docker-reverse-proxy-load-balancing.md`의 40줄 `nginx` fence는 R07의 실제 fenced 원문과 exact substring으로 일치하고 서로 다른 날짜·명령·출력을 합치지 않았다.
 - 보안·Git: Linux wiki 변경분에서 실제 account·email·repository URL·password·PAT·token·credential·one-time code 지표 0건이다. scoped `git diff --check`를 통과했고 `raw/KoreaICT/5. Linux`의 status/diff는 0건이다. Linux 범위 밖 기존 Python raw 변경은 보존했고 Git commit·push는 수행하지 않았다.
+- 비동기 감사 후속 교정: Summary 감사의 R06 remote 결과·R08 WordPress/down·R10 `user.email` 문법 과확정, Concept/Entity 감사의 registry 순서·R07 log/browser·R08 Compose 완료 과확정, Comparison/후속 경계 감사의 index type 분류·05-07/05-08·05-12 AWS/CI/CD 귀속·CLB/ALB 근거 수준·후속 Summary 링크 단절을 실제 raw와 다시 대조해 관련 페이지만 교정했다. 교정 후 전체 고정점을 재실행해 최종 완료를 확정했다.
 
 ## 실행 세션 공통 완료 게이트
 
@@ -404,7 +405,7 @@ confidence: high
 
 - 실행 범위: `2026-04-29-docker-network-volume-image`, `2026-04-30-dockerfile-spring-load-balancing`, `2026-05-01-docker-compose`, `2026-05-04-git-github-sourcetree`, `2026-05-06-github-branch-pr-conflict` 5개를 전면 재작성하고 `2026-05-06-linux-subject-review` 허브를 부분 보강했다. R06~R11과 6/6 대응했다.
 - 주 근거: R06~R10 날짜 MD를 수업일·교시·실습 순서의 최우선 source로 사용하고 R11은 날짜별 Summary를 대체하지 않는 복습 허브로 유지했다. P01~P04·P08~P09는 필요한 내용이 날짜 MD에 충분히 전사되어 page source로 강제하지 않았다. I03은 실제 판독해 04-30의 상담자 요청 분배 비유에만 채택했다.
-- Docker 흐름: 04-29의 MariaDB–Redmine network→exec/cp→bind mount/named volume→commit→Docker Hub tag·push·pull, 04-30의 build context·Dockerfile instruction→Spring JAR/MySQL→Nginx reverse proxy, 05-01의 Compose services/network/volume/environment/depends_on→up/status/DB/browser/down을 생명주기와 입력→처리→결과로 복원했다.
+- Docker 흐름: 04-29의 MariaDB–Redmine network→exec/cp→bind mount/named volume→commit→Docker Hub login/tag/push digest와 remote 명령, 04-30의 build context·Dockerfile instruction→Spring JAR/MySQL→Nginx reverse proxy, 05-01의 Compose services/network/volume/environment/depends_on을 복원했다. 세션 10 비동기 감사에서 실제 출력이 있는 `Up`·DB 결과와 명령/URL만 있는 remote pull/run·log·browser·down 결과를 재분리했다.
 - Git 흐름: 05-04의 WorkTree→stage→local repository→GitHub remote, commit 없는 push, clone·pull·SourceTree·두 작업자 conflict와 branch 시작을 복원했다. 05-06은 팀장/팀원 branch→PR review/merge→remote master→local pull·fetch→`Cat.java` conflict와 merge/rebase의 IntelliJ 실습 범위를 분리했다.
 - 오류·경계: 빈 bind mount의 Apache directory listing/Nginx 403, build·container Up·log·browser의 분리, Compose `depends_on`/readiness와 `down`/volume 삭제, 빈 교시·`이어서 작성`, 05-01 backend 시험, 04-29 AWS 가입 예고, 05-06 같은 날짜 AWS 본수업, 수동 Linux/Docker/Git과 후속 AWS/CI/CD를 구분했다.
 - provenance: 새 code fence는 0개이며 원문 검증 0개·수동 fence 예외 0개·실패 0개다. Linux·Git·Docker `bash` fence는 0개이며 실제 account·email·repository URL·password·token·one-time code를 재노출하지 않았다.

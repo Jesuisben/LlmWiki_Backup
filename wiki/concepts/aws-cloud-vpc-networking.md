@@ -1,17 +1,13 @@
 ---
 title: AWS Cloud와 VPC 네트워킹
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-18
 type: concept
 tags: [aws, backend]
 sources:
   - raw/KoreaICT/6. AWS/2026.05.06(수) - 시작/2026.05.06(수) - 시작.md
   - raw/KoreaICT/6. AWS/2026.05.07(목)/2026.05.07(목).md
-  - raw/KoreaICT/6. AWS/교육 자료/AWS 기초 용어.pdf
-  - raw/KoreaICT/6. AWS/교육 자료/cloud.01.AWS 교안(이론_미니파일).pdf
-  - raw/KoreaICT/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf
-  - raw/KoreaICT/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf
-  - raw/KoreaICT/6. AWS/교육 자료/실습 관리 대장(텍스트).md
+  - raw/KoreaICT/6. AWS/2026.05.08(금)/2026.05.08(금).md
 status: growing
 confidence: high
 ---
@@ -24,37 +20,30 @@ AWS Cloud와 VPC 네트워킹은 AWS 안에 사용자가 통제하는 사설 네
 
 ## 수업에서의 등장 맥락
 
-Linux와 Docker 수업에서는 “서버 안에서 무엇을 실행할지”가 중심이었다. AWS 수업에서는 “그 서버가 어느 Region/AZ/VPC/Subnet에 놓이고, 어떤 route와 security rule을 통해 외부와 통신하는지”가 중심이 됐다. 2026-05-06에는 메뉴·용어·IP/CIDR을 먼저 정리했고, 2026-05-07에는 `EDU-VPC`와 두 public subnet을 실제로 만들었다.
+Linux와 Docker 수업에서는 “서버 안에서 무엇을 실행할지”가 중심이었다. AWS 수업에서는 “그 서버가 어느 Region/AZ/VPC/Subnet에 놓이고, 어떤 route와 security rule을 통해 외부와 통신하는지”가 중심이 됐다. 2026-05-06에는 메뉴·용어·IP/CIDR을 미리 읽었고, 05-07에는 VPC와 두 public subnet·EC2를 구성했으며, 05-08에는 ICMP 규칙이 실제 통신 결과를 바꾸는 것을 확인했다.
 
 ## 핵심 구성요소
 
 | 구성요소 | 수업 기준 역할 | 예시 |
 |---|---|---|
 | Region | AWS 서비스가 위치한 큰 지역 | 서울 리전 |
-| AZ | Region 안의 독립 데이터센터 묶음 | ap-northeast-2a, ap-northeast-2c |
-| VPC | AWS 안의 사설 네트워크 | `EDU-VPC 10.250.0.0/16` |
-| Subnet | VPC를 IP 범위와 AZ별로 나눈 구역 | `10.250.1.0/24`, `10.250.11.0/24` |
-| Internet Gateway | VPC와 인터넷을 연결하는 출입구 | `EDU-IGW` |
+| AZ | Region 안의 독립 데이터센터 묶음 | 수업에서 선택한 서로 다른 두 서울 Region AZ |
+| VPC | AWS 안의 사설 네트워크 | 수업의 `/16` VPC |
+| Subnet | VPC를 IP 범위와 AZ별로 나눈 구역 | 서로 다른 두 AZ의 `/24` public subnet |
+| Internet Gateway | VPC와 인터넷을 연결하는 출입구 | VPC에 연결하고 `Attached` 확인 |
 | Route Table | 목적지별 다음 경로를 정하는 표 | `0.0.0.0/0 → IGW` |
-| Security Group | EC2 단위 stateful 방화벽 | 22, 80, 443, 9000, ICMP 허용 |
-| Elastic IP | EC2에 붙이는 고정 공인 IP | Public-2A-EIP, Public-2C-EIP |
+| Security Group | AWS 자원 앞의 Inbound/Outbound 접근 규칙 | 22, 80, 443, 9000, ICMP 허용 |
+| Elastic IP | EC2에 연결하는 고정 공인 IP | 각 EC2에 할당·연결 후 SSH에 사용 |
 
-## 예시 구조
+## 수업 구성 순서
 
-```text
-EDU-VPC 10.250.0.0/16
-├─ EDU-PUBLIC-SBN-2A 10.250.1.0/24
-│  └─ EDU-PUBLIC-EC2-2A 10.250.1.240
-├─ EDU-PUBLIC-SBN-2C 10.250.11.0/24
-│  └─ EDU-PUBLIC-EC2-2C 10.250.11.240
-├─ EDU-IGW
-└─ EDU-PUBLIC-RT
-   └─ 0.0.0.0/0 → EDU-IGW
-```
+VPC를 만든 뒤 Internet Gateway를 연결하고 DNS hostnames를 활성화했다. 이어 서로 다른 AZ에 public subnet 두 개를 만들고, Route Table의 외부 기본 경로를 IGW로 지정한 뒤 두 subnet을 연결했다. 각 EC2에는 Security Group·Key Pair·Elastic IP를 연결해 MobaXterm SSH 세션을 만들었다.
+
+05-08의 첫 `ping`은 양방향 모두 `100% packet loss`였고, 두 Security Group에 모든 ICMP IPv4 Inbound 규칙을 추가한 뒤 `0% packet loss`가 됐다. 이 출력은 “EC2가 실행 중”과 “해당 protocol이 Security Group을 통과함”이 별도 조건임을 보여 준다.
 
 ## CIDR 이해
 
-`10.250.0.0/16`에서 `/16`은 앞 16비트가 네트워크 주소라는 뜻이다. `10.250.1.0/24`에서 `/24`는 앞 24비트를 네트워크 주소로 쓰므로, 그 subnet 안에서 host 주소를 더 촘촘하게 나눈다. 수업에서는 `/16` VPC 안에 `/24` subnet들을 만들어 “큰 주소 공간을 용도/AZ별 구역으로 자르는” 흐름을 익혔다.
+`/16`은 앞 16비트, `/24`는 앞 24비트를 네트워크 부분으로 사용한다는 뜻이다. 수업에서는 `/16` VPC 안에 `/24` subnet들을 만들어 “큰 주소 공간을 용도/AZ별 구역으로 자르는” 흐름을 익혔다. `/24`를 주소 24개로 해석하면 안 된다.
 
 ## 왜 중요한가
 
@@ -64,14 +53,15 @@ EDU-VPC 10.250.0.0/16
 
 - VPC CIDR(`/16`)은 전체 주소 공간이고, Subnet CIDR(`/24`)은 그 일부다.
 - Public Subnet은 이름만 public인 것이 아니라 `0.0.0.0/0 → Internet Gateway` route가 있어야 한다.
-- Security Group은 EC2 또는 Load Balancer에 붙는 stateful 방화벽이고, Inbound/Outbound 규칙을 따로 본다.
+- Security Group은 EC2·RDS·후속 Load Balancer 같은 AWS 자원의 접근 경계다. Linux UFW나 `iptables` 규칙과 같은 층으로 합치지 않는다.
 - `ping`은 HTTP/SSH와 다른 ICMP 트래픽이다. 22/80/443을 열어도 ICMP를 허용하지 않으면 ping은 실패할 수 있다.
 - SSH 접속은 22번, HTTP는 80번, HTTPS는 443번, Spring Boot 실습은 9000번, MySQL은 3306번 포트가 주로 등장했다.
 
 ## 관련 개념
 
 - [[summaries/2026-05-06-aws-cloud-vpc-ec2|2026-05-06 AWS Cloud, VPC, EC2 입문]]
-- [[summaries/2026-05-07-aws-ec2-nginx-rds|2026-05-07 AWS EC2, Nginx, Spring Boot, RDS 연결]]
+- [[summaries/2026-05-07-aws-ec2-nginx-rds|2026-05-07 AWS VPC, EC2, EIP와 자원 관리]]
+- [[summaries/2026-05-08-aws-rds-resource-cleanup|2026-05-08 AWS Nginx, Spring Boot, RDS 연결과 자원 정리]]
 - [[entities/aws|AWS]]
 - [[entities/amazon-ec2|Amazon EC2]]
 - [[concepts/docker-network-volume|Docker 네트워크와 볼륨]]
@@ -81,8 +71,4 @@ EDU-VPC 10.250.0.0/16
 
 - `raw/KoreaICT/6. AWS/2026.05.06(수) - 시작/2026.05.06(수) - 시작.md`
 - `raw/KoreaICT/6. AWS/2026.05.07(목)/2026.05.07(목).md`
-- `raw/KoreaICT/6. AWS/교육 자료/AWS 기초 용어.pdf`
-- `raw/KoreaICT/6. AWS/교육 자료/cloud.01.AWS 교안(이론_미니파일).pdf`
-- `raw/KoreaICT/6. AWS/교육 자료/cloud.02.AWS 교안(실습).pdf`
-- `raw/KoreaICT/6. AWS/교육 자료/cloud.03.AWS 교안(이론).pdf`
-- `raw/KoreaICT/6. AWS/교육 자료/실습 관리 대장(텍스트).md`
+- `raw/KoreaICT/6. AWS/2026.05.08(금)/2026.05.08(금).md`

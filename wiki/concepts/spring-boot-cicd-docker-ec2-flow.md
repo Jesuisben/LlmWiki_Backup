@@ -1,7 +1,7 @@
 ---
 title: Spring Boot CI/CD Docker-EC2 배포 흐름
 created: 2026-07-03
-updated: 2026-07-13
+updated: 2026-07-18
 type: concept
 tags: [spring-boot, ci-cd, aws, backend]
 sources:
@@ -24,23 +24,7 @@ Spring Boot CI/CD Docker-EC2 배포 흐름은 Spring Boot 애플리케이션을 
 
 ## 전체 흐름
 
-```text
-Spring Boot code
-  ↓ git push
-GitHub repository
-  ↓ GitHub Actions
-Maven build: cicd.jar 생성
-  ↓
-Docker build: SpringDockerFile 기반 image 생성
-  ↓
-Docker Hub push
-  ↓ SSH 접속/원격 명령
-AWS EC2 docker pull
-  ↓
-기존 container 중지/삭제 후 새 container 실행
-  ↓
-80:9000 포트 매핑으로 서비스 확인
-```
+Spring Boot code를 push하면 GitHub Actions가 Maven build와 Docker image build/push를 맡고, 별도 CD workflow가 EC2 container 갱신을 맡는다. 이 책임 흐름은 날짜 원본의 설정과 절차를 재구성한 것이며, 원본에서 직접 확인 가능한 최종 실행 결과는 `docker container ps -a`의 `Up` 상태와 host 80 → container 9000 port mapping이다.
 
 ## 단계별 설명
 
@@ -52,7 +36,7 @@ AWS EC2 docker pull
 
 ### 2. CI: GitHub Actions에서 Maven build
 
-기본 `ci.yml`에서 GitHub Actions runner가 JDK 21을 준비하고 `mvn clean package -DskipTests`를 실행한다. 여기서 실패하면 Docker image를 만들기 전에 문제를 발견할 수 있다.
+기본 `ci.yml`에서 GitHub Actions runner가 JDK 21을 준비하고 `mvn clean package -DskipTests`를 실행하도록 정의한다. 여기서 실패하면 Docker image를 만들기 전에 문제를 발견할 수 있지만, 05-11 원본에는 실제 Maven 종료 log나 jar artifact 목록이 남아 있지 않다.
 
 ### 3. Docker image build/push
 
@@ -61,6 +45,16 @@ AWS EC2 docker pull
 ### 4. CD: EC2에서 컨테이너 실행
 
 EC2에는 Docker가 설치되어 있어야 한다. 별도 `cd.yml`이 EC2 배포를 연결하며, 날짜 원본에 workflow 전문은 없으므로 위키에서는 새 image pull과 기존 container 갱신이라는 역할만 기록한다. 실습에서는 `0.0.0.0:80->9000/tcp` 형태로 외부 80번 요청을 Spring Boot 9000번 컨테이너 포트로 연결했다.
+
+## 명령·설정과 직접 결과
+
+| 구간 | 원본 증거 | 완료 경계 |
+|---|---|---|
+| Maven CI | workflow와 build 명령 | job·artifact 결과 미보존 |
+| Docker registry | login·build·push workflow | push 결과 미보존 |
+| EC2 Docker 준비 | group·version 출력 | Docker 사용 준비 확인 |
+| container | `ps -a` 출력 | 실행 중 상태와 port mapping 확인 |
+| browser | 확인 URL | 응답·변경 화면 미보존 |
 
 ## 검증 포인트
 
@@ -91,4 +85,5 @@ EC2에는 Docker가 설치되어 있어야 한다. 별도 `cd.yml`이 EC2 배포
 ## 출처
 
 - `raw/KoreaICT/7. Ci&CD/2026.05.11(월) - 시작/2026.05.11(월) - 시작.md`
+- `raw/KoreaICT/7. Ci&CD/Ci&CD 총정리/Ci&CD 총정리.md`
 - `raw/KoreaICT/7. Ci&CD/교육 자료/CI&CD(SpringBoot_실습).pdf`

@@ -1,7 +1,7 @@
 ---
 title: Docker reverse proxy와 로드 밸런싱
 created: 2026-07-02
-updated: 2026-07-16
+updated: 2026-07-18
 type: concept
 tags: [linux, docker, backend]
 sources:
@@ -122,6 +122,7 @@ browser에서 여러 backend 응답을 관찰한 것은 설정·network·proxy p
 - 같은 날: [[summaries/2026-04-30-dockerfile-spring-load-balancing|04-30 Summary]]에서 Dockerfile·Spring Boot+MySQL 실습 뒤 reverse proxy로 확장됐다.
 - 후속: [[concepts/docker-compose-manifest|Docker Compose manifest]]는 여러 container 관계를 YAML로 선언하지만 proxy 설정의 의미를 자동 설계하지 않는다.
 - cloud 확장: [[concepts/aws-route53-load-balancer-https|AWS Route 53, Load Balancer, HTTPS 흐름]]은 별도 AWS resource와 운영 경계를 다룬다.
+- 후속 수업: [[summaries/2026-05-12-route53-alb-https-review|05-12 Route 53·ALB·HTTPS]]에서 Docker Nginx 설정이 아니라 AWS Target Group·Listener·ALB로 요청 분배를 확장했다.
 
 ## 출처
 

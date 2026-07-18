@@ -1,7 +1,7 @@
 ---
 title: AWS 자원 생명주기와 비용 관리
 created: 2026-07-13
-updated: 2026-07-13
+updated: 2026-07-18
 type: concept
 tags: [aws, backend]
 sources:
@@ -24,18 +24,21 @@ AWS 수업의 On-Demand는 필요한 만큼 쓰고 비용을 지불하는 방식
 
 ## 수업에서의 정리 원칙
 
-1. **먼저 사용 중인 연결을 끊는다.** Elastic IP는 연결 해제 후 release한다.
-2. **비용이 직접 발생하거나 상위 자원을 참조하는 실행 자원부터 정리한다.** EC2와 RDS의 종료·삭제 상태를 확인한다.
+1. **먼저 사용 중인 연결을 끊는다.** Elastic IP는 연결 해제 후 release하는 절차로 기록됐다.
+2. **비용이 직접 발생하거나 상위 자원을 참조하는 실행 자원부터 정리한다.** EC2와 RDS의 종료·삭제 상태까지 확인해야 한다.
 3. **의존 관계를 제거한다.** RDS/EC2가 참조하는 Security Group, Internet Gateway, Subnet, Route Table을 확인한다.
 4. **마지막에 네트워크 틀을 정리한다.** 연결된 자원이 없을 때 VPC를 삭제한다.
 5. **보안·데이터 옵션을 확인한다.** RDS 삭제 전 최종 스냅샷 같은 확인 항목을 무심코 넘기지 않는다.
 
-```text
-EIP 연결 해제 → EIP release → EC2 종료 → RDS 삭제
-→ Security Group/IGW/Subnet/Route Table 정리 → VPC 삭제 → Key Pair 정리
-```
+수업의 정리 흐름은 `EIP 연결 해제·release → EC2 종료 → RDS 삭제 → Security Group·IGW·Subnet·Route Table → VPC → Key Pair`로 요약된다. 05-07 원본의 직접 목록은 EIP·EC2·Security Group·VPC·Key Pair이고, 05-08에는 RDS와 자동 생성 Security Group 정리가 추가됐다.
 
 실제 콘솔의 정확한 삭제 가능 순서는 남아 있는 참조 자원에 따라 달라진다. 핵심은 생성 순서를 외우는 것이 아니라, **삭제가 거절되면 아직 무엇이 그 자원을 참조하는지 추적하는 것**이다.
+
+## 실제 결과와 절차의 구분
+
+- 05-07의 5~8교시는 “구성 및 삭제 과정을 두 번 혼자 실습”하라는 지시가 반복되지만 반복별 완료 화면은 없다.
+- 05-08은 RDS를 포함한 삭제 순서와 체크박스·Security Group 규칙 정리 절차를 남겼지만 최종 자원 목록은 없다.
+- 따라서 이 페이지는 안전한 정리 **순서와 확인점**을 보존하며, 모든 자원의 삭제 완료를 수업 결과로 단정하지 않는다.
 
 ## 자주 헷갈리는 점
 

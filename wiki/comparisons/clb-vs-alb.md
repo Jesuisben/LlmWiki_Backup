@@ -1,47 +1,46 @@
 ---
 title: CLB vs ALB
 created: 2026-07-03
-updated: 2026-07-13
+updated: 2026-07-18
 type: comparison
 tags: [aws, backend]
 sources:
   - raw/KoreaICT/7. Ci&CD/2026.05.12(화)/2026.05.12(화).md
   - raw/KoreaICT/7. Ci&CD/Ci&CD 총정리/Ci&CD 총정리.md
-status: growing
-confidence: high
+  - raw/KoreaICT/7. Ci&CD/교육 자료/cloud.03.AWS 교안(이론).pdf
+status: stable
+confidence: medium
 ---
 
 # CLB vs ALB
 
 ## 비교 목적
 
-6. AWS에서는 메뉴와 용어를 확인했고, CLB/ALB 리소스 비교와 ALB·Target Group·HTTPS Listener 구성은 7. CI/CD 2026-05-12에서 실제로 다뤘다. 둘 다 여러 EC2로 요청을 나누지만, HTTP/HTTPS 애플리케이션에서는 ALB의 Listener/Target Group 구조가 핵심이다.
+CLB(Classic Load Balancer)와 ALB(Application Load Balancer)를 같은 완료 상태로 오해하지 않도록, 수업에서 직접 남은 증거와 일반 기능을 분리한다. 05-12 원본에서 CLB는 관리 표의 예정 항목뿐이고, 실제 구성 절차는 ALB·Target Group·Listener·ACM·Alias 쪽에 집중되어 있다.
 
 ## 한눈에 보기
 
-| 항목 | CLB | ALB |
-|---|---|---|
-| 이름 | Classic Load Balancer | Application Load Balancer |
-| 수업 리소스 | `EDU-CLB` | `EDU-ALB`, `EDU-ALB-TG` |
-| 주요 관점 | 기본 로드밸런서 실습 | HTTP/HTTPS 애플리케이션 요청 처리 |
-| 대상 연결 | EC2 중심 | Target Group 중심 |
-| HTTPS | 가능하지만 구조가 단순 | Listener 443 + ACM 인증서 연결 흐름이 명확 |
-| 실무 학습 포인트 | 로드밸런싱의 기초 | path/host 기반 라우팅, Target Group, Health Check |
-| Route 53 연결 | LB DNS 이름을 도메인과 연결 | LB DNS 이름/Alias를 도메인과 연결 |
+| 항목 | CLB | ALB | 근거 수준 |
+|---|---|---|---|
+| 정식 이름 | Classic Load Balancer | Application Load Balancer | 일반 개념 |
+| 05-12 원본에 남은 범위 | 관리 표의 예정 이름·설명 | Target Group·Security Group·ALB·HTTPS Listener·ACM·Alias 구성 절차 | 직접 수업 |
+| 대상 관리 관점 | 기존 세대의 load balancing 모델 | Target Group에 EC2를 등록하고 Listener가 전달 | ALB 쪽만 직접 절차 |
+| HTTP/HTTPS 처리 | 생성·응답 결과 없음 | HTTP/HTTPS Listener와 인증서 연결 절차 | 직접 수업 |
+| routing·상태 확인 | 직접 다루지 않음 | path/host routing과 Health Check는 일반 기능이지만 05-12의 설정값·결과는 없음 | 일반 기능 |
+| 최종 결과 | 생성·응답 모두 미보존 | target health·DNS 조회·HTTP/HTTPS 응답·browser 화면 미보존 | 결과 경계 |
 
 ## 언제 무엇을 쓰는가
 
-- CLB는 “로드밸런서가 두 EC2에 요청을 나눠 보낸다”는 기초 개념을 잡을 때 도움이 된다.
-- ALB는 HTTP/HTTPS 웹서비스에서 도메인, 인증서, Target Group, Listener를 함께 구성할 때 더 중요한 모델이다.
-- 수업의 후반 구조는 Route 53 도메인이 ALB/CLB를 가리키고, Load Balancer가 `EDU-PUBLIC-EC2-2A`, `EDU-PUBLIC-EC2-2C`로 요청을 분산하는 형태다.
+- CLB는 AWS의 이전 세대 load balancer와 ALB 구조를 비교하는 기준으로만 사용한다. 이번 수업에서는 CLB 생성·검증을 했다고 판단할 증거가 없다.
+- ALB는 HTTP/HTTPS 서비스에서 Listener·Target Group·ACM 인증서를 연결하는 구조를 학습할 때 사용한다. 이번 원본은 console 구성 절차를 보존하지만 정상 target이나 실제 응답을 증명하지 않는다.
+- Route 53은 load balancer 종류가 아니라 DNS 서비스다. 05-12의 서비스 접속용 A/Alias는 ALB를 대상으로 하는 절차이며, DNS 조회 또는 browser 결과는 남지 않았다.
 
 ## 헷갈리기 쉬운 포인트
 
-- Load Balancer는 DNS 이름을 가지며, EC2 Public IP를 직접 외우지 않게 해 준다.
-- ALB의 Target Group은 “요청을 보낼 대상 EC2 묶음”이다.
-- Listener는 80/443 같은 포트로 들어온 요청을 어떤 Target Group으로 보낼지 정한다.
-- ACM 인증서는 DNS 검증을 거쳐 발급된 뒤 ALB의 HTTPS Listener에 연결해야 브라우저에서 HTTPS가 동작한다.
-- Load Balancer Security Group이 80/443을 열어도, 뒤쪽 EC2 Security Group이 대상 포트를 허용하지 않으면 요청이 실패할 수 있다.
+- **절차와 결과:** 생성 화면의 입력 순서나 확인 URL은 성공 결과가 아니다. target health, ALB 상태, DNS 조회, HTTP/HTTPS 응답을 각각 확인해야 한다.
+- **Target Group과 ALB:** Target Group은 요청 대상 묶음이고, ALB는 Listener로 받은 요청을 그 묶음에 전달한다. 둘은 대체 관계가 아니다.
+- **ACM과 ALB:** 인증서 요청·DNS 검증과 ALB 443 Listener 연결은 서로 다른 단계다. 원본에는 절차만 있고 발급·응답 화면은 없다.
+- **일반 기능과 직접 수업:** ALB의 path/host routing과 Health Check는 일반 기능이다. 05-12에서 해당 규칙을 구성하거나 정상 결과를 확인했다고 확대하지 않는다.
 
 ## 관련 페이지
 
@@ -54,3 +53,5 @@ confidence: high
 ## 출처
 
 - `raw/KoreaICT/7. Ci&CD/2026.05.12(화)/2026.05.12(화).md`
+- `raw/KoreaICT/7. Ci&CD/Ci&CD 총정리/Ci&CD 총정리.md`
+- `raw/KoreaICT/7. Ci&CD/교육 자료/cloud.03.AWS 교안(이론).pdf`

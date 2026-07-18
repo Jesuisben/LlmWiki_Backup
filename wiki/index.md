@@ -2,7 +2,7 @@
 
 > 이 파일은 `wiki/` 전체의 목차이자 길잡이다.  
 > 질문에 답하거나 새 자료를 ingest할 때 이 파일을 먼저 읽는다.  
-> Last updated: 2026-07-18 | Total pages: 274
+> Last updated: 2026-07-18 | Total pages: 278
 
 ## 사용 방법
 
@@ -65,25 +65,26 @@
 - [[summaries/2026-04-24-linux-users-permissions|2026-04-24 Linux 사용자, 그룹, 권한]] — account file·UID/GID·shell에서 chmod 숫자/기호·chown/chgrp·실행 권한 오류 해결까지 연결한 날
 - [[summaries/2026-04-27-linux-archive-java-alias|2026-04-27 Linux 압축, Java 실행, Git과 웹서버]] — download/archive·alias·Java compile/run·Git remote·Apache/Nginx/UFW로 server 작업을 확장한 날
 - [[summaries/2026-04-28-maven-spring-boot-docker-intro|2026-04-28 Maven, Spring Boot 서버 실행, Docker 입문]] — Maven JAR·VirtualBox/guest port 계층에서 Docker web/DB container와 WordPress–MySQL network로 전환한 날
-- [[summaries/2026-04-29-docker-network-volume-image|2026-04-29 Docker 네트워크, 마운트, 사용자 정의 이미지와 registry]] — MariaDB–Redmine network에서 exec/cp·bind/volume·commit을 거쳐 Docker Hub push/pull까지 연결한 날
+- [[summaries/2026-04-29-docker-network-volume-image|2026-04-29 Docker 네트워크, 마운트, 사용자 정의 이미지와 registry]] — MariaDB–Redmine network에서 exec/cp·bind/volume·commit과 Docker Hub push digest를 확인하고 remote pull/run 명령을 기록한 날
 - [[summaries/2026-04-30-dockerfile-spring-load-balancing|2026-04-30 Dockerfile, Spring Boot 컨테이너와 Nginx 로드 밸런싱]] — build context·JAR image·MySQL 연결과 proxy-net의 upstream/proxy_pass 요청 분배를 구현한 날
-- [[summaries/2026-05-01-docker-compose|2026-05-01 Docker Compose와 다중 service 실행]] — MySQL+Spring Boot·MySQL+WordPress 관계를 YAML로 선언하고 up/down·DB·browser 결과와 시험 경계를 확인한 날
+- [[summaries/2026-05-01-docker-compose|2026-05-01 Docker Compose와 다중 service 실행]] — MySQL+Spring Boot·MySQL+WordPress 관계를 YAML로 선언하고 보존된 `Up`·DB 결과와 결과 미보존 절차를 구분한 날
 - [[summaries/2026-05-04-git-github-sourcetree|2026-05-04 Git 상태 전이, GitHub remote와 SourceTree 협업 입문]] — WorkTree→stage→local→remote와 두 작업자 pull/push·SourceTree·branch 시작을 연결한 날
 - [[summaries/2026-05-06-github-branch-pr-conflict|2026-05-06 GitHub branch, Pull Request와 conflict 해결]] — 팀장·팀원 branch를 PR review·merge하고 master pull·fetch·merge/rebase 충돌을 실습한 날
 - [[summaries/2026-05-06-linux-subject-review|Linux 총정리]] — VM/SSH→CLI/권한→host server→Docker registry·Dockerfile·Compose→GitHub 협업과 AWS/CI/CD 경계를 잇는 복습 허브
-- [[summaries/2026-05-06-aws-cloud-vpc-ec2|2026-05-06 AWS Cloud, VPC, EC2 입문]] — AWS 메뉴, On-Demand, VPC/Subnet/CIDR, Security Group, EC2 개념을 잡기 시작한 날
+- [[summaries/2026-05-06-aws-cloud-vpc-ec2|2026-05-06 AWS Cloud, VPC, EC2 입문]] — AWS 메뉴와 Security Group·Subnet·IPv4/CIDR을 읽고 다음 날 VPC/EC2 실습을 준비한 날
 - [[summaries/2026-05-07-aws-ec2-nginx-rds|2026-05-07 AWS VPC, EC2, EIP와 자원 관리]] — VPC·두 Subnet·IGW·Route Table·Security Group·EC2·EIP·SSH와 자원 해제를 실습한 날
-- [[summaries/2026-05-08-aws-rds-resource-cleanup|2026-05-08 AWS RDS MySQL 연결과 자원 정리]] — ping/ICMP 복구, Nginx, Spring Boot jar, RDS MySQL/JDBC와 정리 흐름을 실습한 날
-- [[summaries/2026-05-08-aws-subject-review|AWS 총정리]] — 비용 관점에서 VPC/EC2/RDS 구성과 의존성 기반 자원 관리를 묶은 복습 허브
+- [[summaries/2026-05-08-aws-rds-resource-cleanup|2026-05-08 AWS RDS MySQL 연결과 자원 정리]] — ping/ICMP 성공 출력과 Nginx·Spring Boot·RDS/JDBC·정리의 명령/미보존 결과를 구분한 날
+- [[summaries/2026-05-08-aws-subject-review|AWS 총정리]] — AWS 3일의 VPC/EC2/RDS·비용 흐름과 실제 성공/절차만 있는 상태를 묶은 복습 허브
 - [[summaries/2026-05-11-cicd-github-actions-spring-boot|2026-05-11 CI/CD, GitHub Actions, Spring Boot 자동 배포]] — `master` push를 Maven CI, Docker Hub image, EC2 container 갱신으로 연결한 날
 - [[summaries/2026-05-12-route53-alb-https-review|2026-05-12 Route 53, ALB, HTTPS 복습과 도메인 배포]] — Hosted Zone/ACM DNS 검증, ALB Target Group·HTTPS Listener, Alias A record 흐름을 복습한 날
 - [[summaries/2026-05-13-terraform-s3-file-upload|2026-05-13 Terraform과 S3 파일 업로드]] — Terraform IaC와 S3 객체·RDS 상품 데이터 분리 흐름을 다룬 날
-- [[summaries/2026-05-14-passwordless-x1280-intro|2026-05-14 Passwordless X1280 소개와 보안 배경]] — 피싱·랜섬웨어·RCE 배경에서 비밀번호 입력을 줄이는 X1280 인증 개념을 배운 날
-- [[summaries/2026-05-15-passwordless-x1280-docker-service|2026-05-15 Passwordless X1280 Docker 통합 서버와 서비스 등록]] — Members 서비스 등록, setting.ap, Docker 통합 서버, Auth 관리자 페이지 설정 흐름
-- [[summaries/2026-05-18-passwordless-x1280-server-spring-sample|2026-05-18 Passwordless 서버 설치와 Spring 샘플 연동]] — X1280 서버와 MariaDB/Spring 샘플 앱에서 등록·로그인·해제를 확인한 날
-- [[summaries/2026-05-19-aam-ape-authentication-filingbox|2026-05-19 인증 기본과 AAM/APE 통합 설치]] — 인증/인가/SSO/상호인증을 구분하고 AAM/APE·DMZ의 라이선스·연동·사용자/인증기 관리 실습
-- [[summaries/2026-05-20-filingbox-giga-mega|2026-05-20 FilingBox GIGA/MEGA와 WORM 스토리지]] — 인증과 분리된 랜섬웨어 대응 NAS/WORM·FilingBox 저장소 보호 실습
-- [[summaries/2026-05-21-passwordless-x1280-rest-api|2026-05-21 Passwordless X1280 REST API와 Postman]] — X1280 REST API를 Postman으로 호출해 사용자 등록 여부 응답 구조를 확인한 날
+- [[summaries/2026-05-14-passwordless-x1280-intro|2026-05-14 Passwordless X1280 소개와 보안 배경]] — 피싱·랜섬웨어·RCE·Zero Trust에서 X1280 필요성으로 이동하되 실행 결과는 없던 개념 첫날
+- [[summaries/2026-05-15-passwordless-x1280-docker-service|2026-05-15 Passwordless X1280 Docker 통합 서버와 서비스 등록]] — Members→Docker 세 서버→WordPress 절차와 일부 상태·미보존 인증 결과를 구분한 날
+- [[summaries/2026-05-18-passwordless-x1280-server-spring-sample|2026-05-18 Passwordless 서버 설치와 Spring 샘플 연동]] — X1280 server→MariaDB→Spring sample→WAR/Tomcat과 등록·로그인·해제 관찰 경계를 연결한 날
+- [[summaries/2026-05-19-aam-ape-authentication-filingbox|2026-05-19 인증 기본과 AAM/APE 통합 설치]] — 인증·인가·IDP·SSO·상호인증에서 AAM/APE/DMZ 조직 사용자·인증기 관리로 확장한 날
+- [[summaries/2026-05-20-filingbox-giga-mega|2026-05-20 FilingBox GIGA/MEGA와 WORM 스토리지]] — 인증과 분리된 NAS/WORM·RO/RW/AO 저장소 보호 절차와 미보존 실행 결과를 구분한 날
+- [[summaries/2026-05-21-passwordless-x1280-rest-api|2026-05-21 Passwordless X1280 REST API와 Postman]] — 7개 POST request 재고 중 등록 여부 JSON 한 건만 당일 직접 결과로 확인한 날
+- [[summaries/2026-05-21-passwordless-subject-review|Passwordless 총정리]] — 05-14~21 X1280·Spring sample·AAM/APE·FilingBox/WORM·REST API를 날짜별 결과 경계와 함께 잇는 복습 허브
 - [[summaries/2026-06-19-python-setup-basic-syntax|2026-06-19 Python 설치와 기본 문법 입문]] — Python/PyCharm 설치, 기본 출력·문자열·형변환·입력·연산자 학습
 - [[summaries/2026-06-22-python-control-flow-collections|2026-06-22 Python 제어문과 컬렉션]] — 조건문·반복문·range·list·tuple 학습
 - [[summaries/2026-06-23-python-dict-comprehension-builtins|2026-06-23 Python dict, comprehension, 내장 함수]] — dict·중첩 리스트·comprehension·zip/sorted 학습
@@ -145,15 +146,14 @@
 - [[concepts/docker-image-container|Docker 이미지와 컨테이너]] — image/container 생명주기, port mapping, 서버 실행 환경 재현의 기본 단위
 - [[concepts/docker-cp-exec-container-files|Docker exec/cp와 컨테이너 파일 다루기]] — 컨테이너 내부 명령 실행과 host↔container 파일 복사 흐름
 - [[concepts/docker-network-volume|Docker 네트워크와 볼륨]] — 컨테이너 간 통신과 데이터/파일 보존을 위한 network, bind mount, volume
-- [[concepts/docker-registry-tag-push-pull|Docker registry tag·push·pull]] — local image를 registry 이름으로 tag·인증·push하고 다른 환경에서 pull/run하는 수동 전달 생명주기
+- [[concepts/docker-registry-tag-push-pull|Docker registry tag·push·pull]] — local image를 login→tag→push하고 다른 환경의 namespace 오류·올바른 명령·미보존 결과를 구분한 수동 전달 생명주기
 - [[concepts/docker-reverse-proxy-load-balancing|Docker reverse proxy와 로드 밸런싱]] — `proxy-net`의 Nginx가 mounted config와 upstream으로 Apache·Nginx backend 응답을 분배한 흐름
-- [[concepts/docker-compose-manifest|Docker Compose manifest]] — MySQL+Spring·MySQL+WordPress의 service 관계와 `up`·DB·browser·`down` 완료 조건을 구분한 YAML 구성
-- [[concepts/dockerfile-vs-compose|Dockerfile vs Docker Compose]] — 04-30 image build recipe와 05-01 다중 service runtime manifest를 선택·공존·완료 조건으로 비교
+- [[concepts/docker-compose-manifest|Docker Compose manifest]] — MySQL+Spring·MySQL+WordPress의 service 관계와 실제 `Up`·DB 결과, 미보존 browser·`down` 결과를 구분한 YAML 구성
 - [[concepts/git-github-collaboration|GitHub 협업 흐름]] — WorkTree→stage→commit→remote와 `animal`·`sport` branch→PR→remote merge→local pull·conflict의 상태별 협업 절차
-- [[concepts/aws-cloud-vpc-networking|AWS Cloud와 VPC 네트워킹]] — Region/AZ/VPC/Subnet/CIDR, IGW, Route Table, Security Group으로 EC2 네트워크를 구성하는 흐름
-- [[concepts/aws-ec2-nginx-spring-deploy|AWS EC2에서 Nginx와 Spring Boot 배포]] — EC2 SSH, Nginx, JDK/Maven, Spring Boot jar 실행, 80→9000 포트 연결 흐름
-- [[concepts/aws-rds-spring-boot|AWS RDS와 Spring Boot 연결]] — RDS MySQL을 만들고 EC2/Spring Boot에서 JDBC로 연결하되 비밀값은 분리해야 하는 흐름
-- [[concepts/aws-resource-lifecycle-cost-management|AWS 자원 생명주기와 비용 관리]] — EIP·EC2·RDS·네트워크 자원의 의존성, 정리 순서, 잔존 비용을 관리하는 흐름
+- [[concepts/aws-cloud-vpc-networking|AWS Cloud와 VPC 네트워킹]] — VPC/Subnet/IGW/Route/SG/EIP 계층과 ICMP 실패→허용→성공을 연결한 네트워크 흐름
+- [[concepts/aws-ec2-nginx-spring-deploy|AWS EC2에서 Nginx와 Spring Boot 배포]] — EC2의 Nginx·JDK/Maven·JAR·80→9000 수동 절차와 미보존 실행 결과를 구분
+- [[concepts/aws-rds-spring-boot|AWS RDS와 Spring Boot 연결]] — RDS MySQL→SG/3306→client/SQL→datasource/JAR 단계와 미보존 DB/JDBC 결과를 구분
+- [[concepts/aws-resource-lifecycle-cost-management|AWS 자원 생명주기와 비용 관리]] — EIP·EC2·RDS·SG·네트워크 의존성 정리 순서와 최종 상태 확인 책임
 - [[concepts/aws-route53-load-balancer-https|AWS Route 53, Load Balancer, HTTPS 흐름]] — 도메인, DNS, ACM 인증서, CLB/ALB, Target Group, Listener를 연결하는 배포 구조
 - [[concepts/ci-cd-automation|CI/CD 자동화]] — GitHub push를 트리거로 빌드·이미지 생성·배포를 반복 가능하게 만드는 흐름
 - [[concepts/github-actions-workflow|GitHub Actions workflow]] — `.github/workflows/*.yml`로 checkout, JDK 설정, Maven build, Docker push 같은 자동화 단계를 정의하는 방식
@@ -197,10 +197,10 @@
 
 - [[concepts/jwt-rs256-key-flow|JWT RS256 키 흐름]] — 개인키 서명과 공개키 검증으로 JWT 신뢰를 구성하는 방식
 
-- [[concepts/passwordless-x1280-auth-flow|Passwordless X1280 인증 흐름]] — QR·앱 승인·외부 인증 서버를 연결하는 Passwordless 로그인 흐름
-- [[concepts/passwordless-qr-app-approval|Passwordless QR/앱 승인 흐름]] — QR 등록과 모바일 앱 승인 상태를 프론트·백엔드가 처리하는 구조
-- [[concepts/spring-boot-passwordless-integration|Spring Boot Passwordless 인증 연동]] — Spring 샘플의 X1280 REST 설정·MariaDB·WAR/Tomcat 배포와 중간 프로젝트 적용 설계를 구분해 연결하는 방식
-- [[concepts/nas-worm-storage-protection|NAS·WORM 저장소 보호]] — Passwordless 과목에서 인증 이후의 데이터 보존·접근 제어 계층으로 다룬 NAS, WORM, RO/RW/AO와 FilingBox 흐름
+- [[concepts/passwordless-x1280-auth-flow|Passwordless X1280 인증 흐름]] — Auth/User Connection/Push Request·모바일 앱의 책임과 등록→인증→해제 상태, JWT·인가 경계를 구분
+- [[concepts/passwordless-qr-app-approval|Passwordless QR/앱 승인 흐름]] — QR 등록·앱 승인·등록 해제의 시작 조건과 완료 상태, 단계 9 polling/callback 경계를 구분
+- [[concepts/spring-boot-passwordless-integration|Spring Boot Passwordless 인증 연동]] — server·MariaDB·sample·Tomcat·REST contract에서 외부 API 성공과 service login 성공을 분리
+- [[concepts/nas-worm-storage-protection|NAS·WORM 저장소 보호]] — 인증·인가·storage operation과 RO/RW/AO/WORM의 보호 책임·미보존 실행 결과를 구분
 
 ## Entities
 
@@ -226,9 +226,9 @@
 - [[entities/docker|Docker]] — 04-28~05-01 image/container에서 network·storage·registry·Dockerfile·proxy·Compose로 확장된 실행환경 재현 platform
 - [[entities/maven|Maven]] — `pom.xml` 기반 수동 package·`target` JAR와 Java runtime·Dockerfile·CI build의 책임을 구분한 build tool
 - [[entities/source-tree|SourceTree]] — 05-04 두 local repository의 stage·commit·push·pull·history·conflict를 Git 상태에 대응한 GUI client
-- [[entities/aws|AWS]] — VPC, EC2, RDS, Route 53, Load Balancer, ACM으로 웹서비스를 클라우드에 배포하는 플랫폼
-- [[entities/amazon-ec2|Amazon EC2]] — Nginx와 Spring Boot를 실행하고 Load Balancer 대상이 된 AWS 가상 서버 서비스
-- [[entities/amazon-rds|Amazon RDS]] — Spring Boot가 JDBC로 연결한 AWS 관리형 MySQL 데이터베이스 서비스
+- [[entities/aws|AWS]] — 05-06~08 VPC·EC2·RDS 직접 수업과 05-12~13 Route 53·ALB·Terraform·S3 후속을 분리한 cloud platform 허브
+- [[entities/amazon-ec2|Amazon EC2]] — Ubuntu·SG·Key Pair·EIP·SSH와 수동 서버 절차를 거쳐 CI/CD 배포·ALB 대상으로 확장된 가상 서버
+- [[entities/amazon-rds|Amazon RDS]] — MySQL endpoint·SG/3306·client/JDBC 절차와 후속 S3/DB 역할 분리를 잇는 관리형 DB
 - [[entities/amazon-route-53|Amazon Route 53]] — 도메인을 Load Balancer와 연결하고 ACM DNS 검증 CNAME을 관리한 AWS DNS 서비스
 - [[entities/amazon-s3|Amazon S3]] — Spring Boot 상품 이미지 같은 업로드 파일을 저장하는 AWS 객체 스토리지 서비스
 - [[entities/python|Python]] — 기본 문법·컬렉션·함수·파일/정규표현식·XML/JSON을 거쳐 Pandas 표 데이터 처리로 이어지는 과정 후반부 학습 언어
@@ -239,8 +239,8 @@
 - [[entities/folium|Folium]] — 좌표 DataFrame을 Marker·HeatMap·GeoJSON 지도 결과로 만드는 Python 라이브러리
 - [[entities/konlpy|KoNLPy]] — Komoran 형태소 분석과 사용자 사전으로 한국어 텍스트를 처리한 라이브러리
 - [[entities/intellij-idea|IntelliJ IDEA]] — Java 첫 project·Run에서 Spring Boot backend Java·properties·계층 작성·실행으로 이어진 IDE
-- [[entities/passwordless-x1280|Passwordless X1280]] — QR 등록·앱 승인·REST API로 비밀번호 없는 인증을 구현하는 X1280 인증 기술
-- [[entities/aam-ape|AAM과 APE]] — AAM/APE/DMZ 통합 설치, 라이선스·연동 설정, 조직 사용자·인증기 관리 실습의 기업형 인증 관리 제품군
+- [[entities/passwordless-x1280|Passwordless X1280]] — 05-14 첫 등장부터 Docker·Spring sample·Postman까지 날짜별 이력과 JWT/AAM/APE/WORM 제품 경계를 잇는 인증 허브
+- [[entities/aam-ape|AAM과 APE]] — 05-19 통합 설치·조직·연동 서비스·사용자·인증기·client 학습 이력을 정리한 기업형 인증 관리 제품군
 
 ## Comparisons
 
@@ -258,12 +258,13 @@
 - [[comparisons/overloading-vs-overriding|오버로딩 vs 오버라이딩]] — 같은 이름의 다중 정의와 상속받은 메서드 재정의의 차이
 - [[comparisons/docker-commit-vs-dockerfile|docker commit vs Dockerfile]] — 변경 container snapshot과 instruction 기반 image build를 재현성·registry 전달·검증 단계로 비교
 - [[comparisons/docker-cp-vs-bind-mount-vs-volume|docker cp vs bind mount vs volume]] — 일회 copy, host path 지속 연결, Docker 관리 storage를 실제 오류·lifecycle로 비교
+- [[concepts/dockerfile-vs-compose|Dockerfile vs Docker Compose]] — 04-30 image build recipe와 05-01 다중 service runtime manifest를 선택·공존·근거 수준으로 비교
 - [[comparisons/git-fetch-vs-pull-vs-clone|git fetch vs pull vs clone]] — 새 local repository, remote-tracking 갱신, 현재 branch 통합의 결과 차이
 - [[comparisons/virtual-machine-vs-docker-container|가상 머신(VM) vs Docker 컨테이너]] — VirtualBox guest OS와 Docker host-kernel process를 실제 중첩 계층·접속·완료 조건으로 비교
 - [[comparisons/host-port-forwarding-vs-docker-port-mapping|호스트 포트 포워딩 vs Docker 포트 매핑]] — VirtualBox NAT·guest iptables/UFW와 Docker host→container publish를 층별로 구분
 - [[comparisons/sudo-vs-sudo-su-vs-root-session|sudo vs sudo su - vs root session]] — 한 명령의 관리자 권한과 root login shell·지속 session의 선택·소유권 위험 비교
-- [[comparisons/ec2-vs-rds|EC2 vs RDS]] — AWS에서 애플리케이션 서버와 관리형 데이터베이스의 역할·관리 범위·보안 경계 차이
-- [[comparisons/clb-vs-alb|CLB vs ALB]] — AWS 로드밸런서의 기초형과 Target Group/Listener 중심 HTTP/HTTPS 애플리케이션형 구조 차이
+- [[comparisons/ec2-vs-rds|EC2 vs RDS]] — EC2 process 실행과 RDS data 계층의 역할·관리 범위·endpoint/3306·비용·미보존 결과 경계 비교
+- [[comparisons/clb-vs-alb|CLB vs ALB]] — CLB 예정 항목과 ALB 구성 절차를 구분하고 일반 기능·직접 결과 경계를 비교
 - [[comparisons/mpa-vs-spa|MPA vs SPA]] — 03-31 Fruit Thymeleaf HTML→REST/React 전환으로 rendering 구조를 비교하고 Session/JWT 인증 축과 분리
 - [[comparisons/props-vs-state|props vs state]] — Product form·Cart 선택/수량·Paging에서 부모 전달과 local 변경을 callback·setter·API·DB 저장과 구분
 - [[comparisons/library-vs-framework|Library vs Framework]] — jQuery 호출과 Bootstrap 규칙을 같은 교육 화면에서 함께 사용하며 제어 주체를 비교
@@ -293,8 +294,11 @@
 ## Meta
 
 <!-- 위키 운영 문서, lint 리포트, 토픽맵 등 -->
+- [[_meta/passwordless-rehighquality-inventory-plan|Passwordless 내용 재고도화 전수 재고와 실용형 실행 계획]] — R01~R07·P01~P11·J01~J02 raw 20개와 직접 지식 페이지 15개를 매핑하고 Summary·Concept·Entity 13개를 처리한 단계 8 세션 1 기준선
+- [[_meta/cicd-rehighquality-inventory-plan|CI/CD 내용 재고도화 전수 재고와 실용형 실행 계획]] — R01~R04·P01~P04 raw 8개와 직접 지식 페이지 19개를 매핑하고 Summary·Concept·Entity 18개를 고도화한 단계 7 세션 1 기준선
+- [[_meta/aws-rehighquality-inventory-plan|AWS 내용 재고도화 전수 재고와 실용형 실행 계획]] — R01~R04·P01~P05 raw 9개와 직접 지식 페이지 12개를 매핑하고 핵심 Summary·Concept·Entity를 고도화한 단계 6 세션 1 기준선
 - [[_meta/wiki-user-study-guide|LLM Wiki 사용자 학습 가이드]] — 과목·날짜·개념·프로젝트·면접 목적에 따라 어떤 페이지를 어떤 순서로 공부할지 안내하는 사용자용 시작 문서
-- [[_meta/linux-rehighquality-inventory-plan|Linux 내용 재고도화 전수 재고와 실행 분할 계획]] — R01~R11·P01~P10·I01~I03 raw 24개와 직접 지식 페이지 35개·후속 경계 15개를 재고화하고 10개 세션으로 분할한 단계 5 기준선
+- [[_meta/linux-rehighquality-inventory-plan|Linux 내용 재고도화 전수 재고와 실행 분할 계획]] — R01~R11·P01~P10·I01~I03 raw 24개와 최종 직접 지식 페이지 39개·후속 경계 15개를 10개 세션에서 고도화·검증해 단계 5를 완료한 기록
 - [[_meta/frontend-backend-rehighquality-inventory-plan|FrontEnd_BackEnd 내용 재고도화 전수 재고와 실행 분할 계획]] — R01~R19·P01~P10·I01~I05와 지식 페이지 59개를 16개 세션으로 고도화·검증해 단계 4 고정점을 완료한 기록
 - [[_meta/wiki-content-rehighquality-work-plan|LLM Wiki 내용 재고도화 작업 계획]] — 과목 하나를 한 세션에서 내용 감사·수정·검증하고 다음 세션 프롬프트로 인계하는 실행 계획
 - [[_meta/txt-to-md-conversion-work-plan|TXT→MD 남은 과목 변환 작업 인계]] — 5~8과목 날짜별 변환·총정리 작성, 9과목 민감정보 탐지, 10과목 Python 제한 범위를 새 세션에서도 이어가기 위한 작업 인계

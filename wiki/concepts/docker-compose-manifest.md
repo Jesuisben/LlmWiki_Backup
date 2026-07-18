@@ -1,7 +1,7 @@
 ---
 title: Docker Compose manifest
 created: 2026-07-02
-updated: 2026-07-16
+updated: 2026-07-18
 type: concept
 tags: [linux, docker, backend]
 sources:
@@ -57,10 +57,10 @@ Spring datasource host는 `localhost`나 `mysql-ctr`가 아니라 service 이름
 2. **처리**: project 이름을 지정한 `up -d`가 MySQL image를 받고 project network·volume과 두 container를 생성했다.
 3. **상태 확인**: 생성 출력과 container 상태 목록에서 두 container가 `Up`인지 확인했다.
 4. **DB 확인**: MySQL prompt에서 DB를 선택해 product row를 입력·commit·조회했다.
-5. **application 확인**: image가 보이지 않을 때 Spring container에 image directory를 복사한 뒤 browser 9000 응답을 확인했다.
-6. **정리**: 같은 manifest로 `down`해 container·network를 내리고 image·volume 잔존을 구분했다.
+5. **application 확인 절차**: image가 보이지 않을 때 Spring container에 image directory를 복사하고 browser 9000 확인 URL을 기록했다. 실제 화면 결과는 미보존이다.
+6. **정리 절차**: 같은 manifest의 `down`과 image·volume 확인·삭제 명령을 기록했다. 실행 결과는 미보존이다.
 
-원본에는 이 날짜의 `docker compose logs` 실행이 없다. container `Up`, DB row 조회, browser 응답을 각각 확인했지만, log 검증은 04-30 실습에서 수행한 것으로 날짜를 섞지 않는다.
+원본에는 이 날짜의 `docker compose logs` 실행이 없다. container `Up`과 DB row 조회 결과는 보존됐지만 browser와 `down` 이후 결과는 보존되지 않았다. log 검증도 04-30에는 기준·명령만 있고 실제 출력은 없으므로 날짜와 완료 상태를 섞지 않는다.
 
 ## 실습 2: MySQL + WordPress
 
@@ -78,7 +78,7 @@ Spring datasource host는 `localhost`나 `mysql-ctr`가 아니라 service 이름
 
 제공 manifest는 들여쓰기뿐 아니라 요구사항과 다른 network·설정값이 있어 두 종류의 수정본을 만들었다고 기록돼 있다. 요구사항 표의 WordPress network에는 `networks01`이라는 불일치도 있었고, 최종 수정본은 MySQL과 같은 `network01`을 사용했다. **YAML 문법 오류 수정**과 **실행 요구사항 값 수정**은 서로 다른 범위다.
 
-`up -d` 뒤 browser 8085에서 WordPress를 확인했고 `down`으로 container·network를 내렸다. 다만 원본의 별도 volume 삭제 명령은 manifest의 실제 volume 이름과 다른 이름을 사용하므로, 그 명령으로 해당 project volume이 삭제됐다고 확정하지 않는다.
+`up -d`, browser 8085 확인 URL, `down` 명령이 순서대로 기록됐다. 그러나 생성·상태 출력, WordPress 화면, `down` 결과는 보존되지 않았다. 별도 volume 삭제 명령도 manifest의 실제 volume 이름과 다른 이름을 사용하므로 해당 project volume이 삭제됐다고 확정하지 않는다.
 
 ## 완료 조건을 한 번에 묶지 않기
 

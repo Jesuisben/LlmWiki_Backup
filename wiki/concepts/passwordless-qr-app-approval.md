@@ -1,7 +1,7 @@
 ---
 title: Passwordless QR/앱 승인 흐름
 created: 2026-07-03
-updated: 2026-07-13
+updated: 2026-07-18
 type: concept
 tags: [auth, frontend, backend, project]
 sources:
@@ -17,64 +17,56 @@ confidence: high
 
 ## 정의
 
-Passwordless QR/앱 승인 흐름은 사용자가 브라우저에 비밀번호를 입력하는 대신, 모바일 앱에서 등록 QR을 스캔하거나 로그인 승인 요청을 확인해 인증을 완료하는 절차다.
+QR/앱 승인 흐름은 계정과 모바일 인증기를 **등록**하고, 이후 로그인 요청을 앱에서 **확인·승인**하며, 필요하면 연결을 **해제**하는 세 상태를 구분하는 Passwordless 사용자 경험이다.
 
 ## 왜 중요한가
 
-수업 샘플에서는 QR 등록, 앱 승인, 등록 해제와 결과 확인을 다뤘다. React polling·callback·세부 상태 화면 설계는 중간 프로젝트 적용 가이드에서 확장한 구현 관점이므로, 날짜 원본의 직접 실습과 구분한다.
+화면에서는 모두 Passwordless 버튼으로 보이기 쉽지만 server 상태는 다르다. 등록 전 사용자에게 바로 승인 요청을 보내거나, 이미 등록된 사용자를 다시 등록시키거나, 대기 중 요청을 로그인 실패로 처리하면 흐름이 꼬인다. UI는 현재 상태와 다음 행동을 분명히 보여줘야 한다.
 
-## 핵심 설명
+## 세 흐름의 책임
 
-### 등록 흐름
+| 흐름 | 시작 조건 | 사용자 행동 | 완료 조건 |
+|---|---|---|---|
+| 등록 | 인증기 미등록 | QR을 앱으로 읽고 계정 연결 확인 | server가 등록 상태를 반환 |
+| 로그인 승인 | 인증기 등록 | 앱에서 요청 출처·내용 확인 후 승인·거절 | 승인 결과를 application이 확인 |
+| 해제 | 인증기 등록 | 연결 해제 요청 확인 | server가 미등록 상태로 전환 |
 
-```text
-사용자 ID 입력
-→ 등록 요청
-→ 인증 서버가 등록용 QR/데이터 생성
-→ 웹 애플리케이션이 QR 표시
-→ 사용자가 X1280 앱으로 QR 스캔
-→ 앱에 서비스/계정 등록
-→ 서버가 등록 완료 상태 확인
-```
+05-15 WordPress와 05-18 Spring 샘플은 위 순서를 화면에서 따라갔다. 05-18에는 이 샘플에서 Passwordless 등록 뒤 기존 비밀번호 로그인이 달라지고, 해제 뒤 일반 로그인을 다시 시도한 관찰이 있다. 제품 전체의 보편 동작으로 일반화하지 않는다.
 
-### 로그인 승인 흐름
+## 결과 상태를 읽는 법
 
-```text
-사용자 ID 입력
-→ Passwordless 로그인 요청
-→ 인증 서버가 앱 승인 요청 생성
-→ 사용자가 모바일 앱에서 요청 출처/내용 확인
-→ 승인 또는 거절
-→ 애플리케이션이 결과 확인
-→ 성공 시 서비스 로그인 처리로 연결
-```
+- **미등록:** 등록 flow로 안내한다. password 오류가 아니다.
+- **대기:** 모바일 사용자의 확인을 기다리는 상태다. 당장 실패로 단정하지 않는다.
+- **승인:** 외부 인증 결과가 성공했다는 뜻이다. 서비스 session/JWT 생성은 다음 책임이다.
+- **거절·취소·timeout:** 서로 다른 사용자 경험과 재시도 정책이 필요하지만, 8과목 날짜 원본에는 이 모든 상태의 실제 response가 보존돼 있지 않다.
 
-### 해제 흐름
+## 직접 수업과 후속 프로젝트 경계
 
-등록 해제는 사용자 계정과 앱 인증기 연결을 끊는 작업이다. 실습에서는 Passwordless 등록 후 일반 비밀번호 로그인이 제한되는 사례가 있었기 때문에, 해제 흐름은 비밀번호 로그인 복귀나 재등록 테스트에 중요하다.
-
-## 수업 예시
-
-- 2026-05-15에는 WordPress plugin 실습에서 Passwordless Reg/Unreg, QR 코드 앱 등록, Passwordless 로그인 확인 흐름을 다뤘다.
-- 2026-05-18에는 Spring 샘플 웹서비스에서 계정 생성, Passwordless 등록, Passwordless 로그인, 해제, 일반 로그인 복귀를 확인했다.
-- 중간 프로젝트 적용 가이드에서는 React 로그인 페이지에 Passwordless 옵션, 등록/해제 UI, result polling을 붙이는 흐름으로 확장된다. 이는 8과목 날짜 원본의 직접 구현이 아니라 후속 프로젝트 설계다.
+8과목에서 직접 확인한 것은 WordPress·Spring 샘플의 등록/승인/해제 절차와 05-21 등록 여부 API response다. React polling·callback, 상세 loading/error 화면, timeout 처리와 JWT 연결은 단계 9 중간 프로젝트 가이드의 확장 설계다. 유용한 설계라고 해서 05-15·05-18 직접 구현 결과로 쓰지 않는다.
 
 ## 자주 헷갈리는 점
 
-- QR은 “로그인 성공 표시”가 아니라 등록 또는 인증 요청을 앱으로 넘기기 위한 매개다.
-- 앱 승인을 기다리는 동안 프론트는 대기 상태를 보여줘야 하고, 백엔드는 결과 확인 API 또는 callback 흐름을 처리해야 한다.
-- 사용자가 앱에서 거절하거나 timeout이 나면 로그인 실패와 다른 상태로 구분해 안내하는 것이 좋다.
+- QR image 자체가 인증 결과는 아니다. 등록 데이터를 앱으로 전달하는 매개다.
+- 앱에 계정이 보인다는 사실과 서비스 application이 로그인 상태를 만든 것은 다르다.
+- 등록 해제는 단순 logout이 아니다. 계정과 인증기의 연결 상태를 바꾼다.
+- 승인 request를 보냈다는 사실과 사용자가 승인했다는 결과는 다르다.
+
+## 선행·후속 연결
+
+- 선행: [[summaries/2026-05-14-passwordless-x1280-intro|X1280 소개와 상호인증 배경]].
+- 함께 보기: [[concepts/passwordless-x1280-auth-flow|Passwordless X1280 인증 흐름]]과 [[summaries/2026-05-21-passwordless-x1280-rest-api|REST API 상태 확인]].
+- 후속: 단계 9에서 React 화면·Spring 상태 처리와 기존 JWT 로그인을 실제 프로젝트 관점으로 판단한다.
 
 ## 관련 개념
 
-- [[concepts/passwordless-x1280-auth-flow|Passwordless X1280 인증 흐름]]
 - [[concepts/spring-boot-passwordless-integration|Spring Boot Passwordless 인증 연동]]
 - [[entities/passwordless-x1280|Passwordless X1280]]
-- [[concepts/react-typescript-basics|React와 TypeScript 기본]]
+- [[comparisons/passwordless-vs-password-login|Passwordless 로그인 vs 비밀번호 로그인]]
+- [[summaries/2026-05-21-passwordless-subject-review|Passwordless 총정리]]
 
 ## 출처
 
 - `raw/KoreaICT/8. Passwordless/2026.05.15(금)/2026.05.15(금).md`
 - `raw/KoreaICT/8. Passwordless/2026.05.18(월)/2026.05.18(월).md`
 - `raw/KoreaICT/8. Passwordless/교육 자료/Passwordless 강의자료_Docker_ICT학원교육_20260514.pdf`
-- `raw/KoreaICT/9. 중간 프로젝트 공부/패스워드리스 적용/중간 프로젝트 패스워드리스 적용 가이드.md`
+- `raw/KoreaICT/9. 중간 프로젝트 공부/패스워드리스 적용/중간 프로젝트 패스워드리스 적용 가이드.md` — 단계 9 후속 설계

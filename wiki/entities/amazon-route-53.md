@@ -1,7 +1,7 @@
 ---
 title: Amazon Route 53
 created: 2026-07-03
-updated: 2026-07-13
+updated: 2026-07-18
 type: entity
 tags: [aws, backend]
 sources:
@@ -19,7 +19,7 @@ Amazon Route 53은 AWS의 DNS 서비스다. 도메인 이름을 IP 주소나 AWS
 
 ## 이 위키에서의 맥락
 
-6. AWS에서는 Route 53 메뉴만 확인했고, 실제 도메인 등록기관 NS 연결, ACM DNS 검증, ALB Alias record 구성은 7. CI/CD의 2026-05-12에 수행했다.
+6. AWS에서는 Route 53 메뉴만 확인했고, 도메인 등록기관 NS 연결, ACM DNS 검증, ALB Alias record 구성 절차는 7. CI/CD의 2026-05-12에 기록했다. 실제 DNS 전파·browser 응답 결과는 보존되지 않았다.
 
 ## 핵심 기능 / 특징
 
@@ -32,7 +32,7 @@ Amazon Route 53은 AWS의 DNS 서비스다. 도메인 이름을 IP 주소나 AWS
 
 ## 학습 이력
 
-- [[summaries/2026-05-12-route53-alb-https-review|2026-05-12]]: Route 53 hosted zone, 도메인 등록기관 NS 변경, ACM DNS 검증 CNAME, 발급된 인증서를 연결한 ALB HTTPS Listener, Load Balancer Alias A record 연결.
+- [[summaries/2026-05-12-route53-alb-https-review|2026-05-12]]: hosted zone, 등록기관 NS 변경, ACM DNS 검증 CNAME, HTTPS Listener 인증서, Load Balancer Alias A record의 구성 순서를 학습. 확인 URL은 있으나 응답 내용은 미보존.
 
 ## 관련 개념
 
@@ -44,3 +44,4 @@ Amazon Route 53은 AWS의 DNS 서비스다. 도메인 이름을 IP 주소나 AWS
 ## 출처
 
 - `raw/KoreaICT/7. Ci&CD/2026.05.12(화)/2026.05.12(화).md`
+- `raw/KoreaICT/7. Ci&CD/Ci&CD 총정리/Ci&CD 총정리.md`

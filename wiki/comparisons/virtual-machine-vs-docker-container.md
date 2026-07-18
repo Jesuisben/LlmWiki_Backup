@@ -78,6 +78,7 @@ MobaXterm은 Ubuntu guest의 OpenSSH service에 접속하는 client이고, Docke
 
 - [[summaries/2026-04-22-linux-install-ssh-cli|2026-04-22 Linux 설치·SSH·CLI]]
 - [[summaries/2026-04-28-maven-spring-boot-docker-intro|2026-04-28 Maven·Spring Boot·Docker 입문]]
+- [[summaries/2026-05-07-aws-ec2-nginx-rds|2026-05-07 AWS VPC·EC2·EIP]]
 - [[concepts/docker-install-permission-setup|Docker 설치와 권한 설정]]
 - [[concepts/docker-image-container|Docker 이미지와 컨테이너]]
 - [[entities/linux|Linux]]
