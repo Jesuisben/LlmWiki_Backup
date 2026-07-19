@@ -1,7 +1,7 @@
 ---
 title: Passwordless X1280 인증 흐름
 created: 2026-07-03
-updated: 2026-07-18
+updated: 2026-07-19
 type: concept
 tags: [auth, project, backend, frontend, spring-boot]
 sources:
@@ -44,7 +44,7 @@ FrontEnd_BackEnd 수업의 기존 로그인은 email/password를 검증하고 JW
 2. **등록:** 등록되지 않은 계정과 모바일 인증기를 QR 등으로 연결한다.
 3. **인증 요청:** 등록된 사용자에게 앱 승인 요청을 보낸다.
 4. **결과 확인:** 승인·거절·대기·취소 같은 결과를 확인한다.
-5. **서비스 로그인 연결:** 성공 결과를 서비스의 session/JWT·회원 상태와 연결한다. 이 단계 전체는 8과목 샘플에서 구조를 배웠고, 중간 프로젝트 구현은 단계 9 후속이다.
+5. **서비스 로그인 연결:** 성공 결과를 서비스의 session/JWT·회원 상태와 연결한다. 8과목에서는 샘플 구조를 배웠고, 단계 9 가이드에는 Member 상태·REST client·DTO·Service·Controller·SecurityConfig·React polling snippet이 제시된다. 독립 project source와 runtime 통합 결과는 보존되지 않았다.
 6. **등록 해제:** 계정과 인증기 연결을 끊어 재등록 또는 일반 로그인 복귀 조건을 만든다.
 
 ## 수업에서의 등장
@@ -56,7 +56,11 @@ FrontEnd_BackEnd 수업의 기존 로그인은 email/password를 검증하고 JW
 
 ## 직접 수업과 후속 설계 경계
 
-05-15·05-18·05-21은 서비스 등록, server 구성, 샘플 application, Postman API를 직접 다룬다. React polling·callback, Member 상태 column, DTO·Service·Controller·SecurityConfig, JWT/session 발급을 포함한 실제 프로젝트 orchestration은 `raw/KoreaICT/9. 중간 프로젝트 공부/`의 후속 설계다. 이 페이지는 그 연결을 안내하지만 단계 8 직접 구현으로 소급하지 않는다.
+05-15·05-18·05-21은 서비스 등록, server 구성, 샘플 application, Postman API를 직접 다룬다. 단계 9 문서는 React polling, Member 상태 column, REST client·DTO·Service·Controller·SecurityConfig를 작성하는 구체 snippet까지 확장한다. 원격 shell·인증서·container 파일 출력, 외부 REST 경로의 거부 응답, Spring MIME 처리 실패 관찰도 raw에 남아 있다. 이는 인프라 도달과 초기 연동 문제의 부분 증거이며 최종 인증 성공은 아니다. 독립 repository file·build, MIME 수정 후 성공 응답, 모바일 승인, JWT/session, protected endpoint authorization은 미보존이고 외부 callback 구현도 없다.
+
+## 단계 9에서 남은 신뢰 결속
+
+외부 응답의 승인 상태 하나만으로 project JWT를 발급하면 안 된다. protocol 성공·상태 코드, 요청 사용자와 응답 사용자, hash·random, server-side challenge/session 소유권, 만료를 함께 검증해야 “이 browser가 시작한 이 요청의 승인 결과”라고 신뢰할 수 있다. 공개 endpoint에는 rate limit·사용자 존재 노출 방지·재인증·요청 만료도 필요하다.
 
 ## 자주 헷갈리는 점
 
@@ -65,6 +69,7 @@ FrontEnd_BackEnd 수업의 기존 로그인은 email/password를 검증하고 JW
 - **API 처리 성공 = 인증기 등록됨:** `result`와 `data.exist`는 서로 다른 층위의 상태다.
 - **서비스 credential = 사용자 password:** 서비스 서버가 Auth Server와 통신하기 위한 비밀값이며 사용자 credential과 다르다.
 - **인증 성공 = 인가 완료:** 성공한 사용자가 어떤 endpoint·data에 접근할지는 [[comparisons/authentication-vs-authorization|인증 vs 인가]]의 별도 판단이다.
+- **polling = callback:** 아니다. 단계 9 raw에는 React polling 구현안이 있고 외부 server→Spring callback은 없다.
 
 ## 관련 개념
 

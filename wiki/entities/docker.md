@@ -1,7 +1,7 @@
 ---
 title: Docker
 created: 2026-07-02
-updated: 2026-07-18
+updated: 2026-07-19
 type: entity
 tags: [linux, docker, backend]
 sources:
@@ -11,6 +11,8 @@ sources:
   - raw/KoreaICT/5. Linux/2026.05.01(금)/2026.05.01(금).md
   - raw/KoreaICT/5. Linux/Linux 총정리/Linux 총정리.md
   - raw/KoreaICT/5. Linux/교육 자료/docker image를 docker hub에 업로드 하기.md
+  - raw/KoreaICT/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md
+  - raw/KoreaICT/9. 중간 프로젝트 공부/패스워드리스 적용/중간 프로젝트 패스워드리스 적용 가이드.md
 status: growing
 confidence: high
 ---
@@ -115,6 +117,7 @@ Compose `up`, DB readiness, application/browser 성공, `down`, volume/image 삭
 - AWS EC2는 cloud VM과 network/security resource 위에서 container를 실행하는 별도 환경이다.
 - CI/CD는 GitHub push를 trigger로 test/build, registry push, server 갱신을 자동화한다. Linux 수업의 수동 push가 곧 workflow 성공을 뜻하지 않는다.
 - Passwordless·중간 프로젝트에서 Docker/Compose를 사용해도 해당 제품 구성과 application 통합 결과는 후속 수업에 귀속한다.
+- 단계 9 두 가이드는 backend/frontend·database와 Passwordless server를 container로 배치하는 명령·Dockerfile·workflow snippet을 제시한다. 이 raw 폴더에는 실제 image, digest, container state, log가 없으므로 build·push·run·application 성공은 확정하지 않는다.
 
 ## 프로젝트·면접에서 설명할 관점
 
@@ -141,3 +144,5 @@ Compose `up`, DB readiness, application/browser 성공, `down`, volume/image 삭
 - `raw/KoreaICT/5. Linux/2026.05.01(금)/2026.05.01(금).md`
 - `raw/KoreaICT/5. Linux/Linux 총정리/Linux 총정리.md`
 - `raw/KoreaICT/5. Linux/교육 자료/docker image를 docker hub에 업로드 하기.md` — 수동 registry 절차와 credential 저장 경고의 보조자료
+- `raw/KoreaICT/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md` — application image·CI/CD·server container 후속 설계
+- `raw/KoreaICT/9. 중간 프로젝트 공부/패스워드리스 적용/중간 프로젝트 패스워드리스 적용 가이드.md` — 인증 server container·TLS 후속 설계

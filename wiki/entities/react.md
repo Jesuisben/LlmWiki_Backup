@@ -1,7 +1,7 @@
 ---
 title: React
 created: 2026-07-02
-updated: 2026-07-16
+updated: 2026-07-19
 type: entity
 tags: [react, typescript, frontend]
 sources:
@@ -22,6 +22,8 @@ sources:
   - raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.17(금)/2026.04.17(금).md
   - raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.20(월)/2026.04.20(월).md
   - raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.21(화)/2026.04.21(화).md
+  - raw/KoreaICT/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md
+  - raw/KoreaICT/9. 중간 프로젝트 공부/패스워드리스 적용/중간 프로젝트 패스워드리스 적용 가이드.md
 status: growing
 confidence: high
 ---
@@ -83,6 +85,7 @@ React의 state/event와 조회 시점 원리는 [[concepts/react-form-state-even
 - 선행: [[entities/html|HTML]], [[entities/css|CSS]], [[entities/javascript|JavaScript]], [[concepts/javascript-dom|JavaScript와 DOM]]에서 정적 구조와 직접 DOM 변경을 배웠다.
 - 과목 내부: Fruit의 작은 component/state 왕복이 Product·Cart·Order의 배열·form·role UI와 Paging/Search metadata로 확장됐다.
 - 후속: Linux/AWS/CI/CD는 주로 Spring Boot 배포를 다뤘고, 중간 프로젝트에서 React UI를 실제 서비스 화면으로 확장한다. Passwordless는 별도 인증 기술이므로 이 과목의 JWT UI와 합치지 않는다.
+- 단계 9 가이드는 환경별 API/proxy, frontend Dockerfile·workflow, multipart file UI와 Passwordless 선택·등록/해제·polling snippet을 제시한다. 독립 TypeScript/CSS source, build artifact, browser/network 결과가 없으므로 화면 통합 완료로 확정하지 않는다.
 
 ## 날짜별 학습 이력
 
@@ -108,3 +111,5 @@ React의 state/event와 조회 시점 원리는 [[concepts/react-form-state-even
 
 - `raw/KoreaICT/4. FrontEnd_BackEnd/2026.03.30(월) - 시작/2026.03.30(월) - 시작.md`
 - `raw/KoreaICT/4. FrontEnd_BackEnd/2026.03.31(화)/2026.03.31(화).md`부터 `raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.21(화)/2026.04.21(화).md`까지 React 구현이 등장한 날짜 MD
+- `raw/KoreaICT/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md`
+- `raw/KoreaICT/9. 중간 프로젝트 공부/패스워드리스 적용/중간 프로젝트 패스워드리스 적용 가이드.md`

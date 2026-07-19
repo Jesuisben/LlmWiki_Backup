@@ -13,6 +13,56 @@
 
 ## 현재 로그
 
+## [2026-07-19] update | Python 계획 Meta 비동기 전수 감사 정정
+
+- 정정 사유: 계획 세션 종료 뒤 도착한 raw·직접 페이지·경계 페이지 병렬 전수 감사 결과를 기존 Meta 분류와 대조해, 휴리스틱 초안의 직접 페이지 분류와 경계 후보가 과도했음을 확인했다.
+- 직접 페이지: 총 32개와 `summary 15 / concept 9 / entity 7 / comparison 1 / query 0`은 유지한다. 페이지별 내용을 전수 판독한 단일 분류는 `유지 2 / 부분 보강 13 / 전면 재작성 17 / 통합 0 / 근거 부족 0`으로 정정했다.
+- 비직접 경계: 탐색 허브·과목 전체 허브·키워드 언급·책임 불명확 페이지를 제외해 `선행 5 / 교차 3 / 후속 0`, 총 8개로 정정했다. 직접 페이지 32개와 합산하지 않는다.
+- 후보 벡터: Concept 3개(예외 처리·정규표현식·XML/JSON), Entity 1개(BeautifulSoup), Comparison 3개(`loc/iloc`, `concat/merge/pivot`, `agg/transform`), Query 0개로 보수화했다.
+- 증거 보강: Python source 9개 AST 통과, R01의 오류→수정→정상 결과, CSV 구조 이상과 R04·R06·R09·R13 code 불일치 후보, Jupyter claim-level source 후보를 Meta에 기록했다. 실제 식별값은 재출력하지 않았다.
+- 상태: raw 시작·종료 manifest 불일치와 최초 분류 정정 이력 때문에 계획 세션과 단계 10 전체는 계속 미완료다. 기존 지식 본문·raw·상위 완료 표는 수정하지 않았고 Git commit·push도 수행하지 않았다.
+
+## [2026-07-19] update | Python 내용 재고도화 재고·분할 계획 미완료
+
+- 범위: 단계 10 계획 세션으로 `raw/KoreaICT/10. Python` 실제 파일 69개와 frontmatter source 기준 직접 지식 페이지 32개를 전수 재계산했다. 기존 지식 본문과 상위 단계 완료 표는 수정하지 않았다.
+- raw 재고: Markdown 16·PDF 3·CSV 31·Python source 9·bytecode 6·PNG 4, 총 69개다. notebook·독립 JSON/XML/HTML·config·archive는 0개이며, 0바이트 3개와 byte-identical 중복 2그룹을 확인했다.
+- 직접 페이지: `summary 15 / concept 9 / entity 7 / comparison 1 / query 0`, 총 32개다. raw source union은 날짜 노트 14개와 총정리 1개인 15/69이고, 나머지 54개는 교육자료·dataset·source·generated artifact로 역할을 분류했다.
+- 증거 경계: code·text output·Traceback·dataset·DataFrame/통계/그래프·CSV·이미지·bytecode와 현재 raw에 없는 notebook·saved map HTML·독립 API/browser 결과를 분리했다. 직접 page fence 16개 중 원문 연속 일치 3개, 재판정 후보 13개를 기록했다.
+- 실행 분할: 계획을 포함해 Summary 전반, Summary 후반·총정리, Python core Concept, Pandas·외부 데이터 Concept, Entity, Comparison·Query, 전체 고정점의 8개 세션을 제안했다.
+- 보류 사유: 조사 중 기존 modified 상태였던 `2026.07.01(수).md`의 bytes·줄·SHA-256이 바뀌어 시작 manifest와 최신 manifest가 달라졌다. Agent는 raw 쓰기를 수행하지 않았지만 raw 안정성 게이트를 충족하지 못했으므로 계획 세션과 단계 10 전체를 완료로 선언하지 않았다.
+- 기록: [[_meta/python-rehighquality-inventory-plan|Python 내용 재고도화 전수 재고와 실행 분할 계획]]을 생성하고 index `Total pages`를 280으로 갱신했다. Git commit·push는 수행하지 않았다.
+
+## [2026-07-19] lint | 중간 프로젝트 공부 실용형 세션 2 전체 고정점·단계 9 완료
+
+- 범위: 단계 9 두 번째이자 최종 실행 단위로 기존 `passwordless-vs-password-login`을 고도화하고 HS256/RS256, workflow 정의/실행 결과, polling/callback, local file/object storage, 실제 장애 Query 후보를 전수 판정한 뒤 직접 15페이지와 raw 4개 전체 고정점을 처리했다. 단계 10 Python은 시작하지 않았다.
+- Comparison·Query: 기존 로그인 Comparison은 비밀번호/JWT 기준선과 Passwordless 외부 승인 뒤 application session/JWT·인가 책임, 단계 9 polling·callback 부재·challenge/session 결속을 비교하는 독립 책임이 있어 유지·고도화했다. HS256/RS256·workflow 정의/실행·local/object storage는 기존 Concept·Entity·Summary에 흡수했고, polling/callback은 raw가 polling만 제공하므로 신규 기각했다. 실패 관찰은 있으나 원인→수정→재검증 이력이 없어 장애 Query도 만들지 않았다.
+- 증거 경계: embedded snippet·부분 출력·관찰 서술·실패 관찰·조건/지시·독립 end-to-end 결과를 분리했다. 관리형 DB 계획/VM DB container, DB URL 주입/application 소비, test 생략/test 성공, object 삭제 설명 충돌, Secret 등록/전달 불일치, polling/timeout/error, 승인 결과/JWT·인가 경계를 유지했다.
+- 구조·보안: 직접 페이지는 `summary 1 / concept 6 / entity 7 / comparison 1 / query 0`, 총 15개이며 raw source union 4/4다. frontmatter·source·본문 출처·tag·type·link·index·고립·placeholder·빈 sources·장문·needs-review/low-confidence·fence 오류 0개이고, 변경 추가행의 실제 민감 식별값 노출 지표도 0개다.
+- 고정점: actual page 수와 index `Total pages`는 279/279다. raw는 4개·170,194 bytes·Markdown 4,481줄이며 시작·종료 scoped status/diff 0건, 정렬 SHA-256 manifest digest `1d77c60dbfa22cf5f9173b897b1e0ddb0906b98ff9b543a1ba476d7b13d2a50f`가 세션 1 최종값과 동일하다. scoped `git diff --check`를 통과했고 commit·push는 하지 않았다.
+- 단계 상태: 단계 9 중간 프로젝트 공부를 최종 완료로 확정했다. 다음 작업 단위는 단계 10 Python의 실제 재고·직접 페이지 범위를 먼저 확정하는 계획 세션이다.
+
+## [2026-07-19] update | 중간 프로젝트 공부 실용형 세션 1 재고·Summary·Concept·Entity 고도화
+
+- 범위: 단계 9 첫 실행 단위로 `raw/KoreaICT/9. 중간 프로젝트 공부` 실제 파일 4개를 다시 계산하고, frontmatter source 기준 직접 지식 페이지를 세션 시작 9개에서 Summary 1·Concept 6·Entity 7·Comparison 1·Query 0, 총 15개로 확정했다. Comparison·Query 최종 판단과 단계 9 전체 완료는 다음 세션으로 남겼다.
+- raw 재고: Markdown 4개·4,481줄·170,194 bytes, PDF/JSON/image/archive/독립 source/config/script 0개, 0바이트·byte-identical 중복 0개다. R01~R04는 Secret 역할 목록, RS256 key 생성 절차, CI/CD·배포 가이드, Passwordless 적용 가이드로 분류했다.
+- Summary: `2026-05-middle-project-cicd-passwordless-guide`를 backend→Docker/AWS→Actions→React/Nginx→file/S3→DNS/ALB와 Passwordless server→Spring REST→React polling 흐름으로 전면 고도화하고, embedded snippet과 독립 project artifact·실행 결과를 분리했다.
+- Concept: 배포 완료 사다리, Secret 저장→주입→소비→비노출 검증, RS256 key 생성→서명→검증→Authentication→인가, Passwordless Member/REST/Service/Controller/SecurityConfig/React polling의 written-vs-wired-vs-runtime 경계를 보강했다. raw와 불일치한 합성 text fence 1개를 제거해 직접 페이지 fence를 0개로 만들었다.
+- 후속 병렬 감사 교정: 단계 9 raw에 포함된 일부 shell·인증서·container 파일·거부 HTTP 응답과 성공/실패 관찰을 복원했다. DB 관리형 계획과 VM container 상세 절차, DB URL 주입과 설정 소비, object 삭제 설명, Passwordless Secret 전달의 불일치를 `미확정`으로 기록했다. backend test 생략, polling과 외부 callback 미구현, timeout·오류 혼합, challenge/session 결속·공개 endpoint·local 상태 drift도 Concept에 반영했다.
+- Entity: GitHub·Docker·AWS·Spring Boot·React·JWT·Passwordless 제품에 단계 9 학습 이력과 실제 프로젝트 역할을 누적했다. workflow template, Dockerfile, cloud 절차, Java/TypeScript snippet을 run·image·resource·API/browser/DB 성공으로 과확정하지 않았다.
+- 경계: Linux·AWS·CI/CD·Passwordless 직접 수업 결과와 단계 9 적용 가이드를 분리했다. 단계 8 결과를 단계 9에 소급하거나 단계 9 설계를 05월 Passwordless 실행 결과로 되돌리지 않았다.
+- 기록: `_meta/middle-project-rehighquality-inventory-plan`을 생성하고 index `Total pages`를 279로 갱신했다. 상위 작업 계획의 단계 9 완료 행은 추가하지 않았다.
+- Git: `raw/KoreaICT/9. 중간 프로젝트 공부`는 시작·종료 scoped status/diff 0건과 정렬 SHA-256 manifest 동일 여부를 확인했다. commit·push는 수행하지 않았다.
+
+## [2026-07-18] lint | Passwordless 실용형 세션 2 전체 고정점·단계 8 완료
+
+- 범위: 단계 8 Passwordless 두 번째이자 최종 실행 단위로 기존 Comparison 2개 유지·고도화, 신규 Comparison 4개·Query 1개 후보 판단, frontmatter source 기준 직접 15페이지와 raw 20개 전체 고정점을 처리했다. 단계 9 중간 프로젝트 본문은 시작하지 않았다.
+- Comparison: `passwordless-vs-password-login`은 비밀번호/JWT 기준선과 05-15 서비스·Docker·사용자/인증기 등록, 05-18 샘플 관찰, 05-21 등록 상태 조회 응답 1건, 외부 인증 뒤 session/JWT·endpoint 인가 경계를 분리했다. `authentication-vs-authorization`은 신원 확인, role·ownership·endpoint 판단, AAM/APE 조직 관리, FilingBox RO/RW/AO/WORM operation을 서로 다른 완료 상태로 고정했다.
+- 신규 판단: 등록 vs 로그인 vs 해제, AAM vs APE, 인증 보안 vs WORM, REST 등록 확인 vs 실제 사용자 인증은 기존 Concept·Entity가 검색 책임을 충분히 소유해 모두 신규 기각했다. 실제 장애→원인→수정→재검증 이력이 없어 Spring 로그인 장애 Query도 만들지 않고 연동 Concept의 진단 checklist로 흡수했다.
+- 직접 결과 경계: 05-14 실행 결과 0, 05-15 일부 상태·plugin 관찰, 05-18 DB·샘플 관찰과 단계별 응답 미보존, 05-19 일부 상태·전달 확인 서술, 05-20 절차·명령만 보존, 05-21 등록 상태 조회 JSON 1건으로 확정했다. 교육 PDF와 Postman saved response는 교육 입력자료다.
+- 구조·fence·보안: 직접 페이지는 `summary 7 / concept 4 / entity 2 / comparison 2 / query 0`, 총 15개이며 raw source union 20/20이다. frontmatter·source·tag·link·index·고립·placeholder·빈 sources·장문·needs-review/low-confidence 오류 0개, JSON fence 1/1 원문 연속 일치, `bash` 0개, 실제 민감 식별값 노출 지표 0개다.
+- 고정점: 실제 page 수와 index `Total pages`는 278/278이다. Passwordless raw는 시작·종료 scoped status/diff 0건이고 정렬된 20개 SHA-256 manifest digest `88645aa40d8e3a533ee916009e999a6c32de4eb49dbb0f103812f93f9ec0fd90`가 동일하다. scoped `git diff --check`를 통과했고 commit·push는 하지 않았다.
+- 단계 상태: 단계 8 Passwordless를 최종 완료로 확정했다. 다음 작업 단위는 단계 9 중간 프로젝트 공부 실용형 첫 세션이며 이 세션에서는 시작하지 않았다.
+
 ## [2026-07-18] update | Passwordless 실용형 세션 1 전수 재고·핵심 지식 고도화
 
 - 범위: 단계 8 Passwordless 첫 실행 단위로 `raw/KoreaICT/8. Passwordless` 20개를 R01~R07·P01~P11·J01~J02에 전수 대응하고, frontmatter source 기준 직접 지식 페이지를 최종 `summary 7 / concept 4 / entity 2 / comparison 2 / query 0`, 총 15개로 재계산했다. 단계 9 중간 프로젝트 본문은 시작하지 않았다.

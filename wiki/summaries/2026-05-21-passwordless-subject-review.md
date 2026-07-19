@@ -88,11 +88,11 @@ confidence: high
 - 강한 인증과 WORM storage는 서로 보완하지만 같은 보안 계층이 아니다.
 - 교육 PDF·완성형 Postman collection의 화면과 saved response는 사용자 환경 실행 증거가 아니다.
 
-## Comparison·Query 다음 세션 판단점
+## Comparison·Query 최종 판단
 
-기존 [[comparisons/passwordless-vs-password-login|Passwordless 로그인 vs 비밀번호 로그인]]과 [[comparisons/authentication-vs-authorization|인증 vs 인가]]는 다음 최종 세션에서 직접 source와 다시 대조한다. 등록 vs 로그인 vs 해제, AAM vs APE, 인증 보안 vs WORM, REST 등록 확인 vs 실제 사용자 인증은 독립 검색 가치와 반복 혼동이 기존 Concept로 충분히 흡수되는지 판단한 뒤에만 Comparison으로 만든다.
-
-“Passwordless server는 동작하는데 Spring 로그인이 되지 않으면 어디부터 확인해야 하는가?”는 진단 가치가 있지만 실제 사용자 장애·해결 이력이 독립 Query 기준을 충족하는지는 다음 세션에서 최종 판단한다.
+- 기존 [[comparisons/passwordless-vs-password-login|Passwordless 로그인 vs 비밀번호 로그인]]과 [[comparisons/authentication-vs-authorization|인증 vs 인가]]는 독립 검색 책임이 있어 유지·고도화했다.
+- 등록 vs 로그인 vs 해제는 상태 전이 Concept, AAM vs APE는 Entity, 인증 보안 vs WORM은 저장소 보호 Concept, REST 등록 확인 vs 실제 사용자 인증은 Spring 연동 Concept가 이미 표·완료 조건·경계를 소유하므로 신규 Comparison을 만들지 않았다.
+- “Passwordless server는 동작하는데 Spring 로그인이 되지 않으면 어디부터 확인해야 하는가?”는 실제 장애→원인→수정→재검증 이력이 없어 Query로 만들지 않았다. 대신 [[concepts/spring-boot-passwordless-integration|Spring Boot Passwordless 인증 연동]]의 진단 checklist가 server·network·service 설정·DB·REST·Tomcat·로그인 상태·인가 순서를 소유한다.
 
 ## 관련 페이지
 

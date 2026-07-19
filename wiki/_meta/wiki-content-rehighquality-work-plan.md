@@ -1,7 +1,7 @@
 ---
 title: LLM Wiki 내용 재고도화 작업 계획
 created: 2026-07-15
-updated: 2026-07-18
+updated: 2026-07-19
 type: meta
 tags: [curriculum, study-log]
 sources:
@@ -188,6 +188,8 @@ confidence: high
 | 2026-07-18 | 5 | Linux | 세션 2~9 고도화와 신규 Concept 2·Comparison 1·Query 1개 신설 뒤 세션 10에서 39개 전체 고정점, 비동기 3계통 감사의 완료 상태 과확정·후속 경계·index type 탐색 오류를 최소 교정 | R01~R11 11/11 직접 source 대응, P01~P10·I01~I03 10/10·3/3 inventory 대응, 실제 출력과 명령/URL만 있는 미보존 결과, AWS/CI/CD 후속 경계 재검증 | frontmatter·source·tag·link·index·고립·placeholder 오류 0, `nginx` fence 1/1 exact 원문 일치·`bash` 0, Total pages 274, raw Linux 무변경·scoped diff 통과 | 최종 완료 / 다음은 6. AWS 실용형 첫 세션 |
 | 2026-07-18 | 6 | AWS | 실용형 2개 세션에서 기존 직접 페이지 12개를 고도화하고 `ec2-vs-rds`를 R02~R04 기준으로 재구성, 신규 Query 0개 유지 | R01~R04 4/4 직접 source union·P01~P05 5/5 inventory 대응, 05-06 메뉴→05-07 VPC/EC2→05-08 ICMP·server·RDS와 Linux 선행/CI/CD 후속 경계 재검증 | frontmatter·source·tag·link·index·고립·placeholder·민감정보 오류 0, fence·`bash` 0, Total pages 275, raw AWS 9개 hash/status/diff 무변경·scoped diff 통과 | 최종 완료 / 다음은 7. CI/CD 실용형 첫 세션 |
 | 2026-07-18 | 7 | CI/CD | 실용형 2개 세션에서 직접 19페이지를 고도화하고 `clb-vs-alb`를 직접/일반 기능·미보존 결과 기준으로 확정, 신규 Comparison·Query 0개 유지 | R01~R04·P01~P04 source union 8/8, 05-11 container 출력·05-12 절차·05-13 Terraform 오류/S3 성공 관찰 서술과 Linux/AWS/후속 경계 재검증 | frontmatter·source·본문 출처·tag·link·index·고립·placeholder·민감정보 오류 0, fence 3/3·`bash` 0, Total pages 276, raw CI/CD 8개 hash/status/diff 무변경·scoped diff 통과 | 최종 완료 / 다음은 8. Passwordless 실용형 첫 세션 |
+| 2026-07-18 | 8 | Passwordless | 실용형 2개 세션에서 직접 15페이지를 고도화하고 기존 Comparison 2개를 유지·보강, 신규 Comparison 4개·Query 1개 후보를 기존 Concept/Entity에 흡수 | R01~R07·P01~P11·J01~J02 source union 20/20, 05-14~21 직접 결과·미보존 결과와 교육 PDF/Postman example·단계 9 후속 설계 경계 재검증 | frontmatter·source·tag·link·index·고립·placeholder·민감정보 오류 0, JSON fence 1/1·`bash` 0, Total pages 278, raw 20개 manifest/status/diff 무변경·scoped diff 통과 | 최종 완료 / 다음은 9. 중간 프로젝트 공부 실용형 첫 세션 |
+| 2026-07-19 | 9 | 중간 프로젝트 공부 | 실용형 2개 세션에서 직접 15페이지를 고도화하고 기존 Passwordless/비밀번호 Comparison을 유지·보강, 신규 Comparison 4개·장애 Query 후보를 기존 Concept·Summary에 흡수 또는 기각 | raw 4/4 source union, embedded snippet·부분 출력·관찰·실패·조건과 end-to-end 결과, DB topology·Secret 소비·test 생략·polling/callback·승인/JWT 결속 경계 재검증 | frontmatter·source·tag·link·index·고립·placeholder·민감정보·fence 오류 0, Total pages 279, raw manifest/status/diff 무변경·scoped diff 통과 | 최종 완료 / 다음은 10. Python 실제 재고 확인 |
 
 ## 단계 1 Java 완료 상세
 

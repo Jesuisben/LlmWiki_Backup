@@ -1,7 +1,7 @@
 ---
 title: Spring Boot
 created: 2026-07-02
-updated: 2026-07-16
+updated: 2026-07-19
 type: entity
 tags: [spring-boot, spring, backend]
 sources:
@@ -23,6 +23,8 @@ sources:
   - raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.20(월)/2026.04.20(월).md
   - raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.21(화)/2026.04.21(화).md
   - raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md
+  - raw/KoreaICT/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md
+  - raw/KoreaICT/9. 중간 프로젝트 공부/패스워드리스 적용/중간 프로젝트 패스워드리스 적용 가이드.md
 status: growing
 confidence: high
 ---
@@ -86,6 +88,7 @@ UI&UX 과목에서 브라우저 안에 머물던 화면이 이 과목에서는 S
 - 선행: [[entities/java|Java]] 클래스·인터페이스·예외, [[entities/oracle-database|Oracle Database]]의 SQL·무결성·정규화, [[summaries/2026-03-27-uiux-subject-review|UI&UX 총정리]]의 HTTP 화면 입력이 기반이 됐다.
 - 과목 내부: [[concepts/fullstack-project-flow|풀스택 프로젝트 흐름]]에 따라 Fruit 최소 왕복에서 Member/JWT→Product→Cart→Order→검색으로 반복 확장했다.
 - 후속: Linux에서 jar 실행과 Docker, AWS에서 EC2/RDS, CI/CD에서 build·image·배포, Passwordless에서 별도 인증 서버 연동 대상으로 확장됐다. 이 후속 배포·인증은 03-30~04-22 직접 구현에 소급하지 않는다.
+- 단계 9 가이드는 Spring 설정·RS256 JWT utility·Dockerfile·multipart/file storage와 Passwordless Member 상태·REST client·DTO·Service·Controller·SecurityConfig snippet을 한 프로젝트 설계로 조립한다. 독립 source tree·build·API·DB 결과가 없으므로 실제 wiring과 runtime 성공으로 확정하지 않는다.
 
 ## 날짜별 학습 이력
 
@@ -110,3 +113,5 @@ UI&UX 과목에서 브라우저 안에 머물던 화면이 이 과목에서는 S
 ## 출처
 
 - `raw/KoreaICT/4. FrontEnd_BackEnd/2026.03.30(월) - 시작/2026.03.30(월) - 시작.md`부터 `raw/KoreaICT/4. FrontEnd_BackEnd/2026.04.22(수)/2026.04.22(수).md`까지 날짜별 MD 18개
+- `raw/KoreaICT/9. 중간 프로젝트 공부/CICD/중간 프로젝트 cicd 및 배포 가이드.md`
+- `raw/KoreaICT/9. 중간 프로젝트 공부/패스워드리스 적용/중간 프로젝트 패스워드리스 적용 가이드.md`

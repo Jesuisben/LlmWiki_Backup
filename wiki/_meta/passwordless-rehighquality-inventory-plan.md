@@ -17,7 +17,7 @@ sources:
   - raw/KoreaICT/8. Passwordless/2026.05.20(수)/2026.05.20(수).md
   - raw/KoreaICT/8. Passwordless/2026.05.21(목)/2026.05.21(목).md
   - raw/KoreaICT/8. Passwordless/Passwordless 총정리/Passwordless 총정리.md
-status: growing
+status: stable
 confidence: high
 ---
 
@@ -25,11 +25,11 @@ confidence: high
 
 ## 문서 상태와 범위
 
-이 문서는 내용 재고도화 단계 8 `Passwordless`의 전수 재고·raw↔wiki 대응 기준선이자 실용형 첫 세션 완료 기록이다.
+이 문서는 내용 재고도화 단계 8 `Passwordless`의 전수 재고·raw↔wiki 대응 기준선이자 실용형 두 세션 최종 완료 기록이다.
 
-- 현재 상태: **세션 1 완료 — 단계 8 전체는 미완료**
+- 현재 상태: **세션 2 완료 — 단계 8 전체 최종 완료**
 - 세션 1: raw 전수 재고, 직접 source 페이지 재계산, Summary·Concept·Entity 고도화
-- 세션 2 예정: 기존 Comparison 2개와 후보·Query 최종 판단, 직접 페이지 전체 고정점, 단계 8 완료 여부 확정
+- 세션 2: 기존 Comparison 2개 유지·고도화, 후보·Query 최종 판단, 직접 페이지 전체 고정점, 단계 8 완료 확정
 - 단계 9 중간 프로젝트 본문: 시작하지 않음
 - `raw/KoreaICT/8. Passwordless`: 읽기 전용
 
@@ -165,19 +165,19 @@ confidence: high
 
 Entity는 날짜별 orchestration을 다시 소유하지 않고 Summary·Concept로 연결했다.
 
-## Comparison·Query 다음 세션 후보
+## Comparison·Query 최종 판단
 
-| 기존 페이지·후보 | 주 raw | 다음 세션 판단점 |
+| 기존 페이지·후보 | 주 raw | 최종 판단 |
 |---|---|---|
-| `comparisons/passwordless-vs-password-login` | R01·R03·R06 + FrontEnd_BackEnd 선행 | 비밀번호 검증·JWT와 X1280 등록·앱 승인의 선택 기준, 미보존 결과를 최종 대조 |
-| `comparisons/authentication-vs-authorization` | R04 + FrontEnd_BackEnd 선행 | 인증 성공과 endpoint role·ownership 인가를 분리하고 05-19 직접 범위를 최종 대조 |
-| 등록 vs 로그인 vs 해제 | R02·R03·R06 | Concept 상태 전이로 충분한지, 반복 혼동·독립 검색 가치가 있는지 판단 |
-| AAM vs APE | R04·P06 | Entity의 구성요소 표로 충분한지 판단 |
-| 인증 보안 vs WORM storage 보호 | R01·R05 | Concept 간 책임 분리로 충분한지 판단 |
-| REST 등록 확인 vs 실제 사용자 인증 | R03·R06·J01·J02 | API state와 service login 혼동이 독립 비교를 정당화하는지 판단 |
-| “server는 동작하는데 Spring 로그인이 안 되면?” Query | R03·R06 | 실제 사용자 장애·해결 근거가 있는지, 임의 질문 생성 금지 기준을 충족하는지 판단 |
+| `comparisons/passwordless-vs-password-login` | R01~R03·R06 + FrontEnd_BackEnd 선행 | **유지·고도화** — credential/JWT 기준선과 서비스 등록·사용자/인증기 등록·앱 승인·외부 인증·session/JWT·인가 경계를 비교하는 독립 책임 유지 |
+| `comparisons/authentication-vs-authorization` | R04·R05 + FrontEnd_BackEnd 선행 | **유지·고도화** — 신원 확인, role·ownership·endpoint 판단, AAM/APE 관리와 FilingBox operation을 세 계층으로 구분 |
+| 등록 vs 로그인 vs 해제 | R02·R03·R06 | **신규 기각** — 반복 구분은 필요하지만 기존 인증 흐름·QR/앱 Concept가 상태·표·완료 조건을 이미 소유 |
+| AAM vs APE | R04·P06 | **신규 기각** — 한 날짜의 통합 설치가 중심이고 Entity 역할표로 충분하며 반복 선택 상황이 부족 |
+| 인증 보안 vs WORM storage 보호 | R01·R05 | **신규 기각** — 대체재가 아닌 직교 계층이며 기존 WORM Concept와 인증/인가 Comparison이 책임을 소유 |
+| REST 등록 확인 vs 실제 사용자 인증 | R03·R06·J01·J02 | **신규 기각** — REST Summary와 Spring 연동 Concept가 protocol state·등록 state·service login 경계를 이미 소유 |
+| “server는 동작하는데 Spring 로그인이 안 되면?” Query | R02·R03·R06 | **신규 기각** — 실제 장애→원인→수정→재검증 이력이 없어 임의 Query 기준 미충족; 연동 Concept checklist로 흡수 |
 
-세션 1에서는 신규 Comparison·Query를 만들지 않았다.
+세션 2에서도 신규 Comparison·Query를 만들지 않았다. 최종 신규 수는 Comparison 0개·Query 0개다.
 
 ## 과목 경계
 
@@ -246,6 +246,21 @@ Entity는 날짜별 orchestration을 다시 소유하지 않고 Summary·Concept
 - scoped `git diff --check`: 통과
 - 종료 Passwordless raw scoped status/diff: 0건
 - 종료 정렬 SHA-256 manifest digest: `88645aa40d8e3a533ee916009e999a6c32de4eb49dbb0f103812f93f9ec0fd90` — 시작값과 동일
+
+## 세션 2 최종 완료 결과
+
+- 기존 Comparison 2개는 모두 삭제·흡수하지 않고 유지했다. Passwordless 비교에는 05-15 서비스·Docker·등록 절차와 05-21 등록 상태 조회 응답 1건 경계를 보강했고, 인증/인가 비교에는 05-19 AAM/APE 관리와 05-20 FilingBox operation을 별도 계층으로 보강했다.
+- 신규 Comparison 후보 4개와 Query 후보 1개는 모두 기존 Concept·Entity의 검색 책임으로 흡수했다. 신규 지식 페이지는 0개다.
+- Query를 대신해 `spring-boot-passwordless-integration`이 container/process→firewall/port→Members/`setting.ap`→역할별 연결→credential 구분→Postman→MariaDB→properties→REST DTO/client/service→WAR/Tomcat→session/JWT→authorization 진단 순서를 소유한다. 단계 9 구체 구현은 후속 설계로 표시했다.
+- 직접 지식 페이지는 meta를 제외하고 최종 `summary 7 / concept 4 / entity 2 / comparison 2 / query 0`, 총 15개다. 미분류 0개, type·directory 불일치 0개, raw source union 20/20이다.
+- 날짜별 경계는 05-14 실행 결과 없음, 05-15 일부 상태·plugin 관찰, 05-18 DB·샘플 관찰과 단계별 응답 미보존, 05-19 일부 상태·전달 확인 서술, 05-20 절차·명령만 보존, 05-21 등록 상태 조회 JSON 1건으로 최종 고정했다.
+- 교육 PDF 11개는 절차·개념 입력자료이며, 완성형 Postman saved response는 교육 example이다. 둘 다 사용자 환경 실행 결과로 세지 않았다.
+- 직접 페이지의 code fence는 JSON 1개이며 R06의 연속 원문·언어·들여쓰기와 일치한다. 합성·비연속 fence, `bash`, 독립 artifact 과확정은 0개다.
+- 필수 frontmatter·source 실경로·본문 출처 동기화·허용 tag·wikilink·index·고립·actionable placeholder·빈 sources·200줄 초과 지식 페이지·needs-review/low-confidence 오류는 0개다.
+- 실제 account·contact·domain·IP·endpoint·organization·service/license/key/token/password/DB/X1280·AAM·APE 식별값은 wiki·inventory·log 변경분에 재출력하지 않았다.
+- actual page count와 index `Total pages`는 278/278이다. scoped `git diff --check`를 통과했고 Git commit·push는 수행하지 않았다.
+- Passwordless raw 시작·종료 scoped status/diff는 0건이며, 20개 정렬 SHA-256 manifest digest는 시작·종료 모두 `88645aa40d8e3a533ee916009e999a6c32de4eb49dbb0f103812f93f9ec0fd90`로 동일하다.
+- 완료 조건을 모두 충족해 단계 8 Passwordless를 최종 완료로 확정했다. 단계 9 중간 프로젝트 본문은 시작하지 않았다.
 
 ## 관련 페이지
 

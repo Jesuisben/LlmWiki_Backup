@@ -2,7 +2,7 @@
 
 > 이 파일은 `wiki/` 전체의 목차이자 길잡이다.  
 > 질문에 답하거나 새 자료를 ingest할 때 이 파일을 먼저 읽는다.  
-> Last updated: 2026-07-18 | Total pages: 278
+> Last updated: 2026-07-19 | Total pages: 280
 
 ## 사용 방법
 
@@ -101,7 +101,7 @@
 - [[summaries/2026-07-08-python-korean-text-mining|2026-07-08 Python 한국어 텍스트 마이닝]] — 형태소 분석·불용어·빈도·WordCloud로 한국어 텍스트를 분석한 날
 - [[summaries/2026-07-08-python-subject-review|Python 총정리]] — 기초 문법에서 Pandas·API·크롤링·지도·텍스트 마이닝까지 묶은 과목 복습 허브
 
-- [[summaries/2026-05-middle-project-cicd-passwordless-guide|중간 프로젝트 CI/CD·배포·Passwordless 가이드]] — 중간 프로젝트 배포 자동화와 Passwordless 인증 적용 흐름을 묶은 프로젝트 가이드 요약
+- [[summaries/2026-05-middle-project-cicd-passwordless-guide|중간 프로젝트 CI/CD·배포·Passwordless 가이드]] — 4개 설계 문서의 backend/frontend 배포·S3·도메인·Passwordless 흐름과 독립 artifact·실행 결과 미보존 경계를 정리
 
 ## Concepts
 
@@ -191,11 +191,11 @@
 - [[concepts/spring-security-jwt-filter|Spring Security JWT Filter]] — login 인증과 후속 Bearer 검증·Authentication·SecurityContext 구성 및 authorization 경계
 - [[concepts/product-domain-flow|상품 도메인 기능 흐름]] — Category/Product 기반 상품 등록·상세·삭제·검색·페이징의 풀스택 흐름
 - [[concepts/jpa-relationship-mapping|JPA 연관관계 매핑]] — Cart/Product/Order 도메인에서 Entity 관계와 외래키 주인을 이해하는 JPA 매핑 정리
-- [[concepts/middle-project-cicd-deploy-flow|중간 프로젝트 CI/CD 배포 흐름]] — GitHub Actions와 AWS 서버를 이용해 중간 프로젝트를 반복 가능하게 배포하는 흐름
+- [[concepts/middle-project-cicd-deploy-flow|중간 프로젝트 CI/CD 배포 흐름]] — source/config→CI→registry→CD→API/browser→data/cloud edge 완료 상태를 분리한 프로젝트 배포 설계
 
-- [[concepts/github-actions-secrets-deploy|GitHub Actions Secrets 기반 배포]] — 배포에 필요한 민감값을 GitHub Secrets로 분리해 사용하는 방식
+- [[concepts/github-actions-secrets-deploy|GitHub Actions Secrets 기반 배포]] — registry·server·DB·JWT·object storage 설정의 저장→주입→소비→비노출 검증 흐름
 
-- [[concepts/jwt-rs256-key-flow|JWT RS256 키 흐름]] — 개인키 서명과 공개키 검증으로 JWT 신뢰를 구성하는 방식
+- [[concepts/jwt-rs256-key-flow|JWT RS256 키 흐름]] — key 생성·Secret 주입·private-key 서명·public-key 검증과 실제 적용 미확정 경계를 정리
 
 - [[concepts/passwordless-x1280-auth-flow|Passwordless X1280 인증 흐름]] — Auth/User Connection/Push Request·모바일 앱의 책임과 등록→인증→해제 상태, JWT·인가 경계를 구분
 - [[concepts/passwordless-qr-app-approval|Passwordless QR/앱 승인 흐름]] — QR 등록·앱 승인·등록 해제의 시작 조건과 완료 상태, 단계 9 polling/callback 경계를 구분
@@ -281,8 +281,8 @@
 - [[comparisons/oracle-inner-vs-outer-join|Oracle Inner Join vs Outer Join]] — 게시글 0개 회원 보존 여부와 `COUNT(*)`/`COUNT(writer)` 선택 차이
 - [[comparisons/beautifulsoup-vs-selenium|BeautifulSoup vs Selenium]] — 정적 HTML 파싱과 동적 브라우저 자동화의 역할 차이
 
-- [[comparisons/passwordless-vs-password-login|Passwordless 로그인 vs 비밀번호 로그인]] — 04-06~07 비밀번호/JWT 직접 구현과 후속 X1280 QR·앱 승인·외부 인증 서버 책임 비교
-- [[comparisons/authentication-vs-authorization|인증(Authentication) vs 인가(Authorization)]] — credential/Bearer 인증과 role·소유자 기반 endpoint 인가를 실제 04-06~04-20 흐름으로 구분
+- [[comparisons/passwordless-vs-password-login|Passwordless 로그인 vs 비밀번호 로그인]] — 비밀번호/JWT 기준선과 X1280 서비스·사용자/인증기 등록·앱 승인·외부 인증·service login 경계를 비교
+- [[comparisons/authentication-vs-authorization|인증(Authentication) vs 인가(Authorization)]] — 신원 확인, role·ownership·endpoint 판단, AAM/APE 관리와 FilingBox storage operation을 계층별로 구분
 
 ## Queries
 
@@ -294,7 +294,9 @@
 ## Meta
 
 <!-- 위키 운영 문서, lint 리포트, 토픽맵 등 -->
-- [[_meta/passwordless-rehighquality-inventory-plan|Passwordless 내용 재고도화 전수 재고와 실용형 실행 계획]] — R01~R07·P01~P11·J01~J02 raw 20개와 직접 지식 페이지 15개를 매핑하고 Summary·Concept·Entity 13개를 처리한 단계 8 세션 1 기준선
+- [[_meta/python-rehighquality-inventory-plan|Python 내용 재고도화 전수 재고와 실행 분할 계획]] — raw 69개와 직접 지식 페이지 32개를 재계산하고, 조사 중 raw manifest 변경으로 계획 완료를 보류한 단계 10 기준선
+- [[_meta/middle-project-rehighquality-inventory-plan|중간 프로젝트 공부 내용 재고도화 전수 재고와 실용형 실행 계획]] — raw 4개와 직접 지식 페이지 15개를 매핑하고 Summary·Concept·Entity를 고도화한 단계 9 세션 1 기준선
+- [[_meta/passwordless-rehighquality-inventory-plan|Passwordless 내용 재고도화 전수 재고와 실용형 실행 계획]] — raw 20개와 직접 지식 페이지 15개를 두 세션에서 고도화·검증해 단계 8을 완료한 기록
 - [[_meta/cicd-rehighquality-inventory-plan|CI/CD 내용 재고도화 전수 재고와 실용형 실행 계획]] — R01~R04·P01~P04 raw 8개와 직접 지식 페이지 19개를 매핑하고 Summary·Concept·Entity 18개를 고도화한 단계 7 세션 1 기준선
 - [[_meta/aws-rehighquality-inventory-plan|AWS 내용 재고도화 전수 재고와 실용형 실행 계획]] — R01~R04·P01~P05 raw 9개와 직접 지식 페이지 12개를 매핑하고 핵심 Summary·Concept·Entity를 고도화한 단계 6 세션 1 기준선
 - [[_meta/wiki-user-study-guide|LLM Wiki 사용자 학습 가이드]] — 과목·날짜·개념·프로젝트·면접 목적에 따라 어떤 페이지를 어떤 순서로 공부할지 안내하는 사용자용 시작 문서

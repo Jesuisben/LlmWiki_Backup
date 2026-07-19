@@ -39,12 +39,12 @@ X1280 server를 다시 준비하고 Postman에서 사용자 등록 여부 확인
 
 ```json
 {
-  "result": true,
-  "msg": "OK.",
-  "code": "000.0",
-  "data": {
-    "exist": false
-  }
+    "result": true,
+    "msg": "OK.",
+    "code": "000.0",
+    "data": {
+        "exist": false
+    }
 }
 ```
 
@@ -52,7 +52,7 @@ X1280 server를 다시 준비하고 Postman에서 사용자 등록 여부 확인
 
 ## 직접 보존된 결과와 미보존 결과
 
-- 직접 결과: server 준비 과정의 일부 상태 출력과 위 등록 여부 확인 JSON response.
+- 직접 결과: 위 등록 여부 확인 JSON response 1건.
 - 교육자료 예시: 완성형 collection의 7개 request 및 saved response 구조.
 - 미보존: 등록·일회용 token·인증 요청·승인 결과·취소·해제의 당일 실제 response, 모바일 화면, Spring application의 최종 로그인 결과.
 
