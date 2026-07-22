@@ -37,6 +37,7 @@
 └── wiki/                     # LLM이 생성·수정하는 지식 베이스
     ├── index.md              # 전체 위키 목차: 모든 위키 페이지의 카탈로그
     ├── log.md                # 작업 일지: ingest/query/lint/update 기록
+    ├── study-guides/         # 사람이 과목마다 한 파일로 읽는 통합 복습 교재
     ├── summaries/            # 수업/자료 단위 요약 페이지
     ├── concepts/             # 개념 페이지: Java 문법, SQL 조인, REST API 등
     ├── entities/             # 엔티티 페이지: 기술, 도구, 프레임워크, 라이브러리 등
@@ -54,7 +55,7 @@
 - `raw/PersonalStudy/`는 학원 수업과 별개로 사용자가 개인적으로 공부한 자료를 넣는다.
 - `raw/PersonalProjects/`는 개인 프로젝트 설계, 오류 기록, 회고, 실습 자료를 넣는다.
 - `raw/References/`는 AI instructions, Markdown 문법, 프롬프트, 참고문서처럼 특정 과목이나 프로젝트에 직접 속하지 않는 자료를 넣는다.
-- `wiki/`는 출처별로 쪼개지 않고 기존처럼 `summaries/`, `concepts/`, `entities/`, `comparisons/`, `queries/` 구조를 유지한다. 단, 개인 공부나 프로젝트 자료를 ingest할 때는 summary 제목·frontmatter·본문에서 `KoreaICT 수업`, `PersonalStudy`, `PersonalProjects` 맥락을 명확히 구분한다.
+- `wiki/`의 지식 페이지는 `summaries/`, `concepts/`, `entities/`, `comparisons/`, `queries/` 구조를 유지한다. 별도의 `study-guides/`는 사용자가 과목마다 한 파일만 열어 전체를 복습하기 위한 인간용 통합 교재 레이어다. 개인 공부나 프로젝트 자료를 ingest할 때는 제목·frontmatter·본문에서 `KoreaICT 수업`, `PersonalStudy`, `PersonalProjects` 맥락을 명확히 구분한다.
 - 예외: 사용자가 원본 TXT → Markdown 변환을 명시적으로 요청한 경우, 외부 학원 원본 TXT를 소스로 삼아 `raw/KoreaICT/<과목>/...`의 대응 `.md` 파일을 생성하거나 덮어쓸 수 있다. 이때 외부 원본 TXT와 `교육 자료/`는 수정하지 않고, 사용자가 손수 변환한 Java/Oracle MD에서 추출한 canonical TXT→MD 규칙을 적용한다. 다시 갈아엎는 대상 과목의 기존 MD는 스타일 기준이 아니라 덮어쓰기 대상이다.
 
 #### TXT→MD 민감정보 후보 검사
@@ -98,7 +99,7 @@
 title: 페이지 제목
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
-type: summary | concept | entity | comparison | query | meta
+type: study-guide | summary | concept | entity | comparison | query | meta
 tags: []
 sources: []
 status: seed | growing | stable | needs-review
@@ -157,6 +158,19 @@ confidence: high | medium | low
 - `study-log`
 
 ## 5. 페이지 유형별 작성 규칙
+
+### 5.0 인간용 통합 학습 가이드 (`wiki/study-guides/`)
+
+`study-guide`는 사용자가 “이 과목에서 무엇을 배웠더라?”라고 했을 때 **다른 페이지를 열지 않고 한 파일을 처음부터 끝까지 읽어 과목 전체를 복습할 수 있게 하는 주 교재**다.
+
+작성 기준:
+- 과목마다 원칙적으로 한 파일을 두고 `type: study-guide`를 사용한다.
+- 기존 Summary·Concept·Entity·Comparison은 정확한 근거와 세부 검색을 위한 보조 레이어로 유지한다. 학습 가이드가 해당 링크를 반드시 열어야만 이해되는 목차형 허브가 되어서는 안 된다.
+- 수업의 전체 학습 순서, 핵심 개념, 대표 실습, 자주 헷갈리는 차이, 다음 과목·프로젝트 연결, 자기 점검 질문을 본문 자체에 포함한다.
+- “모든 내용”은 원본의 모든 문장을 복사한다는 뜻이 아니라, 실제로 배운 주제와 중요한 경계를 빠뜨리지 않고 사람이 복습 가능한 흐름으로 재구성한다는 뜻이다.
+- 짧은 예제를 새로 재구성할 수 있다. 이 경우 `복습용 재구성 예제`임을 명시하고 실제 수업 코드 인용이나 실행 결과로 오인시키지 않으며, 가능한 경우 문법을 검증한다.
+- 한 파일 완결성이 목적이므로 200줄을 넘었다는 이유만으로 분할하지 않는다. 대신 목차성 heading, 표, 짧은 예제, 체크리스트를 사용해 탐색성을 유지한다.
+- 새 학습 가이드는 `wiki/index.md`의 `Study Guides` 섹션에 등록하고 `wiki/log.md`에 기록한다.
 
 ### 5.1 요약 페이지 (`wiki/summaries/`)
 수업 하루, 강의 한 단원, 문서 하나, 실습 하나를 요약한다.
