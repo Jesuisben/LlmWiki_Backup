@@ -1,7 +1,7 @@
 ---
 title: 2026-03-06 Java 무한 while과 배열
 created: 2026-07-02
-updated: 2026-07-15
+updated: 2026-07-22
 type: summary
 tags: [java, curriculum, study-log]
 sources:
@@ -39,10 +39,7 @@ confidence: high
 - 배열: `int[] arr = new int[3]`에 `4`, `11`, `7`을 계산해 넣고 `arr.length`를 조건으로 반복 출력했다. 값과 개수를 이미 알 때는 `int[] brr = {15, 30, 22}` 초기화 기법을 사용했다.
 - 입력 배열: 크기를 입력받아 `new int[size]`를 만들고, 각 인덱스에 정수를 저장하면서 조건문으로 `odd`·`even` 합계를 나눈 뒤 반복 종료 후 출력했다.
 
-```text
-Scanner → 배열 크기 입력 → new int[size]
-→ for로 인덱스별 입력 → 홀짝 판정·누적 → 결과 출력
-```
+**입력 배열 흐름:** Scanner → 배열 크기 입력 → `new int[size]` → `for`로 인덱스별 입력 → 홀짝 판정·누적 → 결과 출력
 
 ## 헷갈린 점 / 질문
 

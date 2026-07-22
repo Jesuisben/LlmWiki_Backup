@@ -1,16 +1,13 @@
 ---
 title: Pandas DataFrame 기본
 created: 2026-07-01
-updated: 2026-07-13
+updated: 2026-07-22
 type: concept
 tags: [python]
 sources:
   - raw/KoreaICT/10. Python/2026.06.30(화)/2026.06.30(화).md
   - raw/KoreaICT/10. Python/2026.07.01(수)/2026.07.01(수).md
-  - raw/KoreaICT/10. Python/2026.07.02(목)/2026.07.02(목).md
-  - raw/KoreaICT/10. Python/2026.07.03(금)/2026.07.03(금).md
-  - raw/KoreaICT/10. Python/2026.07.06(월)/2026.07.06(월).md
-  - raw/KoreaICT/10. Python/2026.07.07(화)/2026.07.07(화).md
+
 status: growing
 confidence: high
 ---
@@ -28,14 +25,12 @@ Pandas `DataFrame`은 행(row)과 열(column)을 가진 2차원 표 데이터를
 - CSV 파일을 읽어 표 형태로 다루기
 - 특정 행/열을 조회하고 값 수정하기
 - 조건에 맞는 데이터만 필터링하기
-- 여러 표를 이어 붙이거나 JOIN처럼 병합하기
 - 결측값(`NaN`)과 데이터 타입 확인하기
-- 그래프를 그리기 좋은 형태로 데이터 바꾸기
-- `groupby`, `agg`, `transform`, `pd.cut`으로 범주별 집계와 파생 컬럼 만들기
+- graph를 그리기 전에 index·columns·값의 모양 확인하기
 
 Oracle에서 배운 테이블·행·열 감각과 연결하면 이해가 쉽다. 다만 SQL은 DB 서버에 질의하는 언어이고, Pandas DataFrame은 Python 메모리 안에서 표 데이터를 직접 조작하는 객체라는 차이가 있다.
 
-7월 6~7일에는 공공 자전거·커피 매장 데이터를 실제 DataFrame으로 만들었다. 이때 `rename`, 문자열 치환, `dropna`, `set_index`로 결합 기준을 정리한 뒤 `merge`·`concat`·`pivot_table`·`groupby`로 분석용 표를 만들었다.
+이 페이지의 책임은 06-30의 Series·DataFrame 입문과 07-01의 단일 DataFrame 조회·수정·CSV·기초 통계까지다. 07-02의 결합·재구조화는 [[concepts/pandas-dataframe-reshape-merge|Pandas DataFrame 결합과 재구조화]], 07-03 이후 그룹 집계·외부 데이터 적용은 [[concepts/pandas-groupby-aggregation|Pandas groupby와 집계]]와 [[concepts/python-external-data-collection-pipeline|Python 외부 데이터 수집 파이프라인]]이 맡는다. 이 분할은 기존 200줄 경계 페이지에 계속 기능을 누적하지 않고 독립 검색 책임을 보존하기 위한 것이다.
 
 ## 핵심 설명
 
@@ -101,55 +96,15 @@ DataFrame끼리 연산할 때는 행/열 이름이 맞는 위치끼리 계산된
 
 인코딩이 맞지 않으면 한글이 깨진다. Python 데이터 처리 실습에서 `UTF-8`과 `CP949`를 구분하는 이유가 여기에 있다.
 
-### concat, merge, pivot
+### 07-01 그래프와 실행 근거
 
-2026-07-02 수업에서는 단일 DataFrame 조작을 넘어 여러 DataFrame을 결합하고 모양을 바꾸는 작업을 했다. ^[raw/KoreaICT/10. Python/2026.07.02(목)/2026.07.02(목).md]
-
-| 함수 | 목적 | 수업 예시 |
-|---|---|---|
-| `pd.concat()` | DataFrame을 행 또는 열 방향으로 이어 붙임 | 1분기/2분기 가전제품 판매량 결합 |
-| `pd.merge()` | 공통 열/색인을 기준으로 JOIN처럼 병합 | 학생 정보와 시험 점수 병합 |
-| `pivot()` | 긴 형식 데이터를 넓은 표로 재구성 | 과일 구매 내역을 이름×품목 표로 변환 |
-
-`merge`는 Oracle에서 배운 JOIN과 연결해서 이해하면 좋다. `on`, `left_on`, `right_on`은 열 기준이고, `left_index`, `right_index`는 행 색인 기준이다.
-
-### groupby, agg, transform, cut
-
-2026-07-03 수업에서는 DataFrame을 단순히 조회·결합하는 데서 더 나아가 범주별로 요약하고 그래프로 확인하는 흐름을 다뤘다. ^[raw/KoreaICT/10. Python/2026.07.03(금)/2026.07.03(금).md]
-
-| 기능 | 목적 | 수업 예시 |
-|---|---|---|
-| `groupby()` | 기준 컬럼별로 그룹을 나눔 | 성별별 교통비, 출장지역/성별별 출장기간 |
-| `agg()` | 그룹별 집계 함수 적용 | `sum`, `mean`, `max`, 사용자 정의 함수 |
-| `transform()` | 원본 행 수를 유지한 그룹별 계산 | 이름·월별 첫 주 대비 시험 점수 향상 비율 |
-| `pd.cut()` | 연속형 숫자를 구간 라벨로 범주화 | 소득을 저소득~고소득 구간으로 나누기 |
-| `plot()` | 집계 결과를 그래프로 확인 | pie, scatter, box, hist, barh |
-
-`agg()`는 그룹별 요약표를 만들기 때문에 행 수가 줄어들 수 있고, `transform()`은 원본과 같은 길이의 결과를 돌려주므로 새 파생 컬럼을 붙일 때 유용하다.
+DataFrame에서 중구·마포구 두 columns를 골라 선그래프, 묶은 막대그래프, 1×2 subplot으로 표현했다. 날짜 폴더의 PNG 3개가 인접 code의 제목·축·범례·값 모양과 대응한다. 이는 세 graph artifact의 존재를 증명하지만 pie chart, CSV, notebook 전체 실행까지 증명하지 않는다. ^[raw/KoreaICT/10. Python/2026.07.01(수)/2026.07.01(수).md]
 
 ## 예시 흐름
 
 ### 단일 DataFrame 조회·수정
 
-```python
-myframe02.loc["유관철":"연규희"]
-myframe02.loc[:, "은평구"] = 60
-myframe02.loc[myframe02["용산구"] <= 50, ["노원구", "은평구"]] = 0
-```
-
-이 흐름은 “라벨로 행 범위를 고르고, 전체 행의 특정 열을 수정하고, 조건에 맞는 일부 행/열을 수정하는” 대표 패턴이다.
-
-### 여러 DataFrame 결합
-
-```python
-pd.concat([homeware01, homeware02], axis=0)
-pd.merge(student, jumsu, on="id", how="outer")
-data.pivot(index="name", columns="item", values="value")
-cols = ["교통비", "출장기간"]
-payment.groupby(["출장지역", "성별"])[cols].agg(["sum", "mean"])
-```
-
-이 흐름은 “표를 이어 붙이고, 기준 열로 병합하고, 보고서 형태로 재구조화한 뒤, 범주별로 집계하는” Pandas 데이터 전처리의 기본 패턴이다.
+수업의 대표 흐름은 `loc["유관철":"연규희"]`로 label 범위의 행을 고르고, `loc[:, "은평구"]`로 전체 행의 한 열을 수정한 뒤, 용산구 값이 50 이하인 행의 노원구·은평구 값만 0으로 바꾸는 순서였다. 여러 line을 붙인 합성 code fence 대신 각 operation의 책임을 prose로 보존한다.
 
 ## 자주 헷갈리는 점
 
@@ -164,20 +119,13 @@ payment.groupby(["출장지역", "성별"])[cols].agg(["sum", "mean"])
 
 `myframe["열이름"]`은 열을 꺼낸다. 행을 꺼낼 때는 `myframe["행이름"]`이 아니라 보통 `myframe.loc["행이름"]`을 쓴다.
 
-### `concat` vs `merge`
-
-- `concat`: 표를 위아래/좌우로 붙이는 느낌
-- `merge`: 공통 키가 같은 행끼리 찾아 조립하는 느낌
-
-`merge`는 SQL JOIN과 비슷하고, `concat`은 파일 여러 개를 이어 붙이는 감각에 가깝다.
-
 ### `NaN` 처리
 
 `NaN`은 “값이 없음”을 뜻한다. 새 행/열을 만들거나 서로 맞지 않는 DataFrame을 결합하면 생기기 쉽다. `fill_value`, `fillna()`, `isnull()`, `notnull()` 같은 함수로 확인·처리한다.
 
-### `agg()` vs `transform()`
+### 요구사항과 label 선택
 
-`agg()`는 그룹별 요약표를 만들고, `transform()`은 원본 행 수를 유지한다. 그래서 평균표·합계표처럼 보고용 결과가 필요하면 `agg()`, 원본 데이터에 “향상_비율” 같은 새 컬럼을 붙이고 싶으면 `transform()`을 먼저 떠올리면 좋다.
+07-01 수정 문제 하나는 요구한 사람과 실제 `loc` 선택 label이 달랐고, 표는 code가 고른 행이 바뀐 결과를 보였다. code가 실행되었다는 것과 요구사항을 만족했다는 것은 별도 검증 대상이다.
 
 ## 관련 개념
 
@@ -185,6 +133,7 @@ payment.groupby(["출장지역", "성별"])[cols].agg(["sum", "mean"])
 - [[summaries/2026-07-01-python-pandas-dataframe|2026-07-01 Python Pandas DataFrame 조회와 입출력]]
 - [[summaries/2026-07-02-python-pandas-reshape-merge|2026-07-02 Python Pandas 데이터 결합과 재구조화]]
 - [[summaries/2026-07-03-python-pandas-groupby-visualization|2026-07-03 Python Pandas groupby와 시각화]]
+- [[concepts/pandas-dataframe-reshape-merge|Pandas DataFrame 결합과 재구조화]]
 - [[concepts/pandas-groupby-aggregation|Pandas groupby와 집계]]
 - [[entities/python|Python]]
 - [[entities/pandas|Pandas]]
@@ -196,5 +145,3 @@ payment.groupby(["출장지역", "성별"])[cols].agg(["sum", "mean"])
 
 - `raw/KoreaICT/10. Python/2026.06.30(화)/2026.06.30(화).md`
 - `raw/KoreaICT/10. Python/2026.07.01(수)/2026.07.01(수).md`
-- `raw/KoreaICT/10. Python/2026.07.02(목)/2026.07.02(목).md`
-- `raw/KoreaICT/10. Python/2026.07.03(금)/2026.07.03(금).md`

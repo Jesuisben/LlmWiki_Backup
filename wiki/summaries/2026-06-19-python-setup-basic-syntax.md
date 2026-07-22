@@ -1,7 +1,7 @@
 ---
 title: 2026-06-19 Python 설치와 기본 문법 입문
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-22
 type: summary
 tags: [python, curriculum]
 sources:
@@ -14,33 +14,70 @@ confidence: high
 
 ## 한 줄 요약
 
-Python 3.11.9와 PyCharm을 설치하고 `print`, 문자열, 형변환, 입력, 연산자, 문자열 함수, 인덱싱/슬라이싱을 통해 Pandas 이전 기본 문법 토대를 만들었다.
+Python과 PyCharm의 실행 기반을 만든 뒤, 출력·문자열·형변환·입력·연산자·인덱싱/슬라이싱까지 데이터 분석에 필요한 첫 문법 층을 하루 흐름으로 익혔다.
 
 ## 배운 내용
 
-Python/PyCharm 설치와 인터프리터 연결, `pip` 경로, `print()`의 `sep`/`end`, 이스케이프 문자, `%` 포맷팅과 `format()`, `input()` 반환값의 문자열 성격, `int()`/`float()` 형변환, 조건 표현식, 산술·관계·논리 연산자, 문자열 함수, 인덱싱/슬라이싱을 다뤘다.
+1. **환경 준비**: Python 3.11 계열 설치, PATH 옵션, `pip` 위치, PyCharm 프로젝트 열기와 interpreter 연결을 확인했다.
+2. **출력과 문자열**: `print()`의 `sep`·`end`, 이스케이프 문자, 문자열 연결, `%` 포맷과 `format()`을 비교했다.
+3. **입력과 형변환**: `input()`이 항상 문자열을 반환한다는 점을 확인하고 `int()`·`float()`·`str()`로 계산과 출력 경계를 맞췄다.
+4. **계산과 판단**: 산술·복합 대입·관계·논리 연산자와 조건 표현식으로 값을 계산하고 선택했다.
+5. **문자열 데이터 처리**: `find`, `replace`, `strip`, `split`, `join`, `startswith`, `endswith`, `ord`를 거쳐 인덱싱과 슬라이싱으로 필요한 부분을 추출했다.
+
+설치에서 곧바로 문법으로 이동한 이유는, 이후 컬렉션과 Pandas에서 데이터를 읽고 변환하려면 먼저 “값의 타입을 맞추고 원하는 형태로 꺼내는” 기본기가 필요하기 때문이다. ^[raw/KoreaICT/10. Python/2026.06.19(금) - 시작/2026.06.19(금) - 시작.md]
 
 ## 핵심 개념
 
-- [[entities/python|Python]]
-- [[concepts/python-basic-syntax|Python 기본 문법]]
-- [[concepts/pandas-dataframe-basics|Pandas DataFrame 기본]]
+- [[concepts/python-basic-syntax|Python 기본 문법]] — 입력·형변환·연산·문자열 처리의 공통 기반
+- [[entities/python|Python]] — interpreter 방식과 `pip` 생태계로 시작한 언어
+- [[concepts/python-collections-comprehension|Python 컬렉션과 컴프리헨션]] — 다음 수업에서 여러 값을 묶어 처리하는 단계
 
 ## 실습 / 예제
 
-대표 흐름은 입력 → 형변환 → 계산 → 출력이다. `input()`으로 받은 점수를 숫자로 바꿔 총점과 평균을 계산하고, 문자열 실습에서는 `strip`, `split`, `join`, `find`, `replace`, `startswith`, `endswith`, `ord`를 사용했다.
+### 문자열과 숫자의 타입 오류를 수정한 흐름
+
+- **입력/상태**: 문자열과 정수 값을 `+`로 연결하려 했다.
+- **관찰된 실패**: 노트에 실제 실행 경로와 함께 `TypeError` Traceback이 보존되어 있다.
+- **수정**: 정수 값을 `str()`로 변환한 뒤 문자열과 연결했다.
+- **재확인**: 수정 코드 뒤에 정상 출력이 연속해서 기록되어 있어, 이번 범위에서 가장 분명한 오류 → 수정 → 재실행 증거다.
+
+### 성적 계산 흐름
+
+- **입력**: 이름·학년·반과 세 과목 점수를 `input()`으로 받는다.
+- **처리**: 점수 문자열을 `float()`로 변환하고 총점과 평균을 계산한다.
+- **결과**: `%` 포맷으로 소수 둘째 자리까지 표시하는 출력 예시와 코드가 함께 기록되어 있다. 다만 별도 실행 파일은 보존되지 않아, 이 블록은 수업 코드와 노트 내 결과 근거로 구분한다.
+
+### 초를 시간으로 바꾸기
+
+총 초를 `//`와 `%`로 시간·분·초에 차례로 나누는 실습은 “큰 단위 몫을 구하고 남은 값을 다음 단위로 넘기는” 데이터 변환 패턴을 보여 준다.
+
+## 실행·결과 근거
+
+- Traceback과 그 직후 수정·정상 출력은 실제 디버깅 흐름을 뒷받침한다.
+- 그 밖의 여러 “출력 결과” 블록은 수업 노트에 포함된 예시이므로, 모든 파일을 이날 직접 실행했다는 뜻으로 확대하지 않는다.
+- 설치 절차와 interpreter 연결 방법은 기록되어 있지만 설치 로그 전체나 독립 실행 artifact는 남아 있지 않다.
 
 ## 헷갈린 점 / 질문
 
-`input()`은 숫자를 입력해도 문자열을 반환한다. 문자열과 숫자는 `+`로 바로 연결할 수 없으므로 `str()` 변환이 필요하다. Java의 `(int)3.14`와 달리 Python은 `int(3.14)`처럼 타입 이름을 함수처럼 쓴다.
+- `input()`은 숫자를 입력해도 문자열을 반환하므로 계산 전에 형변환이 필요하다.
+- 문자열과 숫자는 바로 `+`로 연결할 수 없다. 계산용 숫자와 표시용 문자열의 역할을 먼저 구분한다.
+- 원본의 `sep` 설명에는 기본값을 줄바꿈처럼 읽을 수 있는 부분이 있으나, `print()`의 기본 `sep`는 공백이고 줄바꿈은 기본 `end`가 담당한다.
+- “Python은 interpreter, Java는 compiler”라는 구분은 입문용 단순화다. Python도 bytecode를 만들 수 있고 Java bytecode도 JVM에서 실행되므로 compile 여부만으로 양분하지 않는다.
+- `/`는 실수 나눗셈, `//`는 몫이다. `%`는 나머지이면서 문자열 포맷 기호로도 등장하므로 문맥을 본다.
+- indexing은 한 요소, slicing은 범위를 반환하며 slice의 끝 위치는 포함하지 않는다.
+- 원본의 식별정보 형태 예제는 문자열 slicing 교육용 데이터이며, 위키에는 실제 값을 재수록하지 않는다.
+
+## 이전·다음 수업 연결
+
+- **선행**: Java에서 배운 변수·자료형·연산자·조건식을 Python의 동적 타입과 함수형 형변환에 대응시켰다.
+- **다음**: [[summaries/2026-06-22-python-control-flow-collections|2026-06-22]]에서 조건·반복을 본격화하고 list/tuple로 여러 데이터를 묶는다.
+- **후속**: 문자열 `split`·`strip`·slicing은 파일 처리와 Pandas 전처리에서 다시 사용된다.
 
 ## 관련 페이지
 
-- [[entities/python|Python]]
-- [[entities/pandas|Pandas]]
-- [[entities/jupyter-notebook|Jupyter Notebook]]
+- [[concepts/python-basic-syntax|Python 기본 문법]]
 - [[concepts/python-collections-comprehension|Python 컬렉션과 컴프리헨션]]
-- [[concepts/python-file-regex-data-processing|Python 파일·정규표현식 데이터 처리]]
+- [[entities/python|Python]]
 
 ## 출처
 

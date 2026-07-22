@@ -1,7 +1,7 @@
 ---
 title: 2026-02-27 GitHub 초기 설정
 created: 2026-07-02
-updated: 2026-07-15
+updated: 2026-07-22
 type: summary
 tags: [java, curriculum, study-log]
 sources:
@@ -37,12 +37,7 @@ Java 프로젝트 `MyJava`를 Git 저장소로 만들고 GitHub 원격 저장소
 
 ## 핵심 실습 / 예제
 
-```text
-Git 실행 파일 확인 → 사용자 설정·safe.directory
-→ MyJava에서 git init → IntelliJ VCS 활성화
-→ 변경 선택/stage → commit → remote 연결 → push
-→ 다른 환경에서는 Clone Repository
-```
+**학습 흐름:** Git 실행 파일 확인 → 사용자 설정·`safe.directory` → MyJava에서 `git init` → IntelliJ VCS 활성화 → 변경 선택/stage → commit → remote 연결 → push → 다른 환경에서는 Clone Repository
 
 ## 헷갈린 점 / 질문
 

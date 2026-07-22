@@ -13,6 +13,111 @@
 
 ## 현재 로그
 
+## [2026-07-22] lint | 단계 12 전체 통합 품질 검증 완료
+
+- 범위: 단계 1~11 완료 페이지를 다시 작성하거나 새 ingest하지 않고, frontmatter가 있는 전체 312페이지를 대상으로 구조·출처·링크·보안·fence 고정점을 재검증했다. 실제 추가 오류는 0개였다.
+- 전체 게이트: 필수 frontmatter·허용 tag·source 실경로와 본문 출처·broken/ambiguous link·index catalog 등록·고립·중복 title·지식 페이지 200줄 초과·actionable placeholder·credential 값 후보·닫히지 않은 fence·`bash` fence 오류가 모두 0개다. Index의 학습 가이드 안내 링크와 주석 속 Java 예시는 catalog 중복이 아니며, 200줄 초과 10개는 대응표·이력 보존용 Meta 계획서라 지식 페이지 장문 오류에서 제외했다.
+- 직접 source 최종 수: Java 36, Oracle 29, UI&UX 24, FrontEnd_BackEnd 59, Linux 39, AWS 12, CI/CD 19, Passwordless 15, 중간 프로젝트 15, Python 36, Machine Learning 32로 모두 완료 기준과 일치했다.
+- Python·ML: Python은 `summary 15 / concept 13 / entity 7 / comparison 1 / query 0`, 총 36개와 계획 시점 32개를 구분했고 source union 21/72를 재확인했다. Machine Learning은 `summary 9 / concept 14 / entity 8 / comparison 1 / query 0`, 총 32개와 2026-07-08~21 날짜·첨부 source union 17/17을 재확인했다.
+- 특수 교정 보존: 중간 프로젝트 Summary의 index 위치, 설명용 `text` fence 5개 제거, Git Bash 명령의 `shell` fence 교정, 개인 식별값 `[REDACTED]`, ML `.py` 개수·CountVectorizer+MLPClassifier·주석 처리 persistence·Bayesian `pass`→완성·VGG16 graph filename·train-only scaling 경계가 유지됐다.
+- raw/Git: `raw/KoreaICT/1. Java`~`10. Python`과 2026-07-08~21·총정리·교육 자료로 명시한 Machine Learning 허용 범위의 status·tracked diff·cached diff는 0건이다. Python은 72개·19,361,756 bytes, ML 허용 범위는 4,176개·120,987,329 bytes로 기준선과 일치했다. `2026.07.22(수)`는 열거·읽기·검색·hash·manifest·Git diff 판독·wiki 근거에서 계속 제외했다.
+- 기록 반영 뒤 전체 게이트와 `git diff --check -- wiki`를 다시 통과했다. `raw/` 수정, Git commit·push는 수행하지 않았으며 단계 12로 전체 재고도화 작업을 최종 완료했다.
+
+## [2026-07-22] update | Machine Learning ML-5 비동기 내용 감사 교정
+
+- 앞선 구조 감사 완료 뒤 도착한 Summary·책임 전수 판독 결과를 반영해, 기존 `30페이지·Comparison 0개` 완료 기록을 `summary 9 / concept 14 / entity 8 / comparison 1 / query 0`, 총 32개 최종 상태로 정정했다.
+- source 교정: 07-10·13의 독립 `.py` 개수, 07-14 CountVectorizer+MLPClassifier 감성 분류와 주석 처리된 persistence, 07-15 Word2Vec 생성자 학습·Bayesian `increase_word/sample`의 `pass`, 07-16 Bayesian 완성 범위와 VGG16 probability graph filename을 실제 날짜 MD·독립 source에 맞췄다.
+- 책임 교정: `svm-margin-kernel-classification` Concept를 만들어 margin·support vector·RBF kernel·C/gamma와 07-09→07-20 train-only scaling 발전을 소유하게 했다. `standardization-vs-minmax-scaling` Comparison을 만들어 분포·범위·이상치·model 선택·train-only fit 기준을 소유하게 했다.
+- 공유 페이지: 한국어 text pipeline·KoNLPy source union을 07-10·16까지 확장하고, VGG16 Entity는 architecture·입출력·학습 이력, pretrained Concept는 활용 방식·graph/artifact 판정을 소유하도록 분리했다. Python·Pandas·matplotlib·KoNLPy의 프로젝트/면접 관점도 실제 ML 이력으로 보강했다.
+- 최종 게이트: 직접 source 32개, 날짜·첨부 source union 17/17, 실제 page 수/index `Total pages` 312/312다. frontmatter·tag·source 실경로/본문·link·index·고립·중복 title·200줄·placeholder·credential·fence 오류는 0개다.
+- 기존 Python·ML·ML-1~4 manifest와 허용 raw 비수정 기준은 유지한다. 0바이트 총정리와 지정 제외 자료는 계속 보류·제외했으며 단계 12는 시작하지 않았다.
+
+## [2026-07-22] update | AGENTS 학습 범위를 KoreaICT 폴더 기준으로 확장
+
+- `AGENTS.md`의 고정된 기술 목록을 `raw/KoreaICT/` 아래 실제 과목·프로젝트 폴더 기준으로 바꿨다. 현재 주요 과정은 예시로 남기되, 앞으로 추가되는 새 과목과 프로젝트 학습 폴더도 별도 규칙 수정 없이 위키 범위에 포함하도록 명시했다.
+- 신규 과목용 구조 예시인 `0. 교육명`은 실제 학습 자료가 추가되기 전까지 과목 범위 집계에서 제외하고, PersonalStudy·PersonalProjects·References 및 연결 지식도 계속 범위에 포함했다.
+
+## [2026-07-22] lint | Machine Learning ML-5 과목 통합 고정점 및 단계 11 완료
+
+- 범위: ML-1~4 완료 페이지를 재작성하지 않고 RML01~RML09를 직접 source로 선언한 `summary 9 / concept 13 / entity 8 / comparison 0 / query 0`, 총 30개를 재집계·교차 감사했다. Machine Learning 0바이트 총정리는 계속 보류하고 단계 12는 시작하지 않았다.
+- Summary: 9개 날짜의 AI/ML 기초→회귀/분류→text·신경망→군집/CNN→NLP·Word2Vec·Bayesian→VGG16→회귀/SVM 재방문→KNN/K-fold 흐름과 이전·다음 연결, 입력→처리→결과, code/output/metric/History/model/artifact 경계를 확인했다. 4개 Summary의 과거 “이번 세션 미ingest/ML-5 예정” 문구만 실제 후속 링크·통합 고정점 표현으로 교정했다.
+- Concept·Entity: 13개 Concept는 문제 유형·lifecycle·평가·알고리즘/표현 원리, 8개 Entity는 도구·library·model의 첫 등장과 날짜별 역할을 소유하도록 확정했다. scikit-learn·Keras의 ML-1~2 한정 표현과 artifact 서술만 07-08~21 전체 이력에 맞게 보정했다.
+- 생성 판단: 회귀/분류/군집, 표준화/Min-Max, SVM/KNN/Tree, BoW/TF-IDF/Word2Vec, holdout/K-fold, 학습/pretrained model 비교는 기존 Concept의 표·선택 기준이 독립 책임을 소유한다. scaler fit 시점, FP/FN 비용, artifact 증거, ensemble 표 오류도 실제 사용자 질문 없이 lifecycle·분류 평가·07-09 Summary가 설명하므로 신규 Comparison·Query는 각각 0개로 확정했다.
+- 구조 검증: RML01~RML09 날짜·첨부 source union 17/17, frontmatter·허용 tag·source 실경로/본문 동기화·broken/ambiguous link·index·고립·중복 title·200줄 초과·placeholder·credential 값 후보·fence 오류 0개다. 직접 페이지 fence는 0개이며 실제 page 수와 index `Total pages`는 310/310이다.
+- raw/manifest: Python 72개·19,361,756 bytes·`42aece6e437b97f3fe6cd2e180bb5ad7bbde3341a656efc91049225b8559038b`, ML 허용 범위 4,176개·120,987,329 bytes·`8d861452dda8eecc0019ae19e339717b3aeabb4e4b56ffafab1883f5a157962d`를 재확인했다. ML-1 `6f5368a7d6bf21bc8df9ca7889da6635391d7a708fa971f15c5d8e712e53d38a`, ML-2 `13076df2af3906fe8e2d0291bfd807c0cc6292f46cb17ff882969a3ae11e20f9`, ML-3 `6db65866df112202276c0d9988d50d3ebf047c2dcffde7bddbb2437e2cc0b03d`, ML-4 `4084e6c2985e0f732a57c9f18e3c73c5c2f355b71f01ee01496ec4f4db6f34e8`도 기준선과 일치하고 허용 raw scoped status/diff는 0건이다.
+- 제외·상태: 지정 제외 날짜 자료는 열거·읽기·검색·hash·manifest·Git diff 판독·wiki source·내용 근거에서 완전히 제외했다. raw 수정, Git commit·push를 수행하지 않았고 단계 11 Machine Learning만 최종 완료했다. 다음 작업은 별도 세션의 단계 12 전체 통합 품질 검증이다.
+
+## [2026-07-22] ingest | Machine Learning ML-4 RML08~RML09 완료
+
+- 범위: 단계 11 네 번째 실행 단위로 RML08 2026-07-20, RML09 07-21 날짜 MD 2/2와 RML09 첨부 3/3을 처음부터 끝까지 대조했다. ML-5, 작성 중인 2026-07-22 자료, 단계 12는 시작하지 않았다.
+- Summary: data collection·Pandas 복습→income 다중회귀→iris SVM→OCR 과제, preference KNN→distance/vote→과적합·일반화→5-fold 도식→sonar 10-fold neural evaluation의 흐름으로 날짜 Summary 2개를 신설했다.
+- Concept·Entity: KNN distance·voting과 K-fold cross-validation·generalization Concept 2개를 신설했다. model lifecycle·회귀/분류 평가·신경망 학습과 scikit-learn·Keras·Python·Pandas·matplotlib에는 ML-4에서 실제 발전한 책임만 누적했다.
+- 생성 판단: multiple regression·SVM 재방문은 기존 회귀/분류/lifecycle에, sonar topology·fold metric은 신경망/Keras에, graph code/artifact 경계는 matplotlib/lifecycle에 흡수했다. holdout/K-fold·5/10-fold·metric/평균·preprocessing 시점·KNN/SVM 비교는 두 신규 Concept와 기존 평가 page가 책임을 소유해 Comparison 0개를 유지했다. OCR은 풀이 없는 과제여서 독립 Concept로 만들지 않았다. TensorFlow Entity와 Query도 독립 runtime 근거·실제 질문 부재로 각각 만들지 않았다.
+- 첨부 대응: KNN image는 구매/비구매 점과 새 녹색 point 주변 이웃 vote, topology image는 입력 2개와 ReLU hidden 2층·sigmoid output의 축약도, K-fold image는 4 train+1 test를 5번 순환하는 5-fold 설명도임을 실제 픽셀로 확인했다. 실제 code는 sonar 60 feature·Dense 24/10/1과 `n_splits=10`이므로 그림의 node/fold 수를 실행 설정으로 옮기지 않았다.
+- 증거 경계: Python source AST 4/4를 import 없이 통과했다. income 20행×3열, iris 150행×5열, preference 14행×8열, sonar 208행×61열·R/M 97/111, surgery 470행×18열·0/1 400/70을 정적으로 확인했다. 독립 KNN source와 날짜 code의 split·K 범위가 다르고, `sonarTestKFold.py`는 filename·R/M 주석과 달리 surgery dataset을 읽는다. 실제 metric·History·직렬화 model·CSV·PNG는 없고 OCR도 풀이·출력·artifact가 없다.
+- leakage·평가: iris는 split 뒤 train에 scaler를 fit해 07-09 순서를 바로잡았다. preference는 전체 data Min-Max 뒤 split해 leakage가 있고 같은 작은 test set으로 K를 고르는 선택 편향이 있다. K-fold preprocessing은 매 fold train에만 fit해야 하며, fold별 loss/accuracy·평균은 여러 model의 평가이지 하나의 최종 model 품질·artifact가 아니다.
+- 구조 검증: Machine Learning 직접 source 지식 페이지는 `summary 9 / concept 13 / entity 8 / comparison 0 / query 0`, 총 30개다. 신규 4개와 보강 9개에서 frontmatter·허용 tag·source 실경로/본문 동기화·index·고립·중복·200줄·credential 값·fence 오류가 0개다. 실제 page 수와 index `Total pages`는 310/310이다.
+- raw/manifest: Python은 72개·19,361,756 bytes·`42aece6e437b97f3fe6cd2e180bb5ad7bbde3341a656efc91049225b8559038b`, ML 허용 범위는 4,176개·120,987,329 bytes·`8d861452dda8eecc0019ae19e339717b3aeabb4e4b56ffafab1883f5a157962d`, ML-1은 `6f5368a7d6bf21bc8df9ca7889da6635391d7a708fa971f15c5d8e712e53d38a`, ML-2는 `13076df2af3906fe8e2d0291bfd807c0cc6292f46cb17ff882969a3ae11e20f9`, ML-3은 `6db65866df112202276c0d9988d50d3ebf047c2dcffde7bddbb2437e2cc0b03d`로 유지됐다. RML08은 `ae5f3b5f318589ce64e2f4600d2ef49551d399df6cf5c16fe7c25b9dc74c53aa`, RML09는 `24fbd2559403d8672e95b7068c0420c67bacd2f106a586c7383bed232f6313b5`로 계획 기준선과 일치했고, 같은 formula의 ML-4 통합 manifest는 시작·종료 모두 5개·241,383 bytes·`4084e6c2985e0f732a57c9f18e3c73c5c2f355b71f01ee01496ec4f4db6f34e8`이다.
+- 제외·상태: Python raw와 2026-07-21까지 ML 허용 raw의 tracked diff 이름은 각각 0개다. `2026.07.22(수)`는 열거·읽기·검색·hash·manifest·Git diff 판독·wiki source·내용 근거에서 완전히 제외했다. `git diff --check -- wiki`를 통과했고 단계 11 전체 완료는 쓰지 않았다. 다음 단위는 ML-5 과목 통합 고정점이며 Git commit·push는 수행하지 않았다.
+
+## [2026-07-22] ingest | Machine Learning ML-3 RML05~RML07 완료
+
+- 범위: 단계 11 세 번째 실행 단위로 RML05 2026-07-14, RML06 07-15, RML07 07-16 날짜 MD 3/3과 RML07 첨부 5/5를 처음부터 끝까지 대조했다. ML-4 이후와 작성 중인 2026-07-22 자료는 ingest하지 않았다.
+- Summary: NLP·morphology·token/stopword→BoW/N-gram/TF-IDF/Word2Vec→감성 MLP→《토지》 전처리, Word2Vec build/load·similarity→Bayesian 초안, Bayesian 완성→VGG16 pretrained inference의 흐름으로 날짜 Summary 3개를 신설했다.
+- Concept·Entity: BoW·TF-IDF·Word2Vec text representation과 pretrained model·VGG16 inference Concept 2개, Gensim·VGG16 Entity 2개를 신설했다. Korean text pipeline·Naive Bayes·lifecycle·CNN과 KoNLPy·Keras·Python·Pandas·matplotlib에는 실제 ML-3 책임만 누적했다.
+- 생성 판단: tokenization/stopword는 기존 한국어 pipeline·KoNLPy에, Bayesian 07-15 초안→07-16 완성은 기존 Naive Bayes Concept에, model build/save/load code와 실제 artifact는 lifecycle에 흡수했다. BoW·TF-IDF·Word2Vec 비교는 새 Concept가 소유하며 별도 Comparison은 만들지 않았다. TensorFlow Entity와 Query도 근거 부족·실제 질문 부재로 각각 만들지 않았다.
+- 첨부·입력 대응: 사전 학습 도식 1개와 probability graph 4개를 실제 픽셀로 확인했다. 주황 고양이→tiger/Egyptian/tabby cat, 눈밭 여우→red fox 약 95%, 흰 강아지→Labrador retriever·kuvasz, 흰 토끼→hare 약 98%로 입력 image 4개와 graph를 4/4 대응했다. 이는 graph artifact 존재를 증명하지만 model download·prediction CSV·전체 재현 성공은 증명하지 않는다.
+- 증거 경계: 07-14 Word2Vec train/save는 주석 처리, 07-15 Bayesian score/predict는 `pass`, 07-16은 method 완성으로 구분했다. 관련 Python source AST는 7/7 통과했다. movie review 30행·2열·label 15/15, mail 40행·2열·label 20/20, 《토지》 5,882줄을 정적으로 확인했다. `toji.model`·prediction CSV·WordCloud PNG는 없고 graph 4개만 물리 artifact다.
+- 구조 검증: Machine Learning 직접 source 지식 페이지는 `summary 7 / concept 11 / entity 8 / comparison 0 / query 0`, 총 26개다. 신규 7개와 보강 9개에서 frontmatter·허용 tag·source 실경로/본문 동기화·link·index·고립·중복·200줄·credential 값·fence 오류가 0개다. 실제 page 수와 index `Total pages`는 306/306이다.
+- raw/manifest: Python은 72개·19,361,756 bytes·`42aece6e437b97f3fe6cd2e180bb5ad7bbde3341a656efc91049225b8559038b`, ML 허용 범위는 4,176개·120,987,329 bytes·`8d861452dda8eecc0019ae19e339717b3aeabb4e4b56ffafab1883f5a157962d`, ML-1은 `6f5368a7d6bf21bc8df9ca7889da6635391d7a708fa971f15c5d8e712e53d38a`, ML-2는 `13076df2af3906fe8e2d0291bfd807c0cc6292f46cb17ff882969a3ae11e20f9`, ML-3은 8개·302,807 bytes·`6db65866df112202276c0d9988d50d3ebf047c2dcffde7bddbb2437e2cc0b03d`로 시작·종료가 일치했다.
+- 제외·상태: Python raw와 2026-07-21까지 ML 허용 raw의 tracked diff 이름은 각각 0개다. `2026.07.22(수)`는 열거·읽기·검색·hash·manifest·Git diff 판독·wiki source에서 완전히 제외했다. `git diff --check -- wiki`를 통과했고 단계 11 전체 완료는 쓰지 않았다. 다음 단위는 ML-4 RML08~RML09(2026-07-20·07-21)이며 Git commit·push는 수행하지 않았다.
+
+## [2026-07-22] ingest | Machine Learning ML-2 RML03~RML04 완료
+
+- 범위: 단계 11 두 번째 실행 단위로 RML03 2026-07-10과 RML04 2026-07-13 날짜 MD 2/2를 처음부터 끝까지 대조했다. ML-3 이후 날짜와 작성 중인 2026-07-22 자료는 본문 ingest하지 않았다.
+- Summary: `2026-07-10-machine-learning-text-classification-neural-network`, `2026-07-13-machine-learning-clustering-cnn` 2개를 신규 생성해 CountVectorizer→Naive Bayes→iris logistic regression→MNIST Dense와 clustering distance→hierarchical/MDS/KMeans→CNN/Dropout의 교시 흐름을 복원했다.
+- Concept·Entity: text vectorization·Naive Bayes, 신경망 학습 기초, clustering·distance, CNN·Dropout Concept 4개와 Keras Entity를 신규 생성했다. 문제 유형·model lifecycle·분류 평가와 scikit-learn·Python·Pandas·matplotlib에는 ML-2에서 실제 발전한 책임만 누적했다.
+- 생성 판단: logistic regression은 기존 문제 유형·분류 평가·lifecycle에, hierarchical vs KMeans는 군집 Concept에, Dense vs CNN·padding vs pooling·Dropout은 CNN Concept에 흡수했다. TensorFlow는 원문에서 Keras와 독립된 framework 책임이 충분히 분리되지 않아 Entity를 만들지 않았고, Comparison·Query는 각각 0개를 유지했다.
+- 정확성 교정: 음식 Euclidean 표의 값이 squared distance와 대응하는 점, MNIST `744`/784 주석, 학습 CSV와 graph 입력 filename 불일치, KMeans cluster ID와 정답 label 차이, Dropout inference 설명, CNN 이론 text의 Python fence 오분류를 raw 수정 없이 구분했다.
+- 증거 경계: 관련 Python source 12개는 import·실행 없이 AST parse 12/12를 통과했다. mail 86행·2열, checked mail 4행·1열, iris 150행·5열, 도매 고객 440행·8열과 결측 0을 정적으로 확인했다. embedded sparse output·metric/history 접근·메모리 model·save call과 실제 CSV·PNG·model artifact를 분리했고 ML-2 관련 `dataOut` 물리 결과는 0개다.
+- 구조 검증: Machine Learning 직접 source 지식 페이지는 `summary 4 / concept 8 / entity 5 / comparison 0 / query 0`, 총 17개다. 신규 7개와 보강 7개에서 frontmatter·허용 tag·source 실경로/본문 동기화·link·index·고립·중복·200줄·credential 값·fence 오류 0개이며 신규 fence는 0개다. 실제 page 수와 index `Total pages`는 299/299다.
+- raw/manifest: Python은 72개·19,361,756 bytes·`42aece6e437b97f3fe6cd2e180bb5ad7bbde3341a656efc91049225b8559038b`, ML 허용 범위는 4,176개·120,987,329 bytes·`8d861452dda8eecc0019ae19e339717b3aeabb4e4b56ffafab1883f5a157962d`, ML-1은 2개·61,320 bytes·`6f5368a7d6bf21bc8df9ca7889da6635391d7a708fa971f15c5d8e712e53d38a`, ML-2는 2개·59,473 bytes·`13076df2af3906fe8e2d0291bfd807c0cc6292f46cb17ff882969a3ae11e20f9`로 유지됐다.
+- 제외·상태: Python raw와 2026-07-21까지의 ML 허용 raw에 Agent diff는 0건이다. `2026.07.22(수)`는 열거·읽기·검색·hash·manifest·Git diff 판독·wiki source에서 완전히 제외하고 사용자 변경을 보존했다. `git diff --check`를 통과했고 단계 11 전체 완료는 쓰지 않았다. 다음 단위는 ML-3 RML05~RML07(2026-07-14·07-15·07-16)이며 Git commit·push는 수행하지 않았다.
+
+## [2026-07-22] ingest | Machine Learning ML-1 RML01~RML02 완료
+
+- 범위: 단계 11 첫 실행 단위로 RML01 2026-07-08과 RML02 2026-07-09 날짜 MD 2/2를 처음부터 끝까지 대조했다. ML-2 이후 날짜는 본문 ingest하지 않았고 Python 07-08 한국어 text mining과 ML 07-08 시작 책임을 분리했다.
+- Summary: `2026-07-08-machine-learning-foundations-linear-regression`, `2026-07-09-machine-learning-classification-evaluation` 2개를 신규 생성해 AI/ML/DL→학습 유형→`auto-mpg` 회귀와 confusion matrix→SVM/ROC/AUC→KNN/과적합→Decision Tree/ensemble의 실제 교시 흐름을 복원했다.
+- Concept·Entity: 문제 유형, model lifecycle, 선형회귀·$R^2$/MSE, 분류 평가 4개 Concept과 scikit-learn Entity를 신규 생성했다. Python·Pandas·matplotlib Entity는 실제 ML-1 이력만 보강했고, 독립 Notebook 근거가 없는 Jupyter Notebook은 수정하지 않았다.
+- 생성 판단: 회귀/분류/군집과 accuracy/precision/recall/F1 비교는 각각 overview Concept에 흡수했다. scaler train/test 비교는 lifecycle의 leakage 책임에 흡수했고 SVM/KNN/Tree는 후속 반복 전까지 Summary에 유지했다. 실제 사용자 질문이 없어 Comparison·Query 신규 생성은 0개다.
+- 오류 교정: 07-09 ensemble 세 표는 Voting→Bagging 내용, Bagging→Boosting 내용, Boosting→Voting 내용으로 label이 한 칸씩 이동한 원본 오류임을 이론 교안 246~248쪽과 대조했다. 분류 source 3개의 scaler-before-split leakage, StandardScaler 이상치 설명, Decision Tree 독립/종속 주석·PDF page 불일치, 07-08 교육 source의 test 개수 출력 오류와 $R^2$ 음수 가능성을 raw 수정 없이 구분했다.
+- 증거 경계: ML-1 source 4개 AST 오류 0개, `auto-mpg` 398행·9열, 유방암 dataset 700줄·11열과 `?` 16개를 확인했다. 실행 stdout·metric 수치·직렬화 model·저장 PNG는 보존되지 않았고 교육자료 `dataOut`의 해당 결과도 0개이므로 fit·predict·save 호출을 성공 artifact로 확대하지 않았다.
+- 구조 검증: 직접 source 지식 페이지는 `summary 2 / concept 4 / entity 4 / comparison 0 / query 0`, 총 10개다. 변경 지식 10개에서 frontmatter·허용 tag·source 실경로/본문 동기화·link·index·고립·중복·200줄·credential 값·fence 오류 0개이며 새 페이지 fence는 0개다. 실제 page 수와 index `Total pages`는 292/292다.
+- raw/Git: Python manifest는 72개·19,361,756 bytes·`42aece6e437b97f3fe6cd2e180bb5ad7bbde3341a656efc91049225b8559038b`, ML 허용 manifest는 4,176개·120,987,329 bytes·`8d861452dda8eecc0019ae19e339717b3aeabb4e4b56ffafab1883f5a157962d`, ML-1은 2개·61,320 bytes·`6f5368a7d6bf21bc8df9ca7889da6635391d7a708fa971f15c5d8e712e53d38a`로 유지됐다. Python과 ML 허용 raw scoped diff는 0건이고 변경 범위 `git diff --check`를 통과했다.
+- 제외·상태: 작성 중인 `2026.07.22(수)`는 열거·읽기·검색·hash·manifest·Git diff 판독·wiki source에서 완전히 제외하고 사용자 변경을 보존했다. 단계 11 전체 완료는 쓰지 않았으며 다음 단위는 ML-2 RML03~RML04(2026-07-10·07-13)다. Git commit·push는 수행하지 않았다.
+
+## [2026-07-22] lint | Python 단계 10 전체 고정점 및 Machine Learning 재고 계획 완료
+
+- Python 완료: R01~R14 날짜 수업과 Python 총정리의 Summary·Concept·Entity를 재고도화하고 최종 책임·중복·출처·증거 경계를 고정했다. 실제 raw는 72개·19,361,756 bytes이며 정렬 SHA-256 manifest digest `42aece6e437b97f3fe6cd2e180bb5ad7bbde3341a656efc91049225b8559038b`를 재확인했다.
+- Python 검증: 독립 Python source 9개는 import·실행 없이 AST parse했으며 오류는 0개다. code 작성, text output, Traceback, 저장 호출, 물리 CSV·PNG artifact와 전체 notebook 성공을 서로 다른 근거 수준으로 유지했다.
+- Machine Learning 재고: 2026-07-08~07-21 날짜 MD 9개, 07-16 첨부 5개, 07-21 첨부 3개, 0바이트 `Machine Learning 총정리.md` 1개와 교육자료 4,158개를 허용 범위로 고정했다. 총 4,176개·120,987,329 bytes이며 digest는 `8d861452dda8eecc0019ae19e339717b3aeabb4e4b56ffafab1883f5a157962d`다.
+- Machine Learning 교육자료: 이론 PDF는 342쪽, 실습 PDF는 163쪽이며 둘 다 text 추출 가능했다. source·dataset·model·metric·graph·saved artifact를 분류했고 기존 frontmatter에서 Machine Learning 날짜 raw를 직접 source로 가진 지식 페이지는 0개였다.
+- 제외 경계: 작성 중인 `raw/KoreaICT/11. Machine Learning/2026.07.22(수)`는 폴더 열거·내용 읽기·검색·hash·manifest·Git diff 판독·wiki source와 근거 사용에서 제외했다. Git status에 보이는 사용자 변경은 보존했다.
+- 기록: [[_meta/python-rehighquality-inventory-plan|Python 내용 재고도화 전수 재고와 실행 계획]]은 단계 10 완료 상태로, [[_meta/machine-learning-rehighquality-inventory-plan|Machine Learning 재고도화 재고 및 실행 계획]]은 ML-1~ML-5 분할 기준선으로 갱신했다. 실제 wiki 페이지 수와 index `Total pages`는 285/285다.
+- 상태: 단계 10 Python과 단계 11의 재고 계획만 완료했다. Machine Learning 날짜 Summary·Concept·Entity 본문 ingest와 단계 11 전체 완료는 아직 시작하지 않았으며 Git commit·push는 수행하지 않았다.
+
+## [2026-07-22] update | Python 재고도화 2026-06-30까지 부분 완료
+
+- 범위: 단계 10 Python 중 R01~R08(2026-06-19~06-30) 날짜 노트 8개와 06-30 `첨부파일/` PNG 2개만 직접 raw로 사용했다. 2026-07-01 이후 raw·직접 근거 본문, Python 총정리, 후속 Pandas/API/크롤링/지도/텍스트 마이닝은 의도적으로 제외했다.
+- Summary: 날짜 Summary 8개를 전체 수업 순서, 이전·다음 연결, 대표 입력→처리→결과, 실제 Traceback·수정/재실행·교안형 output·save call·artifact의 근거 수준이 드러나도록 고도화했다.
+- Concept: 기존 Python core 5개를 고도화하고, 반복성·독립 검색 가치에 따라 `Python 예외 처리`, `Python 정규표현식`, `Python XML/JSON 구조화 데이터 처리` 3개를 신규 생성했다. 기존 file page는 일반 file I/O와 text 변환 책임으로 좁혔다.
+- 공유 페이지: Python/Pandas/Jupyter/matplotlib Entity에는 06-29~30 첫 등장·기초 학습·graph artifact 구간만 안전하게 추가했다. `pandas-dataframe-basics`는 07-01 이후 내용이 대부분이고 이미 200줄이라 분할 없이 추가하면 장문 기준을 넘으므로 원상 유지·후속 보류했다.
+- 첨부 확인: PNG 2개는 7개 국가·신용도 값의 선그래프와 막대그래프 artifact다. 막대그래프는 인접 code와 대응도가 높지만 선그래프는 code 제목·text 반환값·PNG 픽셀 제목의 철자·띄어쓰기가 달라 동일 cell의 정확한 산출물 여부를 미확정으로 남겼다. 두 file을 Jupyter/Pandas 전체 실행 성공으로 확대하지 않았다.
+- 기록: 신규 Concept 3개를 index에 등록하고 설명·Meta 인계를 갱신했으며 실측 `Total pages`를 283으로 맞췄다. Python 단계 10 전체와 단계 11은 아직 미완료다.
+- 고정점: 지식 페이지 20개에서 frontmatter·source·본문 출처·허용 tag·type·wikilink·index·placeholder·빈 sources 오류 0개, 직접 Summary·Concept fence 0개, 변경 추가행 credential value 후보 0개를 확인했다. `pandas-dataframe-basics`와 2026-07-01 이후 제외 범위의 Agent diff는 0건이다.
+- raw/Git: R01~R08·첨부 10개의 시작·종료 정렬 SHA-256 manifest digest는 `7106a6cae55a3577289ada2aa24755a49b328991ad83a0bc6406a9ffd25feddf`로 동일하고 scoped status/diff 0건, 변경 scope `git diff --check`를 통과했다. `raw/`에는 Agent 쓰기를 수행하지 않았고 Git commit·push도 수행하지 않았다.
+- 비동기 감사 교정: 원본 줄 범위·PNG 픽셀을 독립 재감사해 R01 `sep/end`·interpreter/compiler 단순화, R02 ForAndList code/output 불일치, R03 중첩 list label·학점 경계·truthiness, 06-30 선그래프의 code/text/PNG 제목 불일치를 추가 반영했다. matplotlib 첫 언급인 06-29 설치 command도 출처에 보강하되 설치 성공은 미확정으로 유지했다.
+
 ## [2026-07-19] update | Python 계획 Meta 비동기 전수 감사 정정
 
 - 정정 사유: 계획 세션 종료 뒤 도착한 raw·직접 페이지·경계 페이지 병렬 전수 감사 결과를 기존 Meta 분류와 대조해, 휴리스틱 초안의 직접 페이지 분류와 경계 후보가 과도했음을 확인했다.
@@ -721,7 +826,7 @@
 
 ## [2026-07-10] update | TXT→MD 짧은 비밀번호 후보 검사 정정
 
-- 원인: 기존 검사 구현이 길이가 긴 credential 중심으로만 후보를 잡아, `암호 : ubuntu`처럼 짧은 수업용 기본 비밀번호를 누락했음.
+- 원인: 기존 검사 구현이 길이가 긴 credential 중심으로만 후보를 잡아, `암호 : [REDACTED]`처럼 짧은 수업용 기본 비밀번호를 누락했음.
 - 수정: `AGENTS.md`와 활성 `llm-wiki-vault` 스킬에 credential 문맥 뒤 실제 값은 길이와 무관하게 후보로 보고하고, 값 없는 절차 안내문은 후보에서 제외하는 2단계 판정 규칙을 추가함.
 - 회귀 검증: `5. Linux/2026.04.22(수) - 시작` 원본에서 실제 값 후보 37·50·55·143·165행 5건을 모두 탐지했고, 값 없는 79·106·114행은 오탐 없이 제외함. 후보가 있으므로 사용자 명시 재개 전 TXT→MD 변환은 시작하지 않음.
 - 원칙: 외부 원본 TXT와 `raw/` 결과 MD는 수정하지 않음.

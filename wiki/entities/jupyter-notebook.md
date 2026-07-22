@@ -1,7 +1,7 @@
 ---
 title: Jupyter Notebook
 created: 2026-07-01
-updated: 2026-07-13
+updated: 2026-07-22
 type: entity
 tags: [python]
 sources:
@@ -10,6 +10,9 @@ sources:
   - raw/KoreaICT/10. Python/2026.07.01(수)/2026.07.01(수).md
   - raw/KoreaICT/10. Python/2026.07.02(목)/2026.07.02(목).md
   - raw/KoreaICT/10. Python/2026.07.03(금)/2026.07.03(금).md
+  - raw/KoreaICT/10. Python/2026.07.06(월)/2026.07.06(월).md
+  - raw/KoreaICT/10. Python/2026.07.07(화)/2026.07.07(화).md
+  - raw/KoreaICT/10. Python/2026.07.08(수)/2026.07.08(수).md
 status: growing
 confidence: high
 ---
@@ -23,6 +26,12 @@ Jupyter Notebook은 코드 셀, 실행 결과, 표, 그래프, 설명을 한 화
 ## 이 위키에서의 맥락
 
 2026-06-29부터 07-03까지 Pandas 실습을 셀 단위로 진행했다. 07-06에는 VS Code에서 `.ipynb`를 열어 Python/Jupyter kernel을 선택하는 실행 환경도 확인했다. VS Code는 편집·실행 도구이고 Jupyter Notebook은 셀·출력·메타데이터를 담는 노트북 형식/환경이라는 점을 구분한다.
+
+07-06~08의 날짜 노트는 API·crawl·text mining code를 notebook 셀 흐름처럼 보존하지만 독립 `.ipynb` 파일은 raw에 없다. 일부 표·오류 설명·PNG는 남아 있어 특정 실행 정황은 확인되나, 셀 metadata·실행 순서·kernel 상태가 없으므로 전체 notebook 재현성은 검증할 수 없다.
+
+### 2026-06-30까지의 첫 사용
+
+06-29에는 command prompt에서 notebook server를 시작하고 작업 폴더를 지정하는 절차를 정리했다. 06-30에는 code cell과 Markdown cell, `Ctrl + Enter`와 `Shift + Enter`, 저장 방식을 확인하며 Pandas Series를 셀 단위로 실행했다. Series 표와 graph 출력은 날짜 노트에 embedded되어 있고 graph PNG 2개가 남아 있지만, `.ipynb` file 자체는 직접 raw 재고에 없다. 따라서 notebook curriculum과 일부 결과는 확인되지만 전체 셀 실행 순서·재현성은 검증되지 않았다.
 
 ## 핵심 기능 / 특징
 
@@ -40,6 +49,9 @@ Jupyter Notebook은 코드 셀, 실행 결과, 표, 그래프, 설명을 한 화
 - [[summaries/2026-07-01-python-pandas-dataframe|2026-07-01 Python Pandas DataFrame 조회와 입출력]]
 - [[summaries/2026-07-02-python-pandas-reshape-merge|2026-07-02 Python Pandas 데이터 결합과 재구조화]]
 - [[summaries/2026-07-03-python-pandas-groupby-visualization|2026-07-03 Python Pandas groupby와 시각화]]
+- [[summaries/2026-07-06-python-public-data-bicycle-analysis|2026-07-06 Python 공공데이터 API와 자전거 분석]]
+- [[summaries/2026-07-07-python-web-crawling-geocoding-visualization|2026-07-07 Python 웹 크롤링, 지오코딩, 시각화]]
+- [[summaries/2026-07-08-python-korean-text-mining|2026-07-08 Python 한국어 텍스트 마이닝]]
 
 ## 관련 개념
 
@@ -64,3 +76,6 @@ Jupyter Notebook은 코드 셀, 실행 결과, 표, 그래프, 설명을 한 화
 - `raw/KoreaICT/10. Python/2026.07.01(수)/2026.07.01(수).md`
 - `raw/KoreaICT/10. Python/2026.07.02(목)/2026.07.02(목).md`
 - `raw/KoreaICT/10. Python/2026.07.03(금)/2026.07.03(금).md`
+- `raw/KoreaICT/10. Python/2026.07.06(월)/2026.07.06(월).md`
+- `raw/KoreaICT/10. Python/2026.07.07(화)/2026.07.07(화).md`
+- `raw/KoreaICT/10. Python/2026.07.08(수)/2026.07.08(수).md`

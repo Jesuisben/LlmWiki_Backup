@@ -1,7 +1,7 @@
 ---
 title: 데이터 모델링과 정규화
 created: 2026-07-02
-updated: 2026-07-15
+updated: 2026-07-22
 type: concept
 tags: [oracle, sql]
 sources:
@@ -19,9 +19,7 @@ confidence: high
 
 ## 흐름
 
-```text
-현실세계 → 문서 → 설계 → 구현 → Database화
-```
+**모델링 흐름:** 현실세계 → 문서 → 설계 → 구현 → Database화
 
 ERD(Entity-Relationship Diagram)는 엔티티, 속성, 관계를 시각적으로 표현하는 설계도다. DBeaver의 엔티티 관계도는 실제 테이블 사이 FK 관계를 눈으로 확인하게 해준다.
 

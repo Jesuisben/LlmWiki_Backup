@@ -1,7 +1,7 @@
 ---
 title: 2026-03-11 Java 상속과 참조 형변환
 created: 2026-07-02
-updated: 2026-07-15
+updated: 2026-07-22
 type: summary
 tags: [java, curriculum, study-log]
 sources:
@@ -40,12 +40,7 @@ confidence: high
 - 부모 타입 배열에 여러 음료 객체를 담고 반복문/조건문으로 구분
 - `toString()` 오버라이딩으로 객체 출력 결과를 사람이 읽기 좋게 변경
 
-```text
-new Americano04(...) → 자식 생성자 → super(name, price)
-→ 부모 공통 필드 초기화 → 자식 waterAmount 초기화
-→ Beverage04 참조/배열에 업캐스팅 → 공통 showInfo() 호출
-→ instanceof로 실제 타입 확인 → 다운캐스팅 → 자식 전용 기능 호출
-```
+**객체 생성·다형성 흐름:** `new Americano04(...)` → 자식 생성자 → `super(name, price)` → 부모 공통 필드 초기화 → 자식 `waterAmount` 초기화 → `Beverage04` 참조/배열에 업캐스팅 → 공통 `showInfo()` 호출 → `instanceof`로 실제 타입 확인 → 다운캐스팅 → 자식 전용 기능 호출
 
 ## 헷갈린 점 / 질문
 

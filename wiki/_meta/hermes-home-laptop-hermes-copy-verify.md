@@ -1,7 +1,7 @@
 ---
 title: 집 노트북 Hermes 설정 복사와 검증
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-22
 type: meta
 tags: [study-log]
 sources:
@@ -124,13 +124,13 @@ Hermes 설정 폴더를 제대로 복사했다면 다음이 따라올 수 있다
 
 집 노트북에서는 OAuth/API 인증을 새로 설정한다.
 
-```bash
+```shell
 hermes auth
 ```
 
 또는 모델/provider 설정을 다시 연다.
 
-```bash
+```shell
 hermes setup
 hermes model
 ```

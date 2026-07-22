@@ -1,7 +1,7 @@
 ---
 title: 2026-02-26 오리엔테이션과 개발 환경 준비
 created: 2026-07-02
-updated: 2026-07-15
+updated: 2026-07-22
 type: summary
 tags: [java, curriculum, study-log]
 sources:
@@ -43,10 +43,7 @@ confidence: high
 
 이날 실습은 단순 출력이지만, 이후 모든 수업 코드가 “패키지 안의 클래스, 클래스 안의 `main`, `main` 안의 실행문” 구조로 작성된다는 점에서 중요하다.
 
-```text
-MyJava 프로젝트 → 패키지 → 클래스 → main() → println()
-→ 변수 선언 → 값 대입(쓰기) → 계산에 사용(읽기) → 결과 출력
-```
+**학습 흐름:** MyJava 프로젝트 → 패키지 → 클래스 → `main()` → `println()` → 변수 선언 → 값 대입(쓰기) → 계산에 사용(읽기) → 결과 출력
 
 ## 헷갈린 점 / 질문
 

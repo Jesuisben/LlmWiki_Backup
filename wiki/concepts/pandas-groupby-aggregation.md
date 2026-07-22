@@ -1,7 +1,7 @@
 ---
 title: Pandas groupby와 집계
 created: 2026-07-03
-updated: 2026-07-13
+updated: 2026-07-22
 type: concept
 tags: [python]
 sources:
@@ -28,11 +28,7 @@ Oracle에서 `GROUP BY`와 집계 함수를 이미 배웠다면, Pandas `groupby
 
 ### 기본 패턴
 
-```python
-payment.groupby("성별")["교통비"].sum().to_frame()
-cols = ["교통비", "출장기간"]
-payment.groupby(["출장지역", "성별"])[cols].agg(["sum", "mean"])
-```
+07-03 수업에서는 성별별 교통비 합계·건수에서 시작해 출장지역·성별별 교통비와 출장기간에 여러 집계 함수를 적용했다.
 
 핵심 순서는 다음과 같다.
 
@@ -45,12 +41,7 @@ payment.groupby(["출장지역", "성별"])[cols].agg(["sum", "mean"])
 
 `agg()`는 집계 함수를 하나 또는 여러 개 적용한다. 문자열 함수명(`"sum"`, `"mean"`)뿐 아니라 직접 만든 함수도 사용할 수 있다.
 
-```python
-def get_range_limit(x, lower, upper):
-    return x.between(lower, upper).mean()
-
-payment.groupby('성별')['교통비'].agg(get_range_limit, 1500, upper=3500)
-```
+수업의 사용자 정의 함수는 각 group의 값이 하한·상한 사이인지 `between()`으로 판정하고 boolean 평균으로 비율을 구했다. 이 함수를 `agg()`에 추가 인수와 함께 전달했다.
 
 이 예시는 각 성별 그룹에서 교통비가 1500~3500 사이에 들어가는 비율을 계산한다. `between(...).mean()`은 True/False를 1/0처럼 평균내는 방식이라 “조건을 만족하는 비율”을 구할 수 있다.
 
@@ -77,26 +68,24 @@ payment.groupby('성별')['교통비'].agg(get_range_limit, 1500, upper=3500)
 
 `pd.cut()`은 `소득`처럼 연속형 숫자 값을 구간으로 나눠 범주형 라벨을 붙인다.
 
-```python
-bins = [-np.inf, 200, 500, 700, 1000, np.inf]
-labels = ['저소득', '중저소득', '중소득', '중고소득', '고소득']
-welfare['범주형소득'] = pd.cut(welfare['소득'], bins=bins, labels=labels)
-```
+수업에서는 음의 무한대부터 양의 무한대까지의 소득 구간과 저소득~고소득 label을 준비해 `pd.cut()` 결과를 파생 column으로 붙였다.
 
 그 뒤 `groupby(['성별', '범주형소득'])`로 집계하면 숫자 범위를 사람이 읽기 쉬운 그룹으로 분석할 수 있다.
 
 ## 예시 흐름
 
-```python
-chartdata = welfare.groupby(['성별', '범주형소득'], observed=False)['소득'].mean().to_frame()
-chartdata = chartdata.reset_index()
-chartdata = chartdata.pivot(index='성별', columns='범주형소득', values='소득')
-chartdata.plot(kind='barh')
-```
-
-이 흐름은 “원본 데이터 → 범주별 평균 요약 → 그래프에 맞는 wide format → 막대 그래프”로 이어지는 전형적인 분석 패턴이다.
+복지 데이터는 `groupby` 평균 → `reset_index` → `pivot` → 수평 막대그래프 순서로 바꾸었다. 이는 “원본 데이터 → 범주별 평균 요약 → graph에 맞는 wide format → 시각화”로 이어지는 전형적인 분석 패턴이다.
 
 공공 자전거 실습에서는 `자치구`·`대여구분코드`별 `대여건수`를 합산해 정렬한 뒤 `drop_duplicates()`로 그룹마다 가장 큰 항목을 남겼다. 즉 groupby 결과는 집계표 자체로 끝나지 않고 정렬·결측치 처리·그래프·지도 분석의 입력이 된다.
+
+07-07 커피 매장 실습에서는 군구·브랜드별 매장 수와 서비스 제공 매장 분포를 집계했다. 다만 날짜 raw에는 생성 CSV·PNG·HTML이 없고 일부 결측 좌표·파일명 재사용 문제가 있으므로, code상 적용과 물리 artifact를 구분한다.
+
+## 실행 증거 경계
+
+- 07-03: groupby·agg·transform·cut code와 일부 표 표현이 있지만 독립 notebook·graph PNG는 없다.
+- 07-06: 자전거 입력 CSV 한 개는 물리적으로 존재하지만 API 생성 CSV·지도 HTML은 없다.
+- 07-07: groupby·plot·save code는 있으나 최종 저장 artifact는 없다.
+- 따라서 이 페이지는 날짜별 발전과 분석 논리를 설명하며 전체 실행 성공을 주장하지 않는다.
 
 ## 자주 헷갈리는 점
 
@@ -109,7 +98,10 @@ chartdata.plot(kind='barh')
 ## 관련 개념
 
 - [[summaries/2026-07-03-python-pandas-groupby-visualization|2026-07-03 Python Pandas groupby와 시각화]]
+- [[summaries/2026-07-06-python-public-data-bicycle-analysis|2026-07-06 Python 공공데이터 API와 자전거 분석]]
+- [[summaries/2026-07-07-python-web-crawling-geocoding-visualization|2026-07-07 Python 웹 크롤링, 지오코딩, 시각화]]
 - [[concepts/pandas-dataframe-basics|Pandas DataFrame 기본]]
+- [[concepts/pandas-dataframe-reshape-merge|Pandas DataFrame 결합과 재구조화]]
 - [[entities/pandas|Pandas]]
 - [[entities/matplotlib|matplotlib]]
 - [[concepts/oracle-functions-join-subquery|Oracle 함수·조인·서브쿼리]]
@@ -118,3 +110,5 @@ chartdata.plot(kind='barh')
 ## 출처
 
 - `raw/KoreaICT/10. Python/2026.07.03(금)/2026.07.03(금).md`
+- `raw/KoreaICT/10. Python/2026.07.06(월)/2026.07.06(월).md`
+- `raw/KoreaICT/10. Python/2026.07.07(화)/2026.07.07(화).md`

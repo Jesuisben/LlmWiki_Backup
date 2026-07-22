@@ -1,7 +1,7 @@
 ---
 title: LLM Wiki 내용 재고도화 작업 계획
 created: 2026-07-15
-updated: 2026-07-19
+updated: 2026-07-22
 type: meta
 tags: [curriculum, study-log]
 sources:
@@ -56,7 +56,8 @@ confidence: high
 8. **Passwordless** — 인증 배경 → X1280 → Docker 연동 서버 → Spring 샘플 → AAM/APE → FilingBox/WORM → REST API
 9. **중간 프로젝트 공부** — CI/CD·배포·Passwordless 적용을 실제 프로젝트 설계와 연결하되, 수업 직접 구현과 확장 설계를 구분
 10. **Python** — 기본 문법 → 컬렉션/함수/OOP → 파일/정규표현식/XML/JSON → Pandas → API/크롤링/지도 → 텍스트 마이닝
-11. **전체 통합 품질 검증** — 모든 과목 완료 뒤에만 수행한다. 중복·모순·교차 과목 연결·전체 내용 품질을 확인하고 잔여 오류를 고정점으로 보정한다.
+11. **Machine Learning** — 기초→회귀/분류→평가→군집→NLP→신경망/CNN→사전 학습 model→교차 검증
+12. **전체 통합 품질 검증** — 모든 과목 완료 뒤에만 수행한다. 중복·모순·교차 과목 연결·전체 내용 품질을 확인하고 잔여 오류를 고정점으로 보정한다.
 
 ## 페이지 유형별 내용 완료 기준
 
@@ -190,6 +191,22 @@ confidence: high
 | 2026-07-18 | 7 | CI/CD | 실용형 2개 세션에서 직접 19페이지를 고도화하고 `clb-vs-alb`를 직접/일반 기능·미보존 결과 기준으로 확정, 신규 Comparison·Query 0개 유지 | R01~R04·P01~P04 source union 8/8, 05-11 container 출력·05-12 절차·05-13 Terraform 오류/S3 성공 관찰 서술과 Linux/AWS/후속 경계 재검증 | frontmatter·source·본문 출처·tag·link·index·고립·placeholder·민감정보 오류 0, fence 3/3·`bash` 0, Total pages 276, raw CI/CD 8개 hash/status/diff 무변경·scoped diff 통과 | 최종 완료 / 다음은 8. Passwordless 실용형 첫 세션 |
 | 2026-07-18 | 8 | Passwordless | 실용형 2개 세션에서 직접 15페이지를 고도화하고 기존 Comparison 2개를 유지·보강, 신규 Comparison 4개·Query 1개 후보를 기존 Concept/Entity에 흡수 | R01~R07·P01~P11·J01~J02 source union 20/20, 05-14~21 직접 결과·미보존 결과와 교육 PDF/Postman example·단계 9 후속 설계 경계 재검증 | frontmatter·source·tag·link·index·고립·placeholder·민감정보 오류 0, JSON fence 1/1·`bash` 0, Total pages 278, raw 20개 manifest/status/diff 무변경·scoped diff 통과 | 최종 완료 / 다음은 9. 중간 프로젝트 공부 실용형 첫 세션 |
 | 2026-07-19 | 9 | 중간 프로젝트 공부 | 실용형 2개 세션에서 직접 15페이지를 고도화하고 기존 Passwordless/비밀번호 Comparison을 유지·보강, 신규 Comparison 4개·장애 Query 후보를 기존 Concept·Summary에 흡수 또는 기각 | raw 4/4 source union, embedded snippet·부분 출력·관찰·실패·조건과 end-to-end 결과, DB topology·Secret 소비·test 생략·polling/callback·승인/JWT 결속 경계 재검증 | frontmatter·source·tag·link·index·고립·placeholder·민감정보·fence 오류 0, Total pages 279, raw manifest/status/diff 무변경·scoped diff 통과 | 최종 완료 / 다음은 10. Python 실제 재고 확인 |
+| 2026-07-22 | 10 | Python | R01~R08 완료 범위를 보존하고 R09~R14 Summary 6개·Pandas/외부 데이터 Concept·공유 Entity를 고도화, `pandas-dataframe-reshape-merge` Concept 신설 | 날짜 MD 6개·07-01 graph 3개 pixel·공공자전거 CSV·source AST를 대조하고 code/output/error/artifact/package 설치 경계 검증 | frontmatter·source·tag·link·index·fence·민감정보·raw manifest·scoped diff 고정점 통과 | 최종 완료 / 다음은 11. Machine Learning ML-1 |
+| 2026-07-22 | 11 중간 | Machine Learning ML-1 | RML01~RML02 Summary 2·Concept 4·scikit-learn Entity 1개 신설, Python·Pandas·matplotlib Entity 부분 보강 | AI/ML/DL→회귀 lifecycle과 confusion matrix→SVM/KNN/Tree 흐름, ensemble 표 label 이동·scaler leakage·code/metric/artifact 경계 대조 | RML01~RML02 2/2, 직접 source 10페이지, index 292페이지와 ML 허용 manifest·raw 비수정 고정점 검증 | ML-1 완료 / 단계 11 전체 미완료 / 다음은 ML-2 RML03~RML04 |
+| 2026-07-22 | 11 중간 | Machine Learning ML-2 | RML03~RML04 Summary 2·Concept 4·Keras Entity 1개 신설, ML-1 공통 Concept·scikit-learn·Python·Pandas·matplotlib 부분 보강 | CountVectorizer→Naive Bayes→logistic regression→MNIST Dense와 distance→hierarchical/MDS/KMeans→CNN/Dropout 흐름, metric/history/model/graph artifact 경계 대조 | RML03~RML04 2/2, 직접 source 17페이지, index 299페이지와 Python·ML·ML-1·ML-2 manifest·raw 비수정 고정점 검증 | ML-2 완료 / 단계 11 전체 미완료 / 다음은 ML-3 RML05~RML07 |
+| 2026-07-22 | 11 중간 | Machine Learning ML-3 | RML05~RML07 Summary 3·Concept 2·Gensim/VGG16 Entity 2개 신설, text·CNN·lifecycle 및 공유 Entity 부분 보강 | token→BoW/TF-IDF/Word2Vec→감성 MLP→《토지》 embedding, Bayesian 초안→완성, VGG16 입력 4개→graph 4개와 code/output/model/artifact 경계 대조 | RML05~RML07 3/3·첨부 5/5, 직접 source 26페이지, index 306페이지와 Python·ML·ML-1~3 manifest·raw 비수정 고정점 검증 | ML-3 완료 / 단계 11 전체 미완료 / 다음은 ML-4 RML08~RML09 |
+| 2026-07-22 | 11 중간 | Machine Learning ML-4 | RML08~RML09 Summary 2·KNN/K-fold Concept 2개 신설, 회귀·분류·lifecycle·신경망 및 공유 Entity 부분 보강 | income 회귀·iris SVM holdout→preference KNN distance/vote→sonar 10-fold 신경망 평가, OCR 미완·5/10-fold·60-24-10-1·metric/model/artifact 경계 대조 | RML08~RML09 2/2·첨부 3/3, 직접 source 30페이지, index 310페이지와 Python·ML·ML-1~4 manifest·raw 비수정 고정점 검증 | ML-4 완료 / 단계 11 전체 미완료 / 다음은 ML-5 과목 통합 고정점 |
+| 2026-07-22 | 11 | Machine Learning | ML-1~4 완료본을 보존하고 Summary 9·Concept 14·Entity 8·Comparison 1, 총 32개를 통합 감사해 source 오류를 교정하고 SVM 원리 Concept·scaling Comparison을 신설, Query 0개 확정 | RML01~RML09 흐름·입력→처리→결과와 code/output/metric/History/model/artifact 경계, NLP/Bayesian/VGG16 claim-level source·책임 분리·source union 17/17·0바이트 총정리 보류 재검증 | frontmatter·source·tag·link·index·고립·중복 title·장문·placeholder·credential·fence 오류 0, Total pages 312, Python·ML·ML-1~4 manifest·raw 비수정·scoped diff 통과 | 최종 완료 / 다음은 12. 전체 통합 품질 검증 |
+| 2026-07-22 | 12 | 전체 통합 품질 검증 | 기존 312페이지와 단계 1~11 완료본을 재작성하지 않고 전체 구조·출처·링크·보안·fence 및 과목별 직접 source 최종 수를 통합 재검증, 실제 추가 오류 0개 확정 | Java 36·Oracle 29·UI&UX 24·FrontEnd_BackEnd 59·Linux 39·AWS 12·CI/CD 19·Passwordless 15·중간 프로젝트 15·Python 36·Machine Learning 32, Python source union 21/72·ML 날짜/첨부 union 17/17과 고위험 경계 보존 확인 | 312/312 frontmatter·tag·source 실경로/본문 출처·broken/ambiguous link·index·고립·중복 title·지식 페이지 200줄·placeholder·credential·fence·`bash` 오류 0, raw 1~10·ML 허용 범위 scoped Git 무변경·wiki diff 검증 통과 | 전체 재고도화 최종 완료 / 후속 단계 없음 |
+
+### 2026-07-22 단계 10 Python·단계 11 Machine Learning 완료 상태
+
+- **Python 최종 완료: 2026-06-19~07-08 R01~R14 날짜 범위와 전체 고정점**
+- R09~R14 Summary 6개, DataFrame 기본/결합/groupby 책임 분할, 외부 수집·한국어 text mining Concept, 공유 Entity 7개와 graph·CSV·실행 증거 경계를 고도화했다.
+- Python Comparison 후보 3개는 기존 Concept에 흡수하고 Query 0개를 유지했다.
+- Machine Learning은 07-08~07-21 날짜 9개·첨부 8개·교육자료 4,158개 재고를 기준으로 ML-1~4 ingest와 ML-5 과목 통합 고정점을 완료했다. 직접 source 지식 페이지는 Summary 9·Concept 14·Entity 8·Comparison 1, 총 32개다.
+- 작성 중인 2026-07-22 Machine Learning 자료는 조사·manifest·근거에서 완전히 제외했다.
+- 단계 11 전체 완료 행과 [[_meta/machine-learning-rehighquality-inventory-plan|Machine Learning 재고도화 재고 및 실행 계획]]의 ML-5 완료 상태를 기록했다. 다음 실행은 별도 세션의 단계 12 전체 통합 품질 검증만 처리한다.
 
 ## 단계 1 Java 완료 상세
 

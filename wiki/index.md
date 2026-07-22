@@ -2,7 +2,7 @@
 
 > 이 파일은 `wiki/` 전체의 목차이자 길잡이다.  
 > 질문에 답하거나 새 자료를 ingest할 때 이 파일을 먼저 읽는다.  
-> Last updated: 2026-07-19 | Total pages: 280
+> Last updated: 2026-07-22 | Total pages: 312
 
 ## 사용 방법
 
@@ -85,14 +85,15 @@
 - [[summaries/2026-05-20-filingbox-giga-mega|2026-05-20 FilingBox GIGA/MEGA와 WORM 스토리지]] — 인증과 분리된 NAS/WORM·RO/RW/AO 저장소 보호 절차와 미보존 실행 결과를 구분한 날
 - [[summaries/2026-05-21-passwordless-x1280-rest-api|2026-05-21 Passwordless X1280 REST API와 Postman]] — 7개 POST request 재고 중 등록 여부 JSON 한 건만 당일 직접 결과로 확인한 날
 - [[summaries/2026-05-21-passwordless-subject-review|Passwordless 총정리]] — 05-14~21 X1280·Spring sample·AAM/APE·FilingBox/WORM·REST API를 날짜별 결과 경계와 함께 잇는 복습 허브
-- [[summaries/2026-06-19-python-setup-basic-syntax|2026-06-19 Python 설치와 기본 문법 입문]] — Python/PyCharm 설치, 기본 출력·문자열·형변환·입력·연산자 학습
-- [[summaries/2026-06-22-python-control-flow-collections|2026-06-22 Python 제어문과 컬렉션]] — 조건문·반복문·range·list·tuple 학습
-- [[summaries/2026-06-23-python-dict-comprehension-builtins|2026-06-23 Python dict, comprehension, 내장 함수]] — dict·중첩 리스트·comprehension·zip/sorted 학습
-- [[summaries/2026-06-24-python-functions-modules|2026-06-24 Python 함수, 람다, 모듈·패키지]] — 함수·가변 인수·lambda·map/filter·import 학습
-- [[summaries/2026-06-25-python-standard-library-oop|2026-06-25 Python 표준 라이브러리와 객체지향]] — os·random·datetime·class·상속·Has-A 학습
-- [[summaries/2026-06-26-python-exception-file-regex|2026-06-26 Python 예외 처리, 파일 입출력, 정규표현식]] — try/except·open/with·텍스트 처리·re 입문
-- [[summaries/2026-06-29-python-regex-xml-json-jupyter|2026-06-29 Python 정규표현식, XML/JSON, 라이브러리 설치]] — regex 심화·XML/JSON·pip·Jupyter 준비
-- [[summaries/2026-06-30-python-pandas-series-dataframe-intro|2026-06-30 Python Pandas Series와 DataFrame 입문]] — Jupyter에서 Series·DataFrame·matplotlib 시작
+- [[summaries/2026-05-middle-project-cicd-passwordless-guide|중간 프로젝트 CI/CD·배포·Passwordless 가이드]] — 4개 설계 문서의 backend/frontend 배포·S3·도메인·Passwordless 흐름과 독립 artifact·실행 결과 미보존 경계를 정리
+- [[summaries/2026-06-19-python-setup-basic-syntax|2026-06-19 Python 설치와 기본 문법 입문]] — 환경 준비부터 입력·형변환·문자열·연산까지, 실제 TypeError 수정·재실행을 포함한 Python 첫날
+- [[summaries/2026-06-22-python-control-flow-collections|2026-06-22 Python 제어문과 컬렉션]] — 조건·반복으로 상태를 제어하고 list/tuple을 변경 가능성 기준으로 구분한 수업
+- [[summaries/2026-06-23-python-dict-comprehension-builtins|2026-06-23 Python dict, comprehension, 내장 함수]] — dict·중첩 list에서 filtering·집계·zip·정렬로 확장한 데이터 처리 흐름
+- [[summaries/2026-06-24-python-functions-modules|2026-06-24 Python 함수, 람다, 모듈·패키지]] — 인수 전달·고차 함수·실행 진입점·import와 원본 code/출력 불일치를 구분한 수업
+- [[summaries/2026-06-25-python-standard-library-oop|2026-06-25 Python 표준 라이브러리와 객체지향]] — os/random/datetime에서 class·상속·Has-A와 공유 상태 주의점까지 이어진 수업
+- [[summaries/2026-06-26-python-exception-file-regex|2026-06-26 Python 예외 처리, 파일 입출력, 정규표현식]] — 예외 제어→text 읽기·변환·저장→regex 검증으로 연결한 외부 데이터 처리 입문
+- [[summaries/2026-06-29-python-regex-xml-json-jupyter|2026-06-29 Python 정규표현식, XML/JSON, 라이브러리 설치]] — regex 검색·XML/JSON 파싱에서 pip·Jupyter 준비로 넘어간 수업
+- [[summaries/2026-06-30-python-pandas-series-dataframe-intro|2026-06-30 Python Pandas Series와 DataFrame 입문]] — Series label 연산·filter·빈도·시각화와 PNG artifact를 확인하고 DataFrame에 진입한 수업
 - [[summaries/2026-07-01-python-pandas-dataframe|2026-07-01 Python Pandas DataFrame 조회와 입출력]] — Pandas DataFrame/Series의 `loc`/`iloc` 조회, 조건 수정, CSV 입출력, 통계, 기초 그래프를 학습한 날이다.
 - [[summaries/2026-07-02-python-pandas-reshape-merge|2026-07-02 Python Pandas 데이터 결합과 재구조화]] — `concat`, `merge`, `pivot`으로 여러 DataFrame을 결합하고 SQL JOIN과 비슷한 데이터 연결 흐름을 학습한 날이다.
 - [[summaries/2026-07-03-python-pandas-groupby-visualization|2026-07-03 Python Pandas groupby와 시각화]] — `groupby`, `agg`, `transform`, `pd.cut`, matplotlib 그래프로 범주별 집계와 분포 확인을 학습한 날이다.
@@ -100,8 +101,15 @@
 - [[summaries/2026-07-07-python-web-crawling-geocoding-visualization|2026-07-07 Python 웹 크롤링, 지오코딩, 시각화]] — Selenium·BeautifulSoup·지오코딩으로 커피 매장 데이터를 수집·표현한 날
 - [[summaries/2026-07-08-python-korean-text-mining|2026-07-08 Python 한국어 텍스트 마이닝]] — 형태소 분석·불용어·빈도·WordCloud로 한국어 텍스트를 분석한 날
 - [[summaries/2026-07-08-python-subject-review|Python 총정리]] — 기초 문법에서 Pandas·API·크롤링·지도·텍스트 마이닝까지 묶은 과목 복습 허브
-
-- [[summaries/2026-05-middle-project-cicd-passwordless-guide|중간 프로젝트 CI/CD·배포·Passwordless 가이드]] — 4개 설계 문서의 backend/frontend 배포·S3·도메인·Passwordless 흐름과 독립 artifact·실행 결과 미보존 경계를 정리
+- [[summaries/2026-07-08-machine-learning-foundations-linear-regression|2026-07-08 Machine Learning 기초와 선형회귀]] — AI/ML/DL·학습 유형에서 `auto-mpg` 단순·다중 회귀의 split→fit→predict→평가로 전환한 첫날
+- [[summaries/2026-07-09-machine-learning-classification-evaluation|2026-07-09 Machine Learning 분류와 성능 평가]] — confusion matrix·ROC/AUC를 SVM·KNN·Decision Tree에 적용하고 ensemble 표 오류를 교정한 날
+- [[summaries/2026-07-10-machine-learning-text-classification-neural-network|2026-07-10 텍스트 분류와 신경망 입문]] — CountVectorizer·Naive Bayes·iris logistic regression에서 MNIST Dense network의 loss·optimizer·activation·평가로 확장한 날
+- [[summaries/2026-07-13-machine-learning-clustering-cnn|2026-07-13 군집과 CNN]] — distance·hierarchical clustering·MDS·KMeans에서 convolution·pooling·padding·Dropout으로 확장한 날
+- [[summaries/2026-07-14-machine-learning-nlp-vectorization|2026-07-14 NLP 표현과 Word2Vec 입문]] — BoW·N-gram·TF-IDF·Word2Vec에서 CountVectorizer+MLPClassifier 감성 분류와 주석 처리된 《토지》 저장 의도로 확장한 날
+- [[summaries/2026-07-15-machine-learning-word2vec-bayesian-filter|2026-07-15 Word2Vec과 Bayesian filter 초안]] — 《토지》 Word2Vec 생성자 학습·load·similarity code와 count 전 `pass` 상태의 Bayesian 초안을 구분한 날
+- [[summaries/2026-07-16-machine-learning-bayesian-filter-pretrained-model|2026-07-16 Bayesian filter 완성과 사전 학습 모델]] — Bayesian score/predict를 완성하고 VGG16 입력 4개와 probability graph 4개를 대응한 날
+- [[summaries/2026-07-20-machine-learning-regression-svm|2026-07-20 소득 다중회귀와 iris SVM 재방문]] — 데이터 수집·Pandas 복습에서 income 다중회귀와 train-only scaling iris SVM으로 이어지고 OCR은 미완 과제로 남은 날
+- [[summaries/2026-07-21-machine-learning-knn-cross-validation|2026-07-21 KNN과 K-fold 신경망 평가]] — preference KNN의 distance·vote에서 5-fold 도식과 sonar 10-fold 신경망 평가·artifact 경계로 확장한 날
 
 ## Concepts
 
@@ -160,15 +168,32 @@
 - [[concepts/spring-boot-cicd-docker-ec2-flow|Spring Boot CI/CD Docker-EC2 배포 흐름]] — Spring Boot jar를 Docker image로 만들고 Docker Hub를 거쳐 EC2 컨테이너로 배포하는 구조
 - [[concepts/terraform-infrastructure-as-code|Terraform과 Infrastructure as Code]] — VPC/Subnet/EC2 같은 AWS 인프라를 `.tf` 코드와 `init/plan/apply/destroy` 명령으로 관리하는 방식
 - [[concepts/aws-s3-file-upload|AWS S3 파일 업로드 흐름]] — Spring Boot 업로드 파일을 서버 로컬 폴더 대신 S3 bucket에 저장하고 DB에는 URL/key를 남기는 구조
-- [[concepts/python-basic-syntax|Python 기본 문법]] — 출력·입력·문자열·형변환·조건문·반복문 기초
-- [[concepts/python-collections-comprehension|Python 컬렉션과 컴프리헨션]] — list/tuple/dict/set과 comprehension 기반 데이터 처리
-- [[concepts/python-functions-modules-packages|Python 함수, 모듈, 패키지]] — def·lambda·가변 인수·import·패키지 구조
-- [[concepts/python-file-regex-data-processing|Python 파일·정규표현식 데이터 처리]] — open/with·텍스트 파일·re·XML/JSON 처리
-- [[concepts/python-oop-basics|Python 객체지향 기본]] — class·__init__·self·상속·Has-A 관계
-- [[concepts/pandas-dataframe-basics|Pandas DataFrame 기본]] — 행/열 조회, 조건 수정, CSV 입출력, Series 통계, `concat`/`merge`/`pivot`, `groupby`까지 이어지는 Pandas 표 데이터 처리 기본
+- [[concepts/python-basic-syntax|Python 기본 문법]] — 입력→형변환→계산→출력과 조건·반복·문자열 sequence를 연결하는 Python 실행 기반
+- [[concepts/python-collections-comprehension|Python 컬렉션과 컴프리헨션]] — list/tuple/dict/set 선택과 중첩 데이터·comprehension·zip·정렬의 표 처리 선행 개념
+- [[concepts/python-functions-modules-packages|Python 함수, 모듈, 패키지]] — 인수·return·lambda·고차 함수에서 module/package·실행 진입점까지의 재사용 구조
+- [[concepts/python-file-regex-data-processing|Python 파일 입출력과 텍스트 데이터 처리]] — open/with·mode·줄 읽기·split·형변환·결과 쓰기의 순수 Python 파일 처리 흐름
+- [[concepts/python-oop-basics|Python 객체지향 기본]] — instance/class variable, `self`, `__init__`, 상속·overriding·Has-A와 Java 비교
+- [[concepts/python-exception-handling|Python 예외 처리]] — try/except/else/finally·raise와 첫 예외·resource 정리 경계를 설명하는 실패 제어
+- [[concepts/python-regular-expression|Python 정규표현식]] — pattern·anchor·raw string과 match/search/findall/finditer를 구분하는 문자열 검증·검색
+- [[concepts/python-structured-data-xml-json|Python XML/JSON 구조화 데이터 처리]] — XML tree와 JSON dict/list를 Python 객체·분석용 행으로 변환하는 구조화 데이터 흐름
+- [[concepts/pandas-dataframe-basics|Pandas DataFrame 기본]] — 06-30~07-01의 표 생성, `loc`/`iloc` 행·열 조회, 조건 수정, CSV 입출력, 기초 통계
+- [[concepts/pandas-dataframe-reshape-merge|Pandas DataFrame 결합과 재구조화]] — 07-02의 `concat`·`merge`·`pivot`을 행 추가·key 결합·요약표 변환 책임으로 분리
 - [[concepts/pandas-groupby-aggregation|Pandas groupby와 집계]] — 범주별 그룹화, `agg`, 다중 색인 정리, `transform`, `pd.cut` 기반 범주화와 그래프용 요약표 생성
-- [[concepts/python-external-data-collection-pipeline|Python 외부 데이터 수집 파이프라인]] — API·크롤링 데이터를 DataFrame으로 전처리·결합·시각화하는 흐름
-- [[concepts/korean-text-mining-pipeline|한국어 텍스트 마이닝 파이프라인]] — 형태소 분석·불용어·빈도·WordCloud로 이어지는 한국어 텍스트 분석 흐름
+- [[concepts/python-external-data-collection-pipeline|Python 외부 데이터 수집 파이프라인]] — HTTP API·browser automation·HTML parsing에서 DataFrame·geocoding·map까지의 단계와 artifact gate
+- [[concepts/korean-text-mining-pipeline|한국어 텍스트 마이닝 파이프라인]] — raw text→Komoran 형태소→불용어→빈도→WordCloud와 package/JVM/font 의존성
+- [[concepts/machine-learning-problem-types|Machine Learning 학습 방식과 문제 유형]] — 지도·비지도·강화 학습과 회귀·분류·군집을 label 유무와 출력 형태로 구분
+- [[concepts/machine-learning-model-lifecycle|Machine Learning 모델 생명주기]] — feature/label→split→train-only 전처리→fit→predict→evaluate와 leakage·artifact 경계
+- [[concepts/linear-regression-evaluation|선형회귀와 R²·MSE]] — `auto-mpg` 단순·다중 회귀에서 계수·residual·설명력·제곱 오차의 해석 기준
+- [[concepts/classification-evaluation-metrics|분류 성능 평가와 Confusion Matrix·ROC/AUC]] — TP/FP/FN/TN에서 accuracy·precision·recall·F1과 threshold 성능을 읽는 기준
+- [[concepts/text-vectorization-naive-bayes-classification|텍스트 벡터화와 Naive Bayes 분류]] — corpus→vocabulary→sparse count vector→MultinomialNB의 fit/transform·분류·증거 경계
+- [[concepts/neural-network-training-basics|신경망 학습 기초]] — MNIST 입력·one-hot label, Dense·activation, loss·gradient·optimizer와 compile→fit→History→evaluate 흐름
+- [[concepts/clustering-distance-hierarchical-kmeans|군집과 거리·hierarchical clustering·KMeans]] — label 없는 데이터의 거리·linkage·MDS·KMeans와 cluster ID 해석 기준
+- [[concepts/cnn-convolution-pooling-dropout|CNN과 convolution·pooling·Dropout]] — image 공간 구조의 filter·feature map·padding·pooling과 Dropout train/inference 경계
+- [[concepts/text-representation-bow-tfidf-word2vec|BoW·TF-IDF·Word2Vec 텍스트 표현]] — 문서 count·TF-IDF weight·단어 embedding과 N-gram·CBOW의 역할 및 model artifact 경계
+- [[concepts/pretrained-model-vgg16-inference|사전 학습 모델과 VGG16 추론]] — 224×224 image preprocessing→ImageNet prediction→top-10 graph와 transfer learning·artifact 경계
+- [[concepts/knn-distance-voting|KNN의 distance와 voting]] — query와 train sample의 거리→K개 이웃→class vote, scaling·K 선택·작은 test set 편향을 preference 수업으로 정리
+- [[concepts/k-fold-cross-validation-generalization|K-fold 교차 검증과 일반화]] — holdout과 반복 fold 평가, 5-fold 도식/10-fold code, fold 내부 전처리·leakage와 평균 metric·최종 model 경계를 구분
+- [[concepts/svm-margin-kernel-classification|SVM의 margin과 kernel 분류]] — margin·support vector·RBF kernel·C/gamma와 07-09→07-20 train-only scaling 발전을 연결
 
 - [[concepts/java-method-constructor-overloading|Java 메서드, 생성자, this, 오버로딩]] — 메서드, 접근 지정자, 생성자, `this`, 오버로딩을 클래스/객체 학습 흐름에서 분리 정리
 - [[concepts/java-object-array-memory|Java 객체 배열과 메모리 관점]] — 객체 배열과 stack/heap 관점으로 객체 생성·참조 흐름을 정리
@@ -231,13 +256,17 @@
 - [[entities/amazon-rds|Amazon RDS]] — MySQL endpoint·SG/3306·client/JDBC 절차와 후속 S3/DB 역할 분리를 잇는 관리형 DB
 - [[entities/amazon-route-53|Amazon Route 53]] — 도메인을 Load Balancer와 연결하고 ACM DNS 검증 CNAME을 관리한 AWS DNS 서비스
 - [[entities/amazon-s3|Amazon S3]] — Spring Boot 상품 이미지 같은 업로드 파일을 저장하는 AWS 객체 스토리지 서비스
-- [[entities/python|Python]] — 기본 문법·컬렉션·함수·파일/정규표현식·XML/JSON을 거쳐 Pandas 표 데이터 처리로 이어지는 과정 후반부 학습 언어
-- [[entities/pandas|Pandas]] — Series/DataFrame, CSV, 통계, 그래프, 결합·재구조화를 담당하는 Python 표 데이터 처리 라이브러리
-- [[entities/jupyter-notebook|Jupyter Notebook]] — Pandas와 matplotlib 코드를 셀 단위로 실행하며 표·그래프·설명을 함께 남긴 Python 학습 환경
-- [[entities/matplotlib|matplotlib]] — Pandas 집계 결과를 파이·산점도·박스플롯·히스토그램·막대 그래프로 확인하는 Python 시각화 라이브러리
-- [[entities/selenium|Selenium]] — 동적 웹 페이지의 클릭·대기·이동을 자동화한 Python 브라우저 도구
-- [[entities/folium|Folium]] — 좌표 DataFrame을 Marker·HeatMap·GeoJSON 지도 결과로 만드는 Python 라이브러리
-- [[entities/konlpy|KoNLPy]] — Komoran 형태소 분석과 사용자 사전으로 한국어 텍스트를 처리한 라이브러리
+- [[entities/python|Python]] — 기본 문법→Pandas·외부 데이터→전통 ML·신경망·NLP/Word2Vec·CNN/VGG16·교차 검증 code로 확장된 학습 언어
+- [[entities/pandas|Pandas]] — 표 데이터 조회·결합·집계와 ML feature/label·cluster/fold·metric·prediction 결과표를 담당한 library
+- [[entities/jupyter-notebook|Jupyter Notebook]] — cell code·embedded output·graph artifact를 구분하며 Python 실습을 진행한 환경
+- [[entities/matplotlib|matplotlib]] — Pandas 집계에서 회귀·분류·군집·Word2Vec·VGG16·fold metric graph와 물리 artifact 경계로 확장된 시각화 library
+- [[entities/scikit-learn|scikit-learn]] — split·preprocessing·회귀·분류·text vectorization·군집·KNN·StratifiedKFold·metric을 공통 API로 연결한 Machine Learning toolkit
+- [[entities/keras|Keras]] — Dense·CNN·Dropout·VGG16 pretrained inference에서 fold별 새 신경망 평가까지 확장된 deep learning framework API
+- [[entities/gensim|Gensim]] — token corpus에서 Word2Vec vocabulary·embedding을 학습·저장·load하고 similarity를 조회하는 library
+- [[entities/vgg16|VGG16]] — 224×224 image를 ImageNet 1,000 class로 추론한 Keras 사전 학습 CNN model
+- [[entities/selenium|Selenium]] — 07-07 동적 page 클릭·대기·이동 뒤 page source를 parser에 넘긴 browser automation tool
+- [[entities/folium|Folium]] — 07-06~07 좌표 DataFrame을 Marker·HeatMap·GeoJSON layer로 표현하되 saved HTML은 미보존인 지도 library
+- [[entities/konlpy|KoNLPy]] — 한국어 형태소·불용어 전처리에서 감성 분류·《토지》 Word2Vec·Bayesian filter token 생성으로 확장된 library
 - [[entities/intellij-idea|IntelliJ IDEA]] — Java 첫 project·Run에서 Spring Boot backend Java·properties·계층 작성·실행으로 이어진 IDE
 - [[entities/passwordless-x1280|Passwordless X1280]] — 05-14 첫 등장부터 Docker·Spring sample·Postman까지 날짜별 이력과 JWT/AAM/APE/WORM 제품 경계를 잇는 인증 허브
 - [[entities/aam-ape|AAM과 APE]] — 05-19 통합 설치·조직·연동 서비스·사용자·인증기·client 학습 이력을 정리한 기업형 인증 관리 제품군
@@ -280,6 +309,7 @@
 - [[comparisons/primary-key-vs-foreign-key|Primary Key vs Foreign Key]] — 회원 식별과 게시글·주문상세 참조를 나누고 함수 종속성 오해를 피하는 기준
 - [[comparisons/oracle-inner-vs-outer-join|Oracle Inner Join vs Outer Join]] — 게시글 0개 회원 보존 여부와 `COUNT(*)`/`COUNT(writer)` 선택 차이
 - [[comparisons/beautifulsoup-vs-selenium|BeautifulSoup vs Selenium]] — 정적 HTML 파싱과 동적 브라우저 자동화의 역할 차이
+- [[comparisons/standardization-vs-minmax-scaling|표준화 vs Min-Max scaling]] — 평균·표준편차와 min/max 기준, 이상치 영향·모델 선택·train-only fit을 수업 네 날짜로 비교
 
 - [[comparisons/passwordless-vs-password-login|Passwordless 로그인 vs 비밀번호 로그인]] — 비밀번호/JWT 기준선과 X1280 서비스·사용자/인증기 등록·앱 승인·외부 인증·service login 경계를 비교
 - [[comparisons/authentication-vs-authorization|인증(Authentication) vs 인가(Authorization)]] — 신원 확인, role·ownership·endpoint 판단, AAM/APE 관리와 FilingBox storage operation을 계층별로 구분
@@ -294,7 +324,8 @@
 ## Meta
 
 <!-- 위키 운영 문서, lint 리포트, 토픽맵 등 -->
-- [[_meta/python-rehighquality-inventory-plan|Python 내용 재고도화 전수 재고와 실행 분할 계획]] — raw 69개와 직접 지식 페이지 32개를 재계산하고, 조사 중 raw manifest 변경으로 계획 완료를 보류한 단계 10 기준선
+- [[_meta/machine-learning-rehighquality-inventory-plan|Machine Learning 재고도화 재고 및 실행 계획]] — 07-08~21 날짜 9개·첨부 8개와 직접 지식 페이지 32개를 ML-1~5에서 고도화·통합 검증해 단계 11을 완료한 기록
+- [[_meta/python-rehighquality-inventory-plan|Python 내용 재고도화 전수 재고와 실행 분할 계획]] — 단계 10 R01~R14 날짜·Concept 책임·Entity·artifact 경계를 고도화하고 전체 고정점을 완료한 기록
 - [[_meta/middle-project-rehighquality-inventory-plan|중간 프로젝트 공부 내용 재고도화 전수 재고와 실용형 실행 계획]] — raw 4개와 직접 지식 페이지 15개를 매핑하고 Summary·Concept·Entity를 고도화한 단계 9 세션 1 기준선
 - [[_meta/passwordless-rehighquality-inventory-plan|Passwordless 내용 재고도화 전수 재고와 실용형 실행 계획]] — raw 20개와 직접 지식 페이지 15개를 두 세션에서 고도화·검증해 단계 8을 완료한 기록
 - [[_meta/cicd-rehighquality-inventory-plan|CI/CD 내용 재고도화 전수 재고와 실용형 실행 계획]] — R01~R04·P01~P04 raw 8개와 직접 지식 페이지 19개를 매핑하고 Summary·Concept·Entity 18개를 고도화한 단계 7 세션 1 기준선

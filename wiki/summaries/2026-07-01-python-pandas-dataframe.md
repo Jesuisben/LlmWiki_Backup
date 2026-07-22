@@ -1,11 +1,14 @@
 ---
 title: 2026-07-01 Python Pandas DataFrame 조회와 입출력
 created: 2026-07-01
-updated: 2026-07-02
+updated: 2026-07-22
 type: summary
 tags: [python, study-log]
 sources:
   - raw/KoreaICT/10. Python/2026.07.01(수)/2026.07.01(수).md
+  - raw/KoreaICT/10. Python/2026.07.01(수)/첨부파일/Pasted image 20260719201633.png
+  - raw/KoreaICT/10. Python/2026.07.01(수)/첨부파일/Pasted image 20260719201651.png
+  - raw/KoreaICT/10. Python/2026.07.01(수)/첨부파일/Pasted image 20260719201659.png
 status: growing
 confidence: high
 ---
@@ -49,6 +52,8 @@ Python 과정에서 [[entities/pandas|Pandas]]의 `DataFrame`/`Series`를 만들
 
 여기서 `:`는 “모든 행/열”을 뜻하고, boolean 조건식은 “조건을 만족하는 행만 골라내는 마스크(mask)” 역할을 한다.
 
+첫 번째 수정 문제에는 요구사항과 실제 선택 행이 다르다. 문제는 두 사람의 값을 바꾸라고 적었지만 code는 그중 한 사람 대신 다른 행을 선택했고, 보존된 표도 code가 선택한 행이 바뀐 결과다. 따라서 이 표는 code 실행과는 대응하지만 문제 정답으로 볼 수 없으며, label을 다시 확인해야 한다. ^[raw/KoreaICT/10. Python/2026.07.01(수)/2026.07.01(수).md]
+
 ### 3. DataFrame과 Series 산술
 
 `myframe31.add(myseries31, axis=0)`처럼 `axis`를 지정해 Series의 index를 DataFrame의 어느 축과 맞출지 실습했다.
@@ -81,6 +86,8 @@ DataFrame끼리 더할 때는 `myframe31.add(myframe32, fill_value=0)`를 사용
 
 원본 노트에서는 Excel 호환을 고려해 `CP949` 인코딩을 명시했다. Windows/한국어 CSV 실습에서는 UTF-8뿐 아니라 CP949도 자주 등장한다는 점이 중요하다.
 
+노트에는 `to_csv()` 호출 뒤 같은 경로를 `read_csv()`로 읽은 DataFrame 표가 이어져 있어 해당 셀 흐름의 저장·재읽기 정황은 남아 있다. 다만 R09 날짜 폴더에는 그 CSV 물리 파일이 없고, 교육자료 CSV는 입력 dataset이므로 둘을 같은 실행에서 생성된 결과로 간주하지 않는다.
+
 ### 6. Series 속성, 통계, 누락값
 
 `payment01.csv`를 읽은 뒤 열 하나를 꺼내면 `Series`가 된다는 점을 확인했다.
@@ -102,6 +109,16 @@ DataFrame끼리 더할 때는 `myframe31.add(myframe32, fill_value=0)`를 사용
 - 파생 컬럼 생성: `payment['최종 식비'] = payment['식비'] + 100`
 - Pie 차트: `chartdata01.plot(kind='pie', ...)`
 
+### 8. 실제로 남은 그래프 artifact
+
+날짜 폴더의 PNG 3개를 실제 픽셀로 확인했다.
+
+- 선그래프: 5명의 사원에 대해 중구·마포구 두 series를 marker와 grid로 표시한다. 제목·축·범례·값 모양이 인접 code와 대응한다.
+- 묶은 막대그래프: 같은 두 열을 사원별 막대로 비교하며 제목·범례·y축 범위가 인접 code와 대응한다.
+- 1×2 subplot: 왼쪽은 중구, 오른쪽은 마포구 막대이며 공통 y축과 전체 제목이 인접 `subplots` code와 대응한다.
+
+세 PNG는 해당 그래프가 렌더링되어 저장·첨부되었다는 물리적 근거다. Pie chart 저장 파일이나 독립 `.ipynb`는 없으므로 이날 notebook 전체와 모든 chart 실행 성공으로 확대하지 않는다.
+
 ## 핵심 개념
 
 - [[concepts/pandas-dataframe-basics|Pandas DataFrame 기본]]: 행/열 표 데이터를 만들고 조회·수정·계산하는 핵심 자료구조
@@ -115,6 +132,7 @@ DataFrame끼리 더할 때는 `myframe31.add(myframe32, fill_value=0)`를 사용
 - `axis=0`과 `axis=1`은 함수마다 “방향”을 떠올리기 어렵다. Pandas에서는 보통 `axis=0`이 행 index 방향, `axis=1`이 columns 방향이라는 기준으로 외워야 한다.
 - `NaN`은 단순히 글자가 아니라 “값이 없음/결측”을 나타내며, 계산·통계에서 별도 처리가 필요하다.
 - `to_csv`/`read_csv`에서 인코딩을 맞추지 않으면 한글이 깨질 수 있다.
+- 요구사항 문장과 `loc`의 실제 label이 다르면 code가 정상 실행되어도 문제 정답은 틀릴 수 있다.
 
 ## 관련 페이지
 
@@ -127,3 +145,6 @@ DataFrame끼리 더할 때는 `myframe31.add(myframe32, fill_value=0)`를 사용
 ## 출처
 
 - `raw/KoreaICT/10. Python/2026.07.01(수)/2026.07.01(수).md`
+- `raw/KoreaICT/10. Python/2026.07.01(수)/첨부파일/Pasted image 20260719201633.png`
+- `raw/KoreaICT/10. Python/2026.07.01(수)/첨부파일/Pasted image 20260719201651.png`
+- `raw/KoreaICT/10. Python/2026.07.01(수)/첨부파일/Pasted image 20260719201659.png`

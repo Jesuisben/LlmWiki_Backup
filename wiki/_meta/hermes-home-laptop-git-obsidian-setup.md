@@ -1,7 +1,7 @@
 ---
 title: 집 노트북 Git/Obsidian 설정
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-22
 type: meta
 tags: [study-log]
 sources:
@@ -26,7 +26,7 @@ stage all → commit → push
 
 또는 Git Bash에서 Vault 폴더로 이동한 뒤 확인할 수 있다.
 
-```bash
+```shell
 cd /d/Study_LLM_Wiki
 git status
 git push
@@ -72,7 +72,7 @@ C:\Users\집노트북사용자명\Documents\Study_LLM_Wiki
 
 Git Bash에서 예시는 다음과 같다.
 
-```bash
+```shell
 cd ~/Documents
 git clone https://github.com/Jesuisben/Study_LLM_Wiki.git
 ```
@@ -108,21 +108,21 @@ GitHub 로그인이 필요하면 Obsidian Git이 push/pull할 때 로그인 창�
 
 집 노트북 Git Bash에서 확인한다.
 
-```bash
+```shell
 git config --global user.name
 git config --global user.email
 ```
 
 비어 있으면 설정한다.
 
-```bash
+```shell
 git config --global user.name "Jesuisben"
-git config --global user.email "rktngusals@gmail.com"
+git config --global user.email "[REDACTED]"
 ```
 
 Vault 폴더에서 Git 상태를 확인한다.
 
-```bash
+```shell
 cd ~/Documents/Study_LLM_Wiki
 git status
 git pull

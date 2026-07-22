@@ -1,7 +1,7 @@
 ---
 title: 집 노트북 Hermes 이전 문제 해결
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-22
 type: meta
 tags: [study-log]
 sources:
@@ -38,7 +38,7 @@ C:\Users\집노트북사용자명\Documents\Study_LLM_Wiki
 2. Obsidian Git 플러그인 enable 확인
 3. Git Bash에서 직접 확인
 
-```bash
+```shell
 git status
 git pull
 git push
